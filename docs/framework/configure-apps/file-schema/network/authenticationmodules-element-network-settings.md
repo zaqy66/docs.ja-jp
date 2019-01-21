@@ -20,7 +20,7 @@ ms.locfileid: "50190815"
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
   
 ## <a name="syntax"></a>構文  
   

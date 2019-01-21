@@ -1,23 +1,22 @@
 ---
-title: '方法 : SOAP エンコード済み XML シリアル化をオーバーライドする'
+title: '方法: SOAP エンコード済み XML シリアル化をオーバーライドします。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7deec91f605555cff94fa882c887a4adf97db58a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003777"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415066"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>方法 : SOAP エンコード済み XML シリアル化をオーバーライドする
-[コード例](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>方法: SOAP エンコード済み XML シリアル化をオーバーライドします。
   
- SOAP メッセージとしてオブジェクトの XML シリアル化をオーバーライドするプロセスは、標準の XML シリアル化をオーバーライドするプロセスに似ています。 標準の XML シリアル化をオーバーライドする方法については、「[方法 : XML ストリームの代替要素名を指定する](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)」を参照してください。  
+ SOAP メッセージとしてオブジェクトの XML シリアル化をオーバーライドするプロセスは、標準の XML シリアル化をオーバーライドするプロセスに似ています。 標準の XML シリアル化をオーバーライドする方法の詳細については、次を参照してください。[方法。XML Stream の代替要素名を指定](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)します。  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a>SOAP メッセージとしてオブジェクトのシリアル化をオーバーライドするには  
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a>SOAP メッセージとしてオブジェクトのシリアル化をオーバーライドするには  
   
 1.  <xref:System.Xml.Serialization.SoapAttributeOverrides> クラスのインスタンスを作成します。  
   
@@ -283,6 +282,6 @@ public class Run
 - [XML シリアル化および SOAP シリアル化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
 - [エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
 - [XML Web サービスを使用した XML シリアル化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
-- [方法 : オブジェクトをシリアル化する](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [方法 : オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [方法 : オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [方法: オブジェクトをシリアル化します。](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [方法: オブジェクトを逆シリアル化します。](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [方法: SOAP エンコード済み XML Stream としてオブジェクトをシリアル化します。](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

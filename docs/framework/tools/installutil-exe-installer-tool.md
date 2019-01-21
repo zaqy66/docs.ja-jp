@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410148"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221948"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (インストーラー ツール)
 インストーラー ツールは、指定したアセンブリ内のインストーラー コンポーネントを実行することによってサーバー リソースのインストールとアンインストールを実行できるコマンド ライン ユーティリティです。 このツールは、<xref:System.Configuration.Install> 名前空間のクラスと組み合わせることによって動作します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -161,7 +161,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  <xref:System.Configuration.Install>  
  [ツール](../../../docs/framework/tools/index.md)  
  [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

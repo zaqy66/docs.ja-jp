@@ -2,12 +2,12 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: a6dbec19beb3800603bd745bacbd6cbcbcdaa739
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a6c874d7d2930b969f2cc9778534aa99eab78f5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766791"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145823"
 ---
 # <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
 この構成要素は、UDP バインディングを使用してアナウンス メッセージを送信するためにサービスが使用する標準エンドポイントを定義します。 これには固定コントラクトがあり、2 つの探索のバージョンをサポートします。 また、WS-Discovery の仕様 (WS-Discovery April 2005 または WS-Discovery V1.1) に規定された固定 UDP バインディングと既定のアドレスも備えています。 アナウンス メッセージの送受信に使用するマルチキャスト アドレスを指定できます。  
@@ -18,16 +18,16 @@ ms.locfileid: "32766791"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <announcementEndpoint>
-      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
                         maxAnnouncementDelay="Timespan"
                         multicastAddress="Uri"
                         name="String" />
     </announcementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -58,25 +58,25 @@ ms.locfileid: "32766791"
  既定のマルチキャスト アドレスを使用した UDP マルチキャスト トランスポート経由、および指定されたマルチキャスト アドレスを使用した UDP マルチキャスト トランスポート経由でアナウンスをリッスンするクライアントの例を次に示します。  
   
 ```xml  
-<services>  
-  <service name="ServiceAnnouncementListener">  
-      <endpoint name="udpAnnouncementEndpointStandard"  
-                kind="udpAnnouncementEndpoint"  
-                bindingConfiguration="..." />  
-      <endpoint name="udpAnnouncementEndpoint2"  
-                kind="udpAnnouncementEndpoint"  
-                endpointConfiguration="AnnouncementConfiguration3702"  
-                bindingConfiguration="..." />  
-...  
-  </service>  
-</services>  
-<standardEndpoints>  
-  <udpAnnouncementEndpoint>  
-     <standardEndpoint name="AnnouncementConfiguration2"   
-          version="WSDiscoveryApril2005"   
-          multicastAddress="soap.udp://239.255.255.250:3703"/>          
-  </udpAnnouncementEndpoint>  
-</standardEndpoints>  
+<services>
+  <service name="ServiceAnnouncementListener">
+    <endpoint name="udpAnnouncementEndpointStandard"
+              kind="udpAnnouncementEndpoint"
+              bindingConfiguration="..." />
+    <endpoint name="udpAnnouncementEndpoint2"
+              kind="udpAnnouncementEndpoint"
+              endpointConfiguration="AnnouncementConfiguration3702"
+              bindingConfiguration="..." />
+    ...
+  </service>
+</services>
+<standardEndpoints>
+  <udpAnnouncementEndpoint>
+    <standardEndpoint name="AnnouncementConfiguration2"
+                      version="WSDiscoveryApril2005"
+                      multicastAddress="soap.udp://239.255.255.250:3703"/>
+  </udpAnnouncementEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>関連項目  

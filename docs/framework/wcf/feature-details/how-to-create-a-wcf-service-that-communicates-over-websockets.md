@@ -1,15 +1,15 @@
 ---
-title: WebSockets 上で通信する WCF サービスを作成する用法
+title: '方法: Websocket 経由で通信する WCF サービスを作成します。'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd9b1be3751d499ee3c6ee38ff4cee0e12046e6a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196201"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030582"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>WebSockets 上で通信する WCF サービスを作成する用法
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>方法: Websocket 経由で通信する WCF サービスを作成します。
 WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHttpBinding> バインディングを使用することにより、WebSocket 経由で通信できます。  WebSocket が使用されるのは、サービス コントラクトによってコールバック コントラクトが定義されていると <xref:System.ServiceModel.NetHttpBinding> によって判断された場合です。 ここでは、<xref:System.ServiceModel.NetHttpBinding> を使用して WebSocket 経由で通信する WCF サービスと WCF クライアントの実装方法について説明します。  
   
 ### <a name="define-the-service"></a>サービスの定義  
@@ -295,7 +295,7 @@ namespace Client
 ```  
   
 ```xml  
-<!—App.config -->  
+<!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <startup>   

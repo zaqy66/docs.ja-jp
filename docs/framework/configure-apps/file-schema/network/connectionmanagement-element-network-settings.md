@@ -20,7 +20,7 @@ ms.locfileid: "50201544"
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
   
 ## <a name="syntax"></a>構文  
   

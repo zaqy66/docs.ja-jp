@@ -1,5 +1,5 @@
 ---
-title: '方法 : UI であるアドインを作成する'
+title: '方法: UI であるアドインを作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -9,74 +9,74 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: 4bd03c2f879ecab83306bb68552c044a33f2e6e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 848e1b2064d89607a93f5ac20fede495e0c61c43
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549592"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396722"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法 : UI であるアドインを作成する
-この例は、Windows Presentation Foundation (WPF) によってホストされているは、アドインを作成する方法を示しています、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]スタンドアロン アプリケーションです。  
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法: UI であるアドインを作成する
+この例では、WPF のスタンドアロン アプリケーションでホストされている Windows Presentation Foundation (WPF) であるアドインを作成する方法を示します。  
   
- アドインでは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]されている、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ユーザー コントロールです。 ユーザー コントロールの中身は 1 つのボタンであり、クリックすると、メッセージ ボックスを表示します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]スタンドアロン アプリケーションをホストにアドイン[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]アプリケーションのメイン ウィンドウの内容として。  
+ アドインの WPF ユーザー コントロールは、UI であります。 ユーザー コントロールの中身は 1 つのボタンであり、クリックすると、メッセージ ボックスを表示します。 スタンドアロンの WPF アプリケーションでは、アプリケーションのメイン ウィンドウの内容として、アドインの UI をホストします。  
   
  **必須コンポーネント**  
   
- この例を強調表示、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]拡張機能を[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドインでは、このシナリオを有効にし、モデルを次を前提としています。  
+ この例では、このシナリオを有効にする、.NET Framework アドイン モデルを WPF 拡張を強調表示し、前提条件は次。  
   
--   ナレッジ、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドインなど、モデル パイプライン、アドインでは、ホストの開発。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](../../../../docs/framework/add-ins/index.md)です。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルでは、次を参照してください。[チュートリアル: 拡張性のあるアプリケーションを作成する](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)です。  
+-   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
   
--   ナレッジ、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]拡張機能を[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドインでは、モデルをご覧ください: [WPF のアドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)です。  
+-   WPF の拡張機能を .NET Framework アドイン モデルの知識。 参照してください[WPF アドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)します。  
   
 ## <a name="example"></a>例  
- アドインを作成する、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]パイプラインの各セグメント、アドイン、およびホスト アプリケーションの特定のコードが必要です。  
+ WPF の UI は、アドインを作成するには、各パイプライン セグメント、アドイン、およびホスト アプリケーションの特定のコードが必要です。  
     
   
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>コントラクト パイプライン セグメントの実装  
- アドインがの場合、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、アドインのコントラクトを実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract>です。 例では、`IWPFAddInContract`実装<xref:System.AddIn.Contract.INativeHandleContract>、次のコードに示すようにします。  
+ アドインの UI である、ときに、アドインのコントラクトを実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract>します。 例では、`IWPFAddInContract`実装<xref:System.AddIn.Contract.INativeHandleContract>、次のコードに示すようにします。  
   
  [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>アドイン ビュー パイプライン セグメントの実装  
- アドインはのサブクラスとして実装されるため、<xref:System.Windows.FrameworkElement>型、アドインを表示する必要がありますもサブクラス<xref:System.Windows.FrameworkElement>です。 次のコードは、アドインのビューとして実装された、コントラクト、`WPFAddInView`クラスです。  
+ アドインはのサブクラスとして実装されるため、<xref:System.Windows.FrameworkElement>アドイン ビューの種類はサブクラス化も必要<xref:System.Windows.FrameworkElement>します。 次のコードとして実装されるコントラクトのアドイン ビューを示しています、`WPFAddInView`クラス。  
   
  [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
- ここでは、アドイン ビューに由来<xref:System.Windows.Controls.UserControl>です。 そのため、アドインを[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]から派生することも<xref:System.Windows.Controls.UserControl>します。  
+ ここでは、アドイン ビューがから派生した<xref:System.Windows.Controls.UserControl>します。 その結果、アドインの UI から派生する必要がありますも<xref:System.Windows.Controls.UserControl>します。  
   
 <a name="AddInSideAdapter"></a>   
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>アドイン側アダプター パイプライン セグメントの実装  
- コントラクトは、 <xref:System.AddIn.Contract.INativeHandleContract>、アドインでは、 <xref:System.Windows.FrameworkElement> (で指定したビューでは、追加のパイプライン セグメント)。 したがって、<xref:System.Windows.FrameworkElement>に変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>分離境界を横断する前にします。 呼び出して追加側アダプターでこの作業を行う<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>、次のコードに示すようにします。  
+ コントラクトは、 <xref:System.AddIn.Contract.INativeHandleContract>、アドインでは、 <xref:System.Windows.FrameworkElement> (アドイン ビュー パイプライン セグメントによって、指定した)。 そのため、<xref:System.Windows.FrameworkElement>に変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越える前にします。 呼び出して追加アドイン側アダプターによってこの作業が実行される<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>、次のコードに示すようにします。  
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- 返すアドインをアドイン モデルで、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (を参照してください[、アドインを返すことは、UI 作成](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md))、アドイン アダプターの変換、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>を呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>です。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必要があります呼び出すことも、このモデルでが、それを呼び出すコードを記述するメソッドを実装する必要があります。 オーバーライドすることで、これを行う<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>を呼び出すコードを実装して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>場合、コードを呼び出している<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>が想定している、<xref:System.AddIn.Contract.INativeHandleContract>です。 この場合、呼び出し元はホスト側のアダプターであり、これについては、後で説明します。  
+ アドインの UI を返すアドイン モデルで (を参照してください[UI を作成するアドインを返すこと](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md))、アドイン アダプタの変換、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必要があります呼び出すことも、このモデルでが、これを呼び出すコードを記述するメソッドを実装する必要があります。 オーバーライドすることで、これを行う<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>を呼び出すコードを実装して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>場合を呼び出しているコード<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>が必要ですが、<xref:System.AddIn.Contract.INativeHandleContract>します。 この場合、呼び出し元はホスト側のアダプターであり、これについては、後で説明します。  
   
 > [!NOTE]
->  オーバーライドする必要があります<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>ホスト アプリケーション間のタブ移動を有効にするには、このモデルで[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]およびアドイン[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]です。 詳細については、WPF アドインの制限事項」を参照してください[WPF アドイン概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)です。  
+>  オーバーライドする必要がありますも<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>ホスト アプリケーションの UI 間のタブ移動を有効にして、アドインの UI には、このモデルでします。 詳細については、「WPF アドインの制限」を参照してください[WPF アドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)します。  
   
- アドイン側アダプターから派生したインターフェイスを実装するため<xref:System.AddIn.Contract.INativeHandleContract>も実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>は無視されますが、ときに<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>はオーバーライドします。  
+ 追加アドイン側アダプターから派生するインターフェイスを実装するため、<xref:System.AddIn.Contract.INativeHandleContract>も実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>これは無視されますが、ときに<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>オーバーライドされます。  
   
 <a name="HostViewPipeline"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>ホスト ビュー パイプライン セグメントの実装  
- このモデルでは、ホスト アプリケーション通常が必要ですが、ホスト ビューである、<xref:System.Windows.FrameworkElement>サブクラスです。 ホスト側のアダプターに変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>後、<xref:System.AddIn.Contract.INativeHandleContract>分離の境界を越えます。 メソッドは、ホスト アプリケーションを取得するによって呼び出されるされていないため、 <xref:System.Windows.FrameworkElement>、ホスト ビュー返す必要があります""、<xref:System.Windows.FrameworkElement>でそれを含むです。 そのため、ホスト ビューは、のサブクラスから派生しなければなりません<xref:System.Windows.FrameworkElement>他を持つことができる[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]など<xref:System.Windows.Controls.UserControl>です。 次のコードは、ホスト ビューとして実装されたコントラクトの`WPFAddInHostView`クラスです。  
+ このモデルで、ホスト アプリケーション通常はホスト ビューに、<xref:System.Windows.FrameworkElement>サブクラスです。 ホスト側アダプターに変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>後、<xref:System.AddIn.Contract.INativeHandleContract>分離境界を超えています。 メソッドを取得するホスト アプリケーションから呼び出されないされているため、 <xref:System.Windows.FrameworkElement>、ホスト ビュー返す必要があります""、<xref:System.Windows.FrameworkElement>格納することによって。 その結果、ホスト ビューのサブクラスから派生する必要があります<xref:System.Windows.FrameworkElement>他を含む[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]など<xref:System.Windows.Controls.UserControl>します。 次のコードとして実装されるコントラクトのホスト ビューを示しています、`WPFAddInHostView`クラス。  
   
   
   
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>ホスト側アダプター パイプライン セグメントの実装  
- コントラクトは、 <xref:System.AddIn.Contract.INativeHandleContract>、ホスト アプリケーションが必要ですが、 <xref:System.Windows.Controls.UserControl> (ホスト ビューで、指定した)。 その結果、<xref:System.AddIn.Contract.INativeHandleContract>に変換する必要があります、<xref:System.Windows.FrameworkElement>ホスト ビューのコンテンツとして設定する前に、分離境界を横断する後 (から派生した<xref:System.Windows.Controls.UserControl>)。  
+ コントラクトは、 <xref:System.AddIn.Contract.INativeHandleContract>、ホスト アプリケーションでは、 <xref:System.Windows.Controls.UserControl> (ホスト ビューによって、指定した)。 その結果、<xref:System.AddIn.Contract.INativeHandleContract>に変換する必要があります、<xref:System.Windows.FrameworkElement>ホスト ビューのコンテンツとして設定される前に、分離境界を越えた後 (から派生した<xref:System.Windows.Controls.UserControl>)。  
   
  この作業は、次のコードに示されているように、ホスト側アダプターによって行われます。  
   
   
   
- ホスト側のアダプターを取得すると、<xref:System.AddIn.Contract.INativeHandleContract>を呼び出して追加側アダプターの<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>メソッド (これは、ポイントで、<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越える)。  
+ ホスト側アダプターが取得、ご覧のとおり、<xref:System.AddIn.Contract.INativeHandleContract>呼び出して追加アドイン側アダプターの<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>メソッド (これは、ポイント場所、<xref:System.AddIn.Contract.INativeHandleContract>が分離境界を越える)。  
   
- ホスト側のアダプターが次に、変換、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>を呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>です。 最後に、<xref:System.Windows.FrameworkElement>はホスト ビューのコンテンツとして設定します。  
+ ホスト側アダプターが次に、変換、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>します。 最後に、<xref:System.Windows.FrameworkElement>ホスト ビューのコンテンツとして設定されます。  
   
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>アドインの実装  
@@ -86,24 +86,24 @@ ms.locfileid: "33549592"
   
   
   
- この例では、このモデルの 1 つの興味深い利点を確認できます: アドインに実装するだけで追加の開発者 (であるため、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]も)、アドインのクラスおよびアドインの両方ではなく[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]です。  
+ この例から、このモデルの 1 つの興味深い利点を確認できます。 アドイン開発者は、追加では、(UI もある) ためではなく、アドイン クラスとアドインの UI を実装するためにのみ必要があります。  
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>ホスト アプリケーションの実装  
- ホスト側アダプターと作成されたホスト ビューでは、ホスト アプリケーションを使用して、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドイン モデルにパイプラインを開き、アドインのホスト ビューを取得します。 これらの手順を次のコードに示します。  
+ ホスト側アダプターとホスト ビューの作成、ホスト アプリケーションを使用できます、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドイン モデルをパイプラインを開き、アドインのホスト ビューを取得します。 これらの手順を次のコードに示します。  
   
   
   
- ホスト アプリケーションで一般的な使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドイン モデルでアクティブにするコード、アドインに暗黙的に、ホスト アプリケーションを [ホスト] ビューを返します。 ホスト アプリケーションには、その後ホスト ビューが表示されます (これは、 <xref:System.Windows.Controls.UserControl>) から、<xref:System.Windows.Controls.Grid>です。  
+ ホスト アプリケーションでは、.NET Framework アドイン モデルの一般的なコードを使用して、アドイン、ホスト アプリケーションに暗黙的に、ホスト ビューを返しますアクティブにします。 ホスト アプリケーションは、その後、ホスト ビューを表示します (これは、 <xref:System.Windows.Controls.UserControl>) から、<xref:System.Windows.Controls.Grid>します。  
   
- アドインとの対話処理のコード[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]アドインのアプリケーション ドメインで実行します。 このような対話には、次のようなものがあります。  
+ アドインの UI との対話を処理するためのコードは、アドインのアプリケーション ドメインで実行されます。 このような対話には、次のようなものがあります。  
   
 -   処理、 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
--   表示、<xref:System.Windows.MessageBox>です。  
+-   表示、<xref:System.Windows.MessageBox>します。  
   
  このアクティビティは、ホスト アプリケーションから完全に分離されています。  
   
 ## <a name="see-also"></a>関連項目  
- [アドインおよび拡張機能](../../../../docs/framework/add-ins/index.md)  
+ [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
  [WPF のアドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

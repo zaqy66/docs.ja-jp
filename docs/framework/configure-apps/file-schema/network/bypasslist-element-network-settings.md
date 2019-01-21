@@ -20,8 +20,8 @@ ms.locfileid: "50188537"
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
+\<defaultProxy>  
+\<bypasslist>  
   
 ## <a name="syntax"></a>構文  
   

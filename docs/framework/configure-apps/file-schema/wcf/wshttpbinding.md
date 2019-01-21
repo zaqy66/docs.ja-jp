@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: f0d7234007c3899220cbca99bd7fe8ea4e75abae
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 05eb8d43e137c8dfc78dc3d7c0b145ce7a4e95ef
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316247"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150943"
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
-双方向サービス コントラクト以外に適した、安全で信頼のおける相互操作可能なバインディングを定義します。 バインディングは、信頼のための WS-ReliableMessaging、およびメッセージのセキュリティと認証のための WS-Security を実装します。 トランスポートは HTTP、メッセージ エンコーディングは Text/XML エンコーディングです。  
+双方向サービス コントラクト以外に適した、安全で信頼のおける相互操作可能なバインディングを定義します。 バインディングは、次の仕様を実装します。Ws-reliable メッセージングの信頼性、およびメッセージ セキュリティと認証用 Ws-security。 トランスポートは HTTP、メッセージ エンコーディングは Text/XML エンコーディングです。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -21,39 +21,41 @@ ms.locfileid: "49316247"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<wsHttpBinding>  
-    <binding   
-        allowCookies="Boolean"  
-        bypassProxyOnLocal="Boolean"  
-        closeTimeout="TimeSpan"  
-        hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-        maxBufferPoolSize="integer"  
-        maxReceivedMessageSize="Integer"  
-        messageEncoding="Text/Mtom"   
-                name="string"  
-        openTimeout="TimeSpan"   
-        proxyAddress="URI"  
-        receiveTimeout="TimeSpan"  
-        sendTimeout="TimeSpan"  
-                textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-        transactionFlow="Boolean"  
-        useDefaultWebProxy="Boolean">  
-        <reliableSession ordered="Boolean"  
-           inactivityTimeout="TimeSpan"  
-           enabled="Boolean" />  
-        <security mode="Message/None/Transport/TransportWithCredential">  
-           <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-                proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-                realm="string" />  
-          <message   
-             algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-                          clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
-             establishSecurityContext="Boolean"  
-             negotiateServiceCredential="Boolean" />  
-        </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />  
-    </binding>  
-</wsHttpBinding>  
+<wsHttpBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="integer"
+           maxReceivedMessageSize="Integer"
+           messageEncoding="Text/Mtom"
+           name="string"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           transactionFlow="Boolean"
+           useDefaultWebProxy="Boolean">
+    <reliableSession ordered="Boolean"
+                     inactivityTimeout="TimeSpan"
+                     enabled="Boolean" />
+    <security mode="Message/None/Transport/TransportWithCredential">
+      <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                 proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                 realm="string" />
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"
+               establishSecurityContext="Boolean"
+               negotiateServiceCredential="Boolean" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</wsHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -69,13 +71,13 @@ ms.locfileid: "49316247"
 |hostnameComparisonMode|URI の解析に使用する HTTP ホスト名比較モードを指定します。 この属性は <xref:System.ServiceModel.HostNameComparisonMode> 型で、URI が一致したときにサービスへのアクセスにホスト名を使用するかどうかを指定します。 既定値は <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> で、一致しているホスト名を無視します。|  
 |maxBufferPoolSize|このバインディングに使用するバッファー プール サイズの上限を指定する整数。 既定は 524,288 バイト (512 * 1024) です。 Windows Communication Foundation (WCF) では、多くの部分でバッファーを使用します。 使用するたびに毎回バッファーを作成および破壊すると負荷が高くなります。バッファーのガベージ コレクションも同様です。 バッファー プールを使用すると、バッファーをプールから取得して使用し、作業が終わったらプールに戻すことができます。 これで、バッファーの作成と破棄のオーバーヘッドを回避できます。|  
 |maxReceivedMessageSize|このバインディングで構成されるチャネルで受信可能な最大メッセージ サイズ (ヘッダーを含む) をバイト単位で指定する正の整数。 この制限を超えるメッセージの送信者が、SOAP エラーを受信します。 メッセージは受信者によって破棄され、トレース ログにこのイベントのエントリが作成されます。 既定値は 65536 です。|  
-|messageEncoding|メッセージのエンコードに使用されるエンコーダーを定義します。 以下の値が有効です。<br /><br /> テキスト: は、テキスト メッセージ エンコーダーを使用します。<br />Mtom: Message Transmission 組織 Mechanism 1.0 (MTOM) エンコーダーを使用します。<br />-既定値はテキストです。<br /><br /> この属性は <xref:System.ServiceModel.WSMessageEncoding> 型です。|  
+|messageEncoding|メッセージのエンコードに使用されるエンコーダーを定義します。 以下の値が有効です。<br /><br /> テキスト:テキスト メッセージ エンコーダーを使用します。<br />Mtom:Message Transmission 組織 Mechanism 1.0 (MTOM) エンコーダーを使用します。<br />-既定値はテキストです。<br /><br /> この属性は <xref:System.ServiceModel.WSMessageEncoding> 型です。|  
 |name|バインディングの構成名を格納する文字列です。 この値は、バインディングの ID として使用されるため、一意にする必要があります。 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。|  
 |openTimeout|実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |proxyAddress|HTTP プロキシのアドレスを指定する URI。 `useSystemWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定値は、`null` です。|  
 |receiveTimeout|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |sendTimeout|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|textEncoding|バインドでメッセージの発行に使用される文字セット エンコーディングを指定します。 以下の値が有効です。<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian エンコーディングします。<br />-Utf16TextEncoding: 16 ビット エンコーディング。<br />-Utf8TextEncoding: 8 ビット エンコーディング。<br /><br /> 既定値は Utf8TextEncoding です。<br /><br /> この属性は <xref:System.Text.Encoding> 型です。|  
+|textEncoding|バインドでメッセージの発行に使用される文字セット エンコーディングを指定します。 以下の値が有効です。<br /><br /> -UnicodeFffeTextEncoding:Unicode BigEndian エンコーディングします。<br />-Utf16TextEncoding:16 ビット エンコーディング。<br />-Utf8TextEncoding:8 ビット エンコーディング。<br /><br /> 既定値は Utf8TextEncoding です。<br /><br /> この属性は <xref:System.Text.Encoding> 型です。|  
 |transactionFlow|バインディングが WS-Transactions のフローをサポートするかどうかを指定するブール値です。 既定値は、`false` です。|  
 |useDefaultWebProxy|システムの自動設定 HTTP プロキシを使用するかどうかを指定するブール値。 既定値は `true` です。|  
   
@@ -99,40 +101,39 @@ ms.locfileid: "49316247"
 ## <a name="example"></a>例  
   
 ```xml  
-<configuration>  
-    <system.ServiceModel>  
-        <bindings>  
-            <wsHttpBinding>  
-                <binding   
-                    closeTimeout="00:00:10"  
-                    openTimeout="00:00:20"   
-                    receiveTimeout="00:00:30"  
-                    sendTimeout="00:00:40"  
-                    bypassProxyOnLocal="false"  
-                    transactionFlow="false"   
-                    hostNameComparisonMode="WeakWildcard"  
-                    maxReceivedMessageSize="1000"  
-                    messageEncoding="Mtom"   
-                    proxyAddress="http://foo/bar"  
-                    textEncoding="utf-16"  
-                    useDefaultWebProxy="false">  
-                    <reliableSession ordered="false"  
-                         inactivityTimeout="00:02:00"  
-                         enabled="true" />  
-                    <security mode="Transport">  
-                         <transport clientCredentialType="Digest"  
-                            proxyCredentialType="None"  
-                            realm="someRealm" />  
-                         <message clientCredentialType="Windows"  
-                            negotiateServiceCredential="false"  
-                            algorithmSuite="Aes128"   
-                            defaultProtectionLevel="None" />  
-                    </security>  
-                </binding>  
-           </wsHttpBinding>  
-        </bindings>  
-    </system.ServiceModel>  
-</configuration>  
+<configuration>
+  <system.ServiceModel>
+    <bindings>
+      <wsHttpBinding>
+        <binding closeTimeout="00:00:10"
+                 openTimeout="00:00:20"
+                 receiveTimeout="00:00:30"
+                 sendTimeout="00:00:40"
+                 bypassProxyOnLocal="false"
+                 transactionFlow="false"
+                 hostNameComparisonMode="WeakWildcard"
+                 maxReceivedMessageSize="1000"
+                 messageEncoding="Mtom"
+                 proxyAddress="http://foo/bar"
+                 textEncoding="utf-16"
+                 useDefaultWebProxy="false">
+          <reliableSession ordered="false"
+                           inactivityTimeout="00:02:00"
+                           enabled="true" />
+          <security mode="Transport">
+            <transport clientCredentialType="Digest"
+                       proxyCredentialType="None"
+                       realm="someRealm" />
+            <message clientCredentialType="Windows"
+                     negotiateServiceCredential="false"
+                     algorithmSuite="Aes128"
+                     defaultProtectionLevel="None" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+  </system.ServiceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>関連項目  

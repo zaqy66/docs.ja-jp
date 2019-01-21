@@ -1,5 +1,5 @@
 ---
-title: End&lt;キーワード&gt;ステートメント (Visual Basic)
+title: End&lt;keyword&gt;ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.EndDefinition
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2018
 ms.locfileid: "33605265"
 ---
-# <a name="end-ltkeywordgt-statement-visual-basic"></a>End&lt;キーワード&gt;ステートメント (Visual Basic)
+# <a name="end-ltkeywordgt-statement-visual-basic"></a>End&lt;keyword&gt;ステートメント (Visual Basic)
 
 その他のキーワードの後に、そのキーワードによって導入されるステートメント ブロックの定義を終了します。
 
@@ -68,9 +68,9 @@ End With
 |`Structure`|照合することによって開始された構造体の定義を終了するために必要な[Structure ステートメント](structure-statement.md)します。  
 |`Sub`|終了するために必要な`Sub`プロシージャの定義を照合することによって開始された[Sub ステートメント](sub-statement.md)します。 実行されると、`End Sub`ステートメントでは、呼び出し元のコードに制御が戻ります。  
 |`SyncLock`|終了するために必要な`SyncLock`ブロックを照合することによって開始された定義`SyncLock`ステートメント。 参照してください[SyncLock ステートメント](synclock-statement.md)します。  
-|`Try`|終了するために必要な`Try`.`Catch`...`Finally`ブロックを照合することによって開始された定義`Try`ステートメント。 参照してください[お試しください.キャッチしてください.Finally ステートメント](try-catch-finally-statement.md)します。  
-|`While`|終了するために必要な`While`ループの定義を照合することによって開始された`While`ステートメント。 参照してください[中.While ステートメント終了](while-end-while-statement.md)します。  
-|`With`| 終了するために必要な`With`ブロックを照合することによって開始された定義`With`ステートメント。 参照してください[としています.ステートメントで終了して](with-end-with-statement.md)します。  
+|`Try`|終了するために必要な`Try`.`Catch`...`Finally`ブロックを照合することによって開始された定義`Try`ステートメント。 [Try...Catch...Finally ステートメント](try-catch-finally-statement.md)を参照してください。  
+|`While`|終了するために必要な`While`ループの定義を照合することによって開始された`While`ステートメント。 参照してください[While...End While ステートメント](while-end-while-statement.md)を参照してください。  
+|`With`| 終了するために必要な`With`ブロックを照合することによって開始された定義`With`ステートメント。 [With...End With ステートメント](with-end-with-statement.md)を参照してください。  
 |||
   
 ## <a name="directives"></a>ディレクティブ

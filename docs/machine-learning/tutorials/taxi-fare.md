@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a142ab98174182adf6f50cf6eedff27c82993f5e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130508"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030257"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>チュートリアル: 回帰ラーナーと ML.NET を使用してニューヨークのタクシー運賃を予測する
 
@@ -99,7 +99,9 @@ ms.locfileid: "53130508"
 
 ## <a name="define-data-and-model-paths"></a>データおよびモデルのパスを定義する
 
-次に示す追加の `using` ステートメントを *Program.cs* ファイルの先頭に追加します。[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+次に示す追加の `using` ステートメントを *Program.cs* ファイルの先頭に追加します。
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
 データ セットを含むファイルのパス、モデルを保存するファイルのパス、および `TextLoader` のグローバル変数を保持するための 3 つのフィールドを追加する必要があります。
 

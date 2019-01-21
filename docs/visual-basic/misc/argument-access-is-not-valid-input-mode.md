@@ -1,17 +1,17 @@
 ---
-title: 引数&#39;アクセス&#39;が無効です。 Input モードの有効な値は&#39;'openaccess.read'&#39;と&#39;です&#39;
+title: 引数 'Access' は使用できません。 Input モードに使用できる値は、'OpenAccess.Read' および 'OpenAccess.Default' です
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_IllegalInputAccess
 ms.assetid: 60929c62-b9dc-4a9c-9363-2325238f744d
-ms.openlocfilehash: b093294fbcbaa2dc5260e975cbcb44804d523eb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e501559d9a477340dfcdc2713697decc9598b43
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600306"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779172"
 ---
-# <a name="argument-39access39-is-not-valid-valid-values-for-input-mode-are-39openaccessread39-and-39openaccessdefault39"></a>引数&#39;アクセス&#39;が無効です。 Input モードの有効な値は&#39;'openaccess.read'&#39;と&#39;です&#39;
+# <a name="argument-access-is-not-valid-valid-values-for-input-mode-are-openaccessread-and-openaccessdefault"></a>引数 'Access' は使用できません。 Input モードに使用できる値は、'OpenAccess.Read' および 'OpenAccess.Default' です
 `Input` モードでは Access 値は使用できません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

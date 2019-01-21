@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21ab18cded2b9a16fe2520547287198d3cfe6b74
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 25d083b730117a791fb8ab550b36f7b2e6c5f5be
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529312"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613714"
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt;要素
 ガベージ コレクションが複数の CPU グループをサポートするかどうかを指定します。  
@@ -73,7 +73,7 @@ ms.locfileid: "43529312"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
- [ワークステーションとサーバーのガベージ コレクション](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+- [ワークステーションとサーバーのガベージ コレクション](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

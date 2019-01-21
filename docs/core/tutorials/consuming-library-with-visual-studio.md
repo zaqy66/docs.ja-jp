@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147321"
+ms.locfileid: "53168899"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017 での .NET Standard ライブラリの使用
 
@@ -32,19 +32,19 @@ ms.locfileid: "53147321"
 
 1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual C#]** ノードを展開し、**[.NET Core]** ノードを選択し、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「ShowCase」と入力し、**[OK]** ボタンを選びます。
 
-   ![[新しいプロジェクトの追加] ダイアログ](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Visual Studio の [新しいプロジェクトの追加] ダイアログ - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. **ソリューション エクスプローラー**で、**ShowCase** プロジェクトを右クリックして、コンテキスト メニューで **[スタートアップ プロジェクトに設定]** を選びます。 
+1. **ソリューション エクスプローラー**で、**ShowCase** プロジェクトを右クリックして、コンテキスト メニューで **[スタートアップ プロジェクトに設定]** を選びます。
 
-   ![ShowCase のコンテキスト メニュー](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![スタートアップ プロジェクトを設定する Visual Studio のコンテキスト メニュー - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. 初期状態では、プロジェクトにはクラス ライブラリへのアクセス権がありません。 プロジェクトでクラス ライブラリのメソッドを呼び出すことができるようにするには、クラス ライブラリへの参照を作成します。 **ソリューション エクスプローラー**で、`ShowCase` プロジェクトの **[依存関係]** ノードを右クリックして、**[参照の追加]** を選びます。
 
-   ![ShowCase の依存関係のコンテキスト メニュー](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio プロジェクトの [参照の追加] コンテキスト メニュー - C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. **[参照マネージャー]** ダイアログ ボックスで、クラス ライブラリ プロジェクト **StringLibrary** を選び、**[OK]** ボタンを選びます。
 
-   ![参照マネージャー](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio の参照の管理ダイアログ - C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. *Program.cs* ファイルのコード ウィンドウで、すべてのコードを次のコードに置き換えます。
 
@@ -56,25 +56,25 @@ ms.locfileid: "53147321"
 
 1. 必要に応じて、ツールバーを変更して、`ShowCase` プロジェクトの**デバッグ** リリースをコンパイルします。 **ShowCase** の緑色の矢印を選び、プログラムをコンパイルして実行します。
 
-   ![イメージ](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![[デバッグ] ボタンを示している Visual Studio プロジェクトのツールバー - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 「[Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築](vb-library-with-visual-studio.md)」トピックで作成した `ClassLibraryProjects` ソリューションを開きます。 **ソリューション エクスプローラー**で **ClassLibraryProjects** ソリューションを右クリックし、コンテキスト メニューから **[追加]** > **[新しいプロジェクト]** の順に選びます。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual Basic]** ノードを展開し、**[.NET Core]** ノードを選択し、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「ShowCase」と入力し、**[OK]** ボタンを選びます。
 
-   ![[新しいプロジェクトの追加] ダイアログ](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Visual Studio の [新しいプロジェクトの追加] ダイアログ - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
 1. **ソリューション エクスプローラー**で、**ShowCase** プロジェクトを右クリックして、コンテキスト メニューで **[スタートアップ プロジェクトに設定]** を選びます。 
 
-   ![ShowCase のコンテキスト メニュー](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![スタートアップ プロジェクトを設定する Visual Studio のコンテキスト メニュー - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. 初期状態では、プロジェクトにはクラス ライブラリへのアクセス権がありません。 プロジェクトでクラス ライブラリのメソッドを呼び出すことができるようにするには、クラス ライブラリへの参照を作成します。 **ソリューション エクスプローラー**で、`ShowCase` プロジェクトの **[依存関係]** ノードを右クリックして、**[参照の追加]** を選びます。
 
-   ![ShowCase の依存関係のコンテキスト メニュー](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio プロジェクトの [参照の追加] コンテキスト メニュー - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. **[参照マネージャー]** ダイアログ ボックスで、クラス ライブラリ プロジェクト **StringLibrary** を選び、**[OK]** ボタンを選びます。
 
-   ![参照マネージャー](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio の参照を管理するダイアログ - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. *Program.vb* ファイルのコード ウィンドウで、すべてのコードを次のコードに置き換えます。
 
@@ -86,7 +86,7 @@ ms.locfileid: "53147321"
 
 1. 必要に応じて、ツールバーを変更して、`ShowCase` プロジェクトの**デバッグ** リリースをコンパイルします。 **ShowCase** の緑色の矢印を選び、プログラムをコンパイルして実行します。
 
-   ![イメージ](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![ツールバーの [デバッグ] - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 「[Visual Studio 2017 で Hello World Application をデバッグする](debugging-with-visual-studio.md)」と「[Visual Studio 2017 を使用した Hello World アプリケーションの発行](publishing-with-visual-studio.md)」の手順に従って、このライブラリを使うアプリケーションをデバッグして発行できます。

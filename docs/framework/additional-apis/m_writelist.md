@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: d145f6fd21989ada49a581ebf2694dcd56d94351
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a7446b9cbbfd4d3a4d38368a8e24c99527cf9108
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743161"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146707"
 ---
 # <a name="connectionmwritelist-field"></a>Connection.m\_WriteList フィールド
 
-`Connection.m_WriteList` <xref:System.Collections.ArrayList>の<xref:System.Net.HttpWebRequest>はキューに入れ HTTP 経由で送信するオブジェクト。
+`Connection.m_WriteList` <xref:System.Collections.ArrayList>の<xref:System.Net.HttpWebRequest>HTTP 経由での送信をキューに置かれたオブジェクト。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +30,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> `Connection.m_WriteList`フィールドはプライベートであり、コード内で直接使用します。
+> `Connection.m_WriteList`フィールドはプライベートであり、コード内で直接使用するものではありません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

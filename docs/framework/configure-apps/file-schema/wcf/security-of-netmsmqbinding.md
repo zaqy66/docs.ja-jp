@@ -2,12 +2,12 @@
 title: '&lt;netMsmqBinding&gt; の &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 8be7582ce5db88d9a79698193c44d9c50bdea4cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184756"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147799"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; の &lt;security&gt;
 MSMQ バインディングのセキュリティ設定を定義します。 トランスポートまたは SOAP セキュリティが有効であるかどうか、および有効である場合は、どの認証モードと保護レベルを使用するかを指定します。  
@@ -21,15 +21,14 @@ MSMQ バインディングのセキュリティ設定を定義します。 ト�
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<security mode="None/Transport/Message/Both">  
-   <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
-      msmqEncryptionAlgorithm="RC4Stream/AES"  
-      msmqProtectionLevel="None/Sign/EncryptAndSign"  
-      msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-      <message  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-      clientCredentialType="None/Windows/UserName/Certificate/CardSpace"/>  
-</security>  
+<security mode="None/Transport/Message/Both">
+  <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"
+             msmqEncryptionAlgorithm="RC4Stream/AES"
+             msmqProtectionLevel="None/Sign/EncryptAndSign"
+             msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+    <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+             clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -39,7 +38,7 @@ MSMQ バインディングのセキュリティ設定を定義します。 ト�
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|整合性、機密性、および認証を制御するセキュリティの種類を指定します。 以下の値が有効です。<br /><br /> -None。 こうとセキュリティ。<br />-トランスポート: 保護と認証は、トランスポートによって提供されます。 これは、2 つのキュー マネージャー間のメッセージ セキュリティに適用されます。 アプリケーションとキュー マネージャーとの間にセキュリティは提供されません。 既存の Msmq アプリケーションは、この種類のセキュリティ モードと機能的に等価です。<br />-メッセージ:、エンド ツー エンド アプリケーションのセキュリティを指定します。 トランスポート層で提供されるセキュリティありません。 これは、他の標準バインディングによって提供されたセキュリティと同様です。<br />-両方:、トランスポートと SOAP メッセージング レイヤーの両方でセキュリティを提供しています。 同じ資格情報が、両方のレベルで要求されます。<br /><br /> 既定値は、Transport です。 この属性は <xref:System.ServiceModel.NetMsmqSecurityMode> 型です。|  
+|モード|整合性、機密性、および認証を制御するセキュリティの種類を指定します。 以下の値が有効です。<br /><br /> -None。これには、セキュリティが無効にします。<br />-トランスポート。保護と認証はトランスポートによって提供されます。 これは、2 つのキュー マネージャー間のメッセージ セキュリティに適用されます。 アプリケーションとキュー マネージャーとの間にセキュリティは提供されません。 既存の Msmq アプリケーションは、この種類のセキュリティ モードと機能的に等価です。<br />-メッセージ:エンド ツー エンド アプリケーションのセキュリティを指定します。 トランスポート層で提供されるセキュリティありません。 これは、他の標準バインディングによって提供されたセキュリティと同様です。<br />-両方。トランスポートと SOAP メッセージング層の両方でセキュリティを提供します。 同じ資格情報が、両方のレベルで要求されます。<br /><br /> 既定値は、Transport です。 この属性は <xref:System.ServiceModel.NetMsmqSecurityMode> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
   

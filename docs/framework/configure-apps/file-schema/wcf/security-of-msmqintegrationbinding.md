@@ -2,12 +2,12 @@
 title: '&lt;msmqIntegrationBinding&gt; の &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 574c0d7cba88f724143e642da13cace8c329dea6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0c6e016980b5a40d74b9bd94dab96a0aa9fb243
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199995"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145277"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt; の &lt;security&gt;
 メッセージ キュー (MSMQ) 統合チャネルのトランスポート セキュリティ設定を定義します。  
@@ -21,19 +21,19 @@ msmqIntegrationBinding
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<msmqIntegrationBinding>  
-   <binding>   
-       <security mode="None/Transport">  
-         <transport msmqAuthenticationMode="None/Windows/Certificate"  
-            msmqEncryptionAlgorithm="RC4Stream/AES"  
-            msmqProtectionLevel="None/Sign/EncryptAndSign"  
-            msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-          <message  algorithmSuite="Aes128/Aes192/Aes256/Rsa15Aes128/ Rsa15Aes256/TripleDes"  
-                        clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
-            defaultProtectionLevel="None/Sign/EncryptAndSign" />  
-       </security>  
-   </binding>  
-</msmqIntegrationBinding>   
+<msmqIntegrationBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport msmqAuthenticationMode="None/Windows/Certificate"
+                 msmqEncryptionAlgorithm="RC4Stream/AES"
+                 msmqProtectionLevel="None/Sign/EncryptAndSign"
+                 msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+      <message algorithmSuite="Aes128/Aes192/Aes256/Rsa15Aes128/ Rsa15Aes256/TripleDes"
+               clientCredentialType="None/Windows/UserName/Certificate/CardSpace"
+               defaultProtectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</msmqIntegrationBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -43,7 +43,7 @@ msmqIntegrationBinding
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|メッセージ キュー統合チャネルの整合性、機密性、および認証を制御するセキュリティの種類を指定します。 以下の値が有効です。<br /><br /> -None。 こうとセキュリティ。<br />-トランスポート: 保護と認証は、トランスポートによって提供されます。 これは、2 つのキュー マネージャー間のメッセージ セキュリティに適用されます。 アプリケーションとキュー マネージャーとの間にセキュリティは提供されません。 既存の Msmq アプリケーションは、この種類のセキュリティ モードと機能的に等価です。<br /><br /> 既定値は `Transport` です。 この属性は <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode> 型です。|  
+|モード|メッセージ キュー統合チャネルの整合性、機密性、および認証を制御するセキュリティの種類を指定します。 以下の値が有効です。<br /><br /> -None。これには、セキュリティが無効にします。<br />-トランスポート。保護と認証はトランスポートによって提供されます。 これは、2 つのキュー マネージャー間のメッセージ セキュリティに適用されます。 アプリケーションとキュー マネージャーとの間にセキュリティは提供されません。 既存の Msmq アプリケーションは、この種類のセキュリティ モードと機能的に等価です。<br /><br /> 既定値は `Transport` です。 この属性は <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
   

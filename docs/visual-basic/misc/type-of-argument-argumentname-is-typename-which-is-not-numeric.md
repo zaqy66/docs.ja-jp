@@ -1,17 +1,17 @@
 ---
-title: 引数の型&#39; &lt;argumentname&gt; &#39;は&#39; &lt;typename&gt;&#39;、数値ではありません
+title: 引数の型 '&lt;argumentname&gt;'is'&lt;typename&gt;'、数値ではありません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_NotNumericType2
 ms.assetid: 6eca32a6-9a44-4f05-8791-abdb4cb316d2
-ms.openlocfilehash: 887f2cc78e900b8ede93de8260b5fbd16ae4d37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dc902efc379d121395130b6a1aa59364ca1be04
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639612"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781233"
 ---
-# <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>引数の型&#39; &lt;argumentname&gt; &#39;は&#39; &lt;typename&gt;&#39;、数値ではありません
+# <a name="type-of-argument-ltargumentnamegt-is-lttypenamegt-which-is-not-numeric"></a>引数の型 '&lt;argumentname&gt;'is'&lt;typename&gt;'、数値ではありません
 数値引数が期待される状況で数値以外の引数が指定されています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

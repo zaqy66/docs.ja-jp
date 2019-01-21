@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409829"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221727"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (タイプ ライブラリ インポーター)
 タイプ ライブラリ インポーターは、COM タイプ ライブラリにある型定義を共通言語ランタイム アセンブリで等価な定義に変換します。 Tlbimp.exe の出力は、元のタイプ ライブラリで定義された型のランタイム メタデータを格納するバイナリ ファイル (アセンブリ) です。 このファイルは [ildasm.exe](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -43,7 +43,7 @@ tlbimp tlbFile [options]
 |**/asmversion:** *versionnumber*|生成するアセンブリのバージョン番号を指定します。 *versionnumber* は *major.minor.build.revision* の形式で指定します。|  
 |**/company:** `companyinformation`|出力アセンブリに会社情報を追加します。|  
 |**/copyright:** `copyrightinformation`|出力アセンブリに著作権情報を追加します。 この情報は、アセンブリの **[ファイルのプロパティ]** ダイアログ ボックスで確認できます。|  
-|**/delaysign**|Tlbimp.exe が遅延署名を使用して、生成されたアセンブリに厳密な名前で署名するように指定します。 このオプションは、**/keycontainer:**、**/keyfile:**、または **/publickey:** のいずれかのオプションと共に指定する必要があります。 遅延署名プロセスの詳細については、「[アセンブリへの遅延署名](../app-domains/delay-sign-assembly.md)」を参照してください。|  
+|**T:System.Reflection.AssemblyDelaySignAttribute**|Tlbimp.exe が遅延署名を使用して、生成されたアセンブリに厳密な名前で署名するように指定します。 このオプションは、**/keycontainer:**、**/keyfile:**、または **/publickey:** のいずれかのオプションと共に指定する必要があります。 遅延署名プロセスの詳細については、「[アセンブリへの遅延署名](../app-domains/delay-sign-assembly.md)」を参照してください。|  
 |**/help**|このツールのコマンド構文とオプションを表示します。|  
 |**/keycontainer:** *containername*|*containername* で指定されたキー コンテナーの公開キーと秘密キーのペアを使用して、生成されたアセンブリに厳密な名前で署名します。|  
 |**/keyfile:** *filename*|*filename* にある発行者の正式な公開キーと秘密キーのペアを使用して、生成されたアセンブリに厳密な名前で署名します。|  
@@ -61,7 +61,7 @@ tlbimp tlbFile [options]
 |**/silent**|成功メッセージを表示しません。 このオプションは、**/silence** オプションと共に使用することはできません。|  
 |**/strictref**|ツールが現在のアセンブリ内、**/reference** オプションで指定されたアセンブリ内、または登録されているプライマリ相互運用機能アセンブリ (PIA) 内のすべての参照を解決できない場合は、タイプ ライブラリをインポートしません。|  
 |**/strictref:nopia**|**/strictref** と同じですが、PIA を無視します。|  
-|**/sysarray**|ツールが COM スタイル SafeArray をマネージ <xref:System.Array> 型としてインポートするように指定します。|  
+|**/sysarray**|ツールが COM スタイル SafeArray をマネージド <xref:System.Array> 型としてインポートするように指定します。|  
 |**/tlbreference:** *filename*|レジストリを参照せずにタイプ ライブラリ参照を解決する場合に使用するタイプ ライブラリ ファイルを指定します。<br /><br /> このオプションでは、古いタイプ ライブラリの形式の一部が読み込まれないことに注意してください。  ただし、古いタイプ ライブラリの形式は、レジストリまたは現在のディレクトリから暗黙的に読み込むことができます。|  
 |**/trademark:** `trademarkinformation`|出力アセンブリに商標情報を追加します。 この情報は、アセンブリの **[ファイルのプロパティ]** ダイアログ ボックスで確認できます。|  
 |**/transform:** *transformname*|*transformname* パラメーターで指定されたようにメタデータを変換します。<br /><br /> ディスパッチ専用インターフェイス (dispinterface) のメソッドの [out, retval] パラメーターを戻り値に変換するには、*transformname* パラメーターに **dispret** を指定します。<br /><br /> このオプションの詳細については、このトピックの下記の例を参照してください。|  
@@ -101,7 +101,7 @@ tlbimp  myTest.tlb  /out:myTest.dll
 tlbimp MyModule.dll\1  
 ```  
   
- タイプ ライブラリ `myTestLib.dll` に対して、`TestLib.dll` という名前のアセンブリを生成するコマンドを次に示します。 **/transform:dispret** オプションは、タイプ ライブラリのディスパッチ インターフェイスに対するメソッドの [out, retval] パラメーターをマネージ ライブラリの戻り値に変換します。  
+ タイプ ライブラリ `myTestLib.dll` に対して、`TestLib.dll` という名前のアセンブリを生成するコマンドを次に示します。 **/transform:dispret** オプションは、タイプ ライブラリのディスパッチ インターフェイスに対するメソッドの [out, retval] パラメーターをマネージド ライブラリの戻り値に変換します。  
   
 ```  
 tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll  
@@ -113,19 +113,19 @@ tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll
 void SomeMethod([out, retval] VARIANT_BOOL*);  
 ```  
   
- **/transform:dispret** オプションを指定すると、Tlbimp.exe は、`SomeMethod` の `[out, retval]` パラメーターを `bool` 型の戻り値に変換します。 **/transform:dispret** オプションを指定した場合に、Tlbimp.exe が、マネージ ライブラリ `myTestLib.dll` で `SomeMethod` に対して生成するメソッド シグネチャを次に示します。  
+ **/transform:dispret** オプションを指定すると、Tlbimp.exe は、`SomeMethod` の `[out, retval]` パラメーターを `bool` 型の戻り値に変換します。 **/transform:dispret** オプションを指定した場合に、Tlbimp.exe が、マネージド ライブラリ `myTestLib.dll` で `SomeMethod` に対して生成するメソッド シグネチャを次に示します。  
   
 ```csharp  
 bool SomeMethod();  
 ```  
   
- Tlbimp.exe を使用して、**/transform:dispret** を指定せずに `TestLib.dll` のマネージ ライブラリを生成すると、マネージ ライブラリ `myTestLib.dll` には `SomeMethod` の次のメソッド シグネチャが生成されます。  
+ Tlbimp.exe を使用して、**/transform:dispret** を指定せずに `TestLib.dll` のマネージド ライブラリを生成すると、マネージド ライブラリ `myTestLib.dll` には `SomeMethod` の次のメソッド シグネチャが生成されます。  
   
 ```csharp  
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ツール](index.md)  
  [Tlbexp.exe (タイプ ライブラリ エクスポーター)](tlbexp-exe-type-library-exporter.md)  
  [タイプ ライブラリのアセンブリとしてのインポート](../interop/importing-a-type-library-as-an-assembly.md)  

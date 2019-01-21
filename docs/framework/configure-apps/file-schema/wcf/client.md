@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: b8a006d3dee4149569b3f5b573d9d765504b0d65
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 24defe7e01603f1b1be3023d07854091335d6c60
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752638"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148644"
 ---
 # <a name="ltclientgt"></a>&lt;client&gt;
 `client` 要素は、クライアントが接続可能なエンドポイントの一覧を定義します。  
@@ -21,14 +21,14 @@ ms.locfileid: "32752638"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.serviceModel>  
-    <client>  
-        <endpoint>  
-        </endpoint>  
-                <metadata>  
-        </metadata>  
-    </client>  
-</system.serviceModel>  
+<system.serviceModel>
+  <client>
+    <endpoint>
+    </endpoint>
+    <metadata>
+    </metadata>
+  </client>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -50,7 +50,7 @@ ms.locfileid: "32752638"
 |-------------|-----------------|  
 |[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|すべての Windows Communication Foundation (WCF) 構成要素のルート要素です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `client` セクションは、クライアントが接続可能なエンドポイントの一覧を定義します。 クライアント セクションに示される各エンドポイントは、独自のバインディング、動作、およびコントラクトを定義します。 各エンドポイントは、`name` 属性と `contract` 属性の組み合わせで一意に識別されます。 クライアント コードは、クライアントが実装するサービスのエンドポイントに接続するための `name` を指定します。 `name` 属性が省略されている場合、クライアントが実装するコントラクトのエンドポイントが既定のエンドポイントとして機能します。  
   
  さらに、このセクションはメタデータを処理するための設定も指定します。  
@@ -58,16 +58,18 @@ ms.locfileid: "32752638"
 ## <a name="example"></a>例  
   
 ```xml  
-<client>  
-    <endpoint address="/HelloWorld/"  
-              bindingConfiguration="usingDefaults"  
-              name="MyBinding"  
-              binding="customBinding"  
-              contract="HelloWorld">  
-    <addressProperties actingAs="http://www.microsoft.com/TestActor"  
-             identityData="BasicReadWrite" identityType="Spn" isAddressPrivate="false">  
-    </endpoint>  
-</client>  
+<client>
+  <endpoint address="/HelloWorld/"
+            bindingConfiguration="usingDefaults"
+            name="MyBinding"
+            binding="customBinding"
+            contract="HelloWorld">
+    <addressProperties actingAs="http://www.microsoft.com/TestActor"
+                       identityData="BasicReadWrite"
+                       identityType="Spn"
+                       isAddressPrivate="false">
+  </endpoint>
+</client>
 ```  
   
 ## <a name="see-also"></a>関連項目  

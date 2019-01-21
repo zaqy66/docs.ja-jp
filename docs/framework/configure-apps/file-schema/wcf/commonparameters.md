@@ -2,12 +2,12 @@
 title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d16807d9faae427d8c22aafc1e1f4f04e5cb13b7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207995"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149463"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 複数のサービスでグローバルに使用されるパラメーターのコレクションを表します。 このコレクションには通常、永続性サービスによって共有されるデータベース接続文字列が格納されます。  
@@ -22,11 +22,12 @@ ms.locfileid: "47207995"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<workflowRuntime>  
-   <commonParameters>  
-      <add name="String" value="String" />  
-   </commonParameters>  
-</workflowRuntime>  
+<workflowRuntime>
+  <commonParameters>
+    <add name="String"
+         value="String" />
+  </commonParameters>
+</workflowRuntime>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -62,15 +63,20 @@ ms.locfileid: "47207995"
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> や <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> など、作業バッチを永続的ストアにコミットするサービスでは、`EnableRetries` パラメーターを次の例のように使用することで、トランザクションの再試行を有効にできます。  
   
 ```xml  
-<WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
-    <commonParameters>  
-        <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />  
-        <add name="EnableRetries" value="True" />  
-    </commonParameters>  
-    <Services>  
-        <add type="System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" EnableRetries="False" />   
-     </Services>  
-</WorkflowRuntime>  
+<workflowRuntime name="SampleApplication"
+                 unloadOnIdle="false">
+  <commonParameters>
+    <add name="ConnectionString"
+         value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />
+    <add name="EnableRetries"
+         value="True" />
+  </commonParameters>
+  <services>
+    <add type="System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime,
+               Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+         enableRetries="False" />
+  </services>
+</workflowRuntime>
 ```  
   
  注意して、`EnableRetries`グローバル レベルでパラメーターを設定することができます (ように、 *CommonParameters*セクション)、または個々 のサービスをサポートする`EnableRetries`(ように、*サービス*セクション)。  
@@ -90,10 +96,12 @@ config.Save();
 ## <a name="example"></a>例  
   
 ```xml  
-<commonParameters>  
-   <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;"/>  
-   <add name="EnableRetries" value="true"/>  
-</commonParameters>  
+<commonParameters>
+   <add name="ConnectionString"
+        value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />
+   <add name="EnableRetries"
+        value="true" />
+</commonParameters>
 ```  
   
 ## <a name="see-also"></a>関連項目  

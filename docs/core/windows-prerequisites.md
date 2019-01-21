@@ -1,13 +1,13 @@
 ---
 title: Windows における .NET Core の前提条件
 description: Windows コンピューターで .NET Core アプリケーションを開発および実行する場合に必要な依存関係について説明します。
-ms.date: 12/05/2018
-ms.openlocfilehash: 8f9a823ab3eea15d7e33da6ff00992057c8c4e38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130909"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656116"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
@@ -35,12 +35,12 @@ ms.locfileid: "53130909"
 
 次の記事では、.NET Core がサポートされたオペレーティング システム (バージョンごと) の完全な一覧を示します。
 
+* [.NET Core 3.0 (Preview)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1-supported-os.md)
 * [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
-ダウンロード リンクと詳細については、最新バージョンをダウンロードするには [.NET ダウンロード](https://www.microsoft.com/net/download)、以前のバージョンについて [.NET ダウンロードのアーカイブ](https://dotnet.microsoft.com/download/archives#dotnet-core)に関するページを参照してください。
+ダウンロード リンクと詳細については、最新バージョンをダウンロードするには [.NET ダウンロード](https://dotnet.microsoft.com/download)、以前のバージョンについて [.NET ダウンロードのアーカイブ](https://dotnet.microsoft.com/download/archives#dotnet-core)に関するページを参照してください。
 
 ## <a name="net-core-dependencies"></a>.NET Core の依存関係
 
@@ -62,8 +62,12 @@ ms.locfileid: "53130909"
 >
 > KB2999226 に加え、[KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) もインストールされていることを確認します。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 の前提条件
+## <a name="prerequisites-for-net-core-30-preview-1"></a>.NET Core 3.0 Preview 1 の前提条件
 
+.NET Core 3.0 Preview 1 の前提条件は、.NET Core の他のバージョンと同じです。 ただし、Visual Studio を使用して .NET Core 3.0 プロジェクトを作成する場合は、[Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/) を使用する必要があります。 Visual Studio 2019 Preview は、Visual Studio の他のバージョンと競合することなく、side-by-side でインストールできます。
+
+## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 の前提条件
+    
 .NET Core SDK を使用して .NET Core アプリケーションを開発する場合は、好きなエディターを使用できます。 Visual Studio 2017 では、Windows 上に .NET Core アプリ用の統合開発環境が提供されます。
 
 Visual Studio 2017 での変更の詳細については、[リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。

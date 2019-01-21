@@ -2,12 +2,12 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: eddda5e805d7e2cc361b6925d34d13eb8fd614f9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e8b45075c7c07efc49f84526382352a5b1a556b1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773632"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148670"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 Windows Communication Foundation (WCF) での使用時に、プレーンテキストの XML、JavaScript Object Notation (JSON) メッセージ エンコード、および "無変換の" バイナリ コンテンツの読み取りおよび書き込みを有効にします。  
@@ -21,11 +21,9 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<webMessageEncoding   
-      maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-  
-writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<webMessageEncoding maxReadPoolSize="Integer"
+                    maxWritePoolSize="Integer"
+                    writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -37,7 +35,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 |---------------|-----------------|  
 |`maxReadPoolSize`|新しいリーダーを割り当てずに同時に読み取ることができるメッセージの数。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、内部エンコーダー (Text、JSON、および raw (生)) ごとに 64 リーダーです。<br /><br /> この数を増やすとメモリの消費量が増えますが、受信メッセージ数の急激な増加にエンコーダーが対処できるようになります。これは、作成済みのリーダーをプールから使用でき、新しいリーダーを作成する必要がないためです。|  
 |`maxWritePoolSize`|新しいライターを割り当てずに同時に送信できるメッセージの数。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、内部エンコーダー (Text、JSON、および raw (生)) ごとに 64 リーダーです。<br /><br /> この数を増やすとメモリの消費が増えますが、送信メッセージ数の急激な増加にエンコーダーが対処できるようになります。これは、作成済みのライターをプールから使用でき、新しいライターを作成する必要がないためです。|  
-|`writeEncoding`|バインドでメッセージの発行に使用される文字セット エンコーディングを指定します。 次の値を指定できます。<br /><br /> -UnicodeFffeTextEncoding: Unicode ビッグ エンディアン エンコーディング。<br />-Utf16TextEncoding: Unicode エンコーディング。<br />-Utf8TextEncoding: 8 ビット エンコーディング。<br /><br /> 既定値は Utf8TextEncoding です。 この属性は <xref:System.Text.Encoding> 型です。|  
+|`writeEncoding`|バインドでメッセージの発行に使用される文字セット エンコーディングを指定します。 次の値を指定できます。<br /><br /> -UnicodeFffeTextEncoding:Unicode ビッグ エンディアン エンコーディング。<br />-Utf16TextEncoding:Unicode エンコーディング。<br />-Utf8TextEncoding:8 ビット エンコーディング。<br /><br /> 既定値は Utf8TextEncoding です。 この属性は <xref:System.Text.Encoding> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -67,12 +65,10 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ## <a name="example"></a>例  
   
 ```xml  
-<webMessageEncoding   
-    maxReadPoolSize="256"  
-    maxWritePoolSize="128"  
-    messageVersion="None"  
-    textEncoding="utf-8"   
-/>  
+<webMessageEncoding maxReadPoolSize="256"
+                    maxWritePoolSize="128"
+                    messageVersion="None"
+                    textEncoding="utf-8" />
 ```  
   
 ## <a name="see-also"></a>関連項目  

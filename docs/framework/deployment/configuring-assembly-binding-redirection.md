@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3abf42790757708b235b3eab82ea9a11ff545215
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ff2b42ec338d31242a2391cea002fbe582c6dd
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50182867"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029581"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>アセンブリ バインディングのリダイレクトの構成
 既定では、アプリケーションは、アプリケーションのコンパイルに使用したランタイム バージョンと共に出荷された .NET Framework アセンブリのセットを使用します。 アプリケーション構成ファイルで .NET Framework アセンブリの特定のバージョンのアセンブリ バインディング参照をリダイレクトするには [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 要素の **appliesTo** 属性を使用できます。 このオプションの属性は、.NET Framework のバージョン番号を使用して、どのバージョンに適用するのかを示します。 **appliesTo** 属性が指定されていない場合、**\<assemblyBinding>** 要素は、.NET Framework のすべてのバージョンに適用されます。  
@@ -40,15 +40,15 @@ ms.locfileid: "50182867"
   
 ```xml  
 <assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
-<! — .NET Framework version 1.0 redirects here. -->   
+  <!-- .NET Framework version 1.0 redirects here. -->   
 </assemblyBinding>   
   
 <assemblyBinding xmlns="..." appliesTo="v1.1.4322">   
-    <! — .NET Framework version 1.1 redirects here. -->   
+  <!-- .NET Framework version 1.1 redirects here. -->   
 </assemblyBinding>   
   
 <assemblyBinding xmlns="...">   
-<!-- Redirects meant for all versions of the .NET Framework. -->   
+  <!-- Redirects meant for all versions of the .NET Framework. -->   
 </assemblyBinding>  
 ```  
   
@@ -57,5 +57,5 @@ ms.locfileid: "50182867"
   
  アセンブリ バインディングのリダイレクトが発生しているかどうかを調べることによって、構成ファイルが使用されているかどうかを判断できます。 [アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用して、読み込まれたアセンブリを調べます。 すべてのアセンブリ バインドを見るには、レジストリで **ForceLog** のエントリを設定する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
 - [方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

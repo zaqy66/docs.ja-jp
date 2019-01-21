@@ -1,9 +1,10 @@
-# [はじめに](index.md)
-## [C# 言語と .NET Framework の概要](introduction-to-the-csharp-language-and-the-net-framework.md)
-## [Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築](../../core/tutorials/with-visual-studio.md)
-### [Visual Studio 2017 での C# Hello World アプリケーションのデバッグ](../../core/tutorials/debugging-with-visual-studio.md)
-### [Visual Studio 2017 での Hello World アプリケーションの発行](../../core/tutorials/publishing-with-visual-studio.md)
-## [Visual Studio 2017 での C# と .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/library-with-visual-studio.md)
-### [Visual Studio 2017 の .NET Core を使用したクラス ライブラリのテスト](../../core/tutorials/testing-library-with-visual-studio.md)
-### [Visual Studio 2017 での .NET 標準ライブラリの使用](../../core/tutorials/consuming-library-with-visual-studio.md)
-## [C# および Visual Studio Code の概要](../../core/tutorials/with-visual-studio-code.md)
+---
+ms.openlocfilehash: 899f6c8a4b6ee8bfb09ce7f380cfa08c2f93b2e1
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362840"
+---
+# [Getting Started](index.md)
+## [Introduction to the C# language and the .NET framework](introduction-to-the-csharp-language-and-the-net-framework.md)

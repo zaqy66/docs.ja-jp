@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6f2acd1078090f7680f1909d68afbcaa09d080fd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838281"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150722"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 要素
 認証用の (範囲指定された) 特定のサービスにより提供される X.509 証明書のコレクションを表します。 このコレクションは一般に、フェデレーション シナリオでセキュリティ トークン サービスのサービス証明書を指定するために使用されます。  
@@ -24,13 +24,13 @@ endpointBehaviors セクション
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<scopedCertificates>  
-      <add findValue="String"  
-                storeLocation="CurrentUser/LocalMachine"  
-                storeName=" CurrentUser/LocalMachine"  
-                targetUri="string"  
-            x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />   
-</scopedCertificates>   
+<scopedCertificates>
+  <add findValue="String"
+       storeLocation="CurrentUser/LocalMachine"
+       storeName=" CurrentUser/LocalMachine"
+       targetUri="string"
+       x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
+</scopedCertificates>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -56,19 +56,21 @@ endpointBehaviors セクション
   
  バインディングにサービスの証明書が必要で、サービスの URL に対する特定の証明書が ScopedCertificates 内に存在しない場合は、既定の証明書が使用されます。  
   
- 詳細については、の スコープの証明書"セクションを参照してください。[方法: フェデレーション クライアントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)します。  
+ 詳細については、の スコープの証明書"セクションを参照してください。[方法。フェデレーション クライアントを作成](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)です。  
   
 ## <a name="example"></a>例  
  次の例は、ドメインの名前のエンドポイントと通信するときに使用するクライアントのサービス証明書を指定する `http://www.contoso.com` HTTP プロトコル経由します。  
   
 ```xml  
-<serviceCertificate>  
-  <scopedCertificates>  
-     <add targetUri="http://www.contoso.com"   
-          findValue="www.contoso.com" storeLocation="LocalMachine"  
-                  storeName="Root" x509FindType="FindByIssuerName" />  
-  </scopedCertificates>  
-</serviceCertificate>  
+<serviceCertificate>
+  <scopedCertificates>
+    <add targetUri="http://www.contoso.com"
+         findValue="www.contoso.com"
+         storeLocation="LocalMachine"
+         storeName="Root"
+         x509FindType="FindByIssuerName" />
+  </scopedCertificates>
+</serviceCertificate>
 ```  
   
 ## <a name="see-also"></a>関連項目  
@@ -78,7 +80,7 @@ endpointBehaviors セクション
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
  [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [方法 : フェデレーション クライアントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)  
  [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

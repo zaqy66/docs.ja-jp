@@ -3,12 +3,12 @@ title: Visual Studio 2017 を使用して Hello World .NET Core アプリケー�
 description: C# または Visual Basic で記述された Hello World アプリを、Visual Studio 2017 を使用してデバッグする方法についてご説明します。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147529"
+ms.locfileid: "53170666"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017 を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする
 
@@ -18,7 +18,7 @@ ms.locfileid: "53147529"
 
 "*デバッグ*" と "*リリース*" は、 Visual Studio に 2 つある既定のビルド構成です。 現時点のビルド構成はツールバーに表示されています。 次のツール バーの画像では、**デバッグ** モードでアプリケーションをコンパイルするように Visual Studio が構成されています。
 
-   ![Visual Studio ツール バー](./media/debugging-with-visual-studio/toolbar1.png)
+   ![デバッグが強調表示された Visual Studio の既定のツールバー](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
 
 最初は常にデバッグ モードでプログラムをテストする必要があります。 デバッグ モードでは、コンパイラのほとんどの最適化がオフになり、ビルド プロセスの間に豊富な情報が提供されます。
 
@@ -31,7 +31,7 @@ ms.locfileid: "53147529"
 
    `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` という行にブレークポイントを設定します。そのためには、コード ウィンドウでこの行の左端の余白をクリックするか、またはこの行を選択してメニューから **[デバッグ]** > **[ブレークポイントの設定/解除]** の順に選びます。 次の図のとおり、Visual Studio ではブレークポイントを強調表示し、左端の余白に赤い円を表示することで、ブレークポイントがある行を示しています。
 
-   ![ブレークポイントが設定された Visual Studio のプログラム ウィンドウ](./media/debugging-with-visual-studio/setbreakpoint.png)
+   ![ブレークポイントが設定された Visual Studio のプログラム ウィンドウ](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
 
 1. ツール バーで緑色の矢印が付いた **HelloWorld** ボタンを選ぶか、F5 キーを押すか、**[デバッグ]** > **[デバッグの開始]** の順に選ぶことにより、プログラムをデバッグ モードで実行します。
 
@@ -49,11 +49,11 @@ ms.locfileid: "53147529"
 
    **[イミディエイト ウィンドウ]** に、文字列変数の値と、<xref:System.DateTime> 値のプロパティが表示されます。 さらに、変数の値は **[自動変数]** ウィンドウおよび **[ローカル]** ウィンドウで更新されます。
 
-   ![[自動変数] ウィンドウと [イミディエイト ウィンドウ]](./media/debugging-with-visual-studio/autosimmediate.png)
+   ![[自動変数] ウィンドウと [イミディエイト ウィンドウ]](./media/debugging-with-visual-studio/autos-immediate-window.png)
 
 1. ツール バーの **[続行]** ボタンを選ぶか、**[デバッグ]** > **[続行]** メニュー項目を選んで、プログラムの実行を続けます。 コンソール ウィンドウに表示される値は、**[イミディエイト ウィンドウ]** で行った変更に対応しています。
 
-   !["What is your name?" というプロンプトに対して入力した値 "Jack" と、"Hello Gracie on 11/1/2016 at 11:59am" が表示されたコンソール ウィンドウ](./media/debugging-with-visual-studio/changed.png)
+   !["What is your name?" というプロンプトに対する値 "Jack" と、"Hello Gracie" が表示されたコンソール ウィンドウ](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. 任意のキーを押してアプリケーションを終了して、デバッグ モードを終了します。
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -61,7 +61,7 @@ ms.locfileid: "53147529"
 
    `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` という行にブレークポイントを設定します。そのためには、コード ウィンドウでこの行の左端の余白をクリックするか、またはこの行を選択してメニューから **[デバッグ]** > **[ブレークポイントの設定/解除]** の順に選びます。 次の図のとおり、Visual Studio ではブレークポイントを強調表示し、左端の余白に赤い円を表示することで、ブレークポイントがある行を示しています。
 
-   ![ブレークポイントが設定された Visual Studio のプログラム ウィンドウ](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+   ![ブレークポイントが設定された Visual Studio のプログラム ウィンドウ](./media/debugging-with-visual-studio/vb-set-breakpoint-in-editor.png)
 
 1. ツール バーで緑色の矢印が付いた **HelloWorld** ボタンを選ぶか、F5 キーを押すか、**[デバッグ]** > **[デバッグの開始]** の順に選ぶことにより、プログラムをデバッグ モードで実行します。
 
@@ -69,7 +69,7 @@ ms.locfileid: "53147529"
 
 1. プログラムがブレークポイントに到達すると、プログラム実行は停止します。`Console.WriteLine` メソッドが実行される前にも停止します。 **[自動変数]** ウィンドウには、現在の行の付近で使用されている変数の値が表示されます。 **[ローカル]** ウィンドウ (**[ローカル]** タブをクリックすることで表示できる) には、現在実行しているメソッドで定義されている変数の値が表示されます。
 
-   ![Visual Studio のアプリケーション ウィンドウ](./media/debugging-with-visual-studio/vb-break.png)
+   ![ブレークポイントでの Visual Studio のアプリケーション ウィンドウ](./media/debugging-with-visual-studio/vb-stop-at-breakpoint.png)
 
 1. 変数の値を変更して、プログラムにどのような影響があるかを確認できます。 **[イミディエイト ウィンドウ]** が表示されない場合は、**[デバッグ]** > **[Windows]** > **[イミディエイト]** メニュー項目の順に選びます。 **[イミディエイト ウィンドウ]** では、デバッグ中のアプリケーションと対話できます。
 
@@ -79,7 +79,7 @@ ms.locfileid: "53147529"
 
 1. ツール バーの **[続行]** ボタンを選ぶか、**[デバッグ]** > **[続行]** メニュー項目を選んで、プログラムの実行を続けます。 コンソール ウィンドウに表示される値は、**[イミディエイト ウィンドウ]** で行った変更に対応しています。
 
-   ![[イミディエイト ウィンドウ] に入力された値の変更を表示するコンソール ウィンドウ](./media/debugging-with-visual-studio/changed.png)
+   ![[イミディエイト ウィンドウ] に入力された値の変更を表示するコンソール ウィンドウ](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. 任意のキーを押してアプリケーションを終了して、デバッグ モードを終了します。
 ---
@@ -93,7 +93,7 @@ ms.locfileid: "53147529"
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. ブレークポイントを表す赤丸を右クリックします。 コンテキスト メニューの **[条件]** を選んで、**[ブレークポイント設定]** ダイアログを開きます。 **[条件]** チェック ボックスをオンにします。
 
-   ![[ブレークポイント設定] パネル](./media/debugging-with-visual-studio/breakpointsettings.png)
+   ![[ブレークポイント設定] パネルが表示されているエディター - C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
 
 1. **[条件式]** で、[例 x == 5] を次のように置き換えます。
 
@@ -119,7 +119,7 @@ ms.locfileid: "53147529"
    ? name == String.Empty
    ```
 
-   ![ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ]](./media/debugging-with-visual-studio/emptystring.png)
+   ![ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ] - C#](./media/debugging-with-visual-studio/immediate-window-output.png)
 
 1. ツール バーの **[続行]** を選んで、プログラムの実行を続けます。
 
@@ -129,7 +129,7 @@ ms.locfileid: "53147529"
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. ブレークポイントを表す赤丸を右クリックします。 コンテキスト メニューの **[条件]** を選んで、**[ブレークポイント設定]** ダイアログを開きます。 **[条件]** チェック ボックスをオンにします。
 
-   ![[ブレークポイント設定] パネル](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+   ![[ブレークポイント設定] パネルが表示されているエディター - Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
 
 1. **[条件式]** で、[例 x == 5] を次のように置き換えます。
 
@@ -154,7 +154,7 @@ ms.locfileid: "53147529"
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
-  ![ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ]](./media/debugging-with-visual-studio/vb-emptystring.png)
+  ![ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ] - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. ツール バーの **[続行]** を選んで、プログラムの実行を続けます。
 
@@ -169,13 +169,13 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. メニュー バーで **[デバッグ]** > **[ステップ イン]** を選ぶか、F11 キーを押します。 次に実行される行が強調表示されて、横に矢印が表示されます。
 
-   ![Visual Studio ウィンドウ](./media/debugging-with-visual-studio/stepinto1.png)
+   ![Visual Studio のステップ イン メソッド - C#](./media/debugging-with-visual-studio/step-into-method.png)
 
    この時点で **[自動変数]** ウィンドウには、このプログラムで変数が 1 つ (`args`) しか定義されていないことが示されています。 プログラムにコマンド ライン引数を 1 つも渡していないので、値は空の文字列配列になっています。 さらに、空のコンソール ウィンドウが開かれています。
 
 1. **[デバッグ]** > **[ステップ イン]** を選ぶか、F11 キーを押します。 次に実行される行が強調表示されます。 図に示すように、直前のステートメントとこのステートメントの間のコードを実行するのにかかった時間は 1 ミリ秒未満です。 宣言された変数はまだ `args` しかなく、コンソール ウィンドウも空のままです。
 
-   ![Visual Studio ウィンドウ](./media/debugging-with-visual-studio/stepinto2.png)
+   ![Visual Studio のステップ イン メソッド ソース - C#](./media/debugging-with-visual-studio/step-into-source-method.png)
 
 1. **[デバッグ]** > **[ステップ イン]** を選ぶか、F11 キーを押します。 `name` の変数代入を含むステートメントが強調表示されます。 **[自動変数]** ウィンドウに `name` が `null` であると表示され、コンソール ウィンドウに "What is your name?" という文字列が表示されます。
 
@@ -193,13 +193,13 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. メニュー バーで **[デバッグ]** > **[ステップ イン]** を選ぶか、F11 キーを押します。 次に実行される行が強調表示されて、横に矢印が表示されます。
 
-   ![Visual Studio ウィンドウ](./media/debugging-with-visual-studio/vb-stepinto1.png)
+   ![Visual Studio のステップ イン メソッド - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
 
    この時点で、プログラムにコマンドライン引数をまだ渡していないので、**[自動変数]** ウィンドウには、`args` 変数の値が空の文字列配列である旨が表示されます。 さらに、空のコンソール ウィンドウが開かれています。
 
 1. **[デバッグ]** > **[ステップ イン]** を選ぶか、F11 キーを押します。 次に実行される行が強調表示されます。 図に示すように、直前のステートメントとこのステートメントの間のコードを実行するのにかかった時間は 1 ミリ秒未満です。 宣言された変数はまだ `args` しかなく、コンソール ウィンドウも空のままです。
 
-   ![Visual Studio ウィンドウ](./media/debugging-with-visual-studio/vb-stepinto2.png)
+   ![Visual Studio のステップ イン メソッド ソース - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
 
 1. **[デバッグ]** > **[ステップ イン]** を選ぶか、F11 キーを押します。 `name` の変数代入を含むステートメントが強調表示されます。 **[自動変数]** ウィンドウに `name` が `Nothing` であると表示され、コンソール ウィンドウに "What is your name?" という文字列が表示されます。
 
@@ -222,7 +222,7 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 
 コンソール アプリケーションのリリース バージョンをビルドしてテストするには、ツール バーのビルド構成を **[デバッグ]** から **[リリース]** に変更します。
 
-![イメージ](./media/debugging-with-visual-studio/toolbar2.png)
+![デバッグが強調表示された Visual Studio の既定のツールバー](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
 F5 キーを押すか、**[ビルド]** メニューの **[ソリューションのビルド]** を選ぶ、コンソール アプリケーションのリリース バージョンがコンパイルされます。 アプリケーションのデバッグ バージョンと同様に、テストできます。
 

@@ -2,12 +2,12 @@
 title: WCF の &lt;cancelRequestedQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 40fbcafd641e93be6ba21635f4f6e6428be62c12
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9cf2761bdab36d95b5077e36174565659230b512
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193787"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145446"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>WCF の &lt;cancelRequestedQueries&gt;
 親アクティビティが子アクティビティを取り消すための要求を追跡するのに使用する、クエリのコレクションを表します。 追跡参加要素がキャンセル要求レコード オブジェクトを定期受信するには、このクエリが必要です。  
@@ -22,21 +22,21 @@ ms.locfileid: "50193787"
   
 ## <a name="syntax"></a>構文  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <cancelRequestQueries>
           <cancelRequestQuery activityName="String"
-                              childActivityName="String"/>
+                              childActivityName="String" />
         </cancelRequestQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>属性と要素  
 
 以降のセクションでは、属性、子要素、および親要素について説明します。  

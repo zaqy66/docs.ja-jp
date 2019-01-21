@@ -2,17 +2,18 @@
 title: '&lt;defaultPorts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 2f7de066a1b91e9fa22fbe0213e221c6f4bbe617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ddfddaa13778ce98bd93b6d8029438377fc7e94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145186"
 ---
 # <a name="ltdefaultportsgt"></a>&lt;defaultPorts&gt;
 クライアント アプリケーションがリッスンする既定の通信エンドポイントの一覧を表示する既定のポートのコレクション。  
   
 \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<useRequestHeadersForMetadataAddress >  
@@ -23,9 +24,10 @@ ms.lasthandoff: 05/03/2018
 ```xml  
 <useRequestHeadersForMetadataAddress>
   <defaultPorts>
-    <add scheme="http" port="integer" />
+    <add scheme="http"
+         port="integer" />
   </defaultPorts>
-</useRequestHeadersForMetadataAddress>  
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  

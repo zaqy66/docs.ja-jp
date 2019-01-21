@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c14b0470f7ea488fcb813b68174b5d1cb0d95786
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235294"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415586"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>ドキュメント タグの区切り記号 (C# プログラミング ガイド)
 XML ドキュメント コメントでは区切り記号を使用し、ドキュメント コメントの開始位置と終了位置をコンパイラに示す必要があります。 XML ドキュメント タグでは、次の種類の区切り記号を使用できます。  
@@ -38,7 +38,7 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
   
 -   次のコメントでは、`<summary>` で始まる行だけがコメントの一部として処理されます。 次の 3 つのタグ形式は、いずれも同じコメントを生成します。  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -52,7 +52,7 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
   
 -   コンパイラは、2 行目と 3 行目の先頭で共通のパターン " * " を識別します。 このパターンは出力に含まれません。  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -60,7 +60,7 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
   
 -   次のコメントでは、3 行目の 2 番目の文字がアスタリスクではないため、コンパイラは共通のパターンを検索しません。 このため、2 行目と 3 行目のすべてのテキストがコメントの一部として処理されます。  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -69,7 +69,7 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
   
 -   次のコメントでは、2 つの原因によりコンパイラはパターンを検出しません。 まず、アスタリスクの前の空白の数が一致していません。 次に、5 行目がタブで始まっています。空白とタブは一致しません。 このため、2 行目から 5 行目のすべてのテキストがコメントの一部として処理されます。  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   
@@ -78,7 +78,7 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
     */   
     ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  

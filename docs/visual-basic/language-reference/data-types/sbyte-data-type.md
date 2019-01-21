@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b2ef4f083cd9b6f38dc91bf8bf0eac9cd21c2618
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145687"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148085"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte データ型 (Visual Basic)
 
@@ -64,7 +64,7 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>プログラミングのヒント
   
--   **CLS 準拠です。** `SByte`データ型がの一部、[共通言語仕様](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
+-   **CLS 準拠です。** `SByte`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
 
 -   **拡大します。** `SByte`拡大変換後のデータ型`Short`、 `Integer`、 `Long`、 `Decimal`、 `Single`、および`Double`します。 つまり、変換できる`SByte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
   
@@ -79,6 +79,6 @@ Dim number As SByte = &H_F9
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [整数データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188613"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084720"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
 
@@ -59,7 +59,7 @@ C# 7.0 以降は、match 式は NULL 以外の式にできます。
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-1 つの switch ステートメントでは、1 つの switch セクションのみが実行されます。 C# では 1 つの switch セクションから次のセクションへ実行が連続することが許可されません。 このため、次のコードでは、コンパイラ エラー CS0163 "コントロールはひとつの case ラベル (<case label>) から別のラベルへ流れ落ちることはできません" が生成されます。
+1 つの switch ステートメントでは、1 つの switch セクションのみが実行されます。 C# では 1 つの switch セクションから次のセクションへ実行が連続することが許可されません。 このため、次のコードでは、コンパイラ エラー CS0163:"コントロールは 1 つの case ラベルから別のラベル (<case label>) へ流れ落ちることはできません。" が生成されます。
 
 ```csharp
 switch (caseSwitch)
@@ -88,7 +88,7 @@ match 式に一致する case ラベルが含まれた switch セクションに
 
 C# 6 でサポートされるのは定数パターンのみで、定数値の繰り返しは許可されません。このため、case ラベルでは相互に排他的な値が定義され、match 式と一致するのは 1 つのパターンだけです。 そのため、`case` ステートメントが表示される順序は重要ではありません。
 
-一方、C# 7.0 では他のパターンがサポートされているため、case ラベルで定義する値が相互に排他的である必要はなく、match 式と一致するパターンが複数存在する可能性があります。 最初に一致するパターンが含まれた switch セクションのステートメントのみが実行されるので、ここでは、`case` ステートメントが表示される順序が重要になってきます。 C# によって switch セクションが検出され、その switch セクションの case ステートメントが前のステートメントと同じだったり、そのステートメントのサブセットだったりすると、コンパイラ エラー CS8120 "switch case は既に以前のケースで処理されています" が生成されます。
+一方、C# 7.0 では他のパターンがサポートされているため、case ラベルで定義する値が相互に排他的である必要はなく、match 式と一致するパターンが複数存在する可能性があります。 一致するパターンを含む最初の switch セクションのステートメントのみが実行されるので、ここでは、`case` ステートメントが表示される順序が重要になってきます。 C# によって switch セクションが検出され、その switch セクションの case ステートメントが前のステートメントと同じだったり、そのステートメントのサブセットだったりすると、コンパイラ エラー CS8120 "switch case は既に以前のケースで処理されています" が生成されます。
 
 次の例は、相互に排他的でない各種パターンを使用する `switch` ステートメントを示しています。 `case 0:` switch セクションを移動し、そのセクションが `switch` ステートメントの最初のセクションでなくなると、C# によってコンパイラ エラーが生成されます。値がゼロの整数は、整数すべてのサブセットであるためです。これは、`case int val` ステートメントで定義されているパターンです。
 

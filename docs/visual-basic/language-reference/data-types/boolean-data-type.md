@@ -1,5 +1,5 @@
 ---
-title: ブール型 (Boolean) (Visual Basic)
+title: Boolean データ型 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.FALSE
@@ -19,11 +19,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43862384"
 ---
-# <a name="boolean-data-type-visual-basic"></a>ブール型 (Boolean) (Visual Basic)
+# <a name="boolean-data-type-visual-basic"></a>Boolean データ型 (Visual Basic)
 値を保持できるのみ`True`または`False`します。 キーワード`True`と`False`の 2 つの状態に対応して`Boolean`変数。  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、[ブール データ型 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) true または false などの 2 つの状態値が含まれてはい/いいえ、またはオン/オフにします。  
+ 使用して、[Boolean データ型 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) true または false などの 2 つの状態値が含まれてはい/いいえ、またはオン/オフにします。  
   
  `Boolean` の既定値は `False` です。  
   

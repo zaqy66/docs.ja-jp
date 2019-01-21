@@ -1,13 +1,13 @@
 ---
-title: オブジェクト式 (F#)
+title: オブジェクト式
 description: 名前付きの型コードを追加し、新たに作成するために必要なオーバーヘッドを回避するときに、F# オブジェクト式を使用する方法をについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cb15983543fde2459c589b3de2554575d73db686
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865463"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613922"
 ---
 # <a name="object-expressions"></a>オブジェクト式
 

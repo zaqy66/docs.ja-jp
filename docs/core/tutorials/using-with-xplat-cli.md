@@ -2,15 +2,15 @@
 title: CLI を使用する .NET Core に関する概要
 description: Windows、Linux、または macOS の .NET Core での、.NET Core コマンド ライン インターフェイス (CLI) の使用方法を段階的に説明するチュートリアル。
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: 89839596509e1ffabd28b8903600a431b5a0ed9c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 11d8a4d1841a1d161c4aed233a025813374556d6
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143221"
+ms.locfileid: "53169990"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要
 

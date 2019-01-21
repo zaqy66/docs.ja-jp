@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042369"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222105"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上
 TPL データ フロー ライブラリが提供する <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> クラスを使って、1 つ以上のソースからデータを受信してバッファーに格納し、それを 1 つのコレクションとして反映することができます。 このバッチ メカニズムは、1 つ以上のソースからデータを収集し、複数のデータ要素をバッチとして処理する場合に便利です。 例として、データフローを使ってレコードをデータベースに挿入するアプリケーションについて考えてみましょう。 この操作は、1 つずつ順番にではなく、複数の項目が同時に挿入される場合により効率的となります。 このドキュメントでは、<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> クラスを使用して、そのようなデータベースの挿入操作を効率的に行う方法について説明します。 また、<xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> クラスを使用して、プログラムでデータベースを読み取る場合に、その結果と発生する例外の両方をキャプチャする方法について説明します。
@@ -30,7 +30,7 @@ TPL データ フロー ライブラリが提供する <xref:System.Threading.Ta
 2.  コンピューターに Northwind データベース (Northwind.sdf) のコピーがあることを確認します。 このファイルは通常、%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ フォルダーに置かれています。  
   
     > [!IMPORTANT]
-    >  Windows のバージョンによっては、Visual Studio が管理者以外のモードで実行されている場合には、Northwind.sdf に接続できません。 Northwind.sdf に接続するには、**[管理者として実行]** モードで、Visual Studio または Visual Studio のコマンド プロンプトを開始します。  
+    >  Windows のバージョンによっては、Visual Studio が管理者以外のモードで実行されている場合には、Northwind.sdf に接続できません。 Northwind.sdf に接続するには、**[管理者として実行]** モードで、Visual Studio または Visual Studio 用開発者コマンド プロンプトを開始します。  
   
  このチュートリアルは、次のセクションで構成されています。  
   

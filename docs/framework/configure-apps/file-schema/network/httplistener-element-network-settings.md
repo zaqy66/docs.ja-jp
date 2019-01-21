@@ -10,12 +10,12 @@ ms.lasthandoff: 10/28/2018
 ms.locfileid: "50197783"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;要素 (ネットワーク設定)
-によって使用されるパラメーターのカスタマイズ、<xref:System.Net.HttpListener>クラス。  
+<xref:System.Net.HttpListener>クラスで使用されるパラメータをカスタマイズします。  
   
  \<configuration>  
 \<system.net>  
 \<settings>  
-\<httpListener >  
+\<httpListener>  
   
 ## <a name="syntax"></a>構文  
   

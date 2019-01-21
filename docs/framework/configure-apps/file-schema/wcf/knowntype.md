@@ -2,15 +2,15 @@
 title: '&lt;knownType&gt;'
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: b2445f12f1eaac03b3f3ab66f3d13a5f465a1133
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6156f102573333ec0d5533b8f1a8506d91215f47
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753327"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151931"
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
-逆シリアル化中に <xref:System.Runtime.Serialization.DataContractSerializer> によって使用される型を指定します。 この要素には、"宣言型" のフィールドまたはプロパティによって返される "既知の型" を指定します。 詳細については、次を参照してください。[データ コントラクトの既知の型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)です。  
+逆シリアル化中に <xref:System.Runtime.Serialization.DataContractSerializer> によって使用される型を指定します。 この要素には、"宣言型" のフィールドまたはプロパティによって返される "既知の型" を指定します。 詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
   
  \<system.runtime.serialization >  
 \<dataContractSerializer >  
@@ -21,10 +21,10 @@ ms.locfileid: "32753327"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<knownType type="String">  
-     <parameter index="Integer"  
-                type="String" />  
-</knownType>  
+<knownType type="String">
+  <parameter index="Integer"
+             type="String" />
+</knownType>
 ```  
   
 ## <a name="type"></a>型  
@@ -51,22 +51,22 @@ ms.locfileid: "32753327"
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|宣言されたタイプのコレクションに、宣言されたタイプを追加します。|  
   
-## <a name="remarks"></a>コメント  
- 既知の型の詳細については、次を参照してください。[データ コントラクトの既知の型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>です。  
+## <a name="remarks"></a>Remarks  
+ 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   
  参照してください、 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)この要素の使用例についてはします。  
   
 ## <a name="example"></a>例  
   
 ```xml  
-<add type="MyCompany.Library.Shape,   
-           MyAssembly, Version=2.0.0.0, Culture=neutral,  
-           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
-           <knownType type="MyCompany.Library.Circle,   
-                      MyAssembly, Version=2.0.0.0, Culture=neutral,  
-                      PublicKeyToken=XXXXXX,  
-                      processorArchitecture=MSIL"/>  
-</add>  
+<add type="MyCompany.Library.Shape,
+           MyAssembly, Version=2.0.0.0, Culture=neutral,
+           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">
+  <knownType type="MyCompany.Library.Circle,
+                   MyAssembly, Version=2.0.0.0, Culture=neutral,
+                   PublicKeyToken=XXXXXX,
+                   processorArchitecture=MSIL"/>
+</add>
 ```  
   
 ## <a name="see-also"></a>関連項目  

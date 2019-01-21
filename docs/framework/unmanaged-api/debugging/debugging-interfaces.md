@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 991e333c53101a2be2a8a19d3960c3d0879619be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b6d00d17615769a5d03d58e0eda5af62ca58368
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409933"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415963"
 ---
 # <a name="debugging-interfaces"></a>デバッグのインターフェイス
 ここでは、共通言語ランタイム (CLR: Common Language Runtime) で実行するプログラムのデバッグを処理するアンマネージ インターフェイスについて説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "33409933"
  デバッグ用にモジュールの読み込みとアンロードを処理するメソッドを提供します。  
   
  [ICLRDebuggingLibraryProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)  
- 含まれています、 [ProvideLibrary メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)メソッドで、コールバック インターフェイスの共通言語ランタイム バージョンに固有の上にロードし、要求時にデバッグ ライブラリをライブラリ プロバイダーを取得します。  
+ 含まれています、 [ProvideLibrary メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)メソッドで、ライブラリ プロバイダーの共通言語ランタイム バージョン固有デバッグ ライブラリを検索しに読み込む要求を許可するコールバック インターフェイスを取得します。  
   
  [ICLRMetadataLocator インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)  
  データ アクセス サービス層で使用して、対象プロセス内のアセンブリのメタデータを見つけるためのインターフェイスです。  
@@ -56,7 +56,7 @@ ms.locfileid: "33409933"
  アプリケーション ドメインで [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 型を操作するメソッドを提供します。 このインターフェイスは、`ICorDebugAppDomain` インターフェイスと `ICorDebugAppDomain2` インターフェイスを拡張します。  
   
  [ICorDebugAppDomain4 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)  
- 論理的に拡張し、 [ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md) COM 呼び出し可能ラッパーからマネージ オブジェクトを取得するインターフェイスです。  
+ 論理的に拡張し、 [ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)インターフェイスが COM 呼び出し可能ラッパーからマネージ オブジェクトを取得します。  
   
  [ICorDebugAppDomainEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
  列挙体の次の位置から、指定した数の `ICorDebugAppDomain` の値を返すメソッドを提供します。  
@@ -71,13 +71,13 @@ ms.locfileid: "33409933"
  アセンブリを表します。 これは、`ICorDebugAssembly` インターフェイスの機能を拡張するインターフェイスです。  
   
  [ICorDebugAssembly3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
- 論理的に拡張し、 [ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)のコンテナー アセンブリとそのコンテナー内のサポートを提供するインターフェイスです。 **.NET ネイティブのみで使用できます。**  
+ 論理的に拡張し、 [ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)コンテナー アセンブリとその格納されているアセンブリのサポートを提供するインターフェイス。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugAssemblyEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
  `ICorDebugEnum` メソッドを実装し、`ICorDebugAssembly` 配列を列挙します。  
   
  [ICorDebugBlockingObjectEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
- 一覧については、列挙子を提供[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体。  
+ 一覧については、列挙子を提供します。 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体。  
   
  [ICorDebugBoxValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-interface.md)  
  ボックス化された値クラスのオブジェクトを表す `ICorDebugHeapValue` のサブクラス。  
@@ -110,7 +110,7 @@ ms.locfileid: "33409933"
  拡張メソッドを提供[ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)と[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)マネージ戻り値に関する情報を提供します。  
   
  [ICorDebugCode4 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)  
- ローカル変数と関数の引数を列挙するデバッガーを有効にするメソッドを提供します。  
+ ローカル変数と関数の引数を列挙するためにデバッガーをできるようにするメソッドを提供します。  
   
  [ICorDebugCodeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-interface.md)  
  `ICorDebugEnum` メソッドを実装し、`ICorDebugCode` 配列を列挙します。  
@@ -128,13 +128,13 @@ ms.locfileid: "33409933"
  特定のターゲット プロセスにアクセスするためのコールバック インターフェイスが用意されています。  
   
  [ICorDebugDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)  
- 論理的に拡張し、 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)インターフェイスです。 **.NET ネイティブのみで使用できます。**  
+ 論理的に拡張し、 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)インターフェイス。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugDataTarget3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)  
- 論理的に拡張し、 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)読み込まれたモジュールに関する情報を提供するインターフェイスです。 **.NET ネイティブのみで使用できます。**  
+ 論理的に拡張し、 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)インターフェイスが読み込まれたモジュールに関する情報を提供します。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugDebugEvent インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)  
- すべての `ICorDebug` デバッグ イベントを派生させる基本インターフェイスを定義します。 **.NET ネイティブのみで使用できます。**  
+ すべての `ICorDebug` デバッグ イベントを派生させる基底インターフェイスを定義します。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugEditAndContinueErrorInfo インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinueerrorinfo-interface.md)  
  互換性のために残されています。 このインターフェイスは使用しないでください。  
@@ -155,13 +155,13 @@ ms.locfileid: "33409933"
  ジェネリック型をサポートできるように `ICorDebugEval` を拡張します。  
   
  [ICorDebugExceptionDebugEvent インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
- 拡張、 [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)例外イベントをサポートするインターフェイスです。 **.NET ネイティブのみで使用できます。**  
+ 拡張、 [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)例外イベントをサポートするインターフェイス。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugExceptionObjectCallStackEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
  例外オブジェクトに埋め込まれているコール スタックの情報の列挙子を提供します。  
   
  [ICorDebugExceptionObjectValue インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)  
- 拡張、 [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)マネージ例外オブジェクトからスタック トレース情報を提供するインターフェイスです。  
+ 拡張、 [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)マネージ例外オブジェクトからスタック トレース情報を提供するインターフェイス。  
   
  [ICorDebugFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
  現在のスタックのフレームを表します。  
@@ -170,13 +170,13 @@ ms.locfileid: "33409933"
  `ICorDebugEnum` メソッドを実装し、`ICorDebugFrame` 配列を列挙します。  
   
  [ICorDebugFunction Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)  
- マネージ関数またはマネージ メソッドを表します。  
+ マネージド関数またはマネージド メソッドを表します。  
   
  [ICorDebugFunction2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-interface.md)  
  `ICorDebugFunction` を論理的に拡張して、"マイ コードのみ" ステップ実行によるデバッグをサポートします。  
   
  [ICorDebugFunction3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  
- 論理的に拡張し、 [ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md) ReJIT 要求からコードへのアクセスを提供するインターフェイスです。  
+ 論理的に拡張し、 [ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md) ReJIT 要求からコードへのアクセスを提供するインターフェイス。  
   
  [ICorDebugFunctionBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)  
  関数内のブレークポイントをサポートするように `ICorDebugBreakpoint` を拡張します。  
@@ -194,10 +194,10 @@ ms.locfileid: "33409933"
  デバッガーが作成したガベージ コレクションのハンドルへの参照値を表す `ICorDebugReferenceValue` のサブクラスです。  
   
  [ICorDebugHeapEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
- マネージ ヒープのオブジェクトの列挙子を提供します。  
+ マネージド ヒープのオブジェクトの列挙子を提供します。  
   
  [ICorDebugHeapSegmentEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
- マネージ ヒープのメモリ領域の列挙子を提供します。  
+ マネージド ヒープのメモリ領域の列挙子を提供します。  
   
  [ICorDebugHeapValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-interface.md)  
  CLR ガベージ コレクターによって収集されたオブジェクトを表す `ICorDebugValue` のサブクラスです。  
@@ -212,7 +212,7 @@ ms.locfileid: "33409933"
  中間言語 (IL) コードのセグメントを表します。  
   
  [ICorDebugILCode2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- 論理的に拡張し、 [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)に元のメソッド IL オフセットを関数のローカル変数シグネチャに対するトークンを返すし、プロファイラーのインストルメント化された中間言語 (IL) にマップするメソッドを提供するインターフェイスオフセットします。  
+ 論理的に拡張し、 [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)に元のメソッド IL オフセットを関数のローカル変数シグネチャのトークンを返すし、プロファイラーのインストルメント化された中間言語 (IL) をマップする方法を提供するインターフェイスオフセットします。  
   
  [ICorDebugILFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
  MSIL コードのスタック フレームを表します。  
@@ -233,7 +233,7 @@ ms.locfileid: "33409933"
  デバッガーのフレーム種類を識別します。  
   
  [ICorDebugInternalFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- スタックのアドレス位置に関連するなどの内部フレームに関する情報を提供[ICorDebugFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)オブジェクト。  
+ スタックのアドレスや位置などの内部フレームに関する情報を提供します[ICorDebugFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)オブジェクト。  
   
  [ICorDebugLoadedModule インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)  
  読み込まれたモジュールに関する情報を提供します。 **.NET ネイティブのみで使用できます。**  
@@ -242,13 +242,13 @@ ms.locfileid: "33409933"
  デバッガーのコールバックを処理するメソッドを提供します。  
   
  [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- デバッガーの例外処理およびマネージ デバッグ アシスタント (MDA: Managed Debugging Assistants) をサポートするメソッドを提供します。 `ICorDebugManagedCallback2` は、`ICorDebugManagedCallback` の論理拡張機能です。  
+ デバッガーの例外処理およびマネージド デバッグ アシスタント (MDA: Managed Debugging Assistants) をサポートするメソッドを提供します。 `ICorDebugManagedCallback2` は、`ICorDebugManagedCallback` の論理拡張機能です。  
   
  [ICorDebugManagedCallback3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)  
  有効なカスタムのデバッガー通知が発生したことを示すコールバック メソッドを提供します。  
   
  [ICorDebugMDA インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- マネージ デバッグ アシスタント (MDA) メッセージを表します。  
+ マネージド デバッグ アシスタント (MDA) メッセージを表します。  
   
  [ICorDebugMemoryBuffer インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)  
  メモリ内のバッファーを表します。 **.NET ネイティブのみで使用できます。**  
@@ -272,13 +272,13 @@ ms.locfileid: "33409933"
  特定のモジュールにアクセスできるように `ICorDebugBreakpoint` を拡張します。  
   
  [ICorDebugModuleDebugEvent インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
- 拡張、 [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)モジュール レベルのイベントをサポートするインターフェイスです。 **.NET ネイティブのみで使用できます。**  
+ 拡張、 [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)モジュール レベルのイベントをサポートするインターフェイス。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugModuleEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-interface.md)  
  `ICorDebugEnum` メソッドを実装し、`ICorDebugModule` 配列を列挙します。  
   
  [ICorDebugMutableDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
- 拡張、 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)変更可能なデータ ターゲットをサポートするインターフェイスです。  
+ 拡張、 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)変更可能なデータのターゲットをサポートするインターフェイス。  
   
  [ICorDebugNativeFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-interface.md)  
  ネイティブ フレームで使用される `ICorDebugFrame` の特化された実装。  
@@ -296,7 +296,7 @@ ms.locfileid: "33409933"
  継承およびオーバーライドをサポートするように `ICorDebugObjectValue` を拡張します。  
   
  [ICorDebugProcess Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)  
- マネージ コードを実行しているプロセスを表します。  
+ マネージド コードを実行しているプロセスを表します。  
   
  [ICorDebugProcess2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-interface1.md)  
  `ICorDebugProcess` の論理拡張機能です。  
@@ -305,16 +305,16 @@ ms.locfileid: "33409933"
  カスタムのデバッガー通知を制御します。  
   
  [ICorDebugProcess5 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- 拡張、 [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)マネージ オブジェクトのガベージ コレクションに関する情報を提供して、デバッガーがアプリケーションからイメージを読み込むかどうかを決定する、マネージ ヒープへのアクセスをサポートするためにインターフェイスのローカルネイティブ イメージ キャッシュします。  
+ 拡張、 [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)マネージ オブジェクトのガベージ コレクションに関する情報を提供し、デバッガーがアプリケーションからイメージを読み込むかどうかを判断する、マネージ ヒープへのアクセスをサポートするインターフェイスのローカルネイティブ イメージ キャッシュします。  
   
  [ICorDebugProcess6 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
- 論理的に拡張し、 [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)ネイティブ例外デバッグ イベントや仮想モジュール分割でエンコードされたマネージ デバッグ イベントをデコードなどの機能を有効にするインターフェイスです。 **.NET ネイティブのみで使用できます。**  
+ 論理的に拡張し、 [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)ネイティブ例外デバッグ イベントや仮想モジュール分割でエンコードされたマネージ デバッグ イベントをデコードなどの機能を有効にするインターフェイス。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugProcess7 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)  
  ターゲット プロセスでメモリ内のメタデータ更新を処理するようにデバッガーを構成するメソッドを提供します。  
   
  [ICorDebugProcess8 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-interface.md)  
- 論理的に拡張し、 [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)有効または無効に特定の種類のインターフェイス[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)例外コールバック。  
+ 論理的に拡張し、 [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)を有効にするまたはの特定の種類を無効にするインターフェイス[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)例外コールバック。  
   
  [ICorDebugProcessEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-interface.md)  
  `ICorDebugEnum` メソッドを実装し、`ICorDebugProcess` 配列を列挙します。  
@@ -329,7 +329,7 @@ ms.locfileid: "33409933"
  64 を超えるレジスタを持つハードウェア プラットフォーム用に `ICorDebugRegisterSet` の機能を拡張します。  
   
  [ICorDebugRemote インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- リモート ターゲット プロセスに対してマネージ デバッガーを起動または接続する機能を提供します。  
+ リモート ターゲット プロセスに対してマネージド デバッガーを起動または接続する機能を提供します。  
   
  [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  開発者が CLR 環境で Silverlight ベース アプリケーションをデバッグできるようにするメソッドを提供します。  
@@ -338,7 +338,7 @@ ms.locfileid: "33409933"
  共通言語ランタイム (CLR: Common Language Runtime) でフレームをアンワインドする必要のあるアンマネージ メソッドに対してサポートを提供します。  
   
  [ICorDebugStackWalk インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- スレッドのスタック上のマネージ メソッド (フレーム) を取得するメソッドを提供します。  
+ スレッドのスタック上のマネージド メソッド (フレーム) を取得するメソッドを提供します。  
   
  [ICorDebugStaticFieldSymbol インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
  静的フィールドのデバッグ シンボル情報を表します。 **.NET ネイティブのみで使用できます。**  
@@ -359,7 +359,7 @@ ms.locfileid: "33409933"
  デバッグ シンボル情報を取得するために使用できるメソッドを提供します。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugSymbolProvider2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- 論理的に拡張し、 [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)追加のデバッグ シンボル情報を取得するインターフェイスです。 **.NET ネイティブのみで使用できます。**  
+ 論理的に拡張し、 [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)追加のデバッグ シンボル情報を取得するインターフェイス。 **.NET ネイティブのみで使用できます。**  
   
  [ICorDebugThread Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
  プロセス内のスレッドを表します。 `ICorDebugThread` インスタンスの有効期間は、それが表しているスレッドの有効期間と同じです。  
@@ -368,7 +368,7 @@ ms.locfileid: "33409933"
  `ICorDebugThread` の論理的な拡張機能として動作します。  
   
  [ICorDebugThread3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)  
- エントリ ポイントを提供、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)と対応するインターフェイスです。  
+ エントリ ポイントを提供します、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)と対応するインターフェイス。  
   
  [ICorDebugThread4 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
  スレッドのブロック情報を提供します。  
@@ -380,7 +380,7 @@ ms.locfileid: "33409933"
  基本型または複合型 (つまり、ユーザー定義) のいずれかの型を表します。 型がジェネリックの場合、`ICorDebugType` はインスタンス化されたジェネリック型を表します。  
   
  [ICorDebugType2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)  
- 拡張、 [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)基本データ型または複合 (ユーザー定義) の型の型の識別子を取得するインターフェイスです。  
+ 拡張、 [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)基本型または複合 (ユーザー定義) の型の型の識別子を取得するインターフェイス。  
   
  [ICorDebugTypeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-interface.md)  
  `ICorDebugEnum` メソッドを実装し、`ICorDebugType` 配列を列挙します。  
@@ -395,7 +395,7 @@ ms.locfileid: "33409933"
  `ICorDebugValue` をサポートできるように `ICorDebugType` を拡張します。  
   
  [ICorDebugValue3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
- 2 GB よりも大きな配列をサポートする"ICorDebugValue"および"ICorDebugValue2"インターフェイスを拡張します。  
+ 2 GB を超える配列のサポートを提供する"ICorDebugValue"と"ICorDebugValue2"インターフェイスを拡張します。  
   
  "ICorDebugValueBreakpoint"  
  特定の値にアクセスできるように `ICorDebugBreakpoint` を拡張します。  
@@ -432,6 +432,16 @@ ms.locfileid: "33409933"
   
  [ICorPublishProcessEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
  `ICorPublishProcess` オブジェクトのコレクションを走査するメソッドを提供します。  
+
+ [ISOSDacInterface インターフェイス](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)からデータにアクセスするヘルパー メソッドを提供します。`SOS`します。
+
+ [IXCLRDataMethodDefinition インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)メソッドの定義に関する情報を照会するためのメソッドを提供します。
+ 
+ [IXCLRDataMethodInstance インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)メソッド インスタンスの情報を照会するためのメソッドを提供します。
+ 
+ [IXCLRDataModule インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)読み込まれたモジュールに関する情報を照会するためのメソッドを提供します。
+ 
+ [IXCLRDataProcess インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)プロセスに関する情報を照会するためのメソッドを提供します。
   
 ## <a name="related-sections"></a>関連項目  
  [デバッグ コクラス](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

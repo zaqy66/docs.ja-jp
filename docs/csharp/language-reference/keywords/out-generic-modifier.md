@@ -6,18 +6,18 @@ helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-ms.openlocfilehash: 8ad190e8653063f1461e4ff61a62310e59f48cf7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1316228a186976f313bb9f10032262974243a3ae
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239499"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334887"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (ジェネリック修飾子) (C# リファレンス)
 
 ジェネリック型パラメーターの `out` キーワードは、型パラメーターが共変であることを指定します。 `out` キーワードは、ジェネリック インターフェイスとデリゲートで使用できます。
 
-共変性は、ジェネリック パラメーターによって指定された型よりも強い派生型を使用できるようにする機能です。 これにより、バリアント インターフェイスを実装するクラスの暗黙の型変換とデリゲート型の暗黙の型変換が可能となります。 共変性および反変性は参照型ではサポートされますが、値の型ではサポートされません。
+共変性は、ジェネリック パラメーターによって指定された型よりも強い派生型を使用できるようにする機能です。 これにより、共変性のインターフェイスを実装するクラスの暗黙の型変換とデリゲート型の暗黙の型変換が可能となります。 共変性および反変性は参照型ではサポートされますが、値の型ではサポートされません。
 
 共変の型パラメーターを持つインターフェイスを使用すると、そのインターフェイスのメソッドは、型パラメーターによって指定された型よりも強い派生型を返すことができます。 たとえば、.NET Framework 4 の <xref:System.Collections.Generic.IEnumerable%601> では T 型が共変なので、特別な変換メソッドを使用しなくても `IEnumerable(Of String)` 型のオブジェクトを `IEnumerable(Of Object)` 型のオブジェクトに割り当てることができます。
 

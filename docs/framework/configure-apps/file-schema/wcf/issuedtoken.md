@@ -1,19 +1,19 @@
 ---
-title: '&lt;issuedToken&gt;'
+title: '&lt;IssuedToken&gt;'
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 9a8d701e0806aae0a17a1c5ff7284606dd080f85
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750234"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150189"
 ---
-# <a name="ltissuedtokengt"></a>&lt;issuedToken&gt;
+# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
 サービスに対するクライアントの認証に使用されるカスタム トークンを指定します。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 endpointBehaviors セクション  
 \<behavior>  
 \<clientCredentials>  
@@ -22,14 +22,13 @@ endpointBehaviors セクション
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<issuedToken   
-   cacheIssuedTokens="Boolean"  
-   defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"  
-   issuedTokenRenewalThresholdPercentage = "0 to 100"  
-   issuerChannelBehaviors="String"  
-      localIssuerChannelBehaviors="String"  
-   maxIssuedTokenCachingTime="TimeSpan"  
-</issuedToken>  
+<issuedToken cacheIssuedTokens="Boolean"
+             defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+             issuedTokenRenewalThresholdPercentage = "0 to 100"
+             issuerChannelBehaviors="String"
+             localIssuerChannelBehaviors="String"
+             maxIssuedTokenCachingTime="TimeSpan">
+</issuedToken>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -44,7 +43,7 @@ endpointBehaviors セクション
 |`issuedTokenRenewalThresholdPercentage`|トークンが更新されるまでに待機できる有効な期間 (トークン発行者によって提供される) のパーセンテージを指定する省略可能な整数属性。 値は 0 ～ 100 の範囲です。 既定値は 60 で、更新の実行までに待機できる期間の 60% を示します。|  
 |`issuerChannelBehaviors`|発行者との通信時に使用するチャネル動作を指定する省略可能な属性。|  
 |`localIssuerChannelBehaviors`|ローカル発行者との通信時に使用するチャネル動作を指定する省略可能な属性。|  
-|`maxIssuedTokenCachingTime`|トークン発行者 (STS) が期間を指定しない場合に、発行済みトークンがキャッシュされる期間を指定する省略可能な Timespan 属性。 既定値は「10675199.02:48:05.4775807」です。|  
+|`maxIssuedTokenCachingTime`|トークン発行者 (STS) が期間を指定しない場合に、発行済みトークンがキャッシュされる期間を指定する省略可能な Timespan 属性。 既定値は「10675199.02:48:05.4775807」|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -59,10 +58,10 @@ endpointBehaviors セクション
 |-------------|-----------------|  
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|サービスに対するクライアントの認証に使用される資格情報を指定します。|  
   
-## <a name="remarks"></a>コメント  
- 発行済みトークンは、フェデレーション シナリオでセキュリティ トークン サービス (STS) を使用して認証するときに使用されるカスタム資格情報の種類です。 既定ではトークンは、SAML トークンです。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)です。 および[フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)です。  
+## <a name="remarks"></a>Remarks  
+ 発行済みトークンは、フェデレーション シナリオでセキュリティ トークン サービス (STS) を使用して認証するときに使用されるカスタム資格情報の種類です。 既定ではトークンは、SAML トークンです。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。 [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。  
   
- このセクションには、トークンのローカル発行者やセキュリティ トークン サービスで使用する動作の構成に使用する要素が含まれます。 クライアントを構成するのにはローカル発行者を使用する方法について、次を参照してください。[する方法: ローカル発行者を構成する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)です。  
+ このセクションには、トークンのローカル発行者やセキュリティ トークン サービスで使用する動作の構成に使用する要素が含まれます。 ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法。ローカル発行者を構成する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  
@@ -75,6 +74,6 @@ endpointBehaviors セクション
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
- [方法 : フェデレーション クライアントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [方法 : ローカル発行者を設定する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [方法: ローカル発行者を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

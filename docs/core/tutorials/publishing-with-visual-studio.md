@@ -4,13 +4,13 @@ description: 発行では、アプリケーションを実行するために必�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: e44ae69c9cd8f0767e369791737cef9b4c33f963
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 8d6d5cc7766334e10e7ae3a70af0c309c05bc98b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036306"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169119"
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017 での Hello World アプリケーションの発行
 
@@ -20,14 +20,14 @@ ms.locfileid: "48036306"
 
 1. Visual Studio がアプリケーションのリリース バージョンをビルドしていることを確認します。 必要に応じて、ツール バーのビルド構成の設定を **[デバッグ]** から **[リリース]** に変更します。
 
-   ![Visual Studio ツール バー](media/publishing-with-visual-studio/toolbar.png)
+   ![リリース ビルドが選択された Visual Studio のツールバー](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. **HelloWorld** プロジェクト (HelloWorld ソリューションではなく) を右クリックし、メニューから **[発行]** を選びます。 Visual Studio のメイン メニューの **[ビルド]** から **[HelloWorld を発行]** を選択することもできます。
 
-   ![Visual Studio ツール バー](media/publishing-with-visual-studio/publish1.png)
+   ![Visual Studio の [発行] コンテキスト メニュー](media/publishing-with-visual-studio/publish-context-menu.png)
 
 
-   ![Visual Studio ツール バー](media/publishing-with-visual-studio/publishwindow.png)
+   ![Visual Studio の [発行] ウィンドウ](media/publishing-with-visual-studio/publish-settings-window.png)
 
 1. コンソール ウィンドウが開きます。 たとえば、Windows タスク バーの **[検索するテキストをここに入力]** テキスト ボックスに「`Command Prompt`」 (または省略して「`cmd`」) と入力し、**コマンド プロンプト** デスクトップ アプリを選ぶか、コマンド プロンプトが検索結果で選択されている場合は Enter キーを押して、コンソール ウィンドウを開きます。
 
@@ -49,7 +49,7 @@ ms.locfileid: "48036306"
 
          アプリケーションのランタイム構成ファイル。 ビルドされたアプリケーションが実行時に基盤とする .NET Core のバージョンを識別します。 詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。  
 
-   ![発行されたファイルが表示されているコンソール ウィンドウ](media/publishing-with-visual-studio/publishedfiles.png)
+   ![発行されたファイルが表示されているコンソール ウィンドウ](media/publishing-with-visual-studio/published-files-output.png)
 
 発行プロセスでは、フレームワークに依存する配置が作成されます。これは、.NET Core がシステムにインストールされていれば、.NET Core によってサポートされる任意のプラットフォームで発行されたアプリケーションが動作する配置の種類です。 ユーザーはコンソール ウィンドウから `dotnet HelloWorld.dll` コマンドを発行することによって、アプリケーションを実行できます。
 

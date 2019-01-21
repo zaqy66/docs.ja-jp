@@ -1,14 +1,14 @@
 ---
-title: dotnet nuget locals コマンド - .NET Core CLI
+title: dotnet nuget locals コマンド
 description: dotnet nuget locals コマンドは、HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーなどのローカルの NuGet リソースをクリアまたは一覧表示します。
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: f9a5073fb065d85b76afedad31255ad758c67ee6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d0f1c7c2e0b233c214cc48d026c19755fc047bfa
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130776"
+ms.locfileid: "53170757"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 

@@ -2,12 +2,12 @@
 title: トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 780521fb05c9b5545fa586473c531670806db52f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a5fc8708e94bd2aa820c2d558d33dad968b88ebd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185444"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222762"
 ---
 # <a name="token-provider"></a>トークン プロバイダー
 このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。
@@ -273,7 +273,7 @@ static void DisplayIdentityInformation()
   
 2.  サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 setup.bat ファイルは、管理特権を使用して開いた Visual Studio コマンド プロンプトから実行する必要があります。 `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
+3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 Setup.bat ファイルは、Visual Studio 用開発者コマンド プロンプトから実行する必要があるメモは、管理者特権で開かれます。 `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
   
 4.  サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 この操作は、サーバー証明書の発行元をクライアントが信頼できる場合は不要です。  
   

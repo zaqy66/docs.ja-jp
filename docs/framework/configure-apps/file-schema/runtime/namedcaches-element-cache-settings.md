@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: a74dfaf883ea23514c6bc4641d9d576f5baf10b4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d6f741f4ecd3ea52dacc9f981024690a0031a533
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028310"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611088"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;要素 (キャッシュ設定)
 名前付きの構成設定のコレクションを指定します<xref:System.Runtime.Caching.MemoryCache>インスタンス。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>プロパティから 1 つまたは複数の構成設定のコレクションの参照`namedCaches`構成ファイルの要素。  
@@ -90,4 +90,4 @@ ms.locfileid: "48028310"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [\<memoryCache > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+- [\<memoryCache > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

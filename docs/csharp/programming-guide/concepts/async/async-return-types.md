@@ -2,12 +2,12 @@
 title: 非同期の戻り値の型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036241"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774590"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 非同期メソッドには、次の戻り値の型があります。
@@ -33,7 +33,7 @@ ms.locfileid: "48036241"
 
 `GetLeisureHours` が `ShowTodaysInfo` メソッドの await 式の中から呼び出されると、await 式は `GetLeisureHours` メソッドから返されるタスクに格納されている整数値 (`leisureHours` の値) を取得します。 await 式の詳細については、「[await](../../../../csharp/language-reference/keywords/await.md)」を参照してください。  
   
-次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `infoTask` 変数に割り当てられます。 `infoTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `infoTask` に適用されると、`infoTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
+次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、`integerTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは Blocking プロパティです。 タスクが終了する前にアクセスしようとすると、現在アクティブなスレッドは、タスクが完了して値が使用可能になるまで、ブロックされます。 多くの場合、プロパティに直接アクセスする代わりに、`await` を使用して値にアクセスする必要があります。 <br/> 前の例では、アプリケーションが終了する前に `ShowTodaysInfo` メソッドが実行を終了できるように、<xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの値を取得してメイン スレッドをブロックしました。  
@@ -77,10 +77,10 @@ C# 7.0 以降、非同期メソッドで、アクセス可能な `GetAwaiter` �
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>   
-- [チュートリアル: async と await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 - [非同期プログラムにおける制御フロー (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
 - [async](../../../../csharp/language-reference/keywords/async.md)   
 - [await](../../../../csharp/language-reference/keywords/await.md)

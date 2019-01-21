@@ -2,12 +2,12 @@
 title: '&lt;parameter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: b9cccfe37e7658afbf2e49555e6c505497598fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148293"
 ---
 # <a name="ltparametergt"></a>&lt;parameter&gt;
 宣言された型がジェネリック型である場合、ジェネリック パラメーターを指定します。  
@@ -15,15 +15,15 @@ ms.locfileid: "32754055"
  \<system.runtime.serialization >  
 \<dataContractSerializer >  
 \<declaredTypes > 要素  
-\<追加 > 要素を\<declaredTypes >  
+\<追加 > 要素の\<declaredTypes >  
 \<knownType > 要素  
 \<パラメーター > 要素  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<parameter index="integer"  
-                      type=String" />  
+<parameter index="Integer"
+           type="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -52,8 +52,8 @@ ms.locfileid: "32754055"
 |-------------|-----------------|  
 |[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|宣言型のフィールドまたはプロパティによって返される既知の型を指定します。|  
   
-## <a name="remarks"></a>コメント  
- 既知の型の詳細については、次を参照してください。[データ コントラクトの既知の型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>です。  
+## <a name="remarks"></a>Remarks  
+ 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   
  参照してください、 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)この要素の使用例についてはします。  
   

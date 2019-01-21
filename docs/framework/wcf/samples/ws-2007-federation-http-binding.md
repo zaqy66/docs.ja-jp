@@ -2,12 +2,12 @@
 title: WS 2007 フェデレーション HTTP バインディング
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7dffe56cf5593f1cd59cccd7ea9b6b0e173e0c2c
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513063"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221285"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 フェデレーション HTTP バインディング
 このサンプルでは、<xref:System.ServiceModel.WS2007FederationHttpBinding> の使用例を示します。これは、WS-Trust 仕様のバージョン 1.3 に対応したフェデレーション シナリオを構築するための標準のバインディングです。  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  管理特権を使用して Visual Studio コマンド プロンプトを開き、Setup.bat ファイルを実行して必要な証明書を作成します。  
+2.  管理者特権で Visual Studio の開発者コマンド プロンプトを開き、必要な証明書を作成する Setup.bat ファイルを実行します。  
   
  このバッチ ファイルでは、Windows SDK と共に配布される Certmgr.exe および Makecert.exe が使用されます。 ただし、スクリプトでこれらのツールを見つけるには、Visual Studio のコマンド プロンプト内から Setup.bat を実行する必要があります。  
   

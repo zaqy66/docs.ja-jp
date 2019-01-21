@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453395"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656363"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>属性付きプログラミング モデルの概要 (MEF)
 MEF (Managed Extensibility Framework) における *プログラミング モデル* とは、MEF で操作する一連の概念オブジェクトを定義するための特定の方法です。 これらの概念オブジェクトには、パート、インポート、およびエクスポートが含まれます。 MEF では、これらのオブジェクトが使用されますが、その表現方法は指定されていません。 そのため、カスタマイズしたプログラミング モデルを含むさまざまなプログラミング モデルを使用できます。  
@@ -548,7 +548,7 @@ Public Class User
         logger = Nothing  
   
         For Each Plugin As Lazy(Of IPlugin, IPluginMetadata) In plugins  
-            If (Plugin.Metadata.Name = "Logger") Then  
+            If Plugin.Metadata.Name = "Logger" Then  
                 logger = Plugin.Value  
             End If  
         Next  
@@ -564,13 +564,14 @@ public class User
     [ImportMany]  
     public IEnumerable<Lazy<IPlugin, IPluginMetadata>> plugins;  
   
-    public IPlugin InstantiateLogger ()  
+    public IPlugin InstantiateLogger()  
     {  
         IPlugin logger = null;  
   
         foreach (Lazy<IPlugin, IPluginMetadata> plugin in plugins)  
         {  
-            if (plugin.Metadata.Name = "Logger") logger = plugin.Value;  
+            if (plugin.Metadata.Name == "Logger")
+                logger = plugin.Value;  
         }  
         return logger;  
     }  
@@ -957,5 +958,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` には、 `OnImportsSatisfied`という 1 つのメソッドが含まれています。 このメソッドは、合成コンテナーにより、このインターフェイスを実装するパートに対して、合成が完了してそのパートのインポートを使用できるようになったときに呼び出されます。 パートは、他のパートのインポートを満たすために合成エンジンによって作成されます。 パートのインポートが設定されるまでは、パートのコンストラクターで、インポートされる値に依存する初期化や、インポートされる値を操作する初期化を実行できません。初期化を実行できるようにするには、 `ImportingConstructor` 属性を使用して、それらの値を必須として指定します。 通常はこの方法が推奨されますが、コンストラクター インジェクションを使用できない場合もあります。 そのような場合は、 `OnImportsSatisfied`で初期化を実行できます。この場合は、パートに `IPartImportsSatisfiedNotification`を実装する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Channel 9 ビデオ: Managed Extensibility Framework を使用してアプリケーションを開く](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Channel 9 ビデオ: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [Channel 9 ビデオ:Managed Extensibility Framework を使用してアプリケーションを開く](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Channel 9 ビデオ:Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

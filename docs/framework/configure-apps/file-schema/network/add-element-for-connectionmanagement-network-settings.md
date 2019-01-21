@@ -1,5 +1,5 @@
 ---
-title: '&lt;追加&gt;connectionManagement (ネットワーク設定) の要素'
+title: connectionManagement の &lt;add&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -17,12 +17,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50201294"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;追加&gt;connectionManagement (ネットワーク設定) の要素
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>connectionManagement の &lt;add&gt; 要素 (ネットワーク設定)
 IP アドレスまたは DNS 名を接続管理リストに追加します。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<add>  
   
 ## <a name="syntax"></a>構文  

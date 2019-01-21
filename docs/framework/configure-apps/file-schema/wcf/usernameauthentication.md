@@ -1,19 +1,19 @@
 ---
-title: '&lt;userNameAuthentication&gt;'
+title: '&lt;UserNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: d81bf3441f4999683b9dc9ab956fff517c20e80e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754864"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150046"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
 ユーザー名とパスワードに基づいてサービスの資格情報を指定します。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
@@ -22,14 +22,13 @@ ms.locfileid: "32754864"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<userNameAuthentication  
-   cacheLogonTokenLifetime="TimeSpan"  
-   cacheLogonTokens="Boolean"   
-   customUserNamePasswordValidatorType="String"  
-   includeWindowsGroups="Boolean"   
-   maxCacheLogonTokens="Integer"  
-   membershipProviderName="String"  
-   userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />  
+<userNameAuthentication cacheLogonTokenLifetime="TimeSpan"
+                        cacheLogonTokens="Boolean"
+                        customUserNamePasswordValidatorType="String"
+                        includeWindowsGroups="Boolean"
+                        maxCacheLogonTokens="Integer"
+                        membershipProviderName="String"
+                        userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -56,7 +55,7 @@ ms.locfileid: "32754864"
 |-------------|-----------------|  
 |[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  サービスで使用されるバインディングがユーザー名とパスワード ベースの認証を使用するように構成されていない場合、この要素の属性は無視されます。 これには、`customUserNamePasswordValidatorType`、`includeWindowsGroups`、`membershipProviderName`、および `userNamePasswordValidationMode` が含まれます。  
   
  サービスで使用されるバインディングが Windows 認証のユーザー名とパスワードを使用するように構成されていない場合、ログオン トークンのキャッシュに関連する設定は無視されます。 これには、`cacheLogonTokenLifetime`、`cacheLogonTokens`、および `maxCacheLogonTokens`、が含まれます。  

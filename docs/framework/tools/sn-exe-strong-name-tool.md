@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151137"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221649"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
 厳密名ツール (Sn.exe) は、[厳密な名前](../../../docs/framework/app-domains/strong-named-assemblies.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
@@ -25,12 +25,12 @@ ms.locfileid: "53151137"
 > [!WARNING]
 > セキュリティに関しては、厳格な名前に依存しないでください。 厳格な名前は、一意の ID を提供するだけです。
 
- 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md)」(厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」(方法: 厳密な名前でアセンブリに署名する) を参照してください。  
+ 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md)」 (厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」 (方法: 厳密な名前でアセンブリに署名する) を参照してください。  
   
- 厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ 厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
 
 > [!NOTE]
->  64 ビット コンピューターでは、Visual Studio コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。 
+>  64 ビット コンピューターでは、Visual Studio 用開発者コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。 
   
  コマンド プロンプトに次のように入力します。  
   
@@ -124,7 +124,7 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ツール](../../../docs/framework/tools/index.md)  
  [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)  

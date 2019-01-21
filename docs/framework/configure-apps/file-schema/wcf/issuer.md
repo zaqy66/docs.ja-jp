@@ -2,12 +2,12 @@
 title: '&lt;発行者&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 638b206f5372a654eca68d2f6ebb69bb0ac9e241
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d2728bf3613b41ed9f0810207d27d6d67477afd2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750558"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149554"
 ---
 # <a name="ltissuergt"></a>&lt;発行者&gt;
 セキュリティ トークンを発行するセキュリティ トークン サービス (STS) を指定します。  
@@ -23,24 +23,24 @@ ms.locfileid: "32750558"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<issuer address="Uri" >  
-   <headers>  
-      <add name="String"  
-                 namespace="String" />  
-   </headers>  
-   <identity>  
-           <certificate encodedValue="String"/>  
-      <certificateReference findValue="String"   
-         isChainIncluded="Boolean"  
-         storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-         storeLocation="LocalMachine/CurrentUser"  
-                  x509FindType=System.Security.Cryptography.X509certificates.X509findtype/>  
-      <dns value="String"/>  
-      <rsa value="String"/>  
-      <servicePrincipalName value="String"/>  
-      <usePrincipalName value="String"/>  
-   </identity>  
-</issuer>  
+<issuer address="Uri">
+  <headers>
+    <add name="String"
+         namespace="String" />
+  </headers>
+  <identity>
+    <certificate encodedValue="String" />
+    <certificateReference findValue="String"
+                          isChainIncluded="Boolean"
+                          storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                          storeLocation="LocalMachine/CurrentUser"
+                          x509FindType="System.Security.Cryptography.X509certificates.X509findtype" />
+    <dns value="String" />
+    <rsa value="String" />
+    <servicePrincipalName value="String" />
+    <usePrincipalName value="String" />
+  </identity>
+</issuer>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -63,7 +63,7 @@ ms.locfileid: "32750558"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|メッセージ レベルのセキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)要素。|  
+|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)要素。|  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  

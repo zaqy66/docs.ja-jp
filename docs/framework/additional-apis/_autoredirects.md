@@ -12,16 +12,16 @@ api_type:
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 84a2a7f572517aec72161817cb719057618de445
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e42cf5747362f2257a2d777de918721181a8280
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753626"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148358"
 ---
-# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest です。\_AutoRedirects フィールド
+# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest します。\_AutoRedirects フィールド
 
-`HttpWebRequest._AutoRedirects` <xref:System.Int32>これに対するリダイレクトの数を反映する<xref:System.Net.HttpWebRequest>です。
+`HttpWebRequest._AutoRedirects` <xref:System.Int32>これに対するリダイレクトの数を反映する<xref:System.Net.HttpWebRequest>します。
 
 ## <a name="syntax"></a>構文  
   
@@ -30,14 +30,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> `HttpWebRequest._AutoRedirects`フィールドは内部であり、コード内で直接使用します。
+> `HttpWebRequest._AutoRedirects`フィールドは、内部であり、コード内で直接使用するものではありません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

@@ -1,13 +1,13 @@
 ---
-title: 演算子のオーバーロード (F#)
+title: 演算子のオーバーロード
 description: クラスまたはレコードの種類と F# でのグローバル レベルで算術演算子をオーバー ロードする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087300"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610763"
 ---
 # <a name="operator-overloading"></a>演算子のオーバーロード
 
@@ -47,7 +47,7 @@ static member (~-) (v : Vector)
 
 演算子のみ`?`と`?<-`で始めることは`?`します。
 
-F# でのすべての演算子の優先順位を示す表が記載[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)します。
+すべての演算子の優先順位を示すテーブルF#で見つかる[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)します。
 
 ## <a name="overloaded-operator-names"></a>オーバーロードされた演算子の名前
 

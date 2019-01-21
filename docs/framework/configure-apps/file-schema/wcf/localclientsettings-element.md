@@ -2,12 +2,12 @@
 title: '&lt;localClientSettings&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: a960a18c472bed64609947220dffedf9ec90945c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6ed73cc2a74efbba356b71f7941cb8b1113b22b8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750948"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146148"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>&lt;localClientSettings&gt; 要素
 このバインディングのローカル クライアントのセキュリティ設定を指定します。  
@@ -21,19 +21,19 @@ ms.locfileid: "32750948"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<security>  
-   <localClientSettings cacheCookies="Boolean"  
-      cookieRenewalThresholdPercentage="Integer"  
-      detectReplays="Boolean"  
-      maxClockSkew="TimeSpan"  
-      maxCookieCachingTime="TimeSpan"  
-      reconnectTransportOnFailure="Boolean"  
-      replayCacheSize="Integer"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      timestampValidityDuration="TimeSpan" />  
-</security>  
+<security>
+   <localClientSettings cacheCookies="Boolean"
+                        cookieRenewalThresholdPercentage="Integer"
+                        detectReplays="Boolean"
+                        maxClockSkew="TimeSpan"
+                        maxCookieCachingTime="TimeSpan"
+                        reconnectTransportOnFailure="Boolean"
+                        replayCacheSize="Integer"
+                        replayWindow="TimeSpan"
+                        sessionKeyRenewalInterval="TimeSpan"
+                        sessionKeyRolloverInterval="TimeSpan"
+                        timestampValidityDuration="TimeSpan" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -65,7 +65,7 @@ ms.locfileid: "32750948"
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|カスタム バインドのセキュリティ オプションを指定します。|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|セキュリティで保護されたメッセージ交換サービスの開始に使用される既定値を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この設定は、サービスのセキュリティ ポリシーから派生する設定ではないという点でローカルです。  
   
 ## <a name="see-also"></a>関連項目  
@@ -78,5 +78,5 @@ ms.locfileid: "32750948"
  [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [方法 : SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;含める&gt;(Visual Basic)'
+title: '&lt;include&gt;(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - include XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49349109"
 ---
-# <a name="ltincludegt-visual-basic"></a>&lt;含める&gt;(Visual Basic)
+# <a name="ltincludegt-visual-basic"></a>&lt;include&gt;(Visual Basic)
 型と、ソース コード内のメンバーを記述する別のファイルを参照します。  
   
 ## <a name="syntax"></a>構文  

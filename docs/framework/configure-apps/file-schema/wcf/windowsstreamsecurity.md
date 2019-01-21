@@ -2,12 +2,12 @@
 title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: e117c30ba2583158ee21fd11ff4a38b094c18fd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197640"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151125"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 カスタム バインドの Windows ストリーム セキュリティ設定を指定します。  
@@ -21,7 +21,7 @@ ms.locfileid: "50197640"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign"/>  
+<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -31,7 +31,7 @@ ms.locfileid: "50197640"
   
 |属性|説明|  
 |---------------|-----------------|  
-|protectionLevel|メッセージ レベルのセキュリティを定義します。 メッセージに署名すると、転送中のメッセージが第三者によって改ざんされるリスクを軽減します。 暗号化により、転送中にデータレベルのプライバシーが提供されます。 以下の値が有効です。<br /><br /> -None: 保護されません。<br />署名: メッセージが署名されます。<br />-EncryptAndSign: メッセージに署名および暗号化します。<br /><br /> 既定値は EncryptAndSign です。<br /><br /> この属性は <xref:System.Net.Security.ProtectionLevel> 型です。|  
+|protectionLevel|メッセージ レベルのセキュリティを定義します。 メッセージに署名すると、転送中のメッセージが第三者によって改ざんされるリスクを軽減します。 暗号化により、転送中にデータレベルのプライバシーが提供されます。 以下の値が有効です。<br /><br /> -None。保護されません。<br />署名:メッセージは署名されます。<br />-EncryptAndSign:メッセージに署名および暗号化します。<br /><br /> 既定値は EncryptAndSign です。<br /><br /> この属性は <xref:System.Net.Security.ProtectionLevel> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  

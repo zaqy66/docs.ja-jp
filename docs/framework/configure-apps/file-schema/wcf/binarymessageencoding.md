@@ -2,12 +2,12 @@
 title: '&lt;binaryMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: b3b359c9d3e80186e0296e6fbb0ba5683210f2a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e29721104400c8a0352ebf5cd292689de0d6b14
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510247"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150126"
 ---
 # <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
 ネットワーク上で Windows Communication Foundation (WCF) メッセージをバイナリにエンコードするバイナリ メッセージ エンコーダーを定義します。  
@@ -21,10 +21,10 @@ ms.locfileid: "43510247"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<binaryMessageEncoding   
-      maxReadPoolSize="Integer"  
-   maxSessionSize="Integer"   
-   maxWritePoolSize="Integer"   messageVersion="Soap11Addressing10/Soap12Addressing10" />  
+<binaryMessageEncoding maxReadPoolSize="Integer"
+                       maxSessionSize="Integer"
+                       maxWritePoolSize="Integer"
+                       messageVersion="Soap11Addressing10/Soap12Addressing10" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -52,16 +52,16 @@ ms.locfileid: "43510247"
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
- エンコーディングは、メッセージをバイト シーケンスに変換するプロセスです。 デコードは、その逆のプロセスです。 WCF (Windows Communication Foundation) には、SOAP メッセージのエンコードとして、テキスト、バイナリ、および MTOM (Message Transmission Optimization Mechanism) の 3 種類があります。  
+ エンコーディングは、メッセージをバイト シーケンスに変換するプロセスです。 デコードは、その逆のプロセスです。 Windows Communication Foundation (WCF) には、SOAP メッセージのエンコードの 3 つの種類が含まれます。テキスト、バイナリ、および Message Transmission Optimization Mechanism (MTOM)。  
   
  `binaryMessageEncoding` 要素は、XML 用の .NET バイナリ形式を指定します。この要素には、使用する文字エンコーディング、SOAP バージョン、および WS-Addressing バージョンを指定するオプションがあります。 バイナリ メッセージ エンコーダーは、ネットワーク上で Windows Communication Foundation (WCF) メッセージをバイナリにエンコードします。 このエンコーディングによりメッセージ転送は非常に高速になりますが、WS-* 標準に基づいた相互運用性は失われます。  
   
 ## <a name="example"></a>例  
   
 ```xml  
-<binaryMessageEncoding maxReadPoolSize="211"  
-   maxWritePoolSize="2132"  
-   maxSessionSize="3141" />  
+<binaryMessageEncoding maxReadPoolSize="211"
+                       maxWritePoolSize="2132"
+                       maxSessionSize="3141" />
 ```  
   
 ## <a name="see-also"></a>関連項目  

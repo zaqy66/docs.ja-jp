@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 7423136ab8e04c076e3e5e33efdf010f36d02242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349634"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146538"
 ---
 # <a name="connection-class"></a>接続クラス
 
-`Connection`クラス解析サーバーの応答、要求をキュー、およびパイプライン要求します。
+`Connection`クラス解析サーバーの応答、要求をキュー、およびパイプライン要求。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> `Connection`クラスは内部と、コード内で直接使用します。
+> `Connection`クラスは内部であり、コード内で直接使用するものではありません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのクラスの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのクラスの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

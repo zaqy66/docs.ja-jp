@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0193112812aeccb7365526240b8e81d81abcd8a4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44225660"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030348"
 ---
 # <a name="custom-serialization"></a>カスタムのシリアル化
 カスタムのシリアル化は、型のシリアル化と逆シリアル化を制御するプロセスです。 シリアル化を制御することで、シリアル化の互換性を保証できます。つまり、型のコア機能を損なうことなく、1 つの型の複数のバージョン間でシリアル化および逆シリアル化を行うことができます。 たとえば、最初のバージョンの型では、フィールドが 2 つだけあるとします。 新しいバージョンでは、これにいくつかのフィールドが追加されています。 この場合、2 番目のバージョンのアプリケーションでは、両方の型をシリアル化および逆シリアル化できる必要があります。 以下のセクションでは、シリアル化の制御方法について説明します。
@@ -54,62 +54,59 @@ ms.locfileid: "44225660"
   
  <xref:System.Runtime.Serialization.ISerializable> を実装すると、`GetObjectData` メソッドと、このオブジェクトが逆シリアル化されるときに使用される専用のコンストラクターも実装されます。 前のセクションで使用した <xref:System.Runtime.Serialization.ISerializable> クラスに `MyObject` を実装する方法を次のコード例に示します。  
   
-```csharp  
-[Serializable]  
-public class MyObject : ISerializable   
-{  
-  public int n1;  
-  public int n2;  
-  public String str;  
-  
-  public MyObject()  
-  {  
-  }  
-  
-  protected MyObject(SerializationInfo info, StreamingContext context)  
-  {  
-    n1 = info.GetInt32("i");  
-    n2 = info.GetInt32("j");  
-    str = info.GetString("k");  
-  }  
-[SecurityPermissionAttribute(SecurityAction.Demand,   
-SerializationFormatter =true)]  
-  
-public virtual void GetObjectData(SerializationInfo info, StreamingContext context)  
-  {  
-    info.AddValue("i", n1);  
-    info.AddValue("j", n2);  
-    info.AddValue("k", str);  
-  }  
-}  
-```  
-  
-```vb  
-<Serializable()>  _  
-Public Class MyObject  
-    Implements ISerializable  
-    Public n1 As Integer  
-    Public n2 As Integer  
-    Public str As String  
-  
-    Public Sub New()   
-    End Sub   
-  
-    Protected Sub New(ByVal info As SerializationInfo, _  
-    ByVal context As StreamingContext)   
-        n1 = info.GetInt32("i")  
-        n2 = info.GetInt32("j")  
-        str = info.GetString("k")  
-    End Sub 'New  
-  
-    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
-    Public Overridable Sub GetObjectData(ByVal info As _  
-    SerializationInfo, ByVal context As StreamingContext)   
-        info.AddValue("i", n1)  
-        info.AddValue("j", n2)  
-        info.AddValue("k", str)  
-    End Sub   
-End Class  
+```csharp
+[Serializable]
+public class MyObject : ISerializable
+{
+    public int n1;
+    public int n2;
+    public String str;
+
+    public MyObject()
+    {
+    }
+
+    protected MyObject(SerializationInfo info, StreamingContext context)
+    {
+      n1 = info.GetInt32("i");
+      n2 = info.GetInt32("j");
+      str = info.GetString("k");
+    }
+
+    [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+    public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+        info.AddValue("i", n1);
+        info.AddValue("j", n2);
+        info.AddValue("k", str);
+    }
+}
+```
+
+```vb
+<Serializable()>  _
+Public Class MyObject
+    Implements ISerializable
+    Public n1 As Integer
+    Public n2 As Integer
+    Public str As String
+
+    Public Sub New()
+    End Sub
+
+    Protected Sub New(ByVal info As SerializationInfo, ByVal context As StreamingContext)
+        n1 = info.GetInt32("i")
+        n2 = info.GetInt32("j")
+        str = info.GetString("k")
+    End Sub 'New
+
+    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)> _
+    Public Overridable Sub GetObjectData(ByVal info As SerializationInfo, ByVal context As StreamingContext)
+        info.AddValue("i", n1)
+        info.AddValue("j", n2)
+        info.AddValue("k", str)
+    End Sub
+End Class
 ```  
   
  シリアル化時に **GetObjectData** を呼び出す場合は、メソッド呼び出しで提供される <xref:System.Runtime.Serialization.SerializationInfo> を設定する必要があります。 シリアル化の対象とする変数は、名前と値のペアとして追加します。 名前には、任意のテキストを使用できます。 逆シリアル化時にオブジェクトを復元するのに十分なデータがシリアル化される場合は、<xref:System.Runtime.Serialization.SerializationInfo> に追加するメンバー変数を自由に決定できます。 基本オブジェクトが <xref:System.Runtime.Serialization.ISerializable> を実装している場合、派生クラスはその基本オブジェクトの **GetObjectData** メソッドを呼び出す必要があります。  
@@ -128,56 +125,54 @@ End Class
   
  <xref:System.Runtime.Serialization.ISerializable> を実装しているクラスから新しいクラスを派生させるときに、派生クラスにシリアル化する必要がある変数がある場合は、派生クラスでコンストラクターと **GetObjectData** メソッドの両方を実装する必要があります。 上記の `MyObject` クラスを使用してこれを行う方法を次のコード例に示します。  
   
-```csharp  
-[Serializable]  
-public class ObjectTwo : MyObject  
-{  
-    public int num;  
-  
-    public ObjectTwo() : base()  
-    {  
-    }  
-  
-    protected ObjectTwo(SerializationInfo si,   
-    StreamingContext context) : base(si,context)  
-    {  
-        num = si.GetInt32("num");  
-    }  
-[SecurityPermissionAttribute(SecurityAction.Demand,  
-SerializationFormatter = true)]  
-    public override void GetObjectData(SerializationInfo si,   
-    StreamingContext context)  
-    {  
-        base.GetObjectData(si,context);  
-        si.AddValue("num", num);  
-    }  
-}  
-```  
-  
-```vb  
-<Serializable()>  _  
-Public Class ObjectTwo  
-    Inherits MyObject  
-    Public num As Integer  
-  
-    Public Sub New()   
-  
-    End Sub       
-  
-    Protected Sub New(ByVal si As SerializationInfo, _  
-    ByVal context As StreamingContext)   
-        MyBase.New(si, context)  
-        num = si.GetInt32("num")      
-    End Sub   
-  
-    <SecurityPermissionAttribute(SecurityAction.Demand, _  
-    SerializationFormatter := True)>  _  
-    Public Overrides Sub GetObjectData(ByVal si As _  
-    SerializationInfo, ByVal context As StreamingContext)   
-        MyBase.GetObjectData(si, context)  
-        si.AddValue("num", num)      
-    End Sub   
-End Class  
+```csharp
+[Serializable]
+public class ObjectTwo : MyObject
+{
+    public int num;
+
+    public ObjectTwo()
+      : base()
+    {
+    }
+
+    protected ObjectTwo(SerializationInfo si, StreamingContext context)
+      : base(si, context)
+    {
+        num = si.GetInt32("num");
+    }
+
+    [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+    public override void GetObjectData(SerializationInfo si, StreamingContext context)
+    {
+        base.GetObjectData(si,context);
+        si.AddValue("num", num);
+    }
+}
+```
+
+```vb
+<Serializable()>  _
+Public Class ObjectTwo
+    Inherits MyObject
+    Public num As Integer
+
+    Public Sub New()
+
+    End Sub
+
+    Protected Sub New(ByVal si As SerializationInfo, _
+    ByVal context As StreamingContext)
+        MyBase.New(si, context)
+        num = si.GetInt32("num")
+    End Sub
+
+    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)> _
+    Public Overrides Sub GetObjectData(ByVal si As SerializationInfo, ByVal context As StreamingContext)
+        MyBase.GetObjectData(si, context)
+        si.AddValue("num", num)
+    End Sub
+End Class
 ```  
   
  必ず、逆シリアル化コンストラクターで基本クラスを呼び出すようにしてください。 そうしないと、基本クラスのコンストラクターが呼び出されず、逆シリアル化後にオブジェクトが完全には構築されません。  

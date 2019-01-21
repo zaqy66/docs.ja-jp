@@ -38,7 +38,7 @@ ms.locfileid: "33647762"
  小数値は、`Double`最も効率的なデータ型では、現在のプラットフォーム上のプロセッサの倍精度浮動小数点演算を実行するためです。 ただし、操作を`Double`などの整数型と同様に高速ではない`Integer`です。  
   
 ## <a name="specifying-data-type"></a>データ型の指定  
- 使用して、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)特定の型の変数を宣言します。 使用して、アクセス レベルを指定することが同時に、[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)、または[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)に示すように、キーワード、次の例です。  
+ 使用して、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)特定の型の変数を宣言します。 使用して、アクセス レベルを指定することが同時に、[Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、または[Private](../../../../visual-basic/language-reference/modifiers/private.md)に示すように、キーワード、次の例です。  
   
 ```  
 Private x As Double  

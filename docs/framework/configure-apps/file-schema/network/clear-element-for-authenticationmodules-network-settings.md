@@ -1,5 +1,5 @@
 ---
-title: '&lt;オフ&gt;authenticationModules (ネットワーク設定) の要素'
+title: authenticationModules の &lt;clear&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -17,12 +17,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2018
 ms.locfileid: "50205192"
 ---
-# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;オフ&gt;authenticationModules (ネットワーク設定) の要素
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>authenticationModules の &lt;clear&gt; 要素 (ネットワーク設定)
 アプリケーションからのすべての認証モジュールを削除します。  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
 \<クリア >  
   
 ## <a name="syntax"></a>構文  

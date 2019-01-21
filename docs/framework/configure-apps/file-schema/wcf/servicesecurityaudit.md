@@ -2,12 +2,12 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 36215709f0ede32c25739ea47f2f285e4122f098
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3202b5055d16f0daa1bd829aa53ff6662a687b5d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144437"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150254"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 サービス操作中にセキュリティ イベントの監査を有効にする設定を指定します。  
@@ -21,11 +21,10 @@ ms.locfileid: "53144437"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<serviceSecurityAudit   
-   auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessOrFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"  
-   suppressAuditFailure="Boolean"  
-/>  
+<serviceSecurityAudit auditLogLocation="Default/Application/Security"
+                      messageAuthenticationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      suppressAuditFailure="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -54,7 +53,7 @@ ms.locfileid: "53144437"
   
  この構成要素の使い方の詳細な例を参照してください。[サービス監査動作](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)します。  
   
- 監査イベントは既定で、Windows XP の場合はアプリケーション ログに、Windows Server 2003 と Windows Vista の場合はセキュリティ ログに表示されます。 監査イベントの場所は、`auditLogLocation` 属性を "Application" または "Security" に設定することによって指定できます。 詳細については、次を参照してください。[方法。セキュリティ イベントを監査](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)します。 イベントをセキュリティ ログに書き込む場合は、[ローカル セキュリティ ポリシー] -> [オブジェクト アクセスの監査] で、[成功] と [失敗] の各チェック ボックスをオンにする必要があります。  
+ 監査イベントは既定で、Windows XP の場合はアプリケーション ログに、Windows Server 2003 と Windows Vista の場合はセキュリティ ログに表示されます。 監査イベントの場所は、`auditLogLocation` 属性を "Application" または "Security" に設定することによって指定できます。 詳細については、「[方法 :セキュリティ イベントを監査](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)します。 イベントをセキュリティ ログに書き込む場合は、[ローカル セキュリティ ポリシー] -> [オブジェクト アクセスの監査] で、[成功] と [失敗] の各チェック ボックスをオンにする必要があります。  
   
  イベント ログを調べる場合、監査イベントのソースは "ServiceModel Audit 3.0.0.0" です。 メッセージ認証監査レコードには "MessageAuthentication" のカテゴリ、サービス承認監査レコードには "ServiceAuthorization" のカテゴリが設定されます。  
   
@@ -65,16 +64,18 @@ ms.locfileid: "53144437"
 ## <a name="example"></a>例  
   
 ```xml  
-<system.serviceModel>  
-   <serviceBehaviors>  
-      <behavior name="NewBehavior">  
-         <serviceSecurityAudit auditLogLocation="Application"   
-             suppressAuditFailure="true"  
-             serviceAuthorizationAuditLevel="Success"   
-             messageAuthenticationAuditLevel="Success" />  
-      </behavior>  
-   </serviceBehaviors>  
-</behaviors>  
+<system.serviceModel>
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="NewBehavior">
+        <serviceSecurityAudit auditLogLocation="Application"
+                              suppressAuditFailure="true"
+                              serviceAuthorizationAuditLevel="Success"
+                              messageAuthenticationAuditLevel="Success" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>関連項目  
@@ -82,5 +83,5 @@ ms.locfileid: "53144437"
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [監査](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [操作方法：セキュリティ イベントを監査します。](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [方法: セキュリティ イベントを監査します。](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [サービス監査動作](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

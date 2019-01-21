@@ -1,17 +1,16 @@
 ---
-title: Microsoft XML Serializer Generator - .NET Core
+title: Microsoft XML Serializer Generator
 description: Microsoft XML Serializer Generator の概要。 XML Serializer Generator を使用して、プロジェクトに格納される型のために XML シリアル化アセンブリを生成します。
 author: mlacouture
-ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151760"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244779"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core で Microsoft XML Serializer Generator を使用する
 
@@ -22,7 +21,7 @@ ms.locfileid: "53151760"
 > * Microsoft.XmlSerializer.Generator パッケージへの参照を追加する方法
 > * MyApp.csproj を編集して依存関係を追加する方法
 > * クラスと XmlSerializer を追加する方法
-> * アプリケーションをビルドして実行する方法 
+> * アプリケーションをビルドして実行する方法
 
 .NET Framework の [Xml シリアライザー ジェネレーター (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) と同様に、[Microsoft.XmlSerializer.Generator NuGet パッケージ](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)は .NET Core および .NET Standard プロジェクト用の同等のものです。 アセンブリに含まれる型の XML シリアル化アセンブリを作成することで、<xref:System.Xml.Serialization.XmlSerializer> を使用してその型のオブジェクトをシリアル化または逆シリアル化するときの XML シリアル化の起動パフォーマンスを改善します。
 
@@ -30,8 +29,8 @@ ms.locfileid: "53151760"
 
 このチュートリアルを完了するには、次のものが必要です。
 
-* [.NET Core 2.1 SDK 以降](https://www.microsoft.com/net/download)をインストールします。
-* コード エディターをまだインストールしていなければ、お気に入りのエディターをインストールしてください。
+* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降
+* 任意のコード エディター。
 
 > [!TIP]
 > コード エディターをインストールする必要がありますか。 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) をお試しください。
@@ -53,11 +52,11 @@ dotnet new console
 [`dotnet add package`](../tools//dotnet-add-package.md) コマンドを使用して、プロジェクトで参照を追加します。 
 
 型:
- 
- ```console
- dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
- ```
- 
+
+```console
+dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
+```
+
 ### <a name="verify-changes-to-myappcsproj-after-adding-the-package"></a>パッケージを追加した後に MyApp.csproj の変更を確認する
 
 コード エディターを開き、始めましょう。 引き続き、アプリをビルドした *MyApp* ディレクトリから作業します。
@@ -71,17 +70,17 @@ dotnet new console
     <PackageReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-another-itemgroup-section-for-net-core-cli-tool-support"></a>.NET Core CLI Tool のサポートのために別の ItemGroup セクションを追加する
- 
- 検査した `ItemGroup` セクションの後に以下の行を追加します。
- 
+
+検査した `ItemGroup` セクションの後に以下の行を追加します。
+
  ```xml
  <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-a-class-in-the-application"></a>アプリケーションにクラスを追加する
 
 テキスト エディターで *Program.cs* を開きます。 *MyClass* というクラスを *Program.cs* に追加します。
@@ -107,9 +106,10 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 コンソール ウィンドウに次のコマンドを入力します。
 
- ```console
- $ dotnet run
- ```
+```console
+$ dotnet run
+```
+
 > [!NOTE]
 > [`dotnet run`](../tools/dotnet-run.md) は、[`dotnet build`](../tools/dotnet-build.md) を呼び出してビルド ターゲットがビルドされていることを確認した後、`dotnet <assembly.dll>` を呼び出してターゲット アプリケーションを実行します。
 
@@ -118,15 +118,13 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 すべて正常に終了すると、*MyApp.XmlSerializers.dll* というアセンブリが生成されます。 
 
-
-
 おめでとうございます!  今回の成果:
 > [!div class="checklist"]
 > * .NET Core アプリを作成しました。
 > * Microsoft.XmlSerializer.Generator パッケージへの参照を追加しました。
 > * MyApp.csproj を編集して依存関係を追加しました。
 > * クラスと XmlSerializer を追加しました。
-> * アプリケーションをビルドして実行しました。 
+> * アプリケーションをビルドして実行しました。
 
 ## <a name="related-resources"></a>関連資料
 

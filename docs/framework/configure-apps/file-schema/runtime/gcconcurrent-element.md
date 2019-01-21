@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee00c3a307523d2cae831274630ad6828cd9daf6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745839"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612388"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt;要素
 共通言語ランタイムがガベージ コレクションを別のスレッドで実行するかどうかを指定します。  
@@ -58,11 +58,11 @@ ms.locfileid: "32745839"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  .NET Framework 4 より前の場合、ワークステーション ガベージ コレクションは、同時実行ガベージ コレクションをサポートしており、別個のスレッドでバックグラウンドでガベージ コレクションを実行していました。 .NET Framework 4 では同時実行ガベージ コレクションはバックグラウンド GC に置き換えられており、これも別個のスレッドでバックグラウンドでガベージ コレクションを実行していました。 .NET Framework 4.5 以降では、バックグラウンド コレクションをサーバー ガベージ コレクションで使用できるようになりました。 `<gcConcurrent>` 要素は、ランタイムが同時実行ガベージ コレクションを実行するかバックグラウンド ガベージ コレクションを実行するか (使用可能な場合)、またはフォアグラウンドでガベージ コレクションを実行するかどうかを制御します。  
   
 > [!WARNING]
->  .NET Framework 4 以降では、同時実行ガベージ コレクションはバックグラウンド ガベージ コレクションに置き換えられています。 条項*同時*と*バック グラウンド*.NET Framework のドキュメントで同じ意味で使用されます。 バックグラウンド ガベージ コレクションを無効にするには、この記事説明されているように `<gcConcurrent>` 要素を使用します。  
+>  .NET Framework 4 以降では、同時実行ガベージ コレクションはバックグラウンド ガベージ コレクションに置き換えられています。 条件*同時*と*バック グラウンド*.NET Framework のドキュメントでは、同義です。 バックグラウンド ガベージ コレクションを無効にするには、この記事説明されているように `<gcConcurrent>` 要素を使用します。  
   
  既定では、ランタイムは同時実行ガベージ コレクションまたはバックグラウンド ガベージ コレクションを使用します。これは待機時間について最適化されています。 アプリケーションでユーザーとのやり取りが多い場合は、同時実行ガベージ コレクションを有効にして、ガベージ コレクションを実行するためのアプリケーションの停止時間を最小限に抑えます。 `<gcConcurrent>` 要素の `enabled` 属性を `false` に設定すると、ランタイムは非同時実行ガベージ コレクションを使用します。これはスループットについて最適化されています。 次の構成ファイルはバック グラウンド ガベージ コレクションを無効にします。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "32745839"
 </configuration>  
 ```  
   
- マシン構成ファイルに `<gcConcurrentSetting>` 設定が存在する場合、すべての .NET Framework アプリケーションの既定値を定義します。 マシン構成ファイルの設定は、アプリケーション構成ファイルの設定を上書きします。  
+ マシン構成ファイルに `<gcConcurrentSetting>` 設定が存在する場合、すべての .NET Framework アプリケーションの既定値を定義します。 マシン構成ファイルの設定は、アプリケーション構成ファイルの設定をオーバーライドします。  
   
- 詳細とバック グラウンド ガベージ コレクションの同時実行については、「同時実行ガベージ コレクション」セクションを参照して、[ガベージ コレクションの基礎](../../../../../docs/standard/garbage-collection/fundamentals.md)トピックです。  
+ 詳細については同時実行とバック グラウンド ガベージ コレクション、「同時実行ガベージ コレクション」セクションを参照してください、[ガベージ コレクションの基礎](../../../../../docs/standard/garbage-collection/fundamentals.md)トピック。  
   
 ## <a name="example"></a>例  
  同時実行ガベージ コレクションを有効にする方法を次の例に示します。  
@@ -90,6 +90,6 @@ ms.locfileid: "32745839"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [ガベージ コレクションの基礎](../../../../../docs/standard/garbage-collection/fundamentals.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [ガベージ コレクションの基礎](../../../../../docs/standard/garbage-collection/fundamentals.md)

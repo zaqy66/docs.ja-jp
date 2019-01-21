@@ -2,12 +2,12 @@
 title: Visual Basic の言語バージョンを選択します。
 description: 特定のコンパイラ バージョンを使用して、構文検証を実行するコンパイラを構成します。
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194723"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415105"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Visual Basic の言語バージョンを選択します。
 
@@ -60,7 +60,7 @@ Visual Basic コンパイラは、最新のメジャー バージョンがリリ
 </Project>
 ```
 
-ここで、そのファイルを含むディレクトリのすべてのサブディレクトリにビルドは Visual Basic バージョン 15.5 の構文を使用します。 詳しくは、「[ビルドのカスタマイズ](/visualstudio/msbuild/customize-your-build.md)」を参照してください。
+ここで、そのファイルを含むディレクトリのすべてのサブディレクトリにビルドは Visual Basic バージョン 15.5 の構文を使用します。 詳しくは、「[ビルドのカスタマイズ](/visualstudio/msbuild/customize-your-build)」を参照してください。
 
 ## <a name="set-the-langversion-compiler-option"></a>言語コンパイラ オプションを設定する
 

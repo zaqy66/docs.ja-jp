@@ -1,6 +1,6 @@
 ---
-title: '方法 : 文字列が有効な電子メール形式であるかどうかを検証する'
-ms.date: 08/10/2018
+title: '方法: 文字列が有効な電子メール形式であるかどうかを検証する'
+ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9ed0721f2bfa8e272822740cf26173c1592de428
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836298"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236649"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>方法 : 文字列が有効な電子メール形式であるかどうかを検証する
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>方法: 文字列が有効な電子メール形式であるかどうかを検証する
 正規表現を使用して文字列の形式が有効な電子メール形式であるかどうかを検証する例を次に示します。  
 
 ## <a name="example"></a>例  

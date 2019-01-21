@@ -1,16 +1,15 @@
 ---
 title: .NET Core での自己完結型アプリのデプロイにおけるランタイムのロール フォワード
 description: 自己完結型展開における dotnet publish の変更について説明します。
-author: jralexander
-ms.author: kdollard
+author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: dde00cf71f0d67c8c4380748e01a4ef5c17ebb4a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126680"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656298"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>自己完結型展開ランタイムのロール フォワード
 

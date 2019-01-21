@@ -2,14 +2,14 @@
 title: .NET Core の配布パッケージ
 description: .NET Core を配布用にパッケージ化、名前付け、およびバージョン管理する方法について説明します。
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145648"
+ms.locfileid: "53170419"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core の配布パッケージ
 
@@ -68,14 +68,14 @@ ms.locfileid: "53145648"
 
 .NET Core バージョン管理は、ランタイム コンポーネント `[major].[minor]` バージョン番号に基づきます。
 SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能とパッチ意味論を結合する非依存の `[patch]` が与えられます。
-例: SDK バージョン 2.2.302 は、2.2 ランタイム対応の SDK の第 3 機能リリースの第 2 パッチ リリースです。
+次に例を示します。SDK バージョン 2.2.302 は、2.2 ランタイム対応の SDK の第 3 機能リリースの第 2 パッチ リリースです。
 
 パッケージには、その名前にバージョン番号の一部が含まれているものもあります。 それによって、エンドユーザーは特定のバージョンをインストールできます。
 バージョンの残りの部分はバージョン名には含まれていません。 それによって、OS パッケージ マネージャーはパッケージを更新できます (セキュリティ修正の自動インストールなど)。
 
 次の表は、推奨パッケージをまとめたものです。
 
-| name                                    | 例                | ユース ケース: インストール ...           | 内容           | 依存関係                                   | Version            |
+| name                                    | 例                | ユース ケース:インストール ...           | 内容           | 依存関係                                   | Version            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | ランタイム メジャーの最新 sdk    |                    | dotnet-sdk-[major].[latestminor]               | \<sdk version>     |
 | dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | 特定のランタイムの最新の sdk |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<sdk version>     |

@@ -2,12 +2,12 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f0874d38c3432f066d1bec5cc84f53e1f3730180
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747981"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150150"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 リゾルバーとして PNRP (Peer Name Resolution Protocol) リゾルバーを使用することを指定します。 PNRP は既定のリゾルバーであるため、この要素は省略可能です。  
@@ -21,7 +21,7 @@ ms.locfileid: "32747981"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<pnrpResolver resolverType="String" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -45,7 +45,7 @@ ms.locfileid: "32747981"
 ## <a name="example"></a>例  
   
 ```xml  
-<pnrpResolver resolverType="" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="see-also"></a>関連項目  

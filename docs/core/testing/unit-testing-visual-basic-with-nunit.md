@@ -5,12 +5,13 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: 1cfca0939d4c4055aece69cae066c365cd2a1dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143568"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239155"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
@@ -153,7 +154,7 @@ End Function
 
 ## <a name="adding-more-features"></a>他の機能の追加
 
-テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります (0、-1)。 `<Test>` 属性を使用すると、これらの例を新しいテストとして追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の xUnit 属性があります。  `<TestCase>` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `<TestCase>` 属性を使用して、そのような入力の値を指定することができます。
+テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります(0、-1)。 `<Test>` 属性を使用すると、これらの例を新しいテストとして追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の xUnit 属性があります。  `<TestCase>` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `<TestCase>` 属性を使用して、そのような入力の値を指定することができます。
 
 新しいテストを作成する代わりに、この 2 つの属性を活用して、最も小さな素数である 2 未満の複数の値をテストする一連のテストを作成しましょう。
 

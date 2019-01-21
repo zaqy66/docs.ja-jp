@@ -1,13 +1,13 @@
 ---
-title: ブール演算子 (F#)
-description: F# プログラミング言語で使用可能なブール演算子について説明します。
+title: ブール演算子
+description: 使用可能なブール演算子について説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5353b6ec6a0bd610f3446761a1d28f01f0403302
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45638481"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612739"
 ---
 # <a name="boolean-operators"></a>ブール演算子
 

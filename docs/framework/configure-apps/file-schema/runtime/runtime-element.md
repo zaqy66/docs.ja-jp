@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 5ab9fafeb6c836f1561752a8e2bdfddb97296399
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863627"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610679"
 ---
 # <a name="ltruntimegt-element"></a>&lt;ランタイム&gt;要素
 アプリケーションを構成する共通言語ランタイムで使用される情報を提供します。  
@@ -92,5 +92,5 @@ ms.locfileid: "47863627"
  内の要素、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)セクションは、アプリケーションの起動時に、共通言語ランタイムによって自動的に読み取られます。 その名前を指定することによって、既定以外のアプリケーション ドメインの構成ファイルを定義することも、<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>プロパティの設定は、アプリケーション ドメインが読み込まれるときに自動的に読み込まれます。 まれには場合、これまでが必要で設定を直接読み取る必要がある、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)アプリケーションの構成ファイルでセクション。  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

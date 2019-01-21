@@ -1,13 +1,13 @@
 ---
-title: 'ループ: for...to 式 (F#)'
+title: 'ループ: for...to 式'
 description: 参照してください方法 F# for….. ループ変数の値の範囲をループで反復処理する式に使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800470"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612323"
 ---
 # <a name="loops-forto-expression"></a>ループ: for...to 式
 
@@ -39,5 +39,5 @@ for identifier = start [ to | downto ] finish do
 ## <a name="see-also"></a>関連項目
 
 - [F# 言語リファレンス](index.md)
-- [ループ: `for...in` 式](loops-for-in-expression.md)
-- [ループ: `while...do` 式](loops-while-do-expression.md)
+- [ループ:`for...in` 式](loops-for-in-expression.md)
+- [ループ:`while...do` 式](loops-while-do-expression.md)

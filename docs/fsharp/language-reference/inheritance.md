@@ -1,13 +1,13 @@
 ---
-title: 継承 (F#)
+title: 継承
 description: "'Inherit' キーワードを使用して F# 継承リレーションシップを指定する方法について説明します。"
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: HT
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864470"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610139"
 ---
 # <a name="inheritance"></a>継承
 
@@ -28,7 +28,7 @@ type MyDerived(...) =
 
 クラスは、別のクラスから継承している場合、メソッドと基底クラスのメンバーは場合、派生クラスの直接のメンバーと同様に、派生クラスのユーザーに公開します。
 
-いずれかの let バインディングとコンス トラクターのパラメーターは、クラスに対してプライベートであるし、そのため、派生クラスからアクセスできません。
+いずれかの let バインドとコンストラクターのパラメーターは、クラスに対してプライベートであるため、派生クラスからアクセスできません。
 
 キーワード`base`は派生クラスで使用でき、基本クラスのインスタンスを参照します。 これは、自己識別子のように使用されます。
 
@@ -62,7 +62,7 @@ override [self-identifier].[method-name] [argument-list] = [method-body]
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-複数のコンス トラクターの場合、次のコードを使用していることができます。 派生クラスのコンス トラクターの最初の行は、`inherit`句と、フィールドで宣言された明示的なフィールドとして表示されます、`val`キーワード。 詳細については、次を参照してください。[明示的なフィールド:、`val`キーワード](members/explicit-fields-the-val-keyword.md)します。
+複数のコンス トラクターの場合、次のコードを使用していることができます。 派生クラスのコンス トラクターの最初の行は、`inherit`句と、フィールドで宣言された明示的なフィールドとして表示されます、`val`キーワード。 詳細については、次を参照してください。[明示的なフィールド:`val`キーワード](members/explicit-fields-the-val-keyword.md)します。
 
 ```fsharp
 type BaseClass =

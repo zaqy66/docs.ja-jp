@@ -2,12 +2,12 @@
 title: '&lt;netHttpBinding&gt; の &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3110a93d224ee2be078727df65b92e9987445c43
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842646"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151294"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; の &lt;transport&gt;
 HTTP トランスポートの認証パラメーターを制御するプロパティを定義します。  
@@ -21,20 +21,22 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 ## <a name="syntax"></a>構文  
   
-```xml
-<netHttpBinding>  
-  <binding>  
-    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">  
-      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"  
-                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows" realm="string">  
-        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"  
-                                  protectionScenario="TransportSelected|TrustedProxy">  
-          <customServiceNames></customServiceNames>  
-        </extendedProtectionPolicy>  
-      </transport>  
-    </security>  
-  </binding>  
-</netHttpBinding>  
+```xml  
+<netHttpBinding>
+  <binding>
+    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">
+      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 realm="string">
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtectionPolicy>
+      </transport>
+    </security>
+  </binding>
+</netHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -65,8 +67,8 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
 |値|説明|  
 |-----------|-----------------|  
 |なし|メッセージの数は、転送中にセキュリティ保護されません。|  
-|Basic|RFC 2617 『HTTP Authentication: Basic and Digest Authentication』で定義されているとおりに基本認証を指定します。|  
-|Digest|RFC 2617 『HTTP Authentication: Basic and Digest Authentication』で定義されているとおりにダイジェスト認証を指定します。|  
+|Basic|RFC 2617 – HTTP Authentication で定義されている基本認証を指定します。基本認証とダイジェスト認証です。|  
+|Digest|RFC 2617 – HTTP Authentication で定義されている、ダイジェスト認証を指定します。基本認証とダイジェスト認証です。|  
 |Ntlm|Windows 認証に失敗した場合で可能な場合は、NTLM 認証を指定します。|  
 |Windows|Windows 統合認証を指定します。|  
 |証明書|証明書を使用したクライアント認証を実行します。 このオプションは、親要素の `Mode` の `security` 属性が Transport に設定されている場合のみ機能し、TransportCredentialOnly に設定されている場合は機能しません。|  
@@ -83,35 +85,36 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
 ## <a name="example"></a>例  
  基本的なバインディングを使用した SSL トランスポート セキュリティの使用例を次に示します。 既定で、基本的なバインディングは HTTP 通信をサポートします。  
   
-```xml
-<system.serviceModel>  
-  <services>  
-    <service type="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <endpoint address=""  
-                binding="netHttpBinding"  
-                bindingConfiguration="Binding1"   
-                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-    </service>  
-  </services>  
-  <bindings>  
-    <netHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
-      <binding name="Binding1">  
-        <security mode="Transport">  
-          <transport clientCredentialType="None"  
-                     proxyCredentialType="None">  
-            <extendedProtectionPolicy policyEnforcement="WhenSupported"  
-                                      protectionScenario="TransportSelected">  
-              <customServiceNames></customServiceNames>  
+```xml  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="netHttpBinding"
+                bindingConfiguration="Binding1"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <netHttpBinding>
+      <!-- Configure basicHttpBinding with Transport security -->
+      <!-- mode and clientCredentialType set to None. -->
+      <binding name="Binding1">
+        <security mode="Transport">
+          <transport clientCredentialType="None"
+                     proxyCredentialType="None">
+            <extendedProtectionPolicy policyEnforcement="WhenSupported"
+                                      protectionScenario="TransportSelected">
+              <customServiceNames>
+              </customServiceNames>
             </extendedProtectionPolicy>
-          </transport> 
-        </security>  
-      </binding>  
-    </netHttpBinding>  
-  </bindings>  
-</system.serviceModel>  
+          </transport>
+        </security>
+      </binding>
+    </netHttpBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>関連項目  

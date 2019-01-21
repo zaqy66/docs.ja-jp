@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 434d5dd002124033f6d7cf5104d87264ee9c0388
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121390"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222221"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータを含むファイルに変換します。 .NET Framework アセンブリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ ファイルは同じ物理形式を使用しますが、メタデータ テーブルの内容に違いがあります。つまり、.NET Framework アセンブリは、自動的に [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントにするプロセスは、*エクスポート*と呼ばれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] では、生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
   
  Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア**にある **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -50,7 +50,7 @@ winmdexp [options] winmdmodule
   
  C# または Visual Basic で [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリまたは [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを作成する場合は、[!INCLUDE[wrt](../../../includes/wrt-md.md)] でのプログラミングをより自然にするためのサポートが .NET Framework で提供されています。 これは、記事「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」で解説されています。 プロセスでは、一般的に使用される [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型が .NET Framework 型にマップされます。 Winmdexp.exe は、このプロセスを反転し、対応する [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型を使用する API サーフェイスを生成します。 たとえば、<xref:System.Collections.Generic.IList%601> インターフェイスから構築された型は、[!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) インターフェイスから構築された型にマップされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Winmdexp.exe のエラー メッセージ](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  

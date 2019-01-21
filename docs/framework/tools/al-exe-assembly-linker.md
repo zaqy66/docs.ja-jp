@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48848019"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223196"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
@@ -23,7 +23,7 @@ ms.locfileid: "48848019"
 > [!NOTE]
 > Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[/win32manifest (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -54,7 +54,7 @@ al sources options
 |**/config[uration]:** `text`|アセンブリの Configuration フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> テキストが空の文字列の場合、Win32 Configuration リソースは単一の空白として表示されます。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyConfigurationAttribute>) として指定することもできます。|
 |**/copy[right]:** `text`|アセンブリの Copyright フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、**/copyright** が Win32 Copyright リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 Copyright リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/copyright** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyCopyrightAttribute>) として指定することもできます。|
 |**/c[ulture]:** `text`|アセンブリに関連付けるカルチャ文字列を指定します。 カルチャとして有効な値は、RFC (Internet Requests for Comments) ドキュメント 1766 『Tags for the Identification of Languages』で定義されている値です。<br /><br /> `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 既定のカルチャ文字列はありません。 この文字列は、リフレクションを使用して表示するために使用できます。<br /><br /> 有効な `text` 文字列の詳細については、「<xref:System.Globalization.CultureInfo>」を参照してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyCultureAttribute>) として指定することもできます。|
-|**/delay[sign][+&#124;-]**|アセンブリに完全に署名するか、部分的に署名するかを指定します。 完全署名されたアセンブリを作成する場合は、**/delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、**/delaysign+** を使用します。<br /><br /> アセンブリに完全に署名するように指定すると、*Al.exe* はマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名される場合、*Al.exe* は署名を算出および格納するのでなく、後で署名を追加できるようにファイル内の空間を予約するだけとなります。<br /><br /> 既定値は **/delaysign-** です。<br /><br /> **/delaysign** オプションは、**/keyfile** または **/keyname** と共に使用しない場合、無効になります。<br /><br /> たとえば、**/delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、アセンブリに秘密キーを含めることにより、そのアセンブリに完全署名できます。<br /><br /> メモ: [*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を使用して遅延署名アセンブリをグローバル キャッシュに格納する前に、[*Sn.exe* (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用してアセンブリを登録して検証をスキップします。 たとえば、`Sn.exe –Vr delaySignedAssembly` のようにします。 これは、開発にのみ使用してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDelaySignAttribute>) として指定することもできます。|
+|**/delay[sign][+&#124;-]**|アセンブリに完全に署名するか、部分的に署名するかを指定します。 完全署名されたアセンブリを作成する場合は、**/delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、**/delaysign+** を使用します。<br /><br /> アセンブリに完全に署名するように指定すると、*Al.exe* はマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名される場合、*Al.exe* は署名を算出および格納するのでなく、後で署名を追加できるようにファイル内の空間を予約するだけとなります。<br /><br /> 既定値は **/delaysign-** です。<br /><br /> **/delaysign** オプションは、**/keyfile** または **/keyname** と共に使用しない場合、無効になります。<br /><br /> たとえば、**/delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、アセンブリに秘密キーを含めることにより、そのアセンブリに完全署名できます。<br /><br /> メモ:[*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を使用して遅延署名アセンブリをグローバル キャッシュに格納する前に、[*Sn.exe* (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用してアセンブリを登録して検証をスキップします。 たとえば、`Sn.exe –Vr delaySignedAssembly` のようにします。 これは、開発にのみ使用してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDelaySignAttribute>) として指定することもできます。|
 |**/descr[iption]:** `text`|アセンブリの <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、**/description** が Win32 **Comments** リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 **Comments** リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/description** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>) として指定することもできます。|
 |**/e[vidence]:** `file`|Security.Evidence のリソース名を持つアセンブリに `file` を埋め込みます。<br /><br /> 通常のリソースに対して Security.Evidence を使用することはできません。|
 |**/fileversion:** `version`|アセンブリの **File Version** フィールドに文字列を指定します。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、**/fileversion** が Win32 **File Version** リソースとして使用されます。 **/fileversion** を指定しないと、Win32 **Assembly Version** リソースによって Win32 **File Version** リソースが設定されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソースに対して **/fileversion** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (AssemblyFileVersionAttribute) として指定することもできます。|
@@ -100,7 +100,7 @@ al sources options
 |al1007|応答ファイル 'file' を開いているときにエラーが発生しました -- '理由'<br /><br /> *Al.exe* は、メッセージに示された原因により、指定された応答ファイルを開くことができません。|
 |al1008|'option' コマンド ライン オプションに対するファイル指定がありません。<br /><br /> *Al.exe* は、コマンド ライン オプションにファイルが渡されることを想定しています。 たとえば、**/out** オプションを指定する場合は、ファイルを指定する必要があります。|
 |al1009|'file' を書き込むために開くことができません<br /><br /> *Al.exe* は、出力アセンブリ ファイルなどのファイルに書き込みできませんでした。 ディスクがいっぱいである、ファイルが読み取り専用である、ファイルに対するアクセス許可がないなどの理由が考えられます。|
-|al1010|コマンドライン構文エラー: 'option' オプションの ':text' がありません<br /><br /> *Al.exe* は、コマンド ライン オプションに引数が渡されることを想定しています。 たとえば、**/title** オプションを指定する場合は、文字列を渡す必要があります。|
+|al1010|コマンド ライン構文エラー:'option' オプションに ':text' がありません<br /><br /> *Al.exe* は、コマンド ライン オプションに引数が渡されることを想定しています。 たとえば、**/title** オプションを指定する場合は、文字列を渡す必要があります。|
 |al1011|ファイル 'file' は実行可能ファイルです。テキスト ファイルとして開くことはできません<br /><br /> テキスト ファイルを指定する必要があるところにバイナリ ファイルが指定されました。 たとえば、コマンド ラインで応答ファイルとしてバイナリ ファイルが渡されると、このエラーが発生します。|
 |al1012|'value' はオプション 'option' に対する有効な設定ではありません<br /><br /> コマンド ライン オプションに予期しない値が渡されました。 たとえば、**/target** オプションに無効な値を指定すると、このエラーが発生します。|
 |al1013|認識できないコマンド ライン オプション : 'option'<br /><br /> 指定されたコマンド ライン オプションが無効です。|
@@ -129,7 +129,7 @@ al sources options
 |al1039|グローバル アセンブリ キャッシュ マネージャーの初期化に失敗しました — 理由<br /><br /> Visual Studio または [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)] を再インストールしてください。|
 |al1040|キャッシュにアセンブリをインストールできませんでした — 理由<br /><br /> キャッシュにインストールできるのは署名されたアセンブリだけです。 詳細については、「[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)」を参照してください。|
 |al1041|'method' : 署名または表示が正しくないか、ジェネリックであるため、エントリ ポイントになれません。<br /><br /> **/main** オプションで指定されたメソッドが、静的メソッドでないか、`int` または `void` を返さないか、ジェネリックであったか、無効な引数が含まれています。|
-|al1042|'exe': EXE を追加モジュールにすることはできません<br /><br /> アセンブリを含まない *.exe* ファイルが、*Al.exe* への入力ファイルとして指定されました。 *Al.exe* で入力ファイルとして指定できるのは、アセンブリを含まない *.dll* ファイルだけです。|
+|al1042|'exe':EXE を追加モジュールにすることはできません<br /><br /> アセンブリを含まない *.exe* ファイルが、*Al.exe* への入力ファイルとして指定されました。 *Al.exe* で入力ファイルとして指定できるのは、アセンブリを含まない *.dll* ファイルだけです。|
 |al1043|マニフェスト ファイル名 'name' をモジュール名と同じにすることはできません<br /><br /> **/out** オプションで指定する名前は、*Al.exe* に対する入力ファイルとして指定されるファイルと同じ名前にすることはできません。|
 |al1044|キー ファイル 'file' の読み込み中にエラーが発生しました -- 理由<br /><br /> **/keyfile** または <xref:System.Reflection.AssemblyKeyFileAttribute> で指定したファイルを開いているとき、または読み取っているときに、エラーが発生しました。|
 |al1045|ファイル名 'file' が長すぎるか無効です<br /><br /> 260 文字より長いファイル名が *Al.exe* に渡されました。 それよりも文字数の少ないファイル名または短いパスを選択するか、ファイルの名前を変更してください。|

@@ -1,13 +1,13 @@
 ---
-title: 非同期ワークフロー (F#)
+title: 非同期ワークフロー
 description: サポートについて F# プログラミング言語、非同期的に計算を実行するための他の作業の実行をブロックせずに実行します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7643a26469ee6a6cf15940f90611fd430beef42e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127746"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610789"
 ---
 # <a name="asynchronous-workflows"></a>非同期ワークフロー
 

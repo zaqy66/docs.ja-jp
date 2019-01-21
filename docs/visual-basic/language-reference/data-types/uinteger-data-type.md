@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: c63b9a25c1830f142002e9854e9ce275f55ef54b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 929197d8e8f9ab031e72e7d332422b388a22ea95
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154826"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146057"
 ---
 # <a name="uinteger-data-type"></a>UInteger データ型
 
@@ -68,7 +68,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **負の数。** `UInteger`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`UInteger`、Visual Basic の式を変換する`Long`最初。  
   
--   **CLS 準拠です。** `UInteger`データ型がの一部、[共通言語仕様](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
+-   **CLS 準拠です。** `UInteger`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
   
 -   **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合などの型を注意してください`uint`他の環境で別のデータ幅 (16 ビット) を持つことができます。 このようなコンポーネントに 16 ビットの引数を渡す場合の宣言として`UShort`の代わりに`UInteger`管理対象の Visual Basic コードです。  
   
@@ -83,5 +83,5 @@ Dim number = &H_0FAC_14D7ui
  [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [操作方法：符号なしの型を Windows 関数を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

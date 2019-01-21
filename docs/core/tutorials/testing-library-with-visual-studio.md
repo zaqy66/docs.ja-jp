@@ -7,15 +7,13 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom:
-- vs-dotnet
-- seodoc18
-ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: vs-dotnet, seodoc18
+ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144898"
+ms.locfileid: "53170796"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 の .NET Core を使用したクラス ライブラリのテスト
 
@@ -30,14 +28,14 @@ ms.locfileid: "53144898"
 
 1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual C#]** ノードを選択します。 次に、**[.NET Core]** ノードを選び、**[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
 
-   ![[新しいプロジェクトの追加] ダイアログ](./media/testing-library-with-visual-studio/testproject.png)
+   ![単体テスト プロジェクトが表示された [新しいプロジェクトの追加] ダイアログ - C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
    > MSTest テスト プロジェクトに加え、Visual Studio を使用して .NET Core 用の xUnit テスト プロジェクトを作成することもできます。
 
 1. Visual Studio でプロジェクトが作成され、コード ウィンドウ内に *UnitTest1.cs* ファイルが開かれます。
 
-   ![既定の単体テスト プロジェクト UnitTest1 クラスおよび TestMethod1 メソッドを示す Visual Studio コード ウィンドウ](./media/testing-library-with-visual-studio/unittestwindow.png)
+   ![単体テスト プロジェクト クラスとメソッドの Visual Studio コード ウィンドウ - C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
    単体テストのテンプレートで作成されたソース コードにより、次の処理が行われます。
 
@@ -49,24 +47,24 @@ ms.locfileid: "53144898"
 
 1. **ソリューション エクスプローラー**で **[StringLibraryTest]** プロジェクトの **[依存関係]** ノードを右クリックし、コンテキスト メニューの **[参照の追加]** を選択します。
 
-   ![StringLibraryTest の依存関係のコンテキスト メニュー](./media/testing-library-with-visual-studio/addreference.png)
+   ![StringLibraryTest の依存関係のコンテキスト メニュー - C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. **[参照マネージャー]** ダイアログで、**[プロジェクト]** ノードを展開し、**[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
 
-   ![参照マネージャー](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio のプロジェクト参照の追加ダイアログ](./media/testing-library-with-visual-studio/project-reference-manager.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. **ソリューション エクスプローラー**で **[ClassLibraryProjects]** ソリューション ノードのコンテキスト メニューを開き、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual Basic]** ノードを選択します。 次に、**[.NET Core]** ノードを選び、**[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
 
-   ![[新しいプロジェクトの追加] ダイアログ](./media/testing-library-with-visual-studio/vb-testproject.png)
+   ![単体テスト プロジェクトが表示された [新しいプロジェクトの追加] ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
    > [!NOTE]  
    > MSTest テスト プロジェクトに加え、Visual Studio を使用して .NET Core 用の xUnit テスト プロジェクトを作成することもできます。
 
 1. Visual Studio でプロジェクトが作成され、コード ウィンドウ内に *UnitTest1.vb* ファイルが開かれます。
 
-   ![既定の単体テスト プロジェクト UnitTest1 クラスおよび TestMethod1 メソッドを示す Visual Studio コード ウィンドウ](./media/testing-library-with-visual-studio/vb-unittestwindow.png)
+   ![単体テストプロジェクト クラスとメソッドの Visual Studio コード ウィンドウ - Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
 
    単体テストのテンプレートで作成されたソース コードにより、次の処理が行われます。
 
@@ -78,11 +76,11 @@ ms.locfileid: "53144898"
 
 1. **ソリューション エクスプローラー**で **[StringLibraryTest]** プロジェクトの **[依存関係]** ノードを右クリックし、コンテキスト メニューの **[参照の追加]** を選択します。
 
-   ![StringLibraryTest の依存関係のコンテキスト メニュー](./media/testing-library-with-visual-studio/addreference.png)
+   ![StringLibraryTest の依存関係のコンテキスト メニュー](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. **[参照マネージャー]** ダイアログで、**[プロジェクト]** ノードを展開し、**[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
 
-   ![参照マネージャー](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio のプロジェクト参照の追加ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>単体テスト メソッドの追加と実行
@@ -117,7 +115,7 @@ Assert メソッド | 関数
 
 1. メニュー バーで、**[ファイル]** > **[名前を付けて UnitTest1.cs を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、**[保存]** ボタンの横にある矢印を選択して、**[エンコード付きで保存]** を選択します。
 
-   ![[名前を付けて保存] ダイアログ](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio の [名前を付けてファイルを保存] ダイアログ - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. *UnitTest1.vb* コード ウィンドウで、コードを次のコードに置き換えます。
 
@@ -127,20 +125,20 @@ Assert メソッド | 関数
 
 1. メニュー バーで、**[ファイル]** > **[名前を付けて UnitTest1.vb を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、**[保存]** ボタンの横にある矢印を選択して、**[エンコード付きで保存]** を選択します。
 
-   ![[名前を付けて保存] ダイアログ](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio の [名前を付けてファイルを保存] ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. **[保存の確認]** ダイアログで **[はい]** ボタンを選択してファイルを保存します。
 
 1. **[保存オプションの詳細設定]** ダイアログの **[エンコード]** ドロップダウン リストから **[Unicode (UTF-8 シグネチャ付き) - コードページ 65001]** を選択し、**[OK]** の順に選択します。
 
-   ![[保存オプションの詳細設定] ダイアログ](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
+   ![Visual Studio の [保存オプションの詳細設定] ダイアログ](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    UTF8 でエンコードされたファイルにソース コードを保存できなかった場合、ASCII ファイルとして保存される場合があります。 その場合は、ランタイムで ASCII 範囲外の UTF8 文字が正確にデコードされず、テスト結果が正確でなくなります。
 
 1. メニュー バーで **[テスト]** > **[実行]** > **[すべてのテスト]** を選択します。 **[テスト エクスプローラー]** ウィンドウが開き、テストが正常に実行されたことを示します。 3 つのテストが **[成功したテスト]** セクションに表示され、**[概要]** セクションにはテストの実行結果が表示されています。
 
-   ![[テスト エクスプローラー] ウィンドウ](./media/testing-library-with-visual-studio/firsttest.png)
+   ![[テスト エクスプローラー] ウィンドウと成功したテスト](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
 ## <a name="handling-test-failures"></a>テスト エラーの処理
 
@@ -159,11 +157,11 @@ Assert メソッド | 関数
    ```
 1. **[テスト]** > **[実行]** > **[すべてのテスト]** をメニュー バーから選択してテストを実行します。 **[テスト エクスプローラー]** ウィンドウに、テストが 2 つ成功し、1 つ失敗したことが示されます。
 
-   ![[テスト エクスプローラー] ウィンドウ](./media/testing-library-with-visual-studio/failedtest.png)
+   ![[テスト エクスプローラー] ウィンドウと失敗したテスト](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. **[失敗したテスト]** セクションで、失敗したテスト `TestDoesNotStartWith` を選択します。 **[テスト エクスプローラー]** ウィンドウに、アサートによって生成されたメッセージ "Assert.IsFalse failed. Expected for 'Error': false; actual: True" が表示されます。 エラーのため、配列内の "Error" の後ろのすべての文字列はテストされませんでした。
+1. **[失敗したテスト]** セクションで、失敗したテスト `TestDoesNotStartWith` を選択します。 **[テスト エクスプローラー]** ウィンドウに、アサートによって生成されたメッセージ"Assert.IsFalse failed. Expected for 'Error': false; actual:True" が表示されます。 エラーのため、配列内の "Error" の後ろのすべての文字列はテストされませんでした。
 
-   ![Is False アサーションの失敗を示す [テスト エクスプローラー] ウィンドウ](./media/testing-library-with-visual-studio/failedtestdetail.png)
+   ![Is False アサーションの失敗を示す [テスト エクスプローラー] ウィンドウ](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. 追加したコード (`"Error", `) を削除し、テストを再実行します。 テストは成功します。
 
@@ -175,11 +173,11 @@ Assert メソッド | 関数
 
 1. Visual Studio のツールバーで、ビルド構成を **[デバッグ]** から **[リリース]** に変更します。
 
-   ![Visual Studio ツール バー](./media/testing-library-with-visual-studio/toolbar.png)
+   ![リリース ビルドが強調表示された Visual Studio のツールバー](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. **ソリューション エクスプローラー**で **[StringLibrary]** プロジェクトを右クリックし、コンテキスト メニューの **[ビルド]** を選択し、ライブラリを再コンパイルします。
 
-   ![StringLibrary のコンテキスト メニュー](./media/testing-library-with-visual-studio/buildlibrary.png)
+   ![StringLibrary のコンテキスト メニューとビルド コマンド](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. **[テスト]** > **[実行]** > **[すべてのテスト]** をメニュー バーから選択して単体テストを実行します。 テストが成功します。
 

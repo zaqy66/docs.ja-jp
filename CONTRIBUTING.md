@@ -27,7 +27,7 @@
 **手順 1:** 小さな変更の場合は、この手順をスキップしてください。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
 **docs** フォルダーのコンテンツはセクションで構成され、それらが目次 (TOC) に反映されます。 TOC のどこにトピックを配置するかを明確にします。 提案に対するフィードバックを得ます。
 
-または
+- または -
 
 コミュニティへの投稿が歓迎されている既存の問題から選択することもできます。 [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (.NET コミュニティへの投稿者向けのプロジェクト) に、コミュニティへの投稿者が利用できる多くの作業項目が一覧で示されています。 自分の興味と責任のレベルに応じて、次のカテゴリに属する問題から選択できます。
 
@@ -39,7 +39,7 @@
 
 [未解決の問題](https://github.com/dotnet/docs/issues)の一覧を調べて、ご自分が興味のある問題に取り組むことを志願することもできます。 投稿できる問題には、[up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) ラベルがタグ付けされています。 
 
-**手順 2:** 必要に応じて、`/dotnet/docs`、`dotnet/samples`、または `dotnet/dotnet-api-docs` リポジトリをフォークして、変更を行うためのブランチを作成します。
+**手順 2:** 必要に応じて、`dotnet/docs`、`dotnet/samples`、または `dotnet/dotnet-api-docs` リポジトリをフォークして、変更を行うためのブランチを作成します。
 
 小さな変更の場合は、GitHub の Web インターフェイスを使用できます。 変更したいファイルの **[Edit the file in your fork of this project]**(このプロジェクトの自分のフォーク内でこのファイルを編集する) をクリックするだけです。 変更を送信すると、GitHub によって、専用の新しいブランチが作成されます。
 
@@ -66,7 +66,9 @@
             /porting-overview
                 portability_report.png
 
-**手順 4:**  ご自分のブランチから `dotnet/docs/master` に Pull Request (PR) を送信します。
+**手順 4:** ご自分のブランチから `dotnet/docs/master` に Pull Request (PR) を送信します。
+
+PR は*常に*マスター ブランチを対象にする必要があります。 ライブ ブランチを対象とする PR は*決して*開かないでください。
 
 各 PR では、通常は一度に 1 つの問題に対応します。 PR では、1 つまたは複数のファイルを変更できます。 複数のファイルで複数の修正を行う場合は、PR を分けることが推奨されています。
 
@@ -99,7 +101,7 @@ Microsoft では、リポジトリ内に存在するコードを次のように�
 これらのディレクトリは、docs リポジトリに新しいコンテンツが追加されたときに拡張される可能性があります。 たとえば、`xamarin-ios` や `xamarin-android` などの Xamarin ディレクトリが追加されます。
 
 ご自分で作成した完全なサンプルには、*readme.md* ファイルを含める必要があります。 このファイルには、サンプルの簡単な説明 (1 つまたは 2 つの段落) を含める必要があります。 *Readme.md* で、このサンプルを探索することで何を学習できるかを閲覧者に通知する必要があります。 *Readme.md* ファイルには、[.NET ドキュメント サイト](https://docs.microsoft.com/dotnet/welcome)上に公開されているドキュメントへのリンクも含める必要があります。
-リポジトリ内の特定のファイルをそのサイトのどこにマップするかを判断するには、リポジトリ パスの `/docs` を `http://docs.microsoft.com/dotnet/articles` に置き換えます。
+リポジトリ内の特定のファイルをそのサイトのどこにマップするかを判断するには、リポジトリ パスの `/docs` を `https://docs.microsoft.com/dotnet` に置き換えます。
 
 ご自分のトピックには、サンプルへのリンクも含まれます。 GitHub 上のサンプルのフォルダーに直接リンクしてください。
 
@@ -138,7 +140,7 @@ C# の対話型エクスペリエンスでは、サンプルの操作方法が�
 
 ## <a name="contributor-license-agreement"></a>貢献者使用許諾契約書
 
-ご自分の PR がマージされる前に、[.NET Foundation 貢献者使用許諾契約書 (CLA)](https://cla.dotnetfoundation.org) に署名する必要があります。 これは、.NET Foundation 内のプロジェクトに対して 1 回だけ実行する必要があります。 [貢献者使用許諾契約書 (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) について詳しくは、Wikipedia を参照してください。
+ご自分の PR がマージされる前に、[.NET Foundation 貢献者使用許諾契約書 (CLA)](https://cla.dotnetfoundation.org) に署名する必要があります。 これは、.NET Foundation 内のプロジェクトに対して 1 回だけ実行する必要があります。 [貢献者使用許諾契約書 (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) について詳しくは、Wikipedia を参照してください。
 
 契約書: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

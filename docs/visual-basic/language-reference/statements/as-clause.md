@@ -37,9 +37,9 @@ ms.locfileid: "33604264"
   
  [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [しています.Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [各しています.Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33604264"
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try しています.キャッチしてください.Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : 新しい変数を作成する](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  

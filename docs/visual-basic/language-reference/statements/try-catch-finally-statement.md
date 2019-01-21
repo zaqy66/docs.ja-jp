@@ -23,7 +23,7 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 ms.custom: seodec18
 ms.openlocfilehash: e7abf094331afc4ba972c0ff4696244900e6eaf1
 ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/11/2018
 ms.locfileid: "53240750"
@@ -62,7 +62,7 @@ End Try
 |`finallyStatements`|任意。 他のすべてのエラー処理が行われた後に実行されるステートメントです。|  
 |`End Try`|終了、`Try...Catch...Finally`構造体。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  コードの特定のセクションで、特定の例外が発生することを期待する場合のコードを配置、`Try`をブロックし、使用、`Catch`コントロールを保持し、これが発生した場合、例外の処理をブロックします。  
   
  A`Try…Catch`ステートメントには、`Try`ブロックでは、1 つまたは複数続く`Catch`句で、さまざまな例外のハンドラーを指定します。 例外をスローするときに、`Try`ブロック、Visual Basic を検索、`Catch`例外を処理するステートメント。 一致する場合`Catch`ステートメントが見つからない場合は、Visual Basic は、コール スタックまで、現在のメソッドを呼び出したメソッドを調べます。 ない場合は`Catch`ブロックが見つかると、Visual Basic のユーザーにハンドルされない例外メッセージを表示およびプログラムの実行を停止します。  
@@ -105,7 +105,7 @@ End Try
   
  プロパティ、`Exception`原因と、例外の場所を識別するためにヘルプをオブジェクトします。 たとえば、<xref:System.Exception.StackTrace%2A>プロパティを検索、コードでエラーが発生すれば、例外の原因と呼ばれるメソッドの一覧します。 <xref:System.Exception.Message%2A> 例外を説明するメッセージが返されます。 <xref:System.Exception.HelpLink%2A> 関連付けられているヘルプ ファイルへのリンクを返します。 <xref:System.Exception.InnerException%2A> 返します、`Exception`または現在の例外の原因となったオブジェクトを返します`Nothing`元が存在しない場合`Exception`します。  
   
-## <a name="considerations-when-using-a-trycatch-statement"></a>使用に関する注意点をお試しください.Catch ステートメント  
+## <a name="considerations-when-using-a-trycatch-statement"></a>Try…Catchステートメントを使用に関する注意点  
  使用して、`Try…Catch`ステートメントがプログラムの異常なまたは予期しないイベントの発生を知らせるだけです。 この理由から、次のとおりです。  
   
 -   実行時に例外をキャッチすると、追加のオーバーヘッドを作成し、例外を回避するために事前に確認するよりも低下する可能性があります。  
@@ -129,10 +129,10 @@ End Try
   
  `Await`内で式が使用できない、`Catch`ブロックまたは`Finally`ブロックします。  
   
-## <a name="iterators"></a>Iterators  
- 反復子、関数または`Get`アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つのコレクションの各要素を返します。 使用して反復子関数を呼び出すことを[ごとにしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
+## <a name="iterators"></a>反復子  
+ 反復子、関数または`Get`アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つのコレクションの各要素を返します。 使用して反復子関数を呼び出すことを[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
   
- A`Yield`内でステートメントを使用できます、`Try`ブロックします。 A`Try`が含まれるブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。 "お試しくださいブロックで Visual Basic"を参照してください[反復子](../../programming-guide/concepts/iterators.md)例についてはします。  
+ A`Yield`内でステートメントを使用できます、`Try`ブロックします。 `Try`が含まれるブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。 例については、`Try`ブロックの[反復子](../../programming-guide/concepts/iterators.md)を参照してください。  
   
  A`Yield`内でステートメントを使用できない、`Catch`ブロックまたは`Finally`ブロックします。  
   

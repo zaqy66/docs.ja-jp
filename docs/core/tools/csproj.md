@@ -2,14 +2,13 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 author: blackdwarf
-ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143702"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222065"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -63,7 +62,7 @@ ms.locfileid: "53143702"
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 </PropertyGroup>
 ```
-このプロパティを `false` に設定すると、暗黙的な包含がオーバーライドされ、動作は前の SDK に戻り、プロジェクトに既定の glob を指定する必要が生じます。 
+このプロパティを `false` に設定すると、暗黙的に含める動作が無効になり、以前の SDK の動作に戻り、プロジェクトに既定の glob が指定されます。
 
 この変更で、他の include の主なしくみは変わりません。 ただし、たとえばアプリで発行する一部のファイルを指定する場合は、*csproj* で既知のしくみ (たとえば `<Content>` 要素) を使用することができます。
 
@@ -89,7 +88,7 @@ ms.locfileid: "53143702"
 ## <a name="additions"></a>追加
 
 ### <a name="sdk-attribute"></a>SDK 属性 
-*.csproj* ファイルの `<Project>` 要素には、`Sdk` という新しい属性があります。 `Sdk` は、プロジェクトで使用される SDK を指定します。 [レイヤー化のドキュメント](cli-msbuild-architecture.md)で説明されているように、SDK は、.NET Core コードをビルドできる MSBuild [タスク](/visualstudio/msbuild/msbuild-tasks)および[ターゲット](/visualstudio/msbuild/msbuild-targets)のセットです。 .NET Core ツールには主に 3 つの SDK が付属しています。
+*.csproj* ファイルのルート `<Project>` 要素には、`Sdk` という新しい属性があります。 `Sdk` は、プロジェクトで使用される SDK を指定します。 [レイヤー化のドキュメント](cli-msbuild-architecture.md)で説明されているように、SDK は、.NET Core コードをビルドできる MSBuild [タスク](/visualstudio/msbuild/msbuild-tasks)および[ターゲット](/visualstudio/msbuild/msbuild-targets)のセットです。 .NET Core ツールには主に 3 つの SDK が付属しています。
 
 1. ID が `Microsoft.NET.Sdk` の .NET Core SDK
 2. ID が `Microsoft.NET.Sdk.Web` の .NET Core Web SDK
@@ -98,7 +97,7 @@ ms.locfileid: "53143702"
 .NET Core ツールを使用し、コードをビルドするには、`Sdk` 属性を `<Project>` 要素の ID のいずれかに設定する必要があります。 
 
 ### <a name="packagereference"></a>PackageReference
-プロジェクトの NuGet の依存関係を指定する項目。 `Include` 属性は、パッケージ ID を指定します。 
+プロジェクトの NuGet の依存関係を指定する `<PackageReference>` 項目要素。 `Include` 属性は、パッケージ ID を指定します。 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
@@ -142,21 +141,23 @@ ms.locfileid: "53143702"
 `Version` は、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/create-packages/dependency-versions#version-ranges)スキームの規則に従います。 既定の動作では、バージョンを正確に一致させます。 たとえば、`Version="1.2.3"` を指定すると、パッケージのバージョンが正確に 1.2.3 であることを表す NuGet 表記の `[1.2.3]` と同じになります。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
-`<RuntimeIdentifiers>` 要素では、プロジェクトの[ランタイム識別子 (RID)](../rid-catalog.md) のセミコロン区切りリストを指定できます。 RID により、自己完結型の展開を発行できます。 
+`<RuntimeIdentifiers>` プロパティ要素では、プロジェクトの[ランタイム識別子 (RID)](../rid-catalog.md) のセミコロン区切りリストを指定できます。 RID により、自己完結型の展開を発行できます。 
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
-`<RuntimeIdentifier>` 要素では、プロジェクトの[ランタイム識別子 (RID)](../rid-catalog.md) を 1 つだけ指定できます。 RID により、自己完結型の展開を発行できます。 
+`<RuntimeIdentifier>` プロパティ要素では、プロジェクトの[ランタイム識別子 (RID)](../rid-catalog.md) を 1 つだけ指定できます。 RID により、自己完結型の展開を発行できます。
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
+複数のランタイムに対して発行する必要がある場合、代わりに `<RuntimeIdentifiers>` (複数) を使用します。 `<RuntimeIdentifier>` では、必要なランタイムが 1 つだけのとき、ビルドが速くなります。
+
 ### <a name="packagetargetfallback"></a>PackageTargetFallback 
-`<PackageTargetFallback>` 要素では、パッケージの復元時に使用する、互換性のある一連のターゲットを指定できます。 dotnet [TxM (Target x Moniker)](/nuget/schema/target-frameworks) を使用するパッケージに、dotnet TxM を宣言しないパッケージで動作することを許可するように設計されています。 プロジェクトで dotnet TxM を使用せず、依存するすべてのパッケージに dotnet TxM を与える必要がある場合、非 dotnet プラットフォームを dotnet 対応にするためにプロジェクトに `<PackageTargetFallback>` を追加します。 
+`<PackageTargetFallback>` プロパティ要素では、パッケージの復元時に使用する、互換性のある一連のターゲットを指定できます。 dotnet [TxM (Target x Moniker)](/nuget/schema/target-frameworks) を使用するパッケージに、dotnet TxM を宣言しないパッケージで動作することを許可するように設計されています。 プロジェクトで dotnet TxM を使用せず、依存するすべてのパッケージに dotnet TxM を与える必要がある場合、非 dotnet プラットフォームを dotnet 対応にするためにプロジェクトに `<PackageTargetFallback>` を追加します。 
 
 次の例では、プロジェクトのすべてのターゲットにフォールバックを提供しています。 
 
@@ -175,7 +176,7 @@ ms.locfileid: "53143702"
 ```
 
 ## <a name="nuget-metadata-properties"></a>NuGet メタデータ プロパティ
-MSbuild への移行に伴い、*project.json* ファイルから *csproj* ファイルに NuGet パッケージをパックするときに使用される入力メタデータを移動しました。 入力は MSBuild プロパティなので、`<PropertyGroup>` グループ内で行う必要があります。 次に示すのは、`dotnet pack` コマンドまたは SDK の一部である `Pack` MSBuild ターゲットを使用するときに、パッキング プロセスへの入力として使用されるプロパティの一覧です。 
+MSBuild への移行に伴い、*project.json* ファイルから *csproj* ファイルに NuGet パッケージをパックするときに使用される入力メタデータを移動しました。 入力は MSBuild プロパティなので、`<PropertyGroup>` グループ内で行う必要があります。 次に示すのは、`dotnet pack` コマンドまたは SDK の一部である `Pack` MSBuild ターゲットを使用するときに、パッキング プロセスへの入力として使用されるプロパティの一覧です。 
 
 ### <a name="ispackable"></a>IsPackable
 プロジェクトをパックできるかどうかを示すブール値。 既定値は `true` です。 

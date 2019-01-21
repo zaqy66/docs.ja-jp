@@ -2,12 +2,12 @@
 title: '&lt;serviceCertificate&gt; 要素の &lt;authentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 811d54b49d8cd4fddbf196dbb524c5d303805c4f
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 556310846f8ac307ff9c92c06784eae16937c92c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316455"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147955"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;serviceCertificate&gt; 要素の &lt;authentication&gt;
 SSL/TLS ネゴシエーションを使用して取得されたサービス証明書を認証するためにクライアント プロキシが使用する設定を指定します。  
@@ -23,9 +23,10 @@ endpointBehaviors セクション
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<authentication customCertificateValidatorType="String" certificateValidationMode="None/PeerTrust/ChainTrust/PeerOrChainTrust/Custom"  
-revocationMode="NoCheck/Online/Offline"   
-trustedStoreLocation="LocalMachine/CurrentUser" />  
+<authentication customCertificateValidatorType="String"
+                certificateValidationMode="None/PeerTrust/ChainTrust/PeerOrChainTrust/Custom"
+                revocationMode="NoCheck/Online/Offline"
+                trustedStoreLocation="LocalMachine/CurrentUser" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -50,19 +51,19 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙型|None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom のいずれかの値にします。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
+|列挙|次のいずれかの値です。None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom です。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙型|NoCheck、Online、Offline のいずれかの値にします。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
+|列挙|次のいずれかの値です。NoCheck、Online、Offline にします。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙型|LocalMachine または CurrentUser のいずれかの値。 既定値は CurrentUser です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 LocalMachine の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 CurrentUser の下にあります。|  
+|列挙|次のいずれかの値です。LocalMachine または CurrentUser の場合は。 既定値は CurrentUser です。 クライアント アプリケーションがシステム アカウントで実行されている場合、証明書は通常 LocalMachine の下にあります。 クライアント アプリケーションがユーザー アカウントで実行されている場合、証明書は通常 CurrentUser の下にあります。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -74,7 +75,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|クライアントに対してサービスを認証する際に使用される証明書を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- この構成要素の `certificateValidationMode` 属性は、証明書の認証に使用される信頼レベルを指定します。 既定のレベルは `ChainTrust` に設定され、チェーンの最上位の信頼された証明機関で終了する証明書の階層構造で各証明書を検索するよう指定します。 これは最もセキュリティで保護されているモードです。 また、値を `PeerOrChainTrust` に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れるよう指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに `ChainTrust` 値を使用します。 値を `Custom` または `None` に設定することもできます。 `Custom` 値を使用するには、`customCertificateValidator` 属性を証明書の検証に使用するアセンブリと型に設定することも必要です。 独自のカスタム検証を作成するには、抽象 X509CertificateValidator クラスを継承する必要があります。 詳細については、次を参照してください。[方法: カスタム証明書の検証を使用するサービスを作成する](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
+ この構成要素の `certificateValidationMode` 属性は、証明書の認証に使用される信頼レベルを指定します。 既定のレベルは `ChainTrust` に設定され、チェーンの最上位の信頼された証明機関で終了する証明書の階層構造で各証明書を検索するよう指定します。 これは最もセキュリティで保護されているモードです。 また、値を `PeerOrChainTrust` に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れるよう指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに `ChainTrust` 値を使用します。 値を `Custom` または `None` に設定することもできます。 `Custom` 値を使用するには、`customCertificateValidator` 属性を証明書の検証に使用するアセンブリと型に設定することも必要です。 独自のカスタム検証を作成するには、抽象 X509CertificateValidator クラスを継承する必要があります。 詳細については、「[方法 :カスタム証明書の検証を使用するサービスを作成する](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
   
  `revocationMode` 属性は、証明書が失効していないかどうかをチェックする方法を指定します。 既定値は `online` です。この場合、証明書が失効していないかどうかを自動的にチェックします。 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
   
@@ -82,19 +83,21 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  次の例は、2 つのタスクを実行します。 クライアントとドメイン名をエンドポイントと通信するときに使用するのに必要なサービスの証明書をまずを指定します。 `www.contoso.com` HTTP プロトコルを経由します。 次に、認証中に使用される失効モードとストアの場所を指定します。  
   
 ```xml  
-<serviceCertificate>  
-  <defaultCertificate findValue="www.contoso.com"   
-                      storeLocation="LocalMachine"  
-                      storeName="TrustedPeople"   
-                      x509FindType="FindByIssuerDistinguishedName" />  
-  <scopedCertificates>  
-     <add targetUri="http://www.contoso.com"   
-          findValue="www.contoso.com" storeLocation="LocalMachine"  
-                  storeName="Root" x509FindType="FindByIssuerName" />  
-  </scopedCertificates>  
-  <authentication revocationMode="Online"   
-   trustedStoreLocation="LocalMachine" />  
-</serviceCertificate>  
+<serviceCertificate>
+  <defaultCertificate findValue="www.contoso.com"
+                      storeLocation="LocalMachine"
+                      storeName="TrustedPeople"
+                      x509FindType="FindByIssuerDistinguishedName" />
+  <scopedCertificates>
+     <add targetUri="http://www.contoso.com"
+          findValue="www.contoso.com"
+          storeLocation="LocalMachine"
+          storeName="Root"
+          x509FindType="FindByIssuerName" />
+  </scopedCertificates>
+  <authentication revocationMode="Online"
+                  trustedStoreLocation="LocalMachine" />
+</serviceCertificate>
 ```  
   
 ## <a name="see-also"></a>関連項目  
@@ -104,7 +107,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>  
  [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [方法 : カスタム証明書検証を使用するサービスを作成する](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [方法: カスタム証明書の検証を使用するサービスを作成します。](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

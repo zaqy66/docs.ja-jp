@@ -1,15 +1,15 @@
 ---
-title: C# および Visual Studio Code の使用を開始する - C# ガイド
+title: C# および Visual Studio Code の使用を開始する
 description: Visual Studio Code を使用した、C# で初めての .NET Core アプリケーションを作成してデバッグする方法について説明します。
 author: kendrahavens
-ms.author: mairaw
 ms.date: 12/05/2018
-ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129598"
+ms.locfileid: "53168976"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -31,20 +31,20 @@ ms.locfileid: "53129598"
     * 左側のメニューで [エクスプローラー] アイコンをクリックし、**[フォルダーを開く]** をクリックします。
     * メイン メニューから **[ファイル]**、**[フォルダーを開く]** の順に選択し、C# プロジェクトを保存するフォルダーを開き、**[フォルダーの選択]** をクリックします。 ここで、*Hello World* という名前のプロジェクトのフォルダーを作成します。
 
-      ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
+      ![Visual Studio Code の [フォルダーを開く]](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. C# プロジェクトを初期化する
     * Visual Studio Code から統合ターミナルを開きます。メイン メニューで **[表示]**、**[統合端末]** の順に選択してください。
     * ターミナル ウィンドウで、`dotnet new console` と入力します。
     * このコマンドで、フォルダーに `HelloWorld.csproj` という名前の C# プロジェクト ファイルとともに、単純な "Hello World" プログラムが既に書き込まれた `Program.cs` ファイルが作成されます。
 
-      ![dotnet new コマンド](media/with-visual-studio-code/dotnetnew.png)
+      ![dotnet new コマンド](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. ビルド資産を解決する
 
     * **.NET Core 1.x** の場合、「`dotnet restore`」と入力します。 `dotnet restore` を実行すると、プロジェクトのビルドに必要な .NET Core パッケージにアクセスします。
 
-      ![dotnet restore コマンド](media/with-visual-studio-code/dotnetrestore.png)
+      ![dotnet restore コマンド](media/with-visual-studio-code/dotnet-restore-command.png)
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "53129598"
 
     * 「`dotnet run`」と入力します。
 
-      ![dotnet run コマンド](media/with-visual-studio-code/dotnetrun.png)
+      ![dotnet run コマンド](media/with-visual-studio-code/dotnet-run-command.png)
 
 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)、[macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS)、または [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) での詳細設定については、簡単なビデオ チュートリアルを見ることができます。
 
@@ -60,7 +60,7 @@ ms.locfileid: "53129598"
 
 1. *Program.cs* をクリックして開きます。 Visual Studio Code で初めて C# ファイルを開くと、[OmniSharp](https://www.omnisharp.net/) がエディターに読み込まれます。
 
-    ![Program.cs ファイルを開く](media/with-visual-studio-code/opencs.png)
+    ![Program.cs ファイルを開く](media/with-visual-studio-code/open-program-cs.png)
 
 2. Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められます。 **[はい]** を選択します。
 
@@ -68,22 +68,22 @@ ms.locfileid: "53129598"
 
 3. デバッグ ビューを開くには、左側のメニューにある [デバッグ] アイコンをクリックします。
 
-    ![[デバッグ] タブを開く](media/with-visual-studio-code/opendebug.png)
+    ![Visual Studio Code で [デバッグ] タブを開く](media/with-visual-studio-code/open-debug-tab.png)
 
 4. ウィンドウの上部で緑色の矢印を探します。 その横にあるドロップダウン リストで `.NET Core Launch (console)` が選択されていることを確認します。
 
-    ![.NET Core を選択する](media/with-visual-studio-code/selectcore.png)
+    ![Visual Studio Code で .NET Core を選択する](media/with-visual-studio-code/select-net-core.png)
 
 5. 9 行目の横にある**エディター余白** (エディター内の行番号の左側の領域) をクリックして、プロジェクトにブレークポイントを追加するか、またはエディター内でテキスト カーソルを 9 行目に移動して <kbd>F9</kbd> キーを押します。
 
-    ![ブレークポイントの設定](media/with-visual-studio-code/setbreakpoint.png)
+    ![ブレークポイントの設定](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. デバッグを開始するには、<kbd>F5 キー</kbd>または緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
     * デバッグ中は左上のペインにローカル変数が表示され、デバッグ コンソールを使用できます。
 
 7. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
 
-    ![実行およびデバッグ](media/with-visual-studio-code/rundebug.png)
+    ![Visual Studio Code の実行とデバッグ](media/with-visual-studio-code/run-debug-vs-code.png)
 
 > [!TIP]
 > Visual Studio Code で OmniSharp を使用した .NET Core のデバッグの詳細とトラブルシューティングのヒントについては、「[Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)」 (.NET Core デバッガーの設定に関する指示) を参照してください。
@@ -136,7 +136,7 @@ Hello World! Happy coding!
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code 内で C# をビルドおよびデバッグするのに必要な資産が欠落しています。 デバッガーには、"構成がありません" と表示されます。
 
-Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。 C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。 資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き (**[表示] > [コマンド パレット]**)、「>.NET: Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている .vscode、launch.json、tasks.json の各構成ファイルが作成されます。
+Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。 C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。 資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き (**[表示] > [コマンド パレット]**)、「>.NET:Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている .vscode、launch.json、tasks.json の各構成ファイルが作成されます。
 
 ## <a name="see-also"></a>関連項目
 

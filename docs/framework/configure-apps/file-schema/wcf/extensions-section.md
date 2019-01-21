@@ -2,12 +2,12 @@
 title: '&lt;extensions&gt; セクション'
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
-ms.openlocfilehash: 09cabfc6c03602c3b6de343a29b5b25755f2cf0f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92dd3c528290344d9537c51fccf7c13c74c1984a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750139"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145316"
 ---
 # <a name="ltextensionsgt-section"></a>&lt;extensions&gt; セクション
 この構成セクションには、拡張のコレクションが含まれています。この拡張のコレクションによってユーザーは、ユーザー定義のバインディング、動作、およびその他の拡張機能を作成できます。  
@@ -17,18 +17,18 @@ ms.locfileid: "32750139"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.serviceModel>  
-  <extensions>  
-    <bindingExtensions>  
-    </bindingExtensions>  
-    <behaviorExtensions>  
-    </behaviorExtensions>  
-    <bindingElementExtensions>  
+<system.serviceModel>
+  <extensions>
+    <bindingExtensions>
+    </bindingExtensions>
+    <behaviorExtensions>
+    </behaviorExtensions>
+    <bindingElementExtensions>
     </bindingElementExtensions>
     <endpointExtensions>
     </endpointExtensions>
-  </extensions>  
-</system.serviceModel>  
+  </extensions>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  

@@ -2,15 +2,15 @@
 title: 順番を無視したメッセージの処理
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-ms.openlocfilehash: a7839b60dbad7919a644c196a1c63f6bc46fb5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3beca8d73788d177d07868d7169d8aea3ecd8e80
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492946"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029946"
 ---
 # <a name="out-of-order-message-processing"></a>順番を無視したメッセージの処理
-ワークフロー サービスは、特定の順序で送信されるメッセージに依存する場合があります。 ワークフロー サービスには 1 つ以上の <xref:System.ServiceModel.Activities.Receive> アクティビティが含まれ、それぞれの <xref:System.ServiceModel.Activities.Receive> アクティビティは特定のメッセージに対応しています。 特定のトランスポート配信保証がないと、クライアントから送信されるメッセージに遅延が生じ、それによって、ワークフロー サービスが予期しない順序でメッセージが配信されることがあります。 特定の順序でメッセージが送信されることを必要としないワークフローは、通常、Parallel アクティビティを使用して実装されます。 アプリケーション プロトコルがより複雑な場合は、ワークフローがすぐに複雑になります。  機能では、Windows Communication Foundation (WCF) の処理順序不定なメッセージでは、入れ子になった並列アクティビティの複雑さの all を指定せずにこのようなワークフローを作成することができます。 順序不定なメッセージの処理がサポートするチャネルでのみサポートされて<xref:System.ServiceModel.Channels.ReceiveContext>WCF MSMQ バインディングなどです。  
+ワークフロー サービスは、特定の順序で送信されるメッセージに依存する場合があります。 ワークフロー サービスには 1 つ以上の <xref:System.ServiceModel.Activities.Receive> アクティビティが含まれ、それぞれの <xref:System.ServiceModel.Activities.Receive> アクティビティは特定のメッセージに対応しています。 特定のトランスポート配信保証がないと、クライアントから送信されるメッセージに遅延が生じ、それによって、ワークフロー サービスが予期しない順序でメッセージが配信されることがあります。 特定の順序でメッセージが送信されることを必要としないワークフローは、通常、Parallel アクティビティを使用して実装されます。 アプリケーション プロトコルがより複雑な場合は、ワークフローがすぐに複雑になります。  Windows Communication Foundation (WCF) 機能の処理順序のメッセージの入れ子になった並列アクティビティの複雑さがすべてないこのようなワークフローを作成することができます。 順序のメッセージの処理のみをサポートするチャネルでサポートされて<xref:System.ServiceModel.Channels.ReceiveContext>WCF MSMQ バインディングなど。  
   
 ## <a name="enabling-out-of-order-message-processing"></a>順番を無視したメッセージ処理の有効化  
  順番を無視したメッセージ処理は、ワークフロー サービスで <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> プロパティを `true` に設定することで有効化できます。 次の例は、コードで <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> プロパティを設定する方法を示しています。  
@@ -30,7 +30,7 @@ WorkflowService service = new WorkflowService
 ```xaml  
 // Xaml: Opt-in to Buffered Receive processing...  
 <WorkflowService AllowBufferedReceive="True">  
-   <!—the actual children activities -->  
+   <!--the actual children activities -->  
 </Sequence>  
 ```  
   

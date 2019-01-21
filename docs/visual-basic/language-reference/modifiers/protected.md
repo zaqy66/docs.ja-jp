@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234758"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 1 つまたは複数のプログラミング要素が宣言されていることを指定するメンバーのアクセス修飾子は、独自のクラス内または派生クラスからからのみアクセスできます。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/17/2018
 > [!NOTE]
 > `Protected`アクセス修飾子は、その他の 2 つの修飾子と組み合わせることができます。
 > - [Protected Friend](protected-friend.md)修飾子は、クラス メンバーをそのクラスの派生クラスからそのクラスが定義されている同じアセンブリ内からアクセスできません。 
-> - [プライベート保護](private-protected.md)修飾子により、クラス メンバー アクセス、含んでいるアセンブリ内でのみ、派生型です。
+> - [Private Protected](private-protected.md)修飾子により、クラス メンバー アクセス、含んでいるアセンブリ内でのみ、派生型です。
   
 ## <a name="rules"></a>ルール  
   

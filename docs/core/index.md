@@ -4,12 +4,12 @@ description: .NET Core は、Windows、Linux、および Mac アプリを作成�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ffa58600bea1f5514b25c18aa00e6d36679f2fd9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170278"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030283"
 ---
 # <a name="net-core-guide"></a>.NET Core のガイド
 
@@ -19,15 +19,15 @@ ms.locfileid: "53170278"
 
 「[.NET Core チュートリアル](tutorials/index.md)」では、単純な .NET Core アプリケーションを作成する方法を学習できます。 最初のアプリを、ほんの数分で起動および実行できます。 ブラウザーで .NET Core を使用してみる場合は、[C# における数値](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)に関するオンライン チュートリアルをご覧ください。
 
-## <a name="download-net-core-21"></a>NET Core 2.1 のダウンロード
+## <a name="download-net-core-22"></a>.NET Core 2.2 のダウンロード
 
-[.NET Core  2.1 SDK](https://www.microsoft.com/net/download) をダウンロードして、Windows、macOS、または Linux マシンで .NET Core をお試しください。 Docker コンテナーを使用する方がよければ、[microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) にアクセスしてください。
+[.NET Core  2.2 SDK](https://www.microsoft.com/net/download) をダウンロードして、Windows、macOS、または Linux マシンで .NET Core をお試しください。 Docker コンテナーを使用する方がよければ、[microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) にアクセスしてください。
 
 別の .NET Core バージョンを探している場合も、すべての .NET Core バージョンを [.NET Core のダウンロード](https://www.microsoft.com/net/download/archives)で入手できます。
 
-## <a name="net-core-21"></a>.NET Core 2.1
+## <a name="net-core-22"></a>.NET Core 2.2
 
-最新バージョンは [.NET Core 2.1](whats-new/dotnet-core-2-1.md) です。 新機能には、グローバル ツール、高パフォーマンス API (<xref:System.Span%601?displayProperty=nameWithType> など)、階層型 JIT コンパイル、[ビルド](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/)と[ランタイムのパフォーマンスの向上](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/)、Alpine と ARM32 のサポートが含まれます。
+最新バージョンは [.NET Core 2.2](whats-new/dotnet-core-2-2.md) です。 新機能には、フレームワーク依存の配置、スタートアップ フック、Azure SQL での AAD 認証、Windows ARM32 のサポートが含まれます。
 
 ## <a name="create-your-first-application"></a>最初のアプリケーションの作成
 

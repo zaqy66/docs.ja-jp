@@ -1,29 +1,27 @@
 ---
-title: メンバー (F#)
+title: メンバー
 description: オブジェクトのメンバーについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6dcdb1d7fa061fb838d4aa8f7a2912fd168c3781
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c32bd76ab60673563f0cc45ce0fb569b2ea262b9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33562208"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613142"
 ---
 # <a name="members"></a>メンバー
 
 このセクションでは、F# オブジェクト型のメンバーについて説明します。
 
-
 ## <a name="remarks"></a>Remarks
+
 *メンバー*は、型定義の一部の機能であり、`member`キーワードを使用して宣言されます。 レコード、クラス、判別共用体、インターフェイス、構造体などの F# オブジェクト型がメンバーをサポートします。 詳細については、「[レコード](../records.md)」、「[クラス](../classes.md)」、「[判別共用体](../discriminated-Unions.md)」、「[インターフェイス](../interfaces.md)」、および「[構造体](../structures.md)」を参照してください。
 
 メンバーは通常、型のパブリック インターフェイスを構成するので、特に指定しない限りパブリックになります。 プライベートまたは内部としてメンバーを宣言することもできます。 詳細については、「[Access Control](../access-Control.md)」(アクセス制御) を参照してください。 型のシグネチャを使用して、型の特定のメンバーを公開するか公開しないこともできます。 詳細については、「[シグネチャ](../signatures.md)」を参照してください。
 
 クラスでのみ使用されるプライベート フィールドと `do` バインドは、パブリック インターフェイスの一部ではなく、`member` キーワードを使用して宣言されないので、真のメンバーではありませんが、このセクションではそれらについても説明します。
 
-
 ## <a name="related-topics"></a>関連トピック
-
 
 |トピック|説明|
 |-----|-----------|
@@ -35,4 +33,4 @@ ms.locfileid: "33562208"
 |[コンストラクター](constructors.md)|型のオブジェクトを初期化する特別な関数について説明します。|
 |[演算子のオーバーロード](../operator-overloading.md)|型のカスタマイズした演算子の定義について説明します。|
 |[イベント](events.md)|F# のイベントおよびイベント処理のサポートの定義について説明します。|
-|[明示的なフィールド: `val` キーワード](explicit-fields-the-val-keyword.md)|型の初期化されていないフィールドの定義について説明します。|
+|[明示的なフィールド: `val`キーワード](explicit-fields-the-val-keyword.md)|型の初期化されていないフィールドの定義について説明します。|

@@ -1,5 +1,5 @@
 ---
-title: F# を使用して Azure File storage の概要します。
+title: F# を使用した Azure File Storage の概要
 description: Azure File storage を使用してクラウドにファイル データを格納し、Azure の仮想マシン (VM) からクラウド ファイル共有をマウントまたはオンプレミス アプリケーションから Windows を実行しています。
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569344"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>F# を使用して Azure File storage の概要します。 #
+# <a name="get-started-with-azure-file-storage-using-f"></a>F# を使用した Azure File Storage の概要 #
 
 Azure File storage は、標準を使用して、クラウド内のファイル共有を提供するサービスで[サーバー メッセージ ブロック (SMB) プロトコル](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)します。 SMB 2.1 と SMB 3.0 の両方がサポートされています。 Azure File storage を使用には、迅速かつコストのかかる書き換えを行わずに、azure ファイル共有に依存するレガシ アプリケーションを移行することができます。 または、オンプレミスのクライアントから Azure 仮想マシンまたはクラウド サービスで実行しているアプリケーションは、デスクトップ アプリケーションの一般的な SMB 共有をマウントすると同様に、クラウド内のファイル共有をマウントできます。 任意の数のアプリケーション コンポーネントのマウントし、同時に、File storage 共有にアクセスします。
 

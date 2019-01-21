@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edf3fd9a4561677813adbfb970a9d6be43d7c83d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749427"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612583"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt;要素
 タスクがハンドルされない例外によって実行中のプロセスを終了するかどうかを指定します。  
@@ -44,8 +44,8 @@ ms.locfileid: "32749427"
   
 |値|説明|  
 |-----------|-----------------|  
-|`false`|タスクがハンドルされない例外に対して実行中のプロセスを終了しません。 既定値です。|  
-|`true`|タスクがハンドルされない例外に対して実行中のプロセスを終了します。|  
+|`false`|タスクがハンドルされない例外の実行中のプロセスを終了しません。 既定値です。|  
+|`true`|タスクがハンドルされない例外の実行中のプロセスを終了します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -58,20 +58,20 @@ ms.locfileid: "32749427"
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
 |||  
   
-## <a name="remarks"></a>コメント  
- 例外に関連付けられている場合、<xref:System.Threading.Tasks.Task>が監視されていません、あるありません<xref:System.Threading.Tasks.Task.Wait%2A>操作、親はアタッチされていない、および<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>プロパティを読み取れませんでした、タスクの例外は監視できないと見なされます。  
+## <a name="remarks"></a>Remarks  
+ 例外に関連付けられている場合、<xref:System.Threading.Tasks.Task>が監視されていません、あるありません<xref:System.Threading.Tasks.Task.Wait%2A>操作、親がアタッチされていないと、<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>プロパティは、タスクの例外を監視できないと見なさが読み取られていません。  
   
- [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]により、場合は、既定、<xref:System.Threading.Tasks.Task>を持つ、観察されない例外はガベージ コレクション、ファイナライザーが例外をスローし、プロセスを終了します。 プロセスの終了は、ガベージ コレクションと終了処理のタイミングによって決まります。  
+ [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]により、既定では場合、<xref:System.Threading.Tasks.Task>を持つ、無視された例外は、ガベージ コレクション、ファイナライザーが例外をスローし、プロセスを終了します。 プロセスの終了は、ガベージ コレクションとファイナライズのタイミングによって決まります。  
   
- タスクに基づく非同期コードを記述する開発者向け容易にできるように、[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]観察されない例外のこの既定の動作を変更します。 無視された例外が、<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>イベントが発生する、既定では、プロセスを終了しません。 代わりに、イベント ハンドラーが例外を監視するかどうかに関係なく、イベントが発生した後に、例外が無視されます。  
+ タスク ベースの非同期コードを記述する開発者向けに容易にできるように、[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]監視されていない例外の場合は、この既定動作が変わります。 無視された例外の原因となる、<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>イベントを発生させるには、既定では、プロセスを終了しません。 代わりに、イベント ハンドラーが例外を監視するかどうかに関係なく、イベントが発生した後、例外は無視されます。  
   
- [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]、使用することができます、 [ \<ThrowUnobservedTaskExceptions > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)を有効にする、アプリケーション構成ファイルで、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]の例外をスローして動作します。  
+ [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]、使用することができます、 [ \<ThrowUnobservedTaskExceptions > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)を有効にするアプリケーション構成ファイルで、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]動作が例外をスローします。  
   
  次の方法のいずれかで例外の動作を指定することもできます。  
   
 -   環境変数を設定して`COMPlus_ThrowUnobservedTaskExceptions`(`set COMPlus_ThrowUnobservedTaskExceptions=1`)。  
   
--   レジストリ DWORD を設定して値 ThrowUnobservedTaskExceptions = 1、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft に\\です。NETFramework キー。  
+-   DWORD のレジストリ設定値 ThrowUnobservedTaskExceptions = 1 に、hkey_local_machine \software\microsoft\\します。NETFramework キー。  
   
 ## <a name="example"></a>例  
  次の例では、アプリケーション構成ファイルを使用して、タスクでの例外のスローを有効にする方法を示します。  
@@ -85,11 +85,11 @@ ms.locfileid: "32749427"
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、タスクから観察されない例外をスローする方法を示します。 リリースされたプログラムを正しく動作としては、コードを実行する必要があります。  
+ 次の例では、タスクから無視された例外をスローする方法を示します。 コードは、正常に動作するリリース プログラムとして実行する必要があります。  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

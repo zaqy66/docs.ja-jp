@@ -2,13 +2,13 @@
 title: 機械学習の用語集 - ML.NET
 description: ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語の用語集。
 ms.custom: seodec18
-ms.date: 12/06/2018
-ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/20/2018
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150577"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415378"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
@@ -18,13 +18,9 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [分類](#classification)における正確度は、正しく分類された項目の数をテスト セット内の項目の総数で割ったものです。 0 (正確度が最も低い) ～ 1 (正確度が最も高い) の値になります。 正確度は、モデルのパフォーマンスの評価メトリックの 1 つです。 [精度](#precision)、[再現率](#recall)、および [F 値](#f-score)と併せて考慮してください。
 
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>
-
 ## <a name="area-under-the-curve-auc"></a>曲線下面積 (AUC)
 
 [二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
-
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>
 
 ## <a name="binary-classification"></a>二項分類
 
@@ -38,8 +34,6 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [回帰](#regression)における評価メトリックであり、データがモデルにどの程度適合するかを示します。 0 ～ 1 の値になります。 値 0 は、データがランダムであるか、モデルに適合できないことを意味します。 値 1 は、モデルがデータと完全に一致していることを意味します。 多くの場合、これは r<sup>2</sup>、R<sup>2</sup>、または r の 2 乗と呼ばれます。
 
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>
-
 ## <a name="feature"></a>機能
 
 測定対象となる事象の測定可能なプロパティです。通常は数 (倍精度) 値になります。 複数の特徴は**特徴ベクトル**と呼ばれ、通常は `double[]` として格納されます。 特徴では、測定対象となる事象の重要な特性を定義します。 詳しくは、Wikipedia の[特徴](https://en.wikipedia.org/wiki/Feature_(machine_learning))の記事を参照してください。
@@ -51,8 +45,6 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 ## <a name="f-score"></a>F 値
 
 [分類](#classification)における評価メトリックであり、[精度](#precision)と[再現率](#recall)の調和平均を取ります。
-
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>
 
 ## <a name="hyperparameter"></a>ハイパーパラメーター
 
@@ -66,13 +58,9 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [分類](#classification)における評価メトリックであり、分類子の正確度を示します。 対数損失が小さいほど、分類子の正確度が高くなります。
 
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>
-
 ## <a name="mean-absolute-error-mae"></a>平均絶対誤差 (MAE)
 
 [回帰](#regression)における評価メトリックであり、すべてのモデルの誤差の平均です。モデルの誤差とは、予測された[ラベル](#label)値と正確なラベル値の間の距離です。
-
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>
 
 ## <a name="model"></a>モデル
 
@@ -98,13 +86,9 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [分類](#classification)におけるクラスの精度は、そのクラスに属していると正確に予測された項目の数を、クラスに属していると予測された項目の総数で割ったものです。
 
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>
-
 ## <a name="recall"></a>再現率
 
 [分類](#classification)におけるクラスの再現率は、そのクラスに属していると正確に予測された項目の数を、実際にクラスに属している項目の総数で割ったものです。
-
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>
 
 ## <a name="regression"></a>回帰
 
@@ -121,8 +105,6 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 ## <a name="root-of-mean-squared-error-rmse"></a>平均平方誤差の平方根 (RMSE)
 
 [回帰](#regression)における評価メトリックであり、誤差を 2 乗した値の平均値の平方根です。
-
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>
 
 ## <a name="supervised-machine-learning"></a>教師あり機械学習
 

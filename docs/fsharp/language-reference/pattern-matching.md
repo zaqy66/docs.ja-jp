@@ -1,13 +1,13 @@
 ---
-title: パターン マッチ (F#)
+title: パターン マッチ
 description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが F# の使用方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: HT
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991425"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613584"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -15,7 +15,7 @@ ms.locfileid: "45991425"
 
 ## <a name="remarks"></a>コメント
 
-パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` 束縛、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[一致式](match-expressions.md)、 [let 束縛](functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)、および[例外:、 。`try...with`式](exception-handling/the-try-with-expression.md)します。
+パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[match 式](match-expressions.md)、 [let バインディング](functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)、および[例外:`try...with`式](exception-handling/the-try-with-expression.md)します。
 
 たとえば、`match`式、*パターン*はパイプ記号。
 
@@ -25,7 +25,7 @@ match expression with
 ...
 ```
 
-各パターンは、なんらかの方法で入力を変換する際の規則として機能します。 `match` 式では、各パターンが順に調べられ、入力データにパターンとの互換性があるかどうかが確認されます。 一致が見つかった場合は、結果の式が実行されます。 一致が見つからなかった場合は、次のパターン規則がテストされます。 省略可能な場合に*条件*一部については[一致式](match-expressions.md)します。
+各パターンは、なんらかの方法で入力を変換する際の規則として機能します。 `match` 式では、各パターンが順に調べられ、入力データにパターンとの互換性があるかどうかが確認されます。 一致が見つかった場合は、結果の式が実行されます。 一致が見つからなかった場合は、次のパターン規則がテストされます。 省略可能な場合に*条件*一部については[match 式](match-expressions.md)します。
 
 サポートされているパターンを次の表に示します。 実行時に、表に示されている順序で次の各パターンに対して入力がテストされます。パターンは、コードに示されているとおりに先頭から末尾へ、各行のパターンの左から右へ、再帰的に適用されます。
 
@@ -103,7 +103,7 @@ match shape with
 
 アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブ パターンの詳細については、次を参照してください。[アクティブ パターン](active-patterns.md)します。
 
-識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理で一致するパターンについては、次を参照してください。[例外:、`try...with`式](exception-handling/the-try-with-expression.md)します。
+識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理で一致するパターンについては、次を参照してください。[例外。`try...with`式](exception-handling/the-try-with-expression.md)します。
 
 ## <a name="variable-patterns"></a>変数パターン
 
@@ -115,7 +115,7 @@ match shape with
 
 ## <a name="as-pattern"></a>as パターン
 
-`as` パターンは、`as` 句が追加されたパターンです。 `as` 句は、照合する値を `match` 式の実行式で使用できる名前に束縛します。または、このパターンが `let` 束縛で使用される場合は、名前が束縛としてローカル スコープに追加されます。
+`as` パターンは、`as` 句が追加されたパターンです。 `as` 句は、照合する値を `match` 式の実行式で使用できる名前にバインディングします。または、このパターンが `let` バインディングで使用される場合は、名前がバインディングとしてローカル スコープに追加されます。
 
 `as` パターンの使用例を次に示します。
 

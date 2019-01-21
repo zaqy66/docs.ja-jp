@@ -1,13 +1,13 @@
 ---
-title: 制約 (F#)
+title: 制約
 description: についてF#ジェネリック型または関数の型引数の要件を指定するジェネリック型パラメーターに適用される制約。
 ms.date: 05/16/2016
-ms.openlocfilehash: 2dfc99e0ef41a224fbd03f325582365b7caab78b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152495"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612232"
 ---
 # <a name="constraints"></a>制約
 

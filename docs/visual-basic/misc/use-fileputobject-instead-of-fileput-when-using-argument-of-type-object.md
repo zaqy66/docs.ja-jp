@@ -1,18 +1,18 @@
 ---
-title: 使用して&#39;FilePutObject&#39;の代わりに&#39;FilePut&#39;型の引数を使用するときに&#39;オブジェクト&#39;
+title: 型 'Object' の引数を使う場合は、'FilePut' ではなく 'FilePutObject' を使用してください。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
-ms.openlocfilehash: 529352d98c175981c20861205ce04c8a2ebcdca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df7d7c54992984bcb1684e41f60ae8361a3aed03
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641129"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774226"
 ---
-# <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>使用して&#39;FilePutObject&#39;の代わりに&#39;FilePut&#39;型の引数を使用するときに&#39;オブジェクト&#39;
-`FilePut`メソッドには、型の引数が含まれています。`Object`です。 あいまいさを避けるため、`FilePutObject` の代わりに `FilePut` を使用する必要があります。  
+# <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a>型 'Object' の引数を使う場合は、'FilePut' ではなく 'FilePutObject' を使用してください。
+`FilePut` メソッドには、型 `Object`の引数が含まれています。 あいまいさを避けるため、`FilePutObject` の代わりに `FilePut` を使用する必要があります。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

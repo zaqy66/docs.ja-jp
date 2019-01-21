@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 60f39d7bd294a737b5e3c6d5877f5d7e46269dc1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d901dc6c0a11db1beb08be821aec4dc1179832ff
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125510"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148371"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong データ型 (Visual Basic)
 
@@ -66,7 +66,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 -   **負の数。** `ULong`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`ULong`、Visual Basic の式を変換する`Decimal`最初。  
   
--   **CLS 準拠です。** `ULong`データ型がの一部、[共通言語仕様](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。  
+-   **CLS 準拠です。** `ULong`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。  
   
 -   **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合などの型を注意してください`ulong`他の環境で別のデータ幅 (32 ビット) を持つことができます。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`UInteger`の代わりに`ULong`管理対象の Visual Basic コードです。  
   
@@ -84,5 +84,5 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
  [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
  [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [操作方法：符号なしの型を Windows 関数を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

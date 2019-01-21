@@ -1,13 +1,13 @@
 ---
-title: unit 型 (F#)
+title: Unit 型
 description: 値はありませんが必要なまたは必要なときに言語の構文で値が必要な場所、場所を保持するために F# 'unit' の型を使用する多くの場合について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44204657"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611985"
 ---
 # <a name="unit-type"></a>Unit 型
 
@@ -32,7 +32,7 @@ ms.locfileid: "44204657"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet901.fs)]
 
-この警告は、関数型プログラミングの特性その他の .NET プログラミング言語では表示されません。 副作用は関数がない、純粋に機能するプログラムでは、最終的な戻り値は、関数呼び出しの結果だけが。 そのため、結果を無視すると、可能性のあるプログラミング エラーです。 F# は純粋関数型プログラミング言語はありませんは、可能な限り関数型プログラミングのスタイルに従うことをお勧めです。
+この警告は、関数型プログラミングの特性その他の .NET プログラミング言語では表示されません。 副作用は関数がない、純粋に機能するプログラムでは、最終的な戻り値は、関数呼び出しの結果だけが。 そのため、結果を無視すると、可能性のあるプログラミング エラーです。 F#が純粋に機能していないプログラミング言語、機能のプログラミング スタイル可能な場合に従うことをお勧めが。
 
 ## <a name="see-also"></a>関連項目
 

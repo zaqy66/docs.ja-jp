@@ -4,16 +4,16 @@ description: Azure Event Grid には、信頼性の高いイベントの配信�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143663"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145887"
 ---
 # <a name="event-grid"></a>イベント グリッド
 
-[Azure Event Grid](/azure-event-grid/overview)サーバーレス インフラストラクチャ イベント ベースのアプリケーションを提供します。 任意のソースからイベント グリッドに発行し、任意のプラットフォームからのメッセージを使用できます。 Event Grid では、組み込みのサポートをアプリケーションとの統合を効率化する Azure リソースからのイベントもあります。 たとえば、ファイルをアップロードするときに、アプリに通知する blob storage イベントにサブスクライブできます。 アプリケーションは、他のクラウドによって消費されるか、オンプレミスのアプリケーションをカスタム イベント グリッドのメッセージを公開できます。 Event Grid は、非常に大きなスケールを確実に処理するために構築されました。 発行およびサブスクライブを設定するために必要なインフラストラクチャのオーバーヘッドなしのメッセージのメリットを享受します。
+[Azure Event Grid](/azure/event-grid/overview)サーバーレス インフラストラクチャ イベント ベースのアプリケーションを提供します。 任意のソースからイベント グリッドに発行し、任意のプラットフォームからのメッセージを使用できます。 Event Grid では、組み込みのサポートをアプリケーションとの統合を効率化する Azure リソースからのイベントもあります。 たとえば、ファイルをアップロードするときに、アプリに通知する blob storage イベントにサブスクライブできます。 アプリケーションは、他のクラウドによって消費されるか、オンプレミスのアプリケーションをカスタム イベント グリッドのメッセージを公開できます。 Event Grid は、非常に大きなスケールを確実に処理するために構築されました。 発行およびサブスクライブを設定するために必要なインフラストラクチャのオーバーヘッドなしのメッセージのメリットを享受します。
 
 ![イベント グリッドのロゴ](./media/event-grid-logo.png)
 

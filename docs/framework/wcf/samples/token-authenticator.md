@@ -2,12 +2,12 @@
 title: トークン認証システム
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582646"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222897"
 ---
 # <a name="token-authenticator"></a>トークン認証システム
 このサンプルでは、カスタム トークンの認証システムを実装する方法を示します。 トークン認証システムの Windows Communication Foundation (WCF) では、自己矛盾があるし、id の認証トークンに関連付けられていることを確認するメッセージで使用されるトークンを検証するために使用されます。
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+4.  クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サービスの App.config ファイルを更新する必要があります。 `%SERVER_NAME%` 変数を、サービスを実行するコンピューターの完全修飾ホスト名に設定している場合は、Setup.bat を使用してこの証明書を作成できます。 setup.bat ファイルは、管理特権を使用して開いた Visual Studio コマンド プロンプトから実行する必要があります。  
+3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サービスの App.config ファイルを更新する必要があります。 `%SERVER_NAME%` 変数を、サービスを実行するコンピューターの完全修飾ホスト名に設定している場合は、Setup.bat を使用してこの証明書を作成できます。 Setup.bat ファイルは、Visual Studio 用開発者コマンド プロンプトから実行する必要があるメモは、管理者特権で開かれます。  
   
 4.  サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 サーバー証明書の発行元をクライアントが信頼できる場合を除き、この操作は不要です。  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。  
   
-10. クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+10. クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

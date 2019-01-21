@@ -2,12 +2,12 @@
 title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: 63766a6865497da18b07a5d6423e6d2b8e306684
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: adcc53119c9928a9d2ad9ff850e8355dec69bf40
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128974"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148215"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Windows Communication Foundation (WCF) サービスが構成および HTTPS 経由で通信できるエンドポイントを公開に使用できるバインディングを表します。 双方向コントラクトで使用すると、Web ソケットが使用されます。それ以外の場合は、HTTPS が使用されます。  
@@ -16,39 +16,39 @@ Windows Communication Foundation (WCF) サービスが構成および HTTPS 経�
 次の要素  
   
 ## <a name="syntax"></a>構文  
-
-```xml
-<netHttpsBinding>  
-  <binding allowCookies="Boolean"  
-           bypassProxyOnLocal="Boolean"  
-           closeTimeout="TimeSpan"   
-           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-           maxBufferPoolSize="Integer"  
-           maxBufferSize="Integer"  
-           maxReceivedMessageSize="Integer"  
-           messageEncoding="Binary/Text/Mtom"  
-           name="string"   
-           openTimeout="TimeSpan"   
-           proxyAddress="URI"  
-           receiveTimeout="TimeSpan"  
-           sendTimeout="TimeSpan"  
-           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
+  
+```xml  
+<netHttpsBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="Integer"
+           maxBufferSize="Integer"
+           maxReceivedMessageSize="Integer"
+           messageEncoding="Binary/Text/Mtom"
+           name="string"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
            useDefaultWebProxy="Boolean">
-    <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">  
-      <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"  
-                 proxyCredentialType="None/Basic/Digest/Ntlm/Windows"  
-                 realm="string" />  
-      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15" 
-               clientCredentialType="UserName/Certificate"/>  
-    </security>  
-    <readerQuotas maxArrayLength="Integer" 
-                  maxBytesPerRead="Integer" 
-                  maxDepth="Integer" 
-                  maxNameTableCharCount="Integer" 
-                  maxStringContentLength="Integer" />  
-  </binding>  
-</netHttpsBinding>  
+    <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">
+      <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"
+                 proxyCredentialType="None/Basic/Digest/Ntlm/Windows"
+                 realm="string" />
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               clientCredentialType="UserName/Certificate" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</netHttpsBinding>
 ```  
   
 ## <a name="type"></a>型  
@@ -70,7 +70,7 @@ Windows Communication Foundation (WCF) サービスが構成および HTTPS 経�
 |`maxReceivedMessageSize`|このバインディングで構成されるチャネルが受信可能なメッセージの最大メッセージ サイズ (ヘッダーを含む) をバイト単位で定義する正の整数。 受信側のメッセージが大きすぎると、送信側は SOAP エラーを受け取ります。 メッセージは受信者によって破棄され、トレース ログにこのイベントのエントリが作成されます。 既定値は 65,536 バイトです。|  
 |`messageEncoding`|SOAP メッセージのエンコードに使用されるエンコーダーを定義します。 以下の値が有効です。<br /><br /> テキスト:テキスト メッセージ エンコーダーを使用します。<br />Mtom:Message Transmission 組織 Mechanism 1.0 (MTOM) エンコーダーを使用します。<br /><br /> 既定値は Text です。 この属性は <xref:System.ServiceModel.WSMessageEncoding> 型です。|  
 |`name`|バインディングの構成名を格納する文字列です。 この値は、バインディングの ID として使用されるため、一意にする必要があります。 各バインドには、サービスのメタデータでこれをまとめて一意に識別する `name` および `namespace` 属性が含まれています。 また、この名前は、同じ種類のバインディング間で一意です。 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。|  
-|`namespace`|バインディングの XML 名前空間を指定します。 既定値は " http://tempuri.org/Bindings" です。 各バインドには、サービスのメタデータでこれをまとめて一意に識別する `name` および `namespace` 属性が含まれています。|  
+|`namespace`|バインディングの XML 名前空間を指定します。 既定値は "http://tempuri.org/Bindings" です。 各バインドには、サービスのメタデータでこれをまとめて一意に識別する `name` および `namespace` 属性が含まれています。|  
 |`openTimeout`|実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`proxyAddress`|HTTP プロキシのアドレスを格納する URI。 `useSystemWebProxy` が `true` に設定されている場合、この設定は `null` である必要があります。 既定値は、`null` です。|  
 |`receiveTimeout`|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:10:00 です。|  
@@ -102,74 +102,72 @@ Windows Communication Foundation (WCF) サービスが構成および HTTPS 経�
  第 1 世代と第 2 世代の Web サービスで HTTPS 通信と最大限の相互運用性を実現する、<xref:System.ServiceModel.NetHttpBinding> の使用例を次に示します。 バインディングは、クライアントとサービスの構成ファイルに指定されます。 バインディングの種類は、`binding` 要素の `<endpoint>` 属性を使用して指定します。 基本的なバインディングを構成してその設定の一部を変更する場合は、バインディング構成を定義する必要があります。 エンドポイントは、`bindingConfiguration` 要素の `<endpoint>` 属性を使用して、名前でバインド構成を参照する必要があります。次のサービスの構成コードを参照してください。  
   
 ```xml  
-<system.serviceModel>   
-  <services>  
-    <service type="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <endpoint address=""  
-                binding="netHttpsBinding"  
-                bindingConfiguration="Binding1"   
-                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-    </service>  
-  </services>  
-  <bindings>  
-    <netHttpsBinding>  
-      <binding name="Binding1"   
-               hostNameComparisonMode="StrongWildcard" 
-               receiveTimeout="00:10:00" 
-               sendTimeout="00:10:00" 
-               openTimeout="00:10:00" 
-               closeTimeout="00:10:00" 
-               maxReceivedMessageSize="65536" 
-               maxBufferSize="65536" 
-               maxBufferPoolSize="524288" 
-               transferMode="Buffered" 
-               messageEncoding="Binary" 
-               textEncoding="utf-8" 
-               bypassProxyOnLocal="false" 
-               useDefaultWebProxy="true">  
-        <security mode="None" />  
-      </binding>  
-    </netHttpsBinding>  
-  </bindings>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="netHttpsBinding"
+                bindingConfiguration="Binding1"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <netHttpsBinding>
+      <binding name="Binding1"
+               hostNameComparisonMode="StrongWildcard"
+               receiveTimeout="00:10:00"
+               sendTimeout="00:10:00"
+               openTimeout="00:10:00"
+               closeTimeout="00:10:00"
+               maxReceivedMessageSize="65536"
+               maxBufferSize="65536"
+               maxBufferPoolSize="524288"
+               transferMode="Buffered"
+               messageEncoding="Binary"
+               textEncoding="utf-8"
+               bypassProxyOnLocal="false"
+               useDefaultWebProxy="true">
+        <security mode="None" />
+      </binding>
+    </netHttpsBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
 ## <a name="example"></a>例  
  [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 エンドポイント アドレスとバインディングの名前から、bindingConfiguration を削除することで、前の例では、の機能を実現できます。  
   
 ```xml  
-<system.serviceModel>   
-  <services>  
-    <service   
-        type="Microsoft.ServiceModel.Samples.CalculatorService"  
-        behaviorConfiguration="CalculatorServiceBehavior">  
-       <endpoint address=""  
-             binding="netHttpsBinding"  
-             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-    </service>  
-  </services>  
-  <bindings>  
-     <netHttpsBinding>  
-        <binding   
-               hostNameComparisonMode="StrongWildcard"   
-               receiveTimeout="00:10:00"  
-               sendTimeout="00:10:00"  
-               openTimeout="00:10:00"  
-               closeTimeout="00:10:00"  
-               maxReceivedMessageSize="65536"   
-               maxBufferSize="65536"   
-               maxBufferPoolSize="524288"   
-               transferMode="Buffered"   
-               messageEncoding="Binary"   
-               textEncoding="utf-8"  
-               bypassProxyOnLocal="false"  
-               useDefaultWebProxy="true" >  
-              <security mode="None" />  
-         </binding>  
-     </netHttpsBinding>  
-  </bindings>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="netHttpsBinding"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <netHttpsBinding>
+      <binding hostNameComparisonMode="StrongWildcard"
+               receiveTimeout="00:10:00"
+               sendTimeout="00:10:00"
+               openTimeout="00:10:00"
+               closeTimeout="00:10:00"
+               maxReceivedMessageSize="65536"
+               maxBufferSize="65536"
+               maxBufferPoolSize="524288"
+               transferMode="Buffered"
+               messageEncoding="Binary"
+               textEncoding="utf-8"
+               bypassProxyOnLocal="false"
+               useDefaultWebProxy="true">
+        <security mode="None" />
+      </binding>
+    </netHttpsBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
  既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。  

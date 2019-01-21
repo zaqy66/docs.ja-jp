@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成'
+title: 'チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865866"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146278"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>チュートリアル : Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成
 関連するカスタム デザイナーを作成することにより、カスタム コントロールのデザイン時エクスペリエンスを拡張できます。  
   
  このチュートリアルでは、カスタム コントロールのカスタム デザイナーを作成する方法について説明します。 実装、`MarqueeControl`型およびと呼ばれる、関連付けられているデザイナー クラス`MarqueeControlRootDesigner`します。  
@@ -60,7 +60,7 @@ ms.locfileid: "43865866"
   
  ![可能な MarqueeControl 配置](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "により")  
   
- 完全なコード一覧は、次を参照してください。[方法: 作成、Windows フォーム コントロールを受け取るのデザイン時機能を利用](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
+ 完全なコード一覧は、次を参照してください。[方法。デザイン時機能を活用した Windows フォーム コントロールを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))です。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -84,18 +84,18 @@ ms.locfileid: "43865866"
   
 1.  Windows フォーム コントロール ライブラリ プロジェクトをソリューションに追加します。 「に」プロジェクトを名前します。  
   
-2.  使用して**ソリューション エクスプ ローラー**、選択した言語に応じて"UserControl1.cs"または「[usercontrol1.vb]」をという名前のソース ファイルを削除することによって、プロジェクトの既定のコントロールを削除します。 詳細については、次を参照してください。 [NIB: 方法: 削除、削除、および除外項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)します。  
+2.  使用して**ソリューション エクスプ ローラー**、選択した言語に応じて"UserControl1.cs"または「[usercontrol1.vb]」をという名前のソース ファイルを削除することによって、プロジェクトの既定のコントロールを削除します。 詳細については、「[方法 :削除、削除、および項目を除外](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))します。  
   
 3.  新しい追加<xref:System.Windows.Forms.UserControl>項目を`MarqueeControlLibrary`プロジェクト。 新しいソース ファイル"MarqueeControl"の基本の名前を付けます  
   
-4.  使用して**ソリューション エクスプ ローラー**で新しいフォルダーを作成、`MarqueeControlLibrary`プロジェクト。 詳細については、次を参照してください。 [NIB: 方法: 新しいプロジェクト項目の追加](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)します。 新しいフォルダーの名前を「設計します」  
+4.  使用して**ソリューション エクスプ ローラー**で新しいフォルダーを作成、`MarqueeControlLibrary`プロジェクト。 詳細については、「[方法 :新しいプロジェクト項目の追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))します。 新しいフォルダーの名前を「設計します」  
   
 5.  右クリックし、**デザイン**フォルダーと新しいクラスを追加します。 ソース ファイルの「ここで」基本の名前を付けます  
   
 6.  System.Design アセンブリから型を使用して、そのためにこの参照を追加する必要があります、`MarqueeControlLibrary`プロジェクト。  
   
     > [!NOTE]
-    >  System.Design アセンブリを使用するには、プロジェクトの .NET Framework、.NET Framework クライアント プロファイルではなく完全なバージョンを対象にする必要があります。 ターゲット フレームワークを変更するを参照してください。[方法: .NET Framework のバージョンを対象](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)します。  
+    >  System.Design アセンブリを使用するには、プロジェクトの .NET Framework、.NET Framework クライアント プロファイルではなく完全なバージョンを対象にする必要があります。 ターゲット フレームワークを変更するを参照してください。[方法.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。  
   
 ## <a name="referencing-the-custom-control-project"></a>カスタム コントロール プロジェクトを参照します。  
  使用する、`MarqueeControlTest`カスタム コントロールをテストするプロジェクト。 プロジェクト参照を追加するときに、テスト プロジェクトにカスタム コントロールを認識なります、`MarqueeControlLibrary`アセンブリ。  
@@ -168,7 +168,7 @@ using MarqueeControlLibrary;
 5.  プロジェクトをビルドします。  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>デザイン時のデバッグ プロジェクトの設定  
- カスタム デザイン時エクスペリエンスを開発しているときに、コントロールとコンポーネントをデバッグする必要があります。 デザイン時にデバッグを許可するプロジェクトを設定する簡単な方法があります。 詳細については、次を参照してください。[チュートリアル: デザイン時にカスタム Windows フォーム コントロールをデバッグ](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)します。  
+ カスタム デザイン時エクスペリエンスを開発しているときに、コントロールとコンポーネントをデバッグする必要があります。 デザイン時にデバッグを許可するプロジェクトを設定する簡単な方法があります。 詳細については、「[チュートリアル:デザイン時にフォーム コントロールのカスタムの Windows をデバッグ](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)します。  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>デザイン時のデバッグ プロジェクトを設定するには  
   
@@ -219,9 +219,9 @@ using MarqueeControlLibrary;
 ## <a name="creating-a-child-control-for-your-custom-control"></a>カスタム コントロールの子コントロールを作成します。  
  `MarqueeControl` 2 種類の子コントロールをホストする:`MarqueeBorder`コントロールと`MarqueeText`コントロール。  
   
--   `MarqueeBorder`: このコントロールは、「ライト」周囲の境界線を描画します。 ライトは、境界線を移動するように表示されるように、シーケンスで点滅します。 ライトが点滅する速度がという名前のプロパティによって制御される`UpdatePeriod`します。 その他のいくつかのカスタム プロパティは、他のコントロールの外観を決定します。 2 つのメソッドと呼ばれる`StartMarquee`と`StopMarquee`アニメーションが開始し、停止を制御します。  
+-   `MarqueeBorder`:このコントロールは、「ライト」周囲の境界線を描画します。 ライトは、境界線を移動するように表示されるように、シーケンスで点滅します。 ライトが点滅する速度がという名前のプロパティによって制御される`UpdatePeriod`します。 その他のいくつかのカスタム プロパティは、他のコントロールの外観を決定します。 2 つのメソッドと呼ばれる`StartMarquee`と`StopMarquee`アニメーションが開始し、停止を制御します。  
   
--   `MarqueeText`: このコントロールは、点滅している文字列を描画します。 ように、`MarqueeBorder`コントロール、テキストが点滅速度はによって制御される、`UpdatePeriod`プロパティ。 `MarqueeText`コントロールもあります、`StartMarquee`と`StopMarquee`で共通のメソッド、`MarqueeBorder`コントロール。  
+-   `MarqueeText`:このコントロールは、点滅している文字列を描画します。 ように、`MarqueeBorder`コントロール、テキストが点滅速度はによって制御される、`UpdatePeriod`プロパティ。 `MarqueeText`コントロールもあります、`StartMarquee`と`StopMarquee`で共通のメソッド、`MarqueeBorder`コントロール。  
   
  デザイン時に、`MarqueeControlRootDesigner`これら 2 つの制御の型に追加することができます、`MarqueeControl`の任意の組み合わせ。  
   
@@ -457,9 +457,9 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]  
   
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>デザイナー動詞をカスタム デザイナーに追加します。  
- デザイナー動詞は、イベント ハンドラーにリンクされているメニュー コマンドです。 デザイナー動詞は、デザイン時コンポーネントのショートカット メニューに追加されます。 詳細については、「<xref:System.ComponentModel.Design.DesignerVerb>」を参照してください。  
+ デザイナー動詞は、イベント ハンドラーにリンクされているメニュー コマンドです。 デザイナー動詞は、デザイン時コンポーネントのショートカット メニューに追加されます。 詳細については、「 <xref:System.ComponentModel.Design.DesignerVerb> 」を参照してください。  
   
- 2 つのデザイナー動詞は、デザイナーに追加:**テストの実行**と**テストの停止**します。 これらの動詞の実行時の動作を表示することにより、`MarqueeControl`デザイン時にします。 これらの動詞に追加されます、`MarqueeControlRootDesigner`します。  
+ 2 つのデザイナー動詞は、デザイナーに追加されます。**テスト実行**と**テストを停止**します。 これらの動詞の実行時の動作を表示することにより、`MarqueeControl`デザイン時にします。 これらの動詞に追加されます、`MarqueeControlRootDesigner`します。  
   
  ときに**テストの実行**が呼び出されると、動詞のイベント ハンドラーが呼び出されます、`StartMarquee`メソッドを`MarqueeControl`します。 ときに**テストの停止**が呼び出されると、動詞のイベント ハンドラーが呼び出されます、`StopMarquee`メソッドを`MarqueeControl`します。 実装、`StartMarquee`と`StopMarquee`メソッドが格納されているコントロールを実装するのにこれらのメソッドを呼び出す`IMarqueeWidget`、すべて含まれている`IMarqueeWidget`コントロールがテストに参加することもできます。  
   
@@ -476,7 +476,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
 ## <a name="creating-a-custom-uitypeeditor"></a>カスタムの UITypeEditor を作成します。  
- ユーザーのカスタム デザイン時エクスペリエンスを作成するときに、[プロパティ] ウィンドウでカスタム操作を作成することが望ましいは多くの場合。 これを実現するには作成を<xref:System.Drawing.Design.UITypeEditor>します。 詳細については、次を参照してください。[方法: UI 型エディターを作成する](https://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd)します。  
+ ユーザーのカスタム デザイン時エクスペリエンスを作成するときに、[プロパティ] ウィンドウでカスタム操作を作成することが望ましいは多くの場合。 これを実現するには作成を<xref:System.Drawing.Design.UITypeEditor>します。 詳細については、「[方法 :UI 型エディターを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))します。  
   
  `MarqueeBorder`コントロールのプロパティ ウィンドウでいくつかのプロパティを公開します。 これらのプロパティの 2 つ`MarqueeSpinDirection`と`MarqueeLightShape`列挙体によって表されます。 UI 型エディターでは、使用方法を示す、`MarqueeLightShape`プロパティが関連付けられている必要があります<xref:System.Drawing.Design.UITypeEditor>クラス。  
   
@@ -628,19 +628,19 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   さらに、デザイン時のエクスペリエンスをカスタマイズします。 多くのプロパティをシャドウ試して<xref:System.Windows.Forms.Control.Enabled%2A>と<xref:System.Windows.Forms.Control.Visible%2A>、し、新しいプロパティを追加できます。 子コントロールのドッキングなどの一般的なタスクを簡略化の新しいデザイナー動詞を追加します。  
   
--   ライセンス、`MarqueeControl`します。 詳細については、次を参照してください。[方法: ライセンス コンポーネントとコントロール](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)します。  
+-   ライセンス、`MarqueeControl`します。 詳細については、「[方法 :コンポーネントとコントロールのライセンスの](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))します。  
   
 -   コントロールがシリアル化する方法とそれらのコードを生成する方法を制御します。 詳細については、次を参照してください。[動的ソース コードの生成とコンパイル](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.UserControl>  
- <xref:System.Windows.Forms.Design.ParentControlDesigner>  
- <xref:System.Windows.Forms.Design.DocumentDesigner>  
- <xref:System.ComponentModel.Design.IRootDesigner>  
- <xref:System.ComponentModel.Design.DesignerVerb>  
- <xref:System.Drawing.Design.UITypeEditor>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [方法: デザイン時機能を活用した Windows フォーム コントロールを作成する](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)  
- [デザイン時サポートの拡張](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [カスタム デザイナー](https://msdn.microsoft.com/library/ca11988e-d38e-44d8-a05d-71362ae7844d)  
- [.NET の図形のライブラリ: サンプル デザイナー](http://windowsforms.net/articles/shapedesigner.aspx)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.UserControl>
+- <xref:System.Windows.Forms.Design.ParentControlDesigner>
+- <xref:System.Windows.Forms.Design.DocumentDesigner>
+- <xref:System.ComponentModel.Design.IRootDesigner>
+- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.Drawing.Design.UITypeEditor>
+- <xref:System.ComponentModel.BackgroundWorker>
+- [方法: デザイン時機能を活用した Windows フォーム コントロールを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [カスタム デザイナー](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

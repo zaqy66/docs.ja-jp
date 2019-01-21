@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8e0e18c934589e89ff5e10b14ba02f8daee11c66
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839538"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146876"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 COM+ 統合サービス コントラクトを指定します。  
@@ -18,29 +18,28 @@ COM+ 統合サービス コントラクトを指定します。
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="string"  
-      namespace="string"  
-      name="string"  
-      requireSession="Boolean">  
-      <exposedMethods>  
-         <exposedMethod name="string" />  
-      </exposedMethods>  
-      <userDefinedTypes>  
-         <userDefinedType name="string"  
-            typeLibID="string"  
-            typeLibVersion="string"  
-            typeDefID="string">  
-         </userDefinedType>  
-      </userDefinedTypes>  
-      <persistableTypes>  
-         <persistableType id="string"  
-            name="string">  
-         </persistableType>  
-      </persistableTypes>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="String"
+               namespace="String"
+               name="String"
+               requireSession="Boolean">
+    <exposedMethods>
+      <exposedMethod name="String" />
+    </exposedMethods>
+    <userDefinedTypes>
+      <userDefinedType name="String"
+                       typeLibID="String"
+                       typeLibVersion="String"
+                       typeDefID="String">
+      </userDefinedType>
+    </userDefinedTypes>
+    <persistableTypes>
+      <persistableType id="String"
+                       name="String">
+      </persistableType>
+    </persistableTypes>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -73,19 +72,18 @@ COM+ 統合サービス コントラクトを指定します。
  COM + 統合サービス コントラクトは、現在に制限されて、`http://tempuri.org`名前空間、およびコントラクト名がサポートする COM インターフェイスから派生します。 ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。 たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
-      namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"  
-      name="_Broker"  
-      requireSession="true">  
-      <exposedMethods>  
-         <exposedMethod name="BuyStock" />  
-         <exposedMethod name="SellStock" />  
-         <exposedMethod name="ExecuteTransaction" />  
-      </exposedMethods>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"
+               namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"
+               name="_Broker"
+               requireSession="true">
+    <exposedMethods>
+      <exposedMethod name="BuyStock" />
+      <exposedMethod name="SellStock" />
+      <exposedMethod name="ExecuteTransaction" />
+    </exposedMethods>
+  </comContract>
+</comContracts>
 ```  
   
  サービスが初期化される場合、指定した名前空間およびコントラクト名が、生成されるサービスの説明に適用されます。  
@@ -96,4 +94,4 @@ COM+ 統合サービス コントラクトを指定します。
  <xref:System.ServiceModel.Configuration.ComContractElement>  
  [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [COM+ アプリケーションとの統合](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [方法 : COM+ サービス設定を構成する](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [方法: COM + サービス設定を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

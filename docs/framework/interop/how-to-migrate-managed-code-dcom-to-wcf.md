@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 187bff7c75ba2a0887e3c5728a484a9231936511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392747"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030075"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>方法: マネージ コード DCOM を WCF に移行する
-Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージ コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
+Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
   
 -   リモート サービスからクライアントに値渡しでオブジェクトを返す  
   
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) は、分散コンポーネント オブ�
 ## <a name="dcom-example-code"></a>DCOM コード例  
  これらのシナリオでは、WCF を使用して示されている DCOM インターフェイスに、以下の構造があります。  
   
-```  
+```csharp  
 [ComVisible(true)]  
 [Guid("AA9C4CDB-55EA-4413-90D2-843F1A49E6E6")]  
 public interface IRemoteService  
@@ -51,7 +51,7 @@ public class Customer
 ## <a name="the-service-returns-an-object-by-value"></a>サービスから値渡しでオブジェクトを返す  
  このシナリオでは、サービスを呼び出し、そのメソッドがオブジェクトを返します。オブジェクトはサーバーからクライアントに値で渡されます。 このシナリオは、次の COM 呼び出しを表しています。  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     Customer GetObjectByValue();  
@@ -63,7 +63,7 @@ public interface IRemoteService
 ### <a name="step-1-define-the-wcf-service-interface"></a>手順 1: WCF サービスのインターフェイスを定義する  
  WCF サービスのパブリック インターフェイスを定義し、[<xref:System.ServiceModel.ServiceContractAttribute>] 属性でマークします。  クライアントに公開するメソッドを [<xref:System.ServiceModel.OperationContractAttribute>] 属性でマークします。 次の例は、これらの属性を使用して、サーバー側のインターフェイスと、クライアントが呼び出すことのできるインターフェイス メソッドとを識別する方法を示しています。 このシナリオで使用されるメソッドは、太字で示します。  
   
-```  
+```csharp  
 using System.Runtime.Serialization;  
 using System.ServiceModel;  
 using System.ServiceModel.Web;   
@@ -80,11 +80,11 @@ public interface ICustomerManager
 ```  
   
 ### <a name="step-2-define-the-data-contract"></a>手順 2: データ コントラクトを定義する  
- 次に、サービスとクライアントの間でデータが交換される方法を説明する、サービスのデータ コントラクトを作成する必要があります。  データ コントラクトで説明されたクラスは、[<xref:System.Runtime.Serialization.DataContractAttribute>] 属性でマークする必要があります。 クライアントとサーバーの両方に表示する個々のプロパティやフィールドは、[<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性でマークする必要があります。データ コントラクト内のクラスから派生した型を許可する場合は、[<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性でそれらを指定する必要があります。 WCF は、サービス インターフェイス内の型と既知の型として識別される型だけを、シリアル化または逆シリアル化します。 既知の型ではない型を使用しようとすると、例外が発生します。  
+ 次に、サービスとクライアントの間でデータが交換される方法を説明する、サービスのデータ コントラクトを作成する必要があります。  データ コントラクトで説明されたクラスは、[<xref:System.Runtime.Serialization.DataContractAttribute>] 属性でマークする必要があります。 クライアントとサーバーの両方に対して表示する個々のプロパティやフィールドは、[<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性でマークする必要があります。 データ コントラクト内のクラスから派生した型を許可するには、[<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性でそれらを区別する必要があります。 WCF は、サービス インターフェイス内の型と既知の型として識別される型だけを、シリアル化または逆シリアル化します。 既知の型ではない型を使用しようとすると、例外が発生します。  
   
  データ コントラクトの詳細については、「[データ コントラクト](../../../docs/framework/wcf/samples/data-contracts.md)」を参照してください。  
   
-```  
+```csharp  
 [DataContract]  
 [KnownType(typeof(PremiumCustomer))]  
 public class Customer  
@@ -124,7 +124,7 @@ public class Address
 ### <a name="step-3-implement-the-wcf-service"></a>手順 3: WCF サービスを実装する  
  次に、前の手順で定義したインターフェイスを実装する、WCF サービス クラスを実装する必要があります。  
   
-```  
+```csharp  
 public class CustomerService: ICustomerManager    
 {  
     public void StoreCustomer(Customer customer)  
@@ -172,7 +172,7 @@ public class CustomerService: ICustomerManager
 ### <a name="step-5-run-the-service"></a>手順 5: サービスを実行する  
  最後に、サービス アプリに次の行を追加して、アプリを起動することにより、コンソール アプリケーション内で自己ホストすることができます。 WCF サービス アプリケーションをホストするその他の方法について詳しくは、「[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)」を参照してください。  
   
-```  
+```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
 customerServiceHost.Open();  
 ```  
@@ -180,7 +180,7 @@ customerServiceHost.Open();
 ### <a name="step-6-call-the-service-from-the-client"></a>手順 6: クライアントからサービスを呼び出す  
  クライアントからのサービスを呼び出すには、サービスのチャネル ファクトリを作成し、チャネルを要求する必要があります。これにより、クライアントから `GetCustomer` メソッドを直接呼び出すことができるようになります。 チャネルはサービスのインターフェイスを実装し、基になる要求/応答のロジックを処理します。  このメソッドの呼び出しからの戻り値は、サービス応答の逆シリアル化されたコピーです。  
   
-```  
+```csharp  
 ChannelFactory<ICustomerManager> factory =   
      new ChannelFactory<ICustomerManager>("customermanager");  
 ICustomerManager service = factory.CreateChannel();  
@@ -192,7 +192,7 @@ Customer customer = service.GetCustomer("Mary", "Smith");
   
  このシナリオは、次の COM メソッドの呼び出しを表しています。  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     void SendObjectByValue(Customer customer);  
@@ -201,7 +201,7 @@ public interface IRemoteService
   
  このシナリオでは、最初の例で示すものと同じサービス インターフェイスおよびデータ コントラクトを使用します。 さらに、クライアントとサービスが同じ方法で構成されます。 この例では、オブジェクトを送信するためにチャネルが作成されて、同じ方法で実行されます。 ただし、この例では、値渡しでオブジェクトを送信して、サービスを呼び出すクライアントを作成します。 クライアントがサービス コントラクトで呼び出すサービス メソッドは、太字で示されます。  
   
-```  
+```csharp  
 [ServiceContract]  
 public interface ICustomerManager  
 {  
@@ -215,9 +215,9 @@ public interface ICustomerManager
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>値渡しのオブジェクトを送信するクライアントにコードを追加する  
  次のコードは、クライアントが値渡しの customer オブジェクトを新規に作成する方法、`ICustomerManager` サービスと通信するチャネルを作成する方法、およびそこに customer オブジェクトを送信する方法を示しています。  
   
- Customer オブジェクトはシリアル化され、サービスに送信されて、サービスによりそのオブジェクトの新しいコピーへと逆シリアル化されます。  サービスがこのオブジェクトで呼び出すメソッドは、サーバーにおいてローカルでのみ実行します。このコードは、派生型 (`PremiumCustomer`) の送信を例示していることに注意してください。  サービス コントラクトは `Customer` オブジェクトを想定していますが、サービス データ コントラクトは [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性を使用して `PremiumCustomer` も許可されることを示しています。  このサービス インターフェイスを介して他の型をシリアル化または逆シリアル化しようとしても、WCF は失敗します。  
+ Customer オブジェクトはシリアル化され、サービスに送信されて、サービスによりそのオブジェクトの新しいコピーへと逆シリアル化されます。  このオブジェクトに対してサービスが呼び出すメソッドはすべて、サーバー上でローカルでのみ実行されます。 このコードは派生型の送信を示していることに注意してください (`PremiumCustomer`)。  サービス コントラクトは `Customer` オブジェクトを想定していますが、サービス データ コントラクトは [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性を使用して `PremiumCustomer` も許可されることを示しています。  このサービス インターフェイスを介して他の型をシリアル化または逆シリアル化しようとしても、WCF は失敗します。  
   
-```  
+```csharp  
 PremiumCustomer customer = new PremiumCustomer();  
 customer.Firstname = "John";  
 customer.Lastname = "Doe";  
@@ -243,7 +243,7 @@ customerManager.StoreCustomer(customer);
   
  このシナリオは、以下の DCOM メソッドによって表されます。  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     IRemoteObject GetObjectByReference();  
@@ -255,7 +255,7 @@ public interface IRemoteService
   
  このコードでは、セッションフル オブジェクトが `ServiceContract` 属性でマークされ、通常の WCF サービスのインターフェイスとして示されています。  さらに、<xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> プロパティが設定されて、セッションフル サービスとなることが示されています。  
   
-```  
+```csharp  
 [ServiceContract(SessionMode = SessionMode.Allowed)]  
 public interface ISessionBoundObject  
 {  
@@ -271,7 +271,7 @@ public interface ISessionBoundObject
   
  サービスは [ServiceBehavior] 属性でマークされ、InstanceContextMode プロパティが InstanceContextMode.PerSessions に設定されて、セッションごとにこの型の一意のインスタンスを作成する必要があることを示しています。  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
     public class MySessionBoundObject : ISessionBoundObject  
     {  
@@ -293,7 +293,7 @@ public interface ISessionBoundObject
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>手順 2: セッションフル オブジェクトの WCF ファクトリ サービスを定義する  
  セッションフル オブジェクトを作成するサービスを定義して実装する必要があります。 この方法を次のコードに示します。 このコードは、<xref:System.ServiceModel.EndpointAddress10> オブジェクトとして返される別の WCF サービスを作成します。  これはセッションフル オブジェクトの作成に使用できる、エンドポイントのシリアル化可能な形式です。  
   
-```  
+```csharp  
 [ServiceContract]  
     public interface ISessionBoundFactory  
     {  
@@ -304,7 +304,7 @@ public interface ISessionBoundObject
   
  このサービスの実装を次に示します。 この実装では、セッションフル オブジェクトを作成するためにシングルトン チャネル ファクトリを保持しています。  チャネル ファクトリは、`GetInstanceAddress` が呼び出されるとチャネルを作成し、このチャネルに関連付けられているリモート アドレスをポイントする <xref:System.ServiceModel.EndpointAddress10> オブジェクトを作成します。   <xref:System.ServiceModel.EndpointAddress10> は、値渡しでクライアントに返すことのできるデータ型です。  
   
-```  
+```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
     {  
         public static ChannelFactory<ISessionBoundObject> _factory =   
@@ -359,7 +359,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
  以下の行をコンソール アプリケーションに追加し、サービスを自己ホストして、アプリを開始します。  
   
-```  
+```csharp  
 ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
 factoryHost.Open();  
   
@@ -398,7 +398,7 @@ sessionBoundServiceHost.Open();
   
 4.  `SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。  
   
-```  
+```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
         new ChannelFactory<ISessionBoundFactory>("factory");  
   
@@ -421,7 +421,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)  
  [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)  

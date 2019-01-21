@@ -4,12 +4,13 @@ description: dotnet テストおよび MSTest を使用したサンプル ソリ
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: d0da8640393e298c3a6e367433eaa68ebb88fad7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183777"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170288"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest と .NET Core による単体テスト C#
 
@@ -142,7 +143,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>他の機能の追加
 
-テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります (0、-1)。 `[TestMethod]` 属性を使用すると新しいテストを追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  `[DataTestMethod]` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `[DataRow]` 属性を使用して、そのような入力の値を指定することができます。
+テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります(0、-1)。 `[TestMethod]` 属性を使用すると新しいテストを追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  `[DataTestMethod]` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `[DataRow]` 属性を使用して、そのような入力の値を指定することができます。
 
 新しいテストを作成するのではなく、この 2 つの属性を適用することで 1 つのデータ駆動テストを作成できます。 そのデータ駆動テストとは、複数の 2 未満の値を調べて、最も小さい素数を特定するという手法です。
 

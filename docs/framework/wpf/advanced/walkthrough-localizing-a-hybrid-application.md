@@ -1,18 +1,18 @@
 ---
-title: 'チュートリアル : ハイブリッド アプリケーションのローカライズ'
+title: 'チュートリアル: ハイブリッド アプリケーションのローカライズ'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402699"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223007"
 ---
-# <a name="walkthrough-localizing-a-hybrid-application"></a>チュートリアル : ハイブリッド アプリケーションのローカライズ
+# <a name="walkthrough-localizing-a-hybrid-application"></a>チュートリアル: ハイブリッド アプリケーションのローカライズ
 
 このチュートリアルは、ローカライズする方法を示します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内の要素を[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-ベースのハイブリッド アプリケーション。
 
@@ -48,7 +48,7 @@ ms.locfileid: "47402699"
 
 2.  追加、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>と呼ばれる要素`SimpleControl`をプロジェクトにします。
 
-3.  使用して、<xref:System.Windows.Forms.Integration.ElementHost>コントロールを配置する、`SimpleControl`フォームの要素。 詳細については、次を参照してください。[チュートリアル: Windows フォームでの 3-D WPF 複合コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)します。
+3.  使用して、<xref:System.Windows.Forms.Integration.ElementHost>コントロールを配置する、`SimpleControl`フォームの要素。 詳細については、「[チュートリアル:Windows フォームでの 3d WPF 複合コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)します。
 
 ## <a name="adding-localizable-content"></a>ローカライズ可能なコンテンツを追加します。
 
@@ -118,7 +118,7 @@ Windows フォーム デザイナーでは、サテライト アセンブリで�
 
 ### <a name="to-assign-resource-identifiers"></a>リソースの識別子を割り当てます
 
-1.  [スタート] メニューから、Visual Studio コマンド プロンプトを開きます。
+1.  [スタート] メニューから Visual Studio 用開発者コマンド プロンプトを開きます。
 
 2.  次のコマンドを使用して、ローカライズ可能なコンテンツへのリソースの識別子を割り当てます。
 

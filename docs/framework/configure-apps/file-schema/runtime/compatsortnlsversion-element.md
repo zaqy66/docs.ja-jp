@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e78106c4df2e1c414d00f18871566dd5906c54f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9d505dd7433978e3a5908757a1d9569fe31f49b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614411"
 ---
 # <a name="ltcompatsortnlsversiongt-element"></a>&lt;CompatSortNLSVersion&gt;要素
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
@@ -55,8 +56,8 @@ ms.lasthandoff: 05/03/2018
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>コメント  
- 文字列比較、並べ替え、および大文字と小文字の操作によって実行されるため、<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>クラス内で、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]などの Unicode 5.1 規格、文字列比較メソッドの結果に準拠している<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>と<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>異なる場合があります.NET Framework の以前のバージョン。 アプリケーションがレガシ動作に依存している場合は、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 要素をアプリケーションの構成ファイルに含めることで、`<CompatSortNLSVersion>` およびそれ以前のバージョンで使用されていた文字列の比較および並べ替えの規則を復元できます。  
+## <a name="remarks"></a>Remarks  
+ によって文字列比較、並べ替え、および大文字と小文字の操作が実行されるため、<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>クラス、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]などの文字列比較メソッドの結果、Unicode 5.1 を標準に準拠している<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>と<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>異なる場合があります.NET Framework の以前のバージョン。 アプリケーションがレガシ動作に依存している場合は、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 要素をアプリケーションの構成ファイルに含めることで、`<CompatSortNLSVersion>` およびそれ以前のバージョンで使用されていた文字列の比較および並べ替えの規則を復元できます。  
   
 > [!IMPORTANT]
 >  文字列の比較および並べ替えのレガシ規則を復元する場合は、ローカル システムで sort00001000.dll ダイナミック リンク ライブラリも使用できるようにする必要があります。  
@@ -93,5 +94,5 @@ sta equals a in the sort order.
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

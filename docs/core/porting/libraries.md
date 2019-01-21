@@ -2,15 +2,14 @@
 title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
-ms.author: mairaw
 ms.date: 07/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143585"
+ms.locfileid: "53169690"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
@@ -60,7 +59,7 @@ AppDomain はアプリを互いに分離します。 AppDomain ではランタ�
 
 プロセス間の通信では、リモート処理に代わる方法として、<xref:System.IO.Pipes> または <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> クラスなどのプロセス間通信 (IPC) メカニズムを検討してください。
 
-マシン間では、代替方法としてネットワーク ベースのソリューションを使用してください。 可能であれば、HTTP などのオーバーヘッドの少ないプレーンテキストのプロトコルを使用してください。 この場合、ASP.NET Core で使用される Web サーバーの [Kestrel Web Server](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) も選択できます。 また、ネットワーク ベースのマシン間のシナリオとして、<xref:System.Net.Sockets> の使用も検討してください。 その他のオプションについては、[.NET オープン ソース開発者プロジェクト: メッセージング](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)に関する記事をご覧ください。
+マシン間では、代替方法としてネットワーク ベースのソリューションを使用してください。 可能であれば、HTTP などのオーバーヘッドの少ないプレーンテキストのプロトコルを使用してください。 この場合、ASP.NET Core で使用される Web サーバーの [Kestrel Web Server](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) も選択できます。 また、ネットワーク ベースのマシン間のシナリオとして、<xref:System.Net.Sockets> の使用も検討してください。 その他のオプションについては、[.NET オープン ソース開発者プロジェクト:メッセージング](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)に関する記事をご覧ください。
 
 ### <a name="code-access-security-cas"></a>コード アクセス セキュリティ (CAS)
 

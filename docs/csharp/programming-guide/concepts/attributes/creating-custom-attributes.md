@@ -2,12 +2,12 @@
 title: カスタム属性の作成 (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 5a846771eb26e3760e3f47458b862356f4da1ae6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a27924623cc462f6d3339149718a1b29999ac1d
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503707"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058270"
 ---
 # <a name="creating-custom-attributes-c"></a>カスタム属性の作成 (C#)
 属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。 型にそれを記述したプログラマーの名前でタグを付けるとします。 `Author` というカスタム属性クラスを定義します。  
@@ -63,10 +63,7 @@ class SampleClass
 }  
 ```  
   
-> [!NOTE]
->  属性クラスにプロパティが含まれている場合、そのプロパティは読み取り/書き込み可能である必要があります。  
-  
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - <xref:System.Reflection>  
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  

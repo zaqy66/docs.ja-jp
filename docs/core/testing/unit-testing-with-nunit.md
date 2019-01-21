@@ -3,12 +3,13 @@ title: NUnit と .NET Core による単体テスト C#
 description: dotnet テストおよび NUnit を使用したサンプル ソリューションを段階的に構築していく対話型エクスペリエンスを通じて、C# および .NET Core の単体テストの概念について説明します。
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146956"
+ms.locfileid: "53169040"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit と .NET Core による単体テスト C#
 
@@ -166,7 +167,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>他の機能の追加
 
-テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります (0、-1)。 `[Test]` 属性を使用すると新しいテストを追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の NUnit 属性があります。  `[TestCase]` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを作成するために使用します。 `[TestCase]` 属性を使用して、そのような入力の値を指定することができます。
+テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります(0、-1)。 `[Test]` 属性を使用すると新しいテストを追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の NUnit 属性があります。  `[TestCase]` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを作成するために使用します。 `[TestCase]` 属性を使用して、そのような入力の値を指定することができます。
 
 新しいテストを作成するのではなく、この属性を適用することで 1 つのデータ駆動テストを作成します。 そのデータ駆動テストとは、複数の 2 未満の値を調べて、最も小さい素数を特定するという手法です。
 

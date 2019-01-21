@@ -2,12 +2,12 @@
 title: '&lt;endpoint&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749505"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147487"
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 要素
 サービスの公開に使用されるサービス エンドポイントのバインディング、コントラクト、およびアドレスのプロパティを指定します。  
@@ -19,16 +19,19 @@ ms.locfileid: "32749505"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   bindingName="String"  
-   bindingNamespace="String"  
-   contract="String"  
-   endpointConfiguration="String"   isSystemEndpoint="Boolean"   kind="String"   listenUriMode="Explicit/Unique"  
-   listenUri="Uri"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          bindingName="String"
+          bindingNamespace="String"
+          contract="String"
+          endpointConfiguration="String"
+          isSystemEndpoint="Boolean"
+          kind="String"
+          listenUriMode="Explicit/Unique"
+          listenUri="Uri">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -69,22 +72,21 @@ ms.locfileid: "32749505"
  これはサービス エンドポイントの構成の例です。  
   
 ```xml  
-<endpoint   
-    address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    bindingName="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-    <Headers>  
-       <Region xmlns="http://tempuri.org/">EastCoast</Region>  
-       <Member xmlns="http://tempuri.org/">Gold</Member>  
-    </Headers>  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          bindingName="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+  <headers>
+    <region xmlns="http://tempuri.org/">EastCoast</region>
+    <member xmlns="http://tempuri.org/">Gold</member>
+  </headers>
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [エンドポイント : アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [方法 : 構成にサービス エンドポイントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+ [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [方法: 構成でサービス エンドポイントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

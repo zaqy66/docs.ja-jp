@@ -2,11 +2,12 @@
 title: '&lt;診断&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 0854ce6525fd7c96cf7c19d2c86dadef1b9a53bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149346"
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;診断&gt;
 `diagnostics` 要素は、ランタイムの検査と管理を行う管理者が使用できる設定を定義します。  
@@ -17,28 +18,25 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.serviceModel>  
-  <diagnostics 
-      etwProviderId="String"       
-      performanceCounters="Off/ServiceOnly/All/Default"              
-      wmiProviderEnabled="Boolean" >       
-    <endToEndTracing 
-        activityTracing="Boolean"  
-        messageFlowTracing="Boolean"  
-        propagateActivity="Boolean" />  
-    <messageLogging 
-        logEntireMessage="Boolean"  
-        logMalformedMessages="Boolean"  
-        logMessagesAtServiceLevel="Boolean"  
-        logMessagesAtTransportLevel="Boolean"  
-        maxMessagesToLog="Integer"  
-        maxSizeOfMessageToLog="Integer" >  
-      <filters>  
-        <clear />  
-      </filters>  
-    </messageLogging>  
-  </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics etwProviderId="String"
+               performanceCounters="Off/ServiceOnly/All/Default"
+               wmiProviderEnabled="Boolean">
+    <endToEndTracing activityTracing="Boolean"
+                     messageFlowTracing="Boolean"
+                     propagateActivity="Boolean" />
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -49,15 +47,15 @@ ms.lasthandoff: 05/03/2018
 |属性|説明|  
 |---------------|-----------------|  
 |etwProviderId|イベントを ETW セッションに書き込むイベント追跡プロバイダーの識別子を指定する文字列。|  
-|performanceCounters|アセンブリのパフォーマンス カウンターが有効であるかどうかを指定します。 有効な値は、次のとおりです。<br /><br /> -Off: パフォーマンス カウンターが無効になります。<br />-ServiceOnly: このサービスに関連するパフォーマンス カウンターのみが有効にします。<br />-すべて: のパフォーマンス カウンターは、実行時に表示できます。<br />-既定値: 1 つのパフォーマンス カウンター インスタンス _WCF_Admin が作成されます。 このインスタンスは、インフラストラクチャで使用される SQM データのコレクションを有効にするために使用されます。 このインスタンスのカウンター値は更新されず、0 のままになります。 WCF の構成が存在しない場合は、これが既定値になります。|  
-|wmiProviderEnabled|アセンブリの WMI プロバイダーが有効であるかどうかを指定するブール値。 ユーザーが Windows Communication Foundation (WCF) の検査および制御機能に対する実行時アクセス権を取得するには、WMI プロバイダーが必要です。 既定値は、`false` です。|  
+|performanceCounters|アセンブリのパフォーマンス カウンターが有効であるかどうかを指定します。 有効な値は、次のとおりです。<br /><br /> オフ。パフォーマンス カウンターは無効です。<br />-ServiceOnly:このサービスに関連するパフォーマンス カウンターだけが有効です。<br />-All:パフォーマンス カウンターは実行時に表示できます。<br />-既定値:単一のパフォーマンス カウンター インスタンス _WCF_Admin が作成されます。 このインスタンスは、インフラストラクチャで使用される SQM データのコレクションを有効にするために使用されます。 このインスタンスのカウンター値は更新されず、0 のままになります。 WCF の構成が存在しない場合は、これが既定値になります。|  
+|wmiProviderEnabled|アセンブリの WMI プロバイダーが有効であるかどうかを指定するブール値。 ユーザーが Windows Communication Foundation (WCF) の検査および制御機能に対する実行時アクセス権を取得するには、WMI プロバイダーが必要です。 既定値は `false` です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
 |[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|サービス アプリケーションの実行中にエンドツーエンドのトレースのさまざまな側面を有効または無効にするための構成要素。|  
-|[\<メッセージ ログ >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|WCF メッセージ ログの設定について説明します。|  
+|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|WCF メッセージ ログの設定について説明します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -65,27 +63,25 @@ ms.lasthandoff: 05/03/2018
 |-------------|-----------------|  
 |serviceModel|すべての WCF 構成要素のルート要素です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `diagnostics` セクションは、アセンブリに配置されるすべてのサービスの診断設定を定義します。 アセンブリ内のサービスが 1 つでない限り、サービス レベル別に診断設定を定義することはできません。 属性は、セクションの要件に応じて設定されます。  
   
 ## <a name="example"></a>例  
   
 ```xml  
-<diagnostics
-    wmiProviderEnabled="false"  
-    performanceCounters="all">  
-  <messageLogging 
-      logEntireMessage="true"  
-      logMalformedMessages="true"  
-      logMessagesAtServiceLevel="true"  
-      logMessagesAtTransportLevel="true"  
-      maxMessagesToLog="42"  
-      maxSizeOfMessageToLog="42">  
-    <filters>  
-      <clear />  
-    </filters>  
-  </messageLogging>  
-</diagnostics>  
+<diagnostics wmiProviderEnabled="false"
+             performanceCounters="all">
+  <messageLogging logEntireMessage="true"
+                  logMalformedMessages="true"
+                  logMessagesAtServiceLevel="true"
+                  logMessagesAtTransportLevel="true"
+                  maxMessagesToLog="42"
+                  maxSizeOfMessageToLog="42">
+    <filters>
+      <clear />
+    </filters>
+  </messageLogging>
+</diagnostics>
 ```  
   
 ## <a name="see-also"></a>関連項目  

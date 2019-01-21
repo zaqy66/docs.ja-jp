@@ -3,17 +3,17 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: .NET Compiler Platform SDK (Roslyn API とも呼ばれます) を使用して、.NET コードを理解し、エラーを見つけて、そのエラーを修正する方法について説明します。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925032"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249139"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
 コンパイラでは、コードの構文とセマンティクスを検証するように、アプリケーション コードの詳細なモデルをビルドします。 このモデルを使用して、ソース コードから実行可能な出力をビルドします。 .NET Compiler Platform SDK では、このモデルへのアクセスが提供されます。 Microsoft では、生産性を向上させるために、IntelliSense、リファクタリング、インテリジェントな名前の変更、"すべての参照の検索"、"定義へ移動" などの統合開発環境 (IDE) 機能をますます使用するようになっています。 コードの品質を向上させるためにコード分析ツールを使用し、アプリケーションの構築に役立てるためにコード ジェネレーターを使用します。 これらのツールがスマートになったので、アプリケーション コードを処理するときに、コンパイラのみが作成するモデルにますますツールがアクセスする必要が生じます。 これが Roslyn API の主要な目的です。ブラック ボックスを開いて、ツールとエンド ユーザーが豊富な情報コンパイラを共有することを許可するためにこのコードがあります。
-あいまいなソース コード入力とオブジェクト コード出力の変換の代わりに、Roslyn によって、コンパイラがプラットフォームになります。これは、自分のツールとアプリケーション内でコードに関連するタスクに使用できる API です。
+コンパイラは Roslyn の使用により、ソース コード イン、オブジェクト コード アウトの曖昧なトランスレーターではなく、次のようなプラットフォームになります。ツールとアプリケーションのコード関連のタスクで使用できる API。
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform SDK の概念
 
@@ -31,7 +31,7 @@ ms.locfileid: "42925032"
 
 1. [*チームのコーディング標準を適用する*](#enforce-team-coding-standards)
 1. [*ライブラリ パッケージと共にガイダンスを提供する*](#provide-guidance-with-library-packages)
-1. [*一般的なコーディング ガイダンスを提供する*](#provide-general-coding-guidance)
+1. [*一般的なガイダンスを提供する*](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>チームのコーディング標準を適用する
 
@@ -60,7 +60,7 @@ NuGet 上の自分のライブラリを使用して、アナライザーとコ�
 
 .NET Compiler Platform SDK には、コードの生成、分析、リファクタリングを行うために、最新の言語オブジェクト モデルが含まれています。 このセクションでは、.NET Compiler Platform SDK の概念的な概要を示します。 詳細については、クイックスタート、サンプル、チュートリアルのセクションで確認できます。
 
-.NET Compiler Platform SDK の概念の詳細については、次の 4 つのトピックを参照してください。
+.NET Compiler Platform SDK の概念の詳細については、次の 5 つのトピックを参照してください。
 
  - [構文ビジュアライザーでコードを調べる](syntax-visualizer.md)
  - [コンパイラ API モデルを理解する](compiler-api-model.md)

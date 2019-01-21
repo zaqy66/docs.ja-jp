@@ -2,18 +2,18 @@
 title: '&lt;callbackTimeouts&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: 48da0351d162a2143a26cc5b9eaa05b731358639
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 85e7b1f0d009e27cbacd9f69b381e4f05984bf56
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749567"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149112"
 ---
 # <a name="ltcallbacktimeoutsgt"></a>&lt;callbackTimeouts&gt;
 双方向コールバック コントラクト シナリオでトランザクションをサーバーからクライアントに転送する際のタイムアウト値を指定します。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
 \<callbackTimeOuts >  
@@ -21,7 +21,7 @@ ms.locfileid: "32749567"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<callbackTimeOuts transactionTimeout="TimeSpan" />  
+<callbackTimeOuts transactionTimeout="TimeSpan" />
 ```  
   
 ## <a name="type"></a>型  
@@ -34,7 +34,7 @@ ms.locfileid: "32749567"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`transactionTimeout`|トランザクションが完了する必要があるまたは自動的に終了される必要がある制限時間を指定する <xref:System.TimeSpan> 値。 既定値は"00: 00:00"です。|  
+|`transactionTimeout`|トランザクションが完了する必要があるまたは自動的に終了される必要がある制限時間を指定する <xref:System.TimeSpan> 値。 既定値は"00: 00:00"。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

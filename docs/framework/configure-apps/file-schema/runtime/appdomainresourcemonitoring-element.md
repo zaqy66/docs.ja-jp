@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11e892d8ab9001d3670c801b43ba444aa24b2e41
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743577"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611335"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appDomainResourceMonitoring&gt;要素
 プロセスのライフサイクルにおいて、プロセスのすべてのアプリケーション ドメインの統計を収集するようにランタイムに指示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "32743577"
 |値|説明|  
 |-----------|-----------------|  
 |`true`|アプリケーション ドメインのリソース監視の統計情報が収集されます。|  
-|`false`|アプリケーション ドメインのリソース監視の統計情報が収集されません。|  
+|`false`|アプリケーション ドメインのリソース監視の統計情報は収集されません。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -54,15 +54,15 @@ ms.locfileid: "32743577"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- ホストしている、管理対象のアプリケーション ドメイン クラスを通じて利用できるがアプリケーション ドメインのリソース監視[ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)インターフェイス、およびイベント トレース for Windows (ETW)。 監視を有効にすると、すべてのアプリケーション ドメイン、プロセスの有効期間のプロセスの統計が収集されます。  
+## <a name="remarks"></a>Remarks  
+ アプリケーション ドメインのリソースの監視をホスト、管理対象のアプリケーション ドメイン クラスを利用[ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)インターフェイスと event tracing for Windows (ETW)。 監視を有効にすると、プロセスの実行中のプロセス内のすべてのアプリケーション ドメインの統計情報が収集されます。  
   
- マネージ コードからの監視を有効にするには、<xref:System.AppDomain.MonitoringIsEnabled%2A>プロパティです。  
+ マネージ コードからの監視を有効にするには使用、<xref:System.AppDomain.MonitoringIsEnabled%2A>プロパティ。  
   
- この構成要素はでのみ使用できますが、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]およびそれ以降。  
+ この構成要素はでのみ使用できますが、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]以降。  
   
 ## <a name="example"></a>例  
- 次の例では、アプリケーション ドメインのリソース監視を有効にする方法を示します。  
+ 次の例では、アプリケーション ドメインのリソースの監視を有効にする方法を示します。  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "32743577"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

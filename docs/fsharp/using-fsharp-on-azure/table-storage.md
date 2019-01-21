@@ -1,16 +1,16 @@
 ---
-title: F# を使用した Azure Table storage の概要します。
+title: F# を使用した Azure Table Storage の概要
 description: Azure Table storage または Azure Cosmos DB を使用してクラウドで構造化データを格納します。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519536"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152074"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage と F# を使用して Azure Cosmos DB Table API の概要します。 # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F# を使用した Azure Table Storage と Azure Cosmos DB Table API の概要 # 
 
 Azure Table storage とは、クラウドで構造化 NoSQL データを格納するサービスです。 テーブル ストレージは、スキーマレス設計のキー/属性ストアです。 Table storage は、スキーマなしであるために、簡単に、アプリケーションの進化のニーズに合わせてデータを調整できますが。 データへのアクセスとは、高速でコスト効率に優れたアプリケーションのすべての種類です。 テーブル ストレージは、大幅に従来の SQL と同様、大量のデータよりも低コストでは通常です。
 
@@ -196,7 +196,7 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 - [Azure Cosmos DB Table API の概要](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [.NET リファレンス用ストレージ クライアント ライブラリ](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Azure Storage 型プロバイダー](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure Storage 型プロバイダー](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure Storage チーム ブログ](https://blogs.msdn.com/b/windowsazurestorage/)
 - [接続文字列の構成](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [.NET で Azure Table Storage の概要](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

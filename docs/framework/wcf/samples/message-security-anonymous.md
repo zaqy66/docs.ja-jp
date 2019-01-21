@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 8b31ebc846992f51484ae058ce05d9aa12590372
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2e8b17b22a55556615f2df7ab97295657da8a981
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195191"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222351"
 ---
 # <a name="message-security-anonymous"></a>メッセージ セキュリティ匿名
 メッセージ セキュリティ匿名サンプルは、Windows Communication Foundation (WCF) アプリケーションを実装するクライアント認証なしでメッセージ レベルのセキュリティを使用するが、サーバーの X.509 を使用して、サーバー認証を必要とする方法を示します証明書。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。 このサンプルは、クライアント コンソール プログラム (.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。
@@ -42,10 +42,9 @@ public class CalculatorService : ICalculator
 
   <bindings>
     <wsHttpBinding>
-     <!--
-     <!--This configuration defines the security mode as Message and-->
-     <!--the clientCredentialType as None. This mode provides -- >
-     <!--server authentication only using the service certificate.-->
+     <!-- This configuration defines the security mode as Message and -->
+     <!-- the clientCredentialType as None. This mode provides -->
+     <!-- server authentication only using the service certificate. -->
 
      <binding>
        <security mode="Message">
@@ -200,10 +199,10 @@ Press <ENTER> to terminate client.
 
 1.  Makecert.exe と FindPrivateKey.exe が含まれているフォルダーがパスに含まれていることを確認します。
 
-2.  管理特権で実行した Visual Studio コマンド プロンプトで、サンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+2.  管理者特権で実行する Visual Studio 用開発者コマンド プロンプトでサンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    > セットアップ バッチ ファイルは Visual Studio コマンド プロンプトから実行するように設計します。 path 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Visual Studio コマンド プロンプトで自動設定されます。  
+    > セットアップ バッチ ファイルは、Visual Studio の開発者コマンド プロンプトから実行する設計されています。 path 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は for Visual Studio 開発者コマンド プロンプトでを自動的に設定します。  
   
 3.  アドレスを入力して、ブラウザーを使用して、サービスへのアクセスを確認してください `http://localhost/servicemodelsamples/service.svc` です。  
   
@@ -221,7 +220,7 @@ Press <ENTER> to terminate client.
   
 4.  クライアント プログラム ファイルを、クライアント コンピューターに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。  
   
-5.  サーバー上で管理特権を使用して Visual Studio コマンド プロンプトを開き、`setup.bat service` を実行します。 実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、Service.cer というファイルに、サービス証明書をエクスポートします。  
+5.  サーバーで実行`setup.bat service`for Visual Studio 開発者コマンド プロンプトでは、管理者特権で開いた。 実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、Service.cer というファイルに、サービス証明書をエクスポートします。  
   
 6.  新しい証明書名を反映するように Web.config を編集 (で、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))、これは、コンピューターの完全修飾ドメイン名と同じです。  
   
@@ -229,7 +228,7 @@ Press <ENTER> to terminate client.
   
 8.  クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
   
-9. クライアント上で、管理特権を使用して Visual Studio コマンド プロンプトを開き、ImportServiceCert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
+9. クライアントには、開発者コマンド プロンプトで ImportServiceCert.bat を実行、Visual Studio を管理者特権で開いたの。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
   
 10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービス間で通信できない場合は、「 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)」を参照してください。  
   
@@ -238,6 +237,6 @@ Press <ENTER> to terminate client.
 -   サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
 > [!NOTE]
->  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.` となります。
+>  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 これを行うには、次のコマンドを使用します。`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` たとえば、次のように入力します。 `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
 
 ## <a name="see-also"></a>関連項目

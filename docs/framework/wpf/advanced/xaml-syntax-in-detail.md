@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485730"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030296"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素の説明に使用される用語を定義します。 これらの用語は、具体的には、XAML または System.Xaml レベルでの XAML 言語のサポートを有効になっている XAML の基本的な概念を使用する他のフレームワークも、このドキュメントは、WPF のドキュメントの両方の残りの部分でよく使用されます。 このトピックでは、トピックで導入された基本的な用語で展開[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)します。  
@@ -288,7 +288,7 @@ ms.locfileid: "43485730"
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>省略可能で、非推奨の XAML の使用法  
- 次のセクションでは、技術的には、XAML プロセッサでサポートされているが、詳細度または他の見た目の問題に干渉する場合にユーザーが判読できる残りの XAML ファイルを生成する XAML の使用法を説明します、XAML ソースが含まれているアプリケーションの開発.  
+ 次のセクションでは、技術的には、XAML プロセッサでサポートされているが、詳細やその他の XAML ソースを含むアプリケーションを開発するときに、人間が判読できる残りの XAML ファイルに干渉する見た目の問題を生成する XAML の使用法について説明します。  
   
 ### <a name="optional-property-element-usages"></a>省略可能なプロパティ要素の使用状況  
  省略可能なプロパティ要素の使用状況にで、XAML プロセッサが暗黙の型は考慮要素のコンテンツ プロパティを明示的に記述が含まれます。 内容を宣言する場合など、<xref:System.Windows.Controls.Menu>を明示的に宣言することもできます、<xref:System.Windows.Controls.ItemsControl.Items%2A>のコレクション、<xref:System.Windows.Controls.Menu>として、`<Menu.Items>`プロパティ要素のタグおよび配置<xref:System.Windows.Controls.MenuItem>内`<Menu.Items>`ではなく、暗黙的な XAML プロセッサの動作を使用するよりものすべての子要素を<xref:System.Windows.Controls.Menu>必要があります、<xref:System.Windows.Controls.MenuItem>に配置し、<xref:System.Windows.Controls.ItemsControl.Items%2A>コレクション。 場合がありますの省略可能な使用状況を視覚的に、マークアップで表されるオブジェクトの構造が明確にできます。 または、明示的なプロパティ要素の使用は技術的には、属性値内の入れ子になったマークアップ拡張機能など、視覚的に混乱しますが、機能するマークアップを回避することがあります。  
@@ -317,7 +317,7 @@ ms.locfileid: "43485730"
   
 ## <a name="see-also"></a>関連項目  
  [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML 名前空間 (x:) 言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [XAML Namespace (x:)言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML 拡張機能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverters および XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

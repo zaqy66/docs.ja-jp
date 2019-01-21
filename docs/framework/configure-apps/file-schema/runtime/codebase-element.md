@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 7e52899a953644fc3cf7189bf557f5ade2863161
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847301"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613155"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;コードベース&gt;要素
 共通言語ランタイムがアセンブリを検索する場所を指定します。  
@@ -90,7 +90,7 @@ href="URL of assembly"/>
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [アセンブリの場所の指定](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [アセンブリの場所の指定](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

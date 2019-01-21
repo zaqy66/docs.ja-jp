@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201583"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397047"
 ---
 # <a name="best-practices-for-assembly-loading"></a>アセンブリの読み込みのベスト プラクティス
 ここでは、<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。 また、次の推奨事項について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "50201583"
   
 -   読み込み元コンテキストには、ローダーによって検索されない場所から読み込まれたアセンブリが含まれます。 たとえば、アドインが、アプリケーション パスではないディレクトリにインストールされることがあります。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> は、パスを使用して読み込むメソッドの例です。  
   
--   リフレクション専用コンテキストには、<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> メソッドと <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> メソッドを使用して読み込まれたアセンブリが含まれます。 このコンテキスト内のコードは実行できないため、ここでは説明しません。 詳細については、「[方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
+-   リフレクション専用コンテキストには、<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> メソッドと <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> メソッドを使用して読み込まれたアセンブリが含まれます。 このコンテキスト内のコードは実行できないため、ここでは説明しません。 詳細については、「[方法 :リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
 -   リフレクション出力を使用して一時動的アセンブリを出力した場合、そのアセンブリはどのコンテキストにも含まれません。 また、<xref:System.Reflection.Assembly.LoadFile%2A> メソッドを使用して読み込まれる大部分のアセンブリは、コンテキストなしで読み込まれます。バイト配列から読み込まれるアセンブリは、(ポリシーが適用された後の) アセンブリの ID がグローバル アセンブリ キャッシュ内に存在するように確立される場合を除き、コンテキストなしで読み込まれます。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "50201583"
  すべてのアセンブリをプローブ パスに置くことができない場合は、.NET Framework アドイン モデルの使用、アセンブリのグローバル アセンブリ キャッシュ内への配置、アプリケーション ドメインの作成などの代替手段を検討してください。  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>.NET アドイン モデルの使用を検討する  
- 読み込み元コンテキストを使用してアドインを実装している場合 (通常、これらはアプリケーション ベースにはインストールされません)、.NET Framework アドイン モデルを使用してください。 このモデルでは、アプリケーション ドメインまたはプロセス レベルでの分離が提供されます。アプリケーション ドメインを管理する必要はありません。 アドイン モデルの詳細については、「[アドインおよび拡張機能](../../../docs/framework/add-ins/index.md)」を参照してください。  
+ 読み込み元コンテキストを使用してアドインを実装している場合 (通常、これらはアプリケーション ベースにはインストールされません)、.NET Framework アドイン モデルを使用してください。 このモデルでは、アプリケーション ドメインまたはプロセス レベルでの分離が提供されます。アプリケーション ドメインを管理する必要はありません。 アドイン モデルの詳細については、「[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>グローバル アセンブリ キャッシュの使用を検討する  
  アセンブリをグローバル アセンブリ キャッシュに配置すると、アプリケーション ベースの外部にある共有アセンブリ パスの利点を活用できます。既定の読み込みコンテキストのメリットが損なわれたり、その他のコンテキストのデメリットが生じたりすることはありません。  
@@ -170,4 +170,3 @@ ms.locfileid: "50201583"
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [アドインおよび拡張機能](../../../docs/framework/add-ins/index.md)

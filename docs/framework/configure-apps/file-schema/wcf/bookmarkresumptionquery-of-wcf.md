@@ -2,12 +2,12 @@
 title: WCF の &lt;bookmarkResumptionQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: f0721e7e14d543b1ff212fe59ed6a2de0a8a9968
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308433"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147812"
 ---
 # <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF の &lt;bookmarkResumptionQuery&gt;
 
@@ -25,7 +25,7 @@ ms.locfileid: "49308433"
   
 ## <a name="syntax"></a>構文  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,9 +36,9 @@ ms.locfileid: "49308433"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>属性と要素
 
 以降のセクションでは、属性、子要素、および親要素について説明します。  

@@ -4,12 +4,12 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0ae1a44b41ddcae2149bcf685871a37dd01b06
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746775"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612193"
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt;要素
 
@@ -35,14 +35,14 @@ ms.locfileid: "32746775"
   
 | 属性 | 説明                                                                                   |  
 | --------- | --------------------------------------------------------------------------------------------- |  
-| `enabled` | 必須の属性です。<br><br>ランタイムがレガシの 64 ビット JIT コンパイラを使用しているかどうかを指定します。 |  
+| `enabled` | 必須の属性です。<br><br>ランタイムが従来の 64 ビット JIT コンパイラを使用するかどうかを指定します。 |  
   
 ### <a name="enabled-attribute"></a>enabled 属性  
   
 | [値] | 説明                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
-| 0     | 共通言語ランタイムは、.NET Framework 4.6 およびそれ以降のバージョンに含まれる新しい 64 ビット JIT コンパイラを使用します。 |  
-| 1     | 共通言語ランタイムは、以前の 64 ビット JIT コンパイラを使用します。                                                     |  
+| 0     | 共通言語ランタイムは、.NET Framework 4.6 および以降のバージョンに含まれる新しい 64 ビット JIT コンパイラを使用します。 |  
+| 1     | 共通言語ランタイムは、古い 64 ビット JIT コンパイラを使用します。                                                     |  
   
 ### <a name="child-elements"></a>子要素
 
@@ -55,34 +55,34 @@ ms.locfileid: "32746775"
 | `configuration` | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |  
 | `runtime`       | ランタイム初期化オプションに関する情報を含んでいます。                                                        |  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 
-.NET Framework 4.6 以降では、共通言語ランタイム新しい 64 ビットのコンパイラの Just-In-Time (JIT) コンパイル既定で使用します。 場合によっては、以前のバージョンの 64 ビット JIT コンパイラが JIT でコンパイルされたアプリケーション コードからの動作の違いにあります。 設定して、`enabled`の属性、`<useLegacyJit>`要素`1`、新しい 64 ビット JIT コンパイラを無効にし、代わりに、従来の 64 ビット JIT コンパイラを使用して、アプリをコンパイルすることができます。  
+以降、.NET Framework 4.6 では、共通言語ランタイムを使用して新しい 64 ビット コンパイラの Just-In-Time (JIT) コンパイル既定。 場合によっては、64 ビット JIT コンパイラの以前のバージョンで JIT コンパイルされたアプリケーション コードからの動作の違いにあります。 設定して、`enabled`の属性、`<useLegacyJit>`要素`1`、新しい 64 ビット JIT コンパイラを無効にし、代わりに、従来の 64 ビット JIT コンパイラを使用して、アプリをコンパイルすることができます。  
   
 > [!NOTE]
-> `<useLegacyJit>`要素が 64 ビット JIT コンパイルのみに影響します。 32 ビット JIT コンパイラによるコンパイルには影響しません。  
+> `<useLegacyJit>`要素が 64 ビット JIT コンパイルのみに影響します。 32 ビット JIT コンパイラによるコンパイルには影響を受けません。  
   
-構成ファイルの設定を使用する代わりにその他の 2 つの方法では、レガシの 64 ビット JIT コンパイラを有効にすることができます。  
+構成ファイルの設定を使用する代わりに、その他の 2 つの方法では、従来の 64 ビット JIT コンパイラが有効にできます。  
   
 - 環境変数の設定
 
-  設定、`COMPLUS_useLegacyJit`いずれかのように環境変数`0`(新しい 64 ビット JIT コンパイラを使用) または`1`(古い 64 ビット JIT コンパイラを使用)。
+  設定、`COMPLUS_useLegacyJit`するか、環境変数`0`(新しい 64 ビット JIT コンパイラを使用) または`1`(以前の 64 ビット JIT コンパイラを使用)。
   
   ```  
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  環境変数が*グローバル スコープ*コンピューター上のすべてのアプリケーションを実行に影響を与えることを意味します。 かどうか設定をオーバーライドできますアプリケーション構成ファイルの設定をします。 環境変数の名前は区別されません。
+  環境変数が*グローバル スコープ*マシン上のすべてのアプリケーションで実行に影響を与えることを意味します。 かどうか設定をオーバーライドできますでアプリケーション構成ファイルの設定。 環境変数名は区別されません。
   
 - レジストリ キーを追加します。
 
-  追加することで、従来の 64 ビット JIT コンパイラを有効にすることができます、`REG_DWORD`するか、値、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`または`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`レジストリのキー。 値が名前付き`useLegacyJit`します。 値が 0 の場合、新しいコンパイラが使用されます。 値が 1 の場合は、従来の 64 ビット JIT コンパイラは有効です。 レジストリ値の名前は区別されません。
+  追加することで、従来の 64 ビット JIT コンパイラを有効にすることができます、`REG_DWORD`いずれかの値、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`または`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`レジストリのキー。 値の名前は`useLegacyJit`します。 値が 0 の場合は、新しいコンパイラが使用されます。 値が 1 の場合は、従来の 64 ビット JIT コンパイラが有効にします。 レジストリ値の名前は区別されません。
   
-  値を追加する、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`キー、マシンで実行されているすべてのアプリに影響します。 値を追加する、`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`キーが現在のユーザーが実行するすべてのアプリに影響します。 コンピューターが複数のユーザー アカウントを使って構成されている場合のみアプリ現在のユーザーが実行には影響、他のユーザーを同様のレジストリ キーに値を追加しない限り、します。 追加する、`<useLegacyJit>`存在である場合、構成ファイルに要素が、レジストリ設定をオーバーライドします。  
+  値を追加、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`キー、マシンで実行されているすべてのアプリに影響を与えます。 値を追加、`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`キーが現在のユーザーが実行するすべてのアプリに影響します。 マシンには、複数のユーザー アカウントを構成、現在のユーザーが実行するアプリのみに影響、値が他のユーザーのレジストリ キーを追加しない限り、します。 追加、`<useLegacyJit>`要素を構成ファイルが存在する場合、レジストリに設定をオーバーライドします。  
   
 ## <a name="example"></a>例  
 
-次の構成ファイルでは、新しい 64 ビット JIT コンパイラでコンパイルを無効になり、代わりに、従来の 64 ビット JIT コンパイラを使用します。  
+次の構成ファイルでは、新しい 64 ビット JIT コンパイラでコンパイルを無効にし、代わりに、従来の 64 ビット JIT コンパイラを使用します。  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,6 +95,6 @@ ms.locfileid: "32746775"
   
 ## <a name="see-also"></a>関連項目
 
-[\<ランタイム > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-[\<configuration > 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
-[軽減策: 新しい 64 ビット JIT コンパイラ](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [\<ランタイム > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
+- [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [軽減策:新しい 64 ビット JIT コンパイラ](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

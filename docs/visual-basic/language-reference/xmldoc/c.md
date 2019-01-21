@@ -27,7 +27,7 @@ ms.locfileid: "44041123"
 |---|---|  
 |`text`|コードとして指定するテキストです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `<c>`タグを使用する方法を示す説明内のテキストをコードとしてマークする必要があります。 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  

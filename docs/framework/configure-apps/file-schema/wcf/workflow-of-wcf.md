@@ -2,12 +2,12 @@
 title: WCF の &lt;workflow&gt;
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: 7f6e648b98f436074c7fc5c563b4b5879158bcc3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2990cb474e0c874841b69bdef166c2be3f1c857d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308314"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148917"
 ---
 # <a name="ltworkflowgt-of-wcf"></a>WCF の &lt;workflow&gt;
 ランタイムから直接出力される追跡レコードをリッスンし、追跡レコードの構成方法に従って処理を行う追跡参加要素を構成します。 これには、特定の出力 (ファイル、コンソール、ETW など) への書き込み、レコードの処理や集計、またはその他の必要な組み合わせが含まれます。  
@@ -21,14 +21,14 @@ ms.locfileid: "49308314"
   
 ## <a name="syntax"></a>構文  
   
-```xml
-  <tracking>
-    <participants>
-      <add name="String"
-            profileName="String"
-            type="String" />
-    </participants>
-  </tracking>   
+```xml  
+<tracking>
+  <participants>
+    <add name="String"
+         profileName="String"
+         type="String" />
+  </participants>
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -64,28 +64,28 @@ ms.locfileid: "49308314"
  ETW 追跡参加要素が追跡レコードを ETW に書き込むために使用するプロバイダー ID は、`<diagnostics>` セクションで定義されます。 追跡参加要素には、その要素が定期受信した追跡レコードを指定するためのプロファイルが関連付けられています。 これは、`profileName` 要素の `<add>` 属性で定義されます。 これらが定義されると、追跡参加要素は `<etwTracking>` サービス動作に追加されます。 これにより、選択した追跡参加要素がワークフロー インスタンスの拡張機能に追加され、追跡レコードの受信が開始されます。  
   
 ```xml  
-<configuration>   
-  <system.web>   
-    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
-  </system.web>   
-  <system.serviceModel>   
-    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />                
-    <tracking>   
-      <participants>   
-        <add name="EtwTrackingParticipant"   
-             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"   
-             profileName="HealthMonitoring_Tracking_Profile"/>   
-      </participants>   
-    </tracking>   
-    <behaviors>   
-      <serviceBehaviors>   
-        <behavior>   
-          <etwTracking profileName="Sample Tracking Profile"/>  
-        </behavior>   
-      </serviceBehaviors>   
-    </behaviors>   
-  </system.serviceModel>   
-</configuration>  
+<configuration>
+  <system.web>
+    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0" />
+  </system.web>
+  <system.serviceModel>
+    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />
+    <tracking>
+      <participants>
+        <add name="EtwTrackingParticipant"
+             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+             profileName="HealthMonitoring_Tracking_Profile" />
+      </participants>
+    </tracking>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <etwTracking profileName="Sample Tracking Profile" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>関連項目  

@@ -2,18 +2,18 @@
 title: インターネット インフォメーション サービス (IIS) サーバー証明書インストール手順
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a89d907b9be25c83a74f0c5d60d184637552f297
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838248"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221103"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>インターネット インフォメーション サービス (IIS) サーバー証明書インストール手順
 インターネット インフォメーション サービス (IIS) と安全に通信するこのサンプルを実行するには、サーバー証明書を作成してインストールする必要があります。  
   
 ## <a name="step-1-creating-certificates"></a>手順 1. 証明書の作成  
- 使用しているコンピューター用の証明書を作成するには、管理特権を使用して Visual Studio コマンド プロンプトを開き、Setup.bat を実行します。Setup.bat は IIS と安全に通信する各サンプルに含まれています。 このバッチ ファイルを実行する前に、Makecert.exe を含むフォルダーがパスに含まれていることを確認します。 Setup.bat で証明書の作成に使用されるコマンドは、次のとおりです。  
+ コンピューターの証明書を作成するには、管理者特権で Visual Studio の開発者コマンド プロンプトを開きし、の各 IIS をセキュリティで保護された通信を使用するサンプルに含まれている Setup.bat を実行します。 このバッチ ファイルを実行する前に、Makecert.exe を含むフォルダーがパスに含まれていることを確認します。 Setup.bat で証明書の作成に使用されるコマンドは、次のとおりです。  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  

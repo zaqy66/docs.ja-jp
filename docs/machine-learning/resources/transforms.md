@@ -1,142 +1,176 @@
 ---
-title: ML.NET のデータ変換
-description: ML.NET でサポートされているさまざまなデータ変換について説明します。
+title: 機械学習データ変換 - ML.NET
+description: ML.NET でサポートされている機能エンジニアリングのコンポーネントについて検証します。
 author: JRAlexander
-ms.date: 10/16/2018
-ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.date: 01/14/2019
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143949"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415352"
 ---
-# <a name="data-transforms-in-mlnet"></a>ML.NET のデータ変換
+# <a name="machine-learning-data-transforms---mlnet"></a>機械学習データ変換 - ML.NET
 
-次の表には、ML.NET でサポートされるすべてのデータ変換の情報が含まれています (データ変換の種類を選択すると、対応する表に移動します)。
-
-* [カテゴリ](#categorical)
-* [結合と分離](#combiners-and-segregators)
-* [フィーチャーの選択](#feature-selection)
-* [フィーチャライザー](#featurizers)
-* [ラベルの解析](#label-parsing)
-* [欠損値](#missing-values)
-* [正規化](#normalization)
-* [行フィルター](#row-filters)
-* [スキーマ](#schema)
-* [テキスト処理と特徴付け](#text-processing-and-featurization)
-* [その他](#miscellaneous)
+次の表には、ML.NET でサポートされているすべてのデータ変換に関する情報が含まれています。
 
 > [!NOTE]
 > ML.NET は現在プレビュー段階です。 現時点では、すべてのデータ変換がサポートされているわけではありません。 特定の変換に対するご要望を送信するには、[dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues) GitHub リポジトリで問題をオープンしてください。
-
-## <a name="categorical"></a>カテゴリ
-
-| 変換 | 定義 |
-| --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CategoricalHashOneHotVectorizer> | ハッシュ ベースのエンコードを使用してカテゴリ変数をエンコードします。 |
-| <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer> | 用語の辞書に基づき、ワンホット エンコードを使用して、カテゴリ変数をエンコードします。 |
 
 ## <a name="combiners-and-segregators"></a>結合と分離
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CombinerByContiguousGroupId> | 連続するグループ ID に基づいて、スカラー列の値をベクターにグループ化します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | すべてのフィーチャーを 1 つのフィーチャーの列に結合します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | TransformModels のシーケンスと PredictorModel を 1 つの PredictorModel に結合します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | TransformModels のシーケンスを 1 つのモデルに結合します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.Segregator> | ベクター列をグループ解除して行のシーケンスにします。グループ化変換の逆です。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | TransformModel と PredictorModel を 1 つの PredictorModel に結合します。 |
+| <xref:Microsoft.ML.Transforms.GroupTransform> | 連続するグループ ID に基づいて、スカラー列の値をベクターにグループ化します。 |
+| <xref:Microsoft.ML.Transforms.UngroupTransform> | ベクター列をグループ解除して行のシーケンスにします。グループ化変換の逆です。 |
 
-## <a name="feature-selection"></a>フィーチャーの選択
+## <a name="conversions"></a>変換 
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByCount> | 既定値以外の値の数がしきい値以上のスロットを選択します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByMutualInformation> | ラベル列を持つ相互情報によって指定されたすべての列にわたって、最上位の k スロットを選択します。 |
+| <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | 単一の値の列またはベクター列のいずれかをハッシュします。 ベクター列の場合、スロットごとに個別にハッシュします。 これは、テキスト値またはキー値のいずれかをハッシュできます。 |
+| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | 複数の列の値をハッシュに変換します。 この変換では、数値とテキストの両方の入力と、単一値とベクター値の両方の列を受け入れます。 |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | キーをバイナリ ベクター列に変換します。 |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | KeyValues メタデータを使用してキー インデックスを KeyValues メタデータ内の対応する値にマップします。 |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | キーをベクター列に変換します。 |
+| <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | 型を指定した基になる列の型の変更は、変換できます。 |
+| <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | 入力値 (単語、数字など) をディクショナリ内のインデックスに変換します。 |
 
-## <a name="featurizers"></a>フィーチャライザー
+
+## <a name="deep-learning"></a>ディープ ラーニング
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | 列の値をハッシュに変換します。 この変換では、数値とテキストの両方の入力と、単一値とベクター値の両方の列を受け入れます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TreeLeafFeaturizer> | ツリー アンサンブルをトレーニングするか、ファイルから読み込んで、数値特徴ベクトルを 3 つの出力にマップします。1. ツリー アンサンブルの個別のツリー出力を含むベクター。 2. ツリー アンサンブル内で特徴ベクトルが位置するリーフを示すベクター。 3. ツリー アンサンブル内で特徴ベクトルが位置するパスを示すベクター。 モデル ファイルとトレーナーの両方が指定されている場合、ベクターではモデル ファイルが使用されます。 どちらも指定されていない場合、ベクターによって既定の FastTree モデルがトレーニングされます。 これでキー ラベルを処理するには、必要に応じて順序を変更したインデックスに対する回帰モデルをトレーニングします。 |
+| <xref:Microsoft.ML.Transforms.OnnxTransform> | 既存の ONNX モデルにデータを提供し、スコアを返します (予測)。 |
+| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | 事前トレーニング済みの TensorFlow モデルを使用してスコア付けするか、TensorFlow モデルを再トレーニングすることができます。 |
+
+## <a name="feature-extraction"></a>特徴抽出
+
+| 変換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 個々のトークンをストップワードと比較 (大文字と小文字を区別しない比較) することで、ストップワードの指定されたリストを削除します。| 
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 1 つまたは複数の ImageType 列を取得して、それらを同じイメージのグレースケール表現に変換します。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 1 つまたは複数の ReadOnlyMemory 列を取得し、それらを ImageType として読み込みます。 |
+| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 1 つまたは複数の ImageType 列を取得して、それらをベクター表現に変換します。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 1 つまたは複数の ImageType 列を取得して、それらを指定した高さと幅にサイズ変更します。|
+| <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | LightLDA (Latent Dirichlet Allocation の最新の実装) を実装します。|
+| <xref:Microsoft.ML.Transforms.LoadTransform> | 指定したモデル ファイルから特定の変換を読み込みます。 シリアル化されたチェーンからの 'チェリー ピック' 変換を可能にしたり、事前トレーニング済みの変換を異なる (ただし互換性がある) データ ビューに適用することができます。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | キーの指定のベクターで、n-gram のカウントのバッグ (長さ 1-n の連続する値のシーケンス) が生成されます。 n-gram のディクショナリをビルドし、ディクショナリの ID をバッグのインデックスとして使用することでこれを行います。 | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | トークン化されたテキスト (ReadOnlyMemory のベクター) のコレクション、またはキーのベクターを数値特徴ベクトルに変換します。 特徴ベクトルは n-gram のカウント (長さ 1-n の連続するトークン (単語またはキー) のシーケンス) です。 | 
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | ハッシュを使用して、トークン化されたテキスト (ReadOnlyMemory のベクター) のコレクションを数値特徴ベクトルに変換します。 | 
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 指定したテキストで、n-gram のカウントのバッグ (長さ 1-n の連続する単語のシーケンス) を生成します。 | 
+| <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | データに基づいてカテゴリのディクショナリをビルドし、ディクショナリ内の ID を配列内のインデックスとして使用することで、カテゴリ値をインジケーター配列に変換します。 |
+| <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 特徴ベクトルの低ランク サブ空間へのプロジェクションを計算します。 |
+| <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 事前にトレーニングされたセンチメント モデルを使用して、入力文字列をスコア付けします。 |
+| <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | 個々のトークンをストップワードと比較 (大文字と小文字を区別しない比較) することで、ストップワード (最もよく使われている単語) の言語固有のリストを削除します。 |
+| <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | 指定したテキストで、n-gram のカウントのバッグ (連続する単語のシーケンス) を生成します。 n-gram のディクショナリをビルドし、ディクショナリの ID をバッグのインデックスとして使用することでこれを行います。 |
+| <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | 指定したテキストで、n-gram のカウントのバッグ (長さ 1-n の連続する単語のシーケンス) を生成します。 n-gram ごとにハッシュし、ハッシュ値をバッグ内のインデックスとして使用することでこれを行います。 |
+| <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | 区切り文字を使用してテキストを単語に分割します。 |
+
+
+## <a name="image-model-featurizers"></a>イメージ モデル フィーチャライザー
+
+| 変換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | これは、事前トレーニング済みの [AlexNet](https://en.wikipedia.org/wiki/AlexNet) モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 | 
+| <xref:Microsoft.ML.Transforms.ResNet18Extension> | これは、事前トレーニング済みの ResNet18 モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 |
+| <xref:Microsoft.ML.Transforms.ResNet50Extension> | これは、事前トレーニング済みの ResNet50model モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 |
+| <xref:Microsoft.ML.Transforms.ResNet101Extension> | これは、事前トレーニング済みの ResNet101 モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 |
 
 ## <a name="label-parsing"></a>ラベルの解析
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | 入力値 (単語、数字など) をディクショナリ内のインデックスに変換します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | ラベルを分類に適したものにするため、キーまたはブール値 (必要な場合) に変換します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelIndicator> | OVA で使用される再マッパーにラベル付けします。 |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | ラベルを回帰に最適なものにするため、float 型に変換します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | 予測されるラベル列が bool 型である場合を除き、元の値に変換します。 |
+| <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  ラベルを変換します。 |
+| <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | 主に OVA で使用するために、多クラス ラベルをバイナリ True、False ラベルに再マップします。|
 
 ## <a name="missing-values"></a>欠損値
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueHandler> | 欠損値は、既定値または平均値/最小値/最大値 (テキスト以外の列の場合のみ) のいずれかで置き換えることで処理します。 インジケーター列は、入力列の型が数値の場合には、必要に応じて連結できます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueIndicator> | 入力列と同じ数のスロットを持つブール値出力列を作成します。この場合、入力列に値がない場合、出力値は true です。 |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValuesDropper> | ベクター列から NA を削除します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValuesRowDropper> | 欠損値を含む行を除外します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueSubstitutor> | 入力列と同じ型とサイズの出力列を作成します。この場合、欠損値は既定値または平均値/最小値/最大値 (テキスト以外の列の場合のみ) のいずれかで置き換えられます。 |
+| <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | 列から欠損値をドロップします。 |
+| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 入力列と同じ数のスロットを持つブール値出力列を作成します。この場合、入力列に値がない場合、出力値は true です。 |
+| <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | 欠損値は、既定値または平均値/最小値/最大値 (テキスト以外の列の場合のみ) のいずれかで置き換えることで処理します。 |
 
 ## <a name="normalization"></a>正規化
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.BinNormalizer> | 値が等密度のビンに割り当てられ、値がその bin_number / number_of_bins にマップされます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ConditionalNormalizer> | 必要な場合にのみ、列を正規化します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.GlobalContrastNormalizer> | 入力値に対してグローバル コントラスト正規化を実行します。Y = (s * X - M) / D。ここで、s はスケール、M は平均、D は L2 norm または標準偏差です。 | 
-| <xref:Microsoft.ML.Legacy.Transforms.LogMeanVarianceNormalizer> | データの対数の計算された平均と分散に基づいて、データを正規化します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.LpNormalizer> | ベクター (行) を単位 norm (L2、L1 または LInf) に再スケーリングすることで、個別に正規化します。 ベクター X で、Y = (X - M) / D の演算を実行します。ここで、M は平均、D は L2 norm、L1 norm、または LInf norm のいずれかです。 |
-| <xref:Microsoft.ML.Legacy.Transforms.MeanVarianceNormalizer> | データの計算された平均と分散に基づいて、データを正規化します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.MinMaxNormalizer> | データの観察された最小値と最大値に基づいて、データを正規化します。 |
+| <xref:Microsoft.ML.Transforms.Projections.LpNormalizingTransformer> | Lp-Norm (ベクター/行方向) 正規化変換。 |
+| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | ベクター値列の平均と分散を計算します。 現在の平均と M2 (平均からの値の 2 乗差の合計)、NaNs の数、ゼロ以外の要素の数を追跡します。 |
+| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | ベクター値列の平均と分散を計算します。 現在の平均と M2 (平均からの値の 2 乗差の合計)、NaNs の数、ゼロ以外の要素の数を追跡します。 |
+| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | 最小値、最大値、非スパース値の数 (vCount)、およびベクター値列に対する ProcessValue() の呼び出し回数 (trainCount) を追跡します。 |
+| <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | 機能範囲を標準化します。 |
+| <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |機能範囲を標準化します。 |
+
+## <a name="onnx"></a>Onnx
+
+| 変換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.OnnxTransform> | ONNX standard v1.2 を使用する事前トレーニング済みの ONNX モデルにスコア付けします。 |
+
+## <a name="preprocessing"></a>前処理
+| 変換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | ポアソン分布のサンプリングを使用してブートストラップのサンプリングの近似値を求めます。 |
+| <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | ランダムなフーリエ機能を生成します。 |
+| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | テキストが文字のシーケンスと見なされる文字指向のトークナイザー。 |
+| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | 重みを識別できるように最適化を単純化します。 |
 
 ## <a name="row-filters"></a>行フィルター
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.RowRangeFilter> | Single、Double または Key (連続) 型の列で dataview をフィルター処理します。 指定した最小/最大の範囲内に値を保持します。 NaNs は常に除外されます。入力が Key 型の場合、最小/最大は値の数の割合と見なされます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.RowSkipAndTakeFilter> | 任意のオフセットで行のサブセットへの入力を制限することができます。 データのページングを実装するために使用できます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.RowSkipFilter> | 行の数をスキップすることで行のサブセットへの入力を制限することができます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.RowTakeFilter> | 最初の N 行を取得することで行のサブセットへの入力を制限することができます。 |
+| <xref:Microsoft.ML.Transforms.RowShufflingTransformer> | 指定した行数のプールを使用して、実行しようとしているランダム化されたカーソルをシャッフルします。  |
+| <xref:Microsoft.ML.Transforms.SkipFilter> | 行の数をスキップすることで行のサブセットへの入力を制限することができます。 |
+| <xref:Microsoft.ML.Transforms.SkipTakeFilter> | 任意のオフセットで行のサブセットへの入力を制限することができます。 データのページングを実装するために使用できます。 SkipTakeFilter.SkipArguments で作成されると、`SkipFilter` として動作します。
+| <xref:Microsoft.ML.Transforms.TakeFilter> | 最初の N 行を取得することで行のサブセットへの入力を制限することができます。 |
+
 
 ## <a name="schema"></a>Schema
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> | 項目の種類が同じ 2 つの列を連結します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> | データセットから列を複製します。|
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnDropper> | データセットから列を削除します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnSelector> | 列のセットを選択し、それ以外のすべてを削除します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnTypeConverter> | 標準の変換を使用して、列を別の型に変換します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform では、KeyValues メタデータを使用してキー インデックスを KeyValues メタデータ内の対応する値にマップします。 |
-| <xref:Microsoft.ML.Legacy.Transforms.NGramTranslator> | キーの指定のベクターで、n-gram のカウントのバッグ (長さ 1-n の連続する値のシーケンス) が生成されます。 n-gram のディクショナリをビルドし、ディクショナリの ID をバッグのインデックスとして使用することでこれを行います。 | 
-| <xref:Microsoft.ML.Legacy.Transforms.OptionalColumnCreator> | 逆シリアル化にソース列が存在しない場合は、適切な型と既定値を持つ列を作成します。 |
+| <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | データセットから列を複製します。|
+| <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | 特定の入力からドロップまたは保持する列のセットを選択します。 |
+| <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | 列からスロットをドロップします。|
+| <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | 指定した型と既定値を使用して、新しい列を作成します。 |
+| <xref:Microsoft.ML.Transforms.RangeFilter> | Single、Double または Key (連続) 型の列で dataview をフィルター処理します。 指定した最小/最大の範囲内に値を保持します。 NaNs は常に除外されます。入力が Key 型の場合、最小/最大は値の数の割合と見なされます。 |
+
+## <a name="tensorflow"></a>TensorFlow
+
+| 変換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | 事前トレーニング済みの TensorFlow モデルを使用してスコア付けするか、TensorFlow モデルを再トレーニングします。 |
 
 ## <a name="text-processing-and-featurization"></a>テキスト処理と特徴付け
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CharacterTokenizer> | テキストが文字のシーケンスと見なされる文字指向のトークナイザー。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> | テキスト ドキュメントのコレクションを数値特徴ベクトルにする変換。 特徴ベクトルは、特定のトークン化されたテキストの (単語や文字) n-gram の正規化されたカウントです。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TextToKeyConverter> | 入力値 (単語、数字など) をディクショナリ内のインデックスに変換します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.WordEmbeddings> | 事前にトレーニングされたモデルを使用して、テキスト トークンを数値ベクターに変える変換。 この手法の詳細については、Wikipedia の [Word embedding](https://en.wikipedia.org/wiki/Word_embedding) のページ (英語) を参照してください。 |
-| <xref:Microsoft.ML.Legacy.Transforms.WordTokenizer> | この変換への入力はテキストで、出力は元のテキスト内の単語 (トークン) を含む文字列のベクターです。 区切り記号は空白文字ですが、他の任意の文字 (または複数の文字) を指定することもできます。 |
+| <xref:Microsoft.ML.Transforms.Text.TextNormalizingTransformer> | テキストの大文字と小文字の正規化、分音記号、句読点、数字を削除できるテキストの正規化変換。 変換は、テキスト入力とトークンまたテキストのベクター (ReadOnlyMemory のベクター) で動作します。 |
+| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | テキストが文字のシーケンスと見なされる文字指向のトークナイザー。 |
+
+## <a name="time-series"></a>時系列
+
+| 変換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | 値の加重平均を取得します。ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)) |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | アダプティブ カーネル密度の推定とマーチンゲールに基づいて、i.i.d. シーケンス (ランダムなサンプル) の変更点の検出機能変換を実装します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | アダプティブ カーネル密度の推定に基づいて、i.i.d. シーケンス (ランダムなサンプル) のスパイクの検出機能変換を実装します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | スライディング ウィンドウの値の加重平均を提供します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | 時系列の現在の値がスライディング ウィンドウのトップ値パーセンタイルに属しているかどうかを判断します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | スライディング ウィンドウ内の他の値に基づいて、時系列の現在の値の経験的 p 値を計算します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Single 型の時系列でスライディング ウィンドウを出力します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | 時系列の Singular Spectrum モデリングに基づいて変更点の検出機能変換を実装します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | 時系列の Singular Spectrum モデリングに基づいてスパイクの検出機能変換を実装します。 |
 
 ## <a name="miscellaneous"></a>その他
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.ApproximateBootstrapSampler> | ブートストラップ サンプリングを概算します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.BinaryPredictionScoreColumnsRenamer> | バイナリの予測の場合、PredictedLabel 列と Score 列の名前を、正のクラスの名前を含めるように変更します。|
-| <xref:Microsoft.ML.Legacy.Transforms.DataCache> | 指定されたキャッシュ オプションを使用してキャッシュします。 |
-| <xref:Microsoft.ML.Legacy.Transforms.DatasetScorer> | 予測モデルを使用してデータセットをスコア付けします。 |
-| <xref:Microsoft.ML.Legacy.Transforms.DatasetTransformScorer> | 変換モデルを使用してデータセットをスコア付けします。 |
-| <xref:Microsoft.ML.Legacy.Transforms.NoOperation> | 処理を行いません。 |
-| <xref:Microsoft.ML.Legacy.Transforms.RandomNumberGenerator> | 生成された数字シーケンスを使用して列を追加します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ScoreColumnSelector> | 最後のスコア列と、引数で指定された追加の列のみを選択します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.Scorer> | 予測モデルを変換モデルに変えます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.SentimentAnalyzer> | 事前にトレーニングされたセンチメント モデルを使用して、入力文字列をスコア付けします。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TrainTestDatasetSplitter> | データセットをトレーニングとテストのセットに分割します。 |
+| <xref:Microsoft.ML.Transforms.CompositeTransformer> | Composite DataTransform を作成します。 |
+| <xref:Microsoft.ML.Transforms.CustomMappingTransformer%602> | 指定した `IDataView` に追加の列を生成します。 行数は変更せずに、ユーザーの関数の適用結果として、入力データのすべての行に表示されます。|
+| <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | 生成された数字シーケンスを使用して列を追加します。 |
+| <xref:Microsoft.ML.Transforms.ProduceIdTransform> | カーソルの ID を使用して列を生成します。 |
+| <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | 乱数を生成します。 |

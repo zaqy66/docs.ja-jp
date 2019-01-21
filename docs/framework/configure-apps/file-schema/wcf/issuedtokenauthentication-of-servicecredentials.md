@@ -2,18 +2,18 @@
 title: '&lt;serviceCredentials&gt; の &lt;issuedTokenAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: 87e96e5942a02069371462b8c6301e03f681d5ce
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 43f03ad32345195324c9ba2a3977d294a7a2b789
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749970"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151489"
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; の &lt;issuedTokenAuthentication&gt;
 サービス資格情報として発行されるカスタム トークンを指定します。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
@@ -22,24 +22,23 @@ ms.locfileid: "32749970"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<issuedTokenAuthentication   
-   allowUntrustedRsaIssuers="Boolean"  
-   audienceUriMode="Always/BearerKeyOnly/Never"  
-      customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
-certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
-   revocationMode="NoCheck/Online/Offline"  
-   samlSerializer="String"  
-    trustedStoreLocation="CurrentUser/LocalMachine">  
-      <allowedAudienceUris>  
-      <add allowedAudienceUri="String"/>  
-      </allowedAudienceUris>  
-      <knownCertificates>   
-         <add findValue="String"  
-                 storeLocation="CurrentUser/LocalMachine"  
-                storeName=" CurrentUser/LocalMachine"  
-                x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"/>  
-      </knownCertificates>  
-</issuedTokenAuthentication>  
+<issuedTokenAuthentication allowUntrustedRsaIssuers="Boolean"
+                           audienceUriMode="Always/BearerKeyOnly/Never"
+                           customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
+                           certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
+                           revocationMode="NoCheck/Online/Offline"
+                           samlSerializer="String"
+                           trustedStoreLocation="CurrentUser/LocalMachine">
+  <allowedAudienceUris>
+    <add allowedAudienceUri="String" />
+  </allowedAudienceUris>
+  <knownCertificates>
+    <add findValue="String"
+         storeLocation="CurrentUser/LocalMachine"
+         storeName=" CurrentUser/LocalMachine"
+         x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
+  </knownCertificates>
+</issuedTokenAuthentication>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -70,24 +69,25 @@ certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
 |-------------|-----------------|  
 |[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。|  
   
-## <a name="remarks"></a>コメント  
- 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階で、サービスにアクセスしようとしているクライアントは呼びます、*トークン サービスをセキュリティで保護された*です。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
+## <a name="remarks"></a>Remarks  
+ 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階でのサービスにアクセスしようとしています。 クライアントが参照される、*セキュア トークン サービス*します。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
   
- この要素は、このようなセキュリティ トークン サービス証明書のリポジトリです。 証明書を追加するには、使用、 [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)です。 挿入、 [\<追加 >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)証明書ごとに、次の例で示すようにします。  
+ この要素は、このようなセキュリティ トークン サービス証明書のリポジトリです。 証明書を追加するには、使用、 [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)します。 挿入、 [\<追加 >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)各証明書、次の例に示すようにします。  
   
 ```xml  
-<issuedTokenAuthorization>  
-   <knownCertificates>  
-      <add findValue="www.contoso.com"   
-           storeLocation="LocalMachine" storeName="My"   
-           X509FindType="FindBySubjectName" />  
-    </knownCertificates>  
-</issuedTokenAuthentication>  
+<issuedTokenAuthentication>
+  <knownCertificates>
+    <add findValue="www.contoso.com"
+         storeLocation="LocalMachine"
+         storeName="My"
+         X509FindType="FindBySubjectName" />
+  </knownCertificates>
+</issuedTokenAuthentication>
 ```  
   
  既定では、証明書はセキュリティ トークン サービスから取得する必要があります。 このような "既知" の証明書により、正当なクライアントのみがサービスにアクセスできるようになります。  
   
- この構成要素を使用する方法については、次を参照してください。[する方法: フェデレーション サービスの資格情報の構成](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)です。  
+ この構成要素の使用に関する詳細については、次を参照してください。[方法。フェデレーション サービスで資格情報を構成](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
@@ -98,4 +98,4 @@ certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
  <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>  
  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>  
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [方法 : フェデレーション サービスで資格情報を設定する](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+ [方法: フェデレーション サービスで資格情報を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

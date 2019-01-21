@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0031e352fea845ca4831b4df3a67c9cc6b67e876
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227624"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222286"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>方法: JoinBlock を使用して複数のソースからデータを読み込む
 このドキュメントでは、複数のソースからデータを使用できるときに <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> クラスを使用して操作を実行する方法について説明します。 また、最短一致モードを使い、複数の結合ブロックを有効にして、データ ソースをより効率的に共有する方法についても説明します。
@@ -33,7 +33,7 @@ ms.locfileid: "44227624"
  `MemoryResource` オブジェクトの共有プールを効率的に使用するために、この例では、<xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> プロパティを `False` に設定した <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> オブジェクトを指定して、最短一致モードで動作する <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> オブジェクトを作成します。 最短一致の結合ブロックの場合、各ソースから使用できるようになるまで、すべての受信メッセージは延期されます。 延期されたメッセージのいずれかが別のブロックで受け入れられた場合、結合ブロックはプロセスを再開します。 最短一致モードでは、1 つ以上のソース ブロックを共有する結合ブロックが、他のブロックがデータを待機するときに転送を進めることができます。 この例では、`MemoryResource` オブジェクトが `memoryResources` プールに追加された場合、その 2 番目のデータ ソースを受け取る最初の結合ブロックが転送を進めることができます。 この例で、既定である最長一致モードを使用する場合、1 つの結合ブロックが `MemoryResource` オブジェクトを受け取り、2 番目のリソースを使用できるようになるまで待機することができます。 ただし、他の結合ブロックに使用できる 2 番目のデータ ソースがある場合は、`MemoryResource` オブジェクトが他の結合ブロックによって取得されているため、転送を進めることはできません。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowNonGreedyJoin.cs` (Visual Basic では `DataflowNonGreedyJoin.vb`) という名前のファイルに貼り付けてから、Visual Studio のコマンド プロンプト ウィンドウで次のコマンドを実行します。  
+ コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowNonGreedyJoin.cs` (Visual Basic では `DataflowNonGreedyJoin.vb`) という名前のファイルに貼り付けてから、Visual Studio 用開発者コマンド プロンプト ウィンドウで次のコマンドを実行します。  
   
  Visual C#  
   

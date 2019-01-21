@@ -1,13 +1,13 @@
 ---
-title: let バインド (F#)
-description: F# の 'let' 値または関数を関連付け識別子のバインドを使用する方法について説明します。
+title: let バインド
+description: 使用する方法について説明します、 F# 'let' バインドの値または関数の識別子を関連付けます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: HT
+ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43777471"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612674"
 ---
 # <a name="let-bindings"></a>let バインド
 

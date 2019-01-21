@@ -2,12 +2,12 @@
 title: '&lt;endpointBehaviors&gt; の &lt;behavior&gt;'
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: e275fbc1b14469553094a4df838930be53937de2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73ba25cd2f4fe588aa620bfe566a979c08a83e22
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363300"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148202"
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;endpointBehaviors&gt; の &lt;behavior&gt;
 `behavior` 要素はエンドポイントの動作設定のコレクションを含んでいます。 各動作には、それぞれの `name` によってインデックスが付けられます。 エンドポイントは、この名前を使用して各動作にリンクできます。 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。  
@@ -20,13 +20,13 @@ ms.locfileid: "33363300"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.ServiceModel>  
-  <behaviors>  
-    <endpointBehaviors>  
-       <behavior name="String" />  
-    </endpointBehaviors>  
-  </behaviors>  
-</system.ServiceModel>  
+<system.ServiceModel>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior name="String" />
+    </endpointBehaviors>
+  </behaviors>
+</system.ServiceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -53,7 +53,7 @@ ms.locfileid: "33363300"
 |[\<soapProcessing >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|異なるバインディングの種類およびメッセージ バージョンの間でメッセージのマーシャリングに使用されるクライアント エンドポイントの動作を定義します。|  
 |[\<synchronousReceive >](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|サービスまたはクライアント アプリケーションでメッセージを受信する場合のランタイム動作を指定します。 属性や子要素はありません。|  
 |[\<transactedBatching >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|受信操作でトランザクション バッチがサポートされるかどうかを指定します。|  
-|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|構成によってエンドポイントに WebHttpBehavior を指定します。 この動作と組み合わせて使用すると、 \<webHttpBinding > 標準バインディングは、WCF サービスの Web プログラミング モデルを有効にします。|  
+|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|構成によってエンドポイントに WebHttpBehavior を指定します。 この動作は、組み合わせて使用すると、 \<webHttpBinding > 標準バインディングにより、WCF サービスの Web プログラミング モデル。|  
   
 ### <a name="parent-elements"></a>親要素  
   

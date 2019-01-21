@@ -6,12 +6,13 @@ ms.author: wiwagn
 ms.date: 09/01/2017
 dev_langs:
 - vb
-ms.openlocfilehash: 501bbedca28af1eaaadb0848bfcffc93a7aac92a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242465"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet テストと MStest を使用した .NET Core ライブラリでの単体テスト Visual Basic
 
@@ -131,7 +132,7 @@ End Function
 
 ## <a name="adding-more-features"></a>他の機能の追加
 
-テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります (0、-1)。 `<TestMethod>` 属性を使用すると、これらの例を新しいテストとして追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  `<DataTestMethod>` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `<DataRow>` 属性を使用して、そのような入力の値を指定することができます。
+テストが成功したので、他のテストも記述してみましょう。 素数に関する、いくつかの単純なケースが他にもあります(0、-1)。 `<TestMethod>` 属性を使用すると、これらの例を新しいテストとして追加できますが、すぐに煩雑になります。 一連の類似のテストを記述できるようになる、他の MSTest 属性があります。  `<DataTestMethod>` 属性は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。 `<DataRow>` 属性を使用して、そのような入力の値を指定することができます。
 
 新しいテストを作成するのではなく、この 2 つの属性を適用することで 1 つの理論を作成できます。 その理論とは、複数の 2 未満の値を調べて、もっとも小さい素数を特定するという手法です。
 

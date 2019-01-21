@@ -2,36 +2,37 @@
 title: '&lt;メッセージ ログ&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: e137070b71cf8a481eef3ea16260c135e29b4932
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cfc5f23e58c5a428ecb4541ccfc0ada5b190fb36
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150449"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;メッセージ ログ&gt;
 この要素は Windows Communication Foundation (WCF) のメッセージ ログ機能の設定を定義します。  
   
  \<system.ServiceModel >  
 \<診断 >  
-\<メッセージ ログ >  
+\<messageLogging >  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.serviceModel>  
-   <diagnostics>  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-                    maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-                            <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics>
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|-----------------|  
 |診断|管理者が行うランタイムの検査と管理の WCF 設定を定義します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  メッセージは、サービス、トランスポート、および不正の 3 種類のレベルで記録されます。 各レベルは、個別にアクティブにできます。  
   
  XPath フィルターは、トランスポート レベルとサービス レベルで特定のメッセージを記録するために追加できます。 フィルターが定義されていない場合、すべてのメッセージが記録されます。 フィルターは、メッセージのヘッダーにのみ適用されます。 本文は無視されます。 WCF は、パフォーマンスを強化するためにメッセージ本文を無視します。 本文の内容に基づいてフィルターを適用する場合は、そのためのフィルターを備えたカスタム リスナーを作成できます。  
@@ -68,51 +69,56 @@ ms.lasthandoff: 05/03/2018
  メッセージ トレースをアクティブ化するために、トレース リスナーを作成する必要があります。 リスナー自体には、<xref:System.Diagnostics> トレース アーキテクチャで動作するリスナーを指定できます。 次の例は、そのようなリスナーの作成方法を示します。  
   
 ```xml  
-<system.diagnostics>  
-    <sources>  
-          <source name="System.ServiceModel" switchValue="Verbose">  
-              <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="ServiceModel Listener" traceOutputOptions="None" />  
-               </listeners>  
-        </source>  
-            <source name="System.ServiceModel.MessageLogging">  
-                <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="MessageLogging Listener" traceOutputOptions="None"/>  
-               </listeners>  
-        </source>  
-    </sources>  
-     <sharedListeners>  
-            <add initializeData="C:\ItProTools\TraceLog.xml"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                    name="ServiceModel Listener"  
-                    traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-            <add initializeData="C:\ItProTools\MessageLog.log"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                   name="MessageLogging Listener"  
-                   traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-    </sharedListeners>  
-</system.diagnostics>  
+<system.diagnostics>
+  <sources>
+    <source name="System.ServiceModel"
+            switchValue="Verbose">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="ServiceModel Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+    <source name="System.ServiceModel.MessageLogging">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="MessageLogging Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+  </sources>
+  <sharedListeners>
+    <add initializeData="C:\ItProTools\TraceLog.xml"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="ServiceModel Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+    <add initializeData="C:\ItProTools\MessageLog.log"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="MessageLogging Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+  </sharedListeners>
+</system.diagnostics>
 ```  
   
 ## <a name="example"></a>例  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-    logMalformedMessages="true"  
-    logMessagesAtServiceLevel="true"  
-    logMessagesAtTransportLevel="true"  
-    maxMessagesToLog="42"  
-    maxSizeOfMessageToLog="42">  
-     <filters>  
-         <clear />  
-     </filters>  
- </messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="42"
+                maxSizeOfMessageToLog="42">
+  <filters>
+    <clear />
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>関連項目  

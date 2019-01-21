@@ -1,5 +1,5 @@
 ---
-title: '&lt;リスト&gt;(Visual Basic)'
+title: '&lt;list&gt;(Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/25/2018
 ms.locfileid: "42924935"
 ---
-# <a name="ltlistgt-visual-basic"></a>&lt;リスト&gt;(Visual Basic)
+# <a name="ltlistgt-visual-basic"></a>&lt;list&gt;(Visual Basic)
 リストまたはテーブルを定義します。  
   
 ## <a name="syntax"></a>構文  

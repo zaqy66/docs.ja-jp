@@ -1,13 +1,13 @@
 ---
-title: Match 式 (F#)
-description: F# match 式が式のパターンのセットとの比較に基づいている分岐を制御を提供する方法について説明します。
+title: Match 式
+description: について説明しますが、どのようにF#match 式が式のパターンのセットとの比較に基づいている分岐を制御を提供します。
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221845"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611569"
 ---
 # <a name="match-expressions"></a>Match 式
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-ラムダ式の詳細については、次を参照してください。[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)します。
+ラムダ式の詳細については、次を参照してください。[ラムダ式。`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)します。
 
 パターンのセット全体には、入力変数の考えられるすべての一致する必要がありますについて説明します。 ワイルドカード パターンを使用する多くの場合、(`_`)、比類のない以前の入力値と一致する最後のパターンとして。
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>関連項目
 
-- [F# 言語リファレンス](index.md)  
-- [アクティブ パターン](active-patterns.md)  
-- [パターン一致](pattern-matching.md)  
+- [F# 言語リファレンス](index.md)
+- [アクティブ パターン](active-patterns.md)
+- [パターン一致](pattern-matching.md)

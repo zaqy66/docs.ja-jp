@@ -1,21 +1,21 @@
 ---
-title: 自動ジェネリック化 (F#)
+title: 自動ジェネリック化
 description: どの F# 自動的に一般化引数と関数の種類可能であれば、複数の種類で動作させることについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43855778"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611712"
 ---
 # <a name="automatic-generalization"></a>自動ジェネリック化
 
-F# 型の推定を使用して、関数と式の種類を評価します。 このトピックでは、どの F# 自動的に一般化引数と関数の種類可能な限り、複数の種類で動作させることについて説明します。
+F#関数と式の型を評価する推論を使用してに入力します。 このトピックでは、どの F# 自動的に一般化引数と関数の種類可能な限り、複数の種類で動作させることについて説明します。
 
 ## <a name="automatic-generalization"></a>自動ジェネリック化
 
-F# コンパイラ、関数、型の推定の実行時に指定されたパラメーターをジェネリックにできるかどうかを決定します。 コンパイラは、各パラメーターを調べ、関数は、そのパラメーターの特定の種類に依存しているかどうかを決定します。 そうでない場合をジェネリック型が推論されます。
+F#関数の型の推定の実行時に、コンパイラは、指定されたパラメーターをジェネリックにできるかどうかを決定します。 コンパイラは、各パラメーターを調べ、関数は、そのパラメーターの特定の種類に依存しているかどうかを決定します。 そうでない場合をジェネリック型が推論されます。
 
 次のコード例では、ジェネリックと、コンパイラが推論される関数を示しています。
 
@@ -58,7 +58,7 @@ let biggestIntFloat = max 2.0 3
 
 - 次のコード例は、これらの各シナリオを示します。
 
-ケース 1: 式が複雑すぎます。 この例では、一覧で`counter`を`int option ref`、単純な変更できない値は定義されていませんが。
+ケース 1:式が複雑すぎます。 この例では、一覧で`counter`を`int option ref`、単純な変更できない値は定義されていませんが。
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-ケース 2: は、汎化できない構成要素を使用して、ジェネリック関数を定義します。 この例では、コンストラクトは汎化できない構成を関数の引数の部分的なアプリケーションが伴うので。
+ケース 2:汎化できない構成要素を使用して、ジェネリック関数を定義します。 この例では、コンストラクトは汎化できない構成を関数の引数の部分的なアプリケーションが伴うので。
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-ケース 3: は、未使用のパラメーターを追加します。 この式が汎化の単純でないため、コンパイラは値制限エラーを発行します。
+ケース 3:未使用のパラメーターを追加します。 この式が汎化の単純でないため、コンパイラは値制限エラーを発行します。
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -82,7 +82,7 @@ let emptyList10 = Array.create 10 []
 let emptyList10 () = Array.create 10 []
 ```
 
-ケース 4: 型パラメーターを追加します。
+ケース 4:型パラメーターを追加します。
 
 ```fsharp
 let arrayOf10Lists = Array.create 10 []

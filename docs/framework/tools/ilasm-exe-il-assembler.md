@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409790"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221761"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
-IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージ実行プロセス](../../../docs/standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
+IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -38,7 +38,7 @@ ilasm [options] filename [[options]filename...]
 
 | 引数 | 説明 |
 | -------- | ----------- |
-|`filename`|.il ソース ファイルの名前。 このファイルは、メタデータ宣言ディレクティブとシンボリック IL 命令で構成されます。 複数のソース ファイル引数を指定すると、*Ilasm.exe* で 1 つの PE ファイルを作成できます。 **注:** .il ソース ファイルのコードの最後の行に、後続の空白または行末文字のいずれかがあることを確認してください。|
+|`filename`|.il ソース ファイルの名前。 このファイルは、メタデータ宣言ディレクティブとシンボリック IL 命令で構成されます。 複数のソース ファイル引数を指定すると、*Ilasm.exe* で 1 つの PE ファイルを作成できます。 **注:**.il ソース ファイルのコードの最後の行に、後続の空白または行末文字のいずれかがあることを確認してください。|
 
 | オプション | 説明 |
 | ------ | ----------- |
@@ -47,7 +47,7 @@ ilasm [options] filename [[options]filename...]
 |**/appcontainer**|出力として、Windows アプリ コンテナー内で実行する *.dll* ファイルまたは *.exe* ファイルを作成します。|
 |**/arm**|ターゲット プロセッサとして Advanced RISC Machine (ARM) を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/32bitpreferred**です。|
 |**/base:** `integer`|NT オプション ヘッダーの ImageBase を `integer` で指定された値に設定します。 このオプションは、ファイルに指定されている .imagebase IL ディレクティブをオーバーライドします。|
-|**/clock**|指定した .il ソース ファイルのコンパイル時間を計測して報告します。<br /><br /> **Total Run**: 後に続く特定の操作の実行に要した合計時間。<br /><br /> **Startup**: ファイルの読み込みとオープン。<br /><br /> **Emitting MD**: メタデータの生成。<br /><br /> **Ref to Def Resolution**: ファイルの定義への参照の解決。<br /><br /> **CEE File Generation**: メモリ内のファイル イメージの生成。<br /><br /> **PE File Writing**: PE へのイメージの書き込み。|
+|**/clock**|指定した .il ソース ファイルのコンパイル時間を計測して報告します。<br /><br /> **Total Run**: 後に続く特定の操作の実行に要した合計時間。<br /><br /> **Startup**: ファイルを読み込み、開く。<br /><br /> **Emitting MD**:メタデータの出力。<br /><br /> **Ref to Def Resolution**: ファイルの定義への参照の解決。<br /><br /> **CEE File Generation**: メモリ内のファイル イメージの生成。<br /><br /> **PE File Writing**: PE へのイメージの書き込み。|
 |**/debug**[:**IMPL**&#124;**OPT**]|デバッグ情報 (ローカル変数と引数名、および行番号) を組み込みます。 PDB ファイルを作成します。<br /><br /> **/debug** に値を追加しなければ、JIT の最適化が無効になり、PDB ファイルのシーケンス ポイントが使用されます。<br /><br /> **IMPL** を指定すると、JIT 最適化が無効になり、暗黙のシーケンス ポイントが使用されます。<br /><br /> **OPT** を指定すると、JIT 最適化が有効になり、暗黙のシーケンス ポイントが使用されます。|
 |**/dll**|出力として *.dll* ファイルを生成します。|
 |**/enc:** `file`|指定されたソース ファイルからエディット コンティニュ デルタを作成します。<br /><br /> この引数は教育機関専用のため、商業目的の使用はサポートされていません。|
@@ -65,7 +65,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|基底クラスが指定されていない場合、 <xref:System.Object> からの既定の継承を無効にします。|
 |**/nocorstub**|CORExeMain スタブの生成を抑止します。|
 |**/nologo**|Microsoft 著作権情報を表示しません。|
-|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:** **/output**:myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll**を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
+|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:****/output**:myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll**を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
 |**/optimize**|長いインストラクションを短く最適化します。 たとえば `br` を `br.s`にします。|
 |**/pe64**|64 ビットのイメージ (PE32+) を作成します。<br /><br /> ターゲット プロセッサを指定しない場合、既定は `/itanium`です。|
 |**/pdb**|デバッグ情報の追跡を有効にせずに PDB ファイルを作成します。|
@@ -87,7 +87,7 @@ IL アセンブラーは、IL ジェネレーターを設計および実装す�
 
 C# および Visual Basic など、ランタイムを対象とした他のコンパイラと同様に、*Ilasm.exe* も中間オブジェクト ファイルを生成しません。このため、PE ファイルを形成するためのリンク ステージが必要ありません。
 
-IL アセンブラーは、すべての既存メタデータ、およびランタイムを対象としたプログラミング言語の IL 機能を表現できます。 このため、このようなプログラミング言語で記述されたマネージ コードを IL アセンブラーで適切に表現し、*Ilasm.exe* でコンパイルできます。
+IL アセンブラーは、すべての既存メタデータ、およびランタイムを対象としたプログラミング言語の IL 機能を表現できます。 このため、このようなプログラミング言語で記述されたマネージド コードを IL アセンブラーで適切に表現し、*Ilasm.exe* でコンパイルできます。
 
 > [!NOTE]
 > .il ソース ファイルのコードの最後の行に、後続の空白または行末文字がない場合、コンパイルに失敗することがあります。
@@ -231,5 +231,5 @@ public class Hello
 
 [ツール](../../../docs/framework/tools/index.md)  
 [*Ildasm.exe* (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
-[マネージ実行プロセス](../../../docs/standard/managed-execution-process.md)  
+[マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)  
 [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

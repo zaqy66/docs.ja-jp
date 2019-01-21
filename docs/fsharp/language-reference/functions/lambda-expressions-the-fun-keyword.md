@@ -1,15 +1,15 @@
 ---
-title: 'ラムダ式: fun キーワード (F#)'
-description: F# の '楽しい' キーワードを使用して、匿名関数は、ラムダ式を定義する方法について説明します。
+title: ラムダ式:Fun キーワード
+description: 使用する方法について説明します、F#匿名関数は、ラムダ式を定義する '楽しい' キーワード。
 ms.date: 05/16/2016
-ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231022"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614464"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>ラムダ式: fun キーワード (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>ラムダ式:Fun キーワード (F#)
 
 `fun`キーワードの使用をラムダ式、つまり、匿名関数を定義します。
 
@@ -42,7 +42,7 @@ fun head :: tail -> …
 
 ## <a name="using-lambda-expressions"></a>ラムダ式の使用
 
-ラムダ式は、リストまたはその他のコレクションで操作を実行し、追加の関数を定義する作業を回避するために必要な場合に特に便利です。 F# ライブラリの多くの関数は、引数として関数の値を受け取り、ラムダ式を使用して、そのような場合に特に便利であることができます。 次のコードでは、リストの要素にラムダ式が適用されます。 この場合、匿名関数では、一覧のすべての要素に 1 を追加します。
+ラムダ式は、リストまたはその他のコレクションで操作を実行し、追加の関数を定義する作業を回避するために必要な場合に特に便利です。 多くF#ライブラリ関数が引数として関数の値を受け取るし、ラムダ式を使用して、そのような場合に特に便利であることができます。 次のコードでは、リストの要素にラムダ式が適用されます。 この場合、匿名関数では、一覧のすべての要素に 1 を追加します。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 

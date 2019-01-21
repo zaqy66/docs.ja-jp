@@ -2,15 +2,14 @@
 title: .NET Framework および .NET Core のプロジェクトを整理する
 description: プロジェクト所有者が横並びの .NET Framework と .NET Core に対してソリューションをコンパイルするときに役立ちます。
 author: conniey
-ms.author: mairaw
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146928"
+ms.locfileid: "53169132"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework と .NET Core の両方をサポートするようにプロジェクトを整理する
 

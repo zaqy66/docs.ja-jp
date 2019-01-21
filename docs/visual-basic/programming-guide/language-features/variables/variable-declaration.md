@@ -32,7 +32,7 @@ ms.locfileid: "44207422"
 ## <a name="declaration-levels"></a>宣言レベル  
   
 ### <a name="local-and-member-variables"></a>ローカルとメンバー変数  
- A*ローカル変数*はプロシージャ内で宣言されている 1 つです。 A*メンバー変数*; Visual Basic の型のメンバーであるクラス、構造体、またはモジュールに内部プロシージャ内ではありませんが、クラス、構造体、またはモジュール内のモジュール レベルで宣言されています。  
+ *ローカル変数*はプロシージャ内で宣言されている 1 つです。 *メンバー変数* は、Visual Basic型のメンバーです。モジュール、クラス、構造体、またはモジュールの内部で宣言されていますが、そのクラス、構造体、またはモジュールの内部のプロシージャ内では宣言されていません。  
   
 ### <a name="shared-and-instance-variables"></a>共有し、インスタンス変数  
  クラスまたは構造体メンバー変数のカテゴリが共有されるかどうかに依存します。 宣言されている場合、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)キーワードは、*共有変数*、クラスまたは構造体のすべてのインスタンス間で共有される 1 つのコピーに存在するとします。  
@@ -75,7 +75,7 @@ Dim l, m As Long, x, y As Single
   
  *スコープ*変数がその名前を修飾せずに参照できるすべてのコードのセット。 変数のスコープは、宣言されている場所によって決まります。 特定のリージョン内にあるコードでは、その名前を修飾することがなく、そのリージョンで定義されている変数を使用できます。 詳細については、次を参照してください。 [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)します。  
   
- 変数の*アクセス レベル*はへのアクセス許可があるコードの範囲です。 これは、アクセス修飾子によって決まります (など[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)または[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)) で使用する、`Dim`ステートメント。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+ 変数の*アクセス レベル*は、それへのアクセス許可があるコードの範囲です。 これは、`Dim`ステートメントで使用するアクセス修飾子([Public](../../../../visual-basic/language-reference/modifiers/public.md)または[Private](../../../../visual-basic/language-reference/modifiers/private.md)など)によって決まります。 詳細については、[ Visual Basic のアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : 新しい変数を作成する](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  

@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 420925f9f257bff5a788cd5af918e33c96882674
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8fddc2cd537963ad2aa1e0858476e7b9b9c6c032
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753608"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144692"
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup クラス
 
-`ConnectionGroup`クラス内の接続の一覧にグループ化、<xref:System.Net.ServicePoint>コンテキスト ネットワーク リソース (たとえば、プロキシや別のクライアント) のコンテキストを維持するために使用します。
+`ConnectionGroup`クラス内の接続の一覧をグループ化、<xref:System.Net.ServicePoint>コンテキスト (たとえば、プロキシと別のクライアント) のネットワーク リソースのコンテキストを維持するために使用されます。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +30,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> `ConnectionGroup`クラスは内部と、コード内で直接使用します。
+> `ConnectionGroup`クラスは内部であり、コード内で直接使用するものではありません。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのクラスの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのクラスの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

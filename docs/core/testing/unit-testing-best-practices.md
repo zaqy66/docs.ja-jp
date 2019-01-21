@@ -1,23 +1,24 @@
 ---
 title: 単体テストを記述するためのベスト プラクティス
-description: コードの品質と回復性を向上させる単体テストを記述するためのベスト プラクティスについて説明します
+description: .NET Core プロジェクトと .NET Standard プロジェクトのコードの品質と回復性を向上させる単体テストを記述するためのベスト プラクティスについて説明します。
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143414"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151528"
 ---
-# <a name="unit-testing-best-practices"></a>単体テストのベスト プラクティス
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 
-著者: [John Reese](http://reesespieces.io)、協力者: [Roy Osherove](http://osherove.com/)
-
-単体テストの記述には多大な利点があります。回帰の防止に役立ち、ドキュメントを提供して、優れた設計を容易に行うことができます。 ただし、読みにくくて不安定な単体テストは、コード ベースに打撃を与える可能性があります。
+単体テストの記述には多大な利点があります。回帰の防止に役立ち、ドキュメントを提供して、優れた設計を容易に行うことができます。 ただし、読みにくくて不安定な単体テストは、コード ベースに打撃を与える可能性があります。 この記事では、.NET Core プロジェクトと .NET Standard プロジェクトの単体テストの設計に関するベスト プラクティスについて説明します。
 
 このガイドでは、テストの回復性とわかりやすさを維持するよう単体テストを記述する際のいくつかのベスト プラクティスについて説明します。
+
+著者: [John Reese](https://reesespieces.io)、協力者: [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>単体テストを記述する理由
 

@@ -1,13 +1,13 @@
 ---
-title: インターフェイス (F#)
-description: F# インターフェイスが関連するその他のクラスが実装するメンバーのセットを指定する方法について説明します。
+title: インターフェイス
+description: 学習方法F#インターフェイスは、他のクラスを実装する関連するメンバーのセットを指定します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 85b5506d96c26be5e52670c0c62d27cae047d1a6
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231441"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610555"
 ---
 # <a name="interfaces"></a>インターフェイス
 

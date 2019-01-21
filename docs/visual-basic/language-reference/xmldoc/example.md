@@ -25,7 +25,7 @@ ms.locfileid: "43524518"
  `description`  
  コード例の説明です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `<example>`タグを使用して、メソッド、またはその他のライブラリ メンバーを使用する方法の例を指定できます。 一般的に、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグが使用されます。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  

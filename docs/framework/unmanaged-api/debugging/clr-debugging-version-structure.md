@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4be232ab557d582f3521b8775108c004b5a3dd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fecd5af43f4b984a4ab626e9832b3318715c0516
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403306"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058361"
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 構造体
 デバッグのために共通言語ランタイム (CLR) の製品バージョンを定義します。  
@@ -29,14 +29,14 @@ ms.locfileid: "33403306"
 ## <a name="syntax"></a>構文  
   
 ```  
-Typedef struct _CLR_DEBUGGING_VERSION  
+typedef struct _CLR_DEBUGGING_VERSION  
 {  
-WORD wStructVersion;  
-WORD wMajor;   
-WORD wMinor;  
-WORD wBuild;  
-WORD wRevision;  
-}  CLR_DEBUGGING_VERSION;  
+    WORD wStructVersion;
+    WORD wMajor;
+    WORD wMinor;
+    WORD wBuild;
+    WORD wRevision;
+} CLR_DEBUGGING_VERSION;
 ```  
   
 ## <a name="members"></a>メンバー  
@@ -49,17 +49,17 @@ WORD wRevision;
 |`wBuild`|ビルド番号。|  
 |`wRevision`|リビジョン番号。|  
   
-## <a name="remarks"></a>コメント  
- `CLR_DEBUGGING_VERSION`構造は、同じ COR_VERSION 構造体としてただし、`CLR_DEBUGGING_VERSION`構造により、追加の構造のバージョン フィールド (`wStructVersion`)。 現時点では、このフィールドは、0 に設定する必要があります。  
+## <a name="remarks"></a>Remarks  
+ `CLR_DEBUGGING_VERSION`構造がただし COR_VERSION 構造体と同じでは、`CLR_DEBUGGING_VERSION`構造は追加の構造のバージョン フィールドを提供します (`wStructVersion`)。 現時点では、このフィールドは 0 に設定する必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

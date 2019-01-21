@@ -30,7 +30,7 @@ ms.locfileid: "48850375"
 このページには、組み込みデータ型の操作を実行するときに発生する一般的な問題が一覧表示されます。  
   
 ## <a name="floating-point-expressions-do-not-compare-as-equal"></a>浮動小数点式が等しいと比較しないでください。  
- 浮動小数点数を使用する場合 ([1 つのデータ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)と[Double データ型](../../../../visual-basic/language-reference/data-types/double-data-type.md))、バイナリの分数として格納されることに注意してください。 つまり、バイナリの一部ではない任意の分量の正確な表現を保持することはできません (k 形式の/(2 ^ n)、k と n は整数)。 たとえば、0.5 (1/2 =) および 0.3125 (= 5/16) 保持できる正確な値を (= 1/5) 0.2、0.3 (= 3/10) 近似値のみであることができます。  
+ 浮動小数点数を使用する場合 ([Single データ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)と[Double データ型](../../../../visual-basic/language-reference/data-types/double-data-type.md))を扱うときは、二進小数として格納されることに注意してください。 つまり、二進小数ではない（k /（2 ^ n）の形式で、k と n は整数）数量を正確に表すことはできません。 たとえば、0.5 (1/2 =) および 0.3125 (= 5/16) は正確な値として保持できますが、0.2（= 1/5）、0.3 （= 3/10）は 近似値にしかなりません。  
   
  このため、誤差に依存できない正確な結果浮動小数点値を操作するときにします。 具体的には、理論的に等しい 2 つの値には、若干異なる表現があります。  
   
@@ -65,8 +65,8 @@ ms.locfileid: "48850375"
   
  宣言するための十分ながないことに注意してください。`decimalRemainder`として`Decimal`します。 リテラルを強制することも必要があります。 `Decimal`、使用することも`Double`既定と`decimalRemainder`として同じ不正確な値を受け取る`doubleRemainder`します。  
   
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>ブール型で正確な数値型に変換されません。  
- [ブール型のデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、番号に相当する、保存された値が意図されていません。 以前のバージョンと互換性のため、Visual Basic では変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) 間の変換を`Boolean`と数値型。 ただし、他の言語も実行これらの変換と同様に、異なる、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッド。  
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean データで正確な数値型に変換されません。  
+ [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、格納された値は数値と同等であることを意図していません。 以前のバージョンとの互換性のために、Visual Basic には、`Boolean`と数値型の間の変換を行うための変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) が用意されています。 ただし、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッドと同様に、他の言語でもこれらの変換の実行方法が異なる場合があります。  
   
  数値と等価の値に依存するコードを記述する必要がありますしない`True`と`False`します。 使用を制限する必要があります、可能な限り`Boolean`変数を論理値に設計されています。 組み合わせる必要がある場合`Boolean`数値、選択した変換の方法を理解することを確認します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48850375"
   
  常にリスクが縮小の変換を使用して実行時にそれらが失敗する可能性です。 変換など、`String`に`Char`が失敗する場合、`String`値には、1 つ以上の文字が含まれています。 そのため、それを使用するプログラミングがより、`C`文字を入力します。  
   
-## <a name="string-conversion-fails-at-run-time"></a>文字列の変換は実行時に失敗します。  
+## <a name="string-conversion-fails-at-run-time"></a>String の変換は実行時に失敗します。  
  [文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)がごく少数の拡大変換に参加します。 `String` 自体にのみ拡大変換と`Object`とのみ`Char`と`Char()`(、`Char`配列) に拡大変換`String`。 これは、ため`String`変数と定数は、他のデータ型を含めることはできませんの値を含めることができます。  
   
  型チェックを切り替えると ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`コンパイラには、すべての暗黙的な縮小変換が許可されていません。 関連するものが含まれます`String`します。 コードの変換キーワードをなど、使用もできる`CStr`と[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)、どのダイレクト、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]変換を試みます。  
@@ -110,7 +110,7 @@ ms.locfileid: "48850375"
  1 つ`Char`と配列の`Char`要素の両方に拡大変換する`String`します。 ただし、`String`に拡大変換されない`Char()`します。 変換する、`String`値を`Char`使用することができます、配列、<xref:System.String.ToCharArray%2A>のメソッド、<xref:System.String?displayProperty=nameWithType>クラス。  
   
 ### <a name="meaningless-values"></a>意味のない値  
- 一般に、`String`値が意味のある他のデータ型でないと、変換が危険な。 使用を制限する必要があります、可能な限り`String`変数を文字のシーケンスに設計されています。 その他の種類に対応する値に依存するコードを書かないようにしてください。  
+ 一般に、`String`値他のデータ型では意味がなく、変換は非常に危険です。 可能な限り`String`の使用をそれらが設計されている文字シーケンスに制限する必要があります。 その他の種類に対応する値に依存するコードを書かないようにしてください。  
   
 ## <a name="see-also"></a>関連項目  
  [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

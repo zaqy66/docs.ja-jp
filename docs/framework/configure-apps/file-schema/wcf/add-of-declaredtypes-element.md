@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 90eaf11ce8b9e3675a23ed3875680b03f149b56b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 587c70a7b583c99e66eebac4055415e1e6a635b2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754120"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146109"
 ---
 # <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a>&lt;declaredTypes&gt; 要素の &lt;add&gt;
 逆シリアル化中に、<xref:System.Runtime.Serialization.DataContractSerializer> で使用される型を追加します。 各宣言型は、宣言型のフィールドまたはプロパティとして返される既知の型を含みます。  
@@ -25,12 +25,12 @@ ms.locfileid: "32754120"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<add type="String">  
-   <knownType type="String">  
-       <parameter index="Integer"  
-                  type="String" />  
-   </knownType>  
-</add>  
+<add type="String">
+  <knownType type="String">
+    <parameter index="Integer"
+               type="String" />
+  </knownType>
+</add>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -54,8 +54,8 @@ ms.locfileid: "32754120"
 |-------------|-----------------|  
 |[\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|<xref:System.Runtime.Serialization.DataContractSerializer> による逆シリアル化中に既知のタイプを必要とするタイプが含まれています。|  
   
-## <a name="remarks"></a>コメント  
- 既知の型の詳細については、次を参照してください。[データ コントラクトの既知の型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>です。  
+## <a name="remarks"></a>Remarks  
+ 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   
  参照してください、 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)この要素の使用例についてはします。  
   
@@ -65,14 +65,14 @@ ms.locfileid: "32754120"
 ## <a name="example"></a>例  
   
 ```xml  
-<add type="MyCompany.Library.Shape,   
-           MyAssembly, Version=2.0.0.0, Culture=neutral,  
-           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
-           <knownType type="MyCompany.Library.Circle,   
-                      MyAssembly, Version=2.0.0.0, Culture=neutral,  
-                      PublicKeyToken=XXXXXX,  
-                      processorArchitecture=MSIL"/>  
-</add>  
+<add type="MyCompany.Library.Shape,
+           MyAssembly, Version=2.0.0.0, Culture=neutral,
+           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">
+  <knownType type="MyCompany.Library.Circle,
+                   MyAssembly, Version=2.0.0.0, Culture=neutral,
+                   PublicKeyToken=XXXXXX,
+                   processorArchitecture=MSIL" />
+</add>
 ```  
   
 ## <a name="see-also"></a>関連項目  

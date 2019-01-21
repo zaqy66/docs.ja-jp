@@ -2,12 +2,12 @@
 title: コマンド ライン ツールの F# の概要します。
 description: 任意のオペレーティング システム (Windows、macOs または Linux) で .NET Core CLI を使用した F# で簡単なマルチ プロジェクト ソリューションを構築する方法について説明します。
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673910"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152100"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI を使用した F# の概要します。
 
@@ -131,7 +131,7 @@ dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 dotnet sln add src/App/App.fsproj
 ```
 
-NuGet の依存関係を復元`dotnet restore`([注を参照してください。](#dotnet-restore-note)) を実行し`dotnet build`プロジェクトをビルドします。
+NuGet の依存関係を復元`dotnet restore`実行`dotnet build`プロジェクトをビルドします。
 
 ディレクトリに、`src/App`コンソール プロジェクトとプロジェクトを渡すことを実行`Hello World`引数として。
 

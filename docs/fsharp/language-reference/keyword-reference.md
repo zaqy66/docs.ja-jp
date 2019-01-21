@@ -1,13 +1,13 @@
 ---
-title: キーワード リファレンス (F#)
+title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
+ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "43856025"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611751"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
@@ -28,21 +28,21 @@ ms.locfileid: "43856025"
 |`class`|[クラス](classes.md)|詳細な構文では、クラス定義の先頭を示します。|
 |`default`|[メンバー](members/index.md)|抽象メソッドの実装を示します抽象メソッドの宣言と共に使用すると、仮想メソッドを作成します。|
 |`delegate`|[デリゲート](delegates.md)|デリゲートを宣言するために使用します。|
-|`do`|[do バインド](functions/do-bindings.md)<br /><br />[ループ: `for...to` 式](loops-for-to-expression.md)<br /><br />[ループ: `for...in` 式](loops-for-in-expression.md)<br /><br />[ループ: `while...do` 式](loops-while-do-expression.md)|ループ構造で、または命令型コードを実行するために使用します。|
+|`do`|[do バインド](functions/do-bindings.md)<br /><br />[ループ:`for...to` 式](loops-for-to-expression.md)<br /><br />[ループ:`for...in` 式](loops-for-in-expression.md)<br /><br />[ループ:`while...do` 式](loops-while-do-expression.md)|ループ構造で、または命令型コードを実行するために使用します。|
 |`done`|[冗語構文](verbose-syntax.md)|冗語構文は、ループの式のコードのブロックの末尾を示します。|
 |`downcast`|[キャストと変換](casting-and-conversions.md)|継承チェーンの下位にある型に変換するために使用します。|
-|`downto`|[ループ: `for...to` 式](loops-for-to-expression.md)|`for`式では逆の順序でカウントする場合に使用します。|
+|`downto`|[ループ:`for...to` 式](loops-for-to-expression.md)|`for`式では逆の順序でカウントする場合に使用します。|
 |`elif`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)|条件付き分岐で使用されます。 短い形式`else if`します。|
 |`else`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)|条件付き分岐で使用されます。|
 |`end`|[構造体](structures.md)<br /><br />[判別共用体](discriminated-unions.md)<br /><br />[レコード](records.md)<br /><br />[型拡張](type-extensions.md)<br /><br />[冗語構文](verbose-syntax.md)|型の定義と型の拡張機能では、メンバーの定義のセクションの末尾を示します。<br /><br />始まるコード ブロックの末尾を指定するために使用の詳細な構文で、`begin`キーワード。|
 |`exception`|[例外処理](exception-handling/index.md)<br /><br />[例外の種類](exception-handling/exception-types.md)|例外の種類を宣言するために使用します。|
 |`extern`|[外部関数](functions/external-functions.md)|宣言されたプログラム要素が別のアセンブリまたはバイナリで定義されていることを示します。|
 |`false`|[プリミティブ型](primitive-types.md)|ブール型リテラルとして使用されます。|
-|`finally`|[例外: `try...finally` 式](exception-handling/the-try-finally-expression.md)|組み合わせて使用`try`例外が発生したかどうかに関係なく実行されるコードのブロックを紹介します。|
+|`finally`|[例外処理:`try...finally`式](exception-handling/the-try-finally-expression.md)|組み合わせて使用`try`例外が発生したかどうかに関係なく実行されるコードのブロックを紹介します。|
 |`fixed`|[修正しました](fixed.md)|ガベージ コレクションの対象を防ぐためにスタックにポインターを「固定」するために使用します。|
-|`for`|[ループ: `for...to` 式](loops-for-to-expression.md)<br /><br />[ループ: for...in 式](loops-for-in-expression.md)|ループ構造で使用されます。|
+|`for`|[ループ:`for...to` 式](loops-for-to-expression.md)<br /><br />[ループ: for...in 式](loops-for-in-expression.md)|ループ構造で使用されます。|
 |`fun`|[ラムダ式:`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)|ラムダ式、匿名とも呼ばれる関数で使用されます。|
-|`function`|[match 式](match-expressions.md)<br /><br />[ラムダ式: fun キーワード](functions/lambda-expressions-the-fun-keyword.md)|使用する代わりに短い、`fun`キーワードと`match`を 1 つの引数に一致するパターンを持つラムダ式の式。|
+|`function`|[match 式](match-expressions.md)<br /><br />[ラムダ式:Fun キーワード](functions/lambda-expressions-the-fun-keyword.md)|使用する代わりに短い、`fun`キーワードと`match`を 1 つの引数に一致するパターンを持つラムダ式の式。|
 |`global`|[名前空間](namespaces.md)|最上位レベルの .NET 名前空間を参照するために使用します。|
 |`if`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)|条件付き分岐構造で使用されます。|
 |`in`|[ループ: for...in 式](loops-for-in-expression.md)<br /><br />[冗語構文](verbose-syntax.md)|バインディングから式を区切るためには、式のシーケンスと冗語構文を使用します。|
@@ -63,7 +63,7 @@ ms.locfileid: "43856025"
 |`not`|[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)<br /><br />[制約](generics/constraints.md)|実際にはキーワードです。 ただし、`not struct`組み合わせでは、ジェネリック パラメーターの制約として使用します。|
 |`null`|[null 値](values/null-values.md)<br /><br />[制約](generics/constraints.md)|オブジェクトがないことを示します。<br /><br />ジェネリック パラメーターの制約にも使用されます。|
 |`of`|[判別共用体](discriminated-unions.md)<br /><br />[デリゲート](delegates.md)<br /><br />[例外の種類](exception-handling/exception-types.md)|値のカテゴリの種類を示すために、判別共用体およびデリゲートと例外の宣言を使用します。|
-|`open`|[インポート宣言: `open` キーワード](import-declarations-the-open-keyword.md)|修飾なしの名前空間またはモジュールの内容を利用するために使用します。|
+|`open`|[インポート宣言: `open`キーワード](import-declarations-the-open-keyword.md)|修飾なしの名前空間またはモジュールの内容を利用するために使用します。|
 |`or`|[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)<br /><br />[制約](generics/constraints.md)|ブール値としてブール条件で使用される`or`演算子。 等価 '||`.<br /><br />メンバー制約でも使用されます。|
 |`override`|[メンバー](members/index.md)|基本のバージョンとは異なる抽象または仮想メソッドのバージョンを実装するために使用します。|
 |`private`|[アクセス制御](access-control.md)|同じ型またはモジュール内のコードにメンバーへのアクセスを制限します。|
@@ -75,18 +75,18 @@ ms.locfileid: "43856025"
 |`static`|[メンバー](members/index.md)|メソッドや型のインスタンスなしで呼び出されるプロパティまたは型のすべてのインスタンス間で共有される値のメンバーを示すために使用します。|
 |`struct`|[構造体](structures.md)<br /><br />[制約](generics/constraints.md)|構造体の型を宣言するために使用します。<br /><br />ジェネリック パラメーターの制約にも使用されます。<br /><br />OCaml モジュールの定義の互換性のために使用します。|
 |`then`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[コンストラクター](members/constructors.md)|条件式で使用されます。<br /><br />オブジェクトの構築後に副作用を実行するために使用します。|
-|`to`|[ループ: `for...to` 式](loops-for-to-expression.md)|使用される`for`ループ範囲を示します。|
+|`to`|[ループ:`for...to` 式](loops-for-to-expression.md)|使用される`for`ループ範囲を示します。|
 |`true`|[プリミティブ型](primitive-types.md)|ブール型リテラルとして使用されます。|
-|`try`|[例外: try...with 式](exception-handling/the-try-with-expression.md)<br /><br />[: 例外最後に式](exception-handling/the-try-finally-expression.md)|例外を生成するコードのブロックを導入するために使用します。 組み合わせて使用`with`または`finally`します。|
+|`try`|[例外処理:Try...with 式](exception-handling/the-try-with-expression.md)<br /><br />[例外処理:Try... 最後に式](exception-handling/the-try-finally-expression.md)|例外を生成するコードのブロックを導入するために使用します。 組み合わせて使用`with`または`finally`します。|
 |`type`|[F# の型](fsharp-types.md)<br /><br />[クラス](classes.md)<br /><br />[レコード](records.md)<br /><br />[構造体](structures.md)<br /><br />[列挙型](enumerations.md)<br /><br />[判別共用体](discriminated-unions.md)<br /><br />[型略称](type-abbreviations.md)<br /><br />[測定単位](units-of-measure.md)|クラス、レコード、構造、判別共用体、列挙型、長さの単位を宣言するか省略形を入力するために使用します。|
 |`upcast`|[キャストと変換](casting-and-conversions.md)|上位の継承チェーンにある型に変換するために使用します。|
-|`use`|[リソースの管理: `use` キーワード](resource-management-the-use-keyword.md)|代わりに使用`let`を必要とする値の`Dispose`リソースを解放するために呼び出します。|
+|`use`|[リソースの管理:`use`キーワード](resource-management-the-use-keyword.md)|代わりに使用`let`を必要とする値の`Dispose`リソースを解放するために呼び出します。|
 |`use!`|[コンピュテーション式](computation-expressions.md)<br /><br />[非同期ワークフロー](asynchronous-workflows.md)|代わりに使用`let!`非同期ワークフローで必要な値には、その他のコンピュテーション式`Dispose`リソースを解放するために呼び出します。|
-|`val`|[明示的なフィールド: `val` キーワード](members/explicit-fields-the-val-keyword.md)<br /><br />[シグネチャ](signatures.md)<br /><br />[メンバー](members/index.md)|値を示すに署名または限られた状況で、メンバーを宣言する型を使用します。|
+|`val`|[明示的なフィールド: `val`キーワード](members/explicit-fields-the-val-keyword.md)<br /><br />[シグネチャ](signatures.md)<br /><br />[メンバー](members/index.md)|値を示すに署名または限られた状況で、メンバーを宣言する型を使用します。|
 |`void`|[プリミティブ型](primitive-types.md)|.NET を示す`void`型。 その他の .NET 言語と相互運用するときに使用されます。|
 |`when`|[制約](generics/constraints.md)|ブール条件の使用 (*とガード*) パターン一致、およびジェネリック型パラメーターの制約句を導入します。|
-|`while`|[ループ: `while...do` 式](loops-while-do-expression.md)|ループ構造が導入されています。|
-|`with`|[match 式](match-expressions.md)<br /><br />[オブジェクト式](object-expressions.md)<br /><br />[レコード式のコピーと更新](copy-and-update-record-expressions.md)<br /><br />[型拡張](type-extensions.md)<br /><br />[例外: `try...with` 式](exception-handling/the-try-with-expression.md)|と共に使用される、`match`パターン マッチング式のキーワード。 オブジェクトの式でも使用し、レコードのコピーの式、メンバーの定義を紹介し、例外ハンドラーを導入する拡張機能を入力します。|
+|`while`|[ループ:`while...do` 式](loops-while-do-expression.md)|ループ構造が導入されています。|
+|`with`|[match 式](match-expressions.md)<br /><br />[オブジェクト式](object-expressions.md)<br /><br />[レコード式のコピーと更新](copy-and-update-record-expressions.md)<br /><br />[型拡張](type-extensions.md)<br /><br />[例外処理:`try...with`式](exception-handling/the-try-with-expression.md)|と共に使用される、`match`パターン マッチング式のキーワード。 オブジェクトの式でも使用し、レコードのコピーの式、メンバーの定義を紹介し、例外ハンドラーを導入する拡張機能を入力します。|
 |`yield`|[シーケンス](sequences.md)|シーケンスの値を生成するために、シーケンス式で使用します。|
 |`yield!`|[コンピュテーション式](computation-expressions.md)<br /><br />[非同期ワークフロー](asynchronous-workflows.md)|コンピュテーション式で指定された計算式の結果を含むコンピュテーション式の結果のコレクションに追加するために使用します。|
 

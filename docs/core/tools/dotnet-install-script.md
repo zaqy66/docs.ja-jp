@@ -1,13 +1,13 @@
 ---
 title: dotnet-install スクリプト
 description: .NET Core CLI ツールと共有ランタイムをインストールする dotnet-install スクリプトについて説明します。
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148329"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362832"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト参照
 
@@ -73,7 +73,7 @@ macOS/Linux の場合:
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  インストールする .NET Core バイナリのアーキテクチャです。 可能性のある値は、`auto`、`x64`、および `x86` です。 既定値は `auto` です。これは実行中の OS アーキテクチャを示します。
+  インストールする .NET Core バイナリのアーキテクチャです。 指定できる値は、`<auto>`、`amd64`、`x64`、`x86`、`arm64`、および `arm` です。 既定値は `<auto>` です。これは実行中の OS アーキテクチャを示します。
 
 * **`-SharedRuntime`**
 

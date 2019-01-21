@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509484"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611400"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;要素
 リモート ソースから読み込まれたアセンブリに対して、.NET Framework 4 以降の完全な信頼を付与するかどうかを指定します。
   
 > [!NOTE]
->  場合は、Visual Studio プロジェクトのエラー一覧またはビルド エラーのエラー メッセージのため、このトピックにダイレクトされたを参照してください。[方法: Visual Studio で Web からアセンブリを使用して](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)します。  
+>  場合は、Visual Studio プロジェクトのエラー一覧またはビルド エラーのエラー メッセージのため、このトピックにダイレクトされたを参照してください。[方法。Visual Studio で Web からアセンブリを使用して](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)します。  
   
  \<configuration>  
 \<ランタイム >  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 アセンブリを読み込むし、そのコードを実行、する必要がありますか。
 
-- アセンブリのサンド ボックスを明示的に作成 (を参照してください[方法: 実行部分信頼コードをサンド ボックスで](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))。
+- アセンブリのサンド ボックスを明示的に作成 (を参照してください[方法。サンド ボックスで部分信頼コードを実行](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))。
 
 - 完全信頼でアセンブリのコードを実行します。 構成することで、これを行う、`<loadFromRemoteSources>`要素。 .NET Framework の以前のバージョンで部分信頼で実行するアセンブリが .NET Framework 4 およびそれ以降のバージョンで完全な信頼で実行されるように指定できます。
 
@@ -117,8 +117,8 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 ## <a name="see-also"></a>関連項目
 
-[CAS ポリシーの暗黙的な複数の使用: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[方法 : サンドボックスで部分信頼コードを実行する](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [CAS ポリシーの暗黙的な複数の使用: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [方法: サンド ボックスで部分信頼コードを実行します。](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

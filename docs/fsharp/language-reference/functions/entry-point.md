@@ -1,13 +1,13 @@
 ---
-title: エントリ ポイント (F#)
+title: エントリ ポイント
 description: 実行が正式に開始、実行可能ファイルとしてコンパイルされた F# プログラムのエントリ ポイントを設定する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45698393"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614371"
 ---
 # <a name="entry-point"></a>エントリ ポイント
 

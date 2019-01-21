@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;式&gt;&#39;型制約として使用することはできません'
+title: '&#39;&lt;expression&gt;&#39;を型制約として使用することはできません。'
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33588175"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;式&gt;&#39;型制約として使用することはできません
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;expression&gt;&#39;を型制約として使用することはできません。
 制約リストに、型パラメーターについて有効な制約を表していない式が含まれています。  
   
  制約リストでは、型パラメーターに渡される型引数の要件が適用されます。 次の要件を任意の組み合わせで指定できます。  

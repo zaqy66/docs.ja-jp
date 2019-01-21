@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129670"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151008"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -136,7 +136,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 ### <a name="ltparamgt"></a>&lt;param&gt;
 
-`<param>` タグは、メソッドのパラメーターを記述するために使用します。 double 型の `Add` メソッドでの例を示します。タグで記述するパラメーターは**必須**`name`属性です。
+`<param>` タグは、メソッドのパラメーターを記述するために使用します。 double 型の `Add` メソッドでの例を示します。タグで記述するパラメーターは**必須** `name` 属性です。
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -205,7 +205,7 @@ XML コメントを別のファイルに移動したので、`<include>` タグ�
 ### <a name="user-defined-tags"></a>ユーザー定義のタグ
 
 上に示したすべてのタグは、C# コンパイラで認識されるタグを表します。 ただし、ユーザー独自のタグも自由に定義できます。
-Sandcastle などのツールを使用すると、[`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、[`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) などの追加のタグや、[名前空間の文書化](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)もサポートされます。
+Sandcastle などのツールを使用すると、[`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、[`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) などの追加のタグや、[名前空間の文書化](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)もサポートされます。
 カスタムまたは社内ドキュメント生成ツールを標準タグと共に使用して、HTML から PDF への複数の出力形式をサポートできます。
 
 ## <a name="recommendations"></a>推奨事項

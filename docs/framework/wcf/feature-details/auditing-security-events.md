@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198083"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030569"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
 Windows Communication Foundation (WCF) で作成されたアプリケーションは、監査機能とセキュリティ イベント (成功、失敗、またはその両方) にログインできます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
  両方の監査の成功または失敗と呼ばれるレベルを確認することができます、*監査動作*します。  
   
 ## <a name="audit-log-location"></a>監査ログの場所  
- 監査のレベルと動作を決定したら、ユーザー (または管理者) は監査ログの場所を指定できます。 監査ログの場所は、Default、Application、および Security の 3 つから選択できます。 Default を指定した場合、ログの実際の場所は、ユーザーが使用しているシステムと、セキュリティ ログへの書き込みがサポートされているかどうかによって決まります。 詳細については、このトピックの「「オペレーティング システム」セクションを参照してください。  
+ 監査のレベルと動作を決定したら、ユーザー (または管理者) は監査ログの場所を指定できます。 3 つの選択肢は次のとおりです。既定値、アプリケーション、およびセキュリティ。 Default を指定した場合、ログの実際の場所は、ユーザーが使用しているシステムと、セキュリティ ログへの書き込みがサポートされているかどうかによって決まります。 詳細については、このトピックの「「オペレーティング システム」セクションを参照してください。  
   
  セキュリティ ログへの書き込みを行うには、`SeAuditPrivilege` が必要です。 既定では、この権限は Local System アカウントと Network Service アカウントだけに与えられています。 セキュリティ ログの `read` および `delete` 機能を管理するには、`SeSecurityPrivilege` が必要です。 既定では、この権限は管理者だけに与えられています。  
   
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|サービス レベルで監査されるサービス承認イベントの種類を指定します。 `None`、`Failure`、`Success` および `SuccessOrFailure` から選択できます。|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|監査が失敗した場合に、クライアント要求をどのように処理するかを指定します。 たとえば、`SeAuditPrivilege` を持たないサービスがセキュリティ ログへの書き込みを試行したとします。 この場合、既定値の `true` が設定されていると、エラーは無視され、クライアント要求は正常に処理されます。|  
   
- 監査イベントを記録するアプリケーションの設定の例は、次を参照してください。[方法: セキュリティ イベントの監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)します。  
+ 監査イベントを記録するアプリケーションの設定の例は、次を参照してください。[方法。セキュリティ イベントを監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)します。  
   
 ### <a name="configuration"></a>構成  
  追加して監査動作を指定する構成を使用することもできます、 [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)下、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)します。 下の要素を追加する必要があります、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)次のコードに示すようにします。  
@@ -61,7 +61,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
  <xref:System.ServiceModel.AuditLogLocation>  
  [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [方法 : セキュリティ イベントを監査する](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [方法: セキュリティ イベントを監査します。](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

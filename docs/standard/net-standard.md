@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bf8b73d5785ad39180b47963130105b905f955c1
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50186071"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307540"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -35,7 +35,7 @@ ms.locfileid: "50186071"
 
 1. 実行する .NET 実装を示す行を探します。
 2. この行内で、右から左の方向に、バージョンを示す列を探します。
-3. 列見出しは、ターゲットがサポートしている .NET Standard バージョンです (そのバージョン以下の .NET Standard バージョンでもサポートされます)。
+3. 列ヘッダーには、ターゲットでサポートされている .NET Standard バージョンが示されます。 任意の古い .NET Standard バージョンをターゲットにすることもできます。 .NET Standard の今後のバージョンでも実装はサポートされます。
 4. 対象にするプラットフォームごとに、この手順を繰り返します。 複数のターゲット プラットフォームがある場合は、その中から低いバージョンを選択することをお勧めします。 たとえば、.NET Framework 4.5 と .NET Core 1.0 で実行する場合、使用できる .NET Standard の最高のバージョンは .NET Standard 1.1 です。
 
 ### <a name="which-net-standard-version-to-target"></a>対象にする .NET Standard バージョン
@@ -57,7 +57,7 @@ ms.locfileid: "50186071"
 バージョン管理規則は主に 2 つあります。
 
 - 追加式: .NET Standard バージョンは論理的に同心円形です。高位のバージョンには、旧バージョンのすべての API が組み込まれています。 バージョン間に互換性に影響する変更はありません。
-- 不変: 出荷後、.NET Standard のバージョンは固定されます。 新しい API は、特定の .NET 実装 (.NET Core など) でまず使用できるようになります。 .NET Standard の審査会が、新しい API をすべての .NET 実装で使用できるようにした方がよいと判断すると、新しい .NET Standard バージョンに追加されます。
+- 不変:出荷後、.NET Standard のバージョンは固定されます。 新しい API は、特定の .NET 実装 (.NET Core など) でまず使用できるようになります。 .NET Standard の審査会が、新しい API をすべての .NET 実装で使用できるようにした方がよいと判断すると、新しい .NET Standard バージョンに追加されます。
 
 ## <a name="specification"></a>仕様
 
@@ -65,7 +65,7 @@ ms.locfileid: "50186071"
 
 ### <a name="official-artifacts"></a>正式な成果物
 
-正式な仕様は標準に含まれる API を定義する一連の .cs ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard)の [ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) ディレクトリに.NET Standard API が定義されています。
+正式な仕様は標準に含まれる API を定義する一連の .cs ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard)の [ref](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) ディレクトリに.NET Standard API が定義されています。
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) メタパッケージ ([ソース](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) は、1 つ以上の .NET Standard のバージョンを定義する (一部) ライブラリのセットについて説明しています。
 

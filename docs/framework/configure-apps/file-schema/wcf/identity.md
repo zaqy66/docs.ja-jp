@@ -2,12 +2,12 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 74c88df867efa82d48693a3df86b4c7813c40eba
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8d4074319a10abc1ce4aafe15e3b51381398c39c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200047"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146512"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 ID 要素を使用すると、クライアント開発者は予想されるサービスの ID をデザイン時に指定できます。 クライアントとサービス間のハンドシェイク プロセスで Windows Communication Foundation (WCF) インフラストラクチャが予期されるサービスと一致する、この要素の値の id を保証して、そのため、認証されたことができます。 詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
@@ -19,18 +19,18 @@ ID 要素を使用すると、クライアント開発者は予想されるサ�
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<identity>  
-    <certificate encodedValue="String"/>  
-    <certificateReference findValue="String"   
-       isChainIncluded="Boolean"  
-       storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-       storeLocation="LocalMachine/CurrentUser"  
-       X509FindType= Enumeration./>  
-    <dns value="String"/>  
-    <rsa value="String"/>  
-    <servicePrincipalName value="String"/>  
-    <usePrincipalName value="String"/>  
-</identity>  
+<identity>
+  <certificate encodedValue="String" />
+  <certificateReference findValue="String"
+                        isChainIncluded="Boolean"
+                        storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                        storeLocation="LocalMachine/CurrentUser"
+                        X509FindType="Enumeration" />
+  <dns value="String" />
+  <rsa value="String" />
+  <servicePrincipalName value="String" />
+  <usePrincipalName value="String" />
+</identity>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -66,4 +66,4 @@ ID 要素を使用すると、クライアント開発者は予想されるサ�
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [エンドポイント : アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

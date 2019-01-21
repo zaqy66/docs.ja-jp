@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217192"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221064"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>方法: データフロー ブロックでデータを受信したときにアクションを実行する
 "*実行データフロー ブロック*" の型は、データを受信したときに、ユーザーが指定したデリゲートを呼び出します。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>、および <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> クラスは、実行データフロー ブロックの種類です。 実行データフロー ブロックに処理関数を提供するときに、`delegate` キーワード (Visual Basic では `Sub`)、<xref:System.Action%601>、<xref:System.Func%602>、またはラムダ式を使用することができます。 このドキュメントでは、<xref:System.Func%602> とラムダ式を使用して、実行ブロックでアクションを実行する方法について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "44217192"
  [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)に関するドキュメントの「デリゲート型の概要」セクションには、<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>、<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトに提供できるデリゲート型がまとめられています。 表では、デリゲート型が同期的または非同期的に動作するかどうかについても示しています。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowExecutionBlocks.cs` (Visual Basic では `DataflowExecutionBlocks.vb`) という名前のファイルに貼り付けてから、Visual Studio のコマンド プロンプト ウィンドウで次のコマンドを実行します。  
+ コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`DataflowExecutionBlocks.cs` (Visual Basic では `DataflowExecutionBlocks.vb`) という名前のファイルに貼り付けてから、Visual Studio 用開発者コマンド プロンプト ウィンドウで次のコマンドを実行します。  
   
  Visual C#  
   

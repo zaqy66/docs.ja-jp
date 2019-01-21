@@ -10,7 +10,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33644382"
 ---
 # <a name="friend-assemblies-visual-basic"></a>フレンド アセンブリ (Visual Basic)
-A*フレンド アセンブリ*別のアセンブリにアクセスできるアセンブリ[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)型およびメンバー。 フレンド アセンブリとして指定した場合、public として宣言されていないその型とメンバーに、他のアセンブリからアクセスできるようになります。 この方法は、特に次の状況で利便性を発揮します。  
+*フレンド アセンブリ*別のアセンブリにアクセスできるアセンブリ[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)型およびメンバー。 フレンド アセンブリとして指定した場合、public として宣言されていないその型とメンバーに、他のアセンブリからアクセスできるようになります。 この方法は、特に次の状況で利便性を発揮します。  
   
 -   単体テスト、時にテスト コードで実行されるときに別のアセンブリが必要ですとマークされているテスト対象のアセンブリ内のメンバーへのアクセス`Friend`です。  
   
@@ -50,7 +50,7 @@ End Class
   
      <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡すフレンド アセンブリ名として、アセンブリ *B* の厳密な名前を指定することはできません。アセンブリのバージョン、カルチャ、アーキテクチャ、公開キー トークンは含めないでください。  
   
--   アセンブリ *A* が厳密名でない場合、フレンド アセンブリの名前は、アセンブリ名のみで構成されている必要があります。 詳細については、次を参照してください。[する方法: 作成の署名のないフレンド アセンブリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)です。  
+-   アセンブリ *A* が厳密名でない場合、フレンド アセンブリの名前は、アセンブリ名のみで構成されている必要があります。 詳細については、次を参照してください。[方法: 署名のないフレンド アセンブリを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)。  
   
 -   アセンブリ *B* に厳密な名前が付けられている場合、プロジェクトの設定またはコマンド ラインの `/keyfile` コンパイラ オプションを使用してアセンブリ *B* の厳密名キーを指定する必要があります。 詳細については、次を参照してください。[する方法: 署名されたフレンド アセンブリを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)です。  
   

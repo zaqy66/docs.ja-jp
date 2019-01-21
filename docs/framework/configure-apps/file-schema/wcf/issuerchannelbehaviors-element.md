@@ -2,18 +2,18 @@
 title: '&lt;issuerChannelBehaviors&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 7e5b8ace06a224db3abcc6b9d0ec87ccbc1a6a77
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 49a149975e406376a00ddeb43fd30f4c4834a0a0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747058"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146811"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a>&lt;issuerChannelBehaviors&gt; 要素
-指定されたセキュリティ トークン サービスと通信するときに使用される Windows Communication Foundation (WCF) クライアント エンドポイントの動作 (構成で定義されている) のコレクションを格納します。 未定義の動作は、いずれかを含めることはできません[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)要素。  
+指定されたサービス トークン サービスと通信するときに使用するには、Windows Communication Foundation (WCF) クライアント エンドポイントの動作 (構成で定義されている) のコレクションを含みます。 定義された動作は、いずれかを含めることはできません[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)要素。  
   
  \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 endpointBehaviors セクション  
 \<behavior>  
 \<clientCredentials>  
@@ -23,10 +23,10 @@ endpointBehaviors セクション
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<issuerChannelBehaviors>  
-      <add behaviorConfiguraton="string"  
-                issuerAddress="string" />  
-</issuerChannelBehaviors>  
+<issuerChannelBehaviors>
+  <add behaviorConfiguraton="string"
+       issuerAddress="string" />
+</issuerChannelBehaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -47,7 +47,7 @@ endpointBehaviors セクション
 |-------------|-----------------|  
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|サービスに対するクライアントの認証に使用されるカスタム トークンを指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この要素を使用するのは、なんらかの動作 (`<clientCredentials>` 要素を含む動作以外) を使用してサービスと通信する必要がある場合です。 たとえば場合、 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)動作要素を含める必要があります。  
   
 ## <a name="see-also"></a>関連項目  
@@ -60,6 +60,6 @@ endpointBehaviors セクション
  [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
- [方法 : フェデレーション クライアントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [方法 : ローカル発行者を設定する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [方法: ローカル発行者を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

@@ -1,17 +1,17 @@
 ---
-title: デリゲート (F#)
-description: F# でデリゲートを操作する方法について説明します。
+title: デリゲート
+description: 内のデリゲートを使用する方法について説明しますF#します。
 ms.date: 05/16/2016
-ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 772685488b7caef92123979d817929c631248afb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45745495"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612895"
 ---
 # <a name="delegates"></a>デリゲート
 
-デリゲートは、オブジェクトとして関数呼び出しを表します。 F# で通常必要があります値を使用する関数を表すファーストクラスの値として関数ただし、デリゲートは、.NET Framework で使用され、それらを期待する Api と相互運用するときに、必要なため。 他の .NET Framework 言語用に設計されたオーサリング ライブラリを使用して、ときも使用できます。
+デリゲートは、オブジェクトとして関数呼び出しを表します。 F#、通常は値を使用する関数を表すファーストクラスの値として関数ただし、デリゲートは、.NET Framework で使用され、それらを期待する Api と相互運用するときに、必要なため。 他の .NET Framework 言語用に設計されたオーサリング ライブラリを使用して、ときも使用できます。
 
 ## <a name="syntax"></a>構文
 

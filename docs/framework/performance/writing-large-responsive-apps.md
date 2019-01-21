@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195893"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613519"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージ コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
@@ -28,20 +28,20 @@ ms.locfileid: "50195893"
 ## <a name="just-the-facts"></a>.NET Framework についての事実  
  パフォーマンスを調整し、応答性のある .NET Framework アプリを作成する際には、次に説明する事実を考慮してください。 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>事実 1: 不完全な最適化は行わない  
+### <a name="fact-1-dont-prematurely-optimize"></a>事実 1:不完全な最適化します。  
  必要以上に複雑なコードを記述すると、保守、デバッグ、細かな調整に伴うコストが発生します。 経験豊富なプログラマは、コーディングの問題の解決方法を直観的に把握し、より効率的なコードを記述します。 しかし、コードの最適化が不完全になることがあります。 たとえば、単純な配列で十分な場合にハッシュ テーブルを使用したり、単に値を再計算する代わりに、メモリ リークが発生する恐れのある複雑なキャッシュを使用したりします。 経験豊富なプログラマであっても、パフォーマンスを確認するテストを実施し、問題がある場合にはコードを分析してください。 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事実 2: 測定していないのであれば、それは推測である  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事実 2:推測したかどうかは測定していない、  
  プロファイルと測定は嘘をつきません。 プロファイルから、CPU の負荷が上限になっているかどうか、またはディスク I/O でブロックされているかどうかがわかります。 プロファイルは、割り当てるメモリのサイズと種類、[ガベージ コレクション](../../../docs/standard/garbage-collection/index.md) (GC) の処理に CPU が長い時間を取られていないか示します。 
   
  アプリでの主要な顧客エクスペリエンスやシナリオについてパフォーマンスの目標を設定し、パフォーマンスを測定するテストを作成してください。 テスト失敗の調査には科学的な手法を使用します。ガイドとなるプロファイルを使用して、どのような問題が発生しているかを仮定し、実験やコード変更によってその仮定を検証します。 定期的にテストを実施して、時間の経過と共にベースライン パフォーマンス測定を確立します。これにより、パフォーマンス後退を引き起こしている変更を切り分けることができます。 パフォーマンス測定を厳密に実施することで、不要なコード更新に時間をかけることを回避できます。 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>事実 3: 優れたツールには大きな効果がある  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>事実 3:優れたツールにすべての違い  
  優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft は、[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)、[PerfView](https://www.microsoft.com/download/details.aspx?id=28567) など、さまざまなパフォーマンス ツールを提供しています。 
   
  PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。 パフォーマンスに関連する [Windows イベント トレーシング](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。 PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。 
   
-### <a name="fact-4-its-all-about-allocations"></a>事実 4: すべては割り当てで決まる  
+### <a name="fact-4-its-all-about-allocations"></a>事実 4:割り当て情報します。  
  応答性の高い .NET Framework アプリ開発の要となるのはアルゴリズム (例: バブル ソートの代わりにクイック ソートを使用) であると思うかもしれませんが、それは正しくありません。 応答性の高いアプリを開発する上で最も重要なのは、メモリの割り当てです。これは特に、アプリが非常に大規模であり大量データを処理する場合に該当します。 
   
  新しいコンパイラ API の応答性の高い IDE 機能のほとんどの開発作業には、割り当てを回避し、キャッシュ ストラテジを管理することが関連していました。 PerfView トレースから、新しい C# および Visual Basic コンパイラのパフォーマンスはほとんど CPU とは関連していないことが判明しています。 これらのコンパイラは、数十万行から数百万行のコード行の読み取り、メタデータの読み取り、または生成されたコードの出力の時点では I/O と関連しています。 UI スレッドの遅延の原因は、ほぼガベージ コレクションにあります。 .NET Framework GC は、パフォーマンスのために高度に調整されており、その処理のほとんどはアプリ コードの実行中に同時に実行されます。 ただし、1 回の割り当てによって負荷の高い [gen2](../../../docs/standard/garbage-collection/fundamentals.md) コレクションが実行され、これによってすべてのスレッドが停止されることがあります。 
@@ -197,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
   
  `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。 また、「//」にもチェックされます。 修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。 文字列が「//」で始まるかどうか、空白でないし、文字の文字をチェックする最初の文字を検索します。 新しいコードを使用して`IndexOfFirstNonWhiteSpaceChar`の代わりに<xref:System.String.TrimStart%2A>を空白以外の文字が発生します (指定した開始インデックス) の後に最初のインデックスを返します。 この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。 コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。 
   
- **例 4: StringBuilder**  
+ **例 4:StringBuilder**  
   
  この例は <xref:System.Text.StringBuilder> オブジェクトを使用します。 次の関数は、ジェネリック型の完全な型名を生成します。  
   
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ とラムダ  
 統合言語クエリ (LINQ)、ラムダ式と組み合わせて、生産性向上機能の例に示します。 ただし、その使用は時間の経過と共にパフォーマンスに大きな影響を与える可能性があり、コードを書き直す必要がある場合があります。
   
- **例 5: ラムダ、List\<T>、および IEnumerable\<T>**  
+ **例 5:ラムダ、リスト\<T >、および IEnumerable\<T >**  
   
  この例では、[LINQ と関数スタイルのコード](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
   
@@ -340,7 +340,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  `symbols` 変数の型は <xref:System.Collections.Generic.List%601> です。 <xref:System.Collections.Generic.List%601> コレクション型は <xref:System.Collections.Generic.IEnumerable%601> を実装し、<xref:System.Collections.Generic.IEnumerator%601> が <xref:System.Collections.Generic.List%601>を使用して実装する列挙子 (`struct` インターフェイス) を適切に定義します。 クラスの代わりに構造体を使用すると、通常ヒープ割り当てが回避されます。ヒープ割り当ては、ガベージ コレクションのパフォーマンスに影響することがあります。 通常、列挙子は言語の `foreach` ループで使用されます。このループは、コール スタックで返される列挙子構造を使用します。 オブジェクトのスペースを確保するためにコール スタック ポインターをインクリメントしても、GC はヒープ割り当てのような影響を受けません。 
   
- 拡張 `FirstOrDefault` 呼び出しの場合、このコードは`GetEnumerator()` に対して <xref:System.Collections.Generic.IEnumerable%601> を呼び出す必要があります。 `symbols` を `enumerable` 型の `IEnumerable<Symbol>` 変数に割り当てると、実際のオブジェクトが <xref:System.Collections.Generic.List%601> であるという情報が失われます. つまり、コードが `enumerable.GetEnumerator()` で列挙子をフェッチするときには、.NET Framework は返される構造体をボックス化し、`enumerator` 変数に割り当てる必要があります。 
+ 拡張 `FirstOrDefault` 呼び出しの場合、このコードは`GetEnumerator()` に対して <xref:System.Collections.Generic.IEnumerable%601> を呼び出す必要があります。 `symbols` を `enumerable` 型の `IEnumerable<Symbol>` 変数に割り当てると、実際のオブジェクトが <xref:System.Collections.Generic.List%601> であるという情報が失われます。 つまり、コードが `enumerable.GetEnumerator()` で列挙子をフェッチするときには、.NET Framework は返される構造体をボックス化し、`enumerator` 変数に割り当てる必要があります。 
   
  **例 5 の修正**  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  このコードは LINQ 拡張メソッド、ラムダ、列挙子を使用しないため、割り当ての問題は発生しません。 `symbols` コレクションが <xref:System.Collections.Generic.List%601> であることをコンパイラが認識でき、結果列挙子 (構造体) を適切な型のローカル変数にバインドしてボックス化を回避できるため、割り当てが発生しません。 この関数の元のバージョンは、C# の高い性能と .NET Framework の生産性を示す最適な例でした。 この新しく効率性が高いバージョンは、保守のために複雑なコードを追加することなく、このような品質を保持します。 
   
 ### <a name="async-method-caching"></a>非同期のメソッド キャッシュ  
- 次の例は、キャッシュされた結果を[非同期](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)メソッドで使用しようとすると発生する一般的な問題を示します。 
+
+次の例は、キャッシュされた結果を[非同期](../../csharp/programming-guide/concepts/async/index.md)メソッドで使用しようとすると発生する一般的な問題を示します。
   
  **例 6: 非同期メソッドでのキャッシュ**  
   

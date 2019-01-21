@@ -2,12 +2,12 @@
 title: チャネルのチャンキング
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 660a20432b28f7db1c2933bd1a71bc6990a1d52a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087911"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030504"
 ---
 # <a name="chunking-channel"></a>チャネルのチャンキング
 Windows Communication Foundation (WCF) を使用してサイズの大きいメッセージを送信するときに、それらのメッセージをバッファーに使用されるメモリの量を制限することが望ましいは多くの場合。 解決策の 1 つとして、メッセージ本文のストリーミングが考えられます (データの大部分が本文にある場合)。 ただし、一部のプロトコルではメッセージ全体のバッファが必要です。 たとえば、信頼できるメッセージとセキュリティの 2 つがこの例として挙げられます。 そこで別の解決策として、サイズの大きいメッセージをチャンクと呼ばれるサイズの小さいメッセージに分割し、そうしたチャンクを 1 つずつ送信し、受信側でサイズの大きいメッセージに再構成するという方法が考えられます。 アプリケーション自体でこうしたチャンキングおよびチャンキング解除を行うことができるほか、カスタム チャネルを使用して行うこともできます。 チャネルのチャンキングのサンプルでは、カスタム プロトコル チャネルまたはカスタム階層チャネルを使用して、サイズの大きい任意のメッセージのチャンキングおよびチャンキング解除を行う方法を示します。  
@@ -74,7 +74,7 @@ interface ITestService
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"   
             xmlns:s="http://www.w3.org/2003/05/soap-envelope">  
   <s:Header>  
-<!—Original message action is replaced with a chunking-specific action. -->  
+<!--Original message action is replaced with a chunking-specific action. -->  
     <a:Action s:mustUnderstand="1">http://samples.microsoft.com/chunkingAction</a:Action>  
 <!--  
 Original message is assigned a unique id that is transmitted   
@@ -303,7 +303,7 @@ interface ITestService
 ### <a name="determining-which-messages-to-chunk"></a>チャンク対象のメッセージの判断  
  チャネルのチャンキングによってチャンクされるメッセージは、`ChunkingBehavior` 属性を介して識別されるメッセージのみです。 `ChunkingBehavior` クラスは `IOperationBehavior` を実装し、`AddBindingParameter` メソッドの呼び出しによって実装されます。 このメソッドでは、`ChunkingBehavior` が `AppliesTo` プロパティの値 (`InMessage` または`OutMessage` のいずれか、またはその両方) を調べ、どのメッセージがチャンク対象かを判断します。 次に、チャンク対象の各メッセージのアクションを (`OperationDescription` の Messages コレクションから) 取得し、これを `ChunkingBindingParameter` のインスタンス内に含まれている文字列コレクションに追加します。 そして、この `ChunkingBindingParameter` を指定された `BindingParameterCollection` に追加します。  
   
- この `BindingParameterCollection` は、バインディング要素がチャネル ファクトリまたはチャネル リスナを作成するときに、`BindingContext` 内でバインディングの各バインディング要素に渡されます。 `ChunkingBindingElement`の実装の`BuildChannelFactory<T>`と`BuildChannelListener<T>`この`ChunkingBindingParameter`のうち、 `BindingContext’`s`BindingParameterCollection`します。 次に、`ChunkingBindingParameter` に含まれているアクションのコレクションが `ChunkingChannelFactory` または `ChunkingChannelListener` に渡され、その後 `ChunkingDuplexSessionChannel` に渡されます。  
+ この `BindingParameterCollection` は、バインド要素がチャネル ファクトリまたはチャネル リスナを作成するときに、`BindingContext` 内でバインディングの各バインド要素に渡されます。 `ChunkingBindingElement`の実装の`BuildChannelFactory<T>`と`BuildChannelListener<T>`この`ChunkingBindingParameter`のうち、 `BindingContext’`s`BindingParameterCollection`します。 次に、`ChunkingBindingParameter` に含まれているアクションのコレクションが `ChunkingChannelFactory` または `ChunkingChannelListener` に渡され、その後 `ChunkingDuplexSessionChannel` に渡されます。  
   
 ## <a name="running-the-sample"></a>サンプルの実行  
   

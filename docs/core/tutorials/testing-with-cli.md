@@ -2,14 +2,14 @@
 title: .NET Core コマンド ラインを使用したプロジェクトの整理およびテスト
 description: このチュートリアルでは、コマンド ラインから .NET Core プロジェクトを整理してテストする方法について説明します。
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415225"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242722"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core コマンド ラインを使用したプロジェクトの整理およびテスト
 
@@ -97,25 +97,25 @@ Woof!
 Meow!
 ```
 
-省略可能な演習: このプロジェクトを拡張し、`Bird` などの新しいペット タイプを追加することができます。 その場合、鳥の `TalkToOwner` メソッドで所有者に `Tweet!` を与えるようにします。 再度アプリを実行します。 出力には `Tweet!` が含まれます。
+省略可能な演習:このプロジェクトを拡張し、`Bird` などの新しいペット タイプを追加することができます。 その場合、鳥の `TalkToOwner` メソッドで所有者に `Tweet!` を与えるようにします。 再度アプリを実行します。 出力には `Tweet!` が含まれます。
 
 ### <a name="testing-the-sample"></a>サンプルのテスト
 
 これで、`NewTypes` プロジェクトの準備ができました。フォルダーにはペット関連のタイプが保持されており、プロジェクトは整理された状態です。 次は、テスト プロジェクトを作成し、[xUnit](https://xunit.github.io/) テスト フレームワークを使用してテストの作成を開始します。 単体テストでは、ペット タイプの動作を自動的にチェックして、正しく動作していることを確認することができます。
 
-*test* フォルダーを作成します。この中に *NewTypesTests* フォルダーが含まれます。 *NewTypesTests* フォルダーのコマンド プロンプトから、`dotnet new xunit` を実行します。 これで、*NewTypesTests.csproj* と *UnitTest1.cs* という 2 つのファイルが生成されます。
+*src* フォルダーに移動して、*test* フォルダーを作成します。この中に *NewTypesTests* フォルダーが含まれます。 *NewTypesTests* フォルダーのコマンド プロンプトから、`dotnet new xunit` を実行します。 これによって、*NewTypesTests.csproj* と *UnitTest1.cs* という 2 つのファイルが生成されます。
 
 現在、テスト プロジェクトでは `NewTypes` のタイプをテストすることはできません。`NewTypes` プロジェクトへのプロジェクト参照が必要になります。 プロジェクト参照を追加するには、以下の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-次のように、*NewTypesTests.csproj* ファイルに `<ItemGroup>` ノードを追加して、プロジェクト参照を手動で追加することもできます。
+または、次のように、*NewTypesTests.csproj* ファイルに `<ItemGroup>` ノードを追加して、プロジェクト参照を手動で追加することもできます。
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 
@@ -159,7 +159,7 @@ public class PetTests
 }
 ```
 
-省略可能な演習: 所有者に `Tweet!` を与える前述の `Bird` タイプを追加した場合は、テスト メソッドを *PetTests.cs* ファイル `BirdTalkToOwnerReturnsTweet` に追加し、`Bird` タイプに対して `TalkToOwner` メソッドが正しく動作することを確認します。
+省略可能な演習:所有者に `Tweet!` を与える前述の `Bird` タイプを追加した場合は、テスト メソッドを *PetTests.cs* ファイル `BirdTalkToOwnerReturnsTweet` に追加し、`Bird` タイプに対して `TalkToOwner` メソッドが正しく動作することを確認します。
 
 > [!NOTE]
 > `expected` と `actual` の値は等しくなることが予想されますが、`Assert.NotEqual` チェックに対する初期アサーションでは、これらの値が*等しくない*と指定されています。 通常、テストのロジックを確認するために、最初は一度失敗するテストを作成します。 テストが失敗したことを確認したら、テストに合格できるようにするアサーションを調整します。

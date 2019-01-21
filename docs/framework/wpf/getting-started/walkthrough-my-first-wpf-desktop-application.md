@@ -51,7 +51,7 @@ ms.locfileid: "53150746"
 
 最初の手順では、アプリケーションの定義を 2 つのページとイメージを含むアプリケーション インフラストラクチャを作成します。
 
-1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する**`ExpenseIt`**:
+1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
 
    1. Visual Studio を開き、選択**ファイル** > **新規** > **プロジェクト**します。
 
@@ -59,7 +59,7 @@ ms.locfileid: "53150746"
 
    2. 下、**インストール済み**カテゴリで、いずれかを展開、 **Visual C#** または**Visual Basic**ノードをクリックして**Windows デスクトップ**します。
 
-   3. 選択、 **WPF アプリ (.NET Framework)** テンプレート。 名前を入力します**`ExpenseIt`** 選び**OK**します。
+   3. 選択、 **WPF アプリ (.NET Framework)** テンプレート。 名前を入力します **`ExpenseIt`** 選び**OK**します。
 
       ![選択した WPF アプリで新しいプロジェクト ダイアログ ボックス](media/new-project-dialog.png)
 
@@ -132,11 +132,11 @@ ms.locfileid: "53150746"
 
 このセクションでは、アプリケーションに 2 つのページと 1 つのイメージを追加します。
 
-1. 新しい WPF ページをプロジェクトに追加し、名前*`ExpenseItHome.xaml`*:
+1. 新しい WPF ページをプロジェクトに追加し、名前 *`ExpenseItHome.xaml`* :
 
    1. **ソリューション エクスプ ローラー**を右クリックし、 **`ExpenseIt`** プロジェクト ノード**追加** > **ページ**します。
 
-   1. **新しい項目の追加**ダイアログ ボックスで、**ページ (WPF)** テンプレートは既に選択されています。 名前を入力します**`ExpenseItHome`**、し、**追加**します。
+   1. **新しい項目の追加**ダイアログ ボックスで、**ページ (WPF)** テンプレートは既に選択されています。 名前を入力します **`ExpenseItHome`** 、し、**追加**します。
 
     このページは、アプリケーションの起動時に表示される最初のページです。 経費報告書を表示するからを選択するユーザーの一覧表示されます。
 
@@ -156,7 +156,7 @@ ms.locfileid: "53150746"
 
 5. 設定、<xref:System.Windows.Navigation.NavigationWindow.Source%2A>プロパティを<xref:System.Windows.Navigation.NavigationWindow>に"`ExpenseItHome.xaml`"。
 
-    これにより設定*`ExpenseItHome.xaml`* アプリケーションの起動時を開く最初のページになります。 このよう Visual Basic では、XAML になります。
+    これにより設定 *`ExpenseItHome.xaml`* アプリケーションの起動時を開く最初のページになります。 このよう Visual Basic では、XAML になります。
 
     [!code-xaml[ExpenseIt#7_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
@@ -193,7 +193,7 @@ ms.locfileid: "53150746"
 
     Visual Studio が自動的に作成、新しいファイルを作成するときに、*コード ビハインド*ファイル。 これらの分離コード ファイルでは、ユーザー入力に対応するためのロジックを処理します。
 
-    コードのようになります**`ExpenseItHome`**:
+    コードのようになります **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
     [!code-vb[ExpenseIt#2_5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml.vb#2_5)]
@@ -264,7 +264,7 @@ ms.locfileid: "53150746"
 
 このセクションでは、ホーム ページの経費レポートを表示するユーザーが選択できるユーザーの一覧を表示する UI を更新します。 コントロールとは、ユーザーがアプリケーションと対話できるようにする UI オブジェクトのことです。 詳しくは、「 [コントロール](../../../../docs/framework/wpf/controls/index.md)」をご覧ください。
 
-この UI を作成するには、次の要素を追加します*`ExpenseItHome.xaml`*:
+この UI を作成するには、次の要素を追加します *`ExpenseItHome.xaml`* :
 
 - <xref:System.Windows.Controls.ListBox> (用のユーザーの一覧)。
 - <xref:System.Windows.Controls.Label> (一覧のヘッダーとして)。
@@ -331,7 +331,7 @@ ms.locfileid: "53150746"
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
-3. 開いている*`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* します。
+3. 開いている *`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* します。
 
 4. 次のコードを追加、`ExpenseItHome`ボタンを追加するクラス イベント ハンドラーをクリックします。 イベント ハンドラーが表示されます、 **ExpenseReportPage**ページ。
 
@@ -444,7 +444,7 @@ ms.locfileid: "53150746"
     [!code-csharp[ExpenseIt#26](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseReportPage.xaml.cs#26)]
     [!code-vb[ExpenseIt#26](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseReportPage.xaml.vb#26)]
 
-3. 開いている*`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* します。
+3. 開いている *`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* します。
 
 4. 変更、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>選択した個人の経費報告書データを渡す新しいコンス トラクターを呼び出すイベント ハンドラー。
 
