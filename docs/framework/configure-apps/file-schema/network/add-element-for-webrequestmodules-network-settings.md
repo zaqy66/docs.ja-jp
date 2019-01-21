@@ -1,5 +1,5 @@
 ---
-title: '&lt;追加&gt;webRequestModules (ネットワーク設定) の要素'
+title: 'webRequestModules の <add> 要素 (ネットワーク設定)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50188540"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;追加&gt;webRequestModules (ネットワーク設定) の要素
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>webRequestModules の <add> 要素 (ネットワーク設定)
 カスタムの Web 要求モジュールをアプリケーションに追加します。  
   
  \<configuration>  
