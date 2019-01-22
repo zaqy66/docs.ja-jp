@@ -1,5 +1,5 @@
 ---
-title: schemeSettings の &lt;remove&gt; 要素 (Uri 設定)
+title: 'schemeSettings の <remove> 要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 ms.openlocfilehash: d444e2eeeace2dc59a53467316507d0bc38970d5
@@ -9,10 +9,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50186045"
 ---
-# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>schemeSettings の &lt;remove&gt; 要素 (Uri 設定)
+# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>schemeSettings の <remove> 要素 (Uri 設定)
 スキーム名の構成設定を削除します。  
   
- \<configuration>  
+\<configuration>  
 \<uri>  
 \<schemeSettings>  
 \<remove>  
