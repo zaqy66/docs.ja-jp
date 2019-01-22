@@ -1,5 +1,5 @@
 ---
-title: '<schemeSettings>要素 (Uri 設定)'
+title: '&lt;schemeSettings&gt;要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 7c75e9a6d29637e1701fe0b9e05adf0ccc3596b9
@@ -9,12 +9,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50192552"
 ---
-# <a name="ltschemesettingsgt-element-uri-settings"></a><schemeSettings>要素 (Uri 設定)
+# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt;要素 (Uri 設定)
 <xref:System.Uri> が特定のスキームに解析される方法を指定します。  
   
  \<configuration>  
-\<uri>  
-\<schemeSettings>  
+\<uri >  
+\<schemeSettings >  
   
 ## <a name="syntax"></a>構文  
   
