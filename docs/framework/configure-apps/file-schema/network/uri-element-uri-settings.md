@@ -1,5 +1,5 @@
 ---
-title: '<Uri>要素 (Uri 設定)'
+title: '&lt;Uri&gt;要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 ms.openlocfilehash: 2ca5592bd0a66ded25c7da8f0b42367af990aa7a
@@ -9,13 +9,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50192188"
 ---
-# <a name="lturigt-element-uri-settings"></a><Uri>要素 (Uri 設定)
+# <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;要素 (Uri 設定)
 .NET Framework での uniform resource identifier (Uri) を使用して表現された web アドレスの処理方法を指定する設定が含まれています。  
   
 ## <a name="schema-hierarchy"></a>スキーマの階層  
  [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<uri >](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
 ## <a name="syntax"></a>構文  
   
