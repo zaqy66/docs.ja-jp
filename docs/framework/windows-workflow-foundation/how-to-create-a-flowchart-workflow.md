@@ -1,25 +1,25 @@
 ---
-title: フローチャート ワークフローを作成する方法
+title: '方法: フローチャート ワークフローを作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502152"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415248"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>フローチャート ワークフローを作成する方法
-ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 など両方の組み込みのアクティビティを使用するワークフローを作成する手順をこのトピックで、<xref:System.Activities.Statements.Flowchart>アクティビティ、およびカスタム アクティビティ、前の[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
+# <a name="how-to-create-a-flowchart-workflow"></a>方法: フローチャート ワークフローを作成します。
+ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Flowchart>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
   
 > [!NOTE]
->  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)です。  
+>  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)です。  
   
 > [!NOTE]
->  このチュートリアルの完成版をダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
+>  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
 ### <a name="to-create-the-workflow"></a>ワークフローを作成するには  
   
@@ -67,7 +67,7 @@ ms.locfileid: "43502152"
 1.  ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**上にマウス ポインターと、**開始**の上部には、ノード、フローチャート。 ときに、**割り当てる**経由でのアクティビティは、**開始**ノードを囲む 3 つの三角形が表示されます、**開始**ノード。 削除、**割り当てる**すぐ下にある三角形のアクティビティ、**開始**ノード。 これは、2 つの項目をまとめてリンクし、指定、**割り当てる**フローチャート内の最初のアクティビティとしてアクティビティ。  
   
     > [!NOTE]
-    >  アクティビティは、開始ノードに手動でリンクすることにより、ワークフローの開始アクティビティとして指定することもできます。 これを行うには、マウス ポインターを置き、**開始**ノード上にマウスがときに表示される四角形のいずれかを**開始**ノード、およびドラッグ、接続まで、必要なアクティビティの行し、のいずれかの上にドロップ表示される四角形。 指定することもでき、it を右クリックして開始アクティビティとしてアクティビティ**開始ノードとして設定**します。  
+    >  アクティビティは、開始ノードに手動でリンクすることにより、ワークフローの開始アクティビティとして指定することもできます。 これを行うには、マウス ポインターを置き、**開始**ノード上にマウスがときに表示される四角形のいずれかを**開始**ノード、およびドラッグ、接続まで、必要なアクティビティの行し、のいずれかの上にドロップ表示される四角形。 It を右クリックして、開始アクティビティとしてアクティビティを指定することも**開始ノードとして設定**します。  
   
 2.  型`Target`に、**に**ボックスし、次の式を**c# 式を入力します**または**VB の式を入力します。** ボックス。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "43502152"
   
 1.  Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
-     ワークフローを実行する方法について、次のトピックをご覧ください[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。 既に完了している場合、[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)ステップのワークフローのさまざまなスタイルと共に、フローチャート ワークフローがこの手順を使用してを実行してに進んで、 [のアプリケーションをビルドして、実行](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)の[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。  
+     ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)ステップのワークフローのさまざまなスタイルと共に、フローチャート ワークフローがこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Activities.Statements.Flowchart>  
@@ -156,5 +156,5 @@ ms.locfileid: "43502152"
  [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [ワークフローの設計](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [アクティビティを作成する方法](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [ワークフローを実行する方法](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+ [方法: アクティビティを作成します。](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [方法: ワークフローを実行します。](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

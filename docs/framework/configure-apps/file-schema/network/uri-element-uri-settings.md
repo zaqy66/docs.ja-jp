@@ -42,7 +42,7 @@ ms.locfileid: "50192188"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[構成](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|すべての名前空間の設定が含まれています。|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|すべての名前空間の設定が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
  `uri`要素にはメンバーの設定が含まれています、<xref:System.Uri>クラスによって使用されるクラス、<xref:System.Net>名前空間。 設定は、IRI と IDN のサポートを構成します。  

@@ -1,5 +1,5 @@
 ---
-title: 'authenticationModules の <add> 要素 (ネットワーク設定)'
+title: authenticationModules の &lt;add&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50181083"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>authenticationModules の <add> 要素 (ネットワーク設定)
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>authenticationModules の &lt;add&gt; 要素 (ネットワーク設定)
 アプリケーションに認証モジュールを追加します。  
   
  \<configuration>  

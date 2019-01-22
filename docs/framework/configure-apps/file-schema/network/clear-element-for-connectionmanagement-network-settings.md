@@ -1,5 +1,5 @@
 ---
-title: 'connectionManagement の <clear> 要素 (ネットワーク設定)'
+title: connectionManagement の &lt;clear&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
@@ -17,12 +17,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2018
 ms.locfileid: "50205101"
 ---
-# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>connectionManagement の <clear> 要素 (ネットワーク設定)
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>connectionManagement の &lt;clear&gt; 要素 (ネットワーク設定)
 接続の管理の一覧をクリアします。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<clear>  
   
 ## <a name="syntax"></a>構文  

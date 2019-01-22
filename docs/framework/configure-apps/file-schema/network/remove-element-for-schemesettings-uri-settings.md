@@ -12,7 +12,7 @@ ms.locfileid: "50186045"
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>schemeSettings の <remove> 要素 (Uri 設定)
 スキーム名の構成設定を削除します。  
   
- \<configuration>  
+\<configuration>  
 \<uri>  
 \<schemeSettings>  
 \<remove>  

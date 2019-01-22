@@ -1,5 +1,5 @@
 ---
-title: 'bypasslist の <clear> 要素 (ネットワーク設定)'
+title: bypasslist の &lt;clear&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50201414"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>bypasslist の <clear> 要素 (ネットワーク設定)
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>bypasslist の &lt;clear&gt; 要素 (ネットワーク設定)
 プロキシ バイ パスの一覧をクリアします。  
   
  \<configuration>  

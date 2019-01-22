@@ -3,13 +3,13 @@ title: 機械学習データ変換 - ML.NET
 description: ML.NET でサポートされている機能エンジニアリングのコンポーネントについて検証します。
 author: JRAlexander
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.date: 01/14/2019
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249126"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415352"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>機械学習データ変換 - ML.NET
 
@@ -23,11 +23,6 @@ ms.locfileid: "54249126"
 | 変換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.GroupTransform> | 連続するグループ ID に基づいて、スカラー列の値をベクターにグループ化します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | すべてのフィーチャーを 1 つのフィーチャーの列に結合します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | TransformModels のシーケンスと PredictorModel を 1 つの PredictorModel に結合します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | TransformModels のシーケンスを 1 つのモデルに結合します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.Segregator> | ベクター列をグループ解除して行のシーケンスにします。グループ化変換の逆です。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | TransformModel と PredictorModel を 1 つの PredictorModel に結合します。 |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | ベクター列をグループ解除して行のシーケンスにします。グループ化変換の逆です。 |
 
 ## <a name="conversions"></a>変換 
@@ -35,7 +30,6 @@ ms.locfileid: "54249126"
 | 変換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | 単一の値の列またはベクター列のいずれかをハッシュします。 ベクター列の場合、スロットごとに個別にハッシュします。 これは、テキスト値またはキー値のいずれかをハッシュできます。 |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | 列の値をハッシュに変換します。 この変換では、数値とテキストの両方の入力と、単一値とベクター値の両方の列を受け入れます。 |
 | <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | 複数の列の値をハッシュに変換します。 この変換では、数値とテキストの両方の入力と、単一値とベクター値の両方の列を受け入れます。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | キーをバイナリ ベクター列に変換します。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | KeyValues メタデータを使用してキー インデックスを KeyValues メタデータ内の対応する値にマップします。 |
@@ -56,10 +50,10 @@ ms.locfileid: "54249126"
 | 変換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 個々のトークンをストップワードと比較 (大文字と小文字を区別しない比較) することで、ストップワードの指定されたリストを削除します。| 
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | 1 つまたは複数の ImageType 列を取得して、それらを同じイメージのグレースケール表現に変換します。|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | 1 つまたは複数の ReadOnlyMemory 列を取得し、それらを ImageType として読み込みます。 |
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | 1 つまたは複数の ImageType 列を取得して、それらをベクター表現に変換します。|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | 1 つまたは複数の ImageType 列を取得して、それらを指定した高さと幅にサイズ変更します。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 1 つまたは複数の ImageType 列を取得して、それらを同じイメージのグレースケール表現に変換します。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 1 つまたは複数の ReadOnlyMemory 列を取得し、それらを ImageType として読み込みます。 |
+| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 1 つまたは複数の ImageType 列を取得して、それらをベクター表現に変換します。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 1 つまたは複数の ImageType 列を取得して、それらを指定した高さと幅にサイズ変更します。|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | LightLDA (Latent Dirichlet Allocation の最新の実装) を実装します。|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | 指定したモデル ファイルから特定の変換を読み込みます。 シリアル化されたチェーンからの 'チェリー ピック' 変換を可能にしたり、事前トレーニング済みの変換を異なる (ただし互換性がある) データ ビューに適用することができます。 |
 | <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | キーの指定のベクターで、n-gram のカウントのバッグ (長さ 1-n の連続する値のシーケンス) が生成されます。 n-gram のディクショナリをビルドし、ディクショナリの ID をバッグのインデックスとして使用することでこれを行います。 | 
@@ -70,7 +64,6 @@ ms.locfileid: "54249126"
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 特徴ベクトルの低ランク サブ空間へのプロジェクションを計算します。 |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 事前にトレーニングされたセンチメント モデルを使用して、入力文字列をスコア付けします。 |
 | <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | 個々のトークンをストップワードと比較 (大文字と小文字を区別しない比較) することで、ストップワード (最もよく使われている単語) の言語固有のリストを削除します。 |
-| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | テキスト値を、その引数によって提供されるマップのデータセットを使用して、新しい列にマップします。 |
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | 指定したテキストで、n-gram のカウントのバッグ (連続する単語のシーケンス) を生成します。 n-gram のディクショナリをビルドし、ディクショナリの ID をバッグのインデックスとして使用することでこれを行います。 |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | 指定したテキストで、n-gram のカウントのバッグ (長さ 1-n の連続する単語のシーケンス) を生成します。 n-gram ごとにハッシュし、ハッシュ値をバッグ内のインデックスとして使用することでこれを行います。 |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | 区切り文字を使用してテキストを単語に分割します。 |
@@ -89,12 +82,8 @@ ms.locfileid: "54249126"
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | 入力値 (単語、数字など) をディクショナリ内のインデックスに変換します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | ラベルを分類に適したものにするため、キーまたはブール値 (必要な場合) に変換します。 |
 | <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  ラベルを変換します。 |
 | <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | 主に OVA で使用するために、多クラス ラベルをバイナリ True、False ラベルに再マップします。|
-| <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | ラベルを回帰に最適なものにするため、float 型に変換します。 |
-| <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | 予測されるラベル列が bool 型である場合を除き、元の値に変換します。 |
 
 ## <a name="missing-values"></a>欠損値
 
@@ -112,7 +101,6 @@ ms.locfileid: "54249126"
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | ベクター値列の平均と分散を計算します。 現在の平均と M2 (平均からの値の 2 乗差の合計)、NaNs の数、ゼロ以外の要素の数を追跡します。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | ベクター値列の平均と分散を計算します。 現在の平均と M2 (平均からの値の 2 乗差の合計)、NaNs の数、ゼロ以外の要素の数を追跡します。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | 最小値、最大値、非スパース値の数 (vCount)、およびベクター値列に対する ProcessValue() の呼び出し回数 (trainCount) を追跡します。 |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | 最小値、最大値、非スパース値の数 (vCount)、およびベクター値列に対する ProcessValue() の呼び出し回数 (trainCount) を追跡します。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | 機能範囲を標準化します。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |機能範囲を標準化します。 |
 
@@ -147,7 +135,6 @@ ms.locfileid: "54249126"
 | <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | データセットから列を複製します。|
 | <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | 特定の入力からドロップまたは保持する列のセットを選択します。 |
 | <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | 列からスロットをドロップします。|
-| <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform では、KeyValues メタデータを使用してキー インデックスを KeyValues メタデータ内の対応する値にマップします。 |
 | <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | 指定した型と既定値を使用して、新しい列を作成します。 |
 | <xref:Microsoft.ML.Transforms.RangeFilter> | Single、Double または Key (連続) 型の列で dataview をフィルター処理します。 指定した最小/最大の範囲内に値を保持します。 NaNs は常に除外されます。入力が Key 型の場合、最小/最大は値の数の割合と見なされます。 |
 
@@ -168,15 +155,15 @@ ms.locfileid: "54249126"
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | 値の加重平均を取得します。ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)) |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | アダプティブ カーネル密度の推定とマーチンゲールに基づいて、i.i.d. シーケンス (ランダムなサンプル) の変更点の検出機能変換を実装します。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | アダプティブ カーネル密度の推定に基づいて、i.i.d. シーケンス (ランダムなサンプル) のスパイクの検出機能変換を実装します。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | スライディング ウィンドウの値の加重平均を提供します。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | 時系列の現在の値がスライディング ウィンドウのトップ値パーセンタイルに属しているかどうかを判断します。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | スライディング ウィンドウ内の他の値に基づいて、時系列の現在の値の経験的 p 値を計算します。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | Single 型の時系列でスライディング ウィンドウを出力します。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | 時系列の Singular Spectrum モデリングに基づいて変更点の検出機能変換を実装します。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | 時系列の Singular Spectrum モデリングに基づいてスパイクの検出機能変換を実装します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | 値の加重平均を取得します。ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)) |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | アダプティブ カーネル密度の推定とマーチンゲールに基づいて、i.i.d. シーケンス (ランダムなサンプル) の変更点の検出機能変換を実装します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | アダプティブ カーネル密度の推定に基づいて、i.i.d. シーケンス (ランダムなサンプル) のスパイクの検出機能変換を実装します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | スライディング ウィンドウの値の加重平均を提供します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | 時系列の現在の値がスライディング ウィンドウのトップ値パーセンタイルに属しているかどうかを判断します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | スライディング ウィンドウ内の他の値に基づいて、時系列の現在の値の経験的 p 値を計算します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Single 型の時系列でスライディング ウィンドウを出力します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | 時系列の Singular Spectrum モデリングに基づいて変更点の検出機能変換を実装します。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | 時系列の Singular Spectrum モデリングに基づいてスパイクの検出機能変換を実装します。 |
 
 ## <a name="miscellaneous"></a>その他
 
@@ -187,4 +174,3 @@ ms.locfileid: "54249126"
 | <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | 生成された数字シーケンスを使用して列を追加します。 |
 | <xref:Microsoft.ML.Transforms.ProduceIdTransform> | カーソルの ID を使用して列を生成します。 |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | 乱数を生成します。 |
-| <xref:Microsoft.ML.Transforms.ScoringTransformer> | 既にトレーニング済みのモデルからスコアを使用して、複数の予測モデルからの情報を結合してパイプラインに新しいモデルを生成します。 |
