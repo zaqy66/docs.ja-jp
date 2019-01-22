@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: ebbbe763ecfc4aeac338d0eb88ee785a4f637456
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
+ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148605"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443656"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML スキーマ定義ツール (Xsd.exe) は、XDR、XML、および XSD ファイル、またはランタイム アセンブリ内のクラスから XML スキーマ クラスまたは共通言語ランタイム クラスを生成します。  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |オプション|説明|  
 |------------|-----------------|  
 |**/h\[elp\]**|このツールのコマンド構文とオプションを表示します。|  
-|**/o\[utputdir\]:**_ディレクトリ_|出力ファイル用のディレクトリを指定します。 この引数は 1 回だけ指定できます。 既定値は、現在のディレクトリです。|  
+|**/o\[utputdir\]:**_directory_|出力ファイル用のディレクトリを指定します。 この引数は 1 回だけ指定できます。 既定値は、現在のディレクトリです。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
 |**/p\[arameters\]:**_file.xml_|指定された .xml ファイルから各種のオペレーション モードのためのオプションを読み込みます。 短縮形は `/p:` です。 詳細については、次を参照してください。、[解説](#remarks)セクション。|  
   
@@ -45,7 +45,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |オプション|説明|  
 |------------|-----------------|  
 |**/c\[lasses\]**|指定したスキーマと対応するクラスを生成します。 オブジェクトに XML データを読み込むには、<xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドを使用します。|  
-|**/d****[ataset]**|指定したスキーマに対応する <xref:System.Data.DataSet> から派生したクラスを生成します。 派生したクラスに XML データを読み込むには、<xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> メソッドを使用します。|  
+|**/d[ataset]**|指定したスキーマに対応する <xref:System.Data.DataSet> から派生したクラスを生成します。 派生したクラスに XML データを読み込むには、<xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> メソッドを使用します。|  
   
  .xsd ファイルについては、次のオプションのうち任意のオプションを指定できます。  
   
@@ -56,7 +56,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/enableLinqDataSet**|(短縮形 : `/eld`)。LINQ to DataSet を使用して、生成された DataSet を照会できるように指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet Overview](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)」(型指定された DataSet のクエリ) を参照してください。 LINQ の詳細については、「[統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)」を参照してください。|  
 |**/f\[ields\]**|プロパティの代わりにフィールドを生成します。 既定では、プロパティが生成されます。|  
 |**/l\[anguage\]:**_言語_|使用するプログラミング言語を指定します。 `CS` (C#、既定値)、`VB` (Visual Basic)、`JS` (JScript)、または `VJS` (Visual J#) から選択します。 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> を実装するクラスの完全修飾名を指定することもできます。|  
-|**/n\[amespace\]:**_名前空間_|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|  
+|**/n\[amespace\]:**_namespace_|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|  
 |**/nologo**|バナーを表示しません。|  
 |**/order**|すべてのパーティクル メンバーに明示的な順序 ID を生成します。|  
 |**/o\[ut\]:**_directoryName_|ファイルを格納する出力ディレクトリを指定します。 既定値は、現在のディレクトリです。|  
@@ -66,7 +66,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/t\[種類\]:**_typename_|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|  
+|**/t\[ype\]:**_typename_|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|  
   
 ## <a name="remarks"></a>Remarks  
  Xsd.exe が実行する操作を次の表に示します。  
