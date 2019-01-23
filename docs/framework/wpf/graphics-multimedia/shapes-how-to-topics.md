@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620228"
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="30c21-102">図形に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="30c21-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="30c21-103">このセクションのトピックでは、使用する方法をデモンストレーション<xref:System.Windows.Shapes.Shape>基本図形を画面に描画するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="30c21-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="28db9-102">図形に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="28db9-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="28db9-103">このセクションのトピックでは、使用する方法を示します<xref:System.Windows.Shapes.Shape>画面に基本的な図形を描画するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="28db9-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="30c21-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="30c21-104">In This Section</span></span>  
- [<span data-ttu-id="30c21-105">多角形要素を使用して、閉じた図形を描画する</span><span class="sxs-lookup"><span data-stu-id="30c21-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="30c21-106">楕円または円を描画する</span><span class="sxs-lookup"><span data-stu-id="30c21-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="30c21-107">線を描画する</span><span class="sxs-lookup"><span data-stu-id="30c21-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [<span data-ttu-id="30c21-108">ポリライン要素を使用してポリラインを描画する</span><span class="sxs-lookup"><span data-stu-id="30c21-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="30c21-109">四角形を描画する</span><span class="sxs-lookup"><span data-stu-id="30c21-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="30c21-110">直線または線分の終点のキャップを変更する</span><span class="sxs-lookup"><span data-stu-id="30c21-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="28db9-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="28db9-104">In This Section</span></span>  
+ [<span data-ttu-id="28db9-105">多角形要素を使用して、閉じた図形を描画する</span><span class="sxs-lookup"><span data-stu-id="28db9-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="28db9-106">楕円または円を描画する</span><span class="sxs-lookup"><span data-stu-id="28db9-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="28db9-107">線を描画する</span><span class="sxs-lookup"><span data-stu-id="28db9-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
+ [<span data-ttu-id="28db9-108">ポリライン要素を使用してポリラインを描画する</span><span class="sxs-lookup"><span data-stu-id="28db9-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="28db9-109">四角形を描画する</span><span class="sxs-lookup"><span data-stu-id="28db9-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="28db9-110">直線または線分の終点のキャップを変更する</span><span class="sxs-lookup"><span data-stu-id="28db9-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="30c21-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="30c21-111">See Also</span></span>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="30c21-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="30c21-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="28db9-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="28db9-111">See also</span></span>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="28db9-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="28db9-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
