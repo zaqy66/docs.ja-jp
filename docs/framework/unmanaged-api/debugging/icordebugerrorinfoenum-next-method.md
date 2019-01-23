@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a431c82450ddcc563a1d3d92bb61a64d723a007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49b93c220c8745b63d1463b2236f253112b1a545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543894"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="12ae6-102">ICorDebugErrorInfoEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="12ae6-102">ICorDebugErrorInfoEnum::Next Method</span></span>
-<span data-ttu-id="12ae6-103">`ICorDebugErrorInfoEnum::Next` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="12ae6-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="12ae6-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="12ae6-104">Do not call this method.</span></span>  
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="57d03-102">ICorDebugErrorInfoEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="57d03-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+<span data-ttu-id="57d03-103">`ICorDebugErrorInfoEnum::Next` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="57d03-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="57d03-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="57d03-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12ae6-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="12ae6-105">See Also</span></span>  
- [<span data-ttu-id="12ae6-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="12ae6-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="57d03-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="57d03-105">See also</span></span>
+- [<span data-ttu-id="57d03-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="57d03-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
