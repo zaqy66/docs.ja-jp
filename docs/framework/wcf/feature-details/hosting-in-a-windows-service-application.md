@@ -2,12 +2,12 @@
 title: Windows サービス アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 2b3935babec0c7cdc3ffca5dd11d693fdfee7a89
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 52c62ef1be7dafc97c5cf958f30444e47f900e92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621977"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows サービス アプリケーションのホスト
 Windows サービス (従来 Windows NT サービスと呼ばれていたもの) が提供するプロセス モデルが特に適しているのは、長い期間にわたって動作し続ける必要があり、どのような形式でもユーザー インターフェイスを表示することのないアプリケーションです。 Windows サービス アプリケーションのプロセスの有効期間を管理するのは、サービス コントロール マネージャー (SCM) です。SCM を使用して、Windows サービス アプリケーションを起動、停止、および一時停止できます。 「常時オン」のアプリケーションの適切なホスティング環境のため、コンピューターの起動時に自動的に開始する、Windows サービスのプロセスを構成することができます。 Windows サービス アプリケーションの詳細については、次を参照してください。 [Windows サービス アプリケーション](https://go.microsoft.com/fwlink/?LinkId=89450)します。  
@@ -36,10 +36,10 @@ Windows サービス (従来 Windows NT サービスと呼ばれていたもの)
   
      WCF サービスをホストする Windows サービス アプリケーションが展開され、WCF のない Windows サービス アプリケーションを使用して、としては、同じ方法で管理されています。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceProcess>  
- [チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](https://go.microsoft.com/fwlink/?LinkId=94875)  
- [方法 : マネージド Windows サービスで WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
- [Windows サービス ホスト](../../../../docs/framework/wcf/samples/windows-service-host.md)  
- [サービス アプリケーションのプログラミング アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=94876)  
- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceProcess>
+- [チュートリアル: コンポーネント デザイナーで Windows サービス アプリケーションの作成](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [方法: マネージ Windows サービスでの WCF サービスをホストします。](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Windows サービス ホスト](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [サービス アプリケーションのプログラミング アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=94876)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : 共通キーで XML 要素を暗号化する'
+title: '方法: 対称キーで XML 要素を暗号化します。'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cbc06264dd2153818d69c0124e8a263bf4265ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622833"
 ---
-# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法 : 共通キーで XML 要素を暗号化する
+# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法: 対称キーで XML 要素を暗号化します。
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  この手順では、Advanced Encryption Standard (AES) アルゴリズム (Rijndael としても知られる) を使用して XML 要素を復号化します。  
   
- この手順を使用して暗号化された XML 要素を復号化する方法については、次を参照してください。[方法: 対称キーで XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)します。  
+ この手順を使用して暗号化された XML 要素を復号化する方法については、次を参照してください。[方法。対称キーで XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)します。  
   
  XML データの暗号化に AES のような対称アルゴリズムを使用するときは、XML データの暗号化と復号化に同じキーを使用する必要があります。  この手順の例では、暗号化された XML が同じキーを使用して復号化されること、および暗号化側と復号化側で使用するアルゴリズムとキーが一致していることを前提としています。  この例では、暗号化された XML 内での AES キーの格納や暗号化は行いません。  
   
@@ -103,5 +103,5 @@ ms.locfileid: "44177207"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Security.Cryptography.Xml>  
-- [方法: 共通キーで XML 要素を復号化する](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [方法: 対称キーで XML 要素を復号化します。](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
