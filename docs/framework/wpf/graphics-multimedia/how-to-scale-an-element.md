@@ -1,18 +1,18 @@
 ---
-title: '方法 : 要素をスケーリングする'
+title: '方法: 要素をスケーリングする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e95a5ed091621d27a462bc691e62a5f00bab49ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504315"
 ---
-# <a name="how-to-scale-an-element"></a>方法 : 要素をスケーリングする
+# <a name="how-to-scale-an-element"></a>方法: 要素をスケーリングする
 この例は、使用する方法を示します、<xref:System.Windows.Media.ScaleTransform>に要素をスケーリングします。  
   
  使用して、<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>と<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>プロパティを指定する係数を使用して、要素のサイズを変更します。 たとえば、 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 1.5 の値が元の幅の 150 パーセントに要素を拡大します。 A<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>値 0.5 は 50% 要素の高さを縮小します。  
@@ -37,8 +37,8 @@ ms.locfileid: "45609123"
   
  完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.ScaleTransform>  
- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.ScaleTransform>
+- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

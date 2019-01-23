@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c69be53a429e2f40741cc1e4c20fef3b7363654
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5ed689ad7c456121f7687e7df09eca6c7ea617d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502560"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo メソッド
 汎用のディクショナリ マップを取得します。  
@@ -26,14 +26,14 @@ HRESULT GetGenericDictionaryInfo(
  `ppMemoryBuffer`  
  [out]アドレスへのポインター、 [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)汎用のディクショナリ マップを含むオブジェクト。 詳細については、次の「解説」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  このメソッドは .NET ネイティブでのみ使用できます。  
   
  このマップは最上位レベルの 2 つのセクションで構成されています。  
   
--   A[ディレクトリ](#Directory)のこのマップに含まれるすべてのディクショナリの相対仮想アドレス (RVA) が含まれています。  
+-   A[ディレクトリ](#Directory)このマップに含まれるすべてのディクショナリの相対仮想アドレス (RVA) を格納しています。  
   
 -   バイト揃え[ヒープ](#Heap)オブジェクトのインスタンス化情報を格納します。 最後のディレクトリ エントリの直後から開始します。  
   
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  汎用のディクショナリ マップのディレクトリ部分の構造は次のとおりです。  
   
--   最初の 4 バイトには、ディクショナリのエントリ数 (ディクショナリ内の相対仮想アドレスの数) が格納されています。 この値にについて*N*です。上位ビットが設定されている場合、エントリは相対仮想アドレスに基づいて昇順で並べ替えられます。  
+-   最初の 4 バイトには、ディクショナリのエントリ数 (ディクショナリ内の相対仮想アドレスの数) が格納されています。 この値として参照*N*します。上位ビットが設定されている場合、エントリは相対仮想アドレスに基づいて昇順で並べ替えられます。  
   
--   *N*ディレクトリ エントリに従います。 各エントリは 8 バイトであり、次の 2 つの 4 バイト セグメントからなります。  
+-   *N*ディレクトリ エントリに従ってください。 各エントリは 8 バイトであり、次の 2 つの 4 バイト セグメントからなります。  
   
-    -   バイト 0 ～ 3: RVA (ディクショナリの相対仮想アドレス)。  
+    -   0 ~ 3 のバイト数:RVA です。ディクショナリの相対仮想アドレス。  
   
-    -   バイト 4 ～ 7: オフセット (ヒープの開始位置を基準としたオフセット)。  
+    -   バイト 4 ~ 7:オフセット。ヒープの先頭からの相対オフセット。  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>ヒープ  
@@ -65,21 +65,21 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
 -   このインスタンス化情報項目のバイト単位の長さ。圧縮 ECMA メタデータ形式です。 値では、この長さ情報が除外されます。  
   
--   ジェネリックのインスタンス化の種類の数または*T*、圧縮 ECMA メタデータ形式にします。  
+-   ジェネリックなインスタンス化の種類の数または*T*、圧縮 ECMA メタデータ形式にします。  
   
 -   *T* ECMA 型シグネチャ形式で表されるそれぞれの種類。  
   
  各ヒープ要素の長さを含めることで、ヒープに影響を与えずに、ディレクトリ セクションの単純な並べ替えを実行できるようになります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugSymbolProvider2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugSymbolProvider2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

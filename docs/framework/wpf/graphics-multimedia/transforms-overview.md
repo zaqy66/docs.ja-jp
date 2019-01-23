@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503120"
 ---
 # <a name="transforms-overview"></a>変換の概要
 このトピックでは、使用する方法を説明します、 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>クラスには、回転、拡大縮小、移動 (平行移動)、および傾斜させる<xref:System.Windows.FrameworkElement>オブジェクト。  
@@ -36,9 +36,9 @@ ms.locfileid: "43864577"
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> 既定値: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> 既定値: 0.0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> 既定値: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> 既定値: 1.0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> 既定値: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> 既定値: 0.0|1|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> 既定:1|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> 既定:0.0|0.0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> 既定:0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> 既定:1|0.0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> 既定:0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> 既定:0.0|1|  
   
  行列の値を操作することで、オブジェクトを回転、拡大縮小、傾斜、移動 (平行移動) させることができます。 たとえば、3 番目の行の最初の列の値を変更する場合 (、<xref:System.Windows.Media.Matrix.OffsetX%2A>値) を 100 を使用できます、オブジェクトの 100 単位 x 軸に沿って移動します。 2 番目の行の 2 列目の値を 3 に変更すると、オブジェクトの高さを現在の 3 倍に拡張できます。 両方の値を変更した場合は、オブジェクトが x 軸に沿って 100 単位移動し、高さが 3 倍に拡張されます。 Windows Presentation Foundation (WPF) は、アフィン変換のみをサポートするため、右側の列の値は常に 0, 0, 1。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "43864577"
   
 <a name="transformcenter"></a>   
 ## <a name="transformations-and-coordinate-systems"></a>変換と座標系  
- オブジェクトを変換する場合は、単にオブジェクトを変換するのではなく、そのオブジェクトが存在する座標空間を変換することになります。 既定では、ターゲット オブジェクトの座標系の原点が変換の中心になります: (0, 0)。 唯一の例外は<xref:System.Windows.Media.TranslateTransform>。 つまり、 <xref:System.Windows.Media.TranslateTransform> center プロパティを、変換の結果が中央に配置場所に関係なく同じであるために設定がありません。  
+ オブジェクトを変換する場合は、単にオブジェクトを変換するのではなく、そのオブジェクトが存在する座標空間を変換することになります。 既定では、変換は、ターゲット オブジェクトの座標系の原点を注視中央に配置します。(0,0). 唯一の例外は<xref:System.Windows.Media.TranslateTransform>。 つまり、 <xref:System.Windows.Media.TranslateTransform> center プロパティを、変換の結果が中央に配置場所に関係なく同じであるために設定がありません。  
   
  次の例では、<xref:System.Windows.Media.RotateTransform>を回転する、<xref:System.Windows.Shapes.Rectangle>要素、型の<xref:System.Windows.FrameworkElement>、45 度、既定の中心 (0, 0)。 次の図は、回転の結果を示したものです。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "43864577"
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのレイアウトに関する追加情報については、[レイアウト](../../../../docs/framework/wpf/advanced/layout.md)の概要をご覧ください。  
   
 <a name="exampleRotateAnElement45degSection"></a>   
-## <a name="example-rotate-a-frameworkelement-45-degrees"></a>例: FrameworkElement を 45 度回転させる  
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a>例:FrameworkElement の回転 45 度  
  次の例では、<xref:System.Windows.Media.RotateTransform>をボタンを時計回りに 45 度回転させます。 ボタンが含まれている、<xref:System.Windows.Controls.StackPanel>を持つその他の 2 つのボタン。  
   
  既定で、<xref:System.Windows.Media.RotateTransform>点 (0, 0) の周りを回転します。 この例では中心の値を指定していないので、ボタンは左上隅のポイント (0, 0) を軸に回転します。 <xref:System.Windows.Media.RotateTransform>に適用される、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティ。 次の図は、変換の結果を示したものです。  
@@ -149,8 +149,8 @@ LayoutTransform を使用したボタンの回転
 ## <a name="freezable-features"></a>Freezable 機能  
  継承するため、<xref:System.Windows.Freezable>クラス、<xref:System.Windows.Media.Transform>クラスがいくつかの特別な機能を提供:<xref:System.Windows.Media.Transform>オブジェクトとして宣言できます[リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)、向上させるために読み取り専用の複数のオブジェクト間で共有パフォーマンス、複製され、スレッド セーフです。 によって提供されるさまざまな機能の詳細については<xref:System.Windows.Freezable>、オブジェクトを参照してください、 [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)

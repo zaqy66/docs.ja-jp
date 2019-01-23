@@ -5,19 +5,19 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 39f98d11099a778a7b3915f39588138d41214af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502040"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF における分離コードと XAML
 <a name="introduction"></a> 分離コード、マークアップ定義のオブジェクトによって結合されるコードの記述に使用される用語は、ときに、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページがマークアップ コンパイルします。 このトピックでは、分離コードの要件および内のコードの別のインライン コード メカニズムについて説明します。[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
   
  このトピックは、次のセクションで構成されています。  
   
--   [前提条件](#Prerequisites)  
+-   [必須コンポーネント](#Prerequisites)  
   
 -   [分離コードと XAML の言語](#codebehind_and_the_xaml_language)  
   
@@ -58,8 +58,8 @@ ms.locfileid: "44085674"
 ## <a name="inline-code-limitations"></a>インライン コードの制限  
  回避するインライン コードの使用を制限したりすることを検討してください。 アーキテクチャとコーディングの原理の観点からマークアップと分離コードの間の分離の維持は保持デザイナーと開発者の役割もはっきりと区別します。 技術的な詳細レベルでは、インライン コードを記述するコードできます書き込むには、厄介に常に記述するため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]部分クラスが生成され、既定の XML 名前空間のマッピングのみを使用できます。 追加できないため、`using`ステートメントでは、完全修飾して多くの[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼び出しを行います。 既定値[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マッピングを含める最もすべてではなく[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]名前空間に存在する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ; 型とその他の CLR 名前空間内に含まれるメンバーの呼び出しを完全に修飾する必要があります。 定義することもできない部分クラスを超えるもので、インライン コードと、メンバーまたは生成された部分クラス内で変数として参照するすべてのユーザー コードのエンティティが存在する必要があります。 その他の言語固有プログラミングの機能、マクロなどまたは`#ifdef`に対してグローバル変数、またはビルド変数を利用することもありません。 詳細については、次を参照してください。 [X:code 組み込み XAML 型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [x:Code 組み込み XAML 型 ](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
- [WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>関連項目
+- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Code 組み込み XAML 型 ](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)
+- [WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

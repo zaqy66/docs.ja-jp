@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503210"
 ---
 # <a name="data-binding-overview"></a>データ バインディングの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] の形式のさまざまなデータ ソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>などの <xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など <xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>を 1 つのデータ項目の柔軟なスタイルまたはデータ項目のコレクションを有効にする機能が組み込まれました。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
@@ -429,11 +429,11 @@ ms.locfileid: "45990077"
 ## <a name="debugging-mechanism"></a>デバッグのメカニズム  
  添付プロパティを設定する<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>特定のバインドの状態に関する情報を受信するバインディングに関連するオブジェクト。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.DataErrorValidationRule>  
- [WPF Version 4.5 の新機能](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [LINQ クエリの結果にバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [データ バインディング デモ](https://go.microsoft.com/fwlink/?LinkID=163703)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [ADO.NET データ ソースにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.DataErrorValidationRule>
+- [WPF Version 4.5 の新機能](../../../../docs/framework/wpf/getting-started/whats-new.md)
+- [LINQ クエリの結果にバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [データ バインディング デモ](https://go.microsoft.com/fwlink/?LinkID=163703)
+- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [ADO.NET データ ソースにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

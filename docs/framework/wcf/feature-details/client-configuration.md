@@ -2,12 +2,12 @@
 title: クライアント構成
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e178f8b08fbadbb5549fa10631d3a57f71a7e0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503223"
 ---
 # <a name="client-configuration"></a>クライアント構成
 Windows Communication Foundation (WCF) クライアントの構成を使用して、アドレス、バインディング、動作、およびコントラクト、サービス エンドポイントへの接続にクライアントを使用して、クライアント エンドポイントの"ABC"プロパティを指定することができます。 [\<クライアント >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)要素には、 [\<エンドポイント >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素の属性を使用して、エンドポイントの abc プロパティを構成します。 これらの属性については、このトピックの「エンドポイントの構成」で説明します。  
@@ -84,7 +84,7 @@ Windows Communication Foundation (WCF) クライアントの構成を使用し�
   
  すべてのエンドポイントには、エンドポイントを検索および識別するために、アドレスが関連付けられている必要があります。 `address` 属性は、エンドポイントの場所を示す URL を指定するために使用できます。 ただし、サービス エンドポイントのアドレスは、コードで指定することもできます。その場合は、URI (Uniform Resource Identifier) を作成し、<xref:System.ServiceModel.ServiceHost> メソッドのいずれかを使用して、この URI を <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> に追加します。 詳細については、次を参照してください。[アドレス](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)します。 導入が示すとおり、 [\<ヘッダー >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)と[ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素の一部である、<xref:System.ServiceModel.EndpointAddress>も詳細については、 [アドレス](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)トピック。  
   
- `binding` 属性は、エンドポイントがサービスに接続する際に使用するバインディングの種類を示します。 参照できるようにするには、種類は登録された構成セクションを持っている必要があります。 前の例では、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)セクションで、エンドポイントが使用することを示す、<xref:System.ServiceModel.WSHttpBinding>します。 ただし、エンドポイントが使用できる、指定された種類のバインディングが複数存在することもあります。 独自のこれらの各[\<バインド >](../../../../docs/framework/misc/binding.md) (バインド) 型の要素内の要素。 `bindingconfiguration` 属性は、同じ種類のバインディングを識別するために使用されます。 その値と対応している、`name`の属性、 [\<バインド >](../../../../docs/framework/misc/binding.md)要素。 詳細については、クライアントを構成する方法についての構成を使用してバインドを参照してください[方法: 構成でクライアント バインディングを指定](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)します。  
+ `binding` 属性は、エンドポイントがサービスに接続する際に使用するバインディングの種類を示します。 参照できるようにするには、種類は登録された構成セクションを持っている必要があります。 前の例では、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)セクションで、エンドポイントが使用することを示す、<xref:System.ServiceModel.WSHttpBinding>します。 ただし、エンドポイントが使用できる、指定された種類のバインディングが複数存在することもあります。 独自のこれらの各[\<バインド >](../../../../docs/framework/misc/binding.md) (バインド) 型の要素内の要素。 `bindingconfiguration` 属性は、同じ種類のバインディングを識別するために使用されます。 その値と対応している、`name`の属性、 [\<バインド >](../../../../docs/framework/misc/binding.md)要素。 詳細については、クライアントを構成する方法についての構成を使用してバインドを参照してください[方法。構成でクライアント バインディングを指定](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)します。  
   
  `behaviorConfiguration`を指定する属性が使用される[\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)の[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)エンドポイントを使用する必要があります。 その値と対応している、`name`の属性、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)要素。 クライアントの動作を指定する構成を使用しての例は、次を参照してください。[クライアントの動作を構成する](../../../../docs/framework/wcf/configuring-client-behaviors.md)します。  
   
@@ -93,6 +93,6 @@ Windows Communication Foundation (WCF) クライアントの構成を使用し�
 ### <a name="configuring-metadata"></a>メタデータの構成  
  [\<メタデータ >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)要素を使用して、拡張機能をインポートするメタデータを登録するための設定を指定します。 メタデータ システムの拡張の詳細については、次を参照してください。[メタデータ システムの拡張](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [エンドポイント : アドレス、バインディング、およびコントラクト](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [クライアントの動作の構成](../../../../docs/framework/wcf/configuring-client-behaviors.md)
+## <a name="see-also"></a>関連項目
+- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [クライアントの動作の構成](../../../../docs/framework/wcf/configuring-client-behaviors.md)

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成'
+title: 'チュートリアル: デザイン時に Windows フォームで新しい WPF コンテンツを作成します。'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500500"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームで新しい WPF コンテンツを作成します。
 
 このトピックでは、Windows フォーム ベースのアプリケーションで使用する Windows Presentation Foundation (WPF) コントロールを作成する方法を示します。
 
@@ -61,7 +61,7 @@ ms.locfileid: "45653275"
 
     - ファイル UserControl1.xaml が [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] で開きます。
 
-2. デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、次を参照してください。[方法: 選択し、デザイン サーフェイス上の要素の移動](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)します。
+2. デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :選択し、デザイン サーフェイス上の要素の移動](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)します。
 
 3. **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティ**200**します。
 
@@ -102,11 +102,11 @@ ms.locfileid: "45653275"
 
 Windows フォームと WPF は異なるテクノロジですが、密接に相互運用するよう設計されています。 高度な外観とをアプリケーションでの動作を提供するには、次を試してください。
 
-- WPF ページで Windows フォーム コントロールをホストします。 詳細については、次を参照してください。[チュートリアル: WPF での Windows フォーム コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。
+- WPF ページで Windows フォーム コントロールをホストします。 詳細については、「[チュートリアル:WPF でのフォーム コントロールのホストを Windows](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。
 
-- WPF コンテンツに Windows フォームの視覚スタイルを適用します。 詳細については、次を参照してください。[方法: ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)します。
+- WPF コンテンツに Windows フォームの視覚スタイルを適用します。 詳細については、「[方法 :ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)します。
 
-- WPF コンテンツのスタイルを変更します。 詳細については、次を参照してください。[チュートリアル: WPF コンテンツのスタイル設定](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)します。
+- WPF コンテンツのスタイルを変更します。 詳細については、「[チュートリアル:WPF コンテンツのスタイル設定](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)します。
 
 ## <a name="see-also"></a>関連項目
 

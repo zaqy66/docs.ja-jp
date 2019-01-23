@@ -2,12 +2,12 @@
 title: どのような&#39;s ADO.NET の新機能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cfb1546ccddc6a4f6f3668210832db3d7a88f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501596"
 ---
 # <a name="what39s-new-in-adonet"></a>どのような&#39;s ADO.NET の新機能
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] では、次の機能が追加されています。  
@@ -48,11 +48,11 @@ ms.locfileid: "43511804"
 -   空間データ型を含むアセンブリ Microsoft.SqlServer.Types.dll は、Version 10.0 から Version 11.0 にアップグレードされました。 このアセンブリを参照するホスト アプリケーションでは、エラーが発生する可能性があります。 詳細については、次を参照してください。[データベース エンジン機能の重大な変更](https://go.microsoft.com/fwlink/?LinkId=224367)します。  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] は、Entity Framework 5.0 を操作するときに、新しいシナリオを有効にする API を追加します。 および Entity Framework 5.0 に追加された機能強化に関する詳細については、次のトピックを参照してください:[新](https://go.microsoft.com/fwlink/?LinkID=251106)と[Entity Framework リリースおよびバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)します。  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] は、Entity Framework 5.0 を操作するときに、新しいシナリオを有効にする API を追加します。 および Entity Framework 5.0 に追加された機能強化に関する詳細については、次のトピックを参照してください。[新機能については](https://go.microsoft.com/fwlink/?LinkID=251106)と[Entity Framework リリースおよびバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [WCF Data Services の新機能](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [WCF Data Services の新機能](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
