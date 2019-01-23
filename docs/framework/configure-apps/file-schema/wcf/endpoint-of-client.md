@@ -2,12 +2,12 @@
 title: '&lt;client&gt; の &lt;endpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598306"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; の &lt;endpoint&gt;
 サーバーのサービス エンドポイントに接続するためにクライアントによって使用されるチャネル エンドポイントのコントラクト、バインディング、およびアドレスのプロパティを指定します。  
@@ -57,7 +57,7 @@ ms.locfileid: "54147006"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<クライアント >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|クライアントが接続可能なエンドポイントの一覧を定義する設定セクションです。|  
+|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|クライアントが接続可能なエンドポイントの一覧を定義する設定セクションです。|  
   
 ## <a name="example"></a>例  
  これはチャネル エンドポイントの構成の例です。  
@@ -71,11 +71,11 @@ ms.locfileid: "54147006"
 </endpoint>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  
- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- [WCF クライアントの構成](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [クライアント](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
+- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- [WCF クライアントの構成](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [クライアント](../../../../../docs/framework/wcf/feature-details/clients.md)
