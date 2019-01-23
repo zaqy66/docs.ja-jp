@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7884d53630ca13a30d7b4efd55d46684a9dd7d30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a404448c45a37d50794ceae9a9bf8ff6af08eeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574574"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal コクラス
 インターフェイス ポインターのマーシャ リングを管理するためのインターフェイスを提供します。  
@@ -38,16 +38,16 @@ coclass ComCallUnmarshal {
   
 |Interface|説明|  
 |---------------|-----------------|  
-|`IMarshal`|作成、初期化、およびクライアント プロセスでプロキシを管理するためのメソッドを提供します。|  
+|`IMarshal`|メソッドは、作成、初期化、およびクライアント プロセスでのプロキシの管理を提供します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.idl  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>関連項目
+- [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

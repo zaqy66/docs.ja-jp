@@ -1,16 +1,16 @@
 ---
-title: '方法: メッセージング アクティビティを使用してワークフロー サービスを作成する'
+title: '方法: メッセージング アクティビティでワークフロー サービスを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584978"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>方法: メッセージング アクティビティを使用してワークフロー サービスを作成する
-このトピックでは、メッセージング アクティビティを使用して単純なワークフロー サービスを作成する方法について説明します。 ここでは、メッセージング アクティビティだけで構成されるサービスのワークフロー サービスを作成する機構に重点を置きます。 実際のサービスでは、ワークフローに他の多くのアクティビティが含まれます。 このサービスは、文字列を取得して、それを呼び出し元に返す、Echo という 1 つの操作を実装します。 このトピックは、一連の 2 つのトピックの最初のものです。 次のトピック[How To: サービス アプリケーションからアクセスする、ワークフロー](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)このトピックで作成したサービスを呼び出すことができるワークフロー アプリケーションを作成する方法について説明します。  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>方法: メッセージング アクティビティでワークフロー サービスを作成します。
+このトピックでは、メッセージング アクティビティを使用して単純なワークフロー サービスを作成する方法について説明します。 ここでは、メッセージング アクティビティだけで構成されるサービスのワークフロー サービスを作成する機構に重点を置きます。 実際のサービスでは、ワークフローに他の多くのアクティビティが含まれます。 このサービスは、文字列を取得して、それを呼び出し元に返す、Echo という 1 つの操作を実装します。 このトピックは、一連の 2 つのトピックの最初のものです。 次のトピック[How To:サービス アプリケーションからアクセスする、ワークフロー](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)このトピックで作成したサービスを呼び出すことができるワークフロー アプリケーションを作成する方法について説明します。  
   
 ### <a name="to-create-a-workflow-service-project"></a>ワークフロー サービス プロジェクトを作成するには  
   
@@ -87,9 +87,9 @@ ms.locfileid: "48580499"
   
      ![WCF ヘルプ ページ](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  進んでください、 [How To: サービス アプリケーションからアクセスする、ワークフロー](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)をこのサービスを呼び出すワークフロー クライアントを作成するトピック。  
+4.  進み、[方法。サービス アプリケーションからアクセスする、ワークフロー](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)をこのサービスを呼び出すワークフロー クライアントを作成するトピック。  
   
-## <a name="see-also"></a>関連項目  
- [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [ワークフロー サービスのホストの概要](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [メッセージング アクティビティ](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>関連項目
+- [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [ワークフロー サービスのホストの概要](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [メッセージング アクティビティ](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

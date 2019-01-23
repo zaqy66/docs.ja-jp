@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 755ff827300dd9fef5944924f6373415f6d8fa6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568583"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 関数
-共通言語ランタイム (CLR) の内部ランタイム呼び出し可能ラッパー (RCW) を保持しているすべてのインターフェイス ポインターを解放するを強制します。 RCW のすべてのキャッシュを解放する効果があります。 このグローバル関数は非推奨、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]です。 代わりに、特定のランタイムのエントリ ポイントを使用します。  
+共通言語ランタイム (CLR) がランタイム呼び出し可能ラッパー (RCW) 内で保持しているすべてのインターフェイス ポインターを解放するを強制します。 RCW のすべてのキャッシュの解放の効果があります。 このグローバル関数は非推奨、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。 代わりに、特定のランタイムのエントリ ポイントを使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,22 +35,22 @@ ms.locfileid: "33431891"
 void CoEEShutDownCOM ();  
 ```  
   
-## <a name="remarks"></a>コメント  
- `CoEEShutDownCOM`関数は、最初のすべてのコンテキストでは、他のすべてのキャッシュにあるすべての Rcw を解放し、セットアップで既存の任意の終了処理通知を削除します。 DLL のアンロードは行われません。  
+## <a name="remarks"></a>Remarks  
+ `CoEEShutDownCOM`関数が最初にすべてのコンテキスト内とすべてのキャッシュにあるすべての Rcw を解放し、し、セットアップで既存の任意の終了処理通知を削除します。 DLL のアンロードは行われません。  
   
 > [!CAUTION]
->  この関数では、プロセスに読み込まれているすべてのランタイムに影響します。  
+>  この関数では、プロセスに読み込まれるすべてのランタイムに影響します。  
   
- 以降で、 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、この関数に影響する特定のランタイムのエントリ ポイントを呼び出します。 エントリ ポイントを取得する、 [iclrruntimeinfo::getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)メソッド"CoEEShutDownCOM"を指定します。  
+ 以降では、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]に影響する特定のランタイムで、この関数のエントリ ポイントを呼び出します。 エントリ ポイントを取得する、 [iclrruntimeinfo::getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)メソッド"CoEEShutDownCOM"を指定します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

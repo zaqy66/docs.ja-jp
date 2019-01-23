@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 1ac7acda0b9065fde4ab04c80e9d26a1ec23fa6e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583208"
 ---
 # <a name="accessing-services-using-a-client"></a>クライアントを使用したサービスへのアクセス
 クライアント アプリケーションは、作成、構成、およびサービスと通信する WCF クライアントまたはチャネル オブジェクトを使用する必要があります。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)トピックでは、オブジェクトと基本的なクライアントやチャネル オブジェクトを作成すると、それらを使用して必要な手順の概要を説明します。  
@@ -70,7 +70,7 @@ ms.locfileid: "53130989"
   
  メッセージ交換パターンに関係なく、大規模データのチャンクによりクライアント処理が遅延する場合があります。 これらの問題を処理する方法については、次を参照してください。 [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)します。  
   
- 場合は、アプリケーションは、操作が完了するまでより多くの作業を行う必要がありますは、WCF クライアントを実装するサービス コントラクト インターフェイスに非同期メソッド ペアを作成します。 これを行う最も簡単な方法が使用するには、`/async`スイッチ、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 例については、次を参照してください。[方法。サービス操作を非同期的に呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
+ 場合は、アプリケーションは、操作が完了するまでより多くの作業を行う必要がありますは、WCF クライアントを実装するサービス コントラクト インターフェイスに非同期メソッド ペアを作成します。 これを行う最も簡単な方法が使用するには、`/async`スイッチ、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 例については、「[方法: サービス操作を非同期的に呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
   
  クライアントのパフォーマンス向上の詳細については、次を参照してください。[中間層クライアント アプリケーション](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)します。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "53130989"
   
  暗黙的な方法を使用するアプリケーションでは、ユーザー インターフェイス初期化子が呼び出されますが、このアプリケーションのユーザーがバインディングの送信タイムアウト期間内に応答できない場合、ユーザー インターフェイスが復帰すると例外がスローされます。  
   
-## <a name="see-also"></a>関連項目  
- [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [操作方法：一方向のサービスにアクセスし、要求/応答コントラクト](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [操作方法：Access Services と双方向コントラクト](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [操作方法：WSE 3.0 にアクセス サービス](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [操作方法：ChannelFactory を使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [操作方法：サービス操作を非同期的に呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [中間層クライアント アプリケーション](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+## <a name="see-also"></a>関連項目
+- [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [方法: 一方向のサービスにアクセスし、要求/応答コントラクト](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [方法: Access Services と双方向コントラクト](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [方法: WSE 3.0 にアクセス サービス](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [方法: ChannelFactory を使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [方法: サービス操作を非同期的に呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [中間層クライアント アプリケーション](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

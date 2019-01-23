@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540664"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージ コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>関連項目
 
-- [このトピックのプレゼンテーションのビデオ](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [パフォーマンス](../../../docs/framework/performance/index.md)  
-- [.NET のパフォーマンスに関するヒント](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Windows Phone パフォーマンス分析ツール](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [Visual Studio Profiler でアプリケーションのボトルネックを見つける](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [Channel 9 PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [このトピックのプレゼンテーションのビデオ](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [パフォーマンス](../../../docs/framework/performance/index.md)
+- [.NET のパフォーマンスに関するヒント](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Windows Phone パフォーマンス分析ツール](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [Visual Studio Profiler でアプリケーションのボトルネックを見つける](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Channel 9 PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)

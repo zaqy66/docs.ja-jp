@@ -2,12 +2,12 @@
 title: トレースに関するセキュリティの考慮事項と役立つヒント
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580396"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>トレースに関するセキュリティの考慮事項と役立つヒント
 ここでは、機密情報を漏洩の危険から守る方法と共に、WebHost を使用する場合の便利なヒントについて説明します。  
@@ -90,5 +90,5 @@ ms.locfileid: "50184847"
   
  また、接続が確立されるたび (接続指向トランスポートの場合)、またはメッセージが送信されるたび (それ以外の場合) に、メッセージ送信者の IP アドレスが記録されます。 これは、送信者の同意を得ずに行われます。 ただし、このログ記録は Information レベルまたは Verbose レベルだけで実行されます。これらのトレース レベルは既定ではありません。また、ライブ デバッグを行う場合を除き、運用環境ではお勧めしません。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>関連項目
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

@@ -2,12 +2,12 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cefd46d7810149264f9c431a212da0f3f51f8186
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577647"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 リゾルバーとして PNRP (Peer Name Resolution Protocol) リゾルバーを使用することを指定します。 PNRP は既定のリゾルバーであるため、この要素は省略可能です。  
@@ -48,12 +48,12 @@ ms.locfileid: "54150150"
 <pnrpResolver resolverType="String" />
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [ピア リゾルバー](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [ピア リゾルバー](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

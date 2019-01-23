@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1d05914004d3c1fcc5ff109e854d01661367835
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2143524b92ca34299877fe935ae5a603c3e86563
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540508"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly メソッド
-共通言語ランタイム (CLR) アセンブリが正常に読み込まれたことをデバッガーに通知します。  
+共通言語ランタイム (CLR) アセンブリが正常にアンロードされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +38,20 @@ HRESULT LoadAssembly (
   
 #### <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]ICorDebugAppDomain を表すオブジェクトをアセンブリが読み込まれたアプリケーション ドメインへのポインター。  
+ [in]先のアセンブリが読み込まれたアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   
  `pAssembly`  
  [in]アセンブリを表す ICorDebugAssembly オブジェクトへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [UnloadAssembly メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+- [UnloadAssembly メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

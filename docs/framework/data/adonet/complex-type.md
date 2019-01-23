@@ -2,22 +2,22 @@
 title: 複合型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 8daeac8309434b3c4e090d8e75f2de02d63e8b11
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e18ecf18399f57769dcdfc77192e72ec47f5df3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555441"
 ---
 # <a name="complex-type"></a>複合型
-A*複合型*豊富な構造化されたプロパティを定義するためのテンプレートです[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)またはその他の複合型。 各テンプレートには、以下が含まれています。  
+A*複合型*豊富な構造化されたプロパティを定義するためのテンプレートです[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)または他の複合型。 各テンプレートには、以下が含まれています。  
   
 -   一意の名前  (必須)  
   
     > [!NOTE]
     >  複合型の名前は、同じ名前空間のエンティティ型の名前と同じにすることはできません。  
   
--   1 つまたは複数の形式でデータ[プロパティ](../../../../docs/framework/data/adonet/property.md)です。 (省略可能)   
+-   1 つまたは複数の形式でデータ[プロパティ](../../../../docs/framework/data/adonet/property.md)します。 (省略可能)   
   
     > [!NOTE]
     >  複合型のプロパティには、別の複合型を使用することができます。  
@@ -26,7 +26,7 @@ A*複合型*豊富な構造化されたプロパティを定義するための�
   
 -   複合型には ID がないため、独立して存在することができません。 複合型は、エンティティ型またはその他の複合型のプロパティとしてのみ存在できます。  
   
--   複合型には参加できません[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)です。 アソシエーションの end にも複雑な型であることができ、したがって[ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)複合型で定義することはできません。  
+-   複合型には参加できません[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)します。 アソシエーションのいずれの end が複合型を指定でき、したがって[ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)複合型で定義することはできません。  
   
 ## <a name="example"></a>例  
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれるドメイン固有言語 (DSL) を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。 次の CSDL は、`StreetAddress`、`City`、`StateOrProvince`、`Country`、および `PostalCode` のプリミティブ型のプロパティの複合型 Address を定義しています。  
@@ -37,6 +37,6 @@ A*複合型*豊富な構造化されたプロパティを定義するための�
   
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
-## <a name="see-also"></a>関連項目  
- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>関連項目
+- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

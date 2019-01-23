@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb09b1f087e0a0f726d32d85e06cfb2a9ec741a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569294"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>方法: あいまいな時刻を解決するには
 
@@ -59,5 +59,5 @@ ms.locfileid: "43863135"
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [方法: ユーザーがあいまいな時刻を解決できるようにする](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [方法: ユーザーがあいまいな時刻を解決できるように](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)

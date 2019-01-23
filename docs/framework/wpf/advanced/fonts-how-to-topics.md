@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
-ms.openlocfilehash: dea203ab62ae751cf59eb299db9ea39d44f8e26d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aefae32182a7bc808ac72f053c233305da32032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543803"
 ---
 # <a name="fonts-how-to-topics"></a>フォントに関する「方法」トピック
-このセクションのトピックに含まれているフォント機能を使用する方法をデモンストレーション[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]です。  
+このセクションのトピックに含まれているフォントの機能を使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [システム フォントを列挙する](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
  [FontSizeConverter クラスを使用する](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FontStyle>  
- <xref:System.Windows.SystemFonts>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.FontStyle>
+- <xref:System.Windows.SystemFonts>
+- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

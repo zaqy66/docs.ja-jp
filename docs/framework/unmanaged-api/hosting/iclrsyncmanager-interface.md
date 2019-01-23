@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549864"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager インターフェイス
 要求されたタスクに関する情報を取得し、その同期実装でデッドロックを検出するためにホストできるようにするメソッドを定義します。  
@@ -44,8 +44,8 @@ ms.locfileid: "53129325"
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Threading.Thread>  
- [IHostSyncManager インターフェイス](ihostsyncmanager-interface.md)  
- [マネージ コードとアンマネージ スレッド処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [ホスト インターフェイス](hosting-interfaces.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Threading.Thread>
+- [IHostSyncManager インターフェイス](ihostsyncmanager-interface.md)
+- [マネージ コードとアンマネージ スレッド処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [ホスト インターフェイス](hosting-interfaces.md)

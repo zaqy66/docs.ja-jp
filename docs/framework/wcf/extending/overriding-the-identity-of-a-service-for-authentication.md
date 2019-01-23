@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: c6810009e4cda0b493a5f215d966cb37fc6fb090
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554466"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>認証のためのサービスの ID のオーバーライド
 クライアント資格情報の種類を選択すると、サービス メタデータで公開される ID の種類が指定されるため、通常、サービスで ID を設定する必要はありません。 たとえば、次の構成コードを使用して、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素とセット、`clientCredentialType`属性を Windows にします。  
@@ -26,7 +26,7 @@ ms.locfileid: "43511995"
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 認証と ID  
  既定では、Windows 資格情報を使用するサービスが構成されている場合、 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素を含む、 [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)または[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)要素が WSDL で生成されます。 サービスが実行されている場合、 `LocalSystem`、 `LocalService`、または`NetworkService`アカウント、サービス プリンシパル名 (SPN) が既定の形式で生成`host/` \< *hostname*> ためこれらのアカウントでは、コンピューターの SPN のデータにアクセスします。 Windows Communication Foundation (WCF) の形式で UPN が生成されます、サービスが別のアカウントで実行している場合\< *username*>@<*domainName* `>`. これらが生成されるのは、Kerberos 認証では、サービスを認証するために UPN または SPN をクライアントに提供する必要があるからです。  
   
- Setspn.exe ツールを使用して、他の SPN をドメイン内のサービスのアカウントに登録することもできます。 登録した SPN は、そのサービスの ID として使用できます。 このツールをダウンロードするには、次を参照してください。 [Windows 2000 リソース キット ツール: Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)します。 ツールの詳細については、次を参照してください。 [Setspn の概要](https://go.microsoft.com/fwlink/?LinkId=61374)します。  
+ Setspn.exe ツールを使用して、他の SPN をドメイン内のサービスのアカウントに登録することもできます。 登録した SPN は、そのサービスの ID として使用できます。 このツールをダウンロードするには、次を参照してください。 [Windows 2000 リソース キット ツール。Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)します。 ツールの詳細については、次を参照してください。 [Setspn の概要](https://go.microsoft.com/fwlink/?LinkId=61374)します。  
   
 > [!NOTE]
 >  ネゴシエーションを行わずに Windows 資格情報を使用するには、サービスのユーザー アカウントが Active Directory ドメインに登録された SPN にアクセスできる必要があります。 これは、次の方法で行うことができます。  
@@ -65,6 +65,6 @@ ms.locfileid: "43511995"
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
-## <a name="see-also"></a>関連項目  
- [方法 : カスタム クライアント ID 検証機能を作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>関連項目
+- [方法: カスタムのクライアント Id 検証機能を作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: ca11a5787dfd3e5f3089d44689d96ec64c75e4f3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 503e9cb0ea0fcfb34b326e80930f5ac829c3b4db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585199"
 ---
 # <a name="control-authoring-overview"></a>コントロールの作成の概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] コントロール モデルの機能拡張により、新しいコントロールを作成する必要性が大幅に削減されます。 ただし、場合によっては、カスタム コントロールを作成する必要があります。 このトピックでは、カスタム コントロールを作成する必要性を最小限に抑える機能と、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のさまざまなコントロール作成モデルについて説明します。 また、新しいコントロールを作成する方法も示します。  
@@ -268,7 +268,7 @@ ms.locfileid: "43513172"
  [!code-csharp[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
  [!code-vb[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)
+## <a name="see-also"></a>関連項目
+- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)

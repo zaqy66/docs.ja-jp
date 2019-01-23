@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568921"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 構造体
-エラー報告でのカスタムのダンプに追加する項目を示します。  
+エラー報告でのカスタム ダンプに追加する項目をについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,19 +42,19 @@ struct {
 |メンバー|説明|  
 |------------|-----------------|  
 |`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)を追加する項目の種類を示す値。|  
-|`pReserved`|現在使用されていません。 和集合に追加する項目は、ポインターのサイズよりも小さいする必要があります。 場合、`struct`は必要に応じて、個別に割り当ててし をポイントします。|  
+|`pReserved`|使用されていません。 和集合に追加する項目は、ポインターのサイズを超えるである必要があります。 場合、`struct`は必要に応じて、個別に割り当ててし、ポイントすると、します。|  
   
-## <a name="remarks"></a>コメント  
- [Iclrerrorreportingmanager::begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)型のパラメーターを受け取る`CustomDumpItem`です。  
+## <a name="remarks"></a>Remarks  
+ [Iclrerrorreportingmanager::begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)型のパラメーターを受け取る`CustomDumpItem`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.idl  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>関連項目
+- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

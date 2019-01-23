@@ -1,5 +1,5 @@
 ---
-title: '方法: プロジェクト データ ソースを使用してデータをバインドする (WCF Data Services)'
+title: '方法: プロジェクト データ ソース (WCF Data Services) を使用してデータをバインドします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540755"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>方法: プロジェクト データ ソースを使用してデータをバインドする (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>方法: プロジェクト データ ソース (WCF Data Services) を使用してデータをバインドします。
 
 WCF Data Services クライアント アプリケーションで生成されたデータ オブジェクトに基づくデータ ソースを作成することができます。 使用してデータ サービスへの参照を追加すると、**サービス参照の追加**ダイアログ ボックスで、生成されたクライアント データ クラスと一緒にプロジェクト データ ソースが作成されます。 データ サービスが公開する各エンティティ セットに対して 1 つのデータ ソースが作成されます。 データ ソースの項目をドラッグして、サービスからデータを表示するフォームを作成することができます、**データソース**デザイナーにウィンドウ。 これらの項目は、データ ソースにバインドされているコントロールになります。 インスタンスに、実行中にこのデータ ソースがバインドされている、<xref:System.Data.Services.Client.DataServiceCollection%601>クラスは、データ サービスに、クエリによって返されるオブジェクトが入力されます。 詳細については、次を参照してください。[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)します。
 
@@ -23,7 +23,7 @@ WCF Data Services クライアント アプリケーションで生成された�
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>WPF ウィンドウで、プロジェクトのデータ ソースを使用します。
 
-1.  Visual Studio での WPF プロジェクトで Northwind データ サービスへの参照を追加します。 詳細については、次を参照してください。[方法: データ サービス参照を追加](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)します。
+1.  Visual Studio での WPF プロジェクトで Northwind データ サービスへの参照を追加します。 詳細については、「[方法 :データ サービス参照を追加](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)します。
 
 2.  **データソース**ウィンドウで、展開、`Customers`内のノード、 **NorthwindEntities**プロジェクト データ ソース。
 
@@ -120,4 +120,4 @@ WCF Data Services クライアント アプリケーションで生成された�
 ## <a name="see-also"></a>関連項目
 
 - [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [方法: Windows Presentation Foundation 要素にデータをバインドする](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [方法: Windows Presentation Foundation 要素にデータをバインドします。](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

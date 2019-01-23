@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5232a01d877484591df63afc68f672327d4b9d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569704"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
-CLR が COM オブジェクトに関する要求を処理中に、切断しているアパートメントまたはコンテキストに遷移しようとすると、`disconnectedContext` マネージ デバッグ アシスタント (MDA) がアクティブ化されます。  
+CLR が COM オブジェクトに関する要求を処理中に、切断しているアパートメントまたはコンテキストに遷移しようとすると、`disconnectedContext` マネージド デバッグ アシスタント (MDA) がアクティブ化されます。  
   
 ## <a name="symptoms"></a>現象  
  [ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) に対する呼び出しは、その呼び出しが存在する COM コンポーネントではなく、現在のアパートメントまたはコンテキスト内の基になる COM コンポーネントへ送られます。 シングル スレッド アパートメント (STA) コンポーネントのように、COM コンポーネントがマルチスレッド化されていない場合、これが原因で破損やデータ損失が発生する可能性があります。 あるいは RCW 自体がプロキシである場合、呼び出しの結果として <xref:System.Runtime.InteropServices.COMException> がスローされ、HRESULT が RPC_E_WRONG_THREAD になる可能性があります。  
@@ -46,7 +46,7 @@ CLR が COM オブジェクトに関する要求を処理中に、切断して�
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

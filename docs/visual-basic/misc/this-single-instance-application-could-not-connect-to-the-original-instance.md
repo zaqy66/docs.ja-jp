@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 9bc1f33231cc4f29fabd100a695843beb334aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c1ec0bf1aa4b6dbf885294c680b3bfe8897eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565710"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>この単一インスタンス アプリケーションは元のインスタンスに接続できませんでした
 この単一インスタンス アプリケーションは元のインスタンスに接続できませんでした。 この問題の考えられる原因の一部は次のとおりです。  
   
 -   元のインスタンスが応答を停止した。  
   
--   カーネル オブジェクトを作成するためのアクセス許可がアプリケーションにない。 カーネル オブジェクトの詳細については、次を参照してください。[ミュー テックス](../../standard/threading/mutexes.md)です。  
+-   カーネル オブジェクトを作成するためのアクセス許可がアプリケーションにない。 カーネル オブジェクトの詳細については、次を参照してください。[ミュー テックス](../../standard/threading/mutexes.md)します。  
   
      カーネル オブジェクトの基本名は、アセンブリの GUID、メジャー バージョン番号、およびマイナー バージョン番号を連結したものです。 たとえば、基本名が `3639f15d-9547-43da-8145-60da347829915.1`になる可能性があります。  
   
@@ -32,6 +32,6 @@ ms.locfileid: "33640255"
   
 5.  エラーが発生した状況を記録して、Microsoft 製品サポート サービスに電話でご連絡ください。  
   
-## <a name="see-also"></a>関連項目  
- [デバッガーの基本事項](/visualstudio/debugger/debugger-basics)  
+## <a name="see-also"></a>関連項目
+- [デバッガーの基本事項](/visualstudio/debugger/debugger-basics)
 

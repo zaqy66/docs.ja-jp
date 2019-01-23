@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573310"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>定数と列挙型 (Visual Basic)
 Visual Basic では、さまざまな定義済みの定数と開発者の列挙体を提供します。 定数は、アプリケーションの実行全体で一定の値を格納します。 一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。  
@@ -40,7 +40,7 @@ Visual Basic では、さまざまな定義済みの定数と開発者の列挙�
 |`vbNewLine`|改行文字。|  
 |`vbNullChar`|Null 文字です。|  
 |`vbNullString`|長さ 0 の文字列とは異なります ("");外部プロシージャを呼び出すために使用します。|  
-|`vbObjectError`|エラー番号。 ユーザー定義のエラー番号は、この値より大きくする必要があります。 例えば:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbObjectError`|エラー番号。 ユーザー定義のエラー番号は、この値より大きくする必要があります。 例:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|タブ文字。|  
 |`vbBack`|バック スペース文字。|  
 |`vbFormFeed`|Microsoft Windows では使用されません。|  
@@ -77,8 +77,8 @@ Visual Basic では、さまざまな定義済みの定数と開発者の列挙�
 |<xref:Microsoft.VisualBasic.VariantType>|によって返されるバリアント オブジェクトの型を示す、<xref:Microsoft.VisualBasic.Information.VarType%2A>関数。|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A> 関数の呼び出しで実行する変換の種類を示します。|  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)  
- [定数の概要](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [列挙型の概要](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)
+- [定数の概要](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [列挙型の概要](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

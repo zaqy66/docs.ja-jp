@@ -1,5 +1,5 @@
 ---
-title: '方法 : 垂直方向のテキストを作成する'
+title: '方法: 垂直方向のテキストを作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 7d66bf147a220bdcdfd32a703d3407817a184a54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513d59c61d5195665928f6bb28d1d091b425c103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573151"
 ---
-# <a name="how-to-create-vertical-text"></a>方法 : 垂直方向のテキストを作成する
-使用することができます、<xref:System.Drawing.StringFormat>テキストを水平方向にではなく垂直方向に描画することを指定するオブジェクト。  
+# <a name="how-to-create-vertical-text"></a>方法: 垂直方向のテキストを作成します。
+使用することができます、<xref:System.Drawing.StringFormat>水平方向にではなく縦方向にテキストを描画することを指定するオブジェクト。  
   
 ## <a name="example"></a>例  
- 次の例は、値を割り当てます<xref:System.Drawing.StringFormatFlags.DirectionVertical>を<xref:System.Drawing.StringFormat.FormatFlags%2A>のプロパティ、<xref:System.Drawing.StringFormat>オブジェクト。 ある<xref:System.Drawing.StringFormat>にオブジェクトが渡される、<xref:System.Drawing.Graphics.DrawString%2A>のメソッド、<xref:System.Drawing.Graphics>クラスです。 値<xref:System.Drawing.StringFormatFlags.DirectionVertical>のメンバーである、<xref:System.Drawing.StringFormatFlags>列挙します。  
+ 次の例には、値が割り当てられます。<xref:System.Drawing.StringFormatFlags.DirectionVertical>を、<xref:System.Drawing.StringFormat.FormatFlags%2A>のプロパティを<xref:System.Drawing.StringFormat>オブジェクト。 ある<xref:System.Drawing.StringFormat>にオブジェクトが渡される、<xref:System.Drawing.Graphics.DrawString%2A>のメソッド、<xref:System.Drawing.Graphics>クラス。 値<xref:System.Drawing.StringFormatFlags.DirectionVertical>のメンバーである、<xref:System.Drawing.StringFormatFlags>列挙体。  
   
  次の図は、垂直方向のテキストを示します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33521473"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   前の例は Windows フォームで使用するために設計され、必要があります<xref:System.Windows.Forms.PaintEventArgs> `e` 、パラメーターのある<xref:System.Windows.Forms.PaintEventHandler>です。  
+-   前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e` 、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: GDI を使用してテキストを描画する](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+## <a name="see-also"></a>関連項目
+- [方法: GDI を使用してテキストを描画します。](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

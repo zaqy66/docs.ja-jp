@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74df7ee71fc541c35bc393f637ad1d7b9f7aa2a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec1e2b59c15c956a4657b224a937829dbd3b14cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549903"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables メソッド
 親と名前を指定、非ローカル変数を返します。  
@@ -46,16 +46,16 @@ HRESULT GetVariables (
  [in] `pVars` 配列のサイズ。  
   
  `pcVars`  
- [out]返された変数の数を受け取る変数を指すポインター`pVars`です。  
+ [out]返された変数の数を受け取る変数へのポインター`pVars`します。  
   
  `pVars`  
  [out]変数を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

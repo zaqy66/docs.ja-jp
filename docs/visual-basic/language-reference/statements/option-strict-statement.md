@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ed95d0a0c6fc9ba41bba2c4e16d4ed3b721ae4e3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e686b3e371b24f14637476f9a7fd5455f1b2b86c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580799"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 暗黙的なデータ型変換を拡大変換のみに制限、遅延バインディングが禁止および禁止になる暗黙的な型指定、`Object`型。  
@@ -99,7 +99,7 @@ Option Strict { On | Off }
 |Ｘ|Ｘ|`Dim qty`|`Option Strict` がオフ (既定値) の場合、変数は `Nothing` に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |Ｘ|○|`Dim qty = 5`|`Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |○|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。|  
-|はい|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
+|[はい]|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>ときに Option Strict のステートメントが存在しません。  
  ソース コードが含まれていない場合、`Option Strict`ステートメントでは、 **Option strict**の設定、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用されます。 **コンパイル ページ**エラーを生成する条件をさらに細かく制御する設定があります。  
@@ -153,14 +153,14 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>関連項目
 
-- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
-- [暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
-- [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
-- [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
-- [方法: オブジェクトのメンバーにアクセスする](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
-- [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
-- [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
-- [Office ソリューションの遅延バインディング](/visualstudio/vsto/late-binding-in-office-solutions)  
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [方法: オブジェクトのメンバーへのアクセス](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Office ソリューションの遅延バインディング](/visualstudio/vsto/late-binding-in-office-solutions)
+- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

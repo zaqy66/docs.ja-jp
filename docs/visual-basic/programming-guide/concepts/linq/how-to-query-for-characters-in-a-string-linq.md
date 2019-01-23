@@ -1,15 +1,15 @@
 ---
-title: '方法: 文字列 (LINQ) (Visual Basic) 内の文字に対するクエリ'
+title: '方法: クエリ (LINQ) (Visual Basic)、文字列内の文字'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 0953ff9152a4af1aa40379e15b2279d23ad0aac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a4f3bbca313747e0b16170719b9028e5dc9174f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559750"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>方法: 文字列 (LINQ) (Visual Basic) 内の文字に対するクエリ
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>方法: クエリ (LINQ) (Visual Basic)、文字列内の文字
 <xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。 ただし、これは LINQ の一般的な使用方法ではありません。 複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。  
   
 ## <a name="example"></a>例  
@@ -57,6 +57,6 @@ End Class
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [方法: LINQ クエリを正規表現 (Visual Basic) とを組み合わせる](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+## <a name="see-also"></a>関連項目
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [方法: LINQ クエリは、正規表現を使用 (Visual Basic) とを組み合わせる](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

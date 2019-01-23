@@ -1,23 +1,23 @@
 ---
-title: '&lt;ChannelPoolSettings&gt;'
+title: '&lt;channelPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: e55d3a989ae35d6e29062337cc79114a204608bb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 666602bde75cd21b5b3d16bd4d5e6cf63c12d593
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554960"
 ---
-# <a name="ltchannelpoolsettingsgt"></a>&lt;ChannelPoolSettings&gt;
+# <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 カスタム バインドのチャネル プール設定を指定します。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<oneWay >  
-\<channelPoolSettings >  
+\<oneWay>  
+\<channelPoolSettings>  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54149099"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|カスタム バインドでパケット ルーティングを有効にします。|  
+|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|カスタム バインドでパケット ルーティングを有効にします。|  
   
 ## <a name="remarks"></a>Remarks  
  クォータは、リソースの過剰な消費を防ぐためのポリシー メカニズムとして使用されます。 クォータは、悪質な、または意図的でないサービス拒否 (DOS) 攻撃を防ぎます。 カスタム チャネルにチャネル クォータを設定するには、この要素を使用します。  
@@ -58,14 +58,14 @@ ms.locfileid: "54149099"
   
 -   `maxOutboundChannelsPerEndpoint` クォータは、サーバーとクライアントの両方に対するキャッシュ制限を設定し、信頼性向上のために使用されます。 既定値ではリソースが控えめに割り当てられており、開発環境および小規模なインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は値をレビューする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

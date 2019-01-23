@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566740"
 ---
 # <a name="specifying-service-run-time-behavior"></a>サービスのランタイム動作の指定
 サービス コントラクトを設計して ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md))、実装 ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) が終わると、サービス ランタイムの実行動作を構成できます。 ここでは、システム指定のサービスと操作の動作について説明し、新しい動作を作成するための詳細情報の参照先を示します。 一部の動作は属性として適用されますが、多くの動作はアプリケーション構成ファイルまたはプログラムを使用して適用されます。 サービス アプリケーションの構成の詳細については、次を参照してください。[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)します。  
@@ -59,12 +59,12 @@ ms.locfileid: "50183738"
   
  ただし、サービス オブジェクトを独自に作成し、そのオブジェクトを使用するサービス ホストを作成することもできます。 そのためには、 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.InstanceContextMode.Single> に設定するか、サービス ホストが開かれたときに例外をスローする必要があります。  
   
- このようなサービスを作成するには、<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> コンストラクターを使用します。 この方法は、シングルトン サービスが使用する特定のオブジェクト インスタンスを提供する場合に、カスタムの <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> を実装する代わりに使用できます。 サービス実装の型を作成することが困難な場合 (たとえば、パラメーターがない既定のコンストラクターが作成されない場合) は、このオーバーロードを使用できます。  
+ このようなサービスを作成するには、 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> コンストラクターを使用します。 この方法は、シングルトン サービスが使用する特定のオブジェクト インスタンスを提供する場合に、カスタムの <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> を実装する代わりに使用できます。 サービス実装の型を作成することが困難な場合 (たとえば、パラメーターがない既定のコンストラクターが作成されない場合) は、このオーバーロードを使用できます。  
   
  あるオブジェクトをこのコンス トラクターに指定するとと、いくつか機能の動作をインスタンス化 Windows Communication Foundation (WCF) に関連する動作が異なりますに注意してください。 たとえば、既知のオブジェクト インスタンスを指定した場合、 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> を呼び出しても効果はありません。 他のインスタンス解放機構も、同様に無視されます。 <xref:System.ServiceModel.ServiceHost> クラスは常に、すべての操作について <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> に設定されているかのように動作します。  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>その他のサービス、エンドポイント、コントラクト、および操作の動作  
- <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性などのサービスの動作は、サービス全体に影響します。 たとえば、<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> に設定すると、そのサービスの各操作で発生するスレッドの同期の問題を自分で処理する必要があります。 エンドポイントの動作はエンドポイント全体に影響し、システム指定のエンドポイントの動作はクライアント機能に対して影響します。 また、コントラクトの動作はコントラクト レベルで影響し、操作の動作は操作の実行を変更します。  
+ <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性などのサービスの動作は、サービス全体に影響します。 たとえば、 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> に設定すると、そのサービスの各操作で発生するスレッドの同期の問題を自分で処理する必要があります。 エンドポイントの動作はエンドポイント全体に影響し、システム指定のエンドポイントの動作はクライアント機能に対して影響します。 また、コントラクトの動作はコントラクト レベルで影響し、操作の動作は操作の実行を変更します。  
   
  これらの動作の多くは属性に実装され、適切なサービス クラスまたは操作実装に適用することによって <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性および <xref:System.ServiceModel.OperationBehaviorAttribute> 属性を使用するときにこれらの動作を利用できます。 その他の動作 ( <xref:System.ServiceModel.Description.ServiceMetadataBehavior> オブジェクトや <xref:System.ServiceModel.Description.ServiceDebugBehavior> オブジェクトなど) は、通常、アプリケーション構成ファイルを使用して適用されますが、プログラムにより使用することもできます。  
   
@@ -114,12 +114,12 @@ ms.locfileid: "50183738"
 ### <a name="operation-behaviors"></a>操作の動作  
  以下の操作の動作は、操作のシリアル化制御およびトランザクション制御を指定します。  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> のランタイム動作を表します。  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>のランタイム動作を表します。  
   
 -   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 `XmlSerializer` のランタイム動作を制御し、操作に関連付けます。  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>。 サービス操作がトランザクション ヘッダーを受け入れるレベルを指定します。  
   
-## <a name="see-also"></a>関連項目  
- [サービスの構成](../../../docs/framework/wcf/configuring-services.md)  
- [方法 : サービスのインスタンス化を制御する](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>関連項目
+- [サービスの構成](../../../docs/framework/wcf/configuring-services.md)
+- [方法: サービスのインスタンス化の制御します。](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

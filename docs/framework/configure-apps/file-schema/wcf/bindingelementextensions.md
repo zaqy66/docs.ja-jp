@@ -2,12 +2,12 @@
 title: '&lt;bindingElementExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: ee67df95de715f0b21250bbf5739f84b4945d719
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b843f2986a0020b8ce079e58bf9865a0b3d402d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569902"
 ---
 # <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
 このセクションは、コンピューターまたはアプリケーションの構成ファイルからカスタム バインド要素を使用できます。 このコレクションにカスタム バインディング要素を追加するには、`add` キーワードを使用し、要素の `type` 属性をバインディング要素拡張に設定して、`name` 属性をカスタム バインディング要素に設定します。  
@@ -43,6 +43,6 @@ ms.locfileid: "54151450"
 </customBinding>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)

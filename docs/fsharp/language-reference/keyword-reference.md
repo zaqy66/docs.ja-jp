@@ -2,12 +2,12 @@
 title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579840"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
@@ -20,7 +20,7 @@ ms.locfileid: "53611751"
 |キーワード|リンク|説明|
 |-------|----|-----------|
 |`abstract`|[メンバー](members/index.md)<br /><br />[抽象クラス](abstract-classes.md)|宣言されているか、仮想で既定の実装を備えた型の実装を持つかないメソッドを示します。|
-|`and`|[`let` バインド](functions/let-bindings.md)<br /><br />[メンバー](members/index.md)<br /><br />[制約](generics/constraints.md)|相互に再帰的なバインドで、ジェネリック パラメーターで複数の制約を使用してプロパティの宣言で使用されます。|
+|`and`|[`let` バインド](functions/let-bindings.md)<br /><br />[レコード](records.md)<br /><br />[メンバー](members/index.md)<br /><br />[制約](generics/constraints.md)|再帰的なバインドとレコードをジェネリック パラメーターで複数の制約を使用してプロパティの宣言で相互にで使用されます。|
 |`as`|[クラス](classes.md)<br /><br />[パターン一致](Pattern-Matching.md)|現在のクラス オブジェクトにオブジェクト名を提供するために使用します。 パターン マッチング内のパターン全体に名前を指定するために使用します。|
 |`assert`|[アサーション](assertions.md)|デバッグ中にコードを確認するために使用します。|
 |`base`|[クラス](classes.md)<br /><br />[継承](inheritance.md)|基底クラスのオブジェクトの名前として使用されます。|

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427d93a9aff527d36720c4199782fa104a66f8d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576344"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 関数
-指定したハッシュ アルゴリズムを使用して、指定されたメモリ アドレスのアセンブリのハッシュを取得します。  
+指定したハッシュ アルゴリズムを使用して、指定したメモリ アドレスにあるアセンブリのハッシュが取得されます。  
   
- この関数は廃止されました。 使用して、 [ICLRStronName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)メソッド代わりにします。  
+ この関数は非推奨とされました。 使用して、 [ICLRStronName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,26 +49,26 @@ HRESULT GetHashFromBlob (
  [in]メモリ ブロックの長さ、(バイト単位)。  
   
  `piHashAlg`  
- [入力、出力].ハッシュ アルゴリズムを指定する定数。 既定のアルゴリズムに 0 を使用します。  
+ [入力、出力]ハッシュ アルゴリズムを指定する定数。 既定のアルゴリズムに 0 を使用します。  
   
  `pbHash`  
- [out]返されるハッシュ バッファー。  
+ [out]返されたハッシュ バッファー。  
   
  `cchHash`  
- [in]場合は、要求された最大サイズ`pbHash`です。  
+ [in]要求の最大サイズの`pbHash`します。  
   
  `pchHash`  
- [out]サイズ (バイト単位)、返された`pbHash`です。  
+ [out]サイズ (バイト単位)、返された`pbHash`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [GetHashFromBlob メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)  
- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>関連項目
+- [GetHashFromBlob メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
+- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

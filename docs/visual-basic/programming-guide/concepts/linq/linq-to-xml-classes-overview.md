@@ -2,12 +2,12 @@
 title: LINQ to XML クラスの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: dd9e392c1fec86bfb1fe0e0f8bee0cd0c7919fe4
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 0b95a3f4411e20390962a2eccf28b8cfad4b8e09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570123"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML クラスの概要 (Visual Basic)
 このトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 名前空間内の <xref:System.Xml.Linq> クラスの一覧を示し、各クラスについて簡単に説明します。  
@@ -86,5 +86,5 @@ ms.locfileid: "39244089"
 ### <a name="xtext-class"></a>XText クラス  
  <xref:System.Xml.Linq.XText> は、テキスト ノードを表します。 このクラスを使用する必要はほとんどありません。 このクラスは、主に混合コンテンツに使用されます。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

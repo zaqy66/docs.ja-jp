@@ -1,5 +1,5 @@
 ---
-title: '方法 : XAML でデータをバインディング可能にする'
+title: '方法: XAML でデータをバインディング可能にする'
 ms.date: 01/29/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 09a6fca48c06efca6f06b9e0617de9095197bd17
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95871b6a8d11ad4086735bd3315c360885d027dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555467"
 ---
-# <a name="how-to-make-data-available-for-binding-in-xaml"></a>方法 : XAML でデータをバインディング可能にする
+# <a name="how-to-make-data-available-for-binding-in-xaml"></a>方法: XAML でデータをバインディング可能にする
 このトピックでは、利用できるデータのバインドでさまざまな方法を説明[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]アプリケーションのニーズに応じて、します。  
   
 ## <a name="example"></a>例  
@@ -42,6 +42,6 @@ ms.locfileid: "48261473"
   
  バインドするデータを指定するさまざまな方法については、次を参照してください。[バインディング ソースを指定](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)します。 どのような種類のデータにバインドすることができますか、独自に実装する方法については[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、バインディングのオブジェクトを参照してください[バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

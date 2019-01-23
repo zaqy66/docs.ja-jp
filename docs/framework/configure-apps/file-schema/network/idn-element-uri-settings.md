@@ -2,12 +2,12 @@
 title: '&lt;idn&gt;要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 21950beeefb23e81066623534774148e1f5d92ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580741"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;要素 (Uri 設定)
 ドメイン名に国際化ドメイン名 (IDN) 解析が適用されるかどうかを指定します。  
@@ -15,9 +15,9 @@ ms.locfileid: "53153359"
 ## <a name="schema-hierarchy"></a>スキーマの階層  
  [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<Uri > 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<Uri> 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<idn >](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -93,7 +93,7 @@ ms.locfileid: "53153359"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

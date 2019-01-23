@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: ec7072e7af15bdff373962f776abf0aad89361bb
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 784dcb88e92169ff8698234e59899cc4d58dd52c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563757"
 ---
 # <a name="xaml-overview-wpf"></a>XAML の概要 (WPF)
 このトピックでは、XAML 言語の機能について説明し、記述する XAML を使用する方法を示して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは XAML を具体的には説明によって実装される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 XAML 自体よりも大きく、言語の概念は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
@@ -137,7 +137,7 @@ ms.locfileid: "39220777"
   
 -   **省略された StackPanel.Children プロパティ要素:** <xref:System.Windows.Controls.StackPanel>から派生した<xref:System.Windows.Controls.Panel>します。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>としてその XAML コンテンツのプロパティ。  
   
--   **省略された UIElementCollection object 要素:** 、<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>プロパティには、型<xref:System.Windows.Controls.UIElementCollection>、実装する<xref:System.Collections.IList>。 コレクションの処理などの XAML のルールに基づいて、コレクションの要素タグを省略できます<xref:System.Collections.IList>します。 (この場合、<xref:System.Windows.Controls.UIElementCollection>実際にインスタンス化できないため、既定のコンス トラクターは公開されませんしているため、<xref:System.Windows.Controls.UIElementCollection>オブジェクトの要素をコメント アウトされた表示)。  
+-   **省略された UIElementCollection object 要素:**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>プロパティには、型<xref:System.Windows.Controls.UIElementCollection>、実装する<xref:System.Collections.IList>します。 コレクションの処理などの XAML のルールに基づいて、コレクションの要素タグを省略できます<xref:System.Collections.IList>します。 (この場合、<xref:System.Windows.Controls.UIElementCollection>実際にインスタンス化できないため、既定のコンス トラクターは公開されませんしているため、<xref:System.Windows.Controls.UIElementCollection>オブジェクトの要素をコメント アウトされた表示)。  
   
 ```xaml  
 <StackPanel>  
@@ -212,15 +212,15 @@ ms.locfileid: "39220777"
 ### <a name="the-x-prefix"></a>X: プレフィックス  
  前のルート要素例プレフィックス`x:`XAML 名前空間をマップするために使用された[!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]、これは XAML 言語をサポートする専用の XAML 名前空間を構築します。 これは、`x:`のプロジェクトのテンプレートで、例については、およびこのドキュメントでこの XAML 名前空間のマッピング プレフィックスで使用[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 言語の XAML 名前空間には、XAML で非常に頻繁に使用するいくつかのプログラミング構成要素が含まれます。 最も一般的なの一覧を次に`x:`を使用するプログラミング構成要素のプレフィックスします。  
   
--   [X:key](../../../../docs/framework/xaml-services/x-key-directive.md): 内の各リソースの一意のキーの設定、 <xref:System.Windows.ResourceDictionary> (またはその他のフレームワークのようなディクショナリの概念)。 `x:Key` 90% のアカウントではおそらく、`x:`使用法の一般的な WPF アプリケーションのマークアップに表示されます。  
+-   [X:key](../../../../docs/framework/xaml-services/x-key-directive.md):内の各リソースの一意のキーの設定、 <xref:System.Windows.ResourceDictionary> (またはその他のフレームワークのようなディクショナリの概念)。 `x:Key` 90% のアカウントではおそらく、`x:`使用法の一般的な WPF アプリケーションのマークアップに表示されます。  
   
--   [X:class](../../../../docs/framework/xaml-services/x-class-directive.md): を指定します、 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] XAML ページの分離コードを提供するクラスの名前空間とクラス名。 1 つの WPF プログラミング モデルでは、分離コードをサポートするために、このようなクラスがあり、ほぼ常に表示するため`x:`リソースがない場合でも、マップします。  
+-   [X:class](../../../../docs/framework/xaml-services/x-class-directive.md):指定します、 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] XAML ページの分離コードを提供するクラスの名前空間とクラス名。 1 つの WPF プログラミング モデルでは、分離コードをサポートするために、このようなクラスがあり、ほぼ常に表示するため`x:`リソースがない場合でも、マップします。  
   
--   [X:name](../../../../docs/framework/xaml-services/x-name-directive.md): オブジェクト要素が処理された後は、実行時のコードで存在するインスタンスの実行時のオブジェクト名を指定します。 WPF 定義されている同等のプロパティを頻繁に使用する一般に、 [X:name](../../../../docs/framework/xaml-services/x-name-directive.md)します。 このようなプロパティ具体的には CLR バッキング プロパティにマップされ、したがってアプリケーションのプログラミングの方が便利で頻繁に使用するコードの実行時に初期化された XAML から名前付きの要素を検索します。 このようなプロパティは、最も一般的な<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>します。 使用することもあります[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)と同等の WPF フレームワーク-レベル<xref:System.Windows.FrameworkElement.Name%2A>プロパティが特定の種類でサポートされていません。 これは、特定のアニメーション シナリオで発生します。  
+-   [X:name](../../../../docs/framework/xaml-services/x-name-directive.md):オブジェクト要素が処理された後、実行時のコードに存在するインスタンスの実行時のオブジェクト名を指定します。 WPF 定義されている同等のプロパティを頻繁に使用する一般に、 [X:name](../../../../docs/framework/xaml-services/x-name-directive.md)します。 このようなプロパティ具体的には CLR バッキング プロパティにマップされ、したがってアプリケーションのプログラミングの方が便利で頻繁に使用するコードの実行時に初期化された XAML から名前付きの要素を検索します。 このようなプロパティは、最も一般的な<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>します。 使用することもあります[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)と同等の WPF フレームワーク-レベル<xref:System.Windows.FrameworkElement.Name%2A>プロパティが特定の種類でサポートされていません。 これは、特定のアニメーション シナリオで発生します。  
   
--   [X:static](../../../../docs/framework/xaml-services/x-static-markup-extension.md): プロパティを返す静的な値が、それ以外の場合は、XAML と互換性のある参照を有効にします。  
+-   [X:static](../../../../docs/framework/xaml-services/x-static-markup-extension.md):それ以外の場合、XAML と互換性のあるプロパティではない静的な値を返しますの参照を有効にします。  
   
--   [X:type](../../../../docs/framework/xaml-services/x-type-markup-extension.md): 構築、<xref:System.Type>型名の上に基づく参照。 これは、属性を指定に使用<xref:System.Type>など<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>プロパティが頻繁にネイティブの文字列には、-に-<xref:System.Type>ような方法で変換を[X:type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)マークアップ拡張機能の使用は、省略可能。  
+-   [X:type](../../../../docs/framework/xaml-services/x-type-markup-extension.md):構築、<xref:System.Type>型名の上に基づく参照。 これは、属性を指定に使用<xref:System.Type>など<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>プロパティが頻繁にネイティブの文字列には、-に-<xref:System.Type>ような方法で変換を[X:type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)マークアップ拡張機能の使用は、省略可能。  
   
  プログラミング構成要素がある、`x:`プレフィックス/XAML 名前空間は一般的でないです。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)します。  
   
@@ -319,7 +319,7 @@ ms.locfileid: "39220777"
 ## <a name="whats-next"></a>次の内容  
  このトピックでは、WPF に適用される XAML 構文の概念と用語の概要を提供します。 ここで使用される用語の詳細については、次を参照してください。 [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)します。  
   
- この手順をまだ行っていないことは場合、チュートリアルのトピックで行う演習を試す[チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)します。 このチュートリアルで説明されているマークアップを中心としたアプリケーションを作成するときにこのトピックで説明した概念の多くが深まります。  
+ この手順をまだ行っていないことは場合、チュートリアルのトピックで行う演習を試す[チュートリアル。初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)します。 このチュートリアルで説明されているマークアップを中心としたアプリケーションを作成するときにこのトピックで説明した概念の多くが深まります。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 基づく特定のアプリケーション モデルを使用して、<xref:System.Windows.Application>クラス。 詳細については、次を参照してください。[アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)します。  
   
@@ -327,10 +327,10 @@ ms.locfileid: "39220777"
   
  [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)でプロパティの用途の詳細については、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、および依存関係プロパティの概念が導入されました。  
   
-## <a name="see-also"></a>関連項目  
- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [WPF における XAML とカスタム クラス](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [XAML 名前空間 (x:) 言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 拡張機能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>関連項目
+- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [WPF における XAML とカスタム クラス](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [XAML Namespace (x:)言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 拡張機能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

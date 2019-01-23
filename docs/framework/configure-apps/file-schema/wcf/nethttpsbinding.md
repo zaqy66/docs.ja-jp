@@ -2,12 +2,12 @@
 title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: adcc53119c9928a9d2ad9ff850e8355dec69bf40
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ef3e77e610230ea29d1ba410d38bfa2dade601b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554258"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Windows Communication Foundation (WCF) サービスが構成および HTTPS 経由で通信できるエンドポイントを公開に使用できるバインディングを表します。 双方向コントラクトで使用すると、Web ソケットが使用されます。それ以外の場合は、HTTPS が使用されます。  
@@ -172,12 +172,12 @@ Windows Communication Foundation (WCF) サービスが構成および HTTPS 経�
   
  既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

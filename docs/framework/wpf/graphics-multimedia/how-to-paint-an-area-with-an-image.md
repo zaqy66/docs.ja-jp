@@ -1,5 +1,5 @@
 ---
-title: '方法 : イメージで領域を塗りつぶす'
+title: '方法: イメージで領域を塗りつぶす'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: 5899531291c22ada76213905d0f2ca6944fcbba7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8c855a81b1bf7cccb59fe22fb2a2056f18ccae72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580742"
 ---
-# <a name="how-to-paint-an-area-with-an-image"></a>方法 : イメージで領域を塗りつぶす
+# <a name="how-to-paint-an-area-with-an-image"></a>方法: イメージで領域を塗りつぶす
 この例は、使用する方法を示します、<xref:System.Windows.Media.ImageBrush>イメージで領域を塗りつぶすクラス。 <xref:System.Windows.Media.ImageBrush>で指定された 1 つのイメージを表示します。 その<xref:System.Windows.Media.ImageBrush.ImageSource%2A>プロパティ。  
   
 ## <a name="example"></a>例  
@@ -35,5 +35,5 @@ ms.locfileid: "43857207"
   
  このコード例はに対して提供されている例の一部、<xref:System.Windows.Media.ImageBrush>クラス。 サンプル全体については、次を参照してください。 [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)します。  
   
-## <a name="see-also"></a>関連項目  
- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>関連項目
+- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

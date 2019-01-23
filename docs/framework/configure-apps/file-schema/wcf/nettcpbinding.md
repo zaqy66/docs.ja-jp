@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 0849120edf7d4b8948b3632cfe2fc81f1bdff1eb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0dc07bfb7b26e433fd3ff2b004253d8d2d90bf62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573435"
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 
@@ -77,7 +77,7 @@ ms.locfileid: "54148189"
 |`receiveTimeout`|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:10:00 です。|  
 |`sendTimeout`|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`transactionFlow`|バインディングが WS-Transactions のフローをサポートするかどうかを指定するブール値です。 既定値は `false` です。|  
-|`transactionProtocol`|このバインディングで使用されるトランザクション プロトコルを指定します。 有効な値は、次のとおりです。<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> 既定値は OleTransactions です。 この属性は <xref:System.ServiceModel.TransactionProtocol> 型です。|  
+|`transactionProtocol`|このバインディングで使用されるトランザクション プロトコルを指定します。 有効な値は、次のとおりです。<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> 既定値は OleTransactions です。 この属性は <xref:System.ServiceModel.TransactionProtocol> 型です。|  
 |`transferMode`|メッセージが要求や応答をバッファーするか、ストリーミングするかを指定する <xref:System.ServiceModel.TransferMode> 値です。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -146,11 +146,11 @@ ms.locfileid: "54148189"
 </bindings>
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
-- <xref:System.ServiceModel.NetTcpBinding>  
-- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

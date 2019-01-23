@@ -1,5 +1,5 @@
 ---
-title: '方法: トレース ソースを作成し初期化する'
+title: '方法: 作成し、トレース ソースの初期化'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07c4d65e3fb6d61ae5d1b766c70cbb25d54bdc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6b888e349159a51cc1d1d6bfac2791d413d015a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570097"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>方法: トレース ソースを作成し初期化する
+# <a name="how-to-create-and-initialize-trace-sources"></a>方法: 作成し、トレース ソースの初期化
 <xref:System.Diagnostics.TraceSource> クラスをアプリケーションで使用すると、アプリケーションに関連付けることができるトレースを生成できます。 <xref:System.Diagnostics.TraceSource> は、イベントのトレース、データのトレース、および情報トレースの発行を簡単に実行できるトレース メソッドを提供します。 <xref:System.Diagnostics.TraceSource> からのトレース出力は、構成ファイルを使用してもしなくても作成および初期化できます。 このトピックでは、この両方の手順について説明しています。 ただし、実行時にトレース ソースによって作成されるトレースの再構成を容易にするために構成ファイルを使用することをお勧めします。  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>構成ファイルを使用してトレース ソースを作成し、初期化するには  
@@ -78,9 +78,9 @@ ms.locfileid: "33386523"
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventTypeFilter>  
- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventTypeFilter>
+- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

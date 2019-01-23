@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567010"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 関数
 指定したコンピューターにある WMI 名前空間との接続が DCOM 経由で作成されます。  
@@ -102,11 +102,11 @@ HRESULT ConnectServerWmi (
 
 
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

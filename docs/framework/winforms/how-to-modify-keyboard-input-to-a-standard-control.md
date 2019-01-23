@@ -1,5 +1,5 @@
 ---
-title: '方法 : キーボード入力を標準コントロールに変更する'
+title: '方法: 標準のコントロールにキーボード入力を変更します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: c109615b9a0eb61d18f7f44e3248d2b24934ee5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 98e6f4ddbaed5eff2bab53ee332f97253daf4409
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571744"
 ---
-# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>方法 : キーボード入力を標準コントロールに変更する
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>方法: 標準のコントロールにキーボード入力を変更します。
 Windows フォームは、キーボードの入力を使用して変更する機能を提供します。 キーの使用とは、メッセージ キューのさらに下のその他のメソッドとイベントが、キーの値を受信しないようにメソッドまたはイベント ハンドラー内のキーを処理することを表します。 キーの変更とは、メッセージ キューのさらに下のメソッドとイベント ハンドラーが、異なるキーの値を受け取るようにキーの値を変更することを表します。 このトピックでは、これらのタスクを実行する方法について説明します。  
   
 ### <a name="to-consume-a-key"></a>キーを使用するには  
@@ -65,9 +65,9 @@ Windows フォームは、キーボードの入力を使用して変更する機
   
 -   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム アプリケーションにおけるキーボード入力](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Windows フォーム アプリケーションにおけるユーザー入力](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
- [キーボード入力のしくみ](../../../docs/framework/winforms/how-keyboard-input-works.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォーム アプリケーションにおけるキーボード入力](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Windows フォーム アプリケーションにおけるユーザー入力](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)
+- [キーボード入力のしくみ](../../../docs/framework/winforms/how-keyboard-input-works.md)

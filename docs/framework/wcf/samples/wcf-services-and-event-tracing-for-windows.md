@@ -2,12 +2,12 @@
 title: WCF サービスと Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d45e83919dae52ee3719fe52463711999ba48dd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555545"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF サービスと Event Tracing for Windows
 このサンプルでは、Event Tracing for Windows (ETW で) を出力する Windows Communication Foundation (WCF) での分析トレースを使用する方法を示します。 分析トレースは、運用環境で WCF サービスのトラブルシューティングできるように、WCF スタックのキー_ポイントで出力されるイベントです。
@@ -87,5 +87,5 @@ ms.locfileid: "50198290"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

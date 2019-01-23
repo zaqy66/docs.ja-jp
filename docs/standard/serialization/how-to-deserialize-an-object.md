@@ -1,5 +1,5 @@
 ---
-title: '方法 : オブジェクトを逆シリアル化する'
+title: '方法: オブジェクトを逆シリアル化します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: 6da8ec2b78066cd251e4ad492afd2d9d37f7b965
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583312"
 ---
-# <a name="how-to-deserialize-an-object"></a>方法 : オブジェクトを逆シリアル化する
+# <a name="how-to-deserialize-an-object"></a>方法: オブジェクトを逆シリアル化します。
 オブジェクトを逆シリアル化する場合、転送形式によって、ストリーム オブジェクトとファイル オブジェクトのどちらを作成するかが決定されます。 転送形式を決定したら、必要に応じて <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> メソッドまたは <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> メソッドを呼び出すことができます。  
   
 ### <a name="to-deserialize-an-object"></a>オブジェクトを逆シリアル化するには  
@@ -53,5 +53,5 @@ ms.locfileid: "43863240"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [方法 : オブジェクトをシリアル化する](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [方法: オブジェクトをシリアル化します。](../../../docs/standard/serialization/how-to-serialize-an-object.md)
