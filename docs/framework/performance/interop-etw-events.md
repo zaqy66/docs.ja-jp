@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc9a90e9d889673d8f67e4f9158edebcb65235b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb458958f55a3f9fb2b79d87f0ee32d4a028e457
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611775"
 ---
 # <a name="interop-etw-events"></a>相互運用 ETW イベント
 <a name="top"></a> 相互運用イベントは、Microsoft intermediate language (MSIL) のスタブ生成とキャッシュに関する情報をキャプチャします。  
@@ -44,10 +44,10 @@ ms.locfileid: "33396368"
 |ModuleID|win:UInt16|モジュールの識別子。|  
 |StubMethodID|win:UInt64|スタブのメソッド識別子。|  
 |StubFlags|win:UInt64|スタブのフラグ:<br /><br /> 0x1 - 逆方向の相互運用。<br /><br /> 0x2 - COM 相互運用。<br /><br /> 0x4 - NGen.exe で生成されたスタブ。<br /><br /> 0x8 - デリゲート。<br /><br /> 0x10 - 可変個引数。<br /><br /> 0x20 - アンマネージ呼び出し先。|  
-|ManagedInteropMethodToken|win:UInt32|マネージ相互運用メソッドのトークンです。|  
-|ManagedInteropMethodNameSpace|win:UnicodeString|マネージ相互運用メソッドの名前空間。|  
-|ManagedInteropMethodName|win:UnicodeString|マネージ相互運用メソッドの名前。|  
-|ManagedInteropMethodSignature|win:UnicodeString|マネージ相互運用メソッドのシグネチャ。|  
+|ManagedInteropMethodToken|win:UInt32|マネージド相互運用メソッドのトークンです。|  
+|ManagedInteropMethodNameSpace|win:UnicodeString|マネージド相互運用メソッドの名前空間。|  
+|ManagedInteropMethodName|win:UnicodeString|マネージド相互運用メソッドの名前。|  
+|ManagedInteropMethodSignature|win:UnicodeString|マネージド相互運用メソッドのシグネチャ。|  
 |NativeMethodSignature|win:UnicodeString|ネイティブ メソッド シグネチャ。|  
 |StubMethodSignature|win:UnicodeString|スタブ メソッド シグネチャ。|  
 |StubMethodILCode|win:UnicodeString|スタブ メソッドの MSIL コード。|  
@@ -75,13 +75,13 @@ ms.locfileid: "33396368"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|モジュールの識別子。|  
 |StubMethodID|win:UInt64|スタブのメソッド識別子。|  
-|ManagedInteropMethodToken|win:UInt32|マネージ相互運用メソッドのトークンです。|  
-|ManagedInteropMethodNameSpace|win:UnicodeString|マネージ相互運用メソッドの名前空間。|  
-|ManagedInteropMethodName|win:UnicodeString|マネージ相互運用メソッドの名前。|  
-|ManagedInteropMethodSignature|win:UnicodeString|マネージ相互運用メソッドのシグネチャ。|  
+|ManagedInteropMethodToken|win:UInt32|マネージド相互運用メソッドのトークンです。|  
+|ManagedInteropMethodNameSpace|win:UnicodeString|マネージド相互運用メソッドの名前空間。|  
+|ManagedInteropMethodName|win:UnicodeString|マネージド相互運用メソッドの名前。|  
+|ManagedInteropMethodSignature|win:UnicodeString|マネージド相互運用メソッドのシグネチャ。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
  [ページのトップへ](#top)  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームからサウンドを再生する'
+title: '方法: Windows フォームからサウンドを再生します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607252"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>方法 : Windows フォームからサウンドを再生する
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>方法: Windows フォームからサウンドを再生します。
 この例では、実行時に指定されたパスでサウンドを再生します。  
   
 ## <a name="example"></a>例  
@@ -42,7 +42,7 @@ private void playSimpleSound()
   
 -   ファイル名 `"c:\Windows\Media\chimes.wav"` を有効なファイル名に置き換えます。  
   
--   (C#)参照、<xref:System.Media?displayProperty=nameWithType>名前空間。  
+-   (C#) への参照、<xref:System.Media?displayProperty=nameWithType>名前空間。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  ファイルの操作は、適切な構造の例外処理ブロックで囲む必要があります。  
@@ -59,12 +59,12 @@ private void playSimpleSound()
   
 -   パスが無効である場合 (<xref:System.IO.DirectoryNotFoundException> クラス)。  
   
--   パスがコロンにのみ、":"(<xref:System.NotSupportedException>クラス)。  
+-   パスがコロンではのみ、":"(<xref:System.NotSupportedException>クラス)。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ファイル名からファイルの内容を判断しないでください。 たとえば、`Form1.vb` というファイルは Visual Basic のソース ファイルではない可能性もあります。 アプリケーションでデータを使用する前に、入力をすべて検証してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Media.SoundPlayer>  
- [方法: Windows フォーム内でサウンドを非同期的に読み込む](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>関連項目
+- <xref:System.Media.SoundPlayer>
+- [方法: Windows フォーム内で非同期的にサウンドを読み込む](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

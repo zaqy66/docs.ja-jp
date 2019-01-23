@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: ad49e5443016dc4fed57be4a991df9f6d6095b55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1b573dbafbead20330a4fd0f62e8f21f27dce81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610930"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
 型変換で重要な考慮事項は、変換の結果が変換先のデータ型の範囲内かどうか。  
@@ -52,7 +52,7 @@ ms.locfileid: "43519278"
 |いずれかの列挙型 ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|基になる整数型と任意の型を基になる型拡大変換されます。|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
 |`Char` 配列|`Char` 配列、 `String`|  
-|任意の型|[オブジェクト](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
+|任意の型|[Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |すべての派生型|いずれかの基本データ型の派生元である<sup>3</sup>します。|  
 |任意の型|任意のインターフェイスを実装します。|  
 |[Nothing](../../../../visual-basic/language-reference/nothing.md)|任意のデータ型またはオブジェクトの種類。|  
@@ -107,12 +107,12 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [方法: オブジェクトを Visual Basic で別の型に変換](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>関連項目
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [方法: オブジェクトを Visual Basic で別の型に変換します。](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

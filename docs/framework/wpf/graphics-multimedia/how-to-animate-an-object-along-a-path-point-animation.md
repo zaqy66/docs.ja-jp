@@ -1,5 +1,5 @@
 ---
-title: '方法 : パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)'
+title: '方法: パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 521caa4411f1c0137769e7c221176b5693934ad0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610527"
 ---
-# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>方法 : パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)
+# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>方法: パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.PointAnimationUsingPath>アニメーション化するオブジェクト、<xref:System.Windows.Point>曲線のパスに沿ってします。  
   
 ## <a name="example"></a>例  
@@ -30,7 +30,7 @@ ms.locfileid: "44259783"
   
  使用前の例のコードのバージョン、<xref:System.Windows.Media.Animation.Storyboard>をアニメーション化する、 <xref:System.Windows.Media.EllipseGeometry>1 つだけのアニメーションが適用された場合でも、します。 A<xref:System.Windows.Media.Animation.Storyboard>同じこれらのアニメーションを制御できるため、複数のアニメーションを適用する最も簡単な方法は、多くの場合、<xref:System.Windows.Media.Animation.Storyboard>します。 しかし、コードを使用する場合は、1 つのアニメーションをプロパティに適用する簡単な方法は、使用する、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッド。 例については、「[ストーリーボードを使用せずにプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [パス アニメーションに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- [パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [パス アニメーションに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

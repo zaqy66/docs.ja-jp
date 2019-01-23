@@ -1,5 +1,5 @@
 ---
-title: '方法 : フォームの端に合わせてコントロールを配置する'
+title: '方法: コントロールをフォームの端を揃える'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: a8571f668de2714511a8732772443a8897043cf2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba5e9fc92f2805206f6c3796689898f3ff845896
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610410"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>方法 : フォームの端に合わせてコントロールを配置する
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>方法: コントロールをフォームの端を揃える
 <xref:System.Windows.Forms.Control.Dock%2A> プロパティを設定することにより、フォームの端に合わせてコントロールを配置することができます。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
   
 |設定|コントロールへの影響|  
@@ -49,10 +49,10 @@ ms.locfileid: "33526515"
     UserControl1.Dock = DockStyle.Top;  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [方法: FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
- [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [AutoSize プロパティの概要](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
+- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [AutoSize プロパティの概要](../../../../docs/framework/winforms/controls/autosize-property-overview.md)

@@ -2,12 +2,12 @@
 title: 追跡参加要素
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613537"
 ---
 # <a name="tracking-participants"></a>追跡参加要素
 追跡参加要素は、ワークフロー開発者が <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> オブジェクトにアクセスし、そのオブジェクトを処理する機能拡張ポイントです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。  
@@ -140,6 +140,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>関連項目
+- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

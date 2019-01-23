@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611086"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 関数
 オブジェクトの使用可能なメソッドの列挙を開始します。  
@@ -69,12 +69,12 @@ HRESULT BeginMethodEnumeration (
 
 このメソッドの呼び出しは、現在のオブジェクトがクラス定義である場合にのみサポートされます。 メソッドの操作をからご利用いただけません[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスを指すポインター。 特定のインスタンスのバリアントにメソッドが列挙される順序は保証[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)します。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

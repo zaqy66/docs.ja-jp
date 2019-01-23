@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 61a0684b55ae1e40f264db2af3607b07f2fb33a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612035"
 ---
 # <a name="structured-navigation-overview"></a>構造化ナビゲーションの概要
 ホストされるコンテンツ、 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>、または<xref:System.Windows.Navigation.NavigationWindow>はパックによって識別できるページで構成されます[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]ハイパーリンクに移動するとします。 ページの構造、およびハイパーリンクで定義される移動方法を、ナビゲーション トポロジと呼びます。 このトポロジはさまざまな種類のアプリケーションに対応しますが、特にドキュメント間を移動するアプリケーションに適しています。 このようなアプリケーションでは、互いのページの情報を必要とせずに、ユーザーはページ間を移動できます。  
@@ -169,7 +169,7 @@ ms.locfileid: "45970293"
   
  また、構造化ナビゲーションに基づいて効率的な操作を実行する複雑なナビゲーション トポロジを使用するアプリケーションもあります。 詳細については、「[ナビゲーション トポロジの概要](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Navigation.PageFunction%601>  
- <xref:System.Windows.Navigation.NavigationService>  
- [ナビゲーション トポロジの概要](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Navigation.PageFunction%601>
+- <xref:System.Windows.Navigation.NavigationService>
+- [ナビゲーション トポロジの概要](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

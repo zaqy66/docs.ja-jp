@@ -1,15 +1,15 @@
 ---
-title: 'サンプル XML ファイル: 3 での構成をテストします。'
+title: サンプル XML ファイル:3 でのテスト構成
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 642bc270bc502a4119b31decb0e432ec6951e610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609656"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>サンプル XML ファイル : 名前空間内のテスト構成
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>サンプル XML ファイル:テスト構成は、Namespace
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 これはテスト構成ファイルです。 XML は名前空間に含まれています。  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
@@ -56,5 +56,5 @@ ms.locfileid: "39243843"
 </Tests>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+- [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

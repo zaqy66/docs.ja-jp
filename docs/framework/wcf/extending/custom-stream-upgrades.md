@@ -2,12 +2,12 @@
 title: カスタム ストリームのアップグレード
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611320"
 ---
 # <a name="custom-stream-upgrades"></a>カスタム ストリームのアップグレード
 TCP、名前付きパイプなど、ストリーム指向のデータ伝送機構 (トランスポート) が扱うのは、クライアントとサーバーの間を流れる、連続的なバイト ストリームです。 このストリームを実際に作り出すのは <xref:System.IO.Stream> オブジェクトです。 ストリーム アップグレードでは、クライアントは、オプションのプロトコル階層をチャネル スタックに追加する場合に、相手側の通信チャネルにも同じことをするよう要求します。 ストリーム アップグレードは、<xref:System.IO.Stream> オブジェクトをアップグレードされたものに置き換える形で実施します。  
@@ -19,13 +19,13 @@ TCP、名前付きパイプなど、ストリーム指向のデータ伝送機�
 ## <a name="how-stream-upgrades-work"></a>ストリーム アップグレードの動作  
  ストリーム アップグレード処理には 4 つのコンポーネントが関与します。  
   
-1.  アップグレード ストリーム*イニシエーター*プロセスを開始: 実行時にその接続の他の末尾に、チャネル トランスポート層をアップグレードするよう要求を開始、ことができます。  
+1.  アップグレードのストリーム*イニシエーター*プロセスを開始: チャネルのトランスポート層をアップグレードするには、接続のもう一方の端に要求を開始、実行時にします。  
   
-2.  アップグレード ストリーム*アクセプタ*アップグレードを実行します。 実行時に他のコンピューターからのアップグレード要求を受信し、アップグレードを受け入れ可能であれば、します。  
+2.  アップグレードのストリーム*アクセプタ*アップグレードを実行します。 実行時に、その他のマシンからのアップグレード要求を受信し、アップグレードを受け入れ可能であれば。  
   
-3.  アップグレード*プロバイダー*を作成、*イニシエーター*クライアントで、*アクセプタ*サーバーにします。  
+3.  アップグレード*プロバイダー*作成、*イニシエーター*クライアントで、*アクセプタ*サーバー上。  
   
-4.  ストリーム アップグレード*バインド要素*サービスとクライアントのバインディングに追加され、実行時にプロバイダーを作成します。  
+4.  ストリーム アップグレード*バインド要素*がサービスと、クライアントのバインドに追加され、実行時に、プロバイダーを作成します。  
   
  なお、多重にアップグレードを適用する場合、イニシエーターとアクセプタはステート マシンをカプセル化して、適切な適用順序になるようにします。  
   
@@ -67,7 +67,7 @@ TCP、名前付きパイプなど、ストリーム指向のデータ伝送機�
 ## <a name="security-upgrades"></a>セキュリティ アップグレード  
  ストリーム アップグレードの特別な場合として、セキュリティ アップグレードがあります。  
   
- WCF では、ストリーム セキュリティをアップグレードするための 2 つのバインド要素が既に用意されています。 トランスポート レベルのセキュリティ構成は、<xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> および <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> にカプセル化されており、これらの要素を構成して、カスタム バインディングに追加することができます。 この 2 つのバインド要素は、クライアント側およびサーバー側のストリーム アップグレード プロバイダーを構築する <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> クラスを拡張したものです。 これらのバインド要素には、セキュリティ ストリーム アップグレード専用のプロバイダー クラスを作成するメソッドが定義されています。これらのメソッドは `public` ではないので、いずれの場合もバインド要素をバインディングに追加するだけでセキュリティ アップグレードが可能です。  
+ WCF は、ストリームのセキュリティをアップグレードするため、2 つのバインド要素を既に備えています。 トランスポート レベルのセキュリティ構成は、<xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> および <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> にカプセル化されており、これらの要素を構成して、カスタム バインドに追加することができます。 この 2 つのバインド要素は、クライアント側およびサーバー側のストリーム アップグレード プロバイダーを構築する <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> クラスを拡張したものです。 これらのバインド要素には、セキュリティ ストリーム アップグレード専用のプロバイダー クラスを作成するメソッドが定義されています。これらのメソッドは `public` ではないので、いずれの場合もバインド要素をバインディングに追加するだけでセキュリティ アップグレードが可能です。  
   
  上記の 2 つのバインド要素では対応できないセキュリティ上の要求に備え、既述のイニシエーター、アクセプタ、プロバイダーの各基底クラスから派生した `abstract` クラスが 3 つ定義されています。  
   
@@ -92,13 +92,13 @@ TCP、名前付きパイプなど、ストリーム指向のデータ伝送機�
   
 4.  ストリームは、<xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> および <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> をそれぞれ呼び出した後にアップグレードされます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

@@ -1,15 +1,15 @@
 ---
-title: '&lt;ServiceCredentials&gt;'
+title: '&lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: b9e32509a5e182301455eaf0e602a03c51fbc23a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 978439dfeb0c5275e2ec43f9c891b6927e7a7869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610436"
 ---
-# <a name="ltservicecredentialsgt"></a>&lt;ServiceCredentials&gt;
+# <a name="ltservicecredentialsgt"></a>&lt;serviceCredentials&gt;
 サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。  
   
  \<system.ServiceModel >  
@@ -52,13 +52,13 @@ ms.locfileid: "54150774"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|クライアント証明書を帯域外で使用できるときに使用される証明書を指定します。 この要素は、クライアント証明書の検証設定も指定します。 この要素は <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement> 型です。|  
-|[\<issuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|このサービス用に現在発行されているトークンを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement> 型です。|  
+|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|クライアント証明書を帯域外で使用できるときに使用される証明書を指定します。 この要素は、クライアント証明書の検証設定も指定します。 この要素は <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement> 型です。|  
+|[\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|このサービス用に現在発行されているトークンを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement> 型です。|  
 |[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|ピア ノードの現在の資格情報を指定します。 この要素は <xref:System.ServiceModel.Configuration.PeerCredentialElement> 型です。|  
-|[\<secureConversationAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationauthentication-of-servicecredential.md)|セキュリティで保護されたメッセージ交換の現在の資格情報を指定します。 この要素は <xref:System.ServiceModel.Configuration.SecureConversationServiceElement> 型です。|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|サービスが自身を識別するために使用する証明書を指定します。 この要素は <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement> 型です。|  
-|[\<userNameAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)|ユーザー名とパスワードの検証の設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.UserNameServiceElement> 型です。|  
-|[\<windowsAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsauthentication-of-servicecredentials.md)|Windows 資格情報の検証の設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.WindowsServiceElement> 型です。|  
+|[\<secureConversationAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationauthentication-of-servicecredential.md)|セキュリティで保護されたメッセージ交換の現在の資格情報を指定します。 この要素は <xref:System.ServiceModel.Configuration.SecureConversationServiceElement> 型です。|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|サービスが自身を識別するために使用する証明書を指定します。 この要素は <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement> 型です。|  
+|[\<userNameAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)|ユーザー名とパスワードの検証の設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.UserNameServiceElement> 型です。|  
+|[\<windowsAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsauthentication-of-servicecredentials.md)|Windows 資格情報の検証の設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.WindowsServiceElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54150774"
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

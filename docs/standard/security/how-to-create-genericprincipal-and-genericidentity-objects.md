@@ -1,5 +1,5 @@
 ---
-title: '方法 : GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する'
+title: '方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成します。'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0567fd12bee19e860373affdf0fdc286d6d5405a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608064"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>方法 : GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成します。
 使用することができます、<xref:System.Security.Principal.GenericIdentity>クラスと組み合わせて、 <xref:System.Security.Principal.GenericPrincipal> Windows ドメインの独立した存在する承認スキームを作成するクラス。  
   
 ### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal オブジェクトを作成するには  
@@ -142,8 +142,8 @@ Is this a Manager? True
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Security.Principal.GenericIdentity>  
-- <xref:System.Security.Principal.GenericPrincipal>  
-- <xref:System.Security.Permissions.PrincipalPermission>  
-- [プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)  
+- <xref:System.Security.Principal.GenericIdentity>
+- <xref:System.Security.Principal.GenericPrincipal>
+- <xref:System.Security.Permissions.PrincipalPermission>
+- [プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)
 - [プリンシパル オブジェクトと ID オブジェクト](../../../docs/standard/security/principal-and-identity-objects.md)

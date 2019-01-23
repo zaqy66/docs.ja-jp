@@ -1,15 +1,15 @@
 ---
-title: 操作方法：メタデータの取得および準拠サービスの実装
+title: '方法: メタデータの取得および準拠サービスの実装'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: dc7f5d97a5201698e8dc99e4523e3ab2925f6883
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608496"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>操作方法：メタデータの取得および準拠サービスの実装
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>方法: メタデータの取得および準拠サービスの実装
 サービスのデザイン担当者と実装担当者が同じであるとは限りません。 アプリケーションの相互運用が重要な環境では、コントラクトを Web サービス記述言語 (WSDL) でデザインまたは記述した場合、開発者はそのコントラクトに準拠するサービスを実装する必要があります。 既存のサービスを移行するには、Windows Communication Foundation (WCF) には、ワイヤ形式を保持することもできます。 さらに、双方向コントラクトでは、呼び出し元でコールバック コントラクトを実装する必要もあります。  
   
  このようなケースにおいて、コントラクトの要件を満たしうる言語で サービス コントラクト インターフェイスを生成するためには、[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (または同等のツール) を使用する必要があります。 通常、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)および適切なバインディングを設定するクライアント構成ファイルとチャネル ファクトリまたは WCF クライアントの種類に使用されるサービス コントラクトを取得するために使用アドレス。 また、サービス コントラクトを変更する必要がある場合もあります。 また、サービス コントラクトを変更する必要もあります。  
@@ -24,7 +24,7 @@ ms.locfileid: "53148927"
   
 3.  すべての操作に対する応答アクションを WSDL で指定していない場合、生成後の操作コントラクトでは、<xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> プロパティがワイルドカード文字 (*) に設定される場合があります。 このプロパティの設定を削除します。 削除しない場合は、サービス コントラクト メタデータを実装するときに、それらの操作のメタデータをエクスポートできません。  
   
-4.  クラスにインターフェイスを実装してサービスをホストします。 例については、次を参照してください。[方法。サービス コントラクトを実装する](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)、または次の例のセクションでは単純な実装を参照してください。  
+4.  クラスにインターフェイスを実装してサービスをホストします。 例については、「[方法: サービス コントラクトを実装する](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)、または次の例のセクションでは単純な実装を参照してください。  
   
 5.  [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) が生成したクライアント構成ファイルで、[\<client>](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) 構成セクションを[\<services>](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 構成セクションへ変更します。 (生成されたクライアント アプリケーション構成ファイルの例は、次の「例」セクションを参照してください)。  
   
@@ -59,5 +59,5 @@ ms.locfileid: "53148927"
 
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
-## <a name="see-also"></a>関連項目  
- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>関連項目
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98488a8e552940055a6ea06d360af1bd2c6b6079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610847"
 ---
 # <a name="apis-that-rely-on-reflection"></a>リフレクションに依存する API
 コード内でのリフレクションの使用は明確ではない場合があるため、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでは、実行時に必要なメタデータを保存しません。 このトピックでは、リフレクション API の一部であるとは見なされないが、正常に実行するためにリフレクションを必要とする、一般的な API と一般的なプログラミング パターンについて説明します。 これらをソース コードで使用している場合、これらに関する情報をランタイム ディレクティブ (.rd.xml) ファイルに追加して、これらの API を呼び出しても [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外やその他の例外が実行時にスローされないようにできます。  
@@ -92,6 +92,6 @@ Unfortunately, no further information is available.
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>関連項目
+- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'オブジェクトの有効期間: オブジェクトの作成と破棄 (Visual Basic)'
+title: オブジェクトの有効期間:オブジェクトの作成し、破棄 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 319d606bcd19397932c05f1d5b808f2f5d8923ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610332"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>オブジェクトの有効期間: オブジェクトの作成と破棄 (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>オブジェクトの有効期間:オブジェクトの作成し、破棄 (Visual Basic)
 クラスのインスタンス (オブジェクト) を作成するには、`New` キーワードを使用します。 新しいオブジェクトを使用する前に、多くの場合、そのオブジェクトに対して初期化タスクを実行する必要があります。 一般的な初期化タスクとして、ファイルを開く、データベースに接続する、レジストリ キーの値を読み取る、などがあります。 Visual Basic と呼ばれるプロシージャを使用して新しいオブジェクトの初期化を制御する*コンス トラクター* (初期化を制御する特殊なメソッド)。  
   
  スコープを離れたオブジェクトは、共通言語ランタイム (CLR) によって解放されます。 Visual Basic と呼ばれるプロシージャを使用してシステム リソースの解放を制御する*デストラクター*します。 コンストラクターとデストラクターは共に、堅牢で予測可能なクラス ライブラリの作成をサポートしています。  
@@ -146,9 +146,9 @@ End Sub
   
  ガベージ コレクション システム間の相違点にはこの他、`Nothing` を使用することがあります。 Visual Basic 6.0 とそれ以前のバージョンの参照カウントを利用するために、プログラマはオブジェクト変数に `Nothing` を割り当てて、オブジェクト変数が保持する参照を解放することがありました。 変数がオブジェクトへの最後の参照を保持していた場合、オブジェクトのリソースは直ちに解放されました。 Visual Basic のそれ以降のバージョンでも、このプロシージャが有益な場合がありますが、実行しても、参照したオブジェクトによってリソースが直ちに解放されることはありません。 リソースを直ちに解放するには、オブジェクトの <xref:System.IDisposable.Dispose%2A> メソッドを使用してください (使用可能な場合)。 変数を `Nothing` に設定する必要があるのは、ガベージ コレクターが孤立したオブジェクトを検出するのに要する時間よりも、変数の有効期間が長い場合のみです。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IDisposable.Dispose%2A>  
- [コンポーネントの初期化と終了](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [アンマネージ リソースのクリーンアップ](../../../../standard/garbage-collection/unmanaged.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.IDisposable.Dispose%2A>
+- [コンポーネントの初期化と終了](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)
+- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [アンマネージ リソースのクリーンアップ](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

@@ -2,12 +2,12 @@
 title: ASP.NET AJAX 用の WCF サービスの作成
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: 4d3953046a796686a465cd8096b8f2ba930aa9fd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6d00b5b8839d519ffa3609eafffd4b086689449
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613527"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX 用の WCF サービスの作成
 Microsoft ASP.NET AJAX により、応答性に優れ、使い慣れたユーザー インターフェイス要素を使用して、充実したユーザー エクスペリエンスを提供する Web ページを簡単に作成できます。 ASP.NET AJAX には、ブラウザーに依存しない ECMAScript (JavaScript) テクノロジとダイナミック HTML (DHTML) テクノロジを組み込んだクライアント スクリプト ライブラリが用意されており、これらのライブラリが ASP.NET 2.0 サーバー ベース開発プラットフォームと統合されます。 ASP.NET AJAX を使用することで、Web アプリケーションのユーザー エクスペリエンスと効率を向上させることができます。  
@@ -20,13 +20,13 @@ Microsoft ASP.NET AJAX により、応答性に優れ、使い慣れたユーザ
   
  Visual Studio テンプレートを使用しない場合、ASP.NET AJAX エンドポイントを作成するには次の 2 つの方法があります。  
   
--   構成を使用せずに、動的ホスト アクティブ化を使用してエンドポイントを作成する。 これは、WCF 構成システムの操作に慣れていない場合の最も簡単な方法です。 詳細については、次を参照してください。[方法: ASP.NET AJAX エンドポイントなしを使用して構成を追加](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)します。  
+-   構成を使用せずに、動的ホスト アクティブ化を使用してエンドポイントを作成する。 これは、WCF 構成システムの操作に慣れていない場合の最も簡単な方法です。 詳細については、「[方法 :構成を使用せずに ASP.NET AJAX エンドポイントを追加](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)します。  
   
--   構成を使用して WCF サービスに AJAX 対応のエンドポイントを追加します。 詳細については、次を参照してください。[方法: ASP.NET AJAX エンドポイントを追加する構成を使用](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)します。  
+-   構成を使用して WCF サービスに AJAX 対応のエンドポイントを追加します。 詳細については、「[方法 :ASP.NET AJAX エンドポイントを追加する構成を使用して](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)します。  
   
  説明されている Web プログラミング モデル、 [WCF Web HTTP プログラミング モデル概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)ASP.NET AJAX サービスで使用できます。 具体的には、次のように使用します。  
   
--   <xref:System.ServiceModel.Web.WebGetAttribute> および <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性を使用して、HTTP GET 動詞と HTTP POST 動詞のいずれかを選択できます。 正しく使用すれば、アプリケーションのパフォーマンスを大幅に向上させることができます。 詳細については、次を参照してください。[方法: ASP.NET AJAX エンドポイントの HTTP POST または HTTP GET 要求を選択して](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)します。  
+-   <xref:System.ServiceModel.Web.WebGetAttribute> および <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性を使用して、HTTP GET 動詞と HTTP POST 動詞のいずれかを選択できます。 正しく使用すれば、アプリケーションのパフォーマンスを大幅に向上させることができます。 詳細については、「[方法 :ASP.NET AJAX エンドポイントの HTTP POST または HTTP GET 要求を選択して](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)します。  
   
 -   <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> および <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> プロパティを使用して、サービスが返すデータを、既定の JSON (JavaScript Object Notation) ではなく XML データにすることができます。 これを ASP.NET AJAX フレームワークで行うと、JavaScript クライアントは XML DOM オブジェクトを受け取ります。  
   
@@ -57,8 +57,8 @@ Microsoft ASP.NET AJAX により、応答性に優れ、使い慣れたユーザ
   
  ASP.NET AJAX フレームワークなしで WCF AJAX エンドポイントで使用可能性があります。 これを行うには、WCF での AJAX のサポートのサポート アーキテクチャの理解が必要です。 このアーキテクチャの詳細については、次を参照してください。 [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)します。 この方法を示すコード サンプルは、次を参照してください。、 [JSON および XML 形式の AJAX サービス](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [方法 : 構成を使用せずに ASP.NET AJAX エンドポイントを追加する](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)  
- [方法 : 構成を使用して ASP.NET AJAX エンドポイントを追加する](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)  
- [方法 : ASP.NET AJAX エンドポイントのために HTTP POST または HTTP GET を選択する](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+## <a name="see-also"></a>関連項目
+- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [方法: 構成を使用せずに ASP.NET AJAX エンドポイントを追加します。](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
+- [方法: 構成を使用して ASP.NET AJAX エンドポイントを追加するには](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [方法: ASP.NET AJAX エンドポイントの HTTP POST または HTTP GET 要求を選択します。](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 69eb1490c61cc7187d11c776fe95c659271750b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608483"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
 <xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**への入力として指定できますまたはコードを追加せず、XML Web サービスからの出力のコンテンツをストリームするために必要という点では、「シリアル化可能な」、**データセット**XML Web サービスからクライアントとバックエンド。 **データセット**DiffGram 形式を使用して XML ストリームに暗黙的に変換は、ネットワーク経由で送信およびとして XML ストリームから再構築し、**データセット**受信側でします。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)します。  
@@ -26,7 +26,7 @@ ms.locfileid: "49087337"
   
      例では、XML Web サービスが作成から顧客の一覧をここでは、データを返す、 **Northwind**データベース、および受信を**データセット**データへの更新プログラムを使用する XML Web サービス元のデータ ソースに解決します。  
   
-     XML Web サービスは、2 つのメソッドを公開します: **GetCustomers**、顧客の一覧を返すと**UpdateCustomers**、更新プログラムをデータ ソースに解決します。 この XML Web サービスは、Web サーバー上の DataSetSample.asmx というファイルに格納されます。 次のコードは、DataSetSample.asmx の内容の概要を示しています。  
+     XML Web サービスは、2 つのメソッドを公開します。**GetCustomers**、顧客の一覧を返すと**UpdateCustomers**、更新プログラムをデータ ソースに解決します。 この XML Web サービスは、Web サーバー上の DataSetSample.asmx というファイルに格納されます。 次のコードは、DataSetSample.asmx の内容の概要を示しています。  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -259,12 +259,12 @@ ms.locfileid: "49087337"
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [DataAdapter からの DataSet の読み込み](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- [DataAdapter によるデータ ソースの更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Web サービス記述言語ツール (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataAdapter からの DataSet の読み込み](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- [DataAdapter によるデータ ソースの更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [Web サービス記述言語ツール (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

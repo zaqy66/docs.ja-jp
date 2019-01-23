@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3bad6c052ec90c8cd3e47c4ec822fc2d5ae944af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612165"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 関数
 指定したバージョンの .NET Framework 再頒布可能パッケージに含まれている DLL を読み込みます。  
@@ -67,12 +67,12 @@ HRESULT LoadLibraryShim (
 > [!NOTE]
 >  以降、.NET Framework version 2.0 と、読み込まれる CLR Fusion.dll を読み込むとします。 Fusion.dll で関数が、ラッパーが、この実装は、ランタイムによって提供されるためです。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
