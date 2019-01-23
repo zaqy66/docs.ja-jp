@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 214fc97e41d8d220547a5f8bd28117ff411fa89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3f688993bfd8e6bef66451b075a49f31efe641cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497106"
 ---
-# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="0000c-102">ICorDebugProcess5::GetTypeFields メソッド</span><span class="sxs-lookup"><span data-stu-id="0000c-102">ICorDebugProcess5::GetTypeFields Method</span></span>
-<span data-ttu-id="0000c-103">型に属するフィールドについてを説明します。</span><span class="sxs-lookup"><span data-stu-id="0000c-103">Provides information about the fields that belong to a type.</span></span>  
+# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="34419-102">ICorDebugProcess5::GetTypeFields メソッド</span><span class="sxs-lookup"><span data-stu-id="34419-102">ICorDebugProcess5::GetTypeFields Method</span></span>
+<span data-ttu-id="34419-103">型に属するフィールドについてを説明します。</span><span class="sxs-lookup"><span data-stu-id="34419-103">Provides information about the fields that belong to a type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0000c-104">構文</span><span class="sxs-lookup"><span data-stu-id="0000c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34419-104">構文</span><span class="sxs-lookup"><span data-stu-id="34419-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeFields(  
@@ -38,31 +38,31 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0000c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0000c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="34419-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="34419-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="0000c-106">[in]フィールド情報を取得する型の識別子。</span><span class="sxs-lookup"><span data-stu-id="0000c-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
+ <span data-ttu-id="34419-106">[in]フィールド情報を取得する型の識別子です。</span><span class="sxs-lookup"><span data-stu-id="34419-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
   
  `celt`  
- <span data-ttu-id="0000c-107">[in]数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)フィールド情報を取得するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="0000c-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
+ <span data-ttu-id="34419-107">[in]数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)フィールド情報を取得するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="34419-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
   
  `fields`  
- <span data-ttu-id="0000c-108">[out]配列[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)型に属しているフィールドに関する情報を提供するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="0000c-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
+ <span data-ttu-id="34419-108">[out]配列の[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)型に属するフィールドに関する情報を提供するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="34419-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
   
  `pceltNeeded`  
- <span data-ttu-id="0000c-109">[out]数へのポインター [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)に含まれるオブジェクト`fields`です。</span><span class="sxs-lookup"><span data-stu-id="0000c-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
+ <span data-ttu-id="34419-109">[out]数へのポインター [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)に含まれるオブジェクト`fields`します。</span><span class="sxs-lookup"><span data-stu-id="34419-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0000c-110">コメント</span><span class="sxs-lookup"><span data-stu-id="0000c-110">Remarks</span></span>  
- <span data-ttu-id="0000c-111">`celt`フィールドを設定するメソッドを使用してフィールド情報の数を指定するパラメーター`fields`の値に対応する必要があります、`COR_TYPE_LAYOUT::numFields`フィールドです。</span><span class="sxs-lookup"><span data-stu-id="0000c-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34419-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="34419-110">Remarks</span></span>  
+ <span data-ttu-id="34419-111">`celt`フィールドがフィールドの情報を設定するメソッドを使用して数を指定するパラメーター`fields`の値に対応する必要があります、`COR_TYPE_LAYOUT::numFields`フィールド。</span><span class="sxs-lookup"><span data-stu-id="34419-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0000c-112">要件</span><span class="sxs-lookup"><span data-stu-id="0000c-112">Requirements</span></span>  
- <span data-ttu-id="0000c-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="0000c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34419-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="34419-112">Requirements</span></span>  
+ <span data-ttu-id="34419-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="34419-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0000c-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0000c-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="34419-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34419-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0000c-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0000c-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34419-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34419-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0000c-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0000c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="34419-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34419-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0000c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="0000c-117">See Also</span></span>  
- [<span data-ttu-id="0000c-118">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0000c-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [<span data-ttu-id="0000c-119">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0000c-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="34419-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="34419-117">See also</span></span>
+- [<span data-ttu-id="34419-118">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="34419-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="34419-119">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="34419-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

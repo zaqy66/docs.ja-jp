@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0529dee17469018e872951740a5899ef8664300a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 643bfd9f17474241a9291734eb52910f97f9ad2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495644"
 ---
-# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="1dd1e-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification メソッド</span><span class="sxs-lookup"><span data-stu-id="1dd1e-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
-<span data-ttu-id="1dd1e-103">現在の取得[icordebugmanagedcallback 3::customnotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)現在のスレッド上のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="1dd1e-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>  
+# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="ba364-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification メソッド</span><span class="sxs-lookup"><span data-stu-id="ba364-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
+<span data-ttu-id="ba364-103">現在の取得[icordebugmanagedcallback 3::customnotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)現在のスレッド上のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ba364-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1dd1e-104">構文</span><span class="sxs-lookup"><span data-stu-id="1dd1e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba364-104">構文</span><span class="sxs-lookup"><span data-stu-id="ba364-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentCustomDebuggerNotification(  
@@ -35,23 +35,23 @@ HRESULT GetCurrentCustomDebuggerNotification(
     );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1dd1e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1dd1e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ba364-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ba364-105">Parameters</span></span>  
  `ppNOtificationObject`  
- <span data-ttu-id="1dd1e-106">[out]現在へのポインター`ICorDebugManagedCallback3::CustomNotification`現在のスレッド上のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="1dd1e-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>  
+ <span data-ttu-id="ba364-106">[out]現在へのポインター`ICorDebugManagedCallback3::CustomNotification`現在のスレッド上のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ba364-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1dd1e-107">コメント</span><span class="sxs-lookup"><span data-stu-id="1dd1e-107">Remarks</span></span>  
- <span data-ttu-id="1dd1e-108">値`ppNotificationObject`内から、メソッドが呼び出されない場合は null、`ICorDebugManagedCallback3::CustomNotification`コールバック、現在の通知オブジェクトが存在しない場合またはします。</span><span class="sxs-lookup"><span data-stu-id="1dd1e-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba364-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="ba364-107">Remarks</span></span>  
+ <span data-ttu-id="ba364-108">値`ppNotificationObject`内からメソッドを呼び出さない場合は null を`ICorDebugManagedCallback3::CustomNotification`コールバック、または現在の通知オブジェクトが存在しない場合。</span><span class="sxs-lookup"><span data-stu-id="ba364-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1dd1e-109">要件</span><span class="sxs-lookup"><span data-stu-id="1dd1e-109">Requirements</span></span>  
- <span data-ttu-id="1dd1e-110">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="1dd1e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba364-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="ba364-109">Requirements</span></span>  
+ <span data-ttu-id="ba364-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ba364-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1dd1e-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1dd1e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ba364-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ba364-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1dd1e-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1dd1e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ba364-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ba364-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1dd1e-113">**.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dd1e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ba364-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba364-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1dd1e-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1dd1e-114">See Also</span></span>  
- [<span data-ttu-id="1dd1e-115">ICorDebugThread4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1dd1e-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [<span data-ttu-id="1dd1e-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1dd1e-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="1dd1e-117">デバッグ</span><span class="sxs-lookup"><span data-stu-id="1dd1e-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="ba364-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="ba364-114">See also</span></span>
+- [<span data-ttu-id="ba364-115">ICorDebugThread4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ba364-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [<span data-ttu-id="ba364-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ba364-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ba364-117">デバッグ</span><span class="sxs-lookup"><span data-stu-id="ba364-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
