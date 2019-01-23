@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0d8dc3afe188e18d0804055f869e5090ebc4224
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3a67a92204ffc2041d4ea11c8551064582b7c15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544966"
 ---
 # <a name="icordebugobjectvaluegetmanagedcopy-method"></a>ICorDebugObjectValue::GetManagedCopy メソッド
 `GetManagedCopy` は互換性のために残されています。 このメソッドを呼び出さないでください。  
@@ -35,9 +35,9 @@ HRESULT GetManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
-## <a name="see-also"></a>関連項目  
-    
- 
+## <a name="see-also"></a>関連項目
+
+

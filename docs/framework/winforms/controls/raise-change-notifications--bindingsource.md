@@ -1,5 +1,5 @@
 ---
-title: '方法 : BindingSource と INotifyPropertyChanged の各インターフェイスを使用して変更通知を発生させる'
+title: '方法: BindingSource と INotifyPropertyChanged インターフェイスを使用して変更通知を発生させる'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 88eaa5226d6642c79686ac0575a51b126f3c5aa4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: cf6f39154b7b896a835bda7f946134fbff8dbe17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543959"
 ---
-# <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>方法 : BindingSource と INotifyPropertyChanged の各インターフェイスを使用して変更通知を発生させる
+# <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>方法: BindingSource と INotifyPropertyChanged インターフェイスを使用して変更通知を発生させる
 データ ソースに含まれる型が <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装し、プロパティ値が変更されると <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> イベントを発生させる場合に、<xref:System.Windows.Forms.BindingSource> コンポーネントがデータ ソースの変更を自動的に検出します。 これは、データ ソースの値が変わると、<xref:System.Windows.Forms.BindingSource> にバインドされるコントロールが自動的に更新されるため便利です。  
   
 > [!NOTE]
@@ -39,9 +39,9 @@ ms.locfileid: "48846449"
   
 -   System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。 「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb129228(v=vs.100))」も参照してください。  
+ コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。 参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb129228(v=vs.100))します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ComponentModel.INotifyPropertyChanged>  
- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [方法: BindingSource ResetItem メソッドを使用して変更通知を発生させる](../../../../docs/framework/winforms/controls/how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ComponentModel.INotifyPropertyChanged>
+- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [方法: BindingSource ResetItem メソッドを使用して変更通知を発生させる](../../../../docs/framework/winforms/controls/how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)

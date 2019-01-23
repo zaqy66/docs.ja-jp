@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543449"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
 このヘルプ ページは、Visual Basic がカルチャ情報を使用して、文字列の変換との比較を実行する方法について説明します。  
@@ -33,10 +33,10 @@ ms.locfileid: "39332601"
   
 -   **特定のカルチャを使用する変換。** 各数値のオブジェクトには、 `ToString(IFormatProvider)` 、文字列に数値を変換するメソッドと`Parse(String, IFormatProvider)`文字列を数値に変換するメソッド。 たとえば、`Double`型を提供、<xref:System.Double.ToString%28System.IFormatProvider%29>と<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>メソッド。  
   
- 詳細については、<xref:Microsoft.VisualBasic.Conversion.Str%2A> および <xref:Microsoft.VisualBasic.Conversion.Val%2A> を参照してください。  
+ 詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualBasic.Conversion.Str%2A> および <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
   
 ## <a name="using-a-specific-culture"></a>特定のカルチャを使用します。  
- (文字列として書式設定) の日付を Web サービスに送信するアプリケーションを開発していることを想像してください。 この場合、アプリケーションでは、文字列変換のため、特定のカルチャを使用する必要があります。 その理由を示すためには、日付の使用の結果を検討してください<xref:System.DateTime.ToString>メソッド: 場合は、アプリケーションでは、そのメソッドを使用して、2005 年 7 月 4 日の日付の書式設定を返します"2005 年 7 月 4 日 12:00:00 AM"、米国英語 (EN-US) カルチャを実行すると、を返します"。04.07.2005 00時 00分: 00"ドイツ (DE-DE) のカルチャに実行するとします。  
+ (文字列として書式設定) の日付を Web サービスに送信するアプリケーションを開発していることを想像してください。 この場合、アプリケーションでは、文字列変換のため、特定のカルチャを使用する必要があります。 その理由を示すためには、日付の使用の結果を検討してください。<xref:System.DateTime.ToString>メソッド。返しますが、アプリケーションでそのメソッドを使用して、2005 年 7 月 4 日の日付の書式設定するかどうかは"7/4/2005 12時 00分: 00 AM"、米国英語 (EN-US) カルチャの実行とは"04.07.2005 00時 00分: 00"ドイツ (DE-DE) のカルチャに実行するとします。  
   
  使用する必要がある、特定のカルチャの形式で文字列の変換を実行する必要がある場合、`CultureInfo`に組み込まれているクラス、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 新規に作成することができます`CultureInfo`カルチャの名前を渡すことによって、特定のカルチャのオブジェクト、<xref:System.Globalization.CultureInfo.%23ctor%2A>コンス トラクター。 サポートされているカルチャの名前にある、<xref:System.Globalization.CultureInfo>ヘルプ ページのクラス。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "39332601"
 ### <a name="security-considerations"></a>セキュリティの考慮事項  
  アプリケーションがセキュリティ上の決定の比較またはケース変更操作の結果に基づくかどうかは、操作を使用する必要があります、<xref:System.String.Compare%2A?displayProperty=nameWithType>メソッド、およびパス`Ordinal`または`OrdinalIgnoreCase`の`comparisonType`引数。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Globalization.CultureInfo>  
- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Globalization.CultureInfo>
+- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

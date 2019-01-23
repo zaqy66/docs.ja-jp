@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61e8a8d1a923a52b678771f79122e5ab36a99706
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc7e9125b68412aab12585bf5dade3c718301dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545502"
 ---
 # <a name="icordebugobjectvaluegetcontext-method"></a>ICorDebugObjectValue::GetContext メソッド
-`GetContext` このバージョンの .NET Framework では実装されていません。  
+`GetContext` このバージョンの .NET Framework で実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,9 +35,9 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
-## <a name="see-also"></a>関連項目  
-    
- 
+## <a name="see-also"></a>関連項目
+
+

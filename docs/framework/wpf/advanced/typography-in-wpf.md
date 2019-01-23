@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ec1c227196e9118f9174feb103a3ecbf5bcb7c4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b4cfec6dd1b732729f32abd65c6e69ca53e2ad82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547489"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
@@ -167,12 +167,12 @@ FormattedText オブジェクトを使用して表示されるテキスト
   
  カスタム テキスト レイアウトの作成の詳細については、「[テキストの高度な書式設定](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.FormattedText>  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>  
- [ClearType の概要](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [書式設定されたテキストの描画](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [テキストの高度な書式設定](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [[テキスト]](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Microsoft の文字体裁](https://www.microsoft.com/typography/default.mspx)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.FormattedText>
+- <xref:System.Windows.Media.TextFormatting.TextFormatter>
+- [ClearType の概要](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [書式設定されたテキストの描画](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+- [テキストの高度な書式設定](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)
+- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Microsoft の文字体裁](https://www.microsoft.com/typography/default.mspx)

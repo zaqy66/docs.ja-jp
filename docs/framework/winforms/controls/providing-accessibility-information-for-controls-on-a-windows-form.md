@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: ffeecc1dfe52f1703fc201ef196644afbcc4708c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976aff327a5212c181d455bab1cdc84f98d75a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540917"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Windows フォーム上のコントロールのユーザー補助情報の提供
 ユーザー補助機能は専用のプログラムおよびデバイスで、障碍を持つユーザーがコンピューターをより効果的に使用するよう助けます。 たとえば、視覚障碍者のためのスクリーン リーダーや、マウスまたはキーボードではなく音声コマンド入力を利用するユーザーのための音声入力ユーティリティがあります。 これらのユーザー補助機能は、Windows フォーム コントロールによって公開されているアクセシビリティのプロパティと連携します。 これらのプロパティとは:  
@@ -88,11 +88,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.AccessibleObject>  
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.AccessibleRole>
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.AccessibleObject>
+- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.AccessibleRole>

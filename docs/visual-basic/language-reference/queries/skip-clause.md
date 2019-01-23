@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 615f98bf36d29c1f269d6866b1232ad33a5ae2f2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 53fc47c7dd26142d2ead49178afefe2775a96580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543147"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 句 (Visual Basic)
 コレクション内の指定された数の要素をバイパスし、残りの要素を返します。  
@@ -42,11 +42,11 @@ Skip count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)

@@ -2,12 +2,12 @@
 title: ASP.NET 互換性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541093"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 互換性
 このサンプルでは、Windows Communication Foundation (WCF) での ASP.NET 互換モードを有効にする方法を示します。 ASP.NET ファイル/URL 承認、セッション状態などの機能の ASP.NET 互換モードは、ASP.NET アプリケーション パイプラインに完全に参加し、ことで実行されているサービスを使用して、<xref:System.Web.HttpContext>クラス。 <xref:System.Web.HttpContext>クラスは、cookie、セッション、およびその他の ASP.NET 機能へのアクセスを使用できます。 このモードでは、バインディングは HTTP トランスポートを使用し、サービス自体は IIS でホストされる必要があります。  
@@ -127,5 +127,5 @@ Press <ENTER> to terminate client.
   
 4.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>関連項目
+- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

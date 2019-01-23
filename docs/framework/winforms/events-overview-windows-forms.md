@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 79d1ba122bd78b33fbc675ea0b0ec681005819cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543714"
 ---
 # <a name="events-overview-windows-forms"></a>イベントの概要 (Windows フォーム)
 イベントとは、プログラマが応答できる、つまり、コードを使って "処理" できるアクションのことです。 イベントは、マウスのクリックやキーを押すなどのユーザー アクション、プログラム コードまたはシステムによって生成されます。  
@@ -26,14 +26,14 @@ ms.locfileid: "33540102"
 > [!NOTE]
 >  イベントの多くは、他のイベントと共に発生します。 たとえば、<xref:System.Windows.Forms.Control.DoubleClick> イベントが発生する場合は、<xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.MouseUp>、および <xref:System.Windows.Forms.Control.Click> の各イベントが発生します。  
   
- させてイベントを処理する方法については、次を参照してください。[イベント](../../../docs/standard/events/index.md)です。  
+ させて、イベントを処理する方法については、次を参照してください。[イベント](../../../docs/standard/events/index.md)します。  
   
 ## <a name="delegates-and-their-role"></a>デリゲートとその役割  
  デリゲートは、主にイベント処理機構をビルドするために、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 内で使用されるクラスです。 デリゲートは、[!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] やその他のオブジェクト指向言語で一般的に使用される関数ポインターに似ています。 ただし、関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 また、関数ポインターには特定の関数への参照だけが含まれていますが、デリゲートはオブジェクトへの参照、およびそのオブジェクト内の 1 つ以上のメソッドへの参照で構成されています。  
   
- このイベント モデルを使用して*デリゲート*それらの処理に使用されるメソッドにイベントをバインドします。 デリゲートを使用すると、ハンドラーのメソッドを指定することにより、イベント通知のための他のクラスを登録できます。 イベントが発生すると、デリゲートは関連付けられたメソッドを呼び出します。 デリゲートを定義する方法の詳細については、次を参照してください。[イベント](../../../docs/standard/events/index.md)です。  
+ このイベント モデルを使用して*デリゲート*それらを処理するために使用されるメソッドにイベントをバインドします。 デリゲートを使用すると、ハンドラーのメソッドを指定することにより、イベント通知のための他のクラスを登録できます。 イベントが発生すると、デリゲートは関連付けられたメソッドを呼び出します。 デリゲートを定義する方法の詳細については、次を参照してください。[イベント](../../../docs/standard/events/index.md)します。  
   
- デリゲートは、単一のメソッドまたは複数のメソッドに関連付けることができます。後者は、マルチキャストと呼ばれます。 イベントのデリゲートを作成する場合は、通常、ユーザー (Windows フォーム デザイナー) がマルチキャスト イベントを作成します。 例外は、1 回のイベントで複数回実行されることが論理的にあり得ないような特定のプロシージャ (ダイアログ ボックスの表示など) を呼び出すイベントです。 マルチキャスト デリゲートを作成する方法については、次を参照してください。[する方法: デリゲートを結合する (マルチキャスト デリゲート)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)です。  
+ デリゲートは、単一のメソッドまたは複数のメソッドに関連付けることができます。後者は、マルチキャストと呼ばれます。 イベントのデリゲートを作成する場合は、通常、ユーザー (Windows フォーム デザイナー) がマルチキャスト イベントを作成します。 例外は、1 回のイベントで複数回実行されることが論理的にあり得ないような特定のプロシージャ (ダイアログ ボックスの表示など) を呼び出すイベントです。 マルチキャスト デリゲートを作成する方法については、次を参照してください。[方法。デリゲート (マルチキャスト デリゲート) を結合](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)します。  
   
  マルチキャスト デリゲートは、関連付けられたメソッドの呼び出しリストを保持します。 マルチキャスト デリゲートでは、呼び出しリストにメソッドを追加する <xref:System.Delegate.Combine%2A> メソッド、およびリストからメソッドを削除する <xref:System.Delegate.Remove%2A> メソッドがサポートされています。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "33540102"
   
  デリゲートと共に使用される関連付けの機構は動的です。デリゲートは、シグネチャがイベント ハンドラのシグネチャと一致する任意のメソッドに実行時に関連付けできます。 この機能によって、状況に応じて関連付けるメソッドを設定または変更したり、イベント ハンドラをコントロールに動的に関連付けることができます。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム内でのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [イベント ハンドラーの概要](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォーム内でのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [イベント ハンドラーの概要](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

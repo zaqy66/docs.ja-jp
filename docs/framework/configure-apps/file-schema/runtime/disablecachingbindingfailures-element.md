@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78ca269dacc33fb441310ad00ba2548826f5403e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20cc7e37b2ea66cae9f28367f97b69ed43f1a13e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543868"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt;要素
 バインディングを調査して、アセンブリが見つからなかったために発生したエラーのキャッシュを無効にするかどうかを指定します。  
   
  \<configuration > 要素  
 \<ランタイム > 要素  
-\<disableCachingBindingFailures >  
+\<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>構文  
   
@@ -80,7 +80,7 @@ ms.locfileid: "53610516"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

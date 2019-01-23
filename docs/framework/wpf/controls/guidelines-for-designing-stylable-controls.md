@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545031"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>スタイルの設定が可能なコントロールを設計するためのガイドライン
 このドキュメントは、スタイルの設定とテンプレートの作成を簡単に行うためのコントロールを設計する際に考慮すべき一連のベスト プラクティスをまとめたものです。 組み込みの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロール セットのテーマのコントロールのスタイルの操作で試行錯誤を繰り返した結果、この一連のベスト プラクティスにたどり着きました。 スタイリングの成功の鍵は、スタイルそのものであると同様に、適切に設計されたオブジェクト モデルの機能であることが分かりました。 このドキュメントの対象読者は、スタイルの作成者ではなく、コントロールの作成者です。  
@@ -30,10 +30,10 @@ ms.locfileid: "33558222"
  スタイルとテンプレートの概要については、「[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)」を参照してください。  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## <a name="before-you-start-understanding-your-control"></a>開始する前に: コントロールの理解  
+## <a name="before-you-start-understanding-your-control"></a>開始する前に。コントロールの理解  
  次のガイドラインに進む前に、コントロールの一般的な使用方法を理解し、これを定義する必要があります。 スタイル設定は、規則に従わないことが多い可能性セットに遭遇します。 (多くのアプリケーションで、多くの開発者によって) 広く使用されるように作成されるコントロールは、コントロールの視覚的な外観に広範な変更を加えるためにスタイル設定を使用できるという課題に直面しています。 実際には、スタイルのコントロールは、コントロールの作成者の意図に沿っていない場合すらあります。 スタイル設定によって提供される柔軟性は実質的に無制限であるため、一般的な使用方法の概念を使用して、決定を詳しく調査できます。  
   
- コントロールの一般的な使用方法を理解するには、コントロールの価値提案について考慮することをお勧めします。 作成したコントロールがテーブルにもたらすもので、その他のコントロールが提供できないものは何でしょうか。 一般的な使用方法は、特定の視覚的な外観を意味するのではなく、コントロールの原理とその使用法の妥当な一連の想定を意味します。 このことを理解すると、一般的な場合での、構成モデルとコントロールのスタイル定義の動作に関するある想定を行うことができます。 場合<xref:System.Windows.Controls.ComboBox>、たとえば、一般的な使用方法を理解することは把握できません任意に関するかどうか、特定<xref:System.Windows.Controls.ComboBox>ファクトに関する洞察が提供されますが、角が丸いを<xref:System.Windows.Controls.ComboBox>ポップアップ ウィンドウをおそらく必要となんらかの方法が開いているかどうかを切り替えます。  
+ コントロールの一般的な使用方法を理解するには、コントロールの価値提案について考慮することをお勧めします。 作成したコントロールがテーブルにもたらすもので、その他のコントロールが提供できないものは何でしょうか。 一般的な使用方法は、特定の視覚的な外観を意味するのではなく、コントロールの原理とその使用法の妥当な一連の想定を意味します。 このことを理解すると、一般的な場合での、構成モデルとコントロールのスタイル定義の動作に関するある想定を行うことができます。 場合<xref:System.Windows.Controls.ComboBox>、たとえば、一般的な使用方法を理解することはありませんの見通しに関するかどうか、特定<xref:System.Windows.Controls.ComboBox>の角が丸い、ですが、ファクトの洞察を得ることを<xref:System.Windows.Controls.ComboBox>おそらくポップアップ ウィンドウが必要と開いているかどうかを切り替えることの何らかの方法です。  
   
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>一般的なガイドライン  
@@ -58,8 +58,8 @@ ms.locfileid: "33558222"
   
     |要素|型|使用者|  
     |-------------|----------|-------------|  
-    |<xref:System.Windows.Controls.ContentPresenter>|Type-based|<xref:System.Windows.Controls.Button>、 <xref:System.Windows.Controls.CheckBox>、 <xref:System.Windows.Controls.RadioButton>、<xref:System.Windows.Controls.Frame>され (すべて<xref:System.Windows.Controls.ContentControl>型)|  
-    |<xref:System.Windows.Controls.ItemsPresenter>|Type-based|<xref:System.Windows.Controls.ListBox>、 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.Menu>され (すべて<xref:System.Windows.Controls.ItemsControl>型)|  
+    |<xref:System.Windows.Controls.ContentPresenter>|Type-based|<xref:System.Windows.Controls.Button>、 <xref:System.Windows.Controls.CheckBox>、 <xref:System.Windows.Controls.RadioButton>、<xref:System.Windows.Controls.Frame>など (すべて<xref:System.Windows.Controls.ContentControl>型)|  
+    |<xref:System.Windows.Controls.ItemsPresenter>|Type-based|<xref:System.Windows.Controls.ListBox>、 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.Menu>など (すべて<xref:System.Windows.Controls.ItemsControl>型)|  
     |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Named|<xref:System.Windows.Controls.ToolBar>|  
     |<xref:System.Windows.Controls.Primitives.Popup>|Standalone|<xref:System.Windows.Controls.ComboBox>、 <xref:System.Windows.Controls.ToolBar>、 <xref:System.Windows.Controls.Menu>、<xref:System.Windows.Controls.ToolTip>など|  
     |<xref:System.Windows.Controls.Primitives.RepeatButton>|Named|<xref:System.Windows.Controls.Slider>、<xref:System.Windows.Controls.Primitives.ScrollBar>など|  
@@ -73,7 +73,7 @@ ms.locfileid: "33558222"
   
     -   Named ヘルパー要素は親によって識別する必要があり、親はこのヘルパー要素に必要な設定を確立する必要があります。  
   
-    -   Type-based ヘルパー要素は、自身に必要な設定を直接確立する必要があります。 これを行うと、`TemplatedParent` (使用するテンプレートのコントロールの型) などの使用する情報コンテキストをクエリするヘルパー要素が必要になる場合があります。 たとえば、<xref:System.Windows.Controls.ContentPresenter>自動的にバインド、`Content`のプロパティ、`TemplatedParent`にその<xref:System.Windows.Controls.ContentPresenter.Content%2A>プロパティで使用する場合、<xref:System.Windows.Controls.ContentControl>派生型です。  
+    -   Type-based ヘルパー要素は、自身に必要な設定を直接確立する必要があります。 これを行うと、`TemplatedParent` (使用するテンプレートのコントロールの型) などの使用する情報コンテキストをクエリするヘルパー要素が必要になる場合があります。 など、<xref:System.Windows.Controls.ContentPresenter>を自動的にバインド、`Content`プロパティの`TemplatedParent`にその<xref:System.Windows.Controls.ContentPresenter.Content%2A>プロパティで使用する場合、<xref:System.Windows.Controls.ContentControl>派生型。  
   
     -   Standalone ヘルパー要素はこの方法では最適化できません。その理由は、定義上、ヘルパー要素もその親も他方を認識していないためです。  
   
@@ -81,25 +81,25 @@ ms.locfileid: "33558222"
   
 -   **コントロールの状態と動作をスタイルで表現するためのベスト プラクティスを使用します。** コントロールの状態の変更と動作をスタイルで表すためのベスト プラクティスの順序付きリストを次に示します。 シナリオを有効にするリストの最初の項目を使用する必要があります。  
   
-    1.  プロパティ バインディング 例: の間でバインド<xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType>と<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>です。  
+    1.  プロパティ バインディング : 例<xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType>と<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>します。  
   
-    2.  トリガーされたプロパティの変更またはプロパティのアニメーション。 例: のホバー状態、<xref:System.Windows.Controls.Button>です。  
+    2.  トリガーされたプロパティの変更またはプロパティのアニメーション。 例: のホバー状態、<xref:System.Windows.Controls.Button>します。  
   
-    3.  コマンド。 例: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand>で<xref:System.Windows.Controls.Primitives.ScrollBar>です。  
+    3.  コマンド。 例: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand>で<xref:System.Windows.Controls.Primitives.ScrollBar>します。  
   
-    4.  Standalone ヘルパー要素。 例:<xref:System.Windows.Controls.Primitives.TabPanel>で<xref:System.Windows.Controls.TabControl>です。  
+    4.  Standalone ヘルパー要素。 例:<xref:System.Windows.Controls.Primitives.TabPanel>で<xref:System.Windows.Controls.TabControl>します。  
   
-    5.  Type-based ヘルパー型。 例:<xref:System.Windows.Controls.ContentPresenter>で<xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Primitives.TickBar>で<xref:System.Windows.Controls.Slider>です。  
+    5.  Type-based ヘルパー型。 例:<xref:System.Windows.Controls.ContentPresenter>で<xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Primitives.TickBar>で<xref:System.Windows.Controls.Slider>します。  
   
-    6.  Named ヘルパー要素。 例:<xref:System.Windows.Controls.TextBox>で<xref:System.Windows.Controls.ComboBox>です。  
+    6.  Named ヘルパー要素。 例:<xref:System.Windows.Controls.TextBox>で<xref:System.Windows.Controls.ComboBox>します。  
   
-    7.  Named ヘルパー型からのバブル イベント。 スタイル要素からバブル イベントをリッスンする場合、イベントを生成する要素を一意に識別できる必要があります。 例:<xref:System.Windows.Controls.Primitives.Thumb>で<xref:System.Windows.Controls.ToolBar>です。  
+    7.  Named ヘルパー型からのバブル イベント。 スタイル要素からバブル イベントをリッスンする場合、イベントを生成する要素を一意に識別できる必要があります。 例:<xref:System.Windows.Controls.Primitives.Thumb>で<xref:System.Windows.Controls.ToolBar>します。  
   
-    8.  カスタム `OnRender` 動作。 例:<xref:Microsoft.Windows.Themes.ButtonChrome>で<xref:System.Windows.Controls.Button>です。  
+    8.  カスタム `OnRender` 動作。 例:<xref:Microsoft.Windows.Themes.ButtonChrome>で<xref:System.Windows.Controls.Button>します。  
   
 -   **(テンプレートのトリガー) ではなくスタイルのトリガーを控えめに使用します**。 テンプレートの要素のプロパティに影響するトリガーは、テンプレートで宣言する必要があります。 コントロールのプロパティに影響するトリガー (`TargetName` 以外) は、テンプレートの変更がトリガーも破棄することがわかっていない限り、スタイルで宣言できます。  
   
--   **既存のスタイル パターンとの一貫性を保ちます。** 多くの場合、問題を解決する方法は複数あります。 可能な場合、既存のコントロール スタイル設定パターンとの一貫性を維持してください。 これは、同じ基本型から派生したコントロールに特に重要です (たとえば、 <xref:System.Windows.Controls.ContentControl>、 <xref:System.Windows.Controls.ItemsControl>、<xref:System.Windows.Controls.Primitives.RangeBase>など)。  
+-   **既存のスタイル パターンとの一貫性を保ちます。** 多くの場合、問題を解決する方法は複数あります。 可能な場合、既存のコントロール スタイル設定パターンとの一貫性を維持してください。 これは、同じ基本型から派生したコントロールの特に重要です (たとえば、 <xref:System.Windows.Controls.ContentControl>、 <xref:System.Windows.Controls.ItemsControl>、<xref:System.Windows.Controls.Primitives.RangeBase>など)。  
   
 -   **プロパティを公開し、テンプレートを再設定せずに一般的なカスタマイズ シナリオを有効にします**。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] はプラグ可能/カスタマイズ可能な部分をサポートしないため、コントロールのユーザーは 2 つのカスタマイズ メソッドのみを使用できます。プロパティを直接設定するか、スタイルを使用してプロパティを設定するかです。 このことを念頭に置いて、このメソッドを使用しない場合にはテンプレートの再設定をしなければならなくなる、非常に一般的で優先度の高いカスタマイズのシナリオを対象とした、数に限りのあるプロパティに使用することが適切です。 カスタマイズのシナリオをいつ有効にし、どのように有効にするかについてのベスト プラクティスを次に示します。  
   
@@ -112,12 +112,12 @@ ms.locfileid: "33558222"
 <a name="Theme_Considerations"></a>   
 ## <a name="theme-considerations"></a>テーマの注意事項  
   
--   **テーマ スタイルは、すべてのテーマで一貫性のあるプロパティのセマンティクスを持つようにする必要がありますが、その保証はありません**。 ドキュメントの一部として、コントロールは、コントロールのプロパティのセマンティクス、つまり、コントロールのプロパティの「意味」を説明するドキュメントが必要です。 たとえば、<xref:System.Windows.Controls.ComboBox>コントロールでの意味を定義する必要があります、<xref:System.Windows.Controls.Control.Background%2A>プロパティ内で<xref:System.Windows.Controls.ComboBox>です。 コントロールの既定のスタイルは、すべてのテーマでそのドキュメントで定義されたセマンティクスに従おうとする必要があります。 一方コントロールのユーザーは、プロパティのセマンティクスがテーマごとに変わる可能性があることを認識する必要があります。 特定のケースでは、指定したプロパティが特定のテーマで必要な視覚上の制約下では表現できない場合があります。 (たとえば、クラシックのテーマには、多くのコントロールに対して `Thickness` の適用先にできる単一の境界線がありません。)  
+-   **テーマ スタイルは、すべてのテーマで一貫性のあるプロパティのセマンティクスを持つようにする必要がありますが、その保証はありません**。 ドキュメントの一部として、コントロールは、コントロールのプロパティのセマンティクス、つまり、コントロールのプロパティの「意味」を説明するドキュメントが必要です。 たとえば、<xref:System.Windows.Controls.ComboBox>コントロールの意味を定義する必要があります、<xref:System.Windows.Controls.Control.Background%2A>プロパティ内で<xref:System.Windows.Controls.ComboBox>します。 コントロールの既定のスタイルは、すべてのテーマでそのドキュメントで定義されたセマンティクスに従おうとする必要があります。 一方コントロールのユーザーは、プロパティのセマンティクスがテーマごとに変わる可能性があることを認識する必要があります。 特定のケースでは、指定したプロパティが特定のテーマで必要な視覚上の制約下では表現できない場合があります。 (たとえば、クラシックのテーマには、多くのコントロールに対して `Thickness` の適用先にできる単一の境界線がありません。)  
   
 -   **テーマ スタイルは、すべてのテーマで一貫性のあるトリガー セマンティクスを持つ必要はありません**。 トリガーまたはアニメーションを通してコントロール スタイルによって公開されている動作は、テーマごとに異なります。 コントロールのユーザーは、すべてのテーマで特定の動作を実現するために、コントロールが同じメカニズムを必ずしも使用しないことを認識している必要があります。 たとえば、1 つのテーマがアニメーションを使用してホバー動作を表現し、別のテーマがトリガーを使用する場合があります。 これにより、カスタマイズされたコントロールでの動作の保持に不整合が生じる可能性があります。 (たとえば、背景のプロパティの変更は、ホバー状態がトリガーを使用して表現されている場合、コントロールのホバー状態には影響しません。 ただし、ホバー状態がアニメーションを使用して実装されている場合、背景の変更がアニメーションを損なって修復できなくなり、状態遷移が発生する可能性があります。)  
   
 -   **テーマ スタイルは、すべてのテーマで一貫性のある「レイアウト」セマンティクスを持つ必要はありません**。 たとえば、既定のスタイルは、コントロールがすべてのテーマで同じ量のサイズを占有することを保証する必要はなく、また、コントロールがすべてのテーマで同じコンテンツの余白/パディングを持つことを保証する必要もありません。  
   
-## <a name="see-also"></a>関連項目  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>関連項目
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: ab7e2546ce7267e77e5ea7000e94059e8c162b5d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f6c4fd2e3d89645a7fff8c70f373e7ad7d70ad39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543735"
 ---
 # <a name="ui-automation-events-overview"></a>UI オートメーション イベントの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] イベント通知は、スクリーン リーダーやスクリーン拡大鏡などの支援技術にとっての重要な機能です。 これらの UI オートメーション クライアントは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] で何かが発生したときに UI オートメーション プロバイダーが発生させるイベントを追跡し、その情報を使用してエンド ユーザーに通知します。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48840288"
   
  イベント識別子の一覧については、「 [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>関連項目
+- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543082"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty メソッド
-指定した、指定した型のプロパティ定義を作成`get`と`set`メソッド アクセサーし、そのプロパティ定義トークンを取得します。  
+指定して、指定した型のプロパティの定義を作成します。`get`と`set`メソッド アクセサー、およびそのプロパティの定義にトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,16 +51,16 @@ HRESULT DefineProperty (
  [in]クラスまたはインターフェイスのプロパティを定義するトークンです。  
   
  `szProperty`  
- [in]プロパティの名前です。  
+ [in]プロパティの名前。  
   
  `dwPropFlags`  
- [in]プロパティのフラグです。  
+ [in]プロパティのフラグ。  
   
  `pvSig`  
- [in]プロパティの署名。  
+ [in]プロパティ シグネチャ。  
   
  `cbSig`  
- [in]内のバイト数`pvSig`です。  
+ [in]内のバイト数`pvSig`します。  
   
  `dwCPlusTypeFlag`  
  [in]プロパティの既定値の型。  
@@ -72,26 +72,26 @@ HRESULT DefineProperty (
  [in] \(Unicode) の数の文字について`pValue`です。  
   
  `mdSetter`  
- [in]プロパティの値を設定するメソッド。  
+ [in]このメソッドは、プロパティ値を設定します。  
   
  `mdGetter`  
  [in]このメソッドは、プロパティ値を取得します。  
   
  `rmdOtherMethods[]`  
- [in]プロパティに関連付けられている他のメソッドの配列。 配列を終了、`mdTokenNil`です。  
+ [in]プロパティに関連付けられているその他のメソッドの配列。 終了、配列、`mdTokenNil`します。  
   
  `pmdProp`  
- [out]`mdProperty`トークンが割り当てられます。  
+ [out]`mdProperty`に割り当てられたトークン。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -2,12 +2,12 @@
 title: '&lt;sslStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: b081a577280f4f2a52ef3b5ece76f519f9701faa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fe633aa1ed2b165a83f415748b70b6a66bbb0130
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540920"
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
 SSL ストリームを使用してチャネル セキュリティをサポートするカスタム バインド要素を表します。  
@@ -16,7 +16,7 @@ SSL ストリームを使用してチャネル セキュリティをサポート
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<sslStreamSecurity >  
+\<sslStreamSecurity>  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,11 +44,11 @@ SSL ストリームを使用してチャネル セキュリティをサポート
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

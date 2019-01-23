@@ -2,12 +2,12 @@
 title: Oracle データ型の Mappings1
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: 9057a19abb1abc22924b5542f06e21a57a36ed94
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e8dce0891489b8dbe127e2d327dd2e6f5e9935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544316"
 ---
 # <a name="oracle-data-type-mappings"></a>Oracle データ型のマッピング
 次の表に、Oracle データ型およびその <xref:System.Data.OracleClient.OracleDataReader> へのマップを示します。  
@@ -50,7 +50,7 @@ ms.locfileid: "43856336"
 |**FLOAT**|**Single、Double、Decimal**|**Float、Double、Number**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> 決定、 **System.Data.DBType**と<xref:System.Data.OracleClient.OracleType>します。|  
 |**INTEGER**|**SByte、Int16、Int32、Int64、Decimal**|**SByte、Int16、Int32、Number します。**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> 決定、 **System.Data.DBType**と<xref:System.Data.OracleClient.OracleType>します。|  
 |**INTERVAL YEAR TO MONTH**|**Int32**|**IntervalYearToMonth**|<xref:System.Data.OracleClient.OracleType> は、Oracle 9i クライアントとサーバー ソフトウェアの両方を使用している場合のみ使用できます。|  
-|**2 番目の間隔の日**|**オブジェクト**|**IntervalDayToSecond**|<xref:System.Data.OracleClient.OracleType> は、Oracle 9i クライアントとサーバー ソフトウェアの両方を使用している場合のみ使用できます。|  
+|**2 番目の間隔の日**|**Object**|**IntervalDayToSecond**|<xref:System.Data.OracleClient.OracleType> は、Oracle 9i クライアントとサーバー ソフトウェアの両方を使用している場合のみ使用できます。|  
 |**LONG**|**AnsiString**|**LongVarChar**||  
 |**LONG RAW**|**Binary**|**LongRaw**||  
 |**NCHAR**|**StringFixedLength**|**NChar**||  
@@ -68,6 +68,6 @@ ms.locfileid: "43856336"
   
  **InputOutput**、**出力**、および**ReturnValue** **ParameterDirection**によって使用される値、 <xref:System.Data.OracleClient.OracleParameter.Value%2A> のプロパティ<xref:System.Data.OracleClient.OracleParameter>入力値が、Oracle のデータ型でない限り、オブジェクトは、.NET Framework データ型 (たとえば、<xref:System.Data.OracleClient.OracleNumber>または<xref:System.Data.OracleClient.OracleString>)。 これには適用されません**REF CURSOR**、 **BFILE**、または**LOB**データ型。  
   
-## <a name="see-also"></a>関連項目  
- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

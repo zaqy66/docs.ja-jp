@@ -9,21 +9,21 @@ helpviewer_keywords:
 - ControlTemplate [WPF], RepeatButton
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-ms.openlocfilehash: d5edea14c1ea4184fda67e9b64887f192420b413
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 94cd49c0f55a04c4bfe1a1b86dd86fe3f5982360
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541938"
 ---
 # <a name="repeatbutton-syles-and-templates"></a>RepeatButton のスタイルとテンプレート
-このトピックは、のスタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Primitives.RepeatButton>コントロール。 既定値を変更することができます<xref:System.Windows.Controls.ControlTemplate>コントロールの外観を一意にします。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Primitives.RepeatButton>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
-## <a name="repeatbutton-parts"></a>RepeatButton 部分  
- <xref:System.Windows.Controls.Primitives.RepeatButton>コントロールには、その名前付きの部分はありません。  
+## <a name="repeatbutton-parts"></a>RepeatButton のパーツ  
+ <xref:System.Windows.Controls.Primitives.RepeatButton>コントロールには、名前付きパーツはありません。  
   
-## <a name="repeatbutton-states"></a>RepeatButton 状態  
- 次の表に、用ビジュアル状態、<xref:System.Windows.Controls.Primitives.RepeatButton>コントロール。  
+## <a name="repeatbutton-states"></a>RepeatButton の状態  
+ 次の表のビジュアルの状態、<xref:System.Windows.Controls.Primitives.RepeatButton>コントロール。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
@@ -48,10 +48,10 @@ ms.locfileid: "34457152"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

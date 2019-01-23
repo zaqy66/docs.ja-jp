@@ -1,5 +1,5 @@
 ---
-title: 操作方法：セキュリティで保護されたセッションを作成します。
+title: '方法: セキュリティで保護されたセッションを作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2e2b34c1d1589f26f3aea80384b5a96f1c64fb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544719"
 ---
-# <a name="how-to-create-a-secure-session"></a>操作方法：セキュリティで保護されたセッションを作成します。
+# <a name="how-to-create-a-secure-session"></a>方法: セキュリティで保護されたセッションを作成します。
 例外として、 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)バインドするには、システム指定のバインディングでは、Windows Communication Foundation (WCF) に自動的を使用して、メッセージ セキュリティが有効な場合、セキュリティで保護されたセッションです。  
   
  既定では、セキュリティで保護されたセッションは、再利用される Web サーバーで存続します。 セキュリティで保護されたセッションが確立されると、クライアントとサービスが、セキュリティで保護されたセッションに関連付けられているキーをキャッシュします。 メッセージを交換するときは、キャッシュされたキーの識別子のみが交換されます。 Web サーバーが再利用される場合は、Web サーバーが識別子のキャッシュされたキーを取得できないようにキャッシュも再利用されます。 これが発生した場合、例外がクライアントにスローされます。 ステートフルなセキュリティ コンテキスト トークン (SCT: Security Context Token) を使用するセキュリティで保護されたセッションは、再利用される Web サーバーで存続することができます。 詳細については、セキュリティで保護されたセッションでステートフルな SCT を使用して、次を参照してください。[方法。セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)します。  
@@ -83,5 +83,5 @@ ms.locfileid: "53147595"
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [WCF のバインディングの概要](../../../../docs/framework/wcf/bindings-overview.md)
+## <a name="see-also"></a>関連項目
+- [WCF のバインディングの概要](../../../../docs/framework/wcf/bindings-overview.md)

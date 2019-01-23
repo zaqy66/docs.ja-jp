@@ -1,25 +1,25 @@
 ---
-title: シーケンシャル ワークフローを作成する方法
+title: '方法: シーケンシャル ワークフローの作成'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: e2cfb3068a416da40b99072a0c7dfd751d3578c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33a4d6f7db140023bc33839fec7d5e28b7f5fe51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547307"
 ---
-# <a name="how-to-create-a-sequential-workflow"></a>シーケンシャル ワークフローを作成する方法
-ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 など両方の組み込みのアクティビティを使用するワークフローを作成する手順をこのトピックで、<xref:System.Activities.Statements.Sequence>アクティビティ、およびカスタム アクティビティ、前の[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
+# <a name="how-to-create-a-sequential-workflow"></a>方法: シーケンシャル ワークフローの作成
+ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Sequence>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
   
 > [!NOTE]
->  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)です。  
+>  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)です。  
   
 > [!NOTE]
->  このチュートリアルの完成版をダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
+>  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
 ### <a name="to-create-the-workflow"></a>ワークフローを作成するには  
   
@@ -155,13 +155,13 @@ ms.locfileid: "43524185"
   
 1.  Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
-     ワークフローを実行する方法について、次のトピックをご覧ください[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。 既に完了している場合、[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)さまざまなスタイルのワークフローにステップ イン、シーケンシャル ワークフローこの手順を使用してを実行してに進んで、 [のアプリケーションをビルドして、実行](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)の[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。  
+     ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)さまざまなスタイルのワークフローにステップ イン、シーケンシャル ワークフローこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [ワークフローの設計](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [アクティビティを作成する方法](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [ワークフローを実行する方法](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [ワークフローの設計](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [方法: アクティビティを作成します。](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [方法: ワークフローを実行します。](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
