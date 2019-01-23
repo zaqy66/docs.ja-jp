@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20f65218928ee07d67ea742154469ac3cbea9241
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 163704bf9a71ceda04bdfd73f9ca676c19d8a62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526641"
 ---
-# <a name="icordebugvariablehomegetargumentindex-method"></a><span data-ttu-id="e7139-102">ICorDebugVariableHome::GetArgumentIndex メソッド</span><span class="sxs-lookup"><span data-stu-id="e7139-102">ICorDebugVariableHome::GetArgumentIndex Method</span></span>
-<span data-ttu-id="e7139-103">関数の引数のインデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="e7139-103">Gets the index of a function argument.</span></span>  
+# <a name="icordebugvariablehomegetargumentindex-method"></a><span data-ttu-id="89b04-102">ICorDebugVariableHome::GetArgumentIndex メソッド</span><span class="sxs-lookup"><span data-stu-id="89b04-102">ICorDebugVariableHome::GetArgumentIndex Method</span></span>
+<span data-ttu-id="89b04-103">関数の引数のインデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="89b04-103">Gets the index of a function argument.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7139-104">構文</span><span class="sxs-lookup"><span data-stu-id="e7139-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89b04-104">構文</span><span class="sxs-lookup"><span data-stu-id="89b04-104">Syntax</span></span>  
   
 ```  
 HRESULT GetArgumentIndex(  
@@ -35,29 +35,29 @@ HRESULT GetArgumentIndex(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e7139-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e7139-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="89b04-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="89b04-105">Parameters</span></span>  
  `pArgumentIndex`  
- <span data-ttu-id="e7139-106">[out]引数のインデックスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="e7139-106">[out] A pointer to the argument index.</span></span>  
+ <span data-ttu-id="89b04-106">[out]引数のインデックスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="89b04-106">[out] A pointer to the argument index.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e7139-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="e7139-107">Return Value</span></span>  
- <span data-ttu-id="e7139-108">このメソッドは、次の値を返します。</span><span class="sxs-lookup"><span data-stu-id="e7139-108">The method returns the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="89b04-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="89b04-107">Return Value</span></span>  
+ <span data-ttu-id="89b04-108">メソッドは、次の値を返します。</span><span class="sxs-lookup"><span data-stu-id="89b04-108">The method returns the following values.</span></span>  
   
-|<span data-ttu-id="e7139-109">[値]</span><span class="sxs-lookup"><span data-stu-id="e7139-109">Value</span></span>|<span data-ttu-id="e7139-110">説明</span><span class="sxs-lookup"><span data-stu-id="e7139-110">Description</span></span>|  
+|<span data-ttu-id="89b04-109">[値]</span><span class="sxs-lookup"><span data-stu-id="89b04-109">Value</span></span>|<span data-ttu-id="89b04-110">説明</span><span class="sxs-lookup"><span data-stu-id="89b04-110">Description</span></span>|  
 |-----------|-----------------|  
-|`S_OK`|<span data-ttu-id="e7139-111">メソッドの呼び出しには、有効な引数インデックスが返されます。</span><span class="sxs-lookup"><span data-stu-id="e7139-111">The method call returned a valid argument index.</span></span>|  
-|`E_FAIL`|<span data-ttu-id="e7139-112">現在[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)インスタンスがローカル変数を表します。</span><span class="sxs-lookup"><span data-stu-id="e7139-112">The current [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance represents a local variable.</span></span>|  
+|`S_OK`|<span data-ttu-id="89b04-111">メソッドの呼び出しには、有効な引数のインデックスが返されます。</span><span class="sxs-lookup"><span data-stu-id="89b04-111">The method call returned a valid argument index.</span></span>|  
+|`E_FAIL`|<span data-ttu-id="89b04-112">現在[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)インスタンスがローカル変数を表します。</span><span class="sxs-lookup"><span data-stu-id="89b04-112">The current [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance represents a local variable.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e7139-113">コメント</span><span class="sxs-lookup"><span data-stu-id="e7139-113">Remarks</span></span>  
- <span data-ttu-id="e7139-114">引数のインデックスは、この引数のメタデータの取得に使用できます。</span><span class="sxs-lookup"><span data-stu-id="e7139-114">The argument index can be used to retrieve metadata for this argument.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89b04-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="89b04-113">Remarks</span></span>  
+ <span data-ttu-id="89b04-114">この引数のメタデータを取得する引数のインデックスを使用できます。</span><span class="sxs-lookup"><span data-stu-id="89b04-114">The argument index can be used to retrieve metadata for this argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7139-115">要件</span><span class="sxs-lookup"><span data-stu-id="e7139-115">Requirements</span></span>  
- <span data-ttu-id="e7139-116">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="e7139-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89b04-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="89b04-115">Requirements</span></span>  
+ <span data-ttu-id="89b04-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="89b04-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7139-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7139-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="89b04-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89b04-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e7139-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7139-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89b04-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89b04-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e7139-119">**.NET framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7139-119">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="89b04-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89b04-119">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7139-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7139-120">See Also</span></span>  
- [<span data-ttu-id="e7139-121">ICorDebugVariableHome インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e7139-121">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="89b04-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="89b04-120">See also</span></span>
+- [<span data-ttu-id="89b04-121">ICorDebugVariableHome インターフェイス</span><span class="sxs-lookup"><span data-stu-id="89b04-121">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

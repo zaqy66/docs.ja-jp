@@ -1,18 +1,18 @@
 ---
-title: 'サンプル XML ファイル : 書籍 (LINQ to XML)'
+title: サンプル XML ファイル:書籍 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-ms.openlocfilehash: 5d68b7830994bdd51f59725d20ffcab9b3769b2b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f99541f9c0aaafe25fe1fd09510b93c8e815eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525756"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="e5213-102">サンプル XML ファイル : 書籍 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e5213-102">Sample XML File: Books (LINQ to XML)</span></span>
-<span data-ttu-id="e5213-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="e5213-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e5213-104">このファイルには、書籍に関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e5213-104">The file contains information about books.</span></span>  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="acc02-102">サンプル XML ファイル:書籍 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="acc02-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="acc02-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="acc02-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="acc02-104">このファイルには、書籍に関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="acc02-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a><span data-ttu-id="e5213-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="e5213-105">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="acc02-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="acc02-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -39,5 +39,5 @@ ms.locfileid: "43394348"
 </Catalog>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e5213-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="e5213-106">See Also</span></span>  
- [<span data-ttu-id="e5213-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e5213-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="acc02-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="acc02-106">See also</span></span>
+- [<span data-ttu-id="acc02-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="acc02-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
