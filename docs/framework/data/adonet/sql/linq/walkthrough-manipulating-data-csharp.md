@@ -1,15 +1,15 @@
 ---
-title: 'チュートリアル : データの操作 (C#)'
+title: 'チュートリアル: データの操作 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637308"
 ---
-# <a name="walkthrough-manipulating-data-c"></a>チュートリアル : データの操作 (C#)
+# <a name="walkthrough-manipulating-data-c"></a>チュートリアル: データの操作 (C#)
 このチュートリアルでは、データベースに対してデータの追加、変更、および削除を行う、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 顧客の追加、顧客名の変更、および注文の削除を行うため、サンプルの Northwind データベースのコピーを使用します。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -23,7 +23,7 @@ ms.locfileid: "33357661"
   
 -   Northwind サンプル データベース。  
   
-     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)です。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest6 フォルダーにコピーします。  
+     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest6 フォルダーにコピーします。  
   
 -   Northwind データベースから生成された C# コード ファイル。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33357661"
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 6 つのタスクで構成されています。  
   
--   作成する、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューションです。  
+-   作成、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
   
 -   プロジェクトにデータベース コード ファイルを追加します。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "33357661"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
-1.  Visual Studio で**ファイル** メニューのをポイント**新規**、クリックして**プロジェクト**です。  
+1.  Visual Studio で**ファイル**メニューで、**新規**、 をクリックし、**プロジェクト**します。  
   
-2.  **プロジェクトの種類**ペインで、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual c#** です。  
+2.  **プロジェクトの種類**ペインで、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual C#** します。  
   
 3.  **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
   
-4.  **名前**ボックスに、入力**linqdatamanipulationapp」と入力**です。  
+4.  **名前**ボックスに「 **LinqDataManipulationApp**します。  
   
 5.  **場所**ボックスで、プロジェクト ファイルを格納することを確認します。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "33357661"
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**参照**、クリックして**参照の追加**です。  
+1.  **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
   
-2.  **参照の追加**ダイアログ ボックスで、をクリックして **.NET**を System.Data.Linq アセンブリをクリックし、をクリックして**OK**です。  
+2.  **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
   
      アセンブリがプロジェクトに追加されます。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "33357661"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
   
-1.  **プロジェクト** メニューのをクリックして**既存項目の追加**です。  
+1.  **プロジェクト** メニューのをクリックして**既存項目の追加**します。  
   
-2.  **既存項目の追加**ダイアログ ボックスで c:\linqtest6\northwind.cs に移動し、をクリックして**追加**です。  
+2.  **既存項目の追加**ダイアログ ボックスは c:\linqtest6\northwind.cs に移動し、をクリックし、**追加**します。  
   
      northwind.cs ファイルがプロジェクトに追加されます。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "33357661"
   
 2.  F5 キーを押してソリューションをデバッグします。  
   
-3.  Enter キーを押して、**コンソール**ウィンドウがデバッグを停止し、このチュートリアルを続行します。  
+3.  Enter キーを押して、**コンソール**ウィンドウでデバッグを停止およびチュートリアルを続行します。  
   
 ## <a name="updating-an-entity"></a>エンティティの更新  
  以降の手順では、`Customer` オブジェクトを取得し、そのプロパティの 1 つを変更します。  
@@ -156,10 +156,10 @@ ms.locfileid: "33357661"
   
 3.  F5 キーを押してソリューションをデバッグします。  
   
-4.  Enter キーを押して、**コンソール**アプリケーションを終了するウィンドウです。  
+4.  Enter キーを押して、**コンソール**ウィンドウ アプリケーションを終了します。  
   
 > [!NOTE]
 >  変更内容を送信して新しい顧客を追加した後で、このソリューションを再度実行することはできません。 ソリューションを再度実行するには、追加する顧客の名前と顧客 ID を変更します。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>関連項目
+- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

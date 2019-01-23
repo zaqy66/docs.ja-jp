@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 743fb1c77e2dd74487a7498be25ea23b4919032a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa631721965123c4427a5d1ff2e0cec2a1ab2395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637686"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob メソッド
-指定された列インデックスにあるバイナリ ラージ オブジェクト (BLOB) へのポインターを取得します。  
+指定した列のインデックス位置にあるバイナリ ラージ オブジェクト (BLOB) へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ HRESULT GetBlob (
   
 #### <a name="parameters"></a>パラメーター  
  `ixBlob`  
- [in]取得元のメモリ アドレス`ppData`です。  
+ [in]取得元のメモリ アドレス`ppData`します。  
   
  `pcbData`  
  [out]サイズ (バイト単位) へのポインターの`ppData`します。  
@@ -47,15 +47,15 @@ HRESULT GetBlob (
  `ppData`  
  [out]バイナリ データへのポインターへのポインターを取得します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

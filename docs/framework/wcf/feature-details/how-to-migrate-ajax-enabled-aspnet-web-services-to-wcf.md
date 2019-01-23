@@ -1,15 +1,15 @@
 ---
-title: '方法 : AJAX 対応 ASP.NET Web サービスを WCF に移行する'
+title: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行します。'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638289"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法 : AJAX 対応 ASP.NET Web サービスを WCF に移行する
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法: AJAX 対応 ASP.NET Web サービスを WCF に移行します。
 このトピックでは、基本的な ASP.NET AJAX サービスを同等の AJAX 対応の Windows Communication Foundation (WCF) サービスに移行する手順について説明します。 同等の WCF が ASP.NET AJAX サービスのバージョンを作成する方法を示します。 並行して 2 つのサービスは使用して、または WCF サービスが ASP.NET AJAX サービスを置き換えることができます。
 
  既存の ASP.NET AJAX を移行するサービスに WCF AJAX サービスでは、次の利点。
@@ -22,7 +22,7 @@ ms.locfileid: "48840915"
 
  手順に続く例で、ここで説明する手順によって作成されるコードを示します。
 
- AJAX 対応のエンドポイントを介して WCF サービスの公開方法の詳細については、次を参照してください。、[方法: ASP.NET AJAX エンドポイントを追加する構成を使用](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)トピック。
+ AJAX 対応のエンドポイントを介して WCF サービスの公開方法の詳細については、次を参照してください。、[方法。ASP.NET AJAX エンドポイントを追加する構成を使用して](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)トピック。
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>ASP.NET Web サービス アプリケーションを作成してテストする
 
@@ -36,7 +36,7 @@ ms.locfileid: "48840915"
 
 5.  **ビルド**メニューの **ソリューションのビルド**します。
 
-6.  **デバッグ**メニューの **デバッグなしで開始**します。
+6.  **[デバッグ]** メニューの **[デバッグなしで開始]** をクリックします。
 
 7.  生成された Web ページで、`HelloWorld` 操作を選択します。
 
@@ -195,7 +195,7 @@ d.Add("two", 2);
 
 -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では [{"Key":"one","Value":1},{"Key":"two","Value":2}] と表され、
 
--   {"one": 1,"two": 2}、ASP.NET AJAX によって <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+-   {"one":1,"two":2} by the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、キーの種類が文字列ではないディクショナリを処理でき、<xref:System.Web.Script.Serialization.JavaScriptSerializer> はできません。この点で前者はより強力と言えます。 しかし、後者の方が JSON で使いやすいと言えます。
 
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |エスケープ文字|必ず、エスケープ文字であるスラッシュ (/) を付けます。"\n" などのエスケープされない無効な JSON 文字は使用できません。|DateTime 値には、エスケープ文字スラッシュ (/) を付けます。|
 
 ## <a name="see-also"></a>関連項目
- [方法 : 構成を使用して ASP.NET AJAX エンドポイントを追加する](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [方法: 構成を使用して ASP.NET AJAX エンドポイントを追加するには](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

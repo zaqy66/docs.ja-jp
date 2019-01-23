@@ -1,5 +1,5 @@
 ---
-title: '方法 : X.509 証明書で XML 要素を暗号化する'
+title: '方法: X.509 証明書で XML 要素を暗号化します。'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3d61fcbab4c905ba675e08346ea7cb28b0e710c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 19edbebb4dcc4ad48c28ee427084510f8d743c5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637832"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>方法 : X.509 証明書で XML 要素を暗号化する
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>方法: X.509 証明書で XML 要素を暗号化します。
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  標準の XML 暗号化の詳細については、仕様を参照して、World Wide Web Consortium (W3C) XML の暗号化にあるに対して <https://www.w3.org/TR/xmldsig-core/> です。  
   
  XML の暗号化を使用すると、任意の XML 要素またはドキュメントを、暗号化された XML データを含む <`EncryptedData`> 要素があるドキュメントに置き換えることができます。 <`EncryptedData`> 要素には、暗号化時に使用されたキーとプロセスに関する情報が含まれているサブ要素を含めることができます。  XML の暗号化を使用すると、ドキュメントに複数の暗号化された要素を含められるだけでなく、要素を複数回暗号化することができます。  この手順のコード例は、<`EncryptedData`> 要素の作成方法と共に、後の復号化時に使用するいくつかのその他のサブ要素の作成方法を示しています。  
   
  この例では、2 つのキーを使用して XML 要素を暗号化します。  [証明書作成ツール (Makecert.exe)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) を使用してテストの X.509 証明書を生成し、この証明書を証明書ストアに保存します。  この例では、プログラムを使用して証明書を取得し、これを使用して <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> メソッドで XML 要素を暗号化します。  内部的には、<xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> メソッドは別のセッション キーを作成し、これを使用して XML ドキュメントを暗号化します。 このメソッドでは、セッション キーを暗号化し、新しい <`EncryptedData`> 要素内に暗号化された XML と共に保存します。  
   
- XML 要素を復号化するには、<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> メソッドを呼び出します。これにより、ストアから X.509 証明書が自動的に取得され、必要な復号化が実行されます。  この手順を使用して暗号化された XML 要素を復号化する方法の詳細については、「[方法: X.509 証明書で XML 要素を復号化する](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)」を参照してください。  
+ XML 要素を復号化するには、<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> メソッドを呼び出します。これにより、ストアから X.509 証明書が自動的に取得され、必要な復号化が実行されます。  この手順を使用して暗号化された XML 要素を復号化する方法の詳細については、次を参照してください。[方法。X.509 証明書で XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)します。  
   
  この例は、複数のアプリケーションが暗号化されたデータを共有する必要がある状況や、1 つのアプリケーションが、実行する時間の間に暗号化されたデータを保存する必要がある状況に適しています。  
   
@@ -118,5 +118,5 @@ ms.locfileid: "48845513"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Security.Cryptography.Xml>  
-- [方法: X.509 証明書で XML 要素を復号化する](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- <xref:System.Security.Cryptography.Xml>
+- [方法: X.509 証明書で XML 要素を復号化します。](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

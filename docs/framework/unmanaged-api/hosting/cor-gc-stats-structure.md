@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638107"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 構造体
 共通言語ランタイム (CLR) のガベージ コレクションのメカニズムについての統計情報を提供します。  
@@ -48,22 +48,22 @@ typedef struct _COR_GC_STATS {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`Flags`|フィールドの値を計算して、返される必要がありますを示します。|  
-|`ExplicitGCCount`|外部の要求によって強制的に実行されたガベージ コレクションの数を示します。|  
-|`GenCollectionsTaken`|実行の各ジェネレーションのガベージ コレクションの数を示します。|  
+|`Flags`|フィールドの値を計算し、返される必要がありますを示します。|  
+|`ExplicitGCCount`|外部要求によって強制的に実行されたガベージ コレクションの数を示します。|  
+|`GenCollectionsTaken`|生成されるたびに実行されたガベージ コレクションの数を示します。|  
 |`CommittedKBytes`|すべてのヒープでコミットされたキロバイト単位の合計数。|  
-|`ReservedKBytes`|すべてのヒープ内で予約されたキロバイト単位の合計数。|  
+|`ReservedKBytes`|すべてのヒープで予約されているキロバイト数の合計。|  
 |`Gen0HeapSizeKBytes`|ジェネレーション 0 ヒープのサイズ。|  
-|`Gen1HeapSizeKBytes`|ジェネレーション 1 ヒープのサイズ。|  
+|`Gen1HeapSizeKBytes`|ジェネレーション 1 のヒープのサイズ。|  
 |`Gen2HeapSizeKBytes`|ジェネレーション 2 のヒープのサイズ。|  
 |`LargeObjectHeapSizeKBytes`|大きなオブジェクト ヒープのサイズ。|  
-|`KBytesPromotedFromGen0`|ジェネレーション 0 からジェネレーション 1 に昇格オブジェクトのサイズ。|  
-|`KBytesPromotedFromGen1`|ジェネレーション 1 からジェネレーション 2 に昇格オブジェクトのサイズ。|  
+|`KBytesPromotedFromGen0`|ジェネレーション 0 からジェネレーション 1 に昇格したオブジェクトのサイズ。|  
+|`KBytesPromotedFromGen1`|ジェネレーション 1 からジェネレーション 2 に昇格したオブジェクトのサイズ。|  
   
-## <a name="remarks"></a>コメント  
- [Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)メソッドが必要な`Flags`のフィールド、`COR_GC_STATS`の 1 つまたは複数の値に設定する構造体、 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)を指定する列挙体統計情報では、設定します。  
+## <a name="remarks"></a>Remarks  
+ [Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)メソッドが必要です、`Flags`のフィールド、`COR_GC_STATS`構造体の 1 つまたは複数の値に設定する、 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)を指定する列挙型統計情報では、設定します。  
   
- 次の表は、2 つに、この構造体で提供される統計[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列挙値、`COR_GC_COUNTS`と`COR_GC_MEMORYUSAGE`です。  
+ 次の表は、2 つに、この構造体によって提供される統計[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列挙値、`COR_GC_COUNTS`と`COR_GC_MEMORYUSAGE`します。  
   
 |COR_GC_COUNTS で指定されました。|COR_GC_MEMORYUSAGE で指定されました。|  
 |----------------------------------|---------------------------------------|  
@@ -77,16 +77,16 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** GCHost.idl  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [自動メモリ管理](../../../../docs/standard/automatic-memory-management.md)  
- [ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>関連項目
+- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [自動メモリ管理](../../../../docs/standard/automatic-memory-management.md)
+- [ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)
