@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587136"
 ---
-# <a name="getscope2-method"></a><span data-ttu-id="57ea7-102">GetScope2 メソッド</span><span class="sxs-lookup"><span data-stu-id="57ea7-102">GetScope2 Method</span></span>
-<span data-ttu-id="57ea7-103">インポート スコープを取得します。</span><span class="sxs-lookup"><span data-stu-id="57ea7-103">Gets an import scope.</span></span>  
+# <a name="getscope2-method"></a><span data-ttu-id="1d676-102">GetScope2 メソッド</span><span class="sxs-lookup"><span data-stu-id="1d676-102">GetScope2 Method</span></span>
+<span data-ttu-id="1d676-103">インポート スコープを取得します。</span><span class="sxs-lookup"><span data-stu-id="1d676-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57ea7-104">構文</span><span class="sxs-lookup"><span data-stu-id="57ea7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d676-104">構文</span><span class="sxs-lookup"><span data-stu-id="1d676-104">Syntax</span></span>  
   
 ```  
 HRESULT GetScope2(  
@@ -37,26 +37,26 @@ HRESULT GetScope2(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="57ea7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="57ea7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1d676-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1d676-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="57ea7-106">ターゲット アセンブリの ID です。</span><span class="sxs-lookup"><span data-stu-id="57ea7-106">ID of target assembly.</span></span>  
+ <span data-ttu-id="1d676-106">ターゲット アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="1d676-106">ID of target assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="57ea7-107">インポート元のファイルの ID。</span><span class="sxs-lookup"><span data-stu-id="57ea7-107">ID of file from which to import.</span></span>  
+ <span data-ttu-id="1d676-107">インポート元のファイルの ID。</span><span class="sxs-lookup"><span data-stu-id="1d676-107">ID of file from which to import.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="57ea7-108">インポートする 0 から始まるスコープです。</span><span class="sxs-lookup"><span data-stu-id="57ea7-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="1d676-108">インポートする 0 から始まるスコープです。</span><span class="sxs-lookup"><span data-stu-id="1d676-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="57ea7-109">ポインターを受け取る[IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)の指定されたスコープのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="57ea7-109">Receives pointer to [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
+ <span data-ttu-id="1d676-109">ポインターを受け取る[IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)指定のスコープのインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="1d676-109">Receives pointer to [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="57ea7-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="57ea7-110">Return Value</span></span>  
- <span data-ttu-id="57ea7-111">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="57ea7-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1d676-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="1d676-110">Return Value</span></span>  
+ <span data-ttu-id="1d676-111">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="1d676-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57ea7-112">要件</span><span class="sxs-lookup"><span data-stu-id="57ea7-112">Requirements</span></span>  
- <span data-ttu-id="57ea7-113">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="57ea7-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d676-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="1d676-112">Requirements</span></span>  
+ <span data-ttu-id="1d676-113">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="1d676-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57ea7-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="57ea7-114">See Also</span></span>  
- [<span data-ttu-id="57ea7-115">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="57ea7-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="57ea7-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="57ea7-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="57ea7-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="57ea7-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="1d676-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1d676-114">See also</span></span>
+- [<span data-ttu-id="1d676-115">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d676-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="1d676-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d676-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="1d676-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="1d676-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
