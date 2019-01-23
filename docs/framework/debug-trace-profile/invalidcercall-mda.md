@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15f41ebd961f25979fe569fd89dd2135a0a6cd41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3cccb94268264217a1e6a1b5def71c6c433b820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614784"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
-`invalidCERCall` マネージ デバッグ アシスタント (MDA) は、制約された実行領域 (CER) グラフ内で信頼契約がないかまたは過度に脆弱な契約を持つメソッドの呼び出しがある場合に、アクティブ化されます。 脆弱な契約とは、最悪のケースの状態の破損が、呼び出しに渡されるインスタンスよりも大きい範囲であることを宣言する契約です。つまり、<xref:System.AppDomain> またはプロセスの状態が破損するか、または CER 内で呼び出されたときにその結果を常に確定的に計算できるとは限りません。  
+`invalidCERCall` マネージド デバッグ アシスタント (MDA) は、制約された実行領域 (CER) グラフ内で信頼契約がないかまたは過度に脆弱な契約を持つメソッドの呼び出しがある場合に、アクティブ化されます。 脆弱な契約とは、最悪のケースの状態の破損が、呼び出しに渡されるインスタンスよりも大きい範囲であることを宣言する契約です。つまり、<xref:System.AppDomain> またはプロセスの状態が破損するか、または CER 内で呼び出されたときにその結果を常に確定的に計算できるとは限りません。  
   
 ## <a name="symptoms"></a>現象  
  CER でコードを実行するときの予期しない結果。 この現象は固有ではありません。 ランタイムがメソッドを事前に準備しないか、実行時に <xref:System.Threading.ThreadAbortException> 例外から保護しないため、信頼できないメソッドの呼び出し時に予期しない <xref:System.OutOfMemoryException>、<xref:System.Threading.ThreadAbortException>、または他の例外が発生する可能性があります。 より大きな脅威は、実行時にメソッドから結果として発生する例外が <xref:System.AppDomain> またはプロセスを CER の目的とは反対の不安定な状態にする可能性があることです。 CER が作成される理由は、このような状態の破損を避けるためです。 一貫性のある状態の定義がアプリケーション間で異なるために、破損状態の現象はアプリケーションに固有です。  
@@ -54,7 +54,7 @@ ms.locfileid: "33393618"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
- <xref:System.Runtime.ConstrainedExecution>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
+- <xref:System.Runtime.ConstrainedExecution>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

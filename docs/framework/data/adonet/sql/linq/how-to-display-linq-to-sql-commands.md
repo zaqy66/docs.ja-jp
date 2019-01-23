@@ -1,18 +1,18 @@
 ---
-title: '方法 : LINQ to SQL コマンドを表示する'
+title: '方法: LINQ to SQL コマンドの表示'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: 2be4096f03fe73f417b4b1871ebfc3b4f0f67206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a70f1e0dd471e86afe2e744c157d4aed2a217deb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630828"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a>方法 : LINQ to SQL コマンドを表示する
+# <a name="how-to-display-linq-to-sql-commands"></a>方法: LINQ to SQL コマンドの表示
 SQL コマンドとその他の情報を表示するには、<xref:System.Data.Linq.DataContext.GetCommand%2A> を使用します。  
   
 ## <a name="example"></a>例  
@@ -48,5 +48,5 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>関連項目
+- [デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

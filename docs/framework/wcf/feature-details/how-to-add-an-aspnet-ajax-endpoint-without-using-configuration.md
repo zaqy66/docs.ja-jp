@@ -1,22 +1,22 @@
 ---
-title: '方法 : 構成を使用せずに ASP.NET AJAX エンドポイントを追加する'
+title: '方法: 構成を使用せずに ASP.NET AJAX エンドポイントを追加します。'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: 18c02644319dd9d11be39ac4956a4dcf50db3078
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df4ba9657fda458a1c6c2b1199fb688135a8fa2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637223"
 ---
-# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>方法 : 構成を使用せずに ASP.NET AJAX エンドポイントを追加する
+# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>方法: 構成を使用せずに ASP.NET AJAX エンドポイントを追加します。
 Windows Communication Foundation (WCF) クライアントの Web サイトの JavaScript から呼び出すことができる ASP.NET AJAX 対応エンドポイントを公開するサービスを作成することができます。 このようなエンドポイントを作成するには、他のすべての WCF エンドポイントと同様に、構成ファイルを使用するか、または構成要素を必要としないメソッドを使用することができます。 ここでは、2 番目の方法について説明します。  
   
  構成を使用せずに ASP.NET AJAX エンドポイントを持つサービスを作成するには、サービスがインターネット インフォメーション サービス (IIS) でホストされている必要があります。 このアプローチを使用して ASP.NET AJAX エンドポイントを有効にするには、指定、<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>工場出荷時のパラメーターとして、 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) .svc ファイル ディレクティブ。 このカスタム ファクトリは自動的に ASP.NET AJAX エンドポイントを構成するコンポーネントであるため、クライアント Web サイトの JavaScript から呼び出すことができます。  
   
  実際の例を参照してください、[サービスを構成せず AJAX](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)します。  
   
- 構成要素を使用して ASP.NET AJAX エンドポイントを構成する方法の概要を参照してください。[方法: ASP.NET AJAX エンドポイントを追加する構成を使用](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)します。  
+ 構成要素を使用して ASP.NET AJAX エンドポイントを構成する方法の概要を参照してください。[方法。ASP.NET AJAX エンドポイントを追加する構成を使用して](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)します。  
   
 ### <a name="to-create-a-basic-wcf-service"></a>基本的な WCF サービスを作成するには  
   
@@ -70,7 +70,7 @@ Windows Communication Foundation (WCF) クライアントの Web サイトの Ja
     %>  
     ```  
   
-2.  サービスをビルドしてクライアントから呼び出します。 呼び出されたサービスがインターネット インフォメーション サービス (IIS) によってアクティブ化されます。 IIS でホストする方法の詳細については、次を参照してください。[方法: IIS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)します。  
+2.  サービスをビルドしてクライアントから呼び出します。 呼び出されたサービスがインターネット インフォメーション サービス (IIS) によってアクティブ化されます。 IIS でホストする方法の詳細については、次を参照してください。[方法。IIS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)します。  
   
 ### <a name="to-call-the-service"></a>サービスを呼び出すには  
   
@@ -96,6 +96,6 @@ Windows Communication Foundation (WCF) クライアントの Web サイトの Ja
   
  <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> クラスは、<xref:System.ServiceModel.Activation.ServiceHostFactory> の派生クラスです。 サービス ホスト ファクトリ機構の詳細については、次を参照してください。、[ホストを使用して ServiceHostFactory の拡張](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)トピック。  
   
-## <a name="see-also"></a>関連項目  
- [ASP.NET AJAX 用の WCF サービスの作成](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- [方法 : AJAX 対応 ASP.NET Web サービスを WCF に移行する](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a>関連項目
+- [ASP.NET AJAX 用の WCF サービスの作成](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
+- [方法: AJAX 対応 ASP.NET Web サービスを WCF に移行します。](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

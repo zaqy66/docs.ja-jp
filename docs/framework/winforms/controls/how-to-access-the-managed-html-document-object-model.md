@@ -1,5 +1,5 @@
 ---
-title: '方法 : マネージ HTML DOM (Document Object Model) にアクセスする'
+title: '方法: マネージ HTML ドキュメント オブジェクト モデルにアクセスします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 175a29322fe2af13992e267b3fc3308b70212272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637152"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>方法 : マネージ HTML DOM (Document Object Model) にアクセスする
-マネージ HTML ドキュメント オブジェクト モデル (DOM) には、次の 2 種類のアプリケーションからアクセスできます。  
+# <a name="how-to-access-the-managed-html-document-object-model"></a>方法: マネージ HTML ドキュメント オブジェクト モデルにアクセスします。
+マネージド HTML ドキュメント オブジェクト モデル (DOM) には、次の 2 種類のアプリケーションからアクセスできます。  
   
 -   マネージ <xref:System.Windows.Forms.WebBrowser> コントロールをホストする Windows フォーム アプリケーション (.exe)。 この 2 つのテクノロジは相互に補完します。つまり、<xref:System.Windows.Forms.WebBrowser> コントロールはユーザーに対してページを表示し、HTML DOM はドキュメントの論理構造体を表します。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33527662"
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Internet Explorer でホストされた UserControl から DOM にアクセスするには  
   
-1.  <xref:System.Windows.Forms.UserControl> クラスのカスタム派生クラスを作成します。 詳細については、「[方法: 複合コントロールを作成する](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)」を参照してください。  
+1.  <xref:System.Windows.Forms.UserControl> クラスのカスタム派生クラスを作成します。 詳細については、「[方法 :複合コントロールを作成](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)です。  
   
 2.  <xref:System.Windows.Forms.UserControl> の Load イベント ハンドラー内に次のコードを配置します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33527662"
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
   
-1.  アプリケーションまたは <xref:System.Windows.Forms.UserControl> がマネージ HTML DOM にアクセスするには、完全信頼が必要です。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を使用して Windows フォーラム アプリケーションを配置するときは、"アクセス許可の昇格" または "信頼されたアプリケーションの配置" を使用して完全信頼を要求できます。詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。  
+1.  アプリケーションまたは <xref:System.Windows.Forms.UserControl> がマネージド HTML DOM にアクセスするには、完全信頼が必要です。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を使用して Windows フォーラム アプリケーションを配置するときは、"アクセス許可の昇格" または "信頼されたアプリケーションの配置" を使用して完全信頼を要求できます。詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [マネージ HTML DOM (Document Object Model) の使用](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>関連項目
+- [マネージド HTML DOM (Document Object Model) の使用](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: adaf9224fd340c6ea4342e2591806a7c877e83ff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b942c160d7c4f89b1aad97c2dfdef1d060c18e55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639225"
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>基本フォームの外観を変更した場合の影響
 アプリケーションの開発中に、同じプロジェクト (または他のプロジェクト) 内の他のフォームの継承元となる、基本フォームの外観の変更が必要になることがよくあります。  
@@ -25,7 +25,7 @@ ms.locfileid: "44084410"
   
  実行時に基本フォームに変更を加えても、既にインスタンス化されている継承されたフォームには反映されません。  
   
-## <a name="see-also"></a>関連項目  
- [base](~/docs/csharp/language-reference/keywords/base.md)  
- [方法: Windows フォームを継承する](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Windows フォームのビジュアルの継承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>関連項目
+- [base](~/docs/csharp/language-reference/keywords/base.md)
+- [方法: Windows フォームを継承します。](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Windows フォームのビジュアルの継承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

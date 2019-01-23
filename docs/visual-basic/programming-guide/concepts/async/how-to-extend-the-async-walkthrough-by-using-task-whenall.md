@@ -1,29 +1,29 @@
 ---
-title: '方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張'
+title: '方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 3c502356c27914aeec6b501ada1301ca5ab7b167
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 80fbe824d62b439fe6f015704bc32194e104cd85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619306"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張
-非同期ソリューションのパフォーマンスを向上できます[チュートリアル: を使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)を使用して、<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>メソッド。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。
+非同期ソリューションのパフォーマンスを向上できます[チュートリアル。使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)を使用して、<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>メソッド。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
   
  このチュートリアルでは、Web サイトが異なる速度でダウンロードされることに気付きます。 Web サイトの 1 つが非常に低速な場合があります。これは残りのすべてのダウンロードを遅延させます。 このチュートリアルで構築した非同期ソリューションを実行すると、プログラムを待たない場合には簡単に終了することができますが、よりよい方法は、すべてのダウンロードを同時に開始して、遅延したダウンロードを待たずに早いダウンロードが継続できるようにすることです。  
   
  タスクのコレクションに `Task.WhenAll` メソッドを適用します。 `WhenAll` を適用すると、コレクション内のすべてのタスクが完了するまで完了しない 1 つのタスクを返します。 タスクは並列で実行されるように見えますが、追加のスレッドは作成されません。 タスクは任意の順序で完了します。  
   
 > [!IMPORTANT]
->  次の手順で作成された非同期アプリケーションの拡張機能を説明する[チュートリアル: を使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。 チュートリアルを完了するか、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からコードをダウンロードして、アプリケーションを開発できます。  
+>  次の手順で作成された非同期アプリケーションの拡張機能を説明する[チュートリアル。非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。 チュートリアルを完了するか、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からコードをダウンロードして、アプリケーションを開発できます。  
 >   
 >  例を実行するには、Visual Studio 2012 以降がコンピューターにインストールされている必要があります。  
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>GetURLContentsAsync ソリューションに Task.WhenAll を追加するには  
   
-1.  追加、`ProcessURLAsync`メソッドで開発された最初のアプリケーションに[チュートリアル: を使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
+1.  追加、`ProcessURLAsync`メソッドで開発された最初のアプリケーションに[チュートリアル。非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
   
     -   コードをダウンロードしている場合[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、AsyncWalkthrough プロジェクトを開き、追加し、 `ProcessURLAsync` MainWindow.xaml.vb ファイルです。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "50188223"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>HttpClient.GetByteArrayAsync ソリューションに Task.WhenAll を追加するには  
   
-1.  次のバージョンの追加`ProcessURLAsync`で開発した 2 つ目のアプリケーションに[チュートリアル: を使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
+1.  次のバージョンの追加`ProcessURLAsync`で開発した 2 つ目のアプリケーションに[チュートリアル。非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
   
     -   コードをダウンロードしている場合[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough_HttpClient プロジェクトを開くし、追加し、 `ProcessURLAsync` MainWindow.xaml.vb ファイルです。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "50188223"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll ソリューションをテストするには  
   
--   各ソリューションで、F5 キーを押してプログラムを実行し、**[Start]** を複数回クリックします。 非同期のソリューションからの出力のようになります、出力[チュートリアル: を使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
+-   各ソリューションで、F5 キーを押してプログラムを実行し、**[Start]** を複数回クリックします。 非同期のソリューションからの出力のようになります、出力[チュートリアル。非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
   
 ## <a name="example"></a>例  
  次のコードは、`GetURLContentsAsync` メソッドを使用して Web からコンテンツをダウンロードするプロジェクトの拡張機能を示します。  
@@ -421,5 +421,5 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
-- [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
+- [チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : データ バインドで発生するエラーと例外を処理する'
+title: '方法: エラーとデータ バインドで発生する例外を処理します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: d0bb41da69bf1cb87f052c11d3a7d1f1783320ad
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3fc40bac6a0b75680b677076e4cfaffd167ddc21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631049"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>方法 : データ バインドで発生するエラーと例外を処理する
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>方法: エラーとデータ バインドで発生する例外を処理します。
 基になるビジネス オブジェクトをコントロールにバインドするときに、それらのビジネス オブジェクトで例外やエラーが発生することがよくあります。 特定の <xref:System.Windows.Forms.Binding> コンポーネント、<xref:System.Windows.Forms.BindingSource> コンポーネント、または <xref:System.Windows.Forms.CurrencyManager> コンポーネントの <xref:System.Windows.Forms.Binding.BindingComplete> イベントを処理することにより、これらのエラーや例外をインターセプトし、回復したり、エラー情報をユーザーに渡したりできます。  
   
 ## <a name="example"></a>例  
@@ -37,9 +37,9 @@ ms.locfileid: "44196856"
   
 -   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>  
- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
+- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)

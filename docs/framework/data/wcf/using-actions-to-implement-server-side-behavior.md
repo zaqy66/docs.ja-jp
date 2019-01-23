@@ -2,12 +2,12 @@
 title: アクションを使用してサーバー側の動作を実装する
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622612"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>アクションを使用してサーバー側の動作を実装する
 
@@ -48,7 +48,7 @@ OData アクションを使用すると、OData サービスから取得した�
   
  パラメーターは、トークンとして渡すことができます。 これは、リソースを表すトークンを扱うデータ サービス プロバイダーを作成することができるためです。ただしその場合は、実際のアクションにディスパッチする前に、トークンを実際のリソースに変換 (マーシャリング) する必要があります。 アクションが呼び出されたときに発生したリソースへの変更を保存してディスクに書き込むことができるよう、マーシャリングを行ったパラメーターは編集可能な状態にしておく必要があります。  
   
- このインターフェイスには、Invoke および GetResult という 2 つのメソッドが必要です。 Invoke はアクションの動作を実装するデリゲートを呼び出し、GetResult はアクションの結果を返します。  
+ このインターフェイスには、2 つの方法が必要です。呼び出すおよび GetResult します。 Invoke はアクションの動作を実装するデリゲートを呼び出し、GetResult はアクションの結果を返します。  
   
 ## <a name="invoking-a-wcf-data-service-action"></a>WCF Data Services アクションの呼び出し  
  アクションは HTTP POST 要求を使用して呼び出します。 リソースの後にアクション名を続けて URL を指定します。 パラメーターは、要求の本文を使用して渡します。 たとえば、MovieService というサービスがあり、Rate というアクションが公開されているとします。 この場合、特定のムービーに対して Rate アクションを呼び出すには、次のような URL 使用することができます。  
@@ -80,8 +80,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
   
  上のコード スニペットの `MoviesModel` クラスは、Visual Studio の [サービス参照の追加] で WCF Data Services への参照を追加することでが生成されたものです。  
   
-## <a name="see-also"></a>関連項目  
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [WCF Data Services の開発と配置](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [カスタム データ サービス プロバイダー](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+## <a name="see-also"></a>関連項目
+- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
+- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Data Services の開発と配置](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [カスタム データ サービス プロバイダー](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

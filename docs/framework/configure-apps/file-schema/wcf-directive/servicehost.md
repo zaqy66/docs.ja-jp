@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 6d568c1c78677b53f4b79f5aefd3a56d71c2685f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d59fac08ee59ab5ede943de5109805ff1633d48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623938"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 サービス ホストの生成に使用されるファクトリを、ホストされるサービスと、.svc ファイルで提供されるホスティング コードのアクセスとコンパイルに必要なその他のプログラミング部分に関連付けます。  
@@ -66,5 +66,5 @@ Factory="WebScriptServiceHostFactory"
 %>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [カスタム サービス ホスト](../../../../../docs/framework/wcf/samples/custom-service-host.md)
+## <a name="see-also"></a>関連項目
+- [カスタム サービス ホスト](../../../../../docs/framework/wcf/samples/custom-service-host.md)

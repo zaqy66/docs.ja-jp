@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: c5c9b665b78c7c63c55292e38cc96ee8b2962a61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e776d3d08ff7d63b094a71e6990d87ea454a4428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638432"
 ---
 # <a name="declaration-expected"></a>宣言が必要です。
-Loop ステートメント、または割り当てなどの代入ステートメントは、プロシージャの外に発生します。 外部のプロシージャ宣言のみが許可されます。  
+Loop ステートメント、または割り当てなどの代入ステートメントは、プロシージャの外に発生します。 のみの宣言には、外部のプロシージャは許可されています。  
   
- または、プログラミング要素が宣言されている宣言キーワードを使用せずなど`Dim`または`Const`です。  
+ または、プログラミング要素が宣言されている宣言キーワードを使用せずなど`Dim`または`Const`します。  
   
  **エラー ID:** BC30188  
   
@@ -25,10 +25,10 @@ Loop ステートメント、または割り当てなどの代入ステートメ
   
 -   代入ステートメントをプロシージャの本体に移動します。  
   
--   適切な宣言キーワードで宣言を開始します。  
+-   適切な宣言キーワードを使用して宣言を開始します。  
   
 -   宣言キーワードのスペルが間違っていないことを確認します。  
   
-## <a name="see-also"></a>関連項目  
- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>関連項目
+- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)

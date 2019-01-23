@@ -9,18 +9,18 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 493c6ab72ff5554294279b62af49d311026d6e37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624016"
 ---
 # <a name="ltsourcegt-element"></a>&lt;ソース&gt;要素
 トレース メッセージを開始するトレース ソースを指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<ソース >  
 \<ソース >  
   
@@ -84,6 +84,6 @@ ms.locfileid: "47231890"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース スイッチ](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>関連項目
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース スイッチ](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
