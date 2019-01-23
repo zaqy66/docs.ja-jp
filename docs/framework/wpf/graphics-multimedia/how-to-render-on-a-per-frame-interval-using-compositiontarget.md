@@ -1,5 +1,5 @@
 ---
-title: '方法 : CompositionTarget を使用したフレームの間隔ごとの描画'
+title: '方法: CompositionTarget を使用したフレームの間隔ごとの描画'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511226"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>方法 : CompositionTarget を使用したフレームの間隔ごとの描画
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>方法: CompositionTarget を使用したフレームの間隔ごとの描画
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のアニメーション エンジンには、フレームベースのアニメーションを作成するためのさまざまな機能が用意されています。 ただし、フレームベースの描画をさらにきめ細かく制御することが必要となるアプリケーション シナリオがあります。 <xref:System.Windows.Media.CompositionTarget>オブジェクトは、フレームごとのコールバックに基づいてカスタム アニメーションを作成する機能を提供します。  
   
  <xref:System.Windows.Media.CompositionTarget> アプリケーションが描画される表示サーフェイスを表す静的クラスです。 <xref:System.Windows.Media.CompositionTarget.Rendering>イベントは、アプリケーションのシーンが描画されるたびに発生します。 レンダリング フレーム レートは、1 秒あたりのシーンの描画回数です。  
@@ -40,6 +40,6 @@ ms.locfileid: "43526442"
   
  追加または削除を表示する<xref:System.EventHandler>デリゲート、イベントの発生中には、イベントの終了後まで遅延されますを起動します。 これは、一貫性のある方法で<xref:System.MulticastDelegate>-ベースのイベントは共通言語ランタイム (CLR) で処理されます。 また、描画イベントが特定の順序で呼び出されるかどうかは保証されません。 複数ある場合<xref:System.EventHandler>特定の順序に依存するデリゲート、1 つを登録する必要があります<xref:System.Windows.Media.CompositionTarget.Rendering>イベントとマルチプレクシングが適切でデリゲートでは、自分で注文します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.CompositionTarget>  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.CompositionTarget>
+- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

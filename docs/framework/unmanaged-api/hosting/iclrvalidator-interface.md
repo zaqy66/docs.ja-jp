@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cefd47d3c7298f9cc4b15eb2946f3d95aeae759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f34a9aac31fe50974a6f88416d0a00cd72aca8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511931"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator インターフェイス
-ポータブル実行可能 (PE) イメージを検証し、検証エラーを報告のメソッドを提供します。  
+ポータブル実行可能 (PE) イメージを検証し、検証エラーを報告するためのメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[FormatEventInfo メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|指定された検証エラーに関する詳細なメッセージを取得します。|  
+|[FormatEventInfo メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|指定した検証エラーに関する詳細なメッセージを取得します。|  
 |[Validate メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|ポータブル実行可能ファイルまたは Microsoft intermediate language (MSIL) で指定されたファイルを検証します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** IValidator.idl、IValidator.h  
+ **ヘッダー:** IValidator.idl, IValidator.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRErrorReportingManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CLRRuntimeHost コクラス](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+## <a name="see-also"></a>関連項目
+- [ICLRErrorReportingManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CLRRuntimeHost コクラス](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

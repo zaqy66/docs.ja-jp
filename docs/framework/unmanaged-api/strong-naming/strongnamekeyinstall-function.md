@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b6760a6418533f5c8f6cec815d86b4cff68aab1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecd52fce8033876f0599fa0ba25fae0850c0e01f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508487"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 関数
-公開/秘密キー ペアをコンテナーにインポートします。  
+公開/秘密キーの組がコンテナーにインポートされます。  
   
- この関数は廃止されました。 使用して、 [iclrstrongname::strongnamekeyinstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)メソッド代わりにします。  
+ この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamekeyinstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,32 +40,32 @@ BOOLEAN StrongNameKeyInstall (
   
 #### <a name="parameters"></a>パラメーター  
  `wszKeyContainer`  
- [in]キー コンテナーの名前。 `wszKeyContainer` 空でない文字列にする必要があります。  
+ [in]キー コンテナーの名前。 `wszKeyContainer` 空でない文字列である必要があります。  
   
  `pbKeyBlob`  
- [in]バイナリのキーのペア。  
+ [in]バイナリ キーのペアです。  
   
  `cbKeyBlob`  
- [in]サイズをバイト単位での`pbKeyBlob`します。  
+ [in]サイズ (バイト単位) の`pbKeyBlob`します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`です。  
+ `true` 正常に終了します。それ以外の場合、`false`します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用して、 [StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)キー コンテナーを削除する関数。  
   
  場合、`StrongNameKeyInstall`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** WindSee[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** WindSee[システム要件](../../../../docs/framework/get-started/system-requirements.md)します。  
   
  **ヘッダー:** StrongName.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [StrongNameKeyInstall メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)  
- [StrongNameKeyDelete メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  
- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>関連項目
+- [StrongNameKeyInstall メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [StrongNameKeyDelete メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

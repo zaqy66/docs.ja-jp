@@ -1,18 +1,18 @@
 ---
-title: 'メソッド ベースのクエリ構文例: フィルター処理'
+title: メソッド ベースのクエリ構文例:フィルター処理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 45000713d0151172762fd797bad7d7736c78a620
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8dc65af84a3cdb4a5fe9744eb1c134670b76260a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509312"
 ---
-# <a name="method-based-query-syntax-examples-filtering"></a>メソッド ベースのクエリ構文例: フィルター処理
+# <a name="method-based-query-syntax-examples-filtering"></a>メソッド ベースのクエリ構文例:フィルター処理
 このトピックの例では、使用する方法を示します、`Where`と`Where…Contains`を照会する方法、 [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)メソッド ベースのクエリ構文を使用します。 なお、場所.`Contains` 一部として使用することはできません、[コンパイル済みクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)します。  
   
  これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
@@ -65,5 +65,5 @@ ms.locfileid: "43501571"
  [!code-csharp[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#4)]
  [!code-vb[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

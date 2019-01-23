@@ -2,18 +2,18 @@
 title: '&lt;endpoint&gt; 要素'
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509702"
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 要素
 サービスの公開に使用されるサービス エンドポイントのバインディング、コントラクト、およびアドレスのプロパティを指定します。  
   
  \<system.ServiceModel >  
-\<サービス >  
+\<service>  
 \<endpoint>  
   
 ## <a name="syntax"></a>構文  
@@ -84,9 +84,9 @@ ms.locfileid: "54147487"
 </endpoint>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [方法: 構成でサービス エンドポイントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.Description.ServiceEndpoint>
+- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [方法: 構成でサービス エンドポイントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

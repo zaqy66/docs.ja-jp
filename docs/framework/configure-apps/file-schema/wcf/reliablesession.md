@@ -2,12 +2,12 @@
 title: '&lt;reliableSession&gt;'
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 56cc48cd93020f37ac73b7f6b89130fdd1a3f7db
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0768cbce237b2d119be719eab1de9da4a551e5ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509806"
 ---
 # <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
 WS-ReliableMessaging の設定を定義します。 この要素がカスタム バインドに追加される場合、その結果となるチャネルにより、正確に 1 回の配信保証をサポートできます。  
@@ -16,7 +16,7 @@ WS-ReliableMessaging の設定を定義します。 この要素がカスタム 
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<reliableSession >  
+\<reliableSession>  
   
 ## <a name="syntax"></a>構文  
   
@@ -119,12 +119,12 @@ WS-ReliableMessaging の設定を定義します。 この要素がカスタム 
 </configuration>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ReliableSessionElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>  
- [信頼できるセッション](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.ReliableSessionElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
+- [信頼できるセッション](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

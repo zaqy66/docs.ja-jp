@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4c92e7b3892fa35035935d5db317c72d74814ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512984"
 ---
 # <a name="property-statement"></a>Property Statement
 プロパティ、および格納し、プロパティの値を取得するために使用するプロパティ プロシージャの名前を宣言します。  
@@ -62,11 +62,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    - [保護されたフレンド](../../language-reference/modifiers/protected-friend.md) 
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md) 
 
     - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     参照してください[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+     「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 -   `propertymodifiers`  
   
@@ -108,7 +108,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `name`  
   
-     必須。 プロパティ名。 参照してください[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+     必須。 プロパティ名。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
   
 -   `parameterlist`  
   
@@ -207,10 +207,10 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
  [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [自動実装プロパティ](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)  
- [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [既定値](../../../visual-basic/language-reference/modifiers/default.md)
+## <a name="see-also"></a>関連項目
+- [自動実装プロパティ](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)
+- [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Default](../../../visual-basic/language-reference/modifiers/default.md)

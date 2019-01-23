@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7624a22e5d65ae94797779a0b8cfa70f226450ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f71901acf8227d018bf288b6cd0265f053e6a3a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510833"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next メソッド
-指定された"ICorDebugModule"インスタンスの数を取得`celt`列挙体の現在位置にあるからです。  
+指定された"ICorDebugModule"インスタンスの数を取得`celt`列挙体の現在位置から。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,22 +40,22 @@ HRESULT Next (
   
 #### <a name="parameters"></a>パラメーター  
  `celt`  
- [in]数`ICorDebugModule`を取得するインスタンス。  
+ [in]数`ICorDebugModule`インスタンスを取得します。  
   
  `modules`  
  [out]それぞれが指すポインターの配列、`ICorDebugModule`オブジェクト。  
   
  `pceltFetched`  
- [out]数へのポインター`ICorDebugModule`実際に返されるインスタンス。 この値を null にすることがある場合`celt`は 1 つです。  
+ [out]数へのポインター`ICorDebugModule`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
+## <a name="see-also"></a>関連項目
+

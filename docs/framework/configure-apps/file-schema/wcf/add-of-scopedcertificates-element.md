@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt; 要素の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: a173d3b137833abfe8a69aed55b972c9b6469890
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2406c93307ed9beb5738567a473406026b09b0a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508744"
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 要素の &lt;add&gt;
 範囲指定された証明書のコレクションに X.509 証明書を追加します。  
@@ -18,7 +18,7 @@ endpointBehaviors セクション
 \<behavior>  
 \<clientCredentials>  
 \<serviceCertificate >  
-\<scopedCertificates >  
+\<scopedCertificates>  
 \<追加 > 要素の\<scopedCertificates >  
   
 ## <a name="syntax"></a>構文  
@@ -75,7 +75,7 @@ endpointBehaviors セクション
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|認証用の (範囲指定された) 特定のサービスにより提供される X.509 証明書のコレクションを表します。|  
+|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|認証用の (範囲指定された) 特定のサービスにより提供される X.509 証明書のコレクションを表します。|  
   
 ## <a name="remarks"></a>Remarks  
  この要素を使用すると、クライアントは、通信するサービスの URL に基づいて、使用するサービス証明書を構成できます。 これは、クライアントが複数のサービス (エンド サービスと中間セキュリティ トークン サービス) と通信している可能性がある発行済みトークンのシナリオで特に便利です。 証明書に基づくメッセージ セキュリティを使用したバインドにおいて、この証明書を使用してサービスへのメッセージを暗号化します。サービスがクライアントへの応答に署名する際には、この証明書を使用することが要求されます。  
@@ -107,13 +107,13 @@ endpointBehaviors セクション
 </behaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
+- [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

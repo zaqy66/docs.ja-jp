@@ -2,17 +2,17 @@
 title: カスタム エンコーダー
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509365"
 ---
 # <a name="custom-encoders"></a>カスタム エンコーダー
 このトピックでは、カスタム エンコーダーを作成する方法について説明します。  
   
- Windows Communication Foundation (WCF) を使用する、*バインド*エンドポイント間でデータをネットワーク経由で転送する方法を指定します。 一連のバインドから成る*バインド要素*します。 バインディングには、セキュリティ、必須などのオプションのプロトコル バインド要素が含まれています。*メッセージ エンコーダー*バインド要素、および必須のトランスポート バインド要素。 メッセージ エンコーダーは、メッセージ エンコーディング バインド要素で表されます。 次の 3 つのメッセージ エンコーダーは、WCF に含まれる: バイナリ、Message Transmission Optimization Mechanism (MTOM)、およびテキスト。  
+ Windows Communication Foundation (WCF) を使用する、*バインド*エンドポイント間でデータをネットワーク経由で転送する方法を指定します。 一連のバインドから成る*バインド要素*します。 バインディングには、セキュリティ、必須などのオプションのプロトコル バインド要素が含まれています。*メッセージ エンコーダー*バインド要素、および必須のトランスポート バインド要素。 メッセージ エンコーダーは、メッセージ エンコーディング バインド要素で表されます。 WCF では、次の 3 つのメッセージ エンコーダーが含まれています。バイナリ、Message Transmission Optimization Mechanism (MTOM) とテキスト。  
   
  メッセージ エンコーディング バインド要素は、送信する <xref:System.ServiceModel.Channels.Message> をシリアル化してそれをトランスポートに渡すか、シリアル化された形式のメッセージをトランスポートから受信して、それをプロトコル層 (ある場合) またはアプリケーション (プロトコル層がない場合) に渡します。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "50034385"
   
  WCF は、次の種類から派生したバインド要素の<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>テキスト、バイナリ、および Message Transmission Optimization Mechanism (MTOM) エンコーディングを提供できるクラス。  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> : 相互運用性は最も高く、効率は最も低い、XML メッセージ用のエンコーダー。 Web サービスまたは Web サービス クライアントは、一般に、テキスト形式の XML を認識できます。 ただし、大きいブロックのバイナリ データをテキストとして転送するのは効率的ではありません。  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>:最も相互運用が XML メッセージ用のエンコーダーの効率。 Web サービスまたは Web サービス クライアントは、一般に、テキスト形式の XML を認識できます。 ただし、大きいブロックのバイナリ データをテキストとして転送するのは効率的ではありません。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> : バイナリベースの XML メッセージで使用される、文字エンコーディングおよびメッセージのバージョン管理を指定するバインド要素を表します。 これは、エンコーディングのオプションが、少なくとも相互運用の最も効率的な WCF エンドポイントでのみサポートされています。  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>:文字エンコーディングを指定するバインド要素と XML メッセージのバイナリ ベースのバージョン管理に使用するメッセージを表します。 これは、エンコーディングのオプションが、少なくとも相互運用の最も効率的な WCF エンドポイントでのみサポートされています。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> : Message Transmission Optimization Mechanism (MTOM) エンコードを使用するメッセージの文字エンコードおよびメッセージ バージョン管理を指定するバインド要素を表します。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>:Message Transmission Optimization Mechanism (MTOM) エンコーディングを使用してメッセージに使用するメッセージ バージョン管理および文字エンコーディングを指定するバインド要素を表します。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。  
   
  バインド要素は、バイナリ、MTOM、またはテキストの <xref:System.ServiceModel.Channels.MessageEncoderFactory> を作成します。 ファクトリは、バイナリ、MTOM、またはテキストの <xref:System.ServiceModel.Channels.MessageEncoderFactory> を作成します。 通常、インスタンスは 1 つだけあります。 ただし、セッションを使用すると、異なるエンコーダーを各セッションに提供できます。 バイナリ エンコーダーでは、これを利用して動的ディクショナリ (XML インフラストラクチャを参照) を調整します。  
   
@@ -89,12 +89,12 @@ ms.locfileid: "50034385"
   
  次に、<xref:System.ServiceModel.Channels.MessageEncoderFactory> メソッドをオーバーライドしてこのファクトリのインスタンスを返すようにすることで、サービスまたはクライアントの構成に使用されるバインド要素スタックにカスタム <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> を接続します。  
   
- WCF に付属のサンプル コードでは、このプロセスを説明する 2 つのサンプルがある:[カスタム メッセージ エンコーダー: カスタム テキスト エンコーダー](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)と[カスタム メッセージ エンコーダー: 圧縮エンコーダー](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)します。  
+ WCF に付属のサンプル コードでは、このプロセスを説明する 2 つのサンプルがあります。[カスタム メッセージ エンコーダー:カスタム テキスト エンコーダー](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)と[カスタム メッセージ エンコーダー。圧縮エンコーダー](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [データ転送のアーキテクチャの概要](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [メッセージ エンコーダーを選択する](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [データ転送のアーキテクチャの概要](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [メッセージ エンコーダーを選択する](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

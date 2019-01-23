@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: 848e1b2064d89607a93f5ac20fede495e0c61c43
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510808"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法: UI であるアドインを作成する
 この例では、WPF のスタンドアロン アプリケーションでホストされている Windows Presentation Foundation (WPF) であるアドインを作成する方法を示します。  
@@ -104,6 +104,6 @@ ms.locfileid: "53396722"
   
  このアクティビティは、ホスト アプリケーションから完全に分離されています。  
   
-## <a name="see-also"></a>関連項目  
- [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [WPF のアドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="see-also"></a>関連項目
+- [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [WPF のアドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

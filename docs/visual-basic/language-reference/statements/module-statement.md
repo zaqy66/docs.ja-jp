@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524183"
 ---
 # <a name="module-statement"></a>Module ステートメント
 モジュールの名前を宣言し、変数、プロパティ、イベント、およびモジュールを構成するプロシージャの定義を紹介します。  
@@ -60,7 +60,7 @@ End Module
   
  モジュールが、有効期間は、プログラムと同じです。 そのメンバーはすべてため`Shared`のプログラムの有効期間もあります。  
   
- 既定で、モジュール[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+ 既定で、モジュール[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
  モジュールのすべてのメンバーは、暗黙的に`Shared`します。  
   
@@ -96,10 +96,10 @@ End Module
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
- [型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+## <a name="see-also"></a>関連項目
+- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+- [型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

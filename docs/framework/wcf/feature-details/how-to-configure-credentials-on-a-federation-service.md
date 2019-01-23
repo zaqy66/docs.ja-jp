@@ -1,5 +1,5 @@
 ---
-title: '方法 : フェデレーション サービスで資格情報を設定する'
+title: '方法: フェデレーション サービスで資格情報を構成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 92c430ca5514441de01a630a6945e9d294a88c18
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 983504993a1252e4345c3c50130a25e25e99446d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509283"
 ---
-# <a name="how-to-configure-credentials-on-a-federation-service"></a>方法 : フェデレーション サービスで資格情報を設定する
+# <a name="how-to-configure-credentials-on-a-federation-service"></a>方法: フェデレーション サービスで資格情報を構成します。
 Windows Communication Foundation (WCF) では、フェデレーション サービスを作成する、次の主な手順で構成されます。  
   
-1.  <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインディングの構成。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法: WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。  
+1.  <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインディングの構成。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。  
   
 2.  サービスに提示される発行済みトークンの認証方法を制御する <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> の構成。  
   
@@ -69,14 +69,14 @@ Windows Communication Foundation (WCF) では、フェデレーション サー�
   
 -   発行済みトークンが X.509 証明書を使用して署名されている場合、証明書が <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> として証明書利用者に送信されたか、<xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> プロパティから取得されたかに関係なく、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティの値で指定されるセマンティックスごとに証明書を検証する必要があります。 X.509 証明書の検証の詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
   
- たとえば、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> を <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> に設定すると、その署名の証明書が `TrustedPeople` 証明書ストアに格納されている任意の発行済みトークンが認証されます。 この場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> プロパティを <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> または <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine> に設定します。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> を含めて、他のモードを選択できます。 `Custom` を選択した場合、<xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスのインスタンスを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> プロパティに割り当てる必要があります。 カスタム検証では、任意の基準を使用して証明書を検証できます。 詳細については、次を参照してください。[方法: カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
+ たとえば、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> を <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> に設定すると、その署名の証明書が `TrustedPeople` 証明書ストアに格納されている任意の発行済みトークンが認証されます。 この場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> プロパティを <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> または <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine> に設定します。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> を含めて、他のモードを選択できます。 `Custom` を選択した場合、<xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスのインスタンスを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> プロパティに割り当てる必要があります。 カスタム検証では、任意の基準を使用して証明書を検証できます。 詳細については、「[方法 :カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
   
-## <a name="see-also"></a>関連項目  
-* [フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)  
-* [フェデレーションと信頼](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
-* [フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)  
-* [方法 : WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
-* [方法 : WSFederationHttpBinding を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
-* [方法 : フェデレーション クライアントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
-* [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
-* [SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
+## <a name="see-also"></a>関連項目
+- [フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)
+- [フェデレーションと信頼](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
+- [フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [方法: WSFederationHttpBinding を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [方法: フェデレーション クライアントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

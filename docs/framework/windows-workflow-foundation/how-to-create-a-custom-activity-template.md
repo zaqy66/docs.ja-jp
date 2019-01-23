@@ -1,15 +1,15 @@
 ---
-title: 操作方法：カスタム アクティビティ テンプレートを作成します。
+title: '方法: カスタム アクティビティ テンプレートを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 87acf0d084154c9c3e5cbc97da4af9821709f0a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c90721676fc5b77704ee86bcd5e98c99e3af6683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512711"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>操作方法：カスタム アクティビティ テンプレートを作成します。
+# <a name="how-to-create-a-custom-activity-template"></a>方法: カスタム アクティビティ テンプレートを作成します。
 
 カスタム複合アクティビティなどのアクティビティの構成のカスタマイズには、カスタム アクティビティ テンプレートが使用されるため、手動で各アクティビティを個別に作成し、そのプロパティおよびその他の設定を構成する必要はありません。 これらのカスタム テンプレートで使用できる、**ツールボックス**上、[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]または元のユーザーに画面にドラッグできる、構成済みのデザイン、再ホストされたデザイナーから。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] このようなテンプレートの良い例が付属しています。 [SendAndReceiveReply テンプレート デザイナー](/visualstudio/workflow-designer/sendandreceivereply-template-designer)と[ReceiveAndSendReply テンプレート デザイナー](/visualstudio/workflow-designer/receiveandsendreply-template-designer)で、[メッセージング アクティビティ デザイナー](/visualstudio/workflow-designer/messaging-activity-designers)カテゴリ。
 

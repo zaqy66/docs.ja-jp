@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfda61706af3e1043d271c0aa74264bd99a4076c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e9f5af0a79b36f879b75e331d614edfed7476eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509975"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess メソッド
 プロセスと、デバッガーの制御下で、プライマリ スレッドを起動します。  
@@ -92,8 +92,8 @@ HRESULT CreateProcess (
   
  IA 64 ベースおよび AMD64 ベースのプラットフォームなどの Win9x と x86 以外のプラットフォームでは、相互運用機能デバッグはサポートされていません。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -101,5 +101,5 @@ HRESULT CreateProcess (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

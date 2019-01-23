@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524054"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic における LINQ の概要
 統合言語クエリ (LINQ) は、Visual Basic にクエリ機能を追加し、あらゆる種類のデータを操作する場合は、単純かつ強力な機能を提供します。 処理対象のデータベースにクエリを送信または検索するデータの種類ごとに異なるクエリ構文の使用ではなく、LINQ は、Visual Basic 言語の一部としてクエリを紹介します。 LINQ では、データの型に関係なく、統一された構文を使用します。  
@@ -76,13 +76,13 @@ LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他�
 
 ### <a name="from-clause"></a>From 句
 
-いずれかを[`From`句](../../../../visual-basic/language-reference/queries/from-clause.md)または`Aggregate`クエリを開始する句が必要です。 `From` 句は、クエリのソース コレクションと反復変数を指定します。 例えば:
+いずれかを[`From`句](../../../../visual-basic/language-reference/queries/from-clause.md)または`Aggregate`クエリを開始する句が必要です。 `From` 句は、クエリのソース コレクションと反復変数を指定します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#7](codesnippet/VisualBasic/introduction-to-linq_8.vb)]
 
 ### <a name="select-clause"></a>Select 句
 
-任意。 A [ `Select`句](../../../../visual-basic/language-reference/queries/select-clause.md)クエリの反復変数のセットを宣言します。 例えば:
+任意。 A [ `Select`句](../../../../visual-basic/language-reference/queries/select-clause.md)クエリの反復変数のセットを宣言します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#8](codesnippet/VisualBasic/introduction-to-linq_9.vb)]
 
@@ -90,31 +90,31 @@ LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他�
 
 ### <a name="where-clause"></a>Where 句
 
-任意。 A [ `Where`句](../../../../visual-basic/language-reference/queries/where-clause.md)クエリのフィルター処理条件を指定します。 例えば:
+任意。 A [ `Where`句](../../../../visual-basic/language-reference/queries/where-clause.md)クエリのフィルター処理条件を指定します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#9](codesnippet/VisualBasic/introduction-to-linq_10.vb)]
 
 ### <a name="order-by-clause"></a>Order By 句]
 
-|省略可能。 [ `Order By`句](../../../../visual-basic/language-reference/queries/order-by-clause.md)クエリで列の並べ替え順序を指定します。 例えば:
+|省略可能。 [ `Order By`句](../../../../visual-basic/language-reference/queries/order-by-clause.md)クエリで列の並べ替え順序を指定します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#10](codesnippet/VisualBasic/introduction-to-linq_11.vb)]
 
 ### <a name="join-clause"></a>Join 句
 
-任意。 A [ `Join`句](../../../../visual-basic/language-reference/queries/join-clause.md)2 つのコレクションを 1 つのコレクションに結合します。 例えば:
+任意。 A [ `Join`句](../../../../visual-basic/language-reference/queries/join-clause.md)2 つのコレクションを 1 つのコレクションに結合します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#11](codesnippet/VisualBasic/introduction-to-linq_12.vb)]
 
 ### <a name="group-by-clause"></a>Group By 句
 
-任意。 A [ `Group By`句](../../../../visual-basic/language-reference/queries/group-by-clause.md)クエリ結果の要素をグループ化します。 グループごとに集計関数を適用するために使用します。 例えば:
+任意。 A [ `Group By`句](../../../../visual-basic/language-reference/queries/group-by-clause.md)クエリ結果の要素をグループ化します。 グループごとに集計関数を適用するために使用します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#12](codesnippet/VisualBasic/introduction-to-linq_13.vb)]
 
 ### <a name="group-join-clause"></a>Group Join 句
 
-任意。 A [ `Group Join`句](../../../../visual-basic/language-reference/queries/group-join-clause.md)2 つのコレクションを 1 つの階層コレクションに結合します。 例えば:
+任意。 A [ `Group Join`句](../../../../visual-basic/language-reference/queries/group-join-clause.md)2 つのコレクションを 1 つの階層コレクションに結合します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#13](codesnippet/VisualBasic/introduction-to-linq_14.vb)]
 
@@ -124,43 +124,43 @@ LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他�
 
 [!code-vb[VbVbalrIntroToLINQ#14](codesnippet/VisualBasic/introduction-to-linq_15.vb)]
 
-`Aggregate` 句を使用してクエリを変更することもできます。 たとえば、`Aggregate` 句を使用して、関連するクエリ コレクションに対して計算を実行できます。 例えば:
+`Aggregate` 句を使用してクエリを変更することもできます。 たとえば、`Aggregate` 句を使用して、関連するクエリ コレクションに対して計算を実行できます。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#15](codesnippet/VisualBasic/introduction-to-linq_16.vb)]
 
 ### <a name="let-clause"></a>Let 句
 
-任意。 A [ `Let`句](../../../../visual-basic/language-reference/queries/let-clause.md)値を計算し、クエリ内の新しい変数に割り当てられます。 例えば:
+任意。 A [ `Let`句](../../../../visual-basic/language-reference/queries/let-clause.md)値を計算し、クエリ内の新しい変数に割り当てられます。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#16](codesnippet/VisualBasic/introduction-to-linq_17.vb)]
 
 ### <a name="distinct-clause"></a>Distinct 句
 
-任意。 A`Distinct`句がクエリ結果内の重複する値を除去する現在の反復変数の値を制限します。 例えば:
+任意。 A`Distinct`句がクエリ結果内の重複する値を除去する現在の反復変数の値を制限します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#17](codesnippet/VisualBasic/introduction-to-linq_18.vb)]
 
 ### <a name="skip-clause"></a>Skip 句
 
-任意。 A [ `Skip`句](../../../../visual-basic/language-reference/queries/skip-clause.md)指定したコレクション内の要素数をバイパスし、残りの要素を返します。 例えば:
+任意。 A [ `Skip`句](../../../../visual-basic/language-reference/queries/skip-clause.md)指定したコレクション内の要素数をバイパスし、残りの要素を返します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#18](codesnippet/VisualBasic/introduction-to-linq_19.vb)]
 
 ### <a name="skip-while-clause"></a>Skip While 句
 
-任意。 A [ `Skip While`句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)指定された条件があれば、コレクション内の要素をバイパスする`true`し、残りの要素を返します。 例えば:
+任意。 A [ `Skip While`句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)指定された条件があれば、コレクション内の要素をバイパスする`true`し、残りの要素を返します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#19](codesnippet/VisualBasic/introduction-to-linq_20.vb)]
 
 ### <a name="take-clause"></a>Take 句
 
-任意。 A [ `Take`句](../../../../visual-basic/language-reference/queries/take-clause.md)コレクションの先頭から指定された数の連続する要素を返します。 例えば:
+任意。 A [ `Take`句](../../../../visual-basic/language-reference/queries/take-clause.md)コレクションの先頭から指定された数の連続する要素を返します。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#20](codesnippet/VisualBasic/introduction-to-linq_21.vb)]
 
 ### <a name="take-while-clause"></a>Take While 句
 
-任意。 A [ `Take While`句](../../../../visual-basic/language-reference/queries/take-while-clause.md)指定された条件があれば、コレクションの要素が含まれます`true`残りの要素をバイパスします。 例えば:
+任意。 A [ `Take While`句](../../../../visual-basic/language-reference/queries/take-while-clause.md)指定された条件があれば、コレクションの要素が含まれます`true`残りの要素をバイパスします。 例:
 
 [!code-vb[VbVbalrIntroToLINQ#21](codesnippet/VisualBasic/introduction-to-linq_22.vb)]
   
@@ -177,7 +177,7 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
   
  追加することができます、SQL Server データベースへの接続を有効した場合、 **LINQ to SQL クラス**をプロジェクトに項目テンプレート。 これを行うと、オブジェクト リレーショナル デザイナー (O/R デザイナー) が表示されます。 O/R デザイナーを使用すると、コード内でアクセスする項目をドラッグして、**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**をデザイナー画面にします。 LINQ to SQL ファイルは、<xref:System.Data.Linq.DataContext> オブジェクトをプロジェクトに追加します。 このオブジェクトには、アクセスするテーブルとビューのプロパティおよびコレクションと、呼び出すストアド プロシージャのメソッドが格納されます。 変更を LINQ to SQL (.dbml) ファイルに保存した後、O/R デザイナーで定義された <xref:System.Data.Linq.DataContext> オブジェクトを参照することで、コード内でこれらのオブジェクトにアクセスできます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトには、LINQ to SQL ファイルの名前に基づいて名前が付けられます。 たとえば、Northwind.dbml という名前の LINQ to SQL ファイルの場合は、<xref:System.Data.Linq.DataContext> という名前の `NorthwindDataContext` オブジェクトが作成されます。  
   
- 詳細な手順と例については、次を参照してください。[方法: データベースの照会](how-to-query-a-database-by-using-linq.md)と[方法: ストアド プロシージャを呼び出す](how-to-call-a-stored-procedure-by-using-linq.md)します。  
+ 詳細な手順と例については、次を参照してください。[方法。データベースの照会](how-to-query-a-database-by-using-linq.md)と[方法。ストアド プロシージャを呼び出す](how-to-call-a-stored-procedure-by-using-linq.md)します。  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Visual Basic の LINQ をサポートする機能します。  
  Visual Basic には、LINQ の使用を簡単にして、LINQ クエリを実行するために作成する必要がありますコードの量を削減する注目すべきその他の機能が含まれています。 次に例を示します。  
@@ -224,32 +224,32 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|LINQ to XML の概要、プログラミング ガイド、およびサンプルを示します。|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>方法とチュートリアルのトピック
- [方法: データベースの照会](how-to-query-a-database-by-using-linq.md)  
+ [方法: データベースを照会します。](how-to-query-a-database-by-using-linq.md)  
   
- [方法 : ストアド プロシージャの呼び出し](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [方法: ストアド プロシージャを呼び出す](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [方法: データベースのデータの変更](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [方法: データベース内のデータを変更します。](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [方法 : 結合を使用したデータの結合](how-to-combine-data-with-linq-by-using-joins.md)  
+ [方法: 結合を使用したデータを結合します。](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [方法: クエリ結果を並べ替える](how-to-sort-query-results-by-using-linq.md)  
+ [方法: クエリ結果の並べ替え](how-to-sort-query-results-by-using-linq.md)  
   
- [方法 : クエリ結果のフィルター処理](how-to-filter-query-results-by-using-linq.md)  
+ [方法: クエリ結果をフィルター処理します。](how-to-filter-query-results-by-using-linq.md)  
   
- [方法 : データの数、合計、または平均の算出](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [方法: 数、合計、または平均データ](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [方法 : クエリ結果内の最小値と最大値の検索](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [方法: クエリ結果内の最小値と最大値を検索します。](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>お勧めの書籍の章  
- [Chapter 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))で[Visual Basic 2008 のプログラミング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+ [第 17 章:LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))で[Visual Basic 2008 のプログラミング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>関連項目
 
-- [統合言語クエリ (LINQ)](../../concepts/linq/index.md)  
-- [Visual Basic における LINQ to XML の概要](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [LINQ to DataSet の概要](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [統合言語クエリ (LINQ)](../../concepts/linq/index.md)
+- [Visual Basic における LINQ to XML の概要](../../language-features/xml/overview-of-linq-to-xml.md)
+- [LINQ to DataSet の概要](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

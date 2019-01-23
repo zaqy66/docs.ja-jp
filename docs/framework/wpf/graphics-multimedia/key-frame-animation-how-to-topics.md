@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510430"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>キー フレーム アニメーションに関する「方法」トピック
-このセクションのトピックでは、キー フレーム アニメーションを使用して、2 つのプロパティの値、コントロールの補間よりも多くのアニメーション化する方法を説明します。  
+このセクションのトピックでは、キー フレーム アニメーションを使用して、2 つのプロパティ値とコントロールの補間をアニメーション化する方法を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [キー フレームを使用してオブジェクトをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "33561964"
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>関連項目  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>関連項目
+- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

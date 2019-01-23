@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 21d3b31fe19db7abf1a78d0c6d33abfbc2882089
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 4b21624ea31fd0e11e598bab435b9f3c6f6d9b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512841"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort データ型 (Visual Basic)
 
@@ -74,10 +74,10 @@ Dim number = &H_5826us
   
 -   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.UInt16?displayProperty=nameWithType> 構造体です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.UInt16>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.UInt16>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

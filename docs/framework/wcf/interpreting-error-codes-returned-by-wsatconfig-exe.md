@@ -2,12 +2,12 @@
 title: wsatConfig.exe によって返されたエラー コードの解釈
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510027"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe によって返されたエラー コードの解釈
 ここでは、WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe) によって生成されるすべてのエラー コードと、実行する必要のある推奨アクションを示します。  
@@ -67,5 +67,5 @@ ms.locfileid: "33507362"
 |55|ETW トレース セッションの開始中に、予期しないエラーが発生しました。|マイクロソフトにお問い合わせください。|  
 |56|ETW トレース セッションの開始中に、予期しないエラーが発生しました。|マイクロソフトにお問い合わせください。|  
   
-## <a name="see-also"></a>関連項目  
- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>関連項目
+- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

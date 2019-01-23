@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 649d60a2d50237827d5f334e934103b234a42724
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79ea8c7df88a6253fb3fb44d072fbe366bcc720b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510157"
 ---
 # <a name="dialog-boxes-overview"></a>ダイアログ ボックスの概要
 スタンドアロン アプリケーションは、メインのデータをアプリケーションが動作し、使用してデータを処理する機能を公開しますが両方が表示されるメイン ウィンドウを通常がある[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]メニュー バー、ツールバー、およびステータス バーなどのメカニズムです。 重要なアプリケーションは、次のようなことをするための追加のウィンドウを表示することもあります。  
@@ -344,7 +344,7 @@ ms.locfileid: "43506335"
 [!code-csharp[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#finddialogclosecodebehind2)]
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
-## <a name="see-also"></a>関連項目  
- [ポップアップの概要](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [ダイアログ ボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)  
- [ColorPicker カスタム コントロールのサンプル](https://go.microsoft.com/fwlink/?LinkID=159977)
+## <a name="see-also"></a>関連項目
+- [ポップアップの概要](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [ダイアログ ボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [ColorPicker カスタム コントロールのサンプル](https://go.microsoft.com/fwlink/?LinkID=159977)
