@@ -1,5 +1,5 @@
 ---
-title: '方法: 16 進文字列を数値に変換する (Visual Basic)'
+title: '方法: 16 進文字列を数値 (Visual Basic) に変換します。'
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 76acee8913df35d4d071017078b38a3c474c3357
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633816"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>方法: 16 進文字列を数値に変換する (Visual Basic)
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>方法: 16 進文字列を数値 (Visual Basic) に変換します。
 この例では、16 進数の文字列に変換を使用して、整数、<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>メソッド。  
   
 ## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>16 進数の文字列を数値に変換するには  
@@ -33,6 +33,6 @@ ms.locfileid: "50197550"
 
    プレフィックスまたは桁区切り記号が存在する場合、呼び出し、<xref:System.Convert.ToInt32(System.String,System.Int32)>メソッドがスローされます、<xref:System.FormatException>します。
 
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>
