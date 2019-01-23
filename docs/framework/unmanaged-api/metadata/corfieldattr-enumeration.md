@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576016"
 ---
-# <a name="corfieldattr-enumeration"></a><span data-ttu-id="b29f4-102">CorFieldAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="b29f4-102">CorFieldAttr Enumeration</span></span>
-<span data-ttu-id="b29f4-103">フィールドについてのメタデータを記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="b29f4-103">Contains values that describe metadata about a field.</span></span>  
+# <a name="corfieldattr-enumeration"></a><span data-ttu-id="9e98d-102">CorFieldAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="9e98d-102">CorFieldAttr Enumeration</span></span>
+<span data-ttu-id="9e98d-103">フィールドについてのメタデータを記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="9e98d-103">Contains values that describe metadata about a field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b29f4-104">構文</span><span class="sxs-lookup"><span data-stu-id="b29f4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e98d-104">構文</span><span class="sxs-lookup"><span data-stu-id="9e98d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorFieldAttr {  
@@ -58,36 +58,36 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b29f4-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="b29f4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9e98d-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="9e98d-105">Members</span></span>  
   
-|<span data-ttu-id="b29f4-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="b29f4-106">Member</span></span>|<span data-ttu-id="b29f4-107">説明</span><span class="sxs-lookup"><span data-stu-id="b29f4-107">Description</span></span>|  
+|<span data-ttu-id="9e98d-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="9e98d-106">Member</span></span>|<span data-ttu-id="9e98d-107">説明</span><span class="sxs-lookup"><span data-stu-id="9e98d-107">Description</span></span>|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|<span data-ttu-id="b29f4-108">ユーザー補助に関する情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-108">Specifies accessibility information.</span></span>|  
-|`fdPrivateScope`|<span data-ttu-id="b29f4-109">フィールドを参照できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-109">Specifies that the field cannot be referenced.</span></span>|  
-|`fdPrivate`|<span data-ttu-id="b29f4-110">フィールドが親の型からのみアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-110">Specifies that the field is accessible only by its parent type.</span></span>|  
-|`fdFamANDAssem`|<span data-ttu-id="b29f4-111">フィールドにそれが属するアセンブリ内の派生クラスでアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
-|`fdAssembly`|<span data-ttu-id="b29f4-112">フィールドにそれが属するアセンブリ内のすべての型によってアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
-|`fdFamily`|<span data-ttu-id="b29f4-113">フィールドがその型によってのみアクセスできますが、派生クラスを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
-|`fdFamORAssem`|<span data-ttu-id="b29f4-114">フィールドがそのアセンブリ内のすべての型と派生クラスによってアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
-|`fdPublic`|<span data-ttu-id="b29f4-115">フィールドにこのスコープの可視性を持つすべての型からアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
-|`fdStatic`|<span data-ttu-id="b29f4-116">フィールドがインスタンス メンバーではなく、その型のメンバーであることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
-|`fdInitOnly`|<span data-ttu-id="b29f4-117">初期化された後に、フィールドを変更できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
-|`fdLiteral`|<span data-ttu-id="b29f4-118">フィールドの値が、コンパイル時定数であることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-118">Specifies that the field value is a compile-time constant.</span></span>|  
-|`fdNotSerialized`|<span data-ttu-id="b29f4-119">その型は、リモート処理は実行時に、フィールドはシリアル化されませんを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
-|`fdSpecialName`|<span data-ttu-id="b29f4-120">フィールドが、特別なことと、その名前が記述されているを指定する方法です。</span><span class="sxs-lookup"><span data-stu-id="b29f4-120">Specifies that the field is special, and that its name describes how.</span></span>|  
-|`fdPinvokeImpl`|<span data-ttu-id="b29f4-121">PInvoke によってフィールドの実装が転送されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
-|`fdReservedMask`|<span data-ttu-id="b29f4-122">共通言語ランタイムでは、内部使用に予約されています。</span><span class="sxs-lookup"><span data-stu-id="b29f4-122">Reserved for internal use by the common language runtime.</span></span>|  
-|`fdRTSpecialName`|<span data-ttu-id="b29f4-123">共通言語ランタイム メタデータの内部 Api が名のエンコードを確認する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
-|`fdHasFieldMarshal`|<span data-ttu-id="b29f4-124">フィールドにマーシャ リング情報が含まれることを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-124">Specifies that the field contains marshaling information.</span></span>|  
-|`fdHasDefault`|<span data-ttu-id="b29f4-125">フィールドが既定値を持つことを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-125">Specifies that the field has a default value.</span></span>|  
-|`fdHasFieldRVA`|<span data-ttu-id="b29f4-126">フィールドの相対仮想アドレスを持つことを指定します。</span><span class="sxs-lookup"><span data-stu-id="b29f4-126">Specifies that the field has a relative virtual address.</span></span>|  
+|`fdFieldAccessMask`|<span data-ttu-id="9e98d-108">アクセシビリティに関する情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-108">Specifies accessibility information.</span></span>|  
+|`fdPrivateScope`|<span data-ttu-id="9e98d-109">フィールドを参照できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-109">Specifies that the field cannot be referenced.</span></span>|  
+|`fdPrivate`|<span data-ttu-id="9e98d-110">フィールドが親の型からのみアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-110">Specifies that the field is accessible only by its parent type.</span></span>|  
+|`fdFamANDAssem`|<span data-ttu-id="9e98d-111">フィールドにそのアセンブリの派生クラスからアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
+|`fdAssembly`|<span data-ttu-id="9e98d-112">フィールドにそのアセンブリ内のすべての型からアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
+|`fdFamily`|<span data-ttu-id="9e98d-113">フィールドの型によってのみアクセスできますが、派生クラスを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
+|`fdFamORAssem`|<span data-ttu-id="9e98d-114">フィールドにそのアセンブリ内のすべての型と派生クラスによってアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
+|`fdPublic`|<span data-ttu-id="9e98d-115">フィールドがこのスコープの可視性を持つすべての種類でアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
+|`fdStatic`|<span data-ttu-id="9e98d-116">フィールドがインスタンス メンバーではなく、その型のメンバーであるを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
+|`fdInitOnly`|<span data-ttu-id="9e98d-117">初期化された後に、フィールドを変更できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
+|`fdLiteral`|<span data-ttu-id="9e98d-118">フィールド値がコンパイル時定数であることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-118">Specifies that the field value is a compile-time constant.</span></span>|  
+|`fdNotSerialized`|<span data-ttu-id="9e98d-119">その型は、リモート処理は実行時にフィールドはシリアルされないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
+|`fdSpecialName`|<span data-ttu-id="9e98d-120">フィールドに、特別なことと、その名前を記述しているを指定しますか。</span><span class="sxs-lookup"><span data-stu-id="9e98d-120">Specifies that the field is special, and that its name describes how.</span></span>|  
+|`fdPinvokeImpl`|<span data-ttu-id="9e98d-121">フィールドの実装が PInvoke 経由で転送されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
+|`fdReservedMask`|<span data-ttu-id="9e98d-122">共通言語ランタイムでは、内部使用のため予約されています。</span><span class="sxs-lookup"><span data-stu-id="9e98d-122">Reserved for internal use by the common language runtime.</span></span>|  
+|`fdRTSpecialName`|<span data-ttu-id="9e98d-123">共通言語ランタイム メタデータの内部 Api が名前のエンコーディングを確認する必要がありますように指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
+|`fdHasFieldMarshal`|<span data-ttu-id="9e98d-124">フィールドにマーシャ リング情報が含まれることを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-124">Specifies that the field contains marshaling information.</span></span>|  
+|`fdHasDefault`|<span data-ttu-id="9e98d-125">フィールドが既定値を持つことを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-125">Specifies that the field has a default value.</span></span>|  
+|`fdHasFieldRVA`|<span data-ttu-id="9e98d-126">フィールドの相対仮想アドレスを持つことを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e98d-126">Specifies that the field has a relative virtual address.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b29f4-127">要件</span><span class="sxs-lookup"><span data-stu-id="b29f4-127">Requirements</span></span>  
- <span data-ttu-id="b29f4-128">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="b29f4-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e98d-127">必要条件</span><span class="sxs-lookup"><span data-stu-id="9e98d-127">Requirements</span></span>  
+ <span data-ttu-id="9e98d-128">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e98d-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b29f4-129">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b29f4-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="9e98d-129">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="9e98d-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b29f4-130">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b29f4-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9e98d-130">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e98d-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b29f4-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="b29f4-131">See Also</span></span>  
- [<span data-ttu-id="b29f4-132">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="b29f4-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="9e98d-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="9e98d-131">See also</span></span>
+- [<span data-ttu-id="9e98d-132">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="9e98d-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

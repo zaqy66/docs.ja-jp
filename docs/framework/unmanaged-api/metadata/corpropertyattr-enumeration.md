@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263981708af2e40bd3690a3cd344156488eed0dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577581"
 ---
-# <a name="corpropertyattr-enumeration"></a><span data-ttu-id="17a22-102">CorPropertyAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="17a22-102">CorPropertyAttr Enumeration</span></span>
-<span data-ttu-id="17a22-103">プロパティのメタデータを記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="17a22-103">Contains values that describe the metadata of a property.</span></span>  
+# <a name="corpropertyattr-enumeration"></a><span data-ttu-id="3486a-102">CorPropertyAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="3486a-102">CorPropertyAttr Enumeration</span></span>
+<span data-ttu-id="3486a-103">プロパティのメタデータを記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="3486a-103">Contains values that describe the metadata of a property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17a22-104">構文</span><span class="sxs-lookup"><span data-stu-id="17a22-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3486a-104">構文</span><span class="sxs-lookup"><span data-stu-id="3486a-104">Syntax</span></span>  
   
 ```  
 typedef enum CorPropertyAttr {  
@@ -40,22 +40,22 @@ typedef enum CorPropertyAttr {
 } CorPropertyAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="17a22-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="17a22-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3486a-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="3486a-105">Members</span></span>  
   
-|<span data-ttu-id="17a22-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="17a22-106">Member</span></span>|<span data-ttu-id="17a22-107">説明</span><span class="sxs-lookup"><span data-stu-id="17a22-107">Description</span></span>|  
+|<span data-ttu-id="3486a-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="3486a-106">Member</span></span>|<span data-ttu-id="3486a-107">説明</span><span class="sxs-lookup"><span data-stu-id="3486a-107">Description</span></span>|  
 |------------|-----------------|  
-|`prSpecialName`|<span data-ttu-id="17a22-108">プロパティは、特別なことと、その名前が記述されているを指定する方法です。</span><span class="sxs-lookup"><span data-stu-id="17a22-108">Specifies that the property is special, and that its name describes how.</span></span>|  
-|`prReservedMask`|<span data-ttu-id="17a22-109">共通言語ランタイムでは、内部使用に予約されています。</span><span class="sxs-lookup"><span data-stu-id="17a22-109">Reserved for internal use by the common language runtime.</span></span>|  
-|`prRTSpecialName`|<span data-ttu-id="17a22-110">共通言語ランタイム メタデータの内部 Api がプロパティ名のエンコードを確認する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="17a22-110">Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.</span></span>|  
-|`prHasDefault`|<span data-ttu-id="17a22-111">既定値を持つプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="17a22-111">Specifies that the property has a default value.</span></span>|  
-|`prUnused`|<span data-ttu-id="17a22-112">使用されません。</span><span class="sxs-lookup"><span data-stu-id="17a22-112">Unused.</span></span>|  
+|`prSpecialName`|<span data-ttu-id="3486a-108">プロパティが、特別なであると、その名前を記述しているを指定しますか。</span><span class="sxs-lookup"><span data-stu-id="3486a-108">Specifies that the property is special, and that its name describes how.</span></span>|  
+|`prReservedMask`|<span data-ttu-id="3486a-109">共通言語ランタイムでは、内部使用のため予約されています。</span><span class="sxs-lookup"><span data-stu-id="3486a-109">Reserved for internal use by the common language runtime.</span></span>|  
+|`prRTSpecialName`|<span data-ttu-id="3486a-110">共通言語ランタイム メタデータの内部 Api がプロパティ名のエンコードを確認する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="3486a-110">Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.</span></span>|  
+|`prHasDefault`|<span data-ttu-id="3486a-111">既定値を持つプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="3486a-111">Specifies that the property has a default value.</span></span>|  
+|`prUnused`|<span data-ttu-id="3486a-112">使用されません。</span><span class="sxs-lookup"><span data-stu-id="3486a-112">Unused.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="17a22-113">要件</span><span class="sxs-lookup"><span data-stu-id="17a22-113">Requirements</span></span>  
- <span data-ttu-id="17a22-114">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="17a22-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3486a-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="3486a-113">Requirements</span></span>  
+ <span data-ttu-id="3486a-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3486a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17a22-115">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="17a22-115">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="3486a-115">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="3486a-115">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="17a22-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17a22-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3486a-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3486a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17a22-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="17a22-117">See Also</span></span>  
- [<span data-ttu-id="17a22-118">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="17a22-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="3486a-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="3486a-117">See also</span></span>
+- [<span data-ttu-id="3486a-118">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="3486a-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
