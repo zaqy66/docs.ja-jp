@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 933a7bace2e6fab746d7ead01081a456ed437e66
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2bbc3d249504bf8bb80dd29de3110002f0fd87e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548821"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>チュートリアル: WPF での Windows フォーム コントロールのホスト
 
@@ -24,7 +24,7 @@ ms.locfileid: "48582360"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-Visual Studio でこのチュートリアルを完了する必要があります。
+このチュートリアルを完了するには Visual Studio が必要です。
 
 ## <a name="hosting-the-windows-forms-control"></a>Windows フォームのコントロールのホスト
 
@@ -67,8 +67,8 @@ Visual Studio でこのチュートリアルを完了する必要があります
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [チュートリアル: WPF での XAML を使用した Windows フォーム コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
-- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [チュートリアル: XAML を使用して、WPF での Windows フォーム コントロールをホストしています。](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
+- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Windows フォーム コントロールおよび同等の WPF コントロール](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)
 - [WPF のサンプル Windows フォーム コントロールのホスト](https://go.microsoft.com/fwlink/?LinkID=160057)

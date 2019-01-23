@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b031fc35a4687a8535e3cb5e9ef2a53bab9fe376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625109"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout メソッド
 指定した TypeDef トークンによって参照されるクラスのレイアウト情報を取得します。  
@@ -42,32 +42,32 @@ HRESULT GetClassLayout  (
   
 #### <a name="parameters"></a>パラメーター  
  `td`  
- [in]返すレイアウトを持つクラスの TypeDef トークンです。  
+ [in]返されるレイアウトを使用して、クラスの TypeDef トークンです。  
   
  `pdwPackSize`  
- [out]値 1、2、4、8、またはクラスのパック サイズを表す、16 のいずれか。  
+ [out]1、2、4、8、または 16 では、クラスのパック サイズを表す値の 1 つ。  
   
  `rFieldOffset`  
- [out]配列[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)値。  
+ [out]配列の[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)値。  
   
  `cMax`  
  [in] `rFieldOffset` 配列の最大サイズ。  
   
  `pcFieldOffset`  
- [out]返される要素の数`rFieldOffset`です。  
+ [out]返される要素の数`rFieldOffset`します。  
   
  `pulClassSize`  
- [out]によって表されるクラスのバイト サイズ`td`です。  
+ [out]によって表されるクラスのバイト サイズ`td`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4623e8060b93c9331c99f9713598e177b6807472
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5b3e962bd68d78d9a61e41b1e6049dc35acc50c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623080"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
 `illegalPrepareConstrainedRegion` マネージド デバッグ アシスタント (MDA) は、<xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> メソッドの呼び出しが、例外ハンドラーの `try` ステートメントの直前にない場合にアクティブ化されます。 この制限は、MSIL レベルであり、呼び出しと `try` の間でコメントなどのコードを生成しないソースの使用が許可されます。  
@@ -64,8 +64,8 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>  
- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

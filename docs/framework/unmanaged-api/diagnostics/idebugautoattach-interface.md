@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a88f8b2ad1ac59cf7044ca5d7ace5a468510b6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550657"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach インターフェイス
 サーバー起動デバッガーの自動アタッチ用インターフェイスを定義します。  
@@ -32,8 +32,8 @@ ms.locfileid: "33424756"
 |------------|-----------------|  
 |[AutoAttach メソッド](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|サーバー起動デバッガーの自動実行をアタッチします。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** DbgAutoAttach.idl  
   
-## <a name="see-also"></a>関連項目  
- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

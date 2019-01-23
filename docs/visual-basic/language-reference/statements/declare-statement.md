@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548951"
 ---
 # <a name="declare-statement"></a>Declare Statement
 外部のファイルに実装されているプロシージャへの参照を宣言します。  
@@ -54,7 +54,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |用語|定義|  
 |---|---|  
 |`attributelist`|任意。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。|  
-|`accessmodifier`|任意。 次のいずれかの値を指定します。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保護されています。](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />- [保護されたフレンド](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 参照してください[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。|  
+|`accessmodifier`|任意。 次のいずれかの値を指定します。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保護されています。](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />- [保護されたフレンド](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。|  
 |`charsetmodifier`|任意。 文字セットとファイルを指定の情報を検索します。 次のいずれかの値を指定します。<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (既定値)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [自動](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|省略可能、ただしか`Sub`または`Function`表示する必要があります。 外部プロシージャが値を返さないことを示します。|  
@@ -124,7 +124,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、名前変更していない場合、外部の手順をまず検索します。 失敗した場合、追加している外部プロシージャの末尾に"W"名前を指定し、もう一度検索します。  
   
--   **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、次を参照してください。[チュートリアル: Windows Api の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
+-   **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows Api を呼び出す](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
   
 > [!IMPORTANT]
 >  共通言語ランタイム (CLR) の外部で実行している外部プロシージャ、ある*アンマネージ コード*します。 このようなプロシージャ、Win32 API 関数または COM メソッドの場合は、たとえばを呼び出すときに、セキュリティ リスクにアプリケーションを公開する可能性があります。 詳細については、次を参照してください。[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)します。  
@@ -141,12 +141,12 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)  
- [チュートリアル : Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)
+- [チュートリアル: Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

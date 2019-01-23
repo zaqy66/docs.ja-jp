@@ -1,18 +1,18 @@
 ---
-title: 'チュートリアル : WPF での Direct3D9 コンテンツのホスト'
+title: 'チュートリアル: WPF での Direct3D9 コンテンツをホストしています。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 1fa4c2347448e23bbf740093541ec2b834df6705
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c8bee03cc3a72e1938cca182d59818f9bc2eabc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626058"
 ---
-# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>チュートリアル : WPF での Direct3D9 コンテンツのホスト
+# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>チュートリアル: WPF での Direct3D9 コンテンツをホストしています。
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツをホストする方法を示します。  
   
  このチュートリアルでは次のタスクを実行します。  
@@ -32,14 +32,14 @@ ms.locfileid: "48849881"
   
 -   DirectX 9 以降の SDK です。  
   
--   WPF と互換性のある形式での Direct3D9 コンテンツを含む DLL です。 詳細については、次を参照してください。 [WPF と Direct3D9 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)と[チュートリアル: WPF でのホストの Direct3D9 のコンテンツを作成する](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)します。  
+-   WPF と互換性のある形式での Direct3D9 コンテンツを含む DLL です。 詳細については、次を参照してください。 [WPF と Direct3D9 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)と[チュートリアル。WPF でホストするための Direct3D9 コンテンツの作成](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)です。  
   
 ## <a name="creating-the-wpf-project"></a>WPF プロジェクトを作成します。  
  最初の手順では、WPF アプリケーションのプロジェクトを作成します。  
   
 #### <a name="to-create-the-wpf-project"></a>WPF プロジェクトを作成するには  
   
--   新しい WPF アプリケーション プロジェクトを作成するという名前の Visual c# で`D3DHost`します。 詳細については、次を参照してください。[方法: 新しい WPF アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)します。  
+-   新しい WPF アプリケーション プロジェクトを作成するという名前の Visual c# で`D3DHost`します。 詳細については、「[方法 :新しい WPF アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)します。  
   
      MainWindow.xaml を開きます、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
   
@@ -71,6 +71,6 @@ ms.locfileid: "48849881"
   
      WPF アプリケーション内での Direct3D9 コンテンツが表示されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Interop.D3DImage>  
- [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Interop.D3DImage>
+- [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)

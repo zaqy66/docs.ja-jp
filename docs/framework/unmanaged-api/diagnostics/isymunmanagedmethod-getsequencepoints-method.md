@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623626"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints メソッド
 このメソッド内のすべてのシーケンス ポイントを取得します。  
@@ -49,16 +49,16 @@ HRESULT GetSequencePoints(
  [out]ポインター、`ULONG32`シーケンス ポイントの格納に必要なバッファーの長さを受け取る。  
   
  `offsets`  
- [in]シーケンス ポイントのメソッドの先頭から language (MSIL) オフセットを中級者向けの Microsoft を格納する配列。  
+ [in]シーケンス ポイントに対するメソッドの先頭から language (MSIL) オフセットを Microsoft 中間を格納する配列。  
   
  `documents`  
- [in]シーケンス ポイントが存在するドキュメントを格納する配列。  
+ [in]シーケンス ポイントが配置されているドキュメントを格納する配列。  
   
  `lines`  
- [in]シーケンス ポイントが存在するドキュメントの行を格納する配列。  
+ [in]シーケンス ポイントが配置されているドキュメントの行を格納する配列。  
   
  `columns`  
- [in]シーケンス ポイントが存在するドキュメント内の列を格納する配列。  
+ [in]シーケンス ポイントが配置されているドキュメント内の列を格納する配列。  
   
  `endLines`  
  [in]シーケンス ポイントが終了するドキュメント内の行の配列。  
@@ -67,10 +67,10 @@ HRESULT GetSequencePoints(
  [in]シーケンス ポイントが終了するドキュメント内の列の配列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

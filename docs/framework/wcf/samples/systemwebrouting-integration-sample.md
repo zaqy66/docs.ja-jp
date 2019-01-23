@@ -2,12 +2,12 @@
 title: SystemWebRouting 統合サンプル
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 95372d6052690af30042061d623b6004699c21d9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1724fee816ddd210ffba73159596529bd4bc803e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548254"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 統合サンプル
 このサンプルでは、<xref:System.Web.Routing> 名前空間のクラスとのホスト層の統合を示します。 <xref:System.Web.Routing> 名前空間のクラスを使用すると、物理リソースに直接対応しない URL をアプリケーションで使用できます。 Web のルーティングを使用すると、開発者は実際の WCF サービスにバックアップし、マップされている HTTP 仮想アドレスの作成ができます。 これは、物理ファイルやリソースを配置せずに WCF サービスをホストする必要がある場合、または .html や .aspx などのファイルがない URL を使用してサービスにアクセスする必要がある場合に役立ちます。 このサンプルでは、<xref:System.Web.Routing.RouteTable> クラスを使用して、global.asax で定義された実行中のサービスにマップされる仮想 URI を作成する方法を示します。 
@@ -83,5 +83,5 @@ ms.locfileid: "44083729"
 > [!NOTE]
 >  既定のアプリケーション プール バージョンを更新する必要があります[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]バージョン 2 に設定されている場合。  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>関連項目
+- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

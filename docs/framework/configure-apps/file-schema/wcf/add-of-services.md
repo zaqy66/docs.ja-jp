@@ -2,12 +2,12 @@
 title: '&lt;services&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: 9a86b7549e0efef10cbeb16dcc427d04065e43d3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dc68357332ebe06affd18f1539a66587b6ed1b91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549995"
 ---
 # <a name="ltaddgt-of-ltservicesgt"></a>&lt;services&gt; の &lt;add&gt;
 インスタンスの設定を指定<xref:System.Workflow.Runtime.WorkflowRuntime>ワークフロー ベースの Windows Communication Foundation (WCF) サービスをホストするためです。 この要素は <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> 型です。  
@@ -66,8 +66,8 @@ ms.locfileid: "54145537"
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
- <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
+- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
+- <xref:System.Workflow.Runtime.WorkflowRuntime>
+- [ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

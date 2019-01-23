@@ -1,18 +1,18 @@
 ---
-title: '方法 : Visual Basic で XML ドキュメントを作成する'
+title: '方法: Visual Basic での XML ドキュメントを作成します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 3dfec94a3dd1b8da5d371529b91b47f018bb3843
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d67724aad6cd3e7af30531328d85e89937390dd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551372"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法 : Visual Basic で XML ドキュメントを作成する
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法: Visual Basic での XML ドキュメントを作成します。
 この例では、コードに XML ドキュメントのコメントを追加する方法を示します。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "43527597"
   
 5.  ドキュメントのコメントを含む XML ファイルを生成するコードをコンパイルします。 詳細については、「[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [XML の使用によるコードのドキュメントの作成](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+## <a name="see-also"></a>関連項目
+- [XML の使用によるコードのドキュメントの作成](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)

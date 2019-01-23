@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78d9e27299c9d7ed7d6cb9b09dd659ba081c5fde
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b5a7d678d03435aa483ae4a4102672df504199d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550618"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 メソッド
 コンパイラが行情報が要件を満たしている限り、プログラム データベース (PDB) のストリームから変更されていない関数を省略できるようにします。 PDB の行の古い情報と、関数のすべての行の 1 つのデルタは正しい行情報を確認できます。  
@@ -49,8 +49,8 @@ HRESULT UpdateSymbolStore2(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedENCUpdate インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedENCUpdate インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

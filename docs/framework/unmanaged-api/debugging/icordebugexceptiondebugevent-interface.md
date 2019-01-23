@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9ba60d8-b54d-417e-bb3e-fde4b41ca44c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cedbbf2067a94aa73e40bd4651fc97b72aa9afef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7d2407e56b029d22d25a4836f4def1c55f979ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550527"
 ---
 # <a name="icordebugexceptiondebugevent-interface"></a>ICorDebugExceptionDebugEvent インターフェイス
-拡張、 [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)例外イベントをサポートするインターフェイスです。  
+拡張、 [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)例外イベントをサポートするインターフェイス。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -22,7 +22,7 @@ ms.locfileid: "33416303"
 |[GetNativeIP メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getnativeip-method.md)|この例外デバッグ イベントのネイティブ インターフェイス ポインターを取得します。|  
 |[GetStackPointer メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md)|この例外デバッグ イベントのスタック ポインターを取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `ICorDebugExceptionDebugEvent` インターフェイスは、次のイベントの種類によって実装されます。  
   
 -   [MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
@@ -36,15 +36,15 @@ ms.locfileid: "33416303"
 > [!NOTE]
 >  このインターフェイスは .NET ネイティブでのみ使用可能です。 インターフェイス ポインターを取得するために `QueryInterface` を呼び出そうとすると、.NET ネイティブ外の ICorDebug シナリオに対して `E_NOINTERFACE` が返されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

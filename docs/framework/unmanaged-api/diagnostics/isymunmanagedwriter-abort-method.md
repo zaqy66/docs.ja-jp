@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb6a3e65b1f1d59cde3bff99e491bcf09816c8ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4c79cb3df37a9ed10e46567be63aad29fee37c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550189"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>ISymUnmanagedWriter::Abort メソッド
-シンボルをシンボル ストアにコミットせずシンボル ライターを閉じます。 この呼び出しの後、シンボル ライターが、以降の更新を無効になります。 シンボルをコミットし、シンボル ライターを閉じて、使用、 [isymunmanagedwriter::close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)メソッド代わりにします。  
+シンボルをシンボル ストアにコミットせずには、シンボル ライターを閉じます。 この呼び出しの後、シンボルのライターが、以降の更新は無効になります。 コミットのシンボルをシンボル ライターを閉じるは、使用、 [isymunmanagedwriter::close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ HRESULT Abort();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

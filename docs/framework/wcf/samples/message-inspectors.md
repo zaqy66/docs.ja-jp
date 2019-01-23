@@ -2,12 +2,12 @@
 title: メッセージ インスペクター
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 99886ef112a74bb86346208c5c24b09349ba4027
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552854"
 ---
 # <a name="message-inspectors"></a>メッセージ インスペクター
 このサンプルでは、クライアントとサービスのメッセージ インスペクタを実装して構成する方法を示します。  

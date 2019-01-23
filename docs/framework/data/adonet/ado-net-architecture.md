@@ -2,12 +2,12 @@
 title: ADO.NET のアーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623184"
 ---
 # <a name="adonet-architecture"></a>ADO.NET のアーキテクチャ
 従来のデータ処理は、主に接続をベースとした 2 層モデルに基づいていました。 近年、データ処理では多層アーキテクチャの採用が増えてきており、アプリケーションのスケーラビリティを高める非接続型アプローチが主流になりつつあります。  
@@ -49,13 +49,13 @@ ADO.NET のアーキテクチャ
  ADO.NET Entity Framework は、開発者がリレーショナル ストレージ スキーマに対して直接プログラムを作成するのではなく、概念アプリケーション モデルに対してプログラムを作成して、データ アクセス アプリケーションを作成できるように設計されています。 その目的は、データ指向アプリケーションに必要なコードの量と保守作業の量を減らすことです。 詳細については、次を参照してください。 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)します。  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、Web またはイントラネットにデータ サービスを展開するために使用されます。 データは、エンティティ データ モデルの仕様に従ってエンティティおよびリレーションシップとして構成されます。 このモデルで展開されるデータは、標準 HTTP プロトコルによってアドレス指定可能です。 詳細については、次を参照してください。 [WCF データ サービスの 4.5](../../../../docs/framework/data/wcf/index.md)します。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、Web またはイントラネットにデータ サービスを展開するために使用されます。 データは、エンティティ データ モデルの仕様に従ってエンティティおよびリレーションシップとして構成されます。 このモデルで展開されるデータは、標準 HTTP プロトコルによってアドレス指定可能です。 詳細については、「[WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)」を参照してください。  
   
 ## <a name="xml-and-adonet"></a>XML と ADO.NET  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] では XML の機能を活用して、データに対する非接続型アクセス機能を実現します。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] は [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の XML クラスと密接に連携するように設計されています。これらはいずれも同じアーキテクチャに属するコンポーネントです。  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] と、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の XML クラスは、`DataSet` オブジェクトに集約されています。 `DataSet` に、XML ソース (ファイルまたは XML ストリーム) に含まれるデータを入力できます。 `DataSet` は、XML スキーマ定義言語 (XSD) スキーマを含む、W3C (World Wide Web Consortium) 準拠の XML として作成できます。これには `DataSet` 内のデータのソースは関係ありません。 `DataSet` のネイティブのシリアル化形式は XML であることから、層間でデータを移動するための媒体として優れており、XML Web サービスとの間でデータとスキーマ コンテキストをリモート処理する場合には `DataSet` が最適な選択となります。 詳細については、「[XML ドキュメントと XML データ](../../../../docs/standard/data/xml/index.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

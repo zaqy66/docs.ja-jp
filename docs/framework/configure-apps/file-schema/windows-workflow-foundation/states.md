@@ -3,11 +3,12 @@ title: '&lt;状態&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: fe02106d8d7f70cb328214c7e464d80a41b75528
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d1ec35b1c434b8188fde7b546e2dee42a93f5c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550579"
 ---
 # <a name="ltstatesgt"></a>&lt;状態&gt;
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
@@ -19,8 +20,8 @@ ms.lasthandoff: 05/03/2018
 \<trackingProfile>  
 \<ワークフロー >  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
-\<状態 >  
+\<workflowInstanceQuery>  
+\<states>  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<状態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態。|  
+|[\<state>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリ。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  返されたレコードは、このコレクションの状態でフィルター処理されます。  
   
  次の表に、有効な状態の値を示します。  
@@ -92,9 +93,9 @@ ms.lasthandoff: 05/03/2018
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548795"
 ---
 # <a name="creating-user-defined-bindings"></a>ユーザー定義バインディングの作成
 システムから提供されないバインディングを作成する方法はいくつかあります。  
@@ -23,7 +23,7 @@ ms.locfileid: "50186058"
 ## <a name="the-order-of-binding-elements"></a>バインド要素の順序  
  各バインド要素は、メッセージの送信または受信時の処理手順を表します。 実行時に、バインド要素により、送受信チャネル スタックの作成に必要なチャネルとリスナーが作成されます。  
   
- バインディング要素には主に、プロトコル バインディング要素、エンコーディング バインディング要素、トランスポート バインディング要素という 3 つの種類があります。  
+ バインド要素の次の 3 つの主な種類があります。プロトコルの要素、エンコーディング バインド要素、およびトランスポート バインド要素をバインドします。  
   
  プロトコル バインド要素 : この要素はメッセージで動作する上位処理ステップを表します。 このバインド要素で作成したチャネルとリスナーを使って、メッセージ内容の追加、削除、変更が可能です。 特定のバインディングには、それぞれが <xref:System.ServiceModel.Channels.BindingElement> を継承する任意の数のプロトコル バインド要素を含めることができます。 Windows Communication Foundation (WCF) など、いくつかのプロトコル バインド要素が含まれています、 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50186058"
 |セキュリティ|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Ｘ|  
 |複合二重|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Ｘ|  
 |エンコーディング|テキスト、バイナリ、MTOM、カスタム|○*|  
-|Transport|TCP、名前付きパイプ、HTTP、HTTPS、MSMQ、およびカスタム|はい|  
+|Transport|TCP、名前付きパイプ、HTTP、HTTPS、MSMQ、およびカスタム|[はい]|  
   
  * エンコーディングに必要なため、各バインド エンコーディングが指定されていない場合、WCF は既定エンコーディングを追加します。 既定値は、HTTP および HTTPS トランスポートの場合はテキスト/XML、それ以外の場合はバイナリです。  
   
@@ -56,7 +56,7 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- 新しいバインド要素を記述する方法は、機能性の詳細によって異なります。 サンプルの 1 つ[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)、1 つの種類のバインド要素を実装する方法の詳細な説明を提供します。  
+ 新しいバインド要素を記述する方法は、機能性の詳細によって異なります。 このサンプルでは、いずれか[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)、1 つの種類のバインド要素を実装する方法の詳細な説明を提供します。  
   
 ## <a name="creating-a-new-binding"></a>新しいバインディングの作成  
  ユーザーが作成するバインド要素は、2 つの方法で使用できます。 前のセクションでは、カスタム バインディングを使用する 1 番目の方法が説明されています。 カスタム バインディングを使用すれば、バインド要素の任意のセットに基づいて独自のバインディングを作成できます。ユーザーが作成するバインディング エレメントもこれに含まれます。  
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>標準バインディングからの派生  
  まったく新しいバインディング クラスを作成する代わりに、システムから提供される既存のバインディングの 1 つを拡張することができます。 前述の場合と同様、<xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> メソッドと <xref:System.ServiceModel.Channels.Binding.Scheme%2A> プロパティをオーバーライドする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.Binding>  
- [カスタム バインディング](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.Binding>
+- [カスタム バインディング](../../../../docs/framework/wcf/extending/custom-bindings.md)

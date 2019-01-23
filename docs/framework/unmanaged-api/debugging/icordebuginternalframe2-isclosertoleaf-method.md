@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552165"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf メソッド
-チェックするかどうか、`this`内部フレームは、指定した ICorDebugFrame オブジェクトよりも、リーフに近づきます。  
+チェックするかどうか、`this`内部フレームは、指定した ICorDebugFrame オブジェクトよりも、リーフに近いです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,10 +36,10 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 #### <a name="parameters"></a>パラメーター  
  `pFrameToCompare`  
- [in]比較するポインター`ICorDebugFrame`オブジェクト。  
+ [in]比較へのポインター`ICorDebugFrame`オブジェクト。  
   
  `pIsCloser`  
- [out]`true`場合、`this`内部フレームがで指定された枠よりも、リーフに近い`pFrameToCompare`、それ以外の`false`します。  
+ [out]`true`場合、`this`内部フレームがで指定されたフレームよりも近いリーフのため`pFrameToCompare`、それ以外の`false`します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -50,19 +50,19 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_FAIL|比較を実行できませんでした。|  
 |E_INVALIDARG|`pFrameToCompare` または `pIsCloser` が null です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `IsCloserToLeaf` スタック上の他のフレームを持つ内部フレームをインターリーブのポリシーを実装するために使用します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugInternalFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugInternalFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

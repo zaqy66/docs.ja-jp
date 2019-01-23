@@ -1,5 +1,5 @@
 ---
-title: '方法 : DateTimePicker コントロールを使用して時間を表示する'
+title: '方法: 時間 DateTimePicker コントロールを表示します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: c65a1102ccb8b05602d813831745dbcefed8c17d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 727d045e30eddf43dbb18159aafb40827c83fc7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550852"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a>方法 : DateTimePicker コントロールを使用して時間を表示する
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a>方法: 時間 DateTimePicker コントロールを表示します。
 アプリケーションでユーザーが日付と時刻を選択して、指定された形式で日付と時刻を表示できるようにするには、<xref:System.Windows.Forms.DateTimePicker> コントロールを使用します。 次の手順は、<xref:System.Windows.Forms.DateTimePicker> コントロールを使用して時刻を表示する方法を示します。  
   
 ### <a name="to-display-the-time-with-the-datetimepicker-control"></a>方法 : DateTimePicker コントロールを使用して時間を表示する  
@@ -42,7 +42,7 @@ ms.locfileid: "44194773"
   
 -   System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- [DateTimePicker コントロール](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [DateTimePicker コントロール](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)

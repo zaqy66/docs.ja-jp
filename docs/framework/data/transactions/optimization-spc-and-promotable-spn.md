@@ -2,12 +2,12 @@
 title: 単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b63c0a54fda54306891bdec0edd8d2e3dc65b595
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553062"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化
 ここでは、パフォーマンスを最適化するために <xref:System.Transactions> インフラストラクチャに用意されているメカニズムについて説明します。  
@@ -30,9 +30,9 @@ ms.locfileid: "33363287"
  <xref:System.Transactions> トランザクションのエスカレートが必要な場合 (複数の RM をサポートする場合など) は、<xref:System.Transactions> がリソース マネージャーに通知します。この通知は、<xref:System.Transactions.ITransactionPromoter.Promote%2A> インターフェイスの派生元である <xref:System.Transactions.ITransactionPromoter> インターフェイス上の <xref:System.Transactions.IPromotableSinglePhaseNotification> メソッドを呼び出すことで行われます。 次に、リソース マネージャーは、ローカル トランザクション (ログが不要) から DTC トランザクションに参加できるトランザクション オブジェクトへ、トランザクションを内部的に変換し、既に実行済みの作業に関連付けます。 トランザクションのコミットが要求されると、トランザクション マネージャーが <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> 通知をリソース マネージャーに送信し、リソース マネージャーがエスカレーション中に作成される分散トランザクションをコミットします。  
   
 > [!NOTE]
->  **TransactionCommitted** DTC トランザクションのアクティビティ ID を含むトレース (つまり、エスカレート済みのトランザクションで Commit が呼び出されたときに生成されます)。  
+>  **TransactionCommitted** (エスカレートされたトランザクションで Commit が呼び出されたときに生成される) トレースには、DTC トランザクションのアクティビティ ID が含まれています。  
   
- 管理のエスカレーションの詳細については、次を参照してください。[トランザクション管理のエスカレーション](../../../../docs/framework/data/transactions/transaction-management-escalation.md)です。  
+ 管理エスカレーションの詳細については、次を参照してください。 [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md)します。  
   
 ## <a name="transaction-management-escalation-scenario"></a>トランザクション管理エスカレーションのシナリオ  
  次のシナリオは、<xref:System.Data>名前空間をリソース マネージャーの "プロキシ" として使用して、分散トランザクションにエスカレートする操作を示しています。 このシナリオでは、トランザクションで呼び出されたデータベースへの <xref:System.Data><xref:System.Data>接続 (CN1) が既に存在し、アプリケーションが別の  接続 (CN2) を呼び出そうとしている場合を想定しています。 トランザクションは、完全な分散 2 フェーズ コミット トランザクションとして、DTC にエスカレートする必要があります。  
@@ -54,12 +54,12 @@ ms.locfileid: "33363287"
 7.  ここで、両方が DTC 分散トランザクションに参加します。  
   
 ## <a name="single-phase-commit-optimization"></a>単一フェーズ コミットの最適化  
- 単一フェーズ コミット プロトコルは、すべての更新が明示的な調整なしに行われるため、実行時に、より効率的です。 この最適化を活用するには、リソースの <xref:System.Transactions.ISinglePhaseNotification> インターフェイスを使用してリソース マネージャーを実装し、<xref:System.Transactions.Transaction.EnlistDurable%2A> メソッドまたは <xref:System.Transactions.Transaction.EnlistVolatile%2A> メソッドを使用してトランザクションに参加する必要があります。 具体的には、 *EnlistmentOptions*に等しくなる必要ありますパラメーター<xref:System.Transactions.EnlistmentOptions.None>単一フェーズのコミットが実行できることを確認します。  
+ 単一フェーズ コミット プロトコルは、すべての更新が明示的な調整なしに行われるため、実行時に、より効率的です。 この最適化を活用するには、リソースの <xref:System.Transactions.ISinglePhaseNotification> インターフェイスを使用してリソース マネージャーを実装し、<xref:System.Transactions.Transaction.EnlistDurable%2A> メソッドまたは <xref:System.Transactions.Transaction.EnlistVolatile%2A> メソッドを使用してトランザクションに参加する必要があります。 具体的には、 *EnlistmentOptions*パラメーターと等しく必要があります<xref:System.Transactions.EnlistmentOptions.None>単一フェーズ コミットが実行されることを確認します。  
   
  <xref:System.Transactions.ISinglePhaseNotification> インターフェイスは <xref:System.Transactions.IEnlistmentNotification> インターフェイスから派生するため、RM が単一フェーズ コミットを実行できない場合でも、2 フェーズ コミット通知を受信できます。  RM が TM から <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> 通知を受信した場合は、コミットするために必要な作業を実行する必要があります。そして、それに応じて <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> パラメーター上の <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A>、<xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A>、または <xref:System.Transactions.SinglePhaseEnlistment> メソッドを呼び出すことにより、トランザクションのコミットまたはロールバックのどちらが実行されるかを、トランザクション マネージャーに通知する必要があります。 この段階で、参加リストの <xref:System.Transactions.Enlistment.Done%2A> の応答は、ReadOnly セマンティクスを意味します。 したがって、他のメソッドに加えて、<xref:System.Transactions.Enlistment.Done%2A> を応答しないでください。  
   
- 1 つだけの揮発性参加リストとなしの永続参加リストがある、揮発性参加リストは SPC という通知を受け取ります。  任意の揮発性参加リストと 1 つだけの永続参加リストがある場合は、揮発性参加リストは、2 pc を受信します。 完了すると、永続参加リストが SPC を受信します。  
+ 1 つだけの揮発性参加リストとなしの永続参加リストが場合、揮発性参加リストが SPC 通知を受信します。  任意の揮発性参加リストと 1 つだけの永続参加リストがある場合は、揮発性参加リストは 2 pc を受信します。 完了すると、永続参加リストが SPC を受信します。  
   
-## <a name="see-also"></a>関連項目  
- [トランザクションの参加要素としてのリソースの参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [単一フェースおよび複数フェーズでのトランザクションのコミット](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+## <a name="see-also"></a>関連項目
+- [トランザクションの参加要素としてのリソースの参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+- [単一フェースおよび複数フェーズでのトランザクションのコミット](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

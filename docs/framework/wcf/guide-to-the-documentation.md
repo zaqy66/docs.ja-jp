@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552625"
 ---
 # <a name="guide-to-the-documentation"></a>ドキュメントのガイド
 ここでは、Windows Communication Foundation (WCF) のドキュメントについてのガイダンスです。 リンク先のドキュメントは、特定の目的と専門知識のレベルに応じて分類された、推奨される出発点となります。  
@@ -44,7 +44,7 @@ ms.locfileid: "43520975"
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>Windows Communication Foundation の他のテクノロジの統合  
   
--   ASP.NET クライアントと通信するサービスを作成するを参照してください。[方法: ASP.NET Web サービス クライアントと相互運用する WCF サービスを構成する](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)します。  
+-   ASP.NET クライアントと通信するサービスを作成するを参照してください。[方法。ASP.NET Web サービス クライアントと相互運用する WCF サービスを構成する](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)します。  
   
 -   統合[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]リモート処理については[WCF への .NET リモート処理アプリケーションの移行](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)します。  
   
@@ -52,17 +52,17 @@ ms.locfileid: "43520975"
   
 -   既存の COM アプリケーションに WCF サービスまたはクライアントに統合する、次を参照してください。 [COM アプリケーションとの統合](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)します。  
   
--   既存の MSMQ アプリケーションに WCF サービスまたはクライアントに統合する、次を参照してください[する方法: WCF エンドポイントとのキューに置かれたメッセージを交換](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)と[する方法: WCF エンドポイントとメッセージ キュー アプリケーションメッセージを交換](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
+-   既存の MSMQ アプリケーションに WCF サービスまたはクライアントに統合する、次を参照してください。[方法。Exchange には、WCF エンドポイントでメッセージがキューに置かれた](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)と[方法。WCF エンドポイントでメッセージを交換して、メッセージ キュー アプリケーション](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)します。  
   
 -   サービスをホストするインターネット インフォメーション サービス (IIS) を使用する、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。  
   
--   WCF を使用すると、Web サービス拡張 (WSE) 3.0 サービスを使用して、次を参照してください。[方法: WSE 3.0 サービスにアクセス](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)します。  
+-   WCF を使用すると、Web サービス拡張 (WSE) 3.0 サービスを使用して、次を参照してください。[方法。アクセスの WSE 3.0 サービス](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)します。  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation でサポートされる WS-* プロトコル  
  システム指定のバインディングでサポートされるプロトコルの一覧を表示するには、次を参照してください。[システム標準の相互運用性バインディングでサポートされる Web サービス プロトコル](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)します。 システム指定のバインディングの一覧を表示するには、次を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation サンプル](../../../docs/framework/wcf/samples/index.md)  
- [概念](../../../docs/framework/wcf/conceptual-overview.md)  
- [ガイドラインとベスト プラクティス](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>関連項目
+- [Windows Communication Foundation サンプル](../../../docs/framework/wcf/samples/index.md)
+- [概念](../../../docs/framework/wcf/conceptual-overview.md)
+- [ガイドラインとベスト プラクティス](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)

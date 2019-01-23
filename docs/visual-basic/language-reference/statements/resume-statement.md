@@ -15,17 +15,17 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ef6a2e22c1394065ba6127aa3dd388b47238dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624796"
 ---
 # <a name="resume-statement"></a>Resume ステートメント
 エラー処理ルーチンを完了した後は、実行を再開します。  
   
- 非構造化例外処理を使用するのではなく、可能であれば、コード内の構造化例外処理を使用することをお勧め、`On Error`と`Resume`ステートメント。 詳しくは、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
+ 非構造化例外処理を使用するのではなく、可能であれば、コード内の構造化例外処理を使用することをお勧め、`On Error`と`Resume`ステートメント。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ Resume [ Next | line ]
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  非構造化例外処理を使用するのではなく、可能であれば、コード内の構造化例外処理を使用することをお勧め、`On Error`と`Resume`ステートメント。 詳しくは、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
+>  非構造化例外処理を使用するのではなく、可能であれば、コード内の構造化例外処理を使用することをお勧め、`On Error`と`Resume`ステートメント。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
   
  使用する場合、`Resume`ステートメント任意の場所以外のエラー処理ルーチンで、エラーが発生します。  
   
@@ -58,11 +58,11 @@ Resume [ Next | line ]
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## <a name="requirements"></a>必要条件  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>関連項目  
- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Error ステートメント](../../../visual-basic/language-reference/statements/error-statement.md)  
- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>関連項目
+- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Error ステートメント](../../../visual-basic/language-reference/statements/error-statement.md)
+- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)

@@ -2,12 +2,12 @@
 title: '&lt;iriParsing&gt;要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: de4eafc735bae69df5a2eb0adf263ba5cdca2097
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: ca8fc86b5b64b971e54eec8f7338010394b73239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552945"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt;要素 (Uri 設定)
 International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用されるかどうか、および IRI の解析規則が適用されるどうかを指定します。  
@@ -79,7 +79,7 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
