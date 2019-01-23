@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573975"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows フォームがサポートするデータ ソース
 これまでは、データ バインディングは、データベースに格納されたデータを活用するためにアプリケーション内で使用されています。 Windows フォーム データ バインドでは、特定の最小要件を満たしている限り、配列やコレクションなど、他の構造のデータだけでなく、データベースからデータにアクセスすることができます。  
@@ -37,7 +37,7 @@ ms.locfileid: "43858913"
  Windows フォームを使用して、オブジェクトのインスタンスでのパブリック プロパティにデータ バインド コントロールのプロパティのサポート、<xref:System.Windows.Forms.Binding>型。 Windows フォーム バインディング リスト ベースのコントロールのようサポートも、<xref:System.Windows.Forms.ListControl>インスタンス オブジェクト、<xref:System.Windows.Forms.BindingSource>使用されます。  
   
  配列またはコレクション  
- データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、次を参照してください。[方法: 配列のオブジェクト (Visual Basic) を作成する](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)します。  
+ データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、次を参照してください。[方法。(Visual Basic) のオブジェクトの配列を作成する](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)します。  
   
  一般に、使用する必要があります<xref:System.ComponentModel.BindingList%601>データ バインド オブジェクトのリストを作成する場合。 <xref:System.ComponentModel.BindingList%601> ジェネリック バージョンは、<xref:System.ComponentModel.IBindingList>インターフェイス。 <xref:System.ComponentModel.IBindingList>インターフェイスは、拡張、<xref:System.Collections.IList>プロパティ、メソッド、および双方向データ バインドに必要なイベントを追加することでインターフェイス。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "43858913"
   
 -   <xref:System.Data.DataViewManager>。 A<xref:System.Data.DataViewManager>全体のカスタマイズされたビューは、<xref:System.Data.DataSet>に似ています、<xref:System.Data.DataView>が含まれている関係を使用します。 <xref:System.Data.DataViewManager.DataViewSettings%2A>コレクション、および設定できます既定のフィルターされたビューの並べ替えオプションを<xref:System.Data.DataViewManager>が、特定のテーブル。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム データ バインドの変更通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォーム データ バインドの変更通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
+- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571484"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列挙体
 アセンブリ オプションを列挙します。  
@@ -61,28 +61,28 @@ typedef enum _AssemblyOptions {
 |optAssemTitle|文字列 - アセンブリのタイトルを表します。|  
 |optAssemDescription|文字列 - アセンブリの説明が含まれています。|  
 |optAssemConfig|文字列 - アセンブリの構成が含まれています。|  
-|optAssemOS|エンコードされた - 文字列:"dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion"です。|  
+|optAssemOS|-エンコードされた文字列:"dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion"。|  
 |optAssemProcessor|ULONG|  
 |optAssemLocale|文字列 - アセンブリのロケールが含まれています。|  
-|optAssemVersion|エンコードされた - 文字列:"Major.Minor.Build.Revision"です。|  
+|optAssemVersion|文字列 - としてエンコードされます。"Major.Minor.Build.Revision"。|  
 |optAssemCompany|文字列 - 会社が含まれています。|  
-|optAssemProduct|文字列 - 製品名を格納します。|  
+|optAssemProduct|文字列 - 製品名が含まれています。|  
 |optAssemProductVersion|文字列 (InformationalVersion とも呼ばれます)。|  
 |optAssemCopyright|文字列 - 著作権情報が含まれています。|  
-|optAssemTrademark|文字列 - 商標情報を格納します。|  
+|optAssemTrademark|文字列 - 商標に関する情報が含まれています。|  
 |optAssemKeyFile|String (ファイル名)。|  
 |optAssemKeyName|文字列 (キー名)。|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
 |optAssemHalfSign|Bool (DelaySign とも呼ばれます)。|  
-|optAssemFileVersion|文字列である"Major.Minor.Build.Revision"--ProductVersion と同じようにエンコードします。|  
-|optAssemSatelliteVer|文字列である"Major.Minor.Build.Revision"としてエンコードします。|  
-|optLastAssemOption|要素の数のカウンターです。|  
+|optAssemFileVersion|文字列 -"Major.Minor.Build.Revision"--ProductVersion と同じようにエンコードします。|  
+|optAssemSatelliteVer|文字列の"Major.Minor.Build.Revision"としてエンコードされます。|  
+|optLastAssemOption|要素の数のカウンター。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** alink.h  
   
  **ライブラリ**: alink.dll  
   
-## <a name="see-also"></a>関連項目  
- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>関連項目
+- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

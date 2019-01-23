@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: ce8209c89430988f57c211d388c6e73b2dc17004
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579772"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>チュートリアル: Win32 での WPF クロックのホスト
 配置する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションに、<xref:System.Windows.Interop.HwndSource>を含む HWND を提供する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。 最初に作成、 <xref:System.Windows.Interop.HwndSource>CreateWindow のようなパラメーターを指定します。  わかり、<xref:System.Windows.Interop.HwndSource>について、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内するコンテンツ。  最後に、out の HWND を取得する、<xref:System.Windows.Interop.HwndSource>します。 このチュートリアルは、混合を作成する方法を示しています。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]オペレーティング システムを reimplements アプリケーション**日付と時刻のプロパティ**ダイアログ。  
@@ -48,9 +48,9 @@ ms.locfileid: "46562256"
 ## <a name="clr"></a>/clr  
  この管理対象外にするには、まず[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プロジェクトを呼び出すことができる 1 つにマネージ コード。  Main メソッドで使用するために調整し、使用するために必要な Dll へのリンクは、/clr コンパイラ オプションを使用する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
   
- C++ プロジェクト内のマネージ コードの使用を有効にする: win32clock プロジェクトを右クリックし、選択**プロパティ**します。  **全般**プロパティ ページ (既定)、変更を共通言語ランタイム サポート`/clr`します。  
+ C++ プロジェクト内のマネージ コードの使用を有効にします。Win32clock プロジェクトを右クリックし、選択**プロパティ**します。  **全般**プロパティ ページ (既定)、変更を共通言語ランタイム サポート`/clr`します。  
   
- 次に、必要な Dll への参照を追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: presentationcore.dll 内、PresentationFramework.dll、System.dll、WindowsBase.dll、UIAutomationProvider.dll および UIAutomationTypes.dll します。 (次の手順と仮定 c: ドライブに、オペレーティング システムがインストールされている。)  
+ 次に、必要な Dll への参照を追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:Presentationcore.dll 内、PresentationFramework.dll、System.dll、WindowsBase.dll、UIAutomationProvider.dll および UIAutomationTypes.dll します。 (次の手順と仮定 c: ドライブに、オペレーティング システムがインストールされている。)  
   
 1.  Win32clock プロジェクトを右クリックして**参照.**、およびそのダイアログ内。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "46562256"
   
 3.  クリックして**新しい参照の追加**[参照] タブをクリックして、C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll を入力して [ok] をクリックします。  
   
-4.  Presentationframework.dll 内に操作を繰り返します。 C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll します。  
+4.  PresentationFramework.dll を繰り返します。C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll します。  
   
-5.  WindowsBase.dll に対して操作を繰り返します。 C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll します。  
+5.  WindowsBase.dll を繰り返します。C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll します。  
   
-6.  UIAutomationTypes.dll に操作を繰り返します。 C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll します。  
+6.  UIAutomationTypes.dll を繰り返します。C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.  
   
-7.  UIAutomationProvider.dll に対して操作を繰り返します。 C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll します。  
+7.  UIAutomationProvider.dll を繰り返します。C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.  
   
 8.  をクリックして**新しい参照の追加**、System.dll を選択して、クリックして**OK**します。  
   
@@ -225,7 +225,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  このスクリーン ショットを生成するコードに、最終結果を比較するを参照してください。 [Win32 クロックの相互運用性サンプル](https://go.microsoft.com/fwlink/?LinkID=160051)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Interop.HwndSource>  
- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Win32 相互運用のクロックのサンプル](https://go.microsoft.com/fwlink/?LinkID=160051)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Interop.HwndSource>
+- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Win32 相互運用のクロックのサンプル](https://go.microsoft.com/fwlink/?LinkID=160051)
