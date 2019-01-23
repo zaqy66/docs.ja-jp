@@ -2,12 +2,12 @@
 title: '&lt;oneWay&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: 5f3d534ee98100347acaa485e60a3c74f82ee0b9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c909bce5b54976a215a59ca8fd9f097f574acd80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600298"
 ---
 # <a name="ltonewaygt"></a>&lt;oneWay&gt;
 カスタム バインドのパケット ルーティングを有効にし、一方向メソッドを使用できるようにします。  
@@ -16,7 +16,7 @@ ms.locfileid: "54150579"
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<oneWay >  
+\<oneWay>  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54150579"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<channelPoolSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|現在のチャネルのチャネル プールのプロパティを格納する <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> オブジェクト。|  
+|[\<channelPoolSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|現在のチャネルのチャネル プールのプロパティを格納する <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> オブジェクト。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -53,11 +53,11 @@ ms.locfileid: "54150579"
 ## <a name="remarks"></a>Remarks  
  パケット ルーティングを有効にするには、この要素が提供する "一方向の変換" 層が必要です。 カスタム バインディングを作成し、このバインディングをセッション対応または要求応答のトランスポートの上に重ねて、パケット ルーティング可能にすることができます。 この要素は、一方向メソッドをよりネイティブな形式で公開するときにも役に立ちます。 複合二重や信頼できるメッセージ機能などのさらに大きい変換は、この層に対して適用できます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.OneWayBindingElement>  
- <xref:System.ServiceModel.Configuration.OneWayElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.OneWayBindingElement>
+- <xref:System.ServiceModel.Configuration.OneWayElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

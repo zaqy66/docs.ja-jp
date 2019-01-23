@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600090"
 ---
 # <a name="ialink-interface"></a>IALink インターフェイス
-.NET Framework アセンブリを構築する際に役立ちます。 特に、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。  
+.NET Framework アセンブリの構築に役立ちます。 その他のものは、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [AddFile Method1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "33408594"
   
  [ImportTypes メソッド](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
   
- 「Init メソッド  
+ "Init"メソッド  
   
  [LinkResource メソッド](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33408594"
   
  [SetNonAssemblyFlags メソッド](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>関連項目  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>関連項目
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

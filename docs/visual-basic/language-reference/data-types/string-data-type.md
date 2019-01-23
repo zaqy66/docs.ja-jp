@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598816"
 ---
 # <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
 0 ~ 65535 の値範囲の符号なし 16 ビット (2 バイト) コード ポイントのシーケンスを保持します。 各*コード ポイント*、または文字コードを 1 つの Unicode 文字を表します。 文字列は、0 からおよそ 20億を含めることができます (2 ^31) の Unicode 文字。  
@@ -78,11 +78,11 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **フレームワークの型。** .NET Framework に対応する型は、<xref:System.String?displayProperty=nameWithType>クラス。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.String?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.String?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

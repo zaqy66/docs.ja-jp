@@ -2,12 +2,12 @@
 title: FileName で指定されたファイルは、正しい XML ファイルではありません
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-ms.openlocfilehash: d4babe81f950bcf9b23d053405fb293e81056c36
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ffa39653c20127bb6af5e85654fee940a191fe5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603526"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>FileName で指定されたファイルは、正しい XML ファイルではありません
 指定したファイル名は、正しい XML ファイルではありません。 XML ドキュメントの許可されている構造体とコンテンツを指定する場合、ドキュメント型定義 (DTD)、Microsoft XML-Data Reduced (XDR) スキーマ、または XML スキーマ定義言語 (XSD) スキーマを使用できます。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]で XML 文法を指定する場合は、XSD スキーマをお勧めします。
@@ -26,4 +26,4 @@ ms.locfileid: "48582097"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml>
-- [方法: ファイル パスを解析する](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [方法: ファイル パスを解析します。](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

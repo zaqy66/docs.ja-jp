@@ -1,19 +1,19 @@
 ---
-title: '方法 : [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する'
+title: '方法: 継承ピッカー ダイアログ ボックスを使用してフォームを継承します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601832"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>方法 : [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>方法: 継承ピッカー ダイアログ ボックスを使用してフォームを継承します。
 フォームまたは他のオブジェクトを継承する最も簡単な方法は、**[継承ピッカー]** ダイアログ ボックスを使用することです。 これを使用して、その他のソリューションで作成済みのコードまたはユーザー インターフェイス (UI) を利用できます。  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ ms.locfileid: "48837298"
      基本フォームの外観を変更する方法については、「[基本フォームの外観を変更した場合の影響](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)」を参照してください。  
   
     > [!NOTE]
-    >  継承されたコントロールとコンポーネントを、Windows フォーム上の標準的なコントロールとコンポーネントに結合する場合、z オーダーとの競合が発生する可能性があります。 これを修正するには、**[書式]** メニュー内でクリックして、**[順序]** をポイントし、**[最前面へ移動]** または **[最背面へ移動]** をクリックして z オーダーを変更します。 コントロールの z オーダーの詳細については、「[方法 : Windows フォーム上のオブジェクトをレイヤー化する](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)」を参照してください。  
+    >  継承されたコントロールとコンポーネントを、Windows フォーム上の標準的なコントロールとコンポーネントに結合する場合、z オーダーとの競合が発生する可能性があります。 これを修正するには、**[書式]** メニュー内でクリックして、**[順序]** をポイントし、**[最前面へ移動]** または **[最背面へ移動]** をクリックして z オーダーを変更します。 コントロールの z オーダーの詳細については、次を参照してください。[方法。Windows フォーム上のオブジェクトをレイヤー](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Inherits ステートメント](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [基本フォームの外観を変更した場合の影響](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Windows フォームのビジュアルの継承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>関連項目
+- [Inherits ステートメント](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [基本フォームの外観を変更した場合の影響](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Windows フォームのビジュアルの継承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

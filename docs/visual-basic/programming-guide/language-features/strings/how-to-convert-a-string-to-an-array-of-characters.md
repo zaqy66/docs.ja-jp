@@ -1,5 +1,5 @@
 ---
-title: '方法 : Visual Basic で文字列を文字の配列に変換する'
+title: '方法: Visual Basic での文字の配列を文字列に変換します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - character arrays [Visual Basic], converting strings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: cc12b70cddcb93a72b4421a8ddd93542ef84f55b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9d68e3d90c52d6a4312ccb7c0c9610968e7a4b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603756"
 ---
-# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>方法 : Visual Basic で文字列を文字の配列に変換する
+# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>方法: Visual Basic での文字の配列を文字列に変換します。
 場合によっては文字、文字列および文字列を解析する際など、文字列内の文字の位置に関するデータを使用すると便利です。 この例を呼び出して、文字列の文字列で文字の配列を取得する方法を示しています。<xref:System.String.ToCharArray%2A>メソッド。  
   
 ## <a name="example"></a>例  
@@ -28,9 +28,9 @@ ms.locfileid: "50202763"
   
  [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.String.Chars%2A>  
- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>  
- [方法 : 文字列の文字にアクセスする](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)  
- [Visual Basic で、文字列型とその他のデータ型との変換を行う](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- [文字列](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.String.Chars%2A>
+- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>
+- [方法: 文字列の文字をアクセス](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)
+- [Visual Basic で、文字列型とその他のデータ型との変換を行う](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [文字列](../../../../visual-basic/programming-guide/language-features/strings/index.md)
