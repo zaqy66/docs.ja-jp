@@ -14,37 +14,37 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 7a7a8cc13a48b453b157443039f11c548756b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588653"
 ---
 # <a name="dependency-properties-overview"></a>依存関係プロパティの概要
 
 Windows Presentation Foundation (WPF) には、型の[プロパティ](../../../standard/base-types/common-type-system.md#Properties)の機能を拡張するために使用できる一連のサービスが用意されています。 通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。 WPF プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。 ここでは、WPF プロパティ システムと、依存関係プロパティの機能について説明します。 この説明では、既存の依存関係プロパティを XAML およびコードで使用する方法を示します。 また、依存関係プロパティ メタデータなどの依存関係プロパティの特殊な側面や、カスタム クラスで独自の依存関係プロパティを作成する方法についても説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
-ここでは、.NET 型システムおよびオブジェクト指向プログラミングに関する基礎知識があることを前提にしています。 このトピックの例について理解するには、XAML および WPF アプリケーションの記述方法について知っておく必要もあります。 詳細については、「[チュートリアル: WPF の概要](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)」を参照してください。  
+ここでは、.NET 型システムおよびオブジェクト指向プログラミングに関する基礎知識があることを前提にしています。 このトピックの例について理解するには、XAML および WPF アプリケーションの記述方法について知っておく必要もあります。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>依存関係プロパティおよび CLR プロパティ
  WPF では通常、プロパティは通常、標準の .NET [プロパティ](../../../standard/base-types/common-type-system.md#Properties)として公開されます。 基本的なレベルでは、これらのプロパティと直接対話でき、これらのプロパティが依存関係として実装されることを認識することはありません。 ただし、WPF プロパティ システムの一部またはすべての機能を利用できるように、これらの機能に精通しておく必要があります。
 
 依存関係プロパティの目的は、他の入力の値に基づいてプロパティの値を計算する方法を提供することです。 他の入力には、テーマやユーザー設定などのシステム プロパティ、データ バインディングやアニメーション/ストーリーボードなどのジャスト イン タイム プロパティ判定機構、リソースやスタイルなどの多目的のテンプレート、要素ツリー内の他の要素との親子のリレーションシップから判断される値などがあります。 また、依存関係プロパティを実装して、自己完結型の検証、既定値、他のプロパティに対する変更を監視するコールバック、およびランタイム情報の可能性がある情報に基づいてプロパティ値を強制するシステムを提供できます。 既存のプロパティの実際の実装をオーバーライドしたり新しいプロパティを作成したりするのではなく、依存関係プロパティ メタデータをオーバーライドすることによって、派生クラスで既存のプロパティの特定の特性を変更することもできます。
 
-SDK リファレンスで、プロパティのマネージ リファレンス ページの「依存関係プロパティの情報」セクションの有無によって、どのプロパティが依存関係プロパティかを特定できます。 「依存関係プロパティの情報」セクションにはその依存関係プロパティの <xref:System.Windows.DependencyProperty> 識別子フィールドへのリンクがあり、そのプロパティに設定されるメタデータ オプションのリスト、クラスごとのオーバーライド情報、およびその他の詳細も示されています。
+SDK リファレンスで、プロパティのマネージド リファレンス ページの「依存関係プロパティの情報」セクションの有無によって、どのプロパティが依存関係プロパティかを特定できます。 「依存関係プロパティの情報」セクションにはその依存関係プロパティの <xref:System.Windows.DependencyProperty> 識別子フィールドへのリンクがあり、そのプロパティに設定されるメタデータ オプションのリスト、クラスごとのオーバーライド情報、およびその他の詳細も示されています。
 
 ## <a name="dependency-properties-back-clr-properties"></a>依存関係プロパティによる CLR プロパティの補足
 依存関係プロパティおよび WPF プロパティ システムは、プライベート フィールドでプロパティをサポートする標準パターンの代替実装として、プロパティをサポートする型を提供することによって、プロパティ機能を拡張します。 この型の名前は <xref:System.Windows.DependencyProperty> です。 WPF プロパティ システムを定義するその他の重要な型は <xref:System.Windows.DependencyObject> です。 <xref:System.Windows.DependencyObject> は、依存関係プロパティを登録および所有できる基本クラスを定義します。
 
 依存関係プロパティで使用される用語を次に示します。
 
-- **依存関係プロパティ:** <xref:System.Windows.DependencyProperty> によって補助されているプロパティ。
+- **依存関係プロパティ:** によってサポートされるプロパティ、<xref:System.Windows.DependencyProperty>します。
 
-- **依存関係プロパティの識別子:** 依存関係プロパティの登録時に戻り値として取得され、クラスの静的メンバーとして格納される <xref:System.Windows.DependencyProperty> インスタンス。 この識別子は、WPF プロパティ システムと対話する多くの API でパラメーターとして使用されます。
+- **依存関係プロパティ識別子。** A<xref:System.Windows.DependencyProperty>依存関係プロパティを登録するときに、戻り値として取得され、クラスの静的メンバーとして格納されているインスタンス。 この識別子は、WPF プロパティ システムと対話する多くの API でパラメーターとして使用されます。
 
-- **CLR "ラッパー":** プロパティの実際の get および set 実装。 これらの実装では、<xref:System.Windows.DependencyObject.GetValue%2A> と <xref:System.Windows.DependencyObject.SetValue%2A> の呼び出しで使用することにより依存関係プロパティ識別子を組み込んで、WPF プロパティ システムを使用するプロパティを補助します。
+- **CLR「ラッパー」:** 実際の get および set プロパティの実装。 これらの実装では、<xref:System.Windows.DependencyObject.GetValue%2A> と <xref:System.Windows.DependencyObject.SetValue%2A> の呼び出しで使用することにより依存関係プロパティ識別子を組み込んで、WPF プロパティ システムを使用するプロパティを補助します。
 
 次の例では、`IsSpinning` 依存関係プロパティを定義し、<xref:System.Windows.DependencyProperty> 識別子とサポートされるプロパティの関係を示します。
 
@@ -197,7 +197,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 - 依存関係プロパティは通常、インスタンスにアクセスできる呼び出し元がアクセス可能か、少なくとも検出可能なパブリック プロパティと見なされます。 詳細については、「[依存関係プロパティのセキュリティ](../../../../docs/framework/wpf/advanced/dependency-property-security.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [読み取り専用の依存関係プロパティ](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [読み取り専用の依存関係プロパティ](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

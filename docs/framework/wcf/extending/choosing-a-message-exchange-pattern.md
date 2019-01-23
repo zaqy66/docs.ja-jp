@@ -2,22 +2,22 @@
 title: メッセージ交換パターンの選択
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594760"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>メッセージ交換パターンの選択
-カスタム トランスポートを記述する最初の手順は、これを決定する*メッセージ交換パターン*(Mep) を開発するチャネルに必要なです。 ここでは、使用できるオプションとさまざまな要件について説明します。 これで説明されているチャネル開発タスクの一覧の最初のタスクは、[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)です。  
+カスタム トランスポートを記述する最初の手順は、これを決定する*メッセージ交換パターン*(または Mep) を開発しているチャネルに必要な。 ここでは、使用できるオプションとさまざまな要件について説明します。 これは、最初のタスクで説明されているチャネル開発タスクの一覧で[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)します。  
   
 ## <a name="six-message-exchange-patterns"></a>6 つのメッセージ交換パターン  
  次の 3 つの MEP から選択できます。  
   
 -   データグラム (<xref:System.ServiceModel.Channels.IInputChannel> と <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     クライアントが使用して、メッセージを送信してデータグラム MEP を使用する場合、*ファイア アンド忘れた*交換します。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントで送信操作が正常に完了したとしても、リモート エンドポイントでメッセージが受信されたとは限りません。 データグラムはメッセージングの基礎となるビルド ブロックであり、その上に信頼できるプロトコルや安全なプロトコルなどの独自のプロトコルを構築できます。 クライアント データグラム チャネルには、<xref:System.ServiceModel.Channels.IOutputChannel> インターフェイスが実装され、サービス データグラム チャネルには <xref:System.ServiceModel.Channels.IInputChannel> インターフェイスが実装されます。  
+     クライアントが使用してメッセージを送信データグラム MEP を使用する場合、*ファイア アンド フォーゲット*exchange。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントで送信操作が正常に完了したとしても、リモート エンドポイントでメッセージが受信されたとは限りません。 データグラムはメッセージングの基礎となるビルド ブロックであり、その上に信頼できるプロトコルや安全なプロトコルなどの独自のプロトコルを構築できます。 クライアント データグラム チャネルには、<xref:System.ServiceModel.Channels.IOutputChannel> インターフェイスが実装され、サービス データグラム チャネルには <xref:System.ServiceModel.Channels.IInputChannel> インターフェイスが実装されます。  
   
 -   要求 - 応答 (<xref:System.ServiceModel.Channels.IRequestChannel> と <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33805890"
  ![メッセージ交換パターンの選択](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 3 つの基本的なメッセージ交換パターンです。 上から順に、データグラム、要求 - 応答、二重。  
   
- これらの Mep それぞれをサポートできますも*セッション*です。 セッション (および <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型の <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> の実装) は、チャネルで送受信されるすべてのメッセージを相互に関連付けます。 要求 - 応答パターンはスタンドアロンの 2 メッセージ セッションで、要求と応答が相互に関連付けられています。 一方、セッションをサポートする要求 - 応答パターンは、そのチャネルのすべての要求 - 応答ペアが互いに関連付けられることを意味しています。 したがって、次のように合計 6 つの MEP から選択できます。  
+ これらの Mep それぞれをサポートできますも*セッション*します。 セッション (および <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型の <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> の実装) は、チャネルで送受信されるすべてのメッセージを相互に関連付けます。 要求 - 応答パターンはスタンドアロンの 2 メッセージ セッションで、要求と応答が相互に関連付けられています。 一方、セッションをサポートする要求 - 応答パターンは、そのチャネルのすべての要求 - 応答ペアが互いに関連付けられることを意味しています。 したがって、次のように合計 6 つの MEP から選択できます。  
   
 -   データグラム  
   
@@ -92,5 +92,5 @@ ms.locfileid: "33805890"
   
 -   チャネルで <xref:System.ServiceModel.ICommunicationObject.Abort%2A> が呼び出されたときに、I/O を実行せずにセッションをその場で終了します。 このときも、何も実行しないことを意味する場合もあれば、ネットワーク接続または他のリソースの中止を伴う場合もあります。  
   
-## <a name="see-also"></a>関連項目  
- [チャネル モデルの概要](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+## <a name="see-also"></a>関連項目
+- [チャネル モデルの概要](../../../../docs/framework/wcf/extending/channel-model-overview.md)
