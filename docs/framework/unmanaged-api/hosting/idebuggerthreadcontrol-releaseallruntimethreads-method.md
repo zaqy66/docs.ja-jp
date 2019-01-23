@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b3623c886a48cc938be017f955fbdac1df3f10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5e2501a5ab62c6aaef2b3f754f9eed10e4e4b97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505025"
 ---
-# <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a><span data-ttu-id="e5150-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads メソッド</span><span class="sxs-lookup"><span data-stu-id="e5150-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads Method</span></span>
-<span data-ttu-id="e5150-103">デバッグ サービスがブロックされているすべてのスレッドを解放しようとしていることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="e5150-103">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>  
+# <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a><span data-ttu-id="ba576-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads メソッド</span><span class="sxs-lookup"><span data-stu-id="ba576-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads Method</span></span>
+<span data-ttu-id="ba576-103">デバッグ サービスがブロックされているすべてのスレッドを解放しようとしていることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="ba576-103">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5150-104">構文</span><span class="sxs-lookup"><span data-stu-id="e5150-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba576-104">構文</span><span class="sxs-lookup"><span data-stu-id="ba576-104">Syntax</span></span>  
   
 ```  
 HRESULT ReleaseAllRuntimeThreads ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="e5150-105">コメント</span><span class="sxs-lookup"><span data-stu-id="e5150-105">Remarks</span></span>  
- <span data-ttu-id="e5150-106">`ReleaseAllRuntimeThreads`メソッドは、ランタイム スレッドで呼び出されません。</span><span class="sxs-lookup"><span data-stu-id="e5150-106">The `ReleaseAllRuntimeThreads` method will never be called on a runtime thread.</span></span> <span data-ttu-id="e5150-107">ホストに、ランタイム スレッドがブロックされている場合は、今すぐリリースに必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5150-107">If the host has a runtime thread blocked, it should release it now.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba576-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="ba576-105">Remarks</span></span>  
+ <span data-ttu-id="ba576-106">`ReleaseAllRuntimeThreads`メソッドはランタイムのスレッドで呼び出されません。</span><span class="sxs-lookup"><span data-stu-id="ba576-106">The `ReleaseAllRuntimeThreads` method will never be called on a runtime thread.</span></span> <span data-ttu-id="ba576-107">ホストにブロックされているランタイムのスレッドがある場合は、今すぐリリースにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba576-107">If the host has a runtime thread blocked, it should release it now.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5150-108">要件</span><span class="sxs-lookup"><span data-stu-id="e5150-108">Requirements</span></span>  
- <span data-ttu-id="e5150-109">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="e5150-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba576-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="ba576-108">Requirements</span></span>  
+ <span data-ttu-id="ba576-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ba576-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5150-110">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e5150-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ba576-110">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ba576-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e5150-111">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="e5150-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ba576-111">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="ba576-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e5150-112">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5150-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ba576-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba576-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5150-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="e5150-113">See Also</span></span>  
- [<span data-ttu-id="e5150-114">IDebuggerThreadControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e5150-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ba576-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ba576-113">See also</span></span>
+- [<span data-ttu-id="ba576-114">IDebuggerThreadControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ba576-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

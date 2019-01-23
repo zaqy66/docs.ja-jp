@@ -2,20 +2,20 @@
 title: カスタム ログ名の最初の 8 文字が有効です
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
-ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a5b87dcb345a65d75469e61a6da2ba10172d8109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503188"
 ---
-# <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="e25ad-102">カスタム ログ名の最初の 8 文字が有効です</span><span class="sxs-lookup"><span data-stu-id="e25ad-102">Only the first eight characters of a custom log name are significant</span></span>
-<span data-ttu-id="e25ad-103">イベント ログ名の一意性を調べるときには、最初の 8 文字だけが考慮されます。</span><span class="sxs-lookup"><span data-stu-id="e25ad-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="e25ad-104">最初の 8 文字に同じ文字を使用するイベント ログが複数ある場合は、競合する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e25ad-104">A conflict may result from event logs that share their first eight characters.</span></span>  
+# <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="fe152-102">カスタム ログ名の最初の 8 文字が有効です</span><span class="sxs-lookup"><span data-stu-id="fe152-102">Only the first eight characters of a custom log name are significant</span></span>
+<span data-ttu-id="fe152-103">イベント ログ名の一意性を調べるときには、最初の 8 文字だけが考慮されます。</span><span class="sxs-lookup"><span data-stu-id="fe152-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="fe152-104">最初の 8 文字に同じ文字を使用するイベント ログが複数ある場合は、競合する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="fe152-104">A conflict may result from event logs that share their first eight characters.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e25ad-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="e25ad-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fe152-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="fe152-105">To correct this error</span></span>  
   
--   <span data-ttu-id="e25ad-106">最初の 8 文字が一意になる名前をイベント ログに付けます。</span><span class="sxs-lookup"><span data-stu-id="e25ad-106">Give the event log a name in which the first eight characters are unique.</span></span>  
+-   <span data-ttu-id="fe152-106">最初の 8 文字が一意になる名前をイベント ログに付けます。</span><span class="sxs-lookup"><span data-stu-id="fe152-106">Give the event log a name in which the first eight characters are unique.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e25ad-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="e25ad-107">See Also</span></span>  
- [<span data-ttu-id="e25ad-108">方法: を作成し、カスタム イベント ログの削除</span><span class="sxs-lookup"><span data-stu-id="e25ad-108">How to: Create and Remove Custom Event Logs</span></span>](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)  
- [<span data-ttu-id="e25ad-109">イベント ログの管理</span><span class="sxs-lookup"><span data-stu-id="e25ad-109">Administering Event Logs</span></span>](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
+## <a name="see-also"></a><span data-ttu-id="fe152-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="fe152-107">See also</span></span>
+- [<span data-ttu-id="fe152-108">方法: 作成し、カスタム イベント ログの削除</span><span class="sxs-lookup"><span data-stu-id="fe152-108">How to: Create and Remove Custom Event Logs</span></span>](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)
+- [<span data-ttu-id="fe152-109">イベント ログの管理</span><span class="sxs-lookup"><span data-stu-id="fe152-109">Administering Event Logs</span></span>](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
