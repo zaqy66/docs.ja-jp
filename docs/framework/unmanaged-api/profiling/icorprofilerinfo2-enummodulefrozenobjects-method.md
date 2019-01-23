@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77b07dae5b53db58b3628f677be1714e66ac18ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9c6d6c77f9609ba1a0762a744b28a93f068b862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513322"
 ---
-# <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a><span data-ttu-id="ffced-102">ICorProfilerInfo2::EnumModuleFrozenObjects メソッド</span><span class="sxs-lookup"><span data-stu-id="ffced-102">ICorProfilerInfo2::EnumModuleFrozenObjects Method</span></span>
-<span data-ttu-id="ffced-103">指定されたモジュール内の固定オブジェクト経由の反復処理する列挙子を取得します。このメソッドは今後使用しません。</span><span class="sxs-lookup"><span data-stu-id="ffced-103">Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.</span></span>  
+# <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a><span data-ttu-id="8ee03-102">ICorProfilerInfo2::EnumModuleFrozenObjects メソッド</span><span class="sxs-lookup"><span data-stu-id="8ee03-102">ICorProfilerInfo2::EnumModuleFrozenObjects Method</span></span>
+<span data-ttu-id="8ee03-103">指定したモジュールに固定されたオブジェクトに対して反復処理する列挙子を取得します。このメソッドは廃止されています。</span><span class="sxs-lookup"><span data-stu-id="8ee03-103">Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffced-104">構文</span><span class="sxs-lookup"><span data-stu-id="ffced-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ee03-104">構文</span><span class="sxs-lookup"><span data-stu-id="8ee03-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumModuleFrozenObjects(  
@@ -35,22 +35,22 @@ HRESULT EnumModuleFrozenObjects(
     [out] ICorProfilerObjectEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ffced-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ffced-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8ee03-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8ee03-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="ffced-106">[in]列挙される固定されたオブジェクトを含むモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="ffced-106">[in] The ID of the module that contains the frozen objects to be enumerated.</span></span>  
+ <span data-ttu-id="8ee03-106">[in]列挙する固定オブジェクトを含むモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="8ee03-106">[in] The ID of the module that contains the frozen objects to be enumerated.</span></span>  
   
  `ppEnum`  
- <span data-ttu-id="ffced-107">[out]アドレスへのポインター、 [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)インターフェイスで、固定されたオブジェクトを列挙します。</span><span class="sxs-lookup"><span data-stu-id="ffced-107">[out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.</span></span>  
+ <span data-ttu-id="8ee03-107">[out]アドレスへのポインター、 [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)インターフェイスでは、固定されたオブジェクトを列挙します。</span><span class="sxs-lookup"><span data-stu-id="8ee03-107">[out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ffced-108">要件</span><span class="sxs-lookup"><span data-stu-id="ffced-108">Requirements</span></span>  
- <span data-ttu-id="ffced-109">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="ffced-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ee03-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="8ee03-108">Requirements</span></span>  
+ <span data-ttu-id="8ee03-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ee03-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ffced-110">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ffced-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8ee03-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8ee03-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ffced-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ffced-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8ee03-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8ee03-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ffced-112">**.NET framework のバージョン:** 3.5、3.0 SP1、3.0、2.0 SP1、2.0</span><span class="sxs-lookup"><span data-stu-id="ffced-112">**.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0</span></span>  
+ <span data-ttu-id="8ee03-112">**.NET framework のバージョン:** 3.5、3.0 SP1 では、3.0、2.0 SP1 では、2.0</span><span class="sxs-lookup"><span data-stu-id="8ee03-112">**.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ffced-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ffced-113">See Also</span></span>  
- [<span data-ttu-id="ffced-114">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ffced-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="ffced-115">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ffced-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8ee03-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="8ee03-113">See also</span></span>
+- [<span data-ttu-id="8ee03-114">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8ee03-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="8ee03-115">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8ee03-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
