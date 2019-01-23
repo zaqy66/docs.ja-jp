@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d925e30786c742708f345fc23f14c79521cbc6f3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e42710f6c19bb5b2eca6891c2855e010ad9de1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612204"
 ---
-# <a name="iclrstrongnamestrongnamekeygen-method"></a><span data-ttu-id="89767-102">ICLRStrongName::StrongNameKeyGen メソッド</span><span class="sxs-lookup"><span data-stu-id="89767-102">ICLRStrongName::StrongNameKeyGen Method</span></span>
-<span data-ttu-id="89767-103">厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。</span><span class="sxs-lookup"><span data-stu-id="89767-103">Creates a new public/private key pair for strong name use.</span></span>  
+# <a name="iclrstrongnamestrongnamekeygen-method"></a><span data-ttu-id="38ce2-102">ICLRStrongName::StrongNameKeyGen メソッド</span><span class="sxs-lookup"><span data-stu-id="38ce2-102">ICLRStrongName::StrongNameKeyGen Method</span></span>
+<span data-ttu-id="38ce2-103">厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。</span><span class="sxs-lookup"><span data-stu-id="38ce2-103">Creates a new public/private key pair for strong name use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89767-104">構文</span><span class="sxs-lookup"><span data-stu-id="89767-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38ce2-104">構文</span><span class="sxs-lookup"><span data-stu-id="38ce2-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyGen (  
@@ -38,38 +38,38 @@ HRESULT StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="89767-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="89767-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="38ce2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="38ce2-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="89767-106">[in]要求されたキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="89767-106">[in] The requested key container name.</span></span> <span data-ttu-id="89767-107">`wszKeyContainer` 空でない文字列または一時的な名前を生成する null であること。</span><span class="sxs-lookup"><span data-stu-id="89767-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="38ce2-106">[in]要求されたキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="38ce2-106">[in] The requested key container name.</span></span> <span data-ttu-id="38ce2-107">`wszKeyContainer` 空でない文字列または一時的な名前を生成する null であること。</span><span class="sxs-lookup"><span data-stu-id="38ce2-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="89767-108">[in]登録されているキーのままにするかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="89767-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="89767-109">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="89767-109">The following values are supported:</span></span>  
+ <span data-ttu-id="38ce2-108">[in]登録されているキーのままにするかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="38ce2-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="38ce2-109">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="38ce2-109">The following values are supported:</span></span>  
   
--   <span data-ttu-id="89767-110">0x00000000 の際に使用される`wszKeyContainer`一時的なキー コンテナーの名前を生成する場合は null です。</span><span class="sxs-lookup"><span data-stu-id="89767-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+-   <span data-ttu-id="38ce2-110">0x00000000 の際に使用される`wszKeyContainer`一時的なキー コンテナーの名前を生成する場合は null です。</span><span class="sxs-lookup"><span data-stu-id="38ce2-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
--   <span data-ttu-id="89767-111">0x00000001 (`SN_LEAVE_KEY`) のキーを左に登録する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="89767-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+-   <span data-ttu-id="38ce2-111">0x00000001 (`SN_LEAVE_KEY`) のキーを左に登録する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="38ce2-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="89767-112">[out]返された公開/秘密キー ペア。</span><span class="sxs-lookup"><span data-stu-id="89767-112">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="38ce2-112">[out]返された公開/秘密キー ペア。</span><span class="sxs-lookup"><span data-stu-id="38ce2-112">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="89767-113">[out]サイズ (バイト単位) の`ppbKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="89767-113">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="38ce2-113">[out]サイズ (バイト単位) の`ppbKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="38ce2-113">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="89767-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="89767-114">Return Value</span></span>  
- <span data-ttu-id="89767-115">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="89767-115">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="38ce2-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="38ce2-114">Return Value</span></span>  
+ <span data-ttu-id="38ce2-115">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="38ce2-115">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="89767-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="89767-116">Remarks</span></span>  
- <span data-ttu-id="89767-117">[Iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)メソッドは、1024 ビットのキーを作成します。</span><span class="sxs-lookup"><span data-stu-id="89767-117">The [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) method creates a 1024-bit key.</span></span> <span data-ttu-id="89767-118">呼び出す必要があります、キーが取得された後、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)を割り当てられたメモリを解放するメソッド。</span><span class="sxs-lookup"><span data-stu-id="89767-118">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38ce2-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="38ce2-116">Remarks</span></span>  
+ <span data-ttu-id="38ce2-117">[Iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)メソッドは、1024 ビットのキーを作成します。</span><span class="sxs-lookup"><span data-stu-id="38ce2-117">The [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) method creates a 1024-bit key.</span></span> <span data-ttu-id="38ce2-118">呼び出す必要があります、キーが取得された後、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)を割り当てられたメモリを解放するメソッド。</span><span class="sxs-lookup"><span data-stu-id="38ce2-118">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89767-119">要件</span><span class="sxs-lookup"><span data-stu-id="89767-119">Requirements</span></span>  
- <span data-ttu-id="89767-120">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="89767-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38ce2-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="38ce2-119">Requirements</span></span>  
+ <span data-ttu-id="38ce2-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="38ce2-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89767-121">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="89767-121">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="38ce2-121">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="38ce2-121">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="89767-122">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="89767-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="38ce2-122">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="38ce2-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="89767-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89767-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="38ce2-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38ce2-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89767-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="89767-124">See Also</span></span>  
- [<span data-ttu-id="89767-125">StrongNameKeyGenEx メソッド</span><span class="sxs-lookup"><span data-stu-id="89767-125">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  
- [<span data-ttu-id="89767-126">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="89767-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="38ce2-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="38ce2-124">See also</span></span>
+- [<span data-ttu-id="38ce2-125">StrongNameKeyGenEx メソッド</span><span class="sxs-lookup"><span data-stu-id="38ce2-125">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [<span data-ttu-id="38ce2-126">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="38ce2-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
