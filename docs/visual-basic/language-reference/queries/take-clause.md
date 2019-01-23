@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: bfaccf470d93a6a72451e7ad8b41e8dbb1171c71
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bdd12340c5a0bd522c09a22e74c7b4f487cc5821
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626733"
 ---
 # <a name="take-clause-visual-basic"></a>Take 句 (Visual Basic)
 コレクションの先頭から、指定された数の連続する要素を返します。  
@@ -42,11 +42,11 @@ Take count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- [Skip 句](../../../visual-basic/language-reference/queries/skip-clause.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Skip 句](../../../visual-basic/language-reference/queries/skip-clause.md)

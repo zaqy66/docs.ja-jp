@@ -1,15 +1,15 @@
 ---
-title: '方法: XmlWriter (LINQ to XML) を使用して XML ツリーを設定する (Visual Basic)'
+title: '方法: (LINQ to XML) を XmlWriter を使用して XML ツリーを設定する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-ms.openlocfilehash: bc17b84b945e93443ab6d9f337e852feba5b0662
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 53c77a9b31fa51f1ba79e99d564e5092f7c079a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625875"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>方法: XmlWriter (LINQ to XML) を使用して XML ツリーを設定する (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>方法: (LINQ to XML) を XmlWriter を使用して XML ツリーを設定する (Visual Basic)
 XML ツリーを設定する方法の 1 つは、<xref:System.Xml.Linq.XContainer.CreateWriter%2A> を使用して <xref:System.Xml.XmlWriter> を作成し、この <xref:System.Xml.XmlWriter> に書き込みを行うことです。 XML ツリーには、<xref:System.Xml.XmlWriter> に書き込まれたすべてのノードが挿入されます。  
   
  通常この方法は、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と、<xref:System.Xml.XmlWriter> への書き込みを必要とする別のクラス (<xref:System.Xml.Xsl.XslCompiledTransform> など) を併用する場合に使用します。  
@@ -62,8 +62,8 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
- <xref:System.Xml.XmlWriter>  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [XML ツリー (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
+- <xref:System.Xml.XmlWriter>
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [XML ツリー (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

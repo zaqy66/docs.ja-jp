@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625771"
 ---
 # <a name="put-function"></a>Put 関数
 名前付きプロパティが新しい値に設定されます。
@@ -50,10 +50,10 @@ HRESULT Put (
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `wszName`  
-[in]プロパティの名前。 このパラメーターにすることはできません`null`します。
+[in]プロパティの名前。 このパラメーターを `null` とすることはできません。
 
 `lFlags`  
-[in]予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
 
 `pVal`   
 [in]有効なへのポインター`VARIANT`新しいプロパティ値になります。 場合`pVal`は`null`を指す、または、`VARIANT`型の`VT_NULL`に設定されて`null`します。 
@@ -72,7 +72,7 @@ HRESULT Put (
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つまたは複数のパラメーターが無効です。 |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | プロパティの型は認識されません。 クラスが既に存在する場合は、クラスのインスタンスを作成するときに、この値が返されます。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | インスタンス: ことを示します`pVal`を指す、`VARIANT`プロパティの型が正しくないのです。 <br/> クラス定義: 親クラスのプロパティが既に存在し、新しい COM 型が古い COM 型と異なる。 |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | インスタンス。示します`pVal`を指す、`VARIANT`プロパティの型が正しくないのです。 <br/> クラス定義。親クラスのプロパティが既に存在し、新しい COM 型が古い COM 型と異なる。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。 |
   
 ## <a name="remarks"></a>Remarks
@@ -93,12 +93,12 @@ HRESULT Put (
 
 例については、次を参照してください。、 [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)メソッド。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

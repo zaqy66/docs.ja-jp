@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726a4ed8ee3d451687e0af671d948eb7648f7f58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 112c42f15b39c72ba8519877e5ee6a8700953ba5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625858"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly メソッド
 指定したアセンブリをグローバル アセンブリ キャッシュにインストールします。  
@@ -38,24 +39,24 @@ HRESULT InstallAssembly (
   
 #### <a name="parameters"></a>パラメーター  
  `dwFlags`  
- [in]ものがありますで定義されているフラグです。 次の値がサポートされています。  
+ [in]ものがありますで定義されているフラグ。 次の値がサポートされています。  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)  
+-   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)  
+-   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
  [in]インストールするアセンブリのマニフェストへのパス。  
   
  `pRefData`  
- [in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)をインストールするためのデータを格納する構造体。  
+ [in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)インストール用のデータを含む構造体。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>関連項目
+- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

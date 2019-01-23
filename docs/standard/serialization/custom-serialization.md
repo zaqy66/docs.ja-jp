@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 0193112812aeccb7365526240b8e81d81abcd8a4
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627992"
 ---
 # <a name="custom-serialization"></a>カスタムのシリアル化
 カスタムのシリアル化は、型のシリアル化と逆シリアル化を制御するプロセスです。 シリアル化を制御することで、シリアル化の互換性を保証できます。つまり、型のコア機能を損なうことなく、1 つの型の複数のバージョン間でシリアル化および逆シリアル化を行うことができます。 たとえば、最初のバージョンの型では、フィールドが 2 つだけあるとします。 新しいバージョンでは、これにいくつかのフィールドが追加されています。 この場合、2 番目のバージョンのアプリケーションでは、両方の型をシリアル化および逆シリアル化できる必要があります。 以下のセクションでは、シリアル化の制御方法について説明します。
@@ -181,6 +181,6 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- [バイナリ シリアル化](binary-serialization.md)  
-- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
+- [バイナリ シリアル化](binary-serialization.md)
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
 - [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)
