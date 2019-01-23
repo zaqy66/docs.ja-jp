@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 9cd180c5e1bd8afff462c380ad3389a78027eb48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521375"
 ---
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 Windows Communication Foundation (WCF) に含まれるシステム指定のバインディングは、WCF アプリケーションをプログラムする簡単な方法を提供します。 1 つの例外を除き、すべてのバインディングにはセキュリティ スキームが含まれており、既定で有効になっています。 ここでは、セキュリティ ニーズに適した正しいバインディングの選択方法について説明します。  
@@ -89,7 +89,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
     -   チャネル セットアップの一部としてサービスからネゴシエートされるサービス資格情報の提供  
   
- 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.WSDualHttpSecurity> および <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.WSDualHttpSecurity> および <xref:System.ServiceModel.WSDualHttpSecurityMode>  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  コードでは、使用、<xref:System.ServiceModel.NetTcpBinding>クラスは、構成を使用して、 [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。  
@@ -144,7 +144,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 -   MSMQ トランスポート セキュリティ (トランスポート)。  
   
- 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.NetMsmqSecurity> および <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.NetMsmqSecurity> および <xref:System.ServiceModel.NetMsmqSecurityMode>  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  コードでは、使用、<xref:System.ServiceModel.NetMsmqBinding>クラスは、構成を使用して、 [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)します。  
@@ -161,11 +161,11 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 -   トランスポート セキュリティとメッセージ セキュリティ (両方)。  
   
--   サポートされるクライアント資格情報の種類 : なし、Windows、UserName、証明書、IssuedToken。  
+-   クライアント資格情報の種類がサポートされています。None、Windows、UserName、証明書、IssuedToken。  
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> 資格情報は、セキュリティ モードが <xref:System.ServiceModel.NetMsmqSecurityMode.Both> または <xref:System.ServiceModel.NetMsmqSecurityMode.Message> に設定されている場合にのみサポートされます。  
   
- 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.MessageSecurityOverMsmq> および <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.MessageSecurityOverMsmq> および <xref:System.ServiceModel.MsmqTransportSecurity>  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  コードでは、使用、<xref:System.ServiceModel.WSFederationHttpBinding>クラスは、構成を使用して、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  
@@ -180,7 +180,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
 ## <a name="binding-choices"></a>バインディングの選択肢  
  次の表は、セキュリティ モード設定で提供される機能をまとめたものです。つまり、セキュリティ モードを `Transport`、`Message`、または `TransportWithMessageCredential` に設定したときに使用できる機能の一覧です。 アプリケーションで必要なセキュリティ機能を決定するときに、この表を参考にしてください。  
   
-|設定|フィーチャー|  
+|設定|機能|  
 |-------------|--------------|  
 |Transport|サーバー認証<br /><br /> クライアント認証<br /><br /> Point-to-Point のセキュリティ<br /><br /> 相互運用性<br /><br /> ハードウェアの高速化<br /><br /> 高いスループット<br /><br /> セキュリティで保護されたファイアウォール<br /><br /> 待ち時間の長いアプリケーション<br /><br /> 複数のホップでの再暗号化|  
 |メッセージ|サーバー認証<br /><br /> クライアント認証<br /><br /> エンド ツー エンドのセキュリティ<br /><br /> 相互運用性<br /><br /> 多様なクレーム<br /><br /> フェデレーション<br /><br /> 複数要因の認証<br /><br /> カスタム トークン<br /><br /> Notary/Timestamp サービス<br /><br /> 待ち時間の長いアプリケーション<br /><br /> メッセージ署名の永続化|  
@@ -190,14 +190,14 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 |バインド|トランスポート モードのサポート|メッセージ モードのサポート|TransportWithMessageCredential のサポート|  
 |-------------|----------------------------|--------------------------|--------------------------------------------|  
-|`BasicHttpBinding`|はい|[はい]|[はい]|  
+|`BasicHttpBinding`|[はい]|[はい]|[はい]|  
 |`WSHttpBinding`|[はい]|[はい]|[はい]|  
 |`WSDualHttpBinding`|×|はい|×|  
 |`NetTcpBinding`|[はい]|[はい]|[はい]|  
 |`NetNamedPipeBinding`|[はい]|×|×|  
 |`NetMsmqBinding`|[はい]|[はい]|×|  
 |`MsmqIntegrationBinding`|はい|×|×|  
-|`wsFederationHttpBinding`|×|[はい]|はい|  
+|`wsFederationHttpBinding`|×|[はい]|[はい]|  
   
 ## <a name="transport-credentials-in-bindings"></a>バインディングにおけるトランスポート資格情報  
  トランスポート セキュリティ モードで `BasicHttpBinding` または `WSHttpBinding` を使用するときに使用できるクライアント資格情報の種類を、次の表に示します。  
@@ -205,8 +205,8 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
 |型|説明|  
 |----------|-----------------|  
 |なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
-|Basic|基本認証です。 詳細についてを参照してください RFC 2617 『 HTTP Authentication: Basic and Digest Authentication で使用可能な[ https://go.microsoft.com/fwlink/?LinkId=84023](https://go.microsoft.com/fwlink/?LinkId=84023)します。|  
-|Digest|ダイジェスト認証です。 詳細についてを参照してください RFC 2617 『 HTTP Authentication: Basic and Digest Authentication で使用可能な[ https://go.microsoft.com/fwlink/?LinkId=84023](https://go.microsoft.com/fwlink/?LinkId=84023)します。|  
+|Basic|基本認証です。 詳細については、HTTP 認証の RFC 2617 を参照してください。基本認証とダイジェスト認証で使用可能な[ https://go.microsoft.com/fwlink/?LinkId=84023](https://go.microsoft.com/fwlink/?LinkId=84023)します。|  
+|Digest|ダイジェスト認証です。 詳細については、HTTP 認証の RFC 2617 を参照してください。基本認証とダイジェスト認証で使用可能な[ https://go.microsoft.com/fwlink/?LinkId=84023](https://go.microsoft.com/fwlink/?LinkId=84023)します。|  
 |NTLM|NTLM (NT LAN Manager) 認証です。|  
 |Windows|Windows 認証です。|  
 |証明書|証明書を使用して実行される認証です。|  
@@ -223,10 +223,10 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
 |証明書|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。|  
 |IssuedToken|サービスは、セキュリティ トークン サービスを使用してカスタム トークンを提供できます。|  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [資格情報の種類の選択](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [セキュリティ動作](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [資格情報の種類の選択](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [セキュリティ動作](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

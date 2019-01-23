@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2174537e9605ad35e4f6f878954e318c7032b080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2aed3367e20e32a387c8a1c58ead2899fbf0dcb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521440"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap メソッド
 PInvoke 呼び出しの対象アセンブリを表す ModuleRef トークンを取得します。  
@@ -45,29 +45,29 @@ HRESULT GetPinvokeMap (
  [in]PInvoke マッピング メタデータを取得する FieldDef または MethodDef トークンです。  
   
  `pdwMappingFlags`  
- [out]フラグを使用してマップへのポインター。 この値からビットマスクである、 [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列挙します。  
+ [out]フラグを使用してマップへのポインター。 この値はビットマスクから、 [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列挙体。  
   
  `szImportName`  
- [out]アンマネージ ターゲット DLL の名前。  
+ [out]DLL の非管理対象のターゲットの名前。  
   
  `cchImportName`  
- [in]ワイド文字単位のサイズ`szImportName`です。  
+ [in]ワイド文字単位サイズ`szImportName`します。  
   
  `pchImportName`  
- [out]ワイド文字数で返される`szImportName`です。  
+ [out]返されるワイド文字数`szImportName`します。  
   
  `pmrImportDLL`  
- [out]アンマネージ ターゲット オブジェクト ライブラリを表す ModuleRef トークンへのポインター。  
+ [out]非管理対象のターゲットのオブジェクト ライブラリを表す ModuleRef トークンへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

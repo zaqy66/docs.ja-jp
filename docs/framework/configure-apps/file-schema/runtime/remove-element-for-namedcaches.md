@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d31caf88e1376025484ed6d65d5277c015e70b5e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7e183a624b95e207d34697c906cc3f278c967ae9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499777"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;削除&gt;要素&lt;namedCaches&gt;
 名前付きキャッシュ エントリを、メモリ キャッシュの `namedCaches` コレクションから削除します。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<remove>  
   
 ## <a name="syntax"></a>構文  
@@ -52,5 +52,5 @@ ms.locfileid: "53613740"
 ## <a name="remarks"></a>Remarks  
  `remove`要素は、削除、`namedCache`メモリ キャッシュの名前付きキャッシュのコレクションからエントリ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 - [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする'
+title: '方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: b53547e8e61e69834f262407de490422e6b6bb00
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e0a711c91f78ed26301c360582b08ac5c03ce565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520647"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>方法 : FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール
 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールは、子コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティと <xref:System.Windows.Forms.Control.Dock%2A> プロパティをサポートします。  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>FlowLayoutPanel コントロールで子コントロールを固定およびドッキングするには  
@@ -58,8 +58,8 @@ ms.locfileid: "45615142"
   
 -   System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.FlowLayoutPanel>  
- [FlowLayoutPanel コントロールの概要](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.FlowLayoutPanel>
+- [FlowLayoutPanel コントロールの概要](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)

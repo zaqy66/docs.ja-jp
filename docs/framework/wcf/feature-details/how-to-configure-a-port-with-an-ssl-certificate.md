@@ -1,5 +1,5 @@
 ---
-title: '方法 : SSL 証明書を使用してポートを構成する'
+title: '方法: SSL 証明書でポートを構成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0a2ac22bfb5f84235d34a554df8cc1ad43ddc489
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521717"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法 : SSL 証明書を使用してポートを構成する
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法: SSL 証明書でポートを構成します。
 自己ホスト型 Windows Communication Foundation (WCF) サービスを作成するときに、<xref:System.ServiceModel.WSHttpBinding>クラスを使用してトランスポート セキュリティ、X.509 証明書でポートを構成することも必要があります。 自己ホスト型サービスを作成するのでなければ、インターネット インフォメーション サービス (IIS) でサービスをホストできます。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
   
  ポートを構成する場合に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
@@ -55,9 +55,9 @@ ms.locfileid: "49308435"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>証明書の拇印を取得するには  
   
-1.  証明書 MMC スナップインを使用して、クライアント認証を目的として含む X.509 証明書を検索します。 詳細については、「[方法: MMC スナップインを使用して証明書を参照する](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。  
+1.  証明書 MMC スナップインを使用して、クライアント認証を目的として含む X.509 証明書を検索します。 詳細については、「[方法 :MMC スナップインで証明書を表示](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。  
   
-2.  証明書の拇印にアクセスします。 詳細については、次を参照してください。[方法: 証明書のサムプリントを取得](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)します。  
+2.  証明書の拇印にアクセスします。 詳細については、「[方法 :証明書のサムプリントを取得](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)します。  
   
 3.  証明書のサムプリントを、メモ帳などのテキスト エディターにコピーします。  
   
@@ -129,5 +129,5 @@ ms.locfileid: "49308435"
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>関連項目  
-* [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>関連項目
+- [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

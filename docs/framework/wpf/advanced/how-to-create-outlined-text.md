@@ -1,5 +1,5 @@
 ---
-title: '方法 : 中抜きの文字列を作成する'
+title: '方法: 中抜きの文字列を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 046ce6519e55e5782db0fe8adbc2a956251e12e4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a06ef9adbd5740fee74be2e9d8d13a8a5bdc5b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521479"
 ---
-# <a name="how-to-create-outlined-text"></a>方法 : 中抜きの文字列を作成する
+# <a name="how-to-create-outlined-text"></a>方法: 中抜きの文字列を作成する
 ほとんどの場合、テキスト文字列内に装飾を追加するときに、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションでは、一連の個別の文字とグリフの観点からテキストを使用しています。 たとえば、線状グラデーション ブラシを作成してに適用、<xref:System.Windows.Controls.Control.Foreground%2A>のプロパティを<xref:System.Windows.Controls.TextBox>オブジェクト。 表示またはテキスト ボックスを編集すると、線状グラデーション ブラシがテキスト文字列内の文字の現在のセットに自動的に適用します。  
   
  ![線状グラデーション ブラシで表示されるテキスト](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
@@ -59,5 +59,5 @@ ms.locfileid: "50088781"
   
   カスタム ユーザー コントロール オブジェクトの例のソースを参照してください。[の OutlineTextControl.cs C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs)と[Visual basic の OutlineTextControl.vb](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb)します。 
   
-## <a name="see-also"></a>関連項目  
- [書式設定されたテキストの描画](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+## <a name="see-also"></a>関連項目
+- [書式設定されたテキストの描画](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

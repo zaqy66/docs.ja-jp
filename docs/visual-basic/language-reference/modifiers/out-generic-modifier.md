@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 7ba774bfcd629a7518602d4b971e86a690b2dd83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522762"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (ジェネリック修飾子) (Visual Basic)
-ジェネリック型パラメーターで、`Out`キーワードは、型が共変であることを指定します。  
+ジェネリック型パラメーターの`Out`キーワードは、型が共変であるを指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  共変性は、ジェネリック パラメーターによって指定された型よりも強い派生型を使用できるようにする機能です。 これにより、バリアント インターフェイスを実装するクラスの暗黙の型変換とデリゲート型の暗黙の型変換が可能となります。  
   
  詳細については、「[共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)」を参照してください。  
@@ -34,11 +34,11 @@ ms.locfileid: "33598154"
   
 -   型パラメーターがインターフェイス メソッドのジェネリック制約として使用されない。  
   
- 汎用デリゲートの型パラメーター宣言できます共変はメソッドの戻り値の型としてのみ使用し、メソッドの引数は使用されません。  
+ 汎用デリゲートでは、型パラメーターを宣言できます共変場合、メソッドの戻り値の型としてのみ使用されメソッドの引数は使用されません。  
   
  共変性および反変性は参照型ではサポートされますが、値の型ではサポートされません。  
   
- Visual basic では、デリゲート型を指定せず共変のインターフェイスのイベントを宣言できません。 また、共変のインターフェイスは、クラス、列挙型、または構造体、入れ子ことはできませんが、入れ子になんだインターフェイスを持つことができます。  
+ Visual basic では、デリゲート型を指定せず共変のインターフェイスのイベントを宣言できません。 また、共変のインターフェイスは、クラス、列挙型、または構造体、入れ子にできませんが、インターフェイスを入れ子にできます。  
   
 ## <a name="behavior"></a>動作  
  共変の型パラメーターを持つインターフェイスを使用すると、そのインターフェイスのメソッドは、型パラメーターによって指定された型よりも強い派生型を返すことができます。 たとえば、.NET Framework 4 の <xref:System.Collections.Generic.IEnumerable%601> では T 型が共変なので、特別な変換メソッドを使用しなくても `IEnumerabe(Of String)` 型のオブジェクトを `IEnumerable(Of Object)` 型のオブジェクトに割り当てることができます。  
@@ -51,10 +51,10 @@ ms.locfileid: "33598154"
  [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## <a name="example"></a>例  
- 次の例では、共変の汎用デリゲートを宣言、インスタンス化、および呼び出す方法を示します。 デリゲート型の暗黙的な変換を使用する方法も示しています。  
+ 次の例では、共変の汎用デリゲートを宣言、インスタンス化、および呼び出す方法を示します。 また、デリゲート型の暗黙的な変換を使用する方法も示します。  
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [ジェネリック インターフェイスの分散](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a>関連項目
+- [ジェネリック インターフェイスの分散](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

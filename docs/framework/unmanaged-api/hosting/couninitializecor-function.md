@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 305a8d7b5a800c46ed814b1e654947859dc9bd03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349f6922c18a7745c8eff05b1786dc649f8bb70a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520985"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor 関数
 `CoUninitializeCor` は互換性のために残されています。  
@@ -32,8 +32,8 @@ ms.locfileid: "33427812"
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  共通言語ランタイムは、プロセスからアンロードすることはできません。 実行中のプロセスからランタイムを完全に削除するには、そのプロセスをシャット ダウンする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

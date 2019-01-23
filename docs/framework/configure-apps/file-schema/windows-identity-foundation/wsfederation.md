@@ -3,18 +3,18 @@ title: '&lt;wsFederation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 66596bbc7171a33318b835a552b7fb364d6833f7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fced46560263a030430c04bd550c9ad66f2e1972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521898"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 構成を提供、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM)。  
   
-\<system.identityModel.services >  
-\<federationConfiguration >  
+\<system.identityModel.services>  
+\<federationConfiguration>  
 \<wsFederation >  
   
 ## <a name="syntax"></a>構文  
@@ -51,7 +51,7 @@ ms.locfileid: "48838547"
 |属性|説明|  
 |---------------|-----------------|  
 |authenticationType|認証の種類を指定する URI。 Ws-federation サインイン要求の wauth パラメーターを設定します。 任意。 既定では、要求の wauth パラメーターが含まれていないことを指定します。 空の文字列です。|  
-|鮮度|必要な最大有効期間、認証要求の分単位で。 Ws-federation サインイン要求 wfresh パラメーターを設定します。 任意。 既定値は 0 です。 任意。 **警告:** の .NET Framework 4.5 では、次のリリースで、`freshness`属性の型がで`xs:string`その既定値になります`null`します。|  
+|鮮度|必要な最大有効期間、認証要求の分単位で。 Ws-federation サインイン要求 wfresh パラメーターを設定します。 任意。 既定値は 0 です。 任意。 **警告:**.NET Framework 4.5 では、次のリリースで、`freshness`属性の型がで`xs:string`その既定値になります`null`します。|  
 |homeRealm|認証に使用する id プロバイダー (IP) のホーム領域。 Ws-federation サインイン要求 whr パラメーターを設定します。 任意。 既定では空の文字列、whr パラメーターが要求に含まれていないことを指定します。|  
 |issuer|目的のトークン発行者の URI。 ベース URL の Ws-federation サインイン要求とサインアウト要求のために必要な設定します。|  
 |persistentCookiesOnPassiveRedirects|認証で永続的な cookie が発行されるかどうかを指定します。 任意。 既定値は"false"は、クッキーは発行されません。|  
@@ -98,6 +98,6 @@ ms.locfileid: "48838547"
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

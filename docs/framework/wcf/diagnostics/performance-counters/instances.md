@@ -2,15 +2,15 @@
 title: インスタンス
 ms.date: 03/30/2017
 ms.assetid: c8cf3460-0ca1-4411-8262-e9ecaf7f0a31
-ms.openlocfilehash: a95acf8e775e0802dc0ed781c562fa6373995a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b2801b5df3a5d2ca6d7fd03299ecdf4b7df426a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520272"
 ---
 # <a name="instances"></a>インスタンス
-カウンター名 : インスタンス  
+カウンター名:インスタンス。  
   
 ## <a name="description"></a>説明  
  現在サービスに含まれているインスタンス コンテキストの数。  
@@ -21,5 +21,5 @@ ms.locfileid: "33473043"
   
 -   <xref:System.ServiceModel.ReleaseInstanceMode> が <xref:System.ServiceModel.OperationBehaviorAttribute> インスタンスに適用されている場合。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.OperationBehaviorAttribute>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.OperationBehaviorAttribute>

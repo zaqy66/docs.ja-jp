@@ -2,12 +2,12 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cdb2863ff376a92f7c4b679f4812b895ac3f2234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518840"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 チャネルがカスタム バインドに含まれているときに名前付きパイプを使用してメッセージを転送するトランスポートを定義します。  
@@ -16,7 +16,7 @@ ms.locfileid: "54149601"
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<namePipeTransport >  
+\<namePipeTransport>  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,14 +72,14 @@ ms.locfileid: "54149601"
   
 `namedPipeTransport` 要素は、名前付きパイプ トランスポート プロトコルを実装するカスタム バインディングを作成する場合の開始点となります。 このトランスポートは、コンピューター上での WCF (Windows Communication Foundation) 間の通信に使用されます。  
   
-## <a name="see-also"></a>関連項目  
-<xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
-<xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
-<xref:System.ServiceModel.Channels.TransportBindingElement>   
-<xref:System.ServiceModel.Channels.CustomBinding>   
-[トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[バインド](../../../../../docs/framework/wcf/bindings.md)   
-[バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
-[カスタム バインド](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
-[\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

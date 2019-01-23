@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 313128d5511ddd0f3b75c58e2c10a74eb967d130
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d7f5d570e187393b76f4af6301a81dbb350f2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518528"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>単一インスタンスのスタートアップに必要なオペレーティング システムのリソースが取得できないため、予期しないエラーが発生しました。
 アプリケーションは、必要なオペレーティング システムのリソースを取得できませんでした。 この問題の考えられる原因の一部は次のとおりです。  
@@ -30,7 +30,7 @@ ms.locfileid: "33587653"
   
 4.  エラーが発生した状況を記録して、マイクロソフト プロダクト サポート サービスにご連絡ください。  
   
-## <a name="see-also"></a>関連項目  
- [[アプリケーション] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
- [デバッガーの基本事項](/visualstudio/debugger/debugger-basics)  
- [ご意見](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>関連項目
+- [[アプリケーション] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [デバッガーの基本事項](/visualstudio/debugger/debugger-basics)
+- [ご意見](/visualstudio/ide/talk-to-us)

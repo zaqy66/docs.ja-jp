@@ -1,19 +1,19 @@
 ---
-title: '方法 : キー フレームを使用して行列をアニメーション化する'
+title: '方法: キー フレームを使用して行列をアニメーション化する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], Matrix properties with key frames
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8f58b43a870f2c85ae4349965f586a33e2f75a2a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fff550a5a3a85575fe86c5290aa604ab00f1437f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518515"
 ---
-# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>方法 : キー フレームを使用して行列をアニメーション化する
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>方法: キー フレームを使用して行列をアニメーション化する
 この例は、アニメーション化する方法を示しています。、<xref:System.Windows.Media.MatrixTransform.Matrix%2A>のプロパティを<xref:System.Windows.Media.MatrixTransform>キー フレームを使用しています。  
   
 ## <a name="example"></a>例  
@@ -34,8 +34,8 @@ ms.locfileid: "43485851"
   
  サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  
- <xref:System.Windows.Media.MatrixTransform>  
- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [キー フレームに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
+- <xref:System.Windows.Media.MatrixTransform>
+- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [キー フレームに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

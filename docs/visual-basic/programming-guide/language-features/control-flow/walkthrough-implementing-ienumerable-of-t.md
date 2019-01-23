@@ -7,14 +7,14 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499755"
 ---
-# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>チュートリアル: Visual Basic での IEnumerable(Of T) の実装
+# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>チュートリアル: Visual Basic で IEnumerable(Of T) を実装します。
 <xref:System.Collections.Generic.IEnumerable%601>インターフェイスは、一度に 1 つの項目の値のシーケンスを返すことができるクラスによって実装されます。 一度に 1 つの項目がメモリに読み込むデータの完全なセットを扱うことがないことをデータを返すことの利点です。 のみ、データから 1 つの項目を読み込むに十分なメモリを使用する必要があるとします。 実装するクラス、`IEnumerable(T)`インターフェイスで使用できる`For Each`ループまたは LINQ クエリ。  
   
  たとえば、大きなテキスト ファイルを読み取るし、特定の検索条件に一致するファイルからそれぞれの行を返す必要がありますアプリケーションがあるとします。 アプリケーションでは、LINQ クエリを使用して、指定した条件に一致するファイルから行を返します。 LINQ クエリを使用して、ファイルの内容を照会するには、アプリケーションは、配列またはコレクションに、ファイルの内容を読み込む可能性があります。 ただし、配列またはコレクションにファイル全体を読み込むには、必要なよりはるかに多くのメモリが消費します。 LINQ クエリは、検索条件に一致する値のみを返す、列挙可能なクラスを使用して、ファイルの内容を代わりにクエリでした。 いくつかのみを返すクエリを一致する値ははるかに少ないメモリを消費します。  
@@ -93,8 +93,8 @@ ms.locfileid: "48836999"
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

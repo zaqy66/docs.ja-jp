@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9e15aefd4a66eac98b679e60c628f90149fe908a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520855"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 このサンプルでは、カスタム プロトコル チャネルを作成し、セッション管理用の HTTP クッキーを使用する方法を示します。 このチャネルでは、Windows Communication Foundation (WCF) サービスと ASMX クライアントまたは WCF クライアントと ASMX サービス間の通信ができます。  
@@ -85,7 +85,7 @@ InputQueue<RequestContext> requestQueue;
 ## <a name="binding-and-binding-element"></a>バインディングとバインド要素  
  サービスとクライアントのチャネルを作成した後は、次の手順は、WCF ランタイムに統合するは。 チャネルは、バインディングとバインド要素を介して WCF に公開されます。 バインディングは、1 つまたは複数のバインド要素で構成されています。 WCF は、いくつかのシステム定義バインディング。たとえば、BasicHttpBinding や WSHttpBinding などです。 `HttpCookieSessionBindingElement` クラスには、バインディング要素の実装が含まれています。 この実装によってチャネル リスナとチャネル ファクトリの作成メソッドがオーバーライドされ、必要なチャネル リスナまたはチャネル ファクトリがインスタンス化されます。  
   
- このサンプルでは、サービスの説明のポリシー アサーションを使用します。 これにより、サンプルのチャネルの要件を、そのサービスを利用できる他のクライアントに公開できます。 たとえば、このバインド要素はポリシー アサーションを公開し、セッションがサポートされていることを潜在的なクライアントに通知します。 このサンプルでは、バインディング要素の構成で `ExchangeTerminateMessage` プロパティが有効になっています。そのため、サービスで余分なメッセージ交換アクションがサポートされ、セッションでのメッセージ交換が終了されることを示すために必要なアサーションが追加されます。 その後、クライアントはこのアクションを使用できます。 `HttpCookieSessionBindingElement` から作成されたポリシー アサーションを、次の WSDL コードに示します。  
+ このサンプルでは、サービスの説明のポリシー アサーションを使用します。 これにより、サンプルのチャネルの要件を、そのサービスを利用できる他のクライアントに公開できます。 たとえば、このバインド要素はポリシー アサーションを公開し、セッションがサポートされていることを潜在的なクライアントに通知します。 このサンプルでは、バインド要素の構成で `ExchangeTerminateMessage` プロパティが有効になっています。そのため、サービスで余分なメッセージ交換アクションがサポートされ、セッションでのメッセージ交換が終了されることを示すために必要なアサーションが追加されます。 その後、クライアントはこのアクションを使用できます。 `HttpCookieSessionBindingElement` から作成されたポリシー アサーションを、次の WSDL コードに示します。  
   
 ```xml  
 <wsp:Policy wsu:Id="HttpCookieSessionBinding_IWcfCookieSessionService_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
@@ -98,7 +98,7 @@ InputQueue<RequestContext> requestQueue;
 </wsp:Policy>  
 ```  
   
- `HttpCookieSessionBinding` クラスは、システム指定のバインディング要素を使用する定義済みバインディングです。  
+ `HttpCookieSessionBinding` クラスは、システム指定のバインド要素を使用する定義済みバインディングです。  
   
 ## <a name="adding-the-channel-to-the-configuration-system"></a>構成システムへのチャネルの追加  
  このサンプルでは、構成を使用してサンプル チャネルを公開する 2 つのクラスを提供します。 1 つ目のクラスは、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> の `HttpCookieSessionBindingElement` です。 実装の大部分は `HttpCookieSessionBindingConfigurationElement` で代行されます。これは <xref:System.ServiceModel.Configuration.StandardBindingElement> の派生です。 `HttpCookieSessionBindingConfigurationElement` には、`HttpCookieSessionBindingElement` のプロパティに対応するプロパティがあります。  

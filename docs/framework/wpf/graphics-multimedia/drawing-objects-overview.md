@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 92cf4e7099c7880eb9bde9af765970abac698310
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4be6f3b06a0e9ab16469ad9a7f9e78799cc2e637
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513673"
 ---
 # <a name="drawing-objects-overview"></a>Drawing オブジェクトの概要
 このトピックでは<xref:System.Windows.Media.Drawing>オブジェクトし、それらを使用して、図形、ビットマップ、テキスト、およびメディアを効率的に描画する方法について説明します。 使用して、<xref:System.Windows.Media.Drawing>を使用して、クリップアートを作成するときに、オブジェクトのペイントを<xref:System.Windows.Media.DrawingBrush>を使用して、または<xref:System.Windows.Media.Visual>オブジェクト。  
@@ -180,12 +180,12 @@ DrawingGroup の操作の順序
   
 |プロパティ|説明|図|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|選択した部分の不透明度を変更、<xref:System.Windows.Media.DrawingGroup>内容。 例については、「[How to: Control the Opacity of a Drawing](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee)」(方法: 描画の不透明度を制御する) をご覧ください。|![不透明マスクを含む DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|不透明度を一様に変更、<xref:System.Windows.Media.DrawingGroup>内容。 このプロパティを使用して、<xref:System.Windows.Media.Drawing>透明または部分的にします。 例については、「[How to: Apply an Opacity Mask to a Drawing](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f)」(方法: 不透明マスクを描画に適用する) をご覧ください。|![不透明度の設定が異なる DrawingGroups](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|適用対象を<xref:System.Windows.Media.Effects.BitmapEffect>を<xref:System.Windows.Media.DrawingGroup>内容。 例については、「[How to: Apply a BitmapEffect to a Drawing](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5)」(方法: BitmapEffect を描画に適用する) をご覧ください。|![BlurBitmapEffect のある DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|クリップ、<xref:System.Windows.Media.DrawingGroup>を使ってを記述した領域に内容を<xref:System.Windows.Media.Geometry>します。 例については、「[How to: Clip a Drawing](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)」(方法: 描画をクリッピングする) をご覧ください。|![クリップ領域が定義された DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|選択した部分の不透明度を変更、<xref:System.Windows.Media.DrawingGroup>内容。 例については、「[方法: 描画の不透明度を制御](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee)します。|![不透明マスクを含む DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|不透明度を一様に変更、<xref:System.Windows.Media.DrawingGroup>内容。 このプロパティを使用して、<xref:System.Windows.Media.Drawing>透明または部分的にします。 例については、「[方法: 不透明度マスクを描画に適用する](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f)します。|![不透明度の設定が異なる DrawingGroups](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|適用対象を<xref:System.Windows.Media.Effects.BitmapEffect>を<xref:System.Windows.Media.DrawingGroup>内容。 例については、「[方法: BitmapEffect を描画に適用する](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5)します。|![BlurBitmapEffect のある DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|クリップ、<xref:System.Windows.Media.DrawingGroup>を使ってを記述した領域に内容を<xref:System.Windows.Media.Geometry>します。 例については、「[方法: 描画をクリップ](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)します。|![クリップ領域が定義された DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|デバイスに依存しないピクセルを、指定したガイドラインに沿ったデバイス ピクセルにスナップします。 このプロパティは、低解像度ディスプレイで、非常に詳細なグラフィックスがはっきりとレンダリングされるようにするのに便利です。 例については、「[方法 : 描画に GuidelineSet を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)」をご覧ください。|![GuidelineSet が有効/無効な DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|変換、<xref:System.Windows.Media.DrawingGroup>内容。 例については、「[How to: Apply a Transform to a Drawing](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd)」(方法: 変換を描画に適用する) をご覧ください。|![回転された DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|変換、<xref:System.Windows.Media.DrawingGroup>内容。 例については、「[方法: 図面に変換を適用](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd)します。|![回転された DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>描画をイメージとして表示する  
@@ -233,13 +233,13 @@ DrawingBrush で使われる GeometryDrawing
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.DrawingGroup>  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.DrawingGroup>
+- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)

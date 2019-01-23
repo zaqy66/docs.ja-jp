@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 70e1028042807eb77fc74b30174e1962bc00f4c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519789"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte データ型 (Visual Basic)
 0 から 255 までの範囲の符号なし 8 ビット (1 バイト) 整数を保持します。
@@ -38,7 +38,7 @@ Visual Basic 2017 から始めて、使用することできますも、アン�
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As Byte = &H_6A
@@ -66,8 +66,8 @@ Dim number As Byte = &H_6A
 
 ## <a name="see-also"></a>関連項目
 
- <xref:System.Byte?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

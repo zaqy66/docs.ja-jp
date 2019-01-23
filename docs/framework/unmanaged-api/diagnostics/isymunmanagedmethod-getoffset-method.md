@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6485688c2964d477f0c5f68a3da714f084fa308f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515304"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset メソッド
-ドキュメント内の指定位置に対応するこのメソッド内のオフセットを返します。  
+ドキュメント内の位置を指定するには、対応するこのメソッド内のオフセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,19 +42,19 @@ HRESULT GetOffset(
  [in]オフセットを要求する対象のドキュメントへのポインター。  
   
  `line`  
- [in]オフセットの要求対象となるドキュメント行。  
+ [in]オフセットを要求する対象のドキュメント行。  
   
  `column`  
- [in]オフセットの要求対象となるドキュメント列。  
+ [in]オフセットが要求されるドキュメント列。  
   
  `pRetVal`  
  [out]ポインター、`ULONG32`オフセットを受け取る。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

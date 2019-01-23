@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513656"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 ときに、<xref:System.Data.DataSet>正確に再作成する内容は、ただし、スキーマの DiffGram に必要なすべての情報を格納しますが、DiffGram として書き込まれますが、 <xref:System.Data.DataSet>、両方の列の値を含む、**元**と**現在**行のバージョン、行エラー情報、および行の順序。  
@@ -87,7 +87,7 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 |**parentId**|要素を識別する、 **\<** ***DataInstance*** **>** ブロックは、現在の要素の親要素。 値で、 **diffgr:parentId**注釈は、形式 *[TableName] [RowIdentifier]* します。 たとえば、`<Orders diffgr:parentId="Customers1">` のように指定します。|  
 |**hasChanges**|行を識別、 **\<** ***DataInstance*** **>** 変更とブロックされます。 **HasChanges**注釈は、次の 2 つの値のいずれかを指定できます。<br /><br /> **inserted**<br /> 識別、 **Added**行。<br /><br /> **変更**<br /> 識別、 **Modified**を含む行を**元**で行のバージョン、  **\<diffgr: する前に >** ブロック。 注意**Deleted**の行、**元**で行のバージョン、  **\<diffgr: する前に >** ブロックが、注釈付き要素、ことはできません**\<**  ***DataInstance*** **>** ブロックします。|  
 |**hasErrors**|行を識別、 **\<** ***DataInstance*** **>** ブロックと一緒に、 **RowError**します。 エラー要素は内に、  **\<diffgr:errors >** ブロックします。|  
-|**エラー**|テキストを含む、 **RowError**で特定の要素に対して、  **\<diffgr:errors >** ブロックします。|  
+|**Error**|テキストを含む、 **RowError**で特定の要素に対して、  **\<diffgr:errors >** ブロックします。|  
   
  <xref:System.Data.DataSet> の内容が DiffGram として読み取られる、または書き込まれるときには、上記以外の注釈も含まれます。 次の表に、名前空間で定義されている追加の注釈を**urn:スキーマ-microsoft-com:xml-msdata**します。  
   
@@ -131,9 +131,9 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [DataSet 内容の XML データとしての書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [DataSet 内容の XML データとしての書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

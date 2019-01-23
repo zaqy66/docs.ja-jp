@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513653"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] スレッド処理の難しさから開発者を保存する設計されています。 その結果、ほとんどの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを記述する必要はありません。 マルチ スレッド プログラムは複雑になり、デバッグが困難であるため、シングル スレッドのソリューションが存在する場合、回避する必要があります。  
@@ -54,7 +54,7 @@ ms.locfileid: "43512467"
  <xref:System.Windows.Threading.Dispatcher>優先順位によってキューに要素を並べ替えます。 挿入される要素を追加するときに指定できる 10 のレベルがある、<xref:System.Windows.Threading.Dispatcher>キュー。 これらの優先順位が保持されます、<xref:System.Windows.Threading.DispatcherPriority>列挙体。 に関する詳細情報<xref:System.Windows.Threading.DispatcherPriority>で見つかるレベル、[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]ドキュメント。  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>スレッドの動作: サンプル  
+## <a name="threads-in-action-the-samples"></a>スレッドの動作:サンプルは、  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>実行時間の長い計算で、シングル スレッド アプリケーション  
@@ -217,5 +217,5 @@ ms.locfileid: "43512467"
   
  タスクを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]させず、すべての場所で再入をブロックしないため、メモリ リークの予期しない再入を回避するためには。  
   
-## <a name="see-also"></a>関連項目  
- [実行時間の長い計算のサンプルを使用して、シングル スレッド アプリケーション](https://go.microsoft.com/fwlink/?LinkID=160038)
+## <a name="see-also"></a>関連項目
+- [実行時間の長い計算のサンプルを使用して、シングル スレッド アプリケーション](https://go.microsoft.com/fwlink/?LinkID=160038)

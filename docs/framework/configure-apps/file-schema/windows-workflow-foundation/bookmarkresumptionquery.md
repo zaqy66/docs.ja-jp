@@ -3,12 +3,12 @@ title: '&lt;bookmarkResumptionQuery&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: 88f9639e4ecc3105a0e58d92e443d9582f261970
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5eb00d1e094484e3ec01e0db18719ec50e4b953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515071"
 ---
 # <a name="ltbookmarkresumptionquerygt"></a>&lt;bookmarkResumptionQuery&gt;
 ワークフロー インスタンス内のブックマークの再開を追跡するために使用されるクエリを表します。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。  
@@ -19,8 +19,8 @@ ms.locfileid: "32756187"
 \<追跡 >  
 \<trackingProfile>  
 \<ワークフロー >  
-\<bookmarkResumptionQueries >  
-\<bookmarkResumptionQuery >  
+\<bookmarkResumptionQueries>  
+\<bookmarkResumptionQuery>  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,8 +54,8 @@ ms.locfileid: "32756187"
 |-------------|-----------------|  
 |[\<bookmarkResumptionQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bookmarkresumptionqueries.md)|ワークフロー インスタンス内のブックマークの再開を追跡するために使用する、クエリのコレクションを表します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>       
- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

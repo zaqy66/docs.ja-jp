@@ -2,12 +2,12 @@
 title: Web サービス プロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521388"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービス プロトコルの相互運用性ガイド
 Windows Communication Foundation (WCF) は、さまざまな Web サービス プロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 このトピックでは、WCF が実装する Web サービス プロトコルの一覧を示します。 サポートされる各プロトコルの実装の詳細については、このセクションの他のトピックで説明します。  
@@ -100,13 +100,13 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
   
 -   [Basic Security Profile 1.0 ワーキング ドラフト](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>関連項目  
- [システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [メッセージング プロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL とポリシー](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [セキュリティ プロトコル](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [信頼できるメッセージング プロトコル バージョン 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [信頼できるメッセージング プロトコル バージョン 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [コンテキスト交換プロトコル](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>関連項目
+- [システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [メッセージング プロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL とポリシー](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [セキュリティ プロトコル](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [信頼できるメッセージング プロトコル バージョン 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [信頼できるメッセージング プロトコル バージョン 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [コンテキスト交換プロトコル](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

@@ -2,12 +2,12 @@
 title: メッセージ相関
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: dbe4408a3f2a5de92cad1cb286b9aedd963e8440
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520660"
 ---
 # <a name="message-correlation"></a>メッセージ相関
 このサンプルでは、Windows Communication Foundation (WCF) サービスをメッセージ キュー (MSMQ) アプリケーションが MSMQ メッセージを送信する方法と、要求/応答シナリオでは、送信者と受信者のアプリケーション間のメッセージの関連付け方法を示します。 このサンプルでは、msmqIntegrationBinding バインディングを使用します。 この場合、サービスは自己ホスト型コンソール アプリケーションで、サービスがキュー内のメッセージを受信したかどうかを監視できます。 k  
@@ -312,6 +312,6 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## <a name="see-also"></a>関連項目  
- [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>関連項目
+- [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=94968)

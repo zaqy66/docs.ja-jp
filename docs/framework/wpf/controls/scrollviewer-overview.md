@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 4c9a2e8cf64f18f3e8614912759a4a6eb01d4823
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bcd51903879675f2607996c47aab9645217e9e21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519620"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer の概要
 ユーザー インターフェイス内のコンテンツは、多くの場合、コンピューター画面の表示領域よりも大きいです。 <xref:System.Windows.Controls.ScrollViewer>コントロール内のコンテンツのスクロールを有効にする便利な手段を提供する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは、<xref:System.Windows.Controls.ScrollViewer>要素と、いくつかの使用例を提供します。  
@@ -60,11 +60,11 @@ ms.locfileid: "45593805"
   
  ドキュメント形式とプレゼンテーション オプションの詳細については、「[WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.ScrollViewer>  
- <xref:System.Windows.Controls.Primitives.ScrollBar>  
- <xref:System.Windows.Controls.Primitives.IScrollInfo>  
- [スクロール ビューアーを作成します。](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [ScrollBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [コントロール](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.ScrollViewer>
+- <xref:System.Windows.Controls.Primitives.ScrollBar>
+- <xref:System.Windows.Controls.Primitives.IScrollInfo>
+- [スクロール ビューアーを作成します。](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)
+- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [ScrollBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
+- [コントロール](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519386"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ をサポートする Visual Basic の機能
 名前[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ構文のサポートを言語で直接その他の言語を構築します、Visual Basic でのテクノロジを参照します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]、外部データ ソースに対してクエリを新しい言語を習得する必要はありません。 Visual Basic を使用してリレーショナル データベース、XML ストア、またはオブジェクト内のデータのクエリを行うことができます。 この統合言語クエリ機能の有効に構文エラーとタイプ セーフのコンパイル時にチェックします。 この統合は、Visual Basic での高度でさまざまなクエリを記述するために必要なほとんどを既に把握しているにも確認します。  
   
- 次のセクションでは、入門ドキュメント、コード例については、およびサンプル アプリケーションの読み取りを開始するための十分な詳細で LINQ をサポートする言語構造について説明します。 統合言語クエリを有効にする言語機能がどのように一緒に付属のより詳細な説明を検索するリンクをクリックすることもできます。 開始点としては[チュートリアル: Visual Basic でクエリを記述](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)します。  
+ 次のセクションでは、入門ドキュメント、コード例については、およびサンプル アプリケーションの読み取りを開始するための十分な詳細で LINQ をサポートする言語構造について説明します。 統合言語クエリを有効にする言語機能がどのように一緒に付属のより詳細な説明を検索するリンクをクリックすることもできます。 開始点としては[チュートリアル。Visual Basic でクエリを記述](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)します。  
   
 ## <a name="query-expressions"></a>クエリ式  
  Visual Basic でのクエリ式は、SQL や XQuery に似た宣言型の構文で表現できます。 コンパイル時に、クエリの構文は、標準クエリ演算子の拡張メソッドの LINQ プロバイダーの実装に対するメソッド呼び出しに変換されます。 標準クエリ演算子がスコープ内で適切な名前空間を指定することで、アプリケーション制御、`Imports`ステートメント。 Visual Basic のクエリ式の構文のようになります。  
@@ -44,7 +44,7 @@ ms.locfileid: "39199148"
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- 詳細については、次を参照してください。[オブジェクト初期化子: 名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)します。  
+ 詳細については、次を参照してください。[オブジェクト初期化子。名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)します。  
   
 ## <a name="anonymous-types"></a>匿名型  
  匿名型は、クエリ結果に追加する要素にプロパティのセットを一時的にグループ化する便利な手段を提供します。 これにより、要素の名前付きのデータ型を定義することがなく、任意の順序でのクエリで使用可能なフィールドの任意の組み合わせを選択することができます。  
@@ -93,9 +93,9 @@ ms.locfileid: "39199148"
   
  詳細については、「[ラムダ式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>関連項目
+- [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -2,12 +2,6 @@
 title: DataSet、DataTable、および DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506250"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable、および DataView
 ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であり、含まれているデータ ソースとは関係なく、一貫性のあるリレーショナル プログラミング モデルを提供します。 <xref:System.Data.DataSet> とは、テーブル間のリレーションシップだけでなく、包括するテーブル、整列するテーブル、およびデータを制約するテーブルを含むデータのセットを表します。  
@@ -78,6 +72,6 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
  [DataSet への既存の制約の追加](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  **DataSet** にデータ ソースの主キー情報を設定する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c872f8e1316c735d3b717cbea6e995b14ca0133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc9633f7518aee233634bb7fbfac74c24b306eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515603"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone メソッド
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
@@ -33,5 +33,5 @@ ms.locfileid: "33431250"
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

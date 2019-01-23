@@ -2,12 +2,12 @@
 title: '方法: ファイルがアセンブリ (Visual Basic) を確認します。'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520091"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>方法: ファイルがアセンブリ (Visual Basic) を確認します。
 ファイルが管理されていて、ファイルのメタデータにアセンブリ エントリが含まれている場合、そのファイルはアセンブリです。 アセンブリとメタデータの詳細については、「[アセンブリ マニフェスト](../../../../framework/app-domains/assembly-manifest.md)」を参照してください。  
@@ -18,7 +18,7 @@ ms.locfileid: "47089400"
   
 2.  テストするファイルを読み込みます。  
   
-3.  **ILDASM** で、そのファイルが移植可能な実行可能 (PE) ファイルではないと報告された場合、そのファイルはアセンブリでありません。 詳細については、「[方法: アセンブリの内容を表示する](../../../../framework/app-domains/how-to-view-assembly-contents.md)」を参照してください。  
+3.  **ILDASM** で、そのファイルが移植可能な実行可能 (PE) ファイルではないと報告された場合、そのファイルはアセンブリでありません。 詳細については、トピックを参照してください。[方法。アセンブリの内容を表示する](../../../../framework/app-domains/how-to-view-assembly-contents.md)」を参照してください。  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>ファイルがアセンブリかどうかをプログラムによって確認する方法  
   
@@ -54,6 +54,6 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Reflection.AssemblyName>  
-- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)
 - [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ'
+title: 'チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513725"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 データをもう一度アクセスすると、アプリケーションは、代わりに、元のソースから取得するキャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]でキャッシュを使用するためのクラスを提供します[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アプリケーション。 これらのクラスにある、<xref:System.Runtime.Caching>名前空間。
@@ -71,7 +71,7 @@ ms.locfileid: "49087350"
 
 5.  **名前**テキスト ボックスに、プロジェクトの名前を入力します。 たとえば、入力**WPFCaching**します。
 
-6.  選択、**ソリューションのディレクトリを作成**チェック ボックスをオンします。
+6.  **[ソリューションのディレクトリを作成]** チェック ボックスをオンにします。
 
 7.  **[OK]** をクリックします。
 

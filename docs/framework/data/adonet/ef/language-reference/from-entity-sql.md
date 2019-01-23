@@ -2,15 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: de2ad24e5c6399ed1ca91e3907da4a66c056e337
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a2550b667617ccf945acad79f0d63c52df118061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516333"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
-使用するコレクションを指定[選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)ステートメントです。  
+使用されるコレクションを指定します[選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)ステートメント。  
   
 ## <a name="syntax"></a>構文  
   
@@ -22,7 +22,7 @@ FROM expression [ ,...n ] as C
  `expression`  
  `SELECT` ステートメントのソースとして使用するコレクションを生成する任意の有効なクエリ式。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `FROM` 句は、1 つ以上の `FROM` 句の項目をコンマで区切ったリストです。 `FROM` 句を使用して、`SELECT` ステートメントのソースを 1 つ以上指定できます。 `FROM` 句の最も単純な形式は、次の例に示すように、`SELECT` ステートメントのソースとして使用する 1 つのコレクションと 1 つの別名を識別する単一のクエリ式です。  
   
  `FROM C as c`  
@@ -96,14 +96,14 @@ LOB.Customers
 >  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] とは異なり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、明示的なネスト解除の手順は不要です。  
   
 > [!NOTE]
->  `CROSS` 演算子および `OUTER APPLY` 演算子は [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 SQL Server のバージョンを含む一部のバックエンド プロバイダーよりも前[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、これらの演算子をサポートしていません、このようなクエリは、これらのバックエンド プロバイダーで実行することはできません。  
+>  `CROSS` 演算子および `OUTER APPLY` 演算子は [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 ため、SQL Server のバージョンを含む、一部のバックエンド プロバイダーよりも前[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、これらの演算子をサポートして、このようなクエリは、これらのバックエンド プロバイダーで実行することはできません。  
 >   
 >  `CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含むクエリの生成につながる可能性がある一般的なシナリオとしては、ページングを使用した相関サブクエリ、相関サブクエリ全体またはナビゲーションによって生成されたコレクション全体を対象とした AnyElement、要素セレクターを受け取るグループ化メソッドを使用した LINQ クエリ、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子が明示的に指定されたクエリ、`DEREF` コンストラクターを引数に取る `REF` コンストラクターを含むクエリなどがあります。  
   
 ## <a name="multiple-collections-in-the-from-clause"></a>FROM 句での複数のコレクション  
  `FROM` 句には、複数のコレクションをコンマで区切って含めることができます。 この場合、これらのコレクションは 1 つに結合されるものと見なされます。 これは、n 方向の CROSS JOIN と考えることができます。  
   
- 次の例では、`C`と`D`は独立したコレクションが`c.Names`が依存`C`です。  
+ 次の例では、`C`と`D`は独立したコレクションが`c.Names`が依存`C`します。  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
@@ -152,7 +152,7 @@ select c.Orders from Customers as c
 select {1} from {2, 3}  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [NULL 値が許容される構造化型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a>関連項目
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [NULL 値が許容される構造化型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

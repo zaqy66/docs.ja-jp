@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499315"
 ---
 # <a name="freezable-objects-overview"></a>Freezable オブジェクトの概要
 このトピックでは、効果的に使用し、作成する方法を説明します。<xref:System.Windows.Freezable>オブジェクトで、アプリケーションのパフォーマンスの向上に役立つ特殊な機能を提供します。 Freezable オブジェクトの例には、ブラシ、ペン、変換、ジオメトリ、およびアニメーションが含まれます。  
@@ -161,8 +161,8 @@ mc:Ignorable="PresentationOptions"
   
  カスタムの例については<xref:System.Windows.Freezable>クラスを参照してください、[カスタム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=159981)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Freezable>  
- [カスタム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=159981)  
- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Freezable>
+- [カスタム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

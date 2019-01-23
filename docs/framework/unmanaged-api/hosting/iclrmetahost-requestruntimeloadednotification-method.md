@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519126"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification メソッド
-共通言語ランタイム (CLR) のバージョンが最初に読み込まれましたが、開始していないときに呼び出される保証されているコールバック関数を提供します。 このメソッドは、 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数。  
+共通言語ランタイム (CLR) バージョンが初めて読み込まれるが、開始していないときに呼び出されることが保証されるコールバック関数を提供します。 このメソッドは、 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,16 +46,16 @@ HRESULT RequestRuntimeLoadedNotification (
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pCallbackFunction` が null です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  コールバックは、次のように動作します。  
   
--   最初に、ランタイムが読み込まれるときにのみ、コールバックが呼び出されます。  
+-   最初に、ランタイムが読み込まれる場合にのみ、コールバックが呼び出されます。  
   
--   コールバックは、同じランタイムの再入可能な負荷に対しては呼び出されません。  
+-   同じランタイムの再入可能な負荷、コールバックは呼び出されません。  
   
--   再入不可能なランタイムの読み込み、コールバック関数への呼び出しがシリアル化されます。  
+-   再入不可能なランタイムの読み込み、コールバック関数の呼び出しがシリアル化します。  
   
- コールバック関数では、次のプロトタイプには。  
+ コールバック関数では、次のプロトタイプを持ちます。  
   
 ```  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -78,26 +78,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- ホストにより、再入可能な方法で読み込まれる別のランタイムの読み込みまたはしているつもりの場合、`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`次のように、コールバック関数を使用する必要がありますに用意されているパラメーター。  
+ ホストが読み込みまたは再入可能の方法で読み込まれる別のランタイムが発生する場合、`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`コールバック内で次のように関数を使用する必要がありますに用意されているパラメーター。  
   
 -   `pfnCallbackThreadSet` このような負荷が試みられる前に、実行時の負荷を引き起こす可能性のあるスレッドから呼び出す必要があります。  
   
--   `pfnCallbackThreadUnset` スレッドがランタイム負荷がかかるおそれが不要になった場合 (および初期コールバックから戻る前に) 呼び出す必要があります。  
+-   `pfnCallbackThreadUnset` スレッドは実行時の負荷が発生しない場合 (および初期コールバックから戻る前に) 呼び出す必要があります。  
   
--   `pfnCallbackThreadSet` および`pfnCallbackThreadUnset`再入不可能なは、どちらもします。  
+-   `pfnCallbackThreadSet` `pfnCallbackThreadUnset`はどちらも再入不可能な。  
   
 > [!NOTE]
->  ホスト アプリケーションを呼び出してはならない`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`のスコープ外、`pCallbackFunction`パラメーター。  
+>  ホスト アプリケーションを呼び出してはならない`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`の範囲外の`pCallbackFunction`パラメーター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRMetaHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>関連項目
+- [ICLRMetaHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

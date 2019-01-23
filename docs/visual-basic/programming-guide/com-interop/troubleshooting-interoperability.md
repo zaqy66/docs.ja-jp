@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 8525fa7eca2f61d3091a7597db94247b4701ed19
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 413c9331611d3406c13df58f25db1ef0255339b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517670"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>相互運用性のトラブルシューティング (Visual Basic)
 マネージ コードと COM の相互運用するときに、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]、1 つ以上の次の一般的な問題が発生する可能性があります。  
@@ -91,7 +91,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  この例では、想定どおりにエラーが発生します。 ただし、せず同じ例では、しようとすると、`Try...Catch...Finally`使用する場合と同様、ブロック、エラーは無視されます、`OnError Resume Next`ステートメント。 エラー処理、ゼロによる除算はサイレント モードで失敗します。 このようなエラーは、ハンドルされない例外エラーを発生させることはありません、ためには、COM オブジェクトからイベントを処理するイベント ハンドラーで例外処理のいくつかの形式を使用することが重要です。  
   
 ### <a name="understanding-com-interop-errors"></a>COM 相互運用機能の問題を理解します。  
- エラー処理、相互運用呼び出しは多くの場合、ほとんどの情報を提供するエラーを生成します。 可能であれば、構造化エラーが発生したときに、問題に関する詳細情報を提供する処理を使用します。 アプリケーションをデバッグする場合は特に便利にできます。 例えば:  
+ エラー処理、相互運用呼び出しは多くの場合、ほとんどの情報を提供するエラーを生成します。 可能であれば、構造化エラーが発生したときに、問題に関する詳細情報を提供する処理を使用します。 アプリケーションをデバッグする場合は特に便利にできます。 例:  
   
  [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
@@ -111,7 +111,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> コントロールの ByRef の読み取り専用プロパティの引き渡し  
  Visual Basic .NET は、渡すときに場合があります"エラー 0x800A017F CTL_E_SETNOTSUPPORTED"などの COM エラーを生成`ReadOnly`プロパティとして、一部の古い ActiveX コントロールの`ByRef`他のプロシージャのパラメーター。 Visual Basic 6.0 からプロシージャの呼び出しでは、エラーは発生せず、パラメーターとして扱われます値で渡すと同様です。 Visual Basic .NET のエラー メッセージでは、プロパティがないプロパティを変更しようとしていることを示します`Set`プロシージャ。  
   
- 呼び出されるプロシージャにアクセスする場合を使用してこのエラーを防ぐことができます、`ByVal`を受け取るパラメーターを宣言するキーワード`ReadOnly`プロパティ。 例えば:  
+ 呼び出されるプロシージャにアクセスする場合を使用してこのエラーを防ぐことができます、`ByVal`を受け取るパラメーターを宣言するキーワード`ReadOnly`プロパティ。 例:  
   
  [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
@@ -128,10 +128,10 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
-- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
-- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
-- [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
-- [チュートリアル : COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
-- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [チュートリアル: COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [グローバル アセンブリ キャッシュ](../../../framework/app-domains/gac.md)

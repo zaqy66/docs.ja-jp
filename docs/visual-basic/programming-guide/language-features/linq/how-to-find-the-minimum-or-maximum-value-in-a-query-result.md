@@ -1,5 +1,5 @@
 ---
-title: '方法 : LINQ を使用したクエリ結果内の最小値と最大値の検索 (Visual Basic)'
+title: '方法: LINQ (Visual Basic) を使用してクエリ結果内の最小値と最大値を検索します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - max operator [LINQ in Visual Basic]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: 252601b12e21e122c316952f8e10ce04cbe3f78e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a7215afdfbfc7653247ad0286a36dd2ab50ba2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514271"
 ---
-# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>方法 : LINQ を使用したクエリ結果内の最小値と最大値の検索 (Visual Basic)
+# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してクエリ結果内の最小値と最大値を検索します。
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
   
  次の例では、SQL Server データベースに対してクエリを実行する新しいアプリケーションを作成する方法を示します。 サンプルを使用して、結果の最小値と最大値を決定する、`Aggregate`と`Group By`句。 詳細については、次を参照してください。 [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)します。  
@@ -76,8 +76,8 @@ ms.locfileid: "42924483"
   
 4.  F5 キーを押してプロジェクトを実行し、結果を表示します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [クエリ](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>関連項目
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

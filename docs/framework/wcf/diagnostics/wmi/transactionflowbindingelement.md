@@ -2,12 +2,12 @@
 title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
-ms.openlocfilehash: 027ace6ea9fc2a0e5ce63efa84e1a49c0ed2cd0a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0311837ebb8112d9492fb548492bcd3e10230e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514572"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
@@ -32,21 +32,21 @@ class TransactionFlowBindingElement : BindingElement
 ### <a name="issuedtokens"></a>IssuedTokens  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  発行されるセキュリティ トークン ヘッダー (WS-Trust からの IssuedTokens) の要件を指定します。  
   
 ### <a name="transactionprotocol"></a>TransactionProtocol  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  トランザクションをフローさせるためにサービスによって使用されるトランザクション プロトコルです。  
   
 ### <a name="transactions"></a>トランザクション  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  受信トランザクションをサポートするかどうかを示します。  
   
@@ -56,5 +56,5 @@ class TransactionFlowBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

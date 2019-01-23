@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 113c228fd0a160ef6d8dd593891a6f9dd053a28c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4eeadadee181a8a726cb0b7a16425d68a112aae4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517722"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData メソッド
 現在のメタデータ スコープ内にあるオブジェクトのメタデータ署名を検証します。  
@@ -33,14 +33,14 @@ ms.locfileid: "33452668"
 HRESULT ValidateMetaData ();  
 ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataValidate インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataValidate インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

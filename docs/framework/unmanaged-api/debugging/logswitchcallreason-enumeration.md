@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fe5710f1be0bfa4e651668e2469c3551ad79261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515327"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 列挙型
 デバッグとトレースの切り替えで実行された操作を示します。  
@@ -41,17 +41,17 @@ typedef enum LogSwitchCallReason {
 |メンバー|説明|  
 |------------|-----------------|  
 |`SWITCH_CREATE`|デバッグとトレース スイッチが作成されました。|  
-|`SWITCH_MODIFY`|デバッグとトレースの切り替えが変更されました。|  
+|`SWITCH_MODIFY`|デバッグとトレース スイッチが変更されました。|  
 |`SWITCH_DELETE`|デバッグとトレース スイッチが削除されました。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

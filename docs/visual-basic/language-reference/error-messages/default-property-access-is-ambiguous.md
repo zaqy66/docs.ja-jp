@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518645"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Default プロパティ アクセスは、継承インターフェイス メンバーの間にあいまいな&#39; &lt;defaultpropertyname&gt; &#39;インターフェイスの&#39; &lt;interfacename1&gt; &#39;と&#39; &lt;defaultpropertyname&gt; &#39;インターフェイスの&#39; &lt;interfacename2&gt;&#39;
-インターフェイスは、同じ名前の既定のプロパティを宣言の 2 つのインターフェイスから継承します。 コンパイラは、この既定のプロパティを修飾せずに、アクセスを解決できません。 次に例を示します。  
+インターフェイスは、同じ名前の既定プロパティを宣言するそれぞれの 2 つのインターフェイスから継承します。 コンパイラは、この既定のプロパティを修飾なしに、アクセスを解決できません。 次に例を示します。  
   
 ```  
 Public Interface Iface1  
@@ -35,13 +35,13 @@ Public Class testClass
 End Class  
 ```  
   
- 指定すると`testObj(1)`コンパイラは、既定のプロパティに解決しようとしています。 ただし、プロパティがある 2 つ可能な既定、継承されたインターフェイスのため、コンパイラは、このエラーを通知するようにします。  
+ 指定すると`testObj(1)`コンパイラは既定のプロパティに解決しようとしています。 ただし、2 つ可能な既定プロパティは、継承のインターフェイスにより、コンパイラは、このエラーを通知するためです。  
   
  **エラー ID:** BC30686  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   同じ名前のメンバーを継承しないようにします。 前の例で場合`testObj`のメンバーのいずれかの必要はありません、たとえば、 `Iface2`、し、次のように宣言します。  
+-   同じ名前のメンバーを継承しないようにします。 前の例では場合、`testObj`のメンバーのいずれかの必要はありません、たとえば、 `Iface2`、次のように宣言します。  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      - または -  
   
--   クラスに継承するインターフェイスを実装します。 それぞれ異なる名前を持つ継承されたプロパティを実装できます。 ただし、それらの 1 つだけでは、実装するクラスの既定のプロパティがあります。 次に例を示します。  
+-   クラスで継承するインターフェイスを実装します。 これらの異なる名前を持つ継承されたプロパティを実装できます。 ただし、それらの 1 つだけでは、実装するクラスの既定のプロパティがあります。 次に例を示します。  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>関連項目
+- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

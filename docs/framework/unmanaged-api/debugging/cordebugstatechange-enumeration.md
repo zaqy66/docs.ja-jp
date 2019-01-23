@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841108457293e3377ee87f9c7d7c6898340e51b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f0f692b692628d50755ce813c66823f940dccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513786"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 列挙体
 プロセスへの変更に基づいて破棄が必要となった、キャッシュされたデータの量を示します。  
@@ -39,21 +39,21 @@ typedef enum CorDebugStateChange
 |`PROCESS_RUNNING`|プロセスはフォワード実行によって新しいメモリ状態に達しています。|  
 |`SET_CONTEXT_FLAG_UNWIND_FRAME`|プロセスのメモリは、以前とは異なる状態になっている場合があります。|  
   
-## <a name="remarks"></a>コメント  
- メンバー、`CorDebugStateChange`列挙体は、デバッガーが、引数として指定される、 [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)メソッド  
+## <a name="remarks"></a>Remarks  
+ メンバー、`CorDebugStateChange`デバッガーを呼び出すと、列挙型が、引数として指定された、 [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)メソッド  
   
 > [!NOTE]
 >  この列挙体は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

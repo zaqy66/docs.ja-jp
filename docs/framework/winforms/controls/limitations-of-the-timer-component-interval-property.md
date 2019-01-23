@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 9710568c3c21878aa6aad626e3152168a2f0c2fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 86cfcce65998d19aea8592ae33c5baf58e1ff0fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516955"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Windows フォームの Timer コンポーネントの制限事項&#39;秒間隔のプロパティ
 Windows フォーム<xref:System.Windows.Forms.Timer>コンポーネントには、<xref:System.Windows.Forms.Timer.Interval%2A>と次の 1 つのタイマー イベントの間の経過時間をミリ秒数を指定するプロパティ。 タイマーは引き続き受信コンポーネントが無効にしない限り、<xref:System.Windows.Forms.Timer.Tick>ほぼ一定の時間間隔でイベント。  
@@ -28,7 +28,7 @@ Windows フォーム<xref:System.Windows.Forms.Timer>コンポーネントには
   
 -   有効桁数、<xref:System.Windows.Forms.Timer.Interval%2A>プロパティの単位はミリ秒です。 一部のコンピューターでは、ミリ秒よりも高い解像度が高分解能カウンターを提供します。 このようなカウンターの可用性は、コンピューターのプロセッサ ハードウェアに依存します。
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Timer>  
- [Timer コンポーネント](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Timer コンポーネントの概要](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Timer>
+- [Timer コンポーネント](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
+- [Timer コンポーネントの概要](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
