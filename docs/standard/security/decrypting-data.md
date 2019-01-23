@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7f41a61fe929bb3eaf691deb75749777c0880aea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530689"
 ---
 # <a name="decrypting-data"></a>データの復号化
 復号化は、暗号化の逆の操作です。 秘密キーの暗号化では、データの暗号化に使用されたキーと IV の両方を把握しておく必要があります。 公開キーの暗号化では、公開キー (データが秘密キーで暗号化された場合) または秘密キー (データが公開キーで暗号化された場合) のいずれかを把握しておく必要があります。  
@@ -174,7 +174,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>非対称復号化  
  通常は、パーティ (パーティ A) は、公開キーと秘密キーの両方を生成し、メモリ内、または暗号化キー コンテナーのいずれかに格納します。  パーティ A は公開キーを別のパーティ (パーティ B) に送信します。  パーティ B は、公開キーを使用して、データを暗号化してからパーティ A にデータを返信します。パーティ A は、データを受信すると、対応する秘密キーを使用して暗号化を解除します。  復号化は、パーティ B がデータの暗号化に使用した公開キーに対応する秘密キーをパーティ A が使用する場合にのみ成功します。  
   
- セキュリティで保護された暗号化キー コンテナーに非対称キーを格納する方法と、その後非対称キーを取得する方法については、「 [方法 : キー コンテナーに非対称キーを格納する](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)」を参照してください。  
+ 格納する方法については後で、非対称キーを取得する方法とセキュリティで保護された暗号化キー コンテナー内の非対称キーを参照してください[方法。キー コンテナーに非対称キーを格納](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)します。  
   
  次の例は、対称キーと IV を表す 2 つのバイト配列の復号化を示しています。  第三者に簡単に送信できる形式で <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトから非対称の公開キーを抽出する方法については、「 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)というマネージ ストリームの値に初期化します。  
   
@@ -204,6 +204,6 @@ SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [データの暗号化](../../../docs/standard/security/encrypting-data.md)  
+- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [データの暗号化](../../../docs/standard/security/encrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

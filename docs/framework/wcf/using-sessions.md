@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533138"
 ---
 # <a name="using-sessions"></a>セッションの使用
 Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションとは異なる場合、セッション オブジェクトで使用できる[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション、サポートされる動作、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  WCF には、次の種類のセッション ベースのアプリケーションの動作が用意されています。  
   
--   2 者間の通信で特定のセキュリティ保護されたメッセージ交換について両者の合意が成立している場合、<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> は、セキュリティ ベースのセッションをサポートします。 詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。 たとえば、セキュリティ セッションと信頼できるセッションの両方のサポートを含む <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> バインディングは、既定では、メッセージを暗号化してデジタル署名を行うセキュリティで保護されたセッションのみを使用します。  
+-   2 者間の通信で特定のセキュリティ保護されたメッセージ交換について両者の合意が成立している場合、 <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> は、セキュリティ ベースのセッションをサポートします。 詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。 たとえば、セキュリティ セッションと信頼できるセッションの両方のサポートを含む <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> バインディングは、既定では、メッセージを暗号化してデジタル署名を行うセキュリティで保護されたセッションのみを使用します。  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> バインディングは、TCP/IP ベースのセッションをサポートしており、すべてのメッセージがソケット レベルの接続によって関連付けられます。  
   
@@ -106,7 +106,7 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
  *終了操作*は、開始操作とは逆に、既存のセッションの最終メッセージとして呼び出す必要がある操作です。 既定では、WCF は、サービスが関連付けられているセッションが閉じられた後に、サービス オブジェクトとそのコンテキストを再利用します。 そのため、サービス インスタンスの終了に適した関数を実行するように設計された終了操作を宣言することで、一種のデストラクターを作成できます。  
   
 > [!NOTE]
->  既定の動作は、ローカルのコンストラクターとデストラクターに似ていますが、あくまで似ているだけです。 開始または終了操作は、あるいはその両方同時に、WCF サービス操作ができます。 さらに既定では、開始操作は、任意の順序で何回でも呼び出すことができます。そのため、<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> オブジェクトを操作することでサービス インスタンスの有効期間を明示的に制御しない限り、セッションが確立されインスタンスに関連付けられた後に、追加セッションは作成されません。 また、状態はセッションに関連付けられ、サービス オブジェクトには関連付けられません。  
+>  既定の動作は、ローカルのコンストラクターとデストラクターに似ていますが、あくまで似ているだけです。 開始または終了操作は、あるいはその両方同時に、WCF サービス操作ができます。 さらに既定では、開始操作は、任意の順序で何回でも呼び出すことができます。そのため、 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> オブジェクトを操作することでサービス インスタンスの有効期間を明示的に制御しない限り、セッションが確立されインスタンスに関連付けられた後に、追加セッションは作成されません。 また、状態はセッションに関連付けられ、サービス オブジェクトには関連付けられません。  
   
  たとえば、`ICalculatorSession`前の例で使用されるコントラクトは、WCF クライアント オブジェクトの最初の呼び出しである必要があります、 `Clear` を呼び出すときにこのWCFクライアントオブジェクトとのセッションの他の操作とする前に操作が終了する必要があります`Equals`操作。 次のコード例は、この要件を強制的に適用するコントラクトを示しています。 セッションを開始するにはまず`Clear` を呼び出す必要があります。 `Equals` を呼び出すとセッションが終了します。  
   
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
 -   WCF クライアント オブジェクトのいずれかの型の終了操作 (既定では、操作が終了していません。 コントラクトは、終了操作を明示的に指定する必要があります)。 最初の操作が呼び出されると、WCF クライアント オブジェクトは自動的にチャネルを開き、セッションを開始します。  
   
- 例については、「 [方法 : セッションを必要とするサービスを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 」、および「 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 」や「 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 」のサンプルを参照してください。  
+ たとえば、「[方法:作成する Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)だけでなく[Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md)と[Instancing](../../../docs/framework/wcf/samples/instancing.md)サンプル。  
   
  クライアントとセッションに関する詳細については、次を参照してください。[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)します。  
   
@@ -137,14 +137,14 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
  コントラクト内の <xref:System.ServiceModel.SessionMode> 列挙と、チャネルと特定のサービス オブジェクト間の関連付けを制御する <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティの間には相互作用があります。 詳細については、次を参照してください。[セッション、インスタンス化、および同時実行](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)します。  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext オブジェクトの共有  
- ユーザーが自ら関連付けを行うことにより、どの <xref:System.ServiceModel.InstanceContext> オブジェクトに、どのセッション ベースのチャネルまたは呼び出しを関連付けるかを制御することもできます。 完全な例を参照してください。 [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)します。  
+ ユーザーが自ら関連付けを行うことにより、どの <xref:System.ServiceModel.InstanceContext> オブジェクトに、どのセッション ベースのチャネルまたは呼び出しを関連付けるかを制御することもできます。 コード例全体については、「 [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)」を参照してください。  
   
 ## <a name="sessions-and-streaming"></a>セッションとストリーミング  
- 大量のデータを転送すると、WCF では、ストリーミング転送モードはバッファリングと完全にメモリ内のメッセージの処理の既定の動作を可能な代替手段にします。 セッション ベースのバインディングでストリーミングを呼び出すと、予期しない動作を引き起こすことがあります。 すべてのストリーミング呼び出しは単一のチャネル (データグラム チャネル) を通じて行われますが、このチャネルは使用されるバインディングがセッションを使用するように構成されている場合であっても、セッションをサポートしません。 セッション ベースのバインディングによって複数のクライアントが同一のサービス オブジェクトに対してストリーミング呼び出しを行う場合、このサービス オブジェクトの同時実行モードが単一に設定され、インスタンス コンテキスト モードが `PerSession`に設定されていると、すべての呼び出しがこのデータグラム チャネルを通過する必要があるため、同時に処理される呼び出しは 1 つに限られることになります。 そのため、1 つ以上のクライアントがタイムアウトとなる可能性があります。サービス オブジェクトの `InstanceContextMode` を `PerCall` に設定するか、または同時実行モードを複数に設定することで、この問題を回避できます。  
+ 大量のデータを転送すると、WCF では、ストリーミング転送モードはバッファリングと完全にメモリ内のメッセージの処理の既定の動作を可能な代替手段にします。 セッション ベースのバインディングでストリーミングを呼び出すと、予期しない動作を引き起こすことがあります。 すべてのストリーミング呼び出しは単一のチャネル (データグラム チャネル) を通じて行われますが、このチャネルは使用されるバインディングがセッションを使用するように構成されている場合であっても、セッションをサポートしません。 セッション ベースのバインディングによって複数のクライアントが同一のサービス オブジェクトに対してストリーミング呼び出しを行う場合、このサービス オブジェクトのコンカレンシー モードが単一に設定され、インスタンス コンテキスト モードが `PerSession` に設定されていると、すべての呼び出しがこのデータグラム チャネルを通過する必要があるため、同時に処理される呼び出しは 1 つに限られることになります。 そのため、1 つ以上のクライアントがタイムアウトとなる可能性があります。サービス オブジェクトの `InstanceContextMode` を `PerCall` に設定するか、またはコンカレンシー モードを複数に設定することで、この問題を回避できます。  
   
 > [!NOTE]
 >  この場合、利用可能になる "セッション" は 1 つしかないため、MaxConcurrentSessions は効力を失います。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

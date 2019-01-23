@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527373"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 関数
 タイプ ライブラリを読み込み、指定された使用[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)任意の内部で参照されるタイプ ライブラリを解決します。  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in]A [REGKIND 列挙](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)タイプ ライブラリを登録する方法を制御するフラグ。 指定できる値は次のとおりです。  
   
--   `REGKIND_DEFAULT`: 既定の登録の動作を使用します。  
+-   `REGKIND_DEFAULT`:既定の登録の動作を使用します。  
   
--   `REGKIND_REGISTER`: このタイプ ライブラリを登録します。  
+-   `REGKIND_REGISTER`:このタイプ ライブラリを登録します。  
   
--   `REGKIND_NONE`。 このタイプ ライブラリを登録できません操作を行います。  
+-   `REGKIND_NONE`:このタイプ ライブラリを登録できません。  
   
  `pTlbResolver`  
  [in]実装へのポインター、 [ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)します。  
@@ -84,15 +84,15 @@ HRESULT LoadTypeLibWithResolver(
   
  呼び出す場合`LoadTypeLibWithResolver`を直接指定する必要あります独自[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)実装します。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** TlbRef.h  
   
  **ライブラリ:** TlbRef.lib  
   
- **.NET framework のバージョン:** 3.5、3.0、2.0  
+ **.NET framework のバージョン:** 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>関連項目  
- [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>関連項目
+- [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

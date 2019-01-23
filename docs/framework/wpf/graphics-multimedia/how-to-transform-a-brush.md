@@ -1,5 +1,5 @@
 ---
-title: '方法 : ブラシを変換する'
+title: '方法: ブラシを変換する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: ebc8d4c6cb36d76b70691cce183f9e6070d19822
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a90e17fa8bb4fec339fda8acbcdff5c0916d61bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529961"
 ---
-# <a name="how-to-transform-a-brush"></a>方法 : ブラシを変換する
+# <a name="how-to-transform-a-brush"></a>方法: ブラシを変換する
 この例は、変換する方法を示しています。<xref:System.Windows.Media.Brush>その 2 つの変換プロパティを使用して、オブジェクト:<xref:System.Windows.Media.Brush.RelativeTransform%2A>と<xref:System.Windows.Media.Brush.Transform%2A>します。  
   
  次の例を使用して、<xref:System.Windows.Media.RotateTransform>の内容を回転する、 <xref:System.Windows.Media.ImageBrush> 45 度。  
@@ -44,7 +44,7 @@ ms.locfileid: "43507048"
   
  完全なサンプルについては、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」を参照してください。 ブラシの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [ブラシの変換の概要](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>関連項目
+- [ブラシの変換の概要](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)
+- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

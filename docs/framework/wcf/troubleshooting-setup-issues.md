@@ -2,12 +2,12 @@
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532553"
 ---
 # <a name="troubleshooting-setup-issues"></a>セットアップに関する問題のトラブルシューティング
 このトピックでは、Windows Communication Foundation (WCF) がセットアップ問題のトラブルシューティングを行う方法について説明します。  
@@ -38,17 +38,17 @@ ms.locfileid: "48840548"
   
 4.  イベント ログまたはセットアップ トレース ログ ファイルに、次の例外のいずれかが記録される。  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException : "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof" で E:\WINDOWS\system32\wbem\mofcomp.exe を実行している間に予期しない結果 3 が発生しました  
+     ServiceModelReg [11:09:59:046]:System.ApplicationException:Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
      または  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException : 'System.Management.ManagementPath' の型初期化子が例外をスローしました。 ---> System.Runtime.InteropServices.COMException (0x80040154) : CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} を含むコンポーネントの COM クラス ファクトリを取得中に、次のエラーが発生しました: 80040154。  
+     ServiceModelReg [07:19:33:843]:System.TypeInitializationException:'System.management.managementpath' の型の初期化子は、例外をスローしました。 ---> System.Runtime.InteropServices.COMException (0x80040154):次のエラーにより失敗しました。 CLSID {cf4cc405-e2c5-4ddd-b3ce-5e7582d8c9fa} を含むコンポーネントの COM クラス ファクトリを取得します。80040154.  
   
      または  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException : ファイルまたはアセンブリ 'C:\WINDOWS\system32\wbem\mofcomp.exe'、またはその依存関係の 1 つが読み込めませんでした。 指定されたファイルが見つかりません。  
+     ServiceModelReg [07:19:32:750]:System.IO.FileNotFoundException:ファイルまたはアセンブリ 'C:\WINDOWS\system32\wbem\mofcomp.exe'、またはその依存関係の 1 つを読み込めませんでした。 指定されたファイルが見つかりません。  
   
-     ファイル名 : C:\WINDOWS\system32\wbem\mofcomp.exe  
+     ファイル名:'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  上で説明した問題を解決するためには、次の手順を実行する必要があります。  
   
@@ -73,5 +73,5 @@ ms.locfileid: "48840548"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セットアップ手順](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>関連項目
+- [セットアップ手順](../../../docs/framework/wcf/samples/set-up-instructions.md)

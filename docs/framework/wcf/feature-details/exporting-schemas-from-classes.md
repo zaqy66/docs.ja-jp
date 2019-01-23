@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 9fa123e5532e4c721af5f3ece4feeea92356d1fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 320d0ab4f90c446632225f3d3aabbfc2767f19a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526965"
 ---
 # <a name="exporting-schemas-from-classes"></a>クラスからのスキーマのエクスポート
 データ コントラクト モデルで使用されているクラスから XML スキーマ定義言語 (XSD) スキーマを生成するには、 <xref:System.Runtime.Serialization.XsdDataContractExporter> クラスを使います。 このトピックでは、スキーマの作成手順を説明します。  
@@ -43,9 +43,9 @@ ms.locfileid: "33494543"
 ## <a name="export-options"></a>エクスポート オプション  
  <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> の <xref:System.Runtime.Serialization.XsdDataContractExporter> プロパティとして <xref:System.Runtime.Serialization.ExportOptions> クラスのインスタンスを設定することにより、エクスポート処理の方法を制御できます。 具体的には、次のオプションを設定できます。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 `Type` のコレクションであり、エクスポートされる型に対応する既知の型を表します (詳細については、次を参照してください[データ コントラクトの既知の型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)。これらの既知の型は、`Export` メソッドに渡された型と共に、`Export` 呼び出しが行われるたびにエクスポートされます。  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 `Type` のコレクションであり、エクスポートされる型に対応する既知の型を表します (詳細については、次を参照してください[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)。これらの既知の型は、`Export` メソッドに渡された型と共に、`Export` 呼び出しが行われるたびにエクスポートされます。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 このプロパティを介して <xref:System.Runtime.Serialization.IDataContractSurrogate> を渡すことにより、エクスポート処理をカスタマイズできます。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)です。 既定では、サロゲートは使用されません。  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 このプロパティを介して <xref:System.Runtime.Serialization.IDataContractSurrogate> を渡すことにより、エクスポート処理をカスタマイズできます。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)します。 既定では、サロゲートは使用されません。  
   
 ## <a name="helper-methods"></a>ヘルパー メソッド  
  `XsdDataContractExporter` には、主要な機能であるスキーマのエクスポート処理に加え、型に関する情報を調べるためのヘルパー メソッドが定義されています。 以下に例を示します。  
@@ -58,9 +58,9 @@ ms.locfileid: "33494543"
   
  以上のメソッドの動作は、エクスポート オプションの影響を受けます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [スキーマのインポートとエクスポート](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [クラスを作成するためのスキーマのインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- [スキーマのインポートとエクスポート](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [クラスを作成するためのスキーマのインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: cd94411629f18557f677a6d1f65bfc0dede43e83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534515"
 ---
 # <a name="single-data-type-visual-basic"></a>単精度浮動小数点型 (Single) (Visual Basic)
 IEEE 32 ビット (4 バイト) の単精度浮動小数点数が 3.4028235 e + 38 までの値の範囲の符号付き - 1.401298E を通じて-負の値と 1.401298E から 45-45 から 3.4028235 e + 38 までの正の値。 単精度の数値では、実数の概算値を格納します。  
@@ -47,12 +47,12 @@ IEEE 32 ビット (4 バイト) の単精度浮動小数点数が 3.4028235 e + 
   
 -   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Single?displayProperty=nameWithType> 構造体です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Single?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Single?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

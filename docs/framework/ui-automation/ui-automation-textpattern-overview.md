@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 7455ce7f0c1dbc71bed6e7656663d3cd67325447
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c905dfbb0fffcf37c8b196e883003ea70e509b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534317"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI オートメーション TextPattern の概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] を使用して、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でサポートされているプラットフォームのテキスト コントロールのテキストの内容 (書式とスタイルの属性など) を公開する方法について説明します。 これらのコントロールなどが、Microsoft .NET Framework に限定されない<xref:System.Windows.Controls.TextBox>と<xref:System.Windows.Controls.RichTextBox>だけでなく、[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]対応します。  
   
  コントロールのテキストの内容は、 <xref:System.Windows.Automation.TextPattern> コントロール パターンを使用することで公開できます。コントロール パターンは、テキスト コンテナーの内容をテキスト ストリームとして表したものです。 さらに、 <xref:System.Windows.Automation.TextPattern> は、書式とスタイルの属性を公開する <xref:System.Windows.Automation.Text.TextPatternRange> クラスをサポートする必要があります。 <xref:System.Windows.Automation.Text.TextPatternRange> は、 <xref:System.Windows.Automation.TextPattern> および <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> エンドポイントのコレクションがあるテキスト コンテナーに、連続する、または複数の非結合テキスト範囲を表すことで <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> をサポートします。 <xref:System.Windows.Automation.Text.TextPatternRange> は、選択、比較、取得、トラバースなどの機能をサポートしています。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> クラスには、テキストを挿入または変更する手段がありません。 しかし、コントロールによっては、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> によって、または直接キーボードから入力して、これを実現できます。 参照してください、 [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)例についてはします。  
+>  <xref:System.Windows.Automation.TextPattern> クラスには、テキストを挿入または変更する手段がありません。 しかし、コントロールによっては、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> によって、または直接キーボードから入力して、これを実現できます。 例については、「 [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) 」をご覧ください。  
   
  この概要で説明されている機能は、支援技術ベンダーとそのエンドユーザーにとって重要です。 支援技術は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を使用してユーザー向けに完全なテキストの書式設定情報を収集するとともに、プログラムによるナビゲーションと、 <xref:System.Windows.Automation.Text.TextUnit> によるテキストの選択 (文字、単語、行、または段落) を行います。  
   
@@ -129,11 +129,11 @@ ms.locfileid: "48033559"
  <xref:System.Windows.Automation.Text.TextUnit>  
  テキストの範囲の論理セグメントを介して移動するために使用するテキストの定義済みの単位 (文字、単語、行、または段落) 。  
   
-## <a name="see-also"></a>関連項目  
- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [UI オートメーション クライアントのコントロール パターン マッピング](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Text Services Framework](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+## <a name="see-also"></a>関連項目
+- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [UI オートメーション クライアントのコントロール パターン マッピング](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Text Services Framework (TSF)](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

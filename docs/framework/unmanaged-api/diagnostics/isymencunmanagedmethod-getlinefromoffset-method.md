@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29990ad6a94f063577236bdbc84d02d4d2b4b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98015af4a79a9fca4945708e6d0baeb61e46876f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531227"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset メソッド
-オフセットに関連付けられている行の情報を取得します。 場合オフセット パラメーター (`dwOffset`) は、シーケンス ポイントでは、このメソッドは、前のオフセットに関連付けられている行の情報を取得します。  
+オフセットに関連付けられている行の情報を取得します。 場合オフセット パラメーター (`dwOffset`) がシーケンス ポイントでは、このメソッドは、前のオフセットに関連付けられている行の情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,25 +44,25 @@ HRESULT GetLineFromOffset(
  [in]A`ULONG32`オフセットを格納しています。  
   
  `pline`  
- [out]ポインター、`ULONG32`行を受け取る。  
+ [out]ポインターを`ULONG32`行を受け取る。  
   
  `pcolumn`  
  [out]ポインター、`ULONG32`列を受け取る。  
   
  `pendLine`  
- [out]ポインター、`ULONG32`の最終行を受け取る。  
+ [out]ポインター、`ULONG32`最終行を受け取る。  
   
  `pendColumn`  
- [out]ポインター、`ULONG32`を受け取る最終列。  
+ [out]ポインター、`ULONG32`終了列を受け取る。  
   
  `pdwStartOffset`  
- [out]ポインター、`ULONG32`関連付けられたシーケンス ポイントを受け取る。  
+ [out]ポインター、`ULONG32`関連付けられているシーケンス ポイントを受け取る。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

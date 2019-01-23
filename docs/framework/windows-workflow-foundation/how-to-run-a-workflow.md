@@ -1,29 +1,29 @@
 ---
-title: ワークフローを実行する方法
+title: '方法: ワークフローを実行します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3b2081cee307e80396a9af4b9cfdbdea001113e6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530403"
 ---
-# <a name="how-to-run-a-workflow"></a>ワークフローを実行する方法
-このトピックでは、Windows Workflow Foundation チュートリアル入門の続きと、ワークフロー ホストを作成して、前の「 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 」で定義したワークフローを実行する方法について説明します。
+# <a name="how-to-run-a-workflow"></a>方法: ワークフローを実行します。
+このトピックでは、Windows Workflow Foundation チュートリアル入門の続きと、ワークフロー ホストを作成し、以前に定義されているワークフローを実行する方法について説明します[方法。ワークフロー作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)トピック。
 
 > [!NOTE]
->  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する前に、「 [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) 」および「 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)」を完了する必要があります。
+>  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 まず、このトピックを完了する[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)と[方法。ワークフロー作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)です。
 
 > [!NOTE]
->  このチュートリアルの完成版をダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
+>  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
 ### <a name="to-create-the-workflow-host-project"></a>ワークフロー ホスト プロジェクトを作成するには  
   
-1.  前のソリューションを開きます[方法: アクティビティを作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)Visual Studio 2012 を使用してトピック。  
+1.  前のソリューションを開いて[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)Visual Studio 2012 を使用してトピック。  
   
 2.  **ソリューション エクスプローラー** で **WF45GettingStartedTutorial** ソリューションを右クリックし、 **[追加]** をポイントして、 **[新しいプロジェクト]** をクリックします。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48836947"
      <xref:System.Activities.WorkflowInvoker> を使用するコード行を次の <xref:System.Activities.WorkflowApplication> の基本的なホスティング コードに置き換えます。 このサンプル ホスティング コードでは、ワークフローをホストして呼び出すための基本的な手順を示します。ただし、このトピックのワークフローを正しく実行するための機能はまだありません。 次の手順では、アプリケーションが完了するまでにこの基本的なコードを変更して機能を追加します。
 
     > [!NOTE]
-    >  前の「 `Workflow1` 」の手順で完了したワークフローに応じて、これらの例の `FlowchartNumberGuessWorkflow`をポイントして、 `SequentialNumberGuessWorkflow`、 `StateMachineNumberGuessWorkflow`、または [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) に置き換えます。 `Workflow1` を置き換えないと、ワークフローをビルドまたは実行しようとするときにビルド エラーが発生します。
+    >  置き換えてください`Workflow1`でこれらの例で`FlowchartNumberGuessWorkflow`、 `SequentialNumberGuessWorkflow`、または`StateMachineNumberGuessWorkflow`前に完了したワークフローに応じて、[方法。ワークフロー作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)手順。 `Workflow1` を置き換えないと、ワークフローをビルドまたは実行しようとするときにビルド エラーが発生します。
 
      [!code-csharp[CFX_WF_GettingStarted#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/extrasnippets.cs#4)]
      [!code-vb[CFX_WF_GettingStarted#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/extrasnippets.vb#4)]
@@ -94,7 +94,7 @@ ms.locfileid: "48836947"
 2.  新しい <xref:System.Activities.WorkflowApplication> を作成するコード行を、作成時にワークフローにパラメーターの辞書を作成して渡す次のコードに置き換えます。
 
     > [!NOTE]
-    >  前の「 `Workflow1` 」の手順で完了したワークフローに応じて、これらの例の `FlowchartNumberGuessWorkflow`をポイントして、 `SequentialNumberGuessWorkflow`、 `StateMachineNumberGuessWorkflow`、または [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) に置き換えます。 `Workflow1` を置き換えないと、ワークフローをビルドまたは実行しようとするときにビルド エラーが発生します。
+    >  置き換えてください`Workflow1`でこれらの例で`FlowchartNumberGuessWorkflow`、 `SequentialNumberGuessWorkflow`、または`StateMachineNumberGuessWorkflow`前に完了したワークフローに応じて、[方法。ワークフロー作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)手順。 `Workflow1` を置き換えないと、ワークフローをビルドまたは実行しようとするときにビルド エラーが発生します。
 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
@@ -148,13 +148,13 @@ ms.locfileid: "48836947"
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     ワークフロー アプリケーションに永続化を追加する方法については、次のトピック「 [How to: Create and Run a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)」を参照してください。
+     永続化ワークフロー アプリケーションを追加する方法については、次のトピックを参照してください。[方法。作成して実行する時間の長いワークフローを実行して](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)します。
 
 ## <a name="example"></a>例
  次の例では、 `Main` メソッドの完全なコードの一覧を示します。
 
 > [!NOTE]
->  前の「 `Workflow1` 」の手順で完了したワークフローに応じて、これらの例の `FlowchartNumberGuessWorkflow`をポイントして、 `SequentialNumberGuessWorkflow`、 `StateMachineNumberGuessWorkflow`、または [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) に置き換えます。 `Workflow1` を置き換えないと、ワークフローをビルドまたは実行しようとするときにビルド エラーが発生します。
+>  置き換えてください`Workflow1`でこれらの例で`FlowchartNumberGuessWorkflow`、 `SequentialNumberGuessWorkflow`、または`StateMachineNumberGuessWorkflow`前に完了したワークフローに応じて、[方法。ワークフロー作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)手順。 `Workflow1` を置き換えないと、ワークフローをビルドまたは実行しようとするときにビルド エラーが発生します。
 
  [!code-csharp[CFX_WF_GettingStarted#12](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
@@ -165,7 +165,7 @@ ms.locfileid: "48836947"
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)
 - [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [ワークフローを作成する方法](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [長時間にわたって実行されるワークフローを作成して実行する方法](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
+- [方法: ワークフローを作成します。](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
+- [方法: 作成して実行する時間の長いワークフローの実行](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
 - [ワークフロー内での入力の待機](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)
 - [ワークフローのホスティング](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)

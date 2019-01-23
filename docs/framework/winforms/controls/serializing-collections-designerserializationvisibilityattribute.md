@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 54859b3065e8e9bb9680d8b6bf7946b393f73b9f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533547"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化
 カスタム コントロールでは、プロパティとしてコレクションを公開が場合があります。 このチュートリアルを使用する方法について説明、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>デザイン時にコレクションをシリアル化する方法を制御するクラス。 適用、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値をコレクション プロパティにより、プロパティをシリアル化されます。  
   
- このトピックの「単一のリストとしてコードをコピーするに、を参照してください。[方法: シリアル化するコレクションの基本データ型を DesignerSerializationVisibilityAttribute で](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)します。  
+ このトピックの「単一のリストとしてコードをコピーするに、を参照してください。[方法。Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "43788082"
   
 1.  という名前の Windows コントロール ライブラリ プロジェクトを作成する`SerializationDemoControlLib`します。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)します。  
   
-2.  名前を変更`UserControl1`に`SerializationDemoControl`します。 詳細については、次を参照してください。[方法: 識別子の名前を変更](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)します。  
+2.  名前を変更`UserControl1`に`SerializationDemoControl`します。 詳細については、「[方法 :識別子の名前変更](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)します。  
   
 3.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>プロパティを`10`します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "43788082"
   
 1.  Windows アプリケーション プロジェクトをソリューションに追加します。 プロジェクトに `SerializationDemoControlTest` という名前を付けます。  
   
-2.  **ツールボックス**、という名前のタブを見つける**SerializationDemoControlLib コンポーネント**します。 このタブでは紹介、`SerializationDemoControl`します。 詳細については、「[チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)」を参照してください。  
+2.  **ツールボックス**、という名前のタブを見つける**SerializationDemoControlLib コンポーネント**します。 このタブでは紹介、`SerializationDemoControl`します。 詳細については、「[チュートリアル:カスタム コンポーネントでツールボックスが自動的に入力](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)します。  
   
 3.  場所、`SerializationDemoControl`フォームにします。  
   
@@ -137,8 +137,8 @@ ms.locfileid: "43788082"
   
 -   [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
- [デザイナーのシリアル化の概要](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
- [方法: designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
+- [デザイナーのシリアル化の概要](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
+- [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

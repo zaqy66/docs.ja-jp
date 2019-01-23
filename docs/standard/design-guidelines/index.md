@@ -3,17 +3,11 @@ title: フレームワーク デザインのガイドライン
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- libraries, .NET Framework class library
-- class library design guidelines [.NET Framework], about
-- class library design guidelines [.NET Framework]
+  - 'libraries, .NET Framework class library'
+  - 'class library design guidelines [.NET Framework], about'
+  - 'class library design guidelines [.NET Framework]'
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396930"
 ---
 # <a name="framework-design-guidelines"></a>フレームワーク デザインのガイドライン
 このセクションでは、ライブラリを拡張し、.NET Framework との対話を設計するためのガイドラインを示します。 目標は、ライブラリの設計者は開発のために使用するプログラミング言語の独立した統一プログラミング モデルを提供することで API の一貫性と使いやすさを確認するためです。 .NET Framework を拡張するクラスやコンポーネントを開発する際に、これらのデザイン ガイドラインに従うことをお勧めします。 一貫性のないライブラリ デザインが悪影響を及ぼす開発者の生産性に影響し、導入を抑制します。  
@@ -50,6 +44,6 @@ ms.locfileid: "53396930"
   
 ## <a name="see-also"></a>関連項目
 
-- [概要](../../../docs/framework/get-started/overview.md)  
-- [.NET Framework のロードマップ](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+- [概要](../../../docs/framework/get-started/overview.md)
+- [.NET Framework のロードマップ](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [開発ガイド](../../../docs/framework/development-guide.md)

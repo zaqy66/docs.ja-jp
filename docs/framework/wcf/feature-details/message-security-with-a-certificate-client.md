@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530854"
 ---
 # <a name="message-security-with-a-certificate-client"></a>メッセージ セキュリティと証明書クライアント
 次のシナリオでは、Windows Communication Foundation (WCF) クライアントとメッセージ セキュリティ モードを使用して保護されたサービスを説明します。 クライアントとサービスは、どちらも証明書を使用して認証されます。 詳細については、次を参照してください。[分散アプリケーションのセキュリティ](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)します。  
@@ -143,8 +143,8 @@ ms.locfileid: "53130815"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

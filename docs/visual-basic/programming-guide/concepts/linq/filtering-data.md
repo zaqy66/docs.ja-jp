@@ -2,12 +2,12 @@
 title: データのフィルター処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: d3f44d0b6478103a10fb731988aeebc005cde82e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d65b9941ceffa7ea23c4ead192ec6b97b7b4ead8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527836"
 ---
 # <a name="filtering-data-visual-basic"></a>データのフィルター処理 (Visual Basic)
 フィルター処理とは、特定の条件を満たす要素のみが含まれるように結果セットを限定する操作のことです。 選択とも呼ばれます。  
@@ -26,7 +26,7 @@ ms.locfileid: "33644343"
 |Where|述語関数に基づいて値を選択します。|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例  
- 次の例では、`Where`を特定の長さを持つそれらの文字列の配列からフィルター処理します。  
+ 次の例では、`Where`を配列から特定の長さを持つ文字列をフィルター処理します。  
   
 ```vb  
 Dim words() As String = {"the", "quick", "brown", "fox", "jumps"}  
@@ -49,11 +49,11 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Linq>  
- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [WHERE 句](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [方法 : クエリ結果のフィルター処理](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
- [方法: リフレクション (LINQ) (Visual Basic) を使用してアセンブリのメタデータを照会します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- [方法: クエリのファイルで指定された属性または名前 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- [方法: 並べ替えまたはフィルター テキスト データで任意の単語またはフィールド (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [方法: クエリ結果をフィルター処理します。](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [方法: リフレクション (LINQ) (Visual Basic) を使用してアセンブリのメタデータを照会します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [方法: 指定した属性または名前 (Visual Basic) のファイルをクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [方法: 任意の単語またはフィールド (LINQ) (Visual Basic) でテキスト データのフィルターと並べ替え順序](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : すべての Windows フォームにグリッド オプションを設定する'
+title: '方法: すべての Windows フォームのグリッドのオプションを設定します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: ef6dc80bc00e2582b514bff7fe3e9c5d6d5770e6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3fedf663a885ec0da8925ccb335dca7177a33fcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530733"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>方法 : すべての Windows フォームにグリッド オプションを設定する
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>方法: すべての Windows フォームのグリッドのオプションを設定します。
 なるは、Visual Studio 開発環境での作業に使用されるため、Windows フォーム デザイナーで、すべてのフォームおよび操作するプロジェクトの基本設定を設定できます。  
   
 > [!NOTE]
@@ -27,16 +27,16 @@ ms.locfileid: "43776675"
   
 2.  左側のウィンドウで、**オプション**ダイアログ ボックスで、をクリックして**Windows フォーム デザイナー**します。  
   
-     右側のウィンドウで 、**レイアウト設定**見出しで、設定を行う既定のグリッドを作成するすべての新しいフォームの。 グリッドのサイズは、コントロールをスナップするかどうか、既定では、これらの設定が含まれます。 さらから選択できます**SnapToGrid**と**スナップ**レイアウト モードです。 スナップ ガイドラインの詳細については、次を参照してください。[チュートリアル: Arranging Controls on Windows フォームを使用してスナップ](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
+     右側のウィンドウで 、**レイアウト設定**見出しで、設定を行う既定のグリッドを作成するすべての新しいフォームの。 グリッドのサイズは、コントロールをスナップするかどうか、既定では、これらの設定が含まれます。 さらから選択できます**SnapToGrid**と**スナップ**レイアウト モードです。 スナップ ガイドラインの詳細については、次を参照してください。[チュートリアル。フォームのスナップ線を使用して Windows 上のコントロール](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)  
- [方法: Windows フォームにコントロールを追加する](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [方法: Windows フォーム上のタブ オーダーを設定する](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Windows フォームへのコントロールの追加](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Windows フォーム コントロールの機能別一覧](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>関連項目
+- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
+- [方法: Windows フォームにコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [方法: Windows フォーム上のタブ オーダーを設定します。](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)
+- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows フォームへのコントロールの追加](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows フォーム コントロールの機能別一覧](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

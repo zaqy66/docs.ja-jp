@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69b2c9f3bbd4fb7562272903d3ab78e3a4312298
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 3b02a5365aa2dc2292b0917820782405ba35ad92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534070"
 ---
 # <a name="ltdisablecommitthreadstackgt-element"></a>&lt;disableCommitThreadStack&gt;要素
 スレッドの起動時にスレッド スタック全体をコミットするかどうかを指定します。  
   
  \<configuration>  
-\<ランタイム >  
-\<disableCommitThreadStack >  
+\<runtime>  
+\<disableCommitThreadStack>  
   
 ## <a name="syntax"></a>構文  
   
@@ -73,6 +73,6 @@ ms.locfileid: "53611647"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>関連項目
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

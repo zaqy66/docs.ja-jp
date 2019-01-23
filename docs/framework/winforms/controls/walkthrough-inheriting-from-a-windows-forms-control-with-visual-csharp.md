@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Visual C# による Windows フォーム コントロールからの継承'
+title: 'チュートリアル: Visual C# による Windows フォーム コントロールからの継承'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: cad15b8fb89ec17e45b0f6cfed22f3109551fc2c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 392f0e98c3401ca5ae5e01fefbf35462462b3a4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531253"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>チュートリアル : Visual C# による Windows フォーム コントロールからの継承 #
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>チュートリアル: Visual C# による Windows フォーム コントロールからの継承 #
 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] では、*継承*によって強力なカスタム コントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォームから機能を継承<xref:System.Windows.Forms.Button>、制御し、という名前のカスタム プロパティを公開`ButtonValue`します。  
   
 > [!NOTE]
@@ -115,7 +115,7 @@ ms.locfileid: "45595725"
   
 4.  **[プロパティ]** ウィンドウで、このコントロールのプロパティを調べます。 プロパティは、追加のプロパティである `ButtonValue` がある点を除き、標準ボタンで公開されるプロパティと同じです。  
   
-5.  `ButtonValue` プロパティを `5` に設定します。  
+5.  `ButtonValue` プロパティを `5`に設定します。  
   
 6.  **すべての Windows フォーム**のタブ、**ツールボックス**、ダブルクリック**ラベル**を追加する、<xref:System.Windows.Forms.Label>をフォームにコントロール。  
   
@@ -141,8 +141,8 @@ ms.locfileid: "45595725"
   
      `label1` に数字の "5" が表示されます。これは、継承されたコントロールの `ButtonValue` プロパティが、`valueButton1_Click` メソッドによって `label1` に渡されたことを示しています。 このようにして、`ValueButton` コントロールは標準の Windows フォーム ボタンの機能をすべて継承しながら、追加のカスタム プロパティを公開します。  
   
-## <a name="see-also"></a>関連項目  
- [コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [コンポーネント作成のチュートリアル](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [チュートリアル: Visual C# による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+## <a name="see-also"></a>関連項目
+- [コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [コンポーネント作成のチュートリアル](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

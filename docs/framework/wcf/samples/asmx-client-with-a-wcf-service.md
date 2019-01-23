@@ -2,12 +2,12 @@
 title: WCF サービス付き ASMX クライアント
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: d526bc01d7809aa2672dcfcf194ad9c7d2e7baa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527512"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF サービス付き ASMX クライアント
 このサンプルでは、Windows Communication Foundation (WCF) を使用してサービスを作成し、ASMX クライアントなど、WCF 以外のクライアントからサービスにアクセスする方法を示します。  
@@ -138,7 +138,7 @@ Press <ENTER> to terminate client.
 3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!NOTE]
->  渡すと、複雑なデータを返す詳細については型を参照してください: [Windows フォームのクライアントでのデータ バインディング](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)、 [Windows Presentation Foundation クライアントでのデータ バインディング](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)、および[データASP.NET クライアントでのバインド](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  渡すと、複雑なデータを返すことの詳細については型参照してください。[データ バインディング、Windows フォーム クライアント](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)、 [Windows Presentation Foundation クライアントでのデータ バインディング](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)、および[ASP.NET クライアントでのデータ バインディング](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 10a5be16ef27aedf86f391b661750a953262d29b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533209"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
 
@@ -29,10 +29,10 @@ ServiceModel メタデータ ユーティリティ ツールを具体的には�
 |タスク|トピック|
 |----------|-----------|
 |実行中のサービスまたは静的なメタデータ ドキュメントからコードを生成します。|[サービス メタデータからの WCF クライアントの生成](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|
-|コンパイル済みのコードからメタデータ ドキュメントをエクスポートします。|[操作方法：Svcutil.exe を使用して、コンパイル済みサービス コードからメタデータをエクスポートするには](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
-|コンパイル済みサービス コードを検証します。|[操作方法：Svcutil.exe を使用して、コンパイル済みサービス コードを検証するには](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
-|実行中のサービスからメタデータ ドキュメントをダウンロードします。|[操作方法：Svcutil.exe を使用してメタデータ ドキュメントをダウンロードするには](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
-|シリアル化コードを生成します。|[操作方法：アプリケーション起動時間の WCF クライアント、XmlSerializer を使用して向上させる](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
+|コンパイル済みのコードからメタデータ ドキュメントをエクスポートします。|[方法: Svcutil.exe を使用して、コンパイル済みサービス コードからメタデータをエクスポートするには](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
+|コンパイル済みサービス コードを検証します。|[方法: Svcutil.exe を使用して、コンパイル済みサービス コードを検証するには](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
+|実行中のサービスからメタデータ ドキュメントをダウンロードします。|[方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードするには](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
+|シリアル化コードを生成します。|[方法: アプリケーション起動時間の WCF クライアント、XmlSerializer を使用して向上させる](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
 
 > [!CAUTION]
 > パラメーターとして指定された名前が同じ場合、Svcutil はディスク上の既存のファイルを上書きします。 これには、コード ファイル、構成、またはメタデータ ファイルを含めることができます。 これを避けるため、コードと構成ファイルを生成するときに、使用、`/mergeConfig`スイッチします。
@@ -59,7 +59,7 @@ Svcutil を使用して、セキュリティ トークン サービス (STS) へ
 
 |オプション|説明|
 |------------|-----------------|
-|/directory:\<directory>|ファイルを作成するためのディレクトリ。<br /><br /> 既定値:現在のフォルダー。<br /><br /> 短縮形 : `/d`|
+|/directory:\<directory>|ファイルを作成するためのディレクトリ。<br /><br /> 既定:現在のフォルダー。<br /><br /> 短縮形 : `/d`|
 |/help|このツールのコマンド構文とオプションを表示します。<br /><br /> 短縮形 : `/?`|
 |/noLogo|著作権やバナー メッセージを表示しません。|
 |/svcutilConfig:\<configFile>|App.config ファイルの代わりに使用するカスタム構成ファイルを指定します。 これは、ツールの構成ファイルを変更せずに system.serviceModel 拡張を登録するために使用できます。|
@@ -69,7 +69,7 @@ Svcutil を使用して、セキュリティ トークン サービス (STS) へ
 
 Svcutil.exe は、メタデータ ドキュメントからサービス コントラクト、クライアント、およびデータ型のコードを生成できます。 これらのメタデータ ドキュメントは、永続ストレージにあるか、オンラインで取得できます。 オンライン取得は、WS-Metadata Exchange プロトコルまたは DISCO プロトコルに従います (詳細については、「メタデータのダウンロード」セクションを参照してください)。
 
-使用することができます、 *SvcUtil.exe*定義済みの WSDL ドキュメントに基づいてサービスとデータ コントラクトを生成するツール。 /serviceContract スイッチを使用し、WSDL ドキュメントをダウンロードできるか見つけることができる URL またはファイルの場所を指定します。 これには、準拠サービスを実装するために使用する WSDL ドキュメントで定義されているサービスとデータ コントラクトが生成されます。 詳細については、次を参照してください。[方法。メタデータの取得および準拠サービスの実装](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)します。
+使用することができます、 *SvcUtil.exe*定義済みの WSDL ドキュメントに基づいてサービスとデータ コントラクトを生成するツール。 /serviceContract スイッチを使用し、WSDL ドキュメントをダウンロードできるか見つけることができる URL またはファイルの場所を指定します。 これには、準拠サービスを実装するために使用する WSDL ドキュメントで定義されているサービスとデータ コントラクトが生成されます。 詳細については、「[方法 :メタデータの取得および準拠サービスの実装](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)します。
 
 BasicHttpContextbinding エンドポイントとサービスの*Svcutil.exe*との BasicHttpBinding を生成、`allowCookies`属性に設定`true`代わりにします。 クッキーはサーバー側でのコンテキスト用に使用されます。 サービスでクッキーを使用するときにクライアント側でコンテキストを管理する場合は、コンテキスト バインディングを使用するように構成を手動で変更できます。
 
@@ -94,13 +94,13 @@ BasicHttpContextbinding エンドポイントとサービスの*Svcutil.exe*と�
 |/excludeType:\<type>|参照されるコントラクト型から除外する完全修飾またはアセンブリ修飾の型名を指定します。<br /><br /> このスイッチを個別の DLL から `/r` と共に使用する場合は、XSD クラスの完全名を参照します。<br /><br /> 短縮形: `/et`|
 |/importXmlTypes|非データ コントラクト型を IXmlSerializable 型としてインポートするようにデータ コントラクト シリアライザーを構成します。|
 |/internal|内部としてマークされるクラスを生成します。 既定 : パブリック クラスのみを生成します。<br /><br /> 短縮形: `/i`|
-|/language:\<言語 >|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名または継承するクラスの完全修飾名を指定する必要があります<xref:System.CodeDom.Compiler.CodeDomProvider>します。<br /><br /> 値 : c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`|
+|/language:\<language>|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名または継承するクラスの完全修飾名を指定する必要があります<xref:System.CodeDom.Compiler.CodeDomProvider>します。<br /><br /> 値 : c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`|
 |/mergeConfig|既存のファイルを上書きする代わりに、生成される構成ファイルを既存のファイルにマージします。|
 |/messageContract|メッセージ コントラクト型を生成します。<br /><br /> 短縮形: `/mc`|
-|/namespace:\<string,string>|WSDL または XML スキーマの targetNamespace から CLR 名前空間へのマッピングを指定します。 使用して '\*' の targetNamespace には、その CLR 名前空間に、明示的なマッピングがないすべての targetNamespaces がマップされます。<br /><br /> メッセージ コントラクト名が操作名と競合しないようにするには、型参照を `::` で修飾するか、名前を一意にする必要があります。<br /><br /> 既定値:データ コントラクトのスキーマ ドキュメントのターゲットの名前空間から派生します。 既定の名前空間は、生成される他のすべての型に使用されます。<br /><br /> 短縮形:`/n` **注:** XmlSerializer を使用する型を生成する場合は、単一の名前空間のマッピングのみがサポートされます。 生成されたすべての型が既定の名前空間またはで指定された名前空間に存在するか、' *'。|
+|/namespace:\<string,string>|WSDL または XML スキーマの targetNamespace から CLR 名前空間へのマッピングを指定します。 使用して '\*' の targetNamespace には、その CLR 名前空間に、明示的なマッピングがないすべての targetNamespaces がマップされます。<br /><br /> メッセージ コントラクト名が操作名と競合しないようにするには、型参照を `::` で修飾するか、名前を一意にする必要があります。<br /><br /> 既定:データ コントラクトのスキーマ ドキュメントのターゲットの名前空間から派生します。 既定の名前空間は、生成される他のすべての型に使用されます。<br /><br /> 短縮形:`/n` **注:** XmlSerializer を使用する型を生成する場合は、単一の名前空間のマッピングのみがサポートされます。 生成されたすべての型が既定の名前空間またはで指定された名前空間に存在するか、' *'。|
 |/noConfig|構成ファイルを生成しません。|
-|/noStdLib|標準ライブラリを参照しません。<br /><br /> 既定値:Mscorlib.dll と System.servicemodel.dll が参照されます。|
-|/out:\<file>|生成されるコードのファイル名を指定します。<br /><br /> 既定値:WSDL は、WSDL 定義名から派生した、サービス名またはスキーマのいずれかのターゲット名前空間。<br /><br /> 短縮形 : `/o`|
+|/noStdLib|標準ライブラリを参照しません。<br /><br /> 既定:Mscorlib.dll と System.servicemodel.dll が参照されます。|
+|/out:\<file>|生成されるコードのファイル名を指定します。<br /><br /> 既定:WSDL は、WSDL 定義名から派生した、サービス名またはスキーマのいずれかのターゲット名前空間。<br /><br /> 短縮形 : `/o`|
 |/reference:\<ファイルのパス >|指定されたアセンブリの型を参照します。 クライアントの生成時に、このオプションを使用して、インポートするメタデータを表す型を含むアセンブリを指定します。<br /><br /> このスイッチを使用して、メッセージ コントラクト型と <xref:System.Xml.Serialization.XmlSerializer> 型は指定できません。<br /><br /> <xref:System.DateTimeOffset> が参照されている場合、新しい型を生成する代わりにこの型が使用されます。 アプリケーションが [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して記述されている場合、SvcUtil.exe は、自動的に <xref:System.DateTimeOffset> を参照します。<br /><br /> 短縮形: `/r`|
 |/serializable|シリアル化可能属性でマークされたクラスを生成します。<br /><br /> 短縮形: `/s`|
 |/serviceContract|サービス コントラクトのコードのみを生成します。 クライアント クラスと構成は生成されません。<br /><br /> 短縮形: `/sc`|
@@ -176,7 +176,7 @@ Svcutil は、メタデータを取得するために次のメタデータ要求
 > [!NOTE]
 > 事前生成済みシリアル化コードはクライアント アプリケーションでのみ使用できます。サービスでは使用できません。
 
-Svcutil.exe は、必要な C# シリアル化コードをアプリケーションのコンパイル済みアセンブリから生成できるため、このようなアプリケーションの起動時のパフォーマンスが改善されます。 詳細については、次を参照してください。[方法。スタートアップ アプリケーション間を短縮の WCF クライアント、XmlSerializer を使用して](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)します。
+Svcutil.exe は、必要な C# シリアル化コードをアプリケーションのコンパイル済みアセンブリから生成できるため、このようなアプリケーションの起動時のパフォーマンスが改善されます。 詳細については、「[方法 :スタートアップ アプリケーション間を短縮の WCF クライアント、XmlSerializer を使用して](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)します。
 
 > [!NOTE]
 > Svcutil.exe は、入力アセンブリに存在するサービス コントラクトによって使用される型用のコードを生成します。
@@ -191,7 +191,7 @@ Svcutil.exe は、必要な C# シリアル化コードをアプリケーショ�
 |------------|-----------------|
 |/reference:\<ファイルのパス >|指定したアセンブリを、型参照の解決に使用するアセンブリの集合に追加します。<br /><br /> 短縮形: `/r`|
 |/excludeType:\<type>|エクスポートや検証から除外する完全修飾のまたはアセンブリ修飾の型名を指定します。<br /><br /> 短縮形: `/et`|
-|/out:\<file>|生成されるコードのファイル名を指定します。 このオプションは、複数のアセンブリが入力としてツールに渡される場合は無視されます。<br /><br /> 既定値:アセンブリ名から派生します。<br /><br /> 短縮形: `/o`|
+|/out:\<file>|生成されるコードのファイル名を指定します。 このオプションは、複数のアセンブリが入力としてツールに渡される場合は無視されます。<br /><br /> 既定:アセンブリ名から派生します。<br /><br /> 短縮形: `/o`|
 |/UseSerializerForFaults|既定の <xref:System.Xml.Serialization.XmlSerializer> ではなく、<xref:System.Runtime.Serialization.DataContractSerializer> をエラーの読み書きに使用する必要があることを指定します。|
 
 ## <a name="examples"></a>使用例
@@ -280,4 +280,4 @@ svcutil.exe.config という名前の新しいファイルを作成し、XML の
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [操作方法：クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

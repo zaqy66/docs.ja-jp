@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527953"
 ---
 # <a name="security-considerations-for-data"></a>セキュリティに関するデータの考慮事項
 Windows Communication Foundation (WCF) でのデータを扱う場合、さまざまな脅威のカテゴリを考慮する必要があります。 データ処理に関連する最も重要な脅威の種類を次の表に示します。 WCF には、これらの脅威を軽減するためにツールが用意されています。  
@@ -201,7 +201,7 @@ Windows Communication Foundation (WCF) でのデータを扱う場合、さま�
   
  <xref:System.Runtime.Serialization.DataContractSerializer> は常に、コントラクトに基づいて現在予期される型を読み込むことができます。 たとえば、データ コントラクトに `Customer`型のデータ メンバーが含まれている場合、 <xref:System.Runtime.Serialization.DataContractSerializer> は、このデータ メンバーを逆シリアル化するときに `Customer` 型を読み込むことができます。  
   
- また、 <xref:System.Runtime.Serialization.DataContractSerializer> はポリモーフィズムをサポートします。 データ メンバーを <xref:System.Object>として宣言しておき、受信データに `Customer` インスタンスを含めることができます。 これが可能なのは、次のいずれかのメカニズムにより、`Customer` 型がデシリアライザーに対して既知の型になっている場合だけです。  
+ また、 <xref:System.Runtime.Serialization.DataContractSerializer> はポリモーフィズムをサポートします。 データ メンバーを <xref:System.Object>として宣言しておき、受信データに `Customer` インスタンスを含めることができます。 これが可能なのは、次のいずれかのメカニズムにより、 `Customer` 型がデシリアライザーに対して既知の型になっている場合だけです。  
   
 -   型に<xref:System.Runtime.Serialization.KnownTypeAttribute> 属性を適用する。  
   
@@ -223,9 +223,9 @@ Windows Communication Foundation (WCF) でのデータを扱う場合、さま�
   
  既知の型のリストを返すメソッドを作成する場合、またはリストを直接 <xref:System.Runtime.Serialization.DataContractSerializer> コンストラクターに渡す場合は、リストを準備するためのコードをセキュリティで保護し、信頼されたデータだけを操作対象にします。  
   
- 構成で既知の型を指定する場合は、構成ファイルをセキュリティで保護します。 構成では必ず厳密な名前を使用します (型が含まれている署名付きアセンブリの公開キーを指定します)。ただし、読み込む型のバージョンは指定しないでください。 型ローダーにより、可能であれば最新のバージョンが自動的に選択されます。 セキュリティの脆弱性を持つ型の場合、その脆弱性が今後のバージョンで修正される可能性があります。しかし、構成でバージョンを明示的に指定していると、脆弱なバージョンが引き続き読み込まれます。構成で特定のバージョンを指定した場合には、このリスクを負うことになります。  
+ 構成で既知の型を指定する場合は、構成ファイルをセキュリティで保護します。 構成では必ず厳密な名前を使用します (型が含まれている署名付きアセンブリの公開キーを指定します)。ただし、読み込む型のバージョンは指定しないでください。 型ローダーにより、可能であれば最新のバージョンが自動的に選択されます。 構成では、特定のバージョンを指定する場合は、次のリスクを実行します。型が今後のバージョンで修正されるセキュリティの脆弱性がありますが、構成に明示的に指定されているため、引き続き脆弱なバージョンを読み込みます。  
   
- 既知の型が多すぎると、もう 1 つ問題が生じます。 <xref:System.Runtime.Serialization.DataContractSerializer> は、アプリケーション ドメインでシリアル化コードまたは逆シリアル化コードのキャッシュを作成し、シリアル化または逆シリアル化する必要がある型ごとにエントリを作成します。 このキャッシュは、アプリケーション ドメインの実行中はクリアされません。 このため、アプリケーションに多くの既知の型が使用されていることを知る攻撃者は、これらの既知の型がすべて逆シリアル化され、キャッシュで大量のメモリが消費されるように仕向けることが可能です。  
+ 多くの既知の型を持つには、別の結果としてがあります。<xref:System.Runtime.Serialization.DataContractSerializer>シリアル化し、逆シリアル化する必要がありますが、各種類のエントリを使って、アプリケーション ドメインでシリアル化/逆シリアル化コードのキャッシュを作成します。 このキャッシュは、アプリケーション ドメインの実行中はクリアされません。 このため、アプリケーションに多くの既知の型が使用されていることを知る攻撃者は、これらの既知の型がすべて逆シリアル化され、キャッシュで大量のメモリが消費されるように仕向けることが可能です。  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>型の意図しない状態の防止  
  型には、従う必要がある内部の一貫性に対する制約が存在することがあります。 逆シリアル化中にこの制約に違反しないように注意する必要があります。  
@@ -252,9 +252,9 @@ Windows Communication Foundation (WCF) でのデータを扱う場合、さま�
   
 -   データ コントラクト型は、プロパティの setter が特定の順序で呼び出されなくてもよいように設計します。  
   
--   <xref:System.SerializableAttribute> 属性でマークされた従来の型を使用する場合は十分に注意します。 このような型のほとんどは、信頼されたデータのみで使用するために、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] リモート処理で操作することを目的に設計されています。 この属性でマークされた既存の型は、状態の安全性を考えて設計されていない可能性があります。  
+-   <xref:System.SerializableAttribute> 属性でマークされた従来の型を使用する場合は十分に注意します。 このような型のほとんどは、信頼されたデータのみで使用するために、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] リモート処理で操作することを目的に設計されています。 この属性でマークされた既存の型は、状態の安全性を考えて設計されていない可能性があります。  
   
--   状態の安全性に関しては、データの存在を保証するために、 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性の `DataMemberAttribute` プロパティに依存することはできません。 データは常に `null`、`zero`、または `invalid` になります。  
+-   状態の安全性に関しては、データの存在を保証するために、 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性の `DataMemberAttribute` プロパティに依存することはできません。 データは常に `null`、 `zero`、または `invalid`になります。  
   
 -   信頼できないデータ ソースから逆シリアル化されたオブジェクト グラフは、検証せずに信頼してはいけません。 各オブジェクトが整合状態にあっても、オブジェクト グラフ全体としては整合状態にない場合があります。 さらに、オブジェクト グラフの保存モードが無効になっている場合でも、逆シリアル化されたグラフに、同じオブジェクトへの複数の参照または循環参照が存在することがあります。 詳細については、次を参照してください。[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)します。  
   
@@ -353,8 +353,8 @@ Windows Communication Foundation (WCF) でのデータを扱う場合、さま�
   
 -   通常、クォータを受け入れるコンポーネントを使用する場合は、そのセキュリティへの影響を理解し、クォータを安全な値に設定します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [既知のデータ コントラクト型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [既知のデータ コントラクト型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

@@ -2,12 +2,12 @@
 title: SqlClient による LocalDB のサポート
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527615"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient による LocalDB のサポート
 SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server の軽量バージョンは提供されます。 このトピックでは、LocalDB データベースに接続する方法について説明します。  
@@ -31,7 +31,7 @@ SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server
   
  `User Instance=True` は LocalDB データベースに接続するときに使用することはできません。  
   
- LocalDB からダウンロードできます[Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065)します。 Sqlcmd.exe を使用する LocalDB インスタンスのデータを変更するため、SQL Server 2012、SQL Server 2012 Feature Pack から取得することもできます。 から sqlcmd を必要があります。  
+ LocalDB は [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065)からダウンロードできます。 Sqlcmd.exe を使用する LocalDB インスタンスのデータを変更するため、SQL Server 2012、SQL Server 2012 Feature Pack から取得することもできます。 から sqlcmd を必要があります。  
   
 ## <a name="programmatically-create-a-named-instance"></a>名前付きインスタンスをプログラムによって作成する  
  アプリケーションは、次のように名前付きインスタンスを作成してデータベースを指定できます。  
@@ -58,6 +58,6 @@ SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server
   
 -   .MDF ファイルを指定するには、 `AttachDBFilename` 接続文字列キーワードを使用する。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

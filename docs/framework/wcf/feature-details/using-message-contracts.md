@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534421"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
 通常 Windows Communication Foundation (WCF) アプリケーションを構築するときに、開発者はデータ構造とシリアル化の問題に細心の注意し、データを送信するメッセージの構造を意識する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、次を参照してください[Data Transfer in Service Contracts にを指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)。  
@@ -447,6 +447,6 @@ public class OperationDetails
   
  メッセージ オブジェクトを `Result` プロパティとして受け取り、返された値をそのオブジェクトのプロパティとして取得する場合は、`/messageContract` コマンド オプションを使用します。 これにより、`Result` オブジェクトの <xref:System.EventArgs> プロパティとして応答メッセージを返すシグネチャが生成されます。 すべての内部戻り値は、応答メッセージ オブジェクトのプロパティになります。  
   
-## <a name="see-also"></a>関連項目  
- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [サービスの設計と実装](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+## <a name="see-also"></a>関連項目
+- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [サービスの設計と実装](../../../../docs/framework/wcf/designing-and-implementing-services.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : "From"、"To"、および "By" を使用してアニメーションを制御する'
+title: '方法: "From"、"To"、および "By" を使用してアニメーションを制御する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], From/to/by
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dda8cdb6159cc6d8e6da5b7d430ebf76aaa100b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530312"
 ---
-# <a name="how-to-control-an-animation-using-from-to-and-by"></a>方法 : "From"、"To"、および "By" を使用してアニメーションを制御する
+# <a name="how-to-control-an-animation-using-from-to-and-by"></a>方法: "From"、"To"、および "By" を使用してアニメーションを制御する
 "から/に/By"または「基本アニメーション」が 2 つのターゲット値の間の遷移を作成します (を参照してください[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)さまざまな種類のアニメーションの概要について)。 基本的なアニメーションのターゲット値を設定する次のように使用します。 その<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。  次の表にまとめたものですが、どのように<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティを同時に使用することや、個別に、アニメーションのターゲットを決定する値します。  
   
 |指定するプロパティ|結果として生じる動作|  
@@ -37,7 +37,7 @@ ms.locfileid: "43858806"
 ## <a name="example"></a>例  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>関連項目  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>関連項目
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)

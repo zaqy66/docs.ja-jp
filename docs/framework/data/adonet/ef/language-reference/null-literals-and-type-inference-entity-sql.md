@@ -2,12 +2,12 @@
 title: NULL リテラルと型推論 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 74ff2b459488f896c5ea6af4f7d1e045da5a7983
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529110"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>NULL リテラルと型推論 (Entity SQL)
 NULL リテラルは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型システムのすべての型と互換性があります。 ただし、正しく、推論される null リテラルの型の[!INCLUDE[esql](../../../../../../includes/esql-md.md)]null リテラルを使用できる場所で特定の制約が適用されます。  
@@ -40,5 +40,5 @@ NULL リテラルは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] �
   
  型指定されない NULL リテラルは、その他のシナリオでは使用できません。 たとえば、行コンストラクターへの引数として使用することはできません。  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>関連項目
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
