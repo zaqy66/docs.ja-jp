@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f25348410387a7b0e03ef897e8534336baeb126a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50aa116fc1f5377254a8a6a128d0240c57cb52b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597568"
 ---
-# <a name="eapicategories-enumeration"></a><span data-ttu-id="fc3bd-102">EApiCategories 列挙型</span><span class="sxs-lookup"><span data-stu-id="fc3bd-102">EApiCategories Enumeration</span></span>
-<span data-ttu-id="fc3bd-103">部分的に信頼されたコードでの実行をブロックするホスト機能のカテゴリについて説明します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-103">Describes the categories of capabilities that the host can block from running in partially trusted code.</span></span>  
+# <a name="eapicategories-enumeration"></a><span data-ttu-id="80ee4-102">EApiCategories 列挙型</span><span class="sxs-lookup"><span data-stu-id="80ee4-102">EApiCategories Enumeration</span></span>
+<span data-ttu-id="80ee4-103">ホストが部分的に信頼されたコードでの実行をブロックできる機能のカテゴリについて説明します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-103">Describes the categories of capabilities that the host can block from running in partially trusted code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fc3bd-104">構文</span><span class="sxs-lookup"><span data-stu-id="fc3bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80ee4-104">構文</span><span class="sxs-lookup"><span data-stu-id="80ee4-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -44,36 +44,36 @@ typedef enum {
 } EHostProtectionCategories;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fc3bd-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="fc3bd-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="80ee4-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="80ee4-105">Members</span></span>  
   
-|<span data-ttu-id="fc3bd-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="fc3bd-106">Member</span></span>|<span data-ttu-id="fc3bd-107">説明</span><span class="sxs-lookup"><span data-stu-id="fc3bd-107">Description</span></span>|  
+|<span data-ttu-id="80ee4-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="80ee4-106">Member</span></span>|<span data-ttu-id="80ee4-107">説明</span><span class="sxs-lookup"><span data-stu-id="80ee4-107">Description</span></span>|  
 |------------|-----------------|  
-|`eAll`|<span data-ttu-id="fc3bd-108">指定するすべてのマネージ クラスとその他の対象となるメンバー`EApiCategories`フィールドは、部分的に信頼されたコードでの実行をブロックします。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-108">Specifies that all managed classes and members that are covered by other `EApiCategories` fields be blocked from running in partially trusted code.</span></span>|  
-|`eExternalProcessMgmt`|<span data-ttu-id="fc3bd-109">マネージ クラスとメンバーを作成、操作、および外部プロセスの破棄を部分的に信頼されるコードで実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-109">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external processes be blocked from running in partially trusted code.</span></span>|  
-|`eExternalThreading`|<span data-ttu-id="fc3bd-110">マネージ クラスとメンバーを作成、操作、および外部スレッドの破棄を部分的に信頼されるコードで実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-110">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external threads be blocked from running in partially trusted code.</span></span>|  
-|`eMayLeakOnAbort`|<span data-ttu-id="fc3bd-111">部分的に信頼されたコードでの実行中止にメモリをリーク可能性がある可能性があるマネージ型とメンバーがブロックされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-111">Specifies that managed types and members that could potentially leak memory on abort be blocked from running in partially trusted code.</span></span>|  
-|`eNoCategory`|<span data-ttu-id="fc3bd-112">部分信頼コードでの実行をブロックするマネージ コードのカテゴリがないを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-112">Specifies that no managed code categories be blocked from running in partially trusted code.</span></span>|  
-|`eSecurityInfrastructure`|<span data-ttu-id="fc3bd-113">共通言語ランタイム (CLR) のセキュリティ インフラストラクチャが部分的に信頼されたコードによって使用されるからブロックされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-113">Specifies that the common language runtime (CLR) security infrastructure be blocked from being used by partially trusted code.</span></span>|  
-|`eSelfAffectingProcessMgmt`|<span data-ttu-id="fc3bd-114">部分的に信頼されたコードでの実行、マネージ クラスとメンバーが影響を与える機能ホストされたプロセスがブロックされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-114">Specifies that managed classes and members whose capabilities can affect the hosted process be blocked from running in partially trusted code.</span></span>|  
-|`eSelfAffectingThreading`|<span data-ttu-id="fc3bd-115">部分的に信頼されたコードでの実行、マネージ クラスとメンバーが影響を与える機能ホスト プロセス内のスレッドがブロックされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-115">Specifies that managed classes and members whose capabilities can affect threads in the hosted process be blocked from running in partially trusted code.</span></span>|  
-|`eSharedState`|<span data-ttu-id="fc3bd-116">部分的に信頼されたコードでの実行、マネージ クラスと共有の状態を公開するメンバーがブロックされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-116">Specifies that managed classes and members that expose shared state be blocked from running in partially trusted code.</span></span>|  
-|`eSynchronization`|<span data-ttu-id="fc3bd-117">共通言語ランタイム クラスとロックを保持するためにユーザー コードを許可するメンバーを部分的に信頼されるコードで実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-117">Specifies that common language runtime classes and members that allow user code to hold locks be blocked from running in partially trusted code.</span></span>|  
-|`eUI`|<span data-ttu-id="fc3bd-118">部分的に信頼されたコードでの実行、マネージ クラスとを許可または対話操作を必要とするメンバーがブロックされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-118">Specifies that managed classes and members that allow or require human interaction be blocked from running in partially trusted code.</span></span>|  
+|`eAll`|<span data-ttu-id="80ee4-108">クラスとその他で対応されるメンバーをすべて管理を指定します。`EApiCategories`フィールドは、部分的に信頼されたコードでの実行をブロックします。</span><span class="sxs-lookup"><span data-stu-id="80ee4-108">Specifies that all managed classes and members that are covered by other `EApiCategories` fields be blocked from running in partially trusted code.</span></span>|  
+|`eExternalProcessMgmt`|<span data-ttu-id="80ee4-109">マネージ クラスとメンバーを作成、操作、および外部プロセスの破棄を部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-109">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external processes be blocked from running in partially trusted code.</span></span>|  
+|`eExternalThreading`|<span data-ttu-id="80ee4-110">マネージ クラスとメンバーを作成、操作、および外部のスレッドの破棄を部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-110">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external threads be blocked from running in partially trusted code.</span></span>|  
+|`eMayLeakOnAbort`|<span data-ttu-id="80ee4-111">マネージ型と中止にメモリをリークでした可能性のあるメンバーを部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-111">Specifies that managed types and members that could potentially leak memory on abort be blocked from running in partially trusted code.</span></span>|  
+|`eNoCategory`|<span data-ttu-id="80ee4-112">部分的に信頼されたコードでの実行をブロックするマネージ コードのカテゴリがないを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-112">Specifies that no managed code categories be blocked from running in partially trusted code.</span></span>|  
+|`eSecurityInfrastructure`|<span data-ttu-id="80ee4-113">共通言語ランタイム (CLR) のセキュリティ インフラストラクチャを部分的に信頼されたコードによって使用されるをブロックするように指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-113">Specifies that the common language runtime (CLR) security infrastructure be blocked from being used by partially trusted code.</span></span>|  
+|`eSelfAffectingProcessMgmt`|<span data-ttu-id="80ee4-114">マネージ クラスとメンバーの機能を持つホストされたプロセスに影響する可能性を部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-114">Specifies that managed classes and members whose capabilities can affect the hosted process be blocked from running in partially trusted code.</span></span>|  
+|`eSelfAffectingThreading`|<span data-ttu-id="80ee4-115">マネージ クラスとメンバーの機能を持つホストされるプロセスのスレッドに影響する可能性を部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-115">Specifies that managed classes and members whose capabilities can affect threads in the hosted process be blocked from running in partially trusted code.</span></span>|  
+|`eSharedState`|<span data-ttu-id="80ee4-116">マネージ クラスおよび共有状態を公開するメンバーを部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-116">Specifies that managed classes and members that expose shared state be blocked from running in partially trusted code.</span></span>|  
+|`eSynchronization`|<span data-ttu-id="80ee4-117">共通言語ランタイム クラスとユーザー コードがロックを保持するメンバーを部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-117">Specifies that common language runtime classes and members that allow user code to hold locks be blocked from running in partially trusted code.</span></span>|  
+|`eUI`|<span data-ttu-id="80ee4-118">マネージ クラスとメンバーを許可または人による操作を必要とするが部分的に信頼されたコードの実行をブロックすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-118">Specifies that managed classes and members that allow or require human interaction be blocked from running in partially trusted code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fc3bd-119">コメント</span><span class="sxs-lookup"><span data-stu-id="fc3bd-119">Remarks</span></span>  
- <span data-ttu-id="fc3bd-120">[Iclrhostprotectionmanager::setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)メソッドが型のパラメーターを受け取る`EApiCategories`です。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-120">The [ICLRHostProtectionManager::SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) method takes a parameter of type `EApiCategories`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="80ee4-119">Remarks</span><span class="sxs-lookup"><span data-stu-id="80ee4-119">Remarks</span></span>  
+ <span data-ttu-id="80ee4-120">[Iclrhostprotectionmanager::setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)メソッドは、型のパラメーターを受け取る`EApiCategories`します。</span><span class="sxs-lookup"><span data-stu-id="80ee4-120">The [ICLRHostProtectionManager::SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) method takes a parameter of type `EApiCategories`.</span></span>  
   
- <span data-ttu-id="fc3bd-121">`EApiCategories`列挙と`SetProtectedCategories`メソッドは直接関連するマネージ<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>クラスです。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-121">The `EApiCategories` enumeration and the `SetProtectedCategories` method are directly related to the managed <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="fc3bd-122">マネージ クラスが使用されて、<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>列挙型、値が対応に直接、`EApiCategories`によって記述されたカテゴリに対応する機能を公開するマネージ型とメンバーをマークする、値`EApiCategories`です。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-122">The managed class is used with the <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> enumeration, whose values correspond directly to the `EApiCategories` values, to mark managed types and members that expose capabilities corresponding to the categories described by `EApiCategories`.</span></span>  
+ <span data-ttu-id="80ee4-121">`EApiCategories`列挙と`SetProtectedCategories`メソッドは直接関係をマネージ<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>クラス。</span><span class="sxs-lookup"><span data-stu-id="80ee4-121">The `EApiCategories` enumeration and the `SetProtectedCategories` method are directly related to the managed <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="80ee4-122">マネージ クラスを併用、<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>列挙型、値が対応に直接、`EApiCategories`を記載したカテゴリに対応する機能を公開するマネージ型とメンバーをマークする、値`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="80ee4-122">The managed class is used with the <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> enumeration, whose values correspond directly to the `EApiCategories` values, to mark managed types and members that expose capabilities corresponding to the categories described by `EApiCategories`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fc3bd-123">要件</span><span class="sxs-lookup"><span data-stu-id="fc3bd-123">Requirements</span></span>  
- <span data-ttu-id="fc3bd-124">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="fc3bd-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80ee4-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="80ee4-123">Requirements</span></span>  
+ <span data-ttu-id="80ee4-124">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="80ee4-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fc3bd-125">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fc3bd-125">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="80ee4-125">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="80ee4-125">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fc3bd-126">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fc3bd-126">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="80ee4-126">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80ee4-126">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fc3bd-127">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc3bd-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="80ee4-127">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80ee4-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc3bd-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc3bd-128">See Also</span></span>  
- [<span data-ttu-id="fc3bd-129">ICLRHostProtectionManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fc3bd-129">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- [<span data-ttu-id="fc3bd-130">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="fc3bd-130">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="80ee4-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="80ee4-128">See also</span></span>
+- [<span data-ttu-id="80ee4-129">ICLRHostProtectionManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="80ee4-129">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [<span data-ttu-id="80ee4-130">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="80ee4-130">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

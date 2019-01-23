@@ -1,27 +1,27 @@
 ---
-title: '方法 : 変更セットを表示する'
+title: '方法: 変更セットを表示します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: c9664c6d32f78f455aa29311f111acaecb5c7905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773e72d52a934bc7c6fa80fe252d62e67f87a34b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596801"
 ---
-# <a name="how-to-display-a-changeset"></a><span data-ttu-id="2fe9a-102">方法 : 変更セットを表示する</span><span class="sxs-lookup"><span data-stu-id="2fe9a-102">How to: Display a ChangeSet</span></span>
-<span data-ttu-id="2fe9a-103"><xref:System.Data.Linq.DataContext> によって追跡される変更を <xref:System.Data.Linq.DataContext.GetChangeSet%2A> を使って表示することができます。</span><span class="sxs-lookup"><span data-stu-id="2fe9a-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
+# <a name="how-to-display-a-changeset"></a><span data-ttu-id="8bebf-102">方法: 変更セットを表示します。</span><span class="sxs-lookup"><span data-stu-id="8bebf-102">How to: Display a ChangeSet</span></span>
+<span data-ttu-id="8bebf-103"><xref:System.Data.Linq.DataContext> によって追跡される変更を <xref:System.Data.Linq.DataContext.GetChangeSet%2A> を使って表示することができます。</span><span class="sxs-lookup"><span data-stu-id="8bebf-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2fe9a-104">例</span><span class="sxs-lookup"><span data-stu-id="2fe9a-104">Example</span></span>  
- <span data-ttu-id="2fe9a-105">以下の例では、住所がロンドンの顧客を取得し、これをパリに変更してから変更内容をデータベースに送信しています。</span><span class="sxs-lookup"><span data-stu-id="2fe9a-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
+## <a name="example"></a><span data-ttu-id="8bebf-104">例</span><span class="sxs-lookup"><span data-stu-id="8bebf-104">Example</span></span>  
+ <span data-ttu-id="8bebf-105">以下の例では、住所がロンドンの顧客を取得し、これをパリに変更してから変更内容をデータベースに送信しています。</span><span class="sxs-lookup"><span data-stu-id="8bebf-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
- <span data-ttu-id="2fe9a-106">このコードからの出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="2fe9a-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="2fe9a-107">最後に概要として、8 か所の変更が示されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="2fe9a-107">Note that the summary at the end shows that eight changes were made.</span></span>  
+ <span data-ttu-id="8bebf-106">このコードからの出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="8bebf-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="8bebf-107">最後に概要として、8 か所の変更が示されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="8bebf-107">Note that the summary at the end shows that eight changes were made.</span></span>  
   
  `CustomerID: AROUT`  
   
@@ -75,5 +75,5 @@ ms.locfileid: "33359986"
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## <a name="see-also"></a><span data-ttu-id="2fe9a-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="2fe9a-108">See Also</span></span>  
- [<span data-ttu-id="2fe9a-109">デバッグのサポート</span><span class="sxs-lookup"><span data-stu-id="2fe9a-109">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="8bebf-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="8bebf-108">See also</span></span>
+- [<span data-ttu-id="8bebf-109">デバッグのサポート</span><span class="sxs-lookup"><span data-stu-id="8bebf-109">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
