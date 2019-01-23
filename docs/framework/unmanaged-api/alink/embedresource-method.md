@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1fc266c8451953c8b6a9c686f4a1c1951966e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51711162613db6c8045d9192e2ca9f1380509be2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556169"
 ---
-# <a name="embedresource-method"></a><span data-ttu-id="2dcdb-102">EmbedResource メソッド</span><span class="sxs-lookup"><span data-stu-id="2dcdb-102">EmbedResource Method</span></span>
-<span data-ttu-id="2dcdb-103">埋め込みリソースを宣言します。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-103">Declares an embedded resource.</span></span> <span data-ttu-id="2dcdb-104">このメソッドには、リソースが実際には埋め込まれません。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-104">This method does not actually embed the resource.</span></span>  
+# <a name="embedresource-method"></a><span data-ttu-id="67f66-102">EmbedResource メソッド</span><span class="sxs-lookup"><span data-stu-id="67f66-102">EmbedResource Method</span></span>
+<span data-ttu-id="67f66-103">埋め込みリソースを宣言します。</span><span class="sxs-lookup"><span data-stu-id="67f66-103">Declares an embedded resource.</span></span> <span data-ttu-id="67f66-104">このメソッドは、リソースを実際には埋め込まれません。</span><span class="sxs-lookup"><span data-stu-id="67f66-104">This method does not actually embed the resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2dcdb-105">構文</span><span class="sxs-lookup"><span data-stu-id="2dcdb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="67f66-105">構文</span><span class="sxs-lookup"><span data-stu-id="67f66-105">Syntax</span></span>  
   
 ```  
 HRESULT EmbedResource(  
@@ -39,29 +39,29 @@ HRESULT EmbedResource(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2dcdb-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2dcdb-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="67f66-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="67f66-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="2dcdb-107">アセンブリの ID です。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="67f66-107">アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="67f66-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="2dcdb-108">ファイルのリソースを格納するファイルのトークンまたはアセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-108">File token or assembly ID of file that contains the resource.</span></span>  
+ <span data-ttu-id="67f66-108">ファイル リソースを含むファイルのトークンまたはアセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="67f66-108">File token or assembly ID of file that contains the resource.</span></span>  
   
  `pszResourceName`  
- <span data-ttu-id="2dcdb-109">リソースの名前。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-109">Name of the resource.</span></span>  
+ <span data-ttu-id="67f66-109">リソースの名前。</span><span class="sxs-lookup"><span data-stu-id="67f66-109">Name of the resource.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="2dcdb-110">RVA からのリソースのオフセット。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-110">Offset of resource from RVA.</span></span>  
+ <span data-ttu-id="67f66-110">リソースの RVA からのオフセット。</span><span class="sxs-lookup"><span data-stu-id="67f66-110">Offset of resource from RVA.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="2dcdb-111">ユーザー補助機能フラグなど`mrPublic`と`mrPrivate`です。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="2dcdb-112">これらのフラグを渡すこと[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)です。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-112">These flags may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="67f66-111">ユーザー補助フラグなど`mrPublic`と`mrPrivate`します。</span><span class="sxs-lookup"><span data-stu-id="67f66-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="67f66-112">これらのフラグに渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="67f66-112">These flags may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2dcdb-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="2dcdb-113">Return Value</span></span>  
- <span data-ttu-id="2dcdb-114">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="67f66-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="67f66-113">Return Value</span></span>  
+ <span data-ttu-id="67f66-114">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="67f66-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2dcdb-115">要件</span><span class="sxs-lookup"><span data-stu-id="2dcdb-115">Requirements</span></span>  
- <span data-ttu-id="2dcdb-116">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="2dcdb-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67f66-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="67f66-115">Requirements</span></span>  
+ <span data-ttu-id="67f66-116">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="67f66-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2dcdb-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="2dcdb-117">See Also</span></span>  
- [<span data-ttu-id="2dcdb-118">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2dcdb-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="2dcdb-119">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2dcdb-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="2dcdb-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="2dcdb-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="67f66-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="67f66-117">See also</span></span>
+- [<span data-ttu-id="67f66-118">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="67f66-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="67f66-119">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="67f66-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="67f66-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="67f66-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

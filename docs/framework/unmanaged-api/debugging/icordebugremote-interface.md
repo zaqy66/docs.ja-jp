@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553478"
 ---
-# <a name="icordebugremote-interface"></a><span data-ttu-id="f4f02-102">ICorDebugRemote インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4f02-102">ICorDebugRemote Interface</span></span>
-<span data-ttu-id="f4f02-103">リモート ターゲット プロセスに対してマネージ デバッガーを起動または接続する機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="f4f02-103">Provides the ability to launch or attach a managed debugger to a remote target process.</span></span>  
+# <a name="icordebugremote-interface"></a><span data-ttu-id="aab69-102">ICorDebugRemote インターフェイス</span><span class="sxs-lookup"><span data-stu-id="aab69-102">ICorDebugRemote Interface</span></span>
+<span data-ttu-id="aab69-103">リモート ターゲット プロセスに対してマネージド デバッガーを起動または接続する機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="aab69-103">Provides the ability to launch or attach a managed debugger to a remote target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4f02-104">構文</span><span class="sxs-lookup"><span data-stu-id="f4f02-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aab69-104">構文</span><span class="sxs-lookup"><span data-stu-id="aab69-104">Syntax</span></span>  
   
 ```  
 interface ICorDebugRemote : IUnknown  
@@ -58,27 +58,27 @@ interface ICorDebugRemote : IUnknown
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="f4f02-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="f4f02-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="aab69-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="aab69-105">Methods</span></span>  
   
-|<span data-ttu-id="f4f02-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="f4f02-106">Method</span></span>|<span data-ttu-id="f4f02-107">説明</span><span class="sxs-lookup"><span data-stu-id="f4f02-107">Description</span></span>|  
+|<span data-ttu-id="aab69-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="aab69-106">Method</span></span>|<span data-ttu-id="aab69-107">説明</span><span class="sxs-lookup"><span data-stu-id="aab69-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f4f02-108">ICorDebugRemote::CreateProcessEx メソッド</span><span class="sxs-lookup"><span data-stu-id="f4f02-108">ICorDebugRemote::CreateProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|<span data-ttu-id="f4f02-109">マネージ デバッグのために、リモート コンピューターでプロセスを作成します。</span><span class="sxs-lookup"><span data-stu-id="f4f02-109">Creates a process on a remote machine for managed debugging.</span></span>|  
-|[<span data-ttu-id="f4f02-110">ICorDebugRemote::DebugActiveProcessEx メソッド</span><span class="sxs-lookup"><span data-stu-id="f4f02-110">ICorDebugRemote::DebugActiveProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|<span data-ttu-id="f4f02-111">デバッガーの下でリモート コンピューター上のプロセスを起動します。</span><span class="sxs-lookup"><span data-stu-id="f4f02-111">Launches a process on a remote machine under the debugger.</span></span>|  
+|[<span data-ttu-id="aab69-108">ICorDebugRemote::CreateProcessEx メソッド</span><span class="sxs-lookup"><span data-stu-id="aab69-108">ICorDebugRemote::CreateProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|<span data-ttu-id="aab69-109">マネージ デバッグのために、リモート コンピューターでプロセスを作成します。</span><span class="sxs-lookup"><span data-stu-id="aab69-109">Creates a process on a remote machine for managed debugging.</span></span>|  
+|[<span data-ttu-id="aab69-110">ICorDebugRemote::DebugActiveProcessEx メソッド</span><span class="sxs-lookup"><span data-stu-id="aab69-110">ICorDebugRemote::DebugActiveProcessEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|<span data-ttu-id="aab69-111">デバッガーでのリモート コンピューター上のプロセスを起動します。</span><span class="sxs-lookup"><span data-stu-id="aab69-111">Launches a process on a remote machine under the debugger.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f4f02-112">コメント</span><span class="sxs-lookup"><span data-stu-id="f4f02-112">Remarks</span></span>  
- <span data-ttu-id="f4f02-113">現在、この機能はサポートされてのみリモート Macintosh コンピューターで実行されている Silverlight ベースのアプリケーションのターゲットをデバッグします。</span><span class="sxs-lookup"><span data-stu-id="f4f02-113">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh machine.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aab69-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="aab69-112">Remarks</span></span>  
+ <span data-ttu-id="aab69-113">現時点では、Macintosh コンピューターをリモートで実行されている Silverlight ベースのアプリケーションのターゲットのデバッグにのみ、この機能がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="aab69-113">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh machine.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4f02-114">要件</span><span class="sxs-lookup"><span data-stu-id="f4f02-114">Requirements</span></span>  
- <span data-ttu-id="f4f02-115">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="f4f02-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aab69-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="aab69-114">Requirements</span></span>  
+ <span data-ttu-id="aab69-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="aab69-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4f02-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f4f02-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="aab69-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aab69-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f4f02-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4f02-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aab69-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aab69-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f4f02-118">**.NET framework のバージョン:** 4.5、4、3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="f4f02-118">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="aab69-118">**.NET framework のバージョン:** 4.5、4、3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="aab69-118">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4f02-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4f02-119">See Also</span></span>  
- [<span data-ttu-id="f4f02-120">ICorDebugRemoteTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4f02-120">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [<span data-ttu-id="f4f02-121">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4f02-121">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [<span data-ttu-id="f4f02-122">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4f02-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="aab69-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="aab69-119">See also</span></span>
+- [<span data-ttu-id="aab69-120">ICorDebugRemoteTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="aab69-120">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="aab69-121">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="aab69-121">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [<span data-ttu-id="aab69-122">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="aab69-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
