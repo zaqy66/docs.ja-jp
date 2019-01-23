@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561869"
 ---
-# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="5ef3e-102">ISymUnmanagedMethod::GetSourceStartEnd メソッド</span><span class="sxs-lookup"><span data-stu-id="5ef3e-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
-<span data-ttu-id="5ef3e-103">このメソッドのソースの開始と終了のドキュメントの位置を取得します。</span><span class="sxs-lookup"><span data-stu-id="5ef3e-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="5ef3e-104">最初の配列の位置は、開始と 2 番目の配列の位置は、終了します。</span><span class="sxs-lookup"><span data-stu-id="5ef3e-104">The first array position is the start, and the second array position is the end.</span></span>  
+# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="7fb2c-102">ISymUnmanagedMethod::GetSourceStartEnd メソッド</span><span class="sxs-lookup"><span data-stu-id="7fb2c-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
+<span data-ttu-id="7fb2c-103">このメソッドのソースの先頭と末尾のドキュメントの位置を取得します。</span><span class="sxs-lookup"><span data-stu-id="7fb2c-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="7fb2c-104">配列の最初の位置が、開始であり 2 番目の配列の位置は終わりです。</span><span class="sxs-lookup"><span data-stu-id="7fb2c-104">The first array position is the start, and the second array position is the end.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ef3e-105">構文</span><span class="sxs-lookup"><span data-stu-id="5ef3e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7fb2c-105">構文</span><span class="sxs-lookup"><span data-stu-id="7fb2c-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceStartEnd(  
@@ -37,24 +37,24 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5ef3e-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5ef3e-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7fb2c-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7fb2c-106">Parameters</span></span>  
  `docs`  
- <span data-ttu-id="5ef3e-107">[in]開始日と終了ソース ドキュメント。</span><span class="sxs-lookup"><span data-stu-id="5ef3e-107">[in] The starting and ending source documents.</span></span>  
+ <span data-ttu-id="7fb2c-107">[in]最初と最後のソース ドキュメント。</span><span class="sxs-lookup"><span data-stu-id="7fb2c-107">[in] The starting and ending source documents.</span></span>  
   
  `lines`  
- <span data-ttu-id="5ef3e-108">[in]ソース ドキュメントの開始日と、対応する行を終了します。</span><span class="sxs-lookup"><span data-stu-id="5ef3e-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
+ <span data-ttu-id="7fb2c-108">[in]ソース ドキュメントの開始と、対応する行を終了します。</span><span class="sxs-lookup"><span data-stu-id="7fb2c-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
   
  `columns`  
- <span data-ttu-id="5ef3e-109">[in]ソース ドキュメントの開始と終了値で、対応する列。</span><span class="sxs-lookup"><span data-stu-id="5ef3e-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
+ <span data-ttu-id="7fb2c-109">[in]ソース ドキュメントの開始と、対応する列を終了します。</span><span class="sxs-lookup"><span data-stu-id="7fb2c-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="5ef3e-110">[out]`true`位置が定義されている、それ以外の場合`false`です。</span><span class="sxs-lookup"><span data-stu-id="5ef3e-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
+ <span data-ttu-id="7fb2c-110">[out]`true`位置が定義されている。 それ以外の場合`false`します。</span><span class="sxs-lookup"><span data-stu-id="7fb2c-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5ef3e-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="5ef3e-111">Return Value</span></span>  
- <span data-ttu-id="5ef3e-112">メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="5ef3e-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7fb2c-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="7fb2c-111">Return Value</span></span>  
+ <span data-ttu-id="7fb2c-112">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="7fb2c-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5ef3e-113">要件</span><span class="sxs-lookup"><span data-stu-id="5ef3e-113">Requirements</span></span>  
- <span data-ttu-id="5ef3e-114">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5ef3e-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7fb2c-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="7fb2c-113">Requirements</span></span>  
+ <span data-ttu-id="7fb2c-114">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7fb2c-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ef3e-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ef3e-115">See Also</span></span>  
- [<span data-ttu-id="5ef3e-116">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5ef3e-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7fb2c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="7fb2c-115">See also</span></span>
+- [<span data-ttu-id="7fb2c-116">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7fb2c-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
