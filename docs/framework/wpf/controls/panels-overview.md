@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525210"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel> 要素は要素のレンダリングを制御するコンポーネントなど、サイズ、ディメンション、位置、および、子コンテンツの配置。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]の数は、定義済み<xref:System.Windows.Controls.Panel>要素とカスタムを作成する機能<xref:System.Windows.Controls.Panel>要素。  
@@ -64,16 +64,16 @@ ms.locfileid: "47196630"
   
 |要素名|UI パネル?|説明|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|はい|あるに対する相対座標により子要素を明示的に配置できる領域を定義、<xref:System.Windows.Controls.Canvas>領域。|  
-|<xref:System.Windows.Controls.DockPanel>|はい|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
-|<xref:System.Windows.Controls.Grid>|はい|列と行で構成されている柔軟なグリッド領域を定義します。 子要素を<xref:System.Windows.Controls.Grid>正確に使用して配置することができます、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。|  
-|<xref:System.Windows.Controls.StackPanel>|はい|子要素を水平方向または垂直方向の単一行に整列します。|  
+|<xref:System.Windows.Controls.Canvas>|[はい]|あるに対する相対座標により子要素を明示的に配置できる領域を定義、<xref:System.Windows.Controls.Canvas>領域。|  
+|<xref:System.Windows.Controls.DockPanel>|[はい]|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
+|<xref:System.Windows.Controls.Grid>|[はい]|列と行で構成されている柔軟なグリッド領域を定義します。 子要素を<xref:System.Windows.Controls.Grid>正確に使用して配置することができます、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。|  
+|<xref:System.Windows.Controls.StackPanel>|[はい]|子要素を水平方向または垂直方向の単一行に整列します。|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|いいえ|タブ ボタンのレイアウトを処理する<xref:System.Windows.Controls.TabControl>します。|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|いいえ|内のコンテンツを配置、<xref:System.Windows.Controls.ToolBar>コントロール。|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|いいえ|<xref:System.Windows.Controls.Primitives.UniformGrid> グリッド内の子をすべて同じセル サイズを調整に使用されます。|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|いいえ|子コレクションを "仮想化" できるパネルに基本クラスを提供します。|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|はい|水平方向または垂直方向の単一行でコンテンツを整列し、仮想化します。|  
-|<xref:System.Windows.Controls.WrapPanel>|はい|<xref:System.Windows.Controls.WrapPanel> 順に子要素は左から右、格納ボックスの端にある次の行に改行してコンテンツ。 上から下または右から左の値に応じて、順次発生後続の配置、<xref:System.Windows.Controls.WrapPanel.Orientation%2A>プロパティ。|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|[はい]|水平方向または垂直方向の単一行でコンテンツを整列し、仮想化します。|  
+|<xref:System.Windows.Controls.WrapPanel>|[はい]|<xref:System.Windows.Controls.WrapPanel> 順に子要素は左から右、格納ボックスの端にある次の行に改行してコンテンツ。 上から下または右から左の値に応じて、順次発生後続の配置、<xref:System.Windows.Controls.WrapPanel.Orientation%2A>プロパティ。|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>ユーザー インターフェイス パネル  
@@ -174,7 +174,7 @@ ms.locfileid: "47196630"
   
  このイメージにはレンダリング動作の違いが見られます。  
   
- ![スクリーン ショット: StackPanel とDockPanel スクリーン ショット](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![スクリーン ショット:StackPanel と DockPanel スクリーン ショット](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>StackPanel の定義と使用  
  次の例では、使用する方法、<xref:System.Windows.Controls.StackPanel>縦方向配置ボタンのセットを作成します。 横方向の配置の設定、<xref:System.Windows.Controls.StackPanel.Orientation%2A>プロパティを<xref:System.Windows.Controls.Orientation.Horizontal>します。  
@@ -244,7 +244,7 @@ ms.locfileid: "47196630"
 ## <a name="localizationglobalization-support"></a>ローカライズ/グローバリゼーション サポート  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、ローカライズ可能な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] の作成を支援する多数の機能をサポートしています。  
   
- すべてのパネル要素をネイティブ サポート、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティは、ユーザーのロケールまたは言語設定に基づいてコンテンツを動的に再フローするために使用できます。 詳細については、「<xref:System.Windows.FrameworkElement.FlowDirection%2A>」を参照してください。  
+ すべてのパネル要素をネイティブ サポート、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティは、ユーザーのロケールまたは言語設定に基づいてコンテンツを動的に再フローするために使用できます。 詳細については、「 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 」を参照してください。  
   
  <xref:System.Windows.Window.SizeToContent%2A>プロパティは、アプリケーション開発者ができるようにするメカニズムを備えています。 ローカライズのニーズを予測する[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。 使用して、<xref:System.Windows.SizeToContent.WidthAndHeight>親は、このプロパティの値<xref:System.Windows.Window>常にコンテンツに合わせて動的にサイズを変更し、人為的な高さまたは幅の制限による制約を受けない。  
   
@@ -252,13 +252,13 @@ ms.locfileid: "47196630"
   
  ローカライズ可能な [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] を備えた [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの作成方法の詳細については、「[自動レイアウトの使用の概要](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [WPF レイアウト ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [配置、余白、パディングの概要](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [カスタム コンテンツ折り返しパネルのサンプルを作成します。](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [添付プロパティの概要](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [自動レイアウトの使用の概要](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>関連項目
+- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [WPF レイアウト ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [配置、余白、パディングの概要](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [カスタム コンテンツ折り返しパネルのサンプルを作成します。](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [添付プロパティの概要](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [自動レイアウトの使用の概要](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

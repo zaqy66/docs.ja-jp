@@ -1,5 +1,5 @@
 ---
-title: '方法 : オブジェクトを回転させる'
+title: '方法: オブジェクトを回転させる'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: b5a954158388e8b85589042e9d1f3b82c1747e30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b44ce71f91962806704eb05a9cbec53638856b3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525431"
 ---
-# <a name="how-to-rotate-an-object"></a>方法 : オブジェクトを回転させる
+# <a name="how-to-rotate-an-object"></a>方法: オブジェクトを回転させる
 次の例では、オブジェクトを回転させる方法を示します。 例では、最初に作成、<xref:System.Windows.Media.RotateTransform>を指定してその<xref:System.Windows.Media.RotateTransform.Angle%2A>(度単位)。  
   
  次の例では、回転、 <xref:System.Windows.Shapes.Polyline> 45 度の左上隅のオブジェクトします。  
@@ -44,7 +44,7 @@ ms.locfileid: "45591504"
   
  完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Transform>  
- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Transform>
+- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

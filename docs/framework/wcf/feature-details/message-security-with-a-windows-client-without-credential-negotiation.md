@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 09ca073a39322e54433c25321e3a9ef44c9efe90
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2e5671832fa1025c424c746b8c27162d3935fddd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525164"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ
 次のシナリオでは、Windows Communication Foundation (WCF) クライアントと Kerberos のプロトコルで保護されたサービスを説明します。  
@@ -146,7 +146,7 @@ ms.locfileid: "53145820"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

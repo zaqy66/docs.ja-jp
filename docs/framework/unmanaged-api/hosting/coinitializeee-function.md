@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bbd25909e70826f8cd29076c1eb62a4da6779cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36a603bf1badebd2454601780179a8435f33bc70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525184"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE 関数
-共通言語ランタイムの実行エンジンがプロセスに読み込まれることになります。 この関数は非推奨、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]です。 使用して、 [iclrruntimehost::start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)メソッド代わりにします。  
+共通言語ランタイムの実行エンジンがプロセスに読み込まれているようにします。 この関数は非推奨、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。 使用して、 [iclrruntimehost::start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ HRESULT CoInitializeEE (
  [in]1 つ、 [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)列挙定数。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、Winerror.h、および次の表の値で定義されている標準の COM エラー コードを返します。  
+ このメソッドは、Winerror.h と、次の表の値で定義されている標準の COM エラー コードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
@@ -47,17 +47,17 @@ HRESULT CoInitializeEE (
 |S_FALSE|実行エンジンは既に読み込まれています。|  
 |E_FAIL|実行エンジンを読み込むことができませんでした。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、既に読み込まれていない場合に、実行エンジンを読み込みます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

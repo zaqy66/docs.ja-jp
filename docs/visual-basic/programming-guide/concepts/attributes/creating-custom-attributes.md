@@ -1,15 +1,15 @@
 ---
-title: カスタム属性 (Visual Basic) を作成します。
+title: カスタム属性 (Visual Basic) の作成
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 9af0832e04308bf1942fc955afe5a67161096465
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc60e20d163c6aec231152940f548fcb58442f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526354"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>カスタム属性 (Visual Basic) を作成します。
+# <a name="creating-custom-attributes-visual-basic"></a>カスタム属性 (Visual Basic) の作成
 属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。 型にそれを記述したプログラマーの名前でタグを付けるとします。 `Author` というカスタム属性クラスを定義します。  
   
 ```vb  
@@ -62,11 +62,11 @@ End Class
 > [!NOTE]
 >  属性クラスにプロパティが含まれている場合、そのプロパティは読み取り/書き込み可能である必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Reflection>  
- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)  
- [カスタム属性の記述](../../../../standard/attributes/writing-custom-attributes.md)  
- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Reflection>
+- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [カスタム属性の記述](../../../../standard/attributes/writing-custom-attributes.md)
+- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

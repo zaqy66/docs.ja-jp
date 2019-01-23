@@ -2,18 +2,18 @@
 title: '&lt;診断&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524595"
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;診断&gt;
 `diagnostics` 要素は、ランタイムの検査と管理を行う管理者が使用できる設定を定義します。  
   
  \<system.ServiceModel >  
-\<診断 >  
+\<diagnostics>  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54149346"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|サービス アプリケーションの実行中にエンドツーエンドのトレースのさまざまな側面を有効または無効にするための構成要素。|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|WCF メッセージ ログの設定について説明します。|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|WCF メッセージ ログの設定について説明します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -84,6 +84,6 @@ ms.locfileid: "54149346"
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>

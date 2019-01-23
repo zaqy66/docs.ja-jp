@@ -2,12 +2,12 @@
 title: '&lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 2d79b3e28d1a80011cba7c515d979ae0037785a5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e3001f60ae0f18fee88678cae1e9e55d90822c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526766"
 ---
 # <a name="ltconnectionpoolsettingsgt"></a>&lt;connectionPoolSettings&gt;
 名前付きパイプ バインディングの追加の接続プール設定を指定します。  
@@ -16,8 +16,8 @@ ms.locfileid: "54149528"
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<namePipeTransport >  
-\<connectionPoolSettings >  
+\<namePipeTransport>  
+\<connectionPoolSettings>  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,17 +45,17 @@ ms.locfileid: "54149528"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
+|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.NamedPipeConnectionPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.NamedPipeConnectionPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
