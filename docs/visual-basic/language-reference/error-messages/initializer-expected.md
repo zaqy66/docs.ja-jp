@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 9d786fd1e929129c420b7bec62efd0bd445d85eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fa66a3c50b5c1eadd4c63b92c57ab60e1a11076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595995"
 ---
 # <a name="initializer-expected"></a>初期化子が必要です
-初期化リストが空で、次の例で示すように、オブジェクト初期化子を使用して、クラスのインスタンスを宣言しようとしました。  
+初期化リストの空の場合、次の例に示すように、オブジェクト初期化子を使用して、クラスのインスタンスを宣言しようとしました。  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- 次の例で示すように、少なくとも 1 つのフィールドまたはプロパティは初期化子リストで初期化する必要があります。  
+ 次の例に示すように、少なくとも 1 つのフィールドまたはプロパティが、初期化子リストで初期化する必要があります。  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
@@ -29,8 +29,8 @@ ms.locfileid: "33586387"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  少なくとも 1 つのフィールドまたはプロパティの初期化子で初期化またはオブジェクト初期化子を使用しないでください。  
+1.  少なくとも 1 つのフィールドまたはプロパティで、初期化子を初期化または、オブジェクト初期化子を使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクト初期化子 : 名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [方法 : オブジェクト初期化子を使用してオブジェクトを宣言する](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+## <a name="see-also"></a>関連項目
+- [オブジェクト初期化子:名前付きの匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [方法: オブジェクト初期化子を使用してオブジェクトを宣言します。](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

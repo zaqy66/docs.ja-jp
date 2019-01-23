@@ -2,12 +2,12 @@
 title: SQL Server セキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591712"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server セキュリティの概要
 セキュリティを幾重にも重ねて講じる多層防御は、セキュリティ上の脅威に対抗する最も有効な手段です。 SQL Server のセキュリティ アーキテクチャは、データベースの管理者および開発者が安全なデータベース アプリケーションを作成して脅威に対応できるように設計されています。 SQL Server は、前のバージョンに新しい機能を導入することによって絶えず進化してきました。 しかし、セキュリティを箱詰めして出荷することはできません。 アプリケーションには、それぞれ固有のセキュリティ要件があります。 開発者は、既知の脅威に対してどのような機能を組み合わせるのが最も効果的かを理解し、将来発生する可能性のある脅威を予測する必要があります。  
@@ -39,8 +39,8 @@ ms.locfileid: "43528658"
  [SQL Server の CLR 統合セキュリティ](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  CLR 統合セキュリティ関連リソースへのリンクが記載されています。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

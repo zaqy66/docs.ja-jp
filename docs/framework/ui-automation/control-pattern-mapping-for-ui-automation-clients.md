@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6beeec86ba8bf16be432bc2ae2de20aa08a0d2d9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597200"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI オートメーション クライアントのコントロール パターン マッピング
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、コントロール型とそれに関連するコントロール パターンを示します。  
   
@@ -78,5 +78,5 @@ ms.locfileid: "47113122"
 > [!NOTE]
 >  上記のサポート対象のコントロール パターンが存在せず、条件付きサポートのコントロール パターンが 1 つ以上存在するコントロール型では、それらの条件付きコントロール パターンのうちの 1 つが必ずサポートされます。  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>関連項目
+- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

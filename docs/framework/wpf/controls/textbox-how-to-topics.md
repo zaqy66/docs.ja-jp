@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b3e0409c438fc5a6b69fea19cd55cbeb72d74b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589937"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox に関する「方法」トピック
 このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.TextBox>コントロール。  
@@ -41,6 +41,6 @@ ms.locfileid: "45742811"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>関連項目  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [TextBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a>関連項目
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [TextBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

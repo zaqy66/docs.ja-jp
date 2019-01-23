@@ -2,12 +2,12 @@
 title: Windows のイベント トレースへの追跡イベント
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 70c75be09528b31572bdf0dc322af5bcd7e3ca5d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592862"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows のイベント トレースへの追跡イベント
 このサンプルでは、Windows Workflow Foundation (WF) ワークフロー サービスの追跡を有効にして、追跡イベントで Event Tracing for Windows (ETW) を出力する方法を示します。 ワークフロー追跡レコードを ETW に出力するために、このサンプルでは ETW 追跡参加要素 (<xref:System.Activities.Tracking.EtwTrackingParticipant>) を使用します。
@@ -149,5 +149,5 @@ ms.locfileid: "48837285"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

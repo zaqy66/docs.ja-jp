@@ -16,29 +16,29 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 3fae1a4b587c379dbc459cbc973982851e713785
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2495e9d44a32e080d20deb4232ab27bfbd4051a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595813"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
 プロパティまたはプロシージャを派生クラスでオーバーライドできないことを指定します。  
   
-## <a name="remarks"></a>コメント  
- `NotOverridable`修飾子プロパティまたはメソッドが派生クラスでオーバーライドされないできなくなります。  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)修飾子により、派生クラスでオーバーライドするクラスでプロパティまたはメソッドです。 詳細については、「[継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ `NotOverridable`修飾子が、プロパティまたはメソッドを派生クラスでオーバーライドされるを防ぎます。  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)修飾子は派生クラスでオーバーライドするクラスでプロパティまたはメソッドを使用します。 詳細については、「[継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)」を参照してください。  
   
- 場合、`Overridable`または`NotOverridable`修飾子が指定されていない、既定の設定は、プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドするかどうかによって異なります。 プロパティまたはメソッドは、基底クラスのプロパティまたはメソッドをオーバーライドする場合、既定値は`Overridable`です。 それ以外の場合は`NotOverridable`します。  
+ 場合、`Overridable`または`NotOverridable`修飾子が指定されていない、既定の設定は、プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドするかどうかによって異なります。 プロパティまたはメソッドは、基底クラスのプロパティまたはメソッドをオーバーライドする場合、既定値は`Overridable`。 それ以外は`NotOverridable`します。  
   
- 上書きできないように要素と呼ぶことが、*シール*要素。  
+ 要素をオーバーライドすることはできませんとも呼ばれます、*シール*要素。  
   
- `NotOverridable` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。 指定できます`NotOverridable`プロパティまたはとの組み合わせでのみ、つまり、別のプロパティまたはプロシージャをオーバーライドするプロシージャでのみ`Overrides`です。  
+ `NotOverridable` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。 指定できる`NotOverridable`プロパティまたはとの組み合わせでのみ、つまり、別のプロパティまたはプロシージャをオーバーライドするプロシージャでのみ`Overrides`します。  
   
-## <a name="combined-modifiers"></a>結合された修飾子  
- 指定することはできません`Overridable`または`NotOverridable`の`Private`メソッドです。  
+## <a name="combined-modifiers"></a>修飾子の組み合わせ  
+ 指定することはできません`Overridable`または`NotOverridable`の`Private`メソッド。  
   
- 指定することはできません`NotOverridable`と共に`MustOverride`、 `Overridable`、または`Shared`同じ宣言内で。  
+ 指定することはできません`NotOverridable`と共に`MustOverride`、 `Overridable`、または`Shared`同じ宣言内。  
   
 ## <a name="usage"></a>使用法  
  `NotOverridable` 修飾子は、次のコンテキストで使用できます。  
@@ -49,11 +49,11 @@ ms.locfileid: "33600754"
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [修飾子](../../../visual-basic/language-reference/modifiers/index.md)  
- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>関連項目
+- [修飾子](../../../visual-basic/language-reference/modifiers/index.md)
+- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

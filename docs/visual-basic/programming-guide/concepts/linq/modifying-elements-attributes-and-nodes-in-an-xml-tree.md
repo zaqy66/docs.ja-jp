@@ -1,13 +1,13 @@
 ---
-title: 要素、属性、および XML Tree1 内のノードを変更します。
+title: 要素、属性、および、XML Tree1 内のノードを変更します。
 ms.date: 07/20/2015
 ms.assetid: 865cf54e-f8ac-4871-863b-a3e6fc61a4b9
-ms.openlocfilehash: 91a7cca2e39e5ddc62d6010fbe4efad9bd7ff3c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3863f52976303407cbad3d0bacc9bd0b2ec1d31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547541"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>XML ツリー内の要素、属性、およびノードの変更
 次の表は、要素、その子要素、またはその属性の変更に使用できるメソッドとプロパティについてまとめたものです。  
@@ -45,5 +45,5 @@ ms.locfileid: "33645214"
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|子ノードを新しいコンテンツに置き換えます。|  
   
-## <a name="see-also"></a>関連項目  
- [XML ツリー (LINQ to XML) の変更 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+- [XML ツリー (LINQ to XML) の変更 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

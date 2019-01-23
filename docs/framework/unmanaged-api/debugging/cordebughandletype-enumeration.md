@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2898f530fe3f9368778d0f854e8254f7b32d5293
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ca7508c675ccc4c4ee0c07a2d7790bb5de7a668
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594591"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 列挙型
 ハンドル型を示します。  
@@ -39,17 +39,17 @@ typedef enum CorDebugHandleType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|ハンドルが、ガベージ コレクションによるクリアされてからオブジェクトを防ぐことをがします。|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|ハンドルは、これは防止しませんオブジェクトのガベージ コレクションによって解放される脆弱なです。<br /><br /> オブジェクトを収集するときに、ハンドルは無効になります。|  
+|`HANDLE_STRONG`|ハンドルは、ガベージ コレクションで回収されてからオブジェクトを防ぐことが、強力なです。|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|ハンドルは、ガベージ コレクションで回収されてからオブジェクトを回避することできませんが、脆弱です。<br /><br /> オブジェクトを収集するときに、ハンドルは無効になります。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

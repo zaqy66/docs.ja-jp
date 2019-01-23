@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592589"
 ---
 # <a name="input-overview"></a>入力の概要
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]サブシステムは、強力な[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]を提供しており、マウス、キーボード、タッチ、スタイラスを含むさまざまなデバイスからの入力を取得できます。
@@ -252,7 +252,7 @@ ms.locfileid: "48842789"
 
  オブジェクトを操作に応答させると、オブジェクトに慣性があるように見せることができます。 これにより、オブジェクトに現実の世界をシミュレートさせることができます。 たとえば、テーブル上で書籍を押す場合、強く押すと、書籍は離した後も移動し続けます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を使用すると、ユーザーがオブジェクトから指を離した後に、操作イベントを発生させることで、この動作をシミュレートできます。
 
- ユーザーがオブジェクトの移動、サイズ変更、および回転を実行できるアプリケーションを作成する方法は、「[チュートリアル: 初めてのタッチ アプリケーションの作成](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)」を参照してください。
+ ユーザーが移動、サイズ変更、およびオブジェクトを回転できるようにするアプリケーションを作成する方法については、次を参照してください。[チュートリアル。初めてのタッチ アプリケーションを作成する](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)します。
 
  <xref:System.Windows.UIElement>次の操作イベントを定義します。
 
@@ -416,4 +416,8 @@ ms.locfileid: "48842789"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワークの要素とイベント ルーティングの詳細については、 他のリソースを参照することができます。 詳細については、「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」、 「[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)」、 「[基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)」、 「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」、 「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
- [フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)[基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)[プロパティ](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Properties](../../../../docs/framework/wpf/advanced/properties-wpf.md)

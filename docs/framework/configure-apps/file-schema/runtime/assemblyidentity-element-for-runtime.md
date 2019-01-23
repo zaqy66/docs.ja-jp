@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b32e0da554622eb84b5569b5a1db04447fdc2940
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 939e10e0c06e98f98e0c468358f4296fd1061a79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593928"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;要素&lt;ランタイム&gt;
 アセンブリに関する識別情報が含まれています。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<assemblyBinding>  
-\<dependentAssembly >  
-\<assemblyIdentity >  
+\<dependentAssembly>  
+\<assemblyIdentity>  
   
 ## <a name="syntax"></a>構文  
   
@@ -121,7 +121,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

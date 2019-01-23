@@ -2,12 +2,12 @@
 title: サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594812"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング
 ここでは、トレース データの形式、表示方法、およびサービス トレース ビューアーを使用したアプリケーションのトラブルシューティングの方法について説明します。  
@@ -119,7 +119,7 @@ ms.locfileid: "50188795"
   
 -   Add アクションを処理しました。  
   
--   セキュリティで保護されたセッションを設定し (これは最初の要求で発生します)、RST、RSTR、SCT (プロセス メッセージ 1、2、3) の 3 つのセキュリティ インフラストラクチャ応答メッセージを処理しました。  
+-   応答メッセージをセキュリティで保護されたセッション (最初の要求でこの発生) と処理の 3 つのセキュリティ インフラストラクチャを設定します。RST、RSTR、SCT (プロセス メッセージ 1、2、3)。  
   
 -   Subtract、Multiply、および Divide の各要求を処理しました。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "50188795"
  左側のパネルでの活動の追加プロセス アクション ダブルクリックすると場合、Add に関連するクライアントの WCF アクティビティのグラフィカル表現がわかります。 左の最初のアクティビティがルート アクティビティ (0000) であり、既定のアクティビティです。 WCF は、アンビエント アクティビティから転送します。 これは、定義されていない場合、WCF は 0000 から転送します。 ここでは、2 番目のアクティビティである "プロセス アクション Add" が 0 から転送します。 次に、"セキュリティで保護されたセッションの設定" が示されています。  
   
  ![トレース ビューアーを使用して](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-WCF クライアント アクティビティのグラフ ビュー: アンビエント アクティビティ (ここでは 0)、プロセス アクション、およびセキュリティで保護されたセッションの設定  
+WCF クライアント アクティビティのグラフ ビュー:アンビエント アクティビティ (ここでは 0)、処理、およびセキュリティで保護されたセッションの設定  
   
  右上のパネルでは、"プロセス アクション Add" アクティビティに関連するすべてのトレースを確認できます。 具体的には、同じアクティビティで、要求メッセージ ("チャネル経由でメッセージを送信しました") を送信し、応答 ("チャネル経由でメッセージを受信しました") を受け取っています。 これを次のグラフに示します。 わかりやすくするために、このグラフでは、"セキュリティで保護されたセッションの設定" アクティビティを折りたたんでいます。  
   
@@ -198,7 +198,7 @@ WCF クライアント アクティビティとサービス アクティビテ�
  ![トレース ビューアーを使用して](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 トラブルシューティングを開始するには、赤または黄色のメッセージ トレースを選択し、これをダブルクリックして根本原因を追跡します。  
   
-## <a name="see-also"></a>関連項目  
- [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>関連項目
+- [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

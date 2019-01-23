@@ -1,18 +1,18 @@
 ---
-title: '方法 : サービス モニカーを登録および構成する'
+title: '方法: 登録し、サービス モニカーの構成'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593798"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>方法 : サービス モニカーを登録および構成する
+# <a name="how-to-register-and-configure-a-service-moniker"></a>方法: 登録し、サービス モニカーの構成
 型指定されたコントラクトを持つ COM アプリケーション内で Windows Communication Foundation (WCF) サービス モニカーを使用する前を COM に必要な属性型を登録して必要なバインディングで、COM アプリケーションとモニカーを構成する必要があります。構成します。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>必要な属性を備えた型を COM に登録するには  
@@ -87,7 +87,7 @@ ms.locfileid: "44221546"
     >  同様のコードを C#、C++、およびその他の .NET 言語アプリケーションで使用できます。  
   
     > [!NOTE]
-    >  モニカーの形式が正しくないか、サービスを使用できない場合は、`GetObject` を呼び出すと、"構文が無効です" というエラーが返されます。 このエラーが発生した場合は、使用しているモニカーが正しく、サービスが使用可能であることを確認してください。  
+    >  :モニカーが正しくないか、サービスが使用できない場合に呼び出し`GetObject`「構文が無効」のエラーが返されます。 このエラーが発生した場合は、使用しているモニカーが正しく、サービスが使用可能であることを確認してください。  
   
      このトピックでは、主に VB 6.0 コードからサービス モニカーを使用する方法について説明していますが、他の言語からサービス モニカーを使用することもできます。 C++ コードからモニカーを使用している場合、次のコードに示すように、Svcutil.exe によって生成されたアセンブリを、"no_namespace named_guids raw_interfaces_only" と共にインポートする必要があります。  
   
@@ -97,5 +97,5 @@ ms.locfileid: "44221546"
   
      これにより、インポートされたインターフェイス定義は、すべてのメソッドが `HResult` を返すように変更されます。 他の戻り値は、出力パラメーターに変換されます。 メソッドの実行全体は、同じままです。 このために、プロキシでメソッドを呼び出したときの例外の原因を特定できます。 この機能は C++ コードからのみ使用できます。  
   
-## <a name="see-also"></a>関連項目  
- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>関連項目
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

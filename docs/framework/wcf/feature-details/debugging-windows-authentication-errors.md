@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595137"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティ エラーが発生すると、Windows Communication Foundation (WCF) によってが表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  
@@ -45,13 +45,13 @@ ms.locfileid: "43513248"
   
  具体的には、次の 4 種類のアカウントがあります。  
   
--   Local User : コンピューター専用のユーザー プロファイル。 例 : `MachineName\Administrator` または `MachineName\ProfileName`。  
+-   ローカル ユーザー:コンピューター専用のユーザー プロファイル。 例 : `MachineName\Administrator` または `MachineName\ProfileName`。  
   
--   Local System : ドメインに参加していないコンピューターの SYSTEM ビルトイン アカウント。  
+-   ローカル システム:ドメインに参加していないコンピューターのビルトイン アカウント システム。  
   
--   Domain User : Windows ドメインのユーザー アカウント。 たとえば、`DomainName\ProfileName` のように指定します。  
+-   ドメイン ユーザー:Windows ドメイン ユーザー アカウント。 たとえば、`DomainName\ProfileName` のように指定します。  
   
--   Domain Machine : Windows ドメインに参加しているコンピューターで実行されている、コンピューター ID を使用するプロセス。 たとえば、`MachineName\Network Service` のように指定します。  
+-   Domain Machine:マシン id の Windows ドメインに参加しているコンピューターで実行されているプロセスです。 たとえば、`MachineName\Network Service` のように指定します。  
   
 > [!NOTE]
 >  サービス資格情報は、<xref:System.ServiceModel.ICommunicationObject.Open%2A> クラスの <xref:System.ServiceModel.ServiceHost> メソッドが呼び出されたときにキャプチャされます。 クライアント資格情報は、クライアントがメッセージを送信するたびに読み取られます。  
@@ -87,7 +87,7 @@ ms.locfileid: "43513248"
   
     1.  標準バインディングを使用する場合は、`NegotiateServiceCredential` プロパティを `true` に設定します。  
   
-    2.  カスタム バインディングを使用する場合は、`AuthenticationMode` 要素の `Security` 属性を `SspiNegotiated` に設定します。  
+    2.  カスタム バインドを使用する場合は、`AuthenticationMode` 要素の `Security` 属性を `SspiNegotiated` に設定します。  
   
 3.  次のように、NTLM を使用できないようにすることで、SSPI ネゴシエーションで Kerberos を使用する必要があります。  
   
@@ -139,15 +139,15 @@ ms.locfileid: "43513248"
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI を使用できない  
- 次のオペレーティング システムは、サーバーとして使用すると、Windows 認証をサポートしていません: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition、および[!INCLUDE[wv](../../../../includes/wv-md.md)]Home edition。  
+ 次のオペレーティング システムでは、Windows 認証サーバーとして使用する場合はサポートされません。[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition、および[!INCLUDE[wv](../../../../includes/wv-md.md)]Home edition。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>異なる ID を使用した開発と展開  
  アプリケーションを 1 台のコンピューターで開発し、別のコンピューターに展開し、異なるアカウントの種類を使用して各コンピューターで認証を行う場合、動作の違いが発生する場合があります。 たとえば、`SSPI Negotiated` 認証モードを使用して Windows XP Professional コンピューターでアプリケーションを開発するとします。 ローカル ユーザー アカウントを使用して認証する場合は、NTLM プロトコルが使用されます。 アプリケーションを開発した後は、ドメイン アカウントで実行されるサービスを Windows Server 2003 コンピューターに展開します。 この時点で、クライアントは Kerberos とドメイン コントローラーを使用するため、このサービスを認証できなくなります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

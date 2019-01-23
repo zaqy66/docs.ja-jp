@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 970fd0483d7e0126b258afd5ac5c3607cbc6aa0a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592686"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) スタンドアロン アプリケーションとブラウザーによってホストされるアプリケーションを開発する場合は、セキュリティ モデルを検討する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 無制限のアクセス許可を持つスタンドアロン アプリケーションの実行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**アクセス許可セット) Windows インストーラー (.msi)、XCopy を使用してデプロイするかどうか、または[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]します。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホスト アプリケーションは部分的に信頼を作成できます<xref:System.AppDomain>.NET Framework アドイン モデルを使用します。 詳細については、次を参照してください。 [WPF アドインの概要](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)します。  
@@ -184,7 +184,7 @@ ms.locfileid: "44202233"
  機能コントロールは、WebBrowser ActiveX オブジェクトをインスタンス化するプロセスで適用されます。 そのため、信頼されていないコンテンツに移動できるスタンドアロン アプリケーションを作成する場合は、その他の機能コントロールを有効にすることを検討すべきです。  
   
 > [!NOTE]
->  この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については、次を参照してください。 [The MSHTML Host Security FAQ: Part I of II](https://go.microsoft.com/fwlink/?LinkId=179396)と[The MSHTML Host Security FAQ: パート II of II](https://go.microsoft.com/fwlink/?LinkId=179415)します。  
+>  この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については、次を参照してください[The MSHTML Host Security FAQ:。パート I of II](https://go.microsoft.com/fwlink/?LinkId=179396)と[MSHTML ホスト セキュリティ FAQ:パート II of II](https://go.microsoft.com/fwlink/?LinkId=179415)します。  
   
  実行可能ファイルでは、レジストリ値を 1 に設定して以下の機能コントロールを有効にすることを検討してください。  
   
@@ -232,11 +232,11 @@ ms.locfileid: "44202233"
   
  このキーにより、APTCA アセンブリのエントリが設定されます。 また、アセンブリを有効または無効にする値をこのキーに作成する必要があります。 値の詳細を次に示します。  
   
--   値の名前: **APTCA_FLAG**します。  
+-   値の名前:**APTCA_FLAG**します。  
   
--   値の種類: **REG_DWORD**します。  
+-   値の種類:**REG_DWORD**します。  
   
--   値のデータ: **1** ; を無効にするには**0**有効にします。  
+-   値のデータ:**1** ; を無効にするには**0**有効にします。  
   
  部分信頼クライアント アプリケーションに対してアセンブリを無効にする必要がある場合は、レジストリ キーおよび値を作成する更新プログラムを作成します。  
   
@@ -271,11 +271,11 @@ ms.locfileid: "44202233"
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>関連項目  
- [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [WPF のセキュリティ方針 - セキュリティ エンジニアリング](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
- [patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://go.microsoft.com/fwlink/?LinkId=117426)  
- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)  
- [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)  
- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>関連項目
+- [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [WPF のセキュリティ方針 - セキュリティ エンジニアリング](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)
+- [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
+- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

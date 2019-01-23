@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 260d79b7c6432c3dede5b593eaa3f1e52ed35c5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588302"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer コントロール
 <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolStripContainer> の使用による、ビルトイン ラフティング (ドッキングされているときに、ツールの領域内の水平または垂直のスペースを共有) を備えています。  
@@ -22,10 +22,10 @@ ms.locfileid: "44087178"
  [ToolStripContainer コントロールの概要](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
  Windows フォームの <xref:System.Windows.Forms.ToolStripContainer> コントロールの目的および中心となる概念を説明するトピックを示します。  
   
- [方法: フォームに ToolStripContainer を追加する](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [方法: フォームに ToolStripContainer を追加します。](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
  <xref:System.Windows.Forms.ToolStripContainer> のアプリケーションへの追加と、<xref:System.Windows.Forms.ToolStripContainer> の特定のパネルへのコントロールの追加を示します。  
   
- [方法: ToolStripContentPanel にコントロールを追加する](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [方法: ToolStripContentPanel にコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  <xref:System.Windows.Forms.ToolStripContentPanel> へのコントロールの追加を示します。  
   
 ## <a name="reference"></a>参照  
@@ -41,5 +41,5 @@ ms.locfileid: "44087178"
  <xref:System.Windows.Forms.ToolStripPanel>  
  <xref:System.Windows.Forms.ToolStripPanel> コントロールのリファレンス ドキュメントを提供します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

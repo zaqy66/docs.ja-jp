@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ba8d07a26b7e6abc511e5b24db26162b46a2b0a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 39e78be4806a58d8e274d1e6ce58a1f1ee46ce1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592034"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、機能の概要、<xref:System.Windows.Application>クラスを作成すると、アプリケーションを管理します。  
@@ -321,7 +321,7 @@ ms.locfileid: "44042258"
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- 終了コードの値を検出して処理することにより、変更、<xref:System.Windows.Application.Exit>イベント。 <xref:System.Windows.Application.Exit>イベント ハンドラーに渡される、<xref:System.Windows.ExitEventArgs>の終了コードへのアクセスを提供する、<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>プロパティ。 詳細については、「<xref:System.Windows.Application.Exit>」を参照してください。  
+ 終了コードの値を検出して処理することにより、変更、<xref:System.Windows.Application.Exit>イベント。 <xref:System.Windows.Application.Exit>イベント ハンドラーに渡される、<xref:System.Windows.ExitEventArgs>の終了コードへのアクセスを提供する、<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>プロパティ。 詳細については、「 <xref:System.Windows.Application.Exit> 」を参照してください。  
   
 > [!NOTE]
 >  両方のスタンドアロン アプリケーションの終了コードを設定して[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。 ただし、終了コード値は無視されます[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。  
@@ -365,11 +365,11 @@ ms.locfileid: "44042258"
   
  ![XBAP - アプリケーション オブジェクト イベント](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Application>  
- [WPF ウィンドウの概要](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [アプリケーション モデル: 操作方法に関するトピック](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
- [アプリケーションの開発](../../../../docs/framework/wpf/app-development/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Application>
+- [WPF ウィンドウの概要](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
+- [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+- [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [アプリケーション モデル:操作方法に関するトピック](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)
+- [アプリケーションの開発](../../../../docs/framework/wpf/app-development/index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d5284cf6072aa5c1c11cc83355a3e9fa5c96837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b8e0807cd03c7abfee0856d52cae0454b9f1a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587792"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch メソッド
 共通言語ランタイム (CLR) によって管理されるスレッドがメソッドを呼び出すことをデバッガーに通知、<xref:System.Diagnostics.Switch>クラスを作成、変更、またはデバッグとトレース スイッチを削除します。  
@@ -41,13 +41,13 @@ HRESULT LogSwitch (
   
 #### <a name="parameters"></a>パラメーター  
  `PAppDomain`  
- [in]ICorDebugAppDomain を表すオブジェクトを作成、変更、またはデバッグ/トレース スイッチを削除するマネージ スレッドを含む、アプリケーション ドメインへのポインター。  
+ [in]ICorDebugAppDomain を表すオブジェクトを作成、変更、またはデバッグとトレース スイッチを削除するマネージ スレッドを格納しているアプリケーション ドメインへのポインター。  
   
  `pThread`  
  [in]マネージ スレッドを表す ICorDebugThread オブジェクトへのポインター。  
   
  `lLevel`  
- [in]イベント ログに書き込まれた説明メッセージの重大度レベルを示す値です。  
+ [in]イベント ログに書き込まれた内容を示すメッセージの重大度レベルを示す値。  
   
  `ulReason`  
  [in]値、 [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)デバッグとトレース スイッチの操作を示す列挙を実行します。  
@@ -58,14 +58,14 @@ HRESULT LogSwitch (
  `pParentName`  
  [in]デバッグとトレース スイッチの親の名前へのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

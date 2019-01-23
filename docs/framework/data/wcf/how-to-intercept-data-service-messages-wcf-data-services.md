@@ -1,5 +1,5 @@
 ---
-title: '方法: データ サービス メッセージを先に取得する (WCF Data Services)'
+title: '方法: データ サービス メッセージ (WCF Data Services) をインターセプトします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 9d79a9ca27470512105b3a04d681906aa365d7e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5fdbaa25f55caf3de2f0591b7258d4a7dcb1b7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586398"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>方法: データ サービス メッセージを先に取得する (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、要求メッセージを先に取得して、操作にカスタム ロジックを追加することができます。 メッセージを傍受するには、データ サービスで特別なメソッドを使用します。 詳細については、次を参照してください。[インターセプター](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)です。  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>方法: データ サービス メッセージ (WCF Data Services) をインターセプトします。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、要求メッセージを先に取得して、操作にカスタム ロジックを追加することができます。 メッセージをインターセプトするには、データ サービスで特別なメソッドを使用します。 詳細については、次を参照してください。[インターセプター](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)します。  
   
- このトピックの例では、Northwind サンプル データ サービスを使用します。 このサービスの作成が完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)です。  
+ このトピックの例では、Northwind サンプル データ サービスを使用します。 このサービスの作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。  
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Orders エンティティ セットのクエリ インターセプターを定義するには  
   
@@ -55,6 +55,6 @@ ms.locfileid: "33355761"
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## <a name="see-also"></a>関連項目  
- [方法: サービス操作を定義する](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+## <a name="see-also"></a>関連項目
+- [方法: サービス操作を定義します。](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
