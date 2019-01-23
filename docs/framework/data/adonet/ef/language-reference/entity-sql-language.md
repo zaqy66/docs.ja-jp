@@ -2,12 +2,12 @@
 title: Entity SQL 言語
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: f12a20f85a0449778614d3098f69d3da90902c95
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 0c698f04c3b95ffb204a20d41e91ef3f6210c5d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494098"
 ---
 # <a name="entity-sql-language"></a>Entity SQL 言語
 Entity SQL は、ストレージに依存しない SQL と似たクエリ言語です。 Entity SQL を使用すると、オブジェクトとして、または表形式でエンティティ データに対してクエリを実行できます。 次の場合には Entity SQL の使用を検討してください。  
@@ -25,30 +25,30 @@ Entity SQL は、ストレージに依存しない SQL と似たクエリ言語�
   
  [Entity Framework 用の EntityClient プロバイダー](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
   
- [EntityConnection の接続文字列を作成する方法](../../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [方法: EntityConnection の接続文字列を作成します。](../../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [PrimitiveType 結果を返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [方法: PrimitiveType 結果を返すクエリを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [StructuralType 結果を返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [方法: StructuralType 結果を返すクエリを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [RefType 結果を返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [方法: RefType 結果を返すクエリを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [複合型を返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [方法: 複合型を返すクエリを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [入れ子になったコレクションを返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [方法: 入れ子になったコレクションを返すクエリを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [EntityCommand を使用してパラメーター化 Entity SQL クエリを実行する方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [方法: EntityCommand を使用してパラメーター化 Entity SQL クエリを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [EntityCommand を使用してパラメーター化されたストアド プロシージャを実行する方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [方法: EntityCommand を使用してパラメーター化されたストアド プロシージャを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [ポリモーフィック クエリを実行する方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [方法: ポリモーフィック クエリを実行します。](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [Navigate 演算子でリレーションシップをナビゲートする方法](../../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [方法: リレーションシップをナビゲート、Navigate 演算子](../../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="using-entity-sql-with-object-queries"></a>Entity SQL とオブジェクト クエリの使用  
  Entity SQL をオブジェクト クエリと一緒に使用する際の詳細については、次のトピックを参照してください。  
   
- [方法: エンティティ型のオブジェクトを返すクエリの実行](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
+ [方法: エンティティ型のオブジェクトを返すクエリを実行します。](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
   
  [方法: パラメーター化クエリを実行します。](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
   
@@ -56,29 +56,29 @@ Entity SQL は、ストレージに依存しない SQL と似たクエリ言語�
   
  [方法: ユーザー定義関数を呼び出す](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
   
- [方法: データをフィルター処理](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
+ [方法: データをフィルター処理します。](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
   
  [方法: データの並べ替え](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
   
  [方法: データをグループ化](https://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
   
- [方法: データの集計](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
+ [方法: 集計データ](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
   
- [方法: 匿名型オブジェクトを返すクエリの実行](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [方法: 匿名型オブジェクトを返すクエリを実行します。](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
   
- [方法: プリミティブ型のコレクションを返すクエリの実行](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
+ [方法: プリミティブ型のコレクションを返すクエリを実行します。](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
   
- [方法: EntityCollection 内の関連オブジェクトのクエリ](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
+ [方法: EntityCollection 内の関連オブジェクトをクエリします。](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
   
  [方法: 2 つのクエリの結合を並べ替える](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
   
- [方法: 結果をページング クエリ](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [方法: クエリ結果 ページ](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
   
  [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [言語リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+## <a name="see-also"></a>関連項目
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [言語リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

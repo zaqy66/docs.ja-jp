@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84c362dca7f617aeb929f050af23e96998c4e1d5
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42754518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498295"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 関数
 指定された選択条件を満たす、指定したクラスのインスタンスを返す列挙子を返します。 
@@ -48,7 +48,7 @@ HRESULT CreateInstanceEnumWmi (
 ## <a name="parameters"></a>パラメーター
 
 `strFilter`    
-[in]インスタンスが必要なクラスの名前。 このパラメーターにすることはできません`null`します。
+[in]インスタンスが必要なクラスの名前。 このパラメーターを `null` とすることはできません。
 
 `lFlags`   
 [in]この関数の動作に影響するフラグの組み合わせ。 次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。 
@@ -110,12 +110,12 @@ HRESULT CreateInstanceEnumWmi (
 
 呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b56644cdf44ac5bd9c755d1ee7ba7013c0245293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492313"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic における名前空間
 アセンブリ内で定義されているオブジェクトは、名前空間によって編成されています。 アセンブリには複数の名前空間を含めることができます。さらに、名前空間の中に他の名前空間を含めることもできます。 名前空間を使用するとあいまいさがなくなるため、クラス ライブラリを使用する場合など、多数のオブジェクトを使用する場合に参照が簡単になります。  
   
- たとえば、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間に <xref:System.Windows.Forms.ListBox> クラスが定義されています。 次のコードは、このクラスの完全修飾名を使用して変数を宣言する方法を示しています。  
+ たとえば、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では <xref:System.Windows.Forms.ListBox> 名前空間に <xref:System.Windows.Forms?displayProperty=nameWithType> クラスが定義されています。 次のコードは、このクラスの完全修飾名を使用して変数を宣言する方法を示しています。  
   
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48030445"
  名前空間内では、モジュール、インターフェイス、クラス、デリゲート、列挙体、構造体、他の名前空間などの項目を定義できます。 プロパティ、プロシージャ、変数、イベントなどの項目を名前空間のレベルで定義することはできません。 これらの項目は、モジュール、構造体、クラスなどのコンテナー内で宣言する必要があります。  
   
 ## <a name="global-keyword-in-fully-qualified-names"></a>完全修飾名の Global キーワード  
- 入れ子になった階層構造の名前空間を定義すると、その階層構造の内部にあるコードが .NET Framework の <xref:System?displayProperty=nameWithType> 名前空間にアクセスできない場合があります。 次の例は、`SpecialSpace.System` 名前空間から <xref:System?displayProperty=nameWithType> にアクセスできない階層構造を示しています。  
+ 入れ子になった階層構造の名前空間を定義すると、その階層構造の内部にあるコードが .NET Framework の <xref:System?displayProperty=nameWithType> 名前空間にアクセスできない場合があります。 次の例は、 `SpecialSpace.System` 名前空間から <xref:System?displayProperty=nameWithType>にアクセスできない階層構造を示しています。  
   
 ```vb  
 Namespace SpecialSpace  
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- この場合、`SpecialSpace.System` に `Int32` が定義されていないため、Visual Basic コンパイラは <xref:System.Int32?displayProperty=nameWithType> への参照を正しく解決できません。 `Global` キーワードを使用すると、修飾チェーンを .NET Framework クラス ライブラリの最も外側のレベルで開始できます。 これにより、クラス ライブラリの <xref:System?displayProperty=nameWithType> 名前空間や、その他のあらゆる名前空間を指定できるようになります。 次に例を示します。  
+ この場合、 <xref:System.Int32?displayProperty=nameWithType>に `SpecialSpace.System` が定義されていないため、Visual Basic コンパイラは `Int32`への参照を正しく解決できません。 `Global` キーワードを使用すると、修飾チェーンを .NET Framework クラス ライブラリの最も外側のレベルで開始できます。 これにより、クラス ライブラリの <xref:System?displayProperty=nameWithType> 名前空間や、その他のあらゆる名前空間を指定できるようになります。 次に例を示します。  
   
 ```vb  
 Namespace SpecialSpace  
@@ -96,7 +96,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- `Global` を使用して、<xref:Microsoft.VisualBasic?displayProperty=nameWithType> などの他のルート レベルの名前空間、およびプロジェクトに関連する任意の名前空間にアクセスできます。  
+ `Global` を使用して、 <xref:Microsoft.VisualBasic?displayProperty=nameWithType>などの他のルート レベルの名前空間、およびプロジェクトに関連する任意の名前空間にアクセスできます。  
   
 ## <a name="global-keyword-in-namespace-statements"></a>名前空間のステートメントでの Global キーワード  
  使用することも、`Global`キーワード、 [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)します。 これにより、プロジェクトのルート名前空間から名前空間を定義できます。  
@@ -109,7 +109,7 @@ End Namespace
   
  名前空間宣言では、 `Global` を別の名前空間に入れ子にすることはできません。  
   
- 使用することができます、[アプリケーション ページで、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)表示および変更する、**ルート Namespace**のプロジェクト。  新しいプロジェクトの場合、 **ルート名前空間** の既定値は、プロジェクト名です。 `Global` を最上位レベルの名前空間にするには、 **ルート名前空間** のエントリを消去して、ボックスを空にします。 **ルート名前空間** を消去すると、名前空間の宣言で `Global` キーワードの必要がなくなります。  
+ [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) を使用して、プロジェクトの **ルート名前空間** を表示および変更できます。  新しいプロジェクトの場合、 **ルート名前空間** の既定値は、プロジェクト名です。 `Global` を最上位レベルの名前空間にするには、 **ルート名前空間** のエントリを消去して、ボックスを空にします。 **ルート名前空間** を消去すると、名前空間の宣言で `Global` キーワードの必要がなくなります。  
   
  `Namespace` ステートメントで .NET framework の名前空間にもなっている名前を宣言する場合、 `Global` キーワードが完全修飾名で使用されていない場合、.NET Framework 名前空間は使用できなくなります。 `Global` キーワードを使用せずに、.NET Framework 名前空間へのアクセスを有効にするには、 `Global` キーワードを `Namespace` ステートメントに含めます。  
   
@@ -121,10 +121,10 @@ End Namespace
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Windows.Forms.ListBox>  
-- <xref:System.Windows.Forms?displayProperty=nameWithType>  
-- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
-- [方法: コマンド ラインを使用してアセンブリを作成および使用する](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
-- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
-- [Office ソリューションのコードの記述](/visualstudio/vsto/writing-code-in-office-solutions)
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms?displayProperty=nameWithType>
+- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [方法: コマンド ラインを使用してアセンブリを作成および使用する](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
+- [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)

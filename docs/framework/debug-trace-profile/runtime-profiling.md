@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491247"
 ---
 # <a name="runtime-profiling"></a>ランタイム プロファイリング
 プロファイリングは、任意の開発シナリオまたは配置シナリオでパフォーマンス データを収集する方法の 1 つです。 このセクションは、アプリケーションのパフォーマンスに関する情報の収集を必要とする開発者およびシステム管理者を対象にしています。  
@@ -66,5 +66,5 @@ ms.locfileid: "33393056"
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|`PerformanceCounter` コンポーネントのインストーラーを指定します。|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|`NextValue` の `PerformanceCounter`メソッドを計算する数式を指定します。|  
   
-## <a name="see-also"></a>関連項目  
- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)
+## <a name="see-also"></a>関連項目
+- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)

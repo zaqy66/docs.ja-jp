@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494445"
 ---
 # <a name="choosing-a-transport"></a>トランスポートの選択
-このトピックでは、Windows Communication Foundation (WCF) に含まれている 3 つの主なトランスポートの中から選択するための条件を説明します。 HTTP、TCP、および名前付きパイプします。 WCF にも含まれています、トランスポート、メッセージ キュー (MSMQ とも呼ばれます) は、このドキュメントは、メッセージ キューを対応していません。  
+このトピックでは、Windows Communication Foundation (WCF) に含まれている 3 つの主なトランスポートの中から選択するための条件について説明します。HTTP、TCP、および名前付きパイプします。 WCF にも含まれています、トランスポート、メッセージ キュー (MSMQ とも呼ばれます) は、このドキュメントは、メッセージ キューを対応していません。  
   
  WCF プログラミング モデルを分離エンドポイントの操作 (サービス コントラクトで表される) と 2 つのエンドポイントを接続するトランスポート機構から。 これによって、ネットワークへのサービスの公開方法を柔軟に決定できます。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "50199666"
   
  HTTP プロトコルは、接続ベースではありません。応答の送信後、状態は維持されません。 複数ページ トランザクションを処理するには、アプリケーションが、必要な状態を維持する必要があります。  
   
- Wcf では、HTTP トランスポートの WCF 以外のレガシ システムと相互運用性バインディングが最適化されています。 すべての通信相手が WCF を使用している場合は、TCP ベースまたは名前付きパイプベースのバインディングが高速です。 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.NetTcpBinding> および <xref:System.ServiceModel.NetNamedPipeBinding>.  
+ Wcf では、HTTP トランスポートの WCF 以外のレガシ システムと相互運用性バインディングが最適化されています。 すべての通信相手が WCF を使用している場合は、TCP ベースまたは名前付きパイプベースのバインディングが高速です。 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.NetTcpBinding> および <xref:System.ServiceModel.NetNamedPipeBinding>  
   
 ### <a name="when-to-use-the-tcp-transport"></a>TCP トランスポートを使用する状況  
  TCP は、エンドツーエンドのエラー検出とエラー訂正を備えた接続ベースのストリーム指向配信サービスです。 *接続に基づく*データを交換する前に、ホスト間の通信セッションが確立されていることを意味します。 ホストは、TCP/IP ネットワーク上で論理 IP アドレスによって識別される任意のデバイスです。  
@@ -45,7 +45,7 @@ ms.locfileid: "50199666"
  通信は、1 台のコンピューター上の異なる WCF アプリケーション間で必要な別のコンピューターからの通信をできないようにすると、名前付きパイプ トランスポートを使用します。 追加の制限として、Windows リモート デスクトップから実行しているプロセスを同じ Windows リモート デスクトップのセッションに制限することができます。ただし、そのプロセスにシステム特権がある場合を除きます。  
   
 > [!WARNING]
->  名前付きパイプ トランスポートを IIS でホストされている複数のサイトで弱いワイルドカードの URL 予約を使用して、次のエラーが発生する: サイト '2' をリッスンしているときにアクティブ化サービス、プロトコル 'net.pipe' の ' NetPipeActivator' でエラーが発生しましたしたがって、プロトコルは一時的に、サイトに対して無効です。 詳細については、例外メッセージを参照してください。 URL: WeakWildcard:net.pipe:/\<マシン名 >/状態: ConflictingRegistration 例外: プロセス名: SMSvcHost プロセス ID: 1076\  
+>  IIS でホストされている複数のサイトで弱いワイルドカードの URL 予約を名前付きパイプ トランスポートを使用する場合、次のエラーが表示される場合があります。サイト '2' をリッスンしているときにアクティブ化サービス、プロトコル 'net.pipe' の ' NetPipeActivator' でエラーが発生しました、したがって、プロトコルは、サイトの一時的に無効です。 詳細については、例外メッセージを参照してください。 URL:WeakWildcard:net.pipe:/\<マシン名 >/状態。ConflictingRegistration 例外:プロセス名:SMSvcHost プロセス ID:1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>トランスポート選択の判断材料  
  トランスポートの選択に使用する一般的な判断材料を次の表に示します。 アプリケーションに適用される追加の属性とトランスポートについて考慮する必要があります。 アプリケーションに重要な属性を特定し、各属性と相性の良いトランスポートを特定し、最後にその属性セットで最も適切に機能するトランスポートを選択します。  
@@ -61,16 +61,16 @@ ms.locfileid: "50199666"
 |スループット|スループットは、指定の期間内に送信し、処理できるデータの量を示します。 待ち時間のように、選択したトランスポートが、サービス操作のスループットに影響する場合があります。 トランスポートのスループットを最大にするには、コンテンツを送信するときのオーバーヘッドおよびメッセージ交換が完了するまでの待ち時間を最小限に抑えることが必要です。 TCP トランスポートと名前付きパイプ トランスポートは、メッセージ本文に対するオーバーヘッドが小さく、メッセージ応答の待ち時間を短縮するネイティブ双方向パターンをサポートします。|TCP、名前付きパイプ|  
 |ツール|ツールは、開発、診断、ホスティング、およびその他のアクティビティに関する、サードパーティ アプリケーションによるプロトコルへのサポートを表します。 HTTP プロトコルで動作するツールとソフトウェアの開発には、大規模な投資が行われています。|HTTP|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [ユーザー定義バインディングの作成](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [ユーザー定義バインディングの作成](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

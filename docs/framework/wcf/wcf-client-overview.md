@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492599"
 ---
 # <a name="wcf-client-overview"></a>WCF クライアントの概要
 このセクションでは、クライアント アプリケーションの処理、構成、作成、および Windows Communication Foundation (WCF) クライアントを使用する方法、およびクライアント アプリケーションをセキュリティで保護する方法について説明します。  
@@ -166,11 +166,11 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>サービスの非同期呼び出し  
- 操作の呼び出し方法は、クライアント開発者に完全に依存します。 これは、操作を構成するメッセージは、マネージ コードで表現するときに同期メソッドまたは非同期メソッドのどちらかにマップできるためです。 したがって、操作を非同期に呼び出すクライアントを作成する場合、Svcutil.exe の `/async` オプションを使用して非同期クライアント コードを生成できます。 詳細については、次を参照してください。[方法。サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
+ 操作の呼び出し方法は、クライアント開発者に完全に依存します。 これは、操作を構成するメッセージは、マネージ コードで表現するときに同期メソッドまたは非同期メソッドのどちらかにマップできるためです。 したがって、操作を非同期に呼び出すクライアントを作成する場合、Svcutil.exe の `/async` オプションを使用して非同期クライアント コードを生成できます。 詳細については、「[方法 :サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF クライアント チャネルを使用したサービスの呼び出し  
  WCF クライアントの型を拡張<xref:System.ServiceModel.ClientBase%601>から派生した<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>基になるチャネル システムを公開するインターフェイス。 ターゲットのサービス コントラクトと <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> クラスを使用して、サービスを呼び出すことができます。 詳細については、次を参照してください。 [WCF クライアント アーキテクチャ](../../../docs/framework/wcf/feature-details/client-architecture.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: WMI プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4541c411d6bd1f13a03a0b6750e6683a7c2b3f3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 938eb4fd376c699ddbfedf80f05ef62f81232ca2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497184"
 ---
 # <a name="wmi-provider"></a>WMI プロバイダー
 このサンプルでは、WCF に組み込まれている Windows Management Instrumentation (WMI) プロバイダーを使用して、実行時に Windows Communication Foundation (WCF) サービスからデータを収集する方法を示します。 また、このサンプルでは、ユーザー定義の WMI オブジェクトをサービスに追加する方法も示します。 サンプルの WMI プロバイダーをアクティブ化、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)からデータを収集する方法について説明し、`ICalculator`実行時にサービス。  
@@ -143,5 +143,5 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

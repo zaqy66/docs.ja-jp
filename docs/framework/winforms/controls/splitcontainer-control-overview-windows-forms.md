@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497287"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer コントロールの概要 (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロールは複合と考えることができ、移動可能なバーで区切られた 2 つのパネルです。 マウス ポインターがバーの上に移動すると、ポインターの形が変わり、バーが移動可能であることを示します。  
@@ -49,7 +49,7 @@ Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロ�
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving> イベント|分割線を移動するときに発生します。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> イベント|分割線が移動されたときに発生します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [SplitContainer コントロールのサンプル](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer コントロールのサンプル](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

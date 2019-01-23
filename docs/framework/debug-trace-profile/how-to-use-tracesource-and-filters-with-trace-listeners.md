@@ -1,5 +1,5 @@
 ---
-title: 操作方法：TraceSource とフィルターをトレース リスナーと共に使用します。
+title: '方法: TraceSource とフィルターをトレース リスナーと共に使用します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc81e1e13f942f5db4fec5cc607264d499b63629
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e87e9d82ec16c9bcb1621c14756f401bd4f7b8a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491099"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>操作方法：TraceSource とフィルターをトレース リスナーと共に使用します。
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>方法: TraceSource とフィルターをトレース リスナーと共に使用します。
 .NET Framework Version 2.0 の新機能の 1 つは、強化されたトレース システムです。 基本的な前提は変更されていません。トレース メッセージはスイッチ経由でリスナーに送信され、関連付けられている出力メディアに、データを報告します。 バージョン 2.0 の主な違いは、<xref:System.Diagnostics.TraceSource> クラスのインスタンスを介してトレースを開始できることです。 <xref:System.Diagnostics.TraceSource> は、拡張されたトレース システムとして機能することを目的としており、以前の <xref:System.Diagnostics.Trace> トレース クラスと <xref:System.Diagnostics.Debug> トレース クラスの静的メソッドの代わりに使用できます。 使い慣れた <xref:System.Diagnostics.Trace> クラスと <xref:System.Diagnostics.Debug> クラスがまだ存在していますが、推奨される方法は、<xref:System.Diagnostics.TraceSource> クラスを使用したトレースです。  
   
  このトピックでは、アプリケーション構成ファイルと組み合わせた <xref:System.Diagnostics.TraceSource> の使用方法について説明します。  可能であれば、推奨されませんが、構成ファイルを使用せずに <xref:System.Diagnostics.TraceSource> を使用してトレースすることもできます。 構成ファイルを使わずにトレースについては、次を参照してください。[方法。作成し、トレース ソースの初期化](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)します。  
@@ -163,10 +163,10 @@ ms.locfileid: "53146080"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventTypeFilter>  
- [操作方法：作成し、トレース ソースの初期化](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventTypeFilter>
+- [方法: 作成し、トレース ソースの初期化](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)

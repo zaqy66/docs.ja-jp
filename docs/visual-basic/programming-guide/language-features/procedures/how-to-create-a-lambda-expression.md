@@ -1,18 +1,18 @@
 ---
-title: '方法: ラムダ式を作成する (Visual Basic)'
+title: '方法: ラムダ式 (Visual Basic) を作成します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e7302304fe6c44b0143d7f12ec272d597b313fdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492414"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式を作成する (Visual Basic)
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式 (Visual Basic) を作成します。
 A*ラムダ式*は関数またはサブルーチンに名前がないです。 ラムダ式はデリゲート型が有効な場所で使用できます。  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>単一行のラムダ式の関数を作成するには  
@@ -104,12 +104,12 @@ A*ラムダ式*は関数またはサブルーチンに名前がないです。 �
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Linq.Enumerable>  
- [ラムダ式](./lambda-expressions.md)  
- [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- 方法 : [Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Linq.Enumerable>
+- [ラムダ式](./lambda-expressions.md)
+- [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [方法: Visual Basic での別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

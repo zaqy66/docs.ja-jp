@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492686"
 ---
 # <a name="storyboards-overview"></a>ストーリーボードの概要
 このトピックでは、使用する方法を示します<xref:System.Windows.Media.Animation.Storyboard>オブジェクトを編成およびアニメーションを適用します。 対話的に操作する方法を説明<xref:System.Windows.Media.Animation.Storyboard>オブジェクトおよび構文を対象とする間接的なプロパティについて説明します。  
@@ -61,10 +61,10 @@ ms.locfileid: "44222475"
   
 |ストーリーボードが開始される場所|インスタンス単位|スタイル|コントロール テンプレート|データ テンプレート|例|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|はい|[はい]|[はい]|はい|[ストーリーボードを使ってプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|[はい]|はい|[プロパティ値が変化したときにアニメーションをトリガーする](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.DataTrigger>|いいえ|[はい]|[はい]|はい|[方法: データが変化したときにアニメーションをトリガーする](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッド|はい|×|×|いいえ|[ストーリーボードを使ってプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|[はい]|[はい]|[はい]|[はい]|[ストーリーボードを使ってプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|[はい]|[はい]|[プロパティ値が変化したときにアニメーションをトリガーする](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.DataTrigger>|いいえ|[はい]|[はい]|[はい]|[方法: データが変更されたときにアニメーションをトリガーします。](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッド|[はい]|×|×|いいえ|[ストーリーボードを使ってプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  次の例では、<xref:System.Windows.Media.Animation.Storyboard>をアニメーション化する、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>要素と<xref:System.Windows.Media.SolidColorBrush.Color%2A>の<xref:System.Windows.Media.SolidColorBrush>を描画するために使用<xref:System.Windows.Shapes.Rectangle>します。  
   
@@ -225,17 +225,17 @@ ms.locfileid: "44222475"
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>XAML での対話形式でのストーリーボードの制御  
  ストーリー ボードを起動する[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]を使用する、<xref:System.Windows.Media.Animation.BeginStoryboard>アクションをトリガーします。 <xref:System.Windows.Media.Animation.BeginStoryboard> オブジェクトとプロパティをアニメーション化する、ストーリー ボードを開始するアニメーションを配布します。 (詳細については、このプロセスは、次を参照してください、[アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)。提供する場合、<xref:System.Windows.Media.Animation.BeginStoryboard>名前を指定してその<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>プロパティをできるようにする制御可能なストーリー ボード。 ストーリーボードが開始すると対話的に制御できます。 制御可能なストーリーボード アクションの一覧を次に示します。これらをイベント トリガーで使用して、ストーリーボードを制御します。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: ストーリー ボードを一時停止します。  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>:ストーリー ボードを一時停止します。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: 一時停止中のストーリー ボードを再開します。  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>:一時停止中のストーリー ボードを再開します。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: ストーリー ボードの速度を変更します。  
+-   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>:ストーリー ボードの速度を変更します。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: ある場合、塗りつぶし期間の末尾にストーリー ボードを進めます。  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>:ある場合は、その保留期間の末尾にストーリー ボードを進めます。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: ストーリー ボードを停止します。  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>:ストーリー ボードを停止します。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: ストーリー ボードを削除します。  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>:ストーリー ボードを削除します。  
   
  次の例では、制御可能なストーリーボード アクションを使用して、ストーリーボードを対話的に制御しています。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "44222475"
   
  これらのメソッドを使用する利点は、作成する必要があることを<xref:System.Windows.Trigger>または<xref:System.Windows.TriggerAction>オブジェクトは、制御可能なへの参照が必要なだけ<xref:System.Windows.Media.Animation.Storyboard>を操作します。  
   
- **注:** で行われたすべての対話型操作、 <xref:System.Windows.Media.Animation.Clock>、ためにも、<xref:System.Windows.Media.Animation.Storyboard>は、次の描画の少し前に行われるタイミング エンジンの次の目盛りで発生します。 たとえば、使用する場合、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>プロパティの値をアニメーションで別のポイントにジャンプするメソッドはすぐに変更されません、タイミング エンジンの次の目盛りの値を変更する代わりに。  
+ **注:** 行われたすべての対話型操作、 <xref:System.Windows.Media.Animation.Clock>、ためにも、<xref:System.Windows.Media.Animation.Storyboard>は、次の描画の少し前に行われるタイミング エンジンの次の目盛りで発生します。 たとえば、使用する場合、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>プロパティの値をアニメーションで別のポイントにジャンプするメソッドはすぐに変更されません、タイミング エンジンの次の目盛りの値を変更する代わりに。  
   
  次の例では、適用およびの対話型のメソッドを使用してアニメーションを制御する方法を示しています、<xref:System.Windows.Media.Animation.Storyboard>クラス。  
   
@@ -302,7 +302,7 @@ ms.locfileid: "44222475"
   
  プロパティによって適用されるアニメーション<xref:System.Windows.Trigger>オブジェクトよりもさらに複雑な方法で動作しますが<xref:System.Windows.EventTrigger>アニメーションまたはアニメーションの開始を使用して<xref:System.Windows.Media.Animation.Storyboard>メソッド。  「ハンドオフ」アニメーションによって他の定義、<xref:System.Windows.Trigger>オブジェクトで、compose を<xref:System.Windows.EventTrigger>メソッドによってトリガーされるアニメーションです。  
   
-## <a name="see-also"></a>関連項目  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [プロパティ アニメーションの手法の概要](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>関連項目
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [プロパティ アニメーションの手法の概要](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

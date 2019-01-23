@@ -2,17 +2,17 @@
 title: ADO.NET Entity Framework 内の接続文字列
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497460"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework 内の接続文字列
 接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 接続文字列は接続を開くときに解析され、その構文はデータ プロバイダーによって異なります。 Entity Framework で使用される接続文字列には、Entity Framework のサポート基盤である ADO.NET データ プロバイダーへの接続に使用される情報が含まれています。 また、必要なモデル ファイルおよびマッピング ファイルに関する情報も含まれています。  
   
- 接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、次を参照してください。[方法: EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。  
+ 接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。  
   
  [Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)アプリケーションの構成ファイルに格納されている接続文字列を生成します。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳細については、次を参照してください。[接続の管理とトランザクション](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)です。  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |オプション|説明|  
 |-|-|  
-|`assemblyFullName`|リソースが組み込まれたアセンブリの完全な名前。 この名前には、次のように単純な名前、バージョン名、サポートされるカルチャ、および公開キーが含まれます。<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> リソースは、アプリケーションからアクセスできる任意のアセンブリに組み込むことができます。<br /><br /> ワイルドカードを指定する場合 (\*) の`assemblyFullName`、Entity Framework ランタイムがこの順序で、次の場所でリソースを検索します。<br /><br /> 1.呼び出し側のアセンブリ<br />2.参照アセンブリ<br />3.アプリケーションの bin ディレクトリ内のアセンブリ<br /><br /> ファイルが上記のどの場所にもない場合は、例外がスローされます。 **注:** Entity Framework では、正しい名前のリソースのすべてのアセンブリを検索するワイルドカード (*) を使用するとします。 パフォーマンスを向上させるには、ワイルドカードではなくアセンブリ名を指定してください。|  
+|`assemblyFullName`|リソースが組み込まれたアセンブリの完全な名前。 この名前には、次のように単純な名前、バージョン名、サポートされるカルチャ、および公開キーが含まれます。<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> リソースは、アプリケーションからアクセスできる任意のアセンブリに組み込むことができます。<br /><br /> ワイルドカードを指定する場合 (\*) の`assemblyFullName`、Entity Framework ランタイムがこの順序で、次の場所でリソースを検索します。<br /><br /> 1.呼び出し側のアセンブリ<br />2.参照アセンブリ<br />3.アプリケーションの bin ディレクトリ内のアセンブリ<br /><br /> ファイルが上記のどの場所にもない場合は、例外がスローされます。 **注:** ワイルドカード (*) を使用する場合、Entity Framework では、正しい名前のリソースを見つけるためにすべてのアセンブリを調べる必要があります。 パフォーマンスを向上させるには、ワイルドカードではなくアセンブリ名を指定してください。|  
 |`resourceName`|AdvendtureWorksModel.csdl などの含まれるリソースの名前。 メタデータ サービスでは、拡張子が .csdl、.ssdl、または .msl のいずれかであるファイルまたはリソースのみが検索されます。 `resourceName` を指定しない場合は、すべてのメタデータ リソースが読み込まれます。 リソースには、アセンブリ内で一意の名前を付ける必要があります。 同じ名前が付けられた複数のファイルがアセンブリ内の異なるディレクトリで定義されている場合、`resourceName` には、リソースの名前の前にフォルダー構造を含める必要があります (FolderName.FileName.csdl など)。<br /><br /> `resourceName` にワイルドカード (*) を指定した場合、`assemblyFullName` は不要です。|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  `DataDirectory` 置換文字列と ~ 演算子の解決は非再帰型です。 たとえば、`DataDirectory` に `~` 文字が含まれる場合は、例外が発生します。 これにより、無限再帰が回避されます。  
   
-## <a name="see-also"></a>関連項目  
- [データ プロバイダーの操作](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [配置に関する注意事項](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [接続とトランザクションの管理](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>関連項目
+- [データ プロバイダーの操作](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [配置に関する注意事項](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [接続とトランザクションの管理](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)

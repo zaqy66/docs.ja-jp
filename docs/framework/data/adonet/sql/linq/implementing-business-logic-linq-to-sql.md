@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496089"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>ビジネス ロジックの実装 (LINQ to SQL)
 このトピックの「ビジネス ロジック」とは、データベースでデータを挿入、更新、または削除される前にデータに適用されるカスタム規則または検証テストのことです。 ビジネス ロジックは、「ビジネス ルール」または「ドメイン ロジック」とも呼ばれます。 n 層アプリケーションでは、通常、論理層として設計されるため、プレゼンテーション層やデータ アクセス層から独立して変更できます。 データベースのデータを更新、挿入、または削除する前または後に、データ アクセス層によってビジネス ロジックを呼び出すことができます。  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- 部分クラス内で Insert、Update、および Delete メソッドを実装すると、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムは <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出し時に、既定のメソッドの代わりにこれらのメソッドを呼び出します。 こうすることで、作成、読み取り、更新、削除操作の既定の動作をオーバーライドできます。 詳細については、次を参照してください。[チュートリアル: 更新、およびエンティティ クラスの動作を削除、挿入をカスタマイズするには、](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)します。  
+ 部分クラス内で Insert、Update、および Delete メソッドを実装すると、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムは <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出し時に、既定のメソッドの代わりにこれらのメソッドを呼び出します。 こうすることで、作成、読み取り、更新、削除操作の既定の動作をオーバーライドできます。 詳細については、「[チュートリアル:更新、およびエンティティ クラスの動作を削除、挿入をカスタマイズするには、](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)します。  
   
  `OnCreated` メソッドはクラス コンストラクター内で呼び出されます。  
   
@@ -177,14 +177,14 @@ partial class Customer
   
  部分メソッドを使ってビジネス ロジックをアプリケーションに追加する方法の詳細については、以下のトピックを参照してください。  
   
- [方法 : エンティティ クラスに検証を追加する](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [方法: エンティティ クラスに検証を追加する](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [チュートリアル : エンティティ クラスの挿入、更新、および削除の動作のカスタマイズ](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [チュートリアル: エンティティ クラスの挿入、更新、および削除の動作のカスタマイズ](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
  [チュートリアル: エンティティ クラスに検証を追加します。](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## <a name="see-also"></a>関連項目  
- [部分クラスと部分メソッド](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
- [部分メソッド](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
- [Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a>関連項目
+- [部分クラスと部分メソッド](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [部分メソッド](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

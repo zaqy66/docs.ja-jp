@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494757"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
-このリーダーは、モジュールのファイル名と共に、関連付けられるメタデータ インポーターのインターフェイスで、シンボル リーダーを初期化します。  
+このリーダーが、モジュールのファイル名と共に使用すると、関連付けられるメタデータ インポーターのインターフェイスで、シンボル リーダーを初期化します。  
   
 > [!NOTE]
->  このメソッドは、1 回だけ呼び出すことができ、その他のリーダー メソッドより前に呼び出す必要があります。  
+>  このメソッドは、1 回だけ呼び出すことができ、その他のリーダー メソッドの前に呼び出す必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ HRESULT Initialize (
   
 #### <a name="parameters"></a>パラメーター  
  `importer`  
- [in]このリーダーが関連付けられるメタデータ インポーターのインターフェイスです。  
+ [in]このリーダーが関連付けられるメタデータ インポーターのインターフェイス。  
   
  `filename`  
  [in]モジュールのファイル名。 使用することができます、`pIStream`パラメーター代わりにします。  
@@ -51,17 +51,16 @@ HRESULT Initialize (
  [in]検索するパス。 このパラメーターは省略できます。  
   
  `pIStream`  
- [in]Filename パラメーターの代わりとして使用するファイル ストリーム。  
+ [in]ファイル ストリームは、filename パラメーターの代替として使用します。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="remarks"></a>コメント  
- 1 つだけを指定する必要があります、`filename`または`pIStream`パラメーターは、両方は使用できません。 
-          `searchPath` パラメーターは省略可能です。  
+## <a name="remarks"></a>Remarks  
+ 1 つだけ指定する必要がある、`filename`または`pIStream`両方のパラメーター。 `searchPath` パラメーターは省略可能です。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

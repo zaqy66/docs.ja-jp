@@ -2,12 +2,12 @@
 title: 探索検索と FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493314"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索検索と FindCriteria
 探索検索操作は、1 つ以上のサービスを探索するためにクライアントによって開始される操作であり、探索における主要なアクションの 1 つです。 検索を実行すると、WS-Discovery Probe メッセージがネットワークを介して送信されます。 指定された条件に一致するサービスは、WS-Discovery ProbeMatch メッセージを使用して応答します。 探索メッセージの詳細については、次を参照してください。、 [Ws-discovery 仕様](https://go.microsoft.com/fwlink/?LinkID=122347)します。  
@@ -64,8 +64,8 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [探索クライアント チャネルの使用](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [スコープを使用した探索](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>関連項目
+- [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [探索クライアント チャネルの使用](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [スコープを使用した探索](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)

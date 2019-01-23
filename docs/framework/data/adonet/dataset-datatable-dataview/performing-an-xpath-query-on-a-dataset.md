@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498239"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet に対する XPath クエリの実行
 同期済みの間のリレーションシップ<xref:System.Data.DataSet>と<xref:System.Xml.XmlDataDocument>XML を使用するのには、アクセス、XML Path Language (XPath) クエリなどのサービス、 **XmlDataDocument**特定の機能を実行できます簡単にアクセスするよりも、**データセット**直接します。 使用してではなく、たとえば、**選択**のメソッド、<xref:System.Data.DataTable>内の他のテーブルにリレーションシップをナビゲートする、**データセット**で XPath クエリを実行することができます、 **XmlDataDocument**と同期される、**データセット**の形式で XML 要素の一覧を取得する、<xref:System.Xml.XmlNodeList>します。 内のノード、 **XmlNodeList**としてキャスト<xref:System.Xml.XmlElement>ノードに渡すことができます、 **GetRowFromElement**のメソッド、 **XmlDataDocument**を一致を返す<xref:System.Data.DataRow>は同期済みテーブルの行への参照**データセット**します。  
   
- たとえば、次に示すコード サンプルでは孫 XPath クエリが実行されます。 **データセット**は 3 つのテーブルで塗りつぶされます:**顧客**、**注文**、および**OrderDetails**します。 サンプルでは、親子関係が最初に作成の間、**顧客**と**注文**テーブル、および、**注文**と**OrderDetails**テーブル。 返す XPath クエリが実行を**XmlNodeList**の**顧客**ノードが、孫**OrderDetails**ノードには、 **ProductID**43 の値を持つノード。 基本的には、サンプルを使用して、XPath クエリを持つ製品を注文した顧客を特定、 **ProductID** 43 の。  
+ たとえば、次に示すコード サンプルでは孫 XPath クエリが実行されます。 **データセット**は 3 つのテーブルで塗りつぶされます。**顧客**、**注文**、および**OrderDetails**します。 サンプルでは、親子関係が最初に作成の間、**顧客**と**注文**テーブル、および、**注文**と**OrderDetails**テーブル。 返す XPath クエリが実行を**XmlNodeList**の**顧客**ノードが、孫**OrderDetails**ノードには、 **ProductID**43 の値を持つノード。 基本的には、サンプルを使用して、XPath クエリを持つ製品を注文した顧客を特定、 **ProductID** 43 の。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -101,6 +101,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

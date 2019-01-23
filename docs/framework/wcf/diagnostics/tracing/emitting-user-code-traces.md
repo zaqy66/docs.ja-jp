@@ -2,12 +2,12 @@
 title: ユーザー コード トレースの出力
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492665"
 ---
 # <a name="emitting-user-code-traces"></a>ユーザー コード トレースの出力
 Windows Communication Foundation (WCF) によって生成されるインストルメンテーション データを収集する構成内でトレースを有効にするだけでなく、ユーザー コードでプログラムによってトレースも出力できます。 この方法では、インストルメンテーション データを能動的に作成でき、後でそのデータを診断目的で詳細に調べることができます。 ここでは、この方法について説明します。  
@@ -123,7 +123,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  次の図には、Calculator アクティビティと要求アクティビティ間の転送トレースに加え、1 つの要求アクティビティについて Start トレースと Stop トレースが 2 組表示されています。1 組はクライアントのトレースで、もう 1 組はサーバーのトレースです (各トレース ソースにつき 1 組)。  
   
- ![トレース ビューアー: ユーザーを出力する&#45;トレース コード](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![トレース ビューアー:ユーザーを出力&#45;トレース コード](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 作成時刻によるアクティビティのリスト (左のパネル)、および入れ子にされたアクティビティ (右上のパネル)  
   
  クライアントがスローする原因となる例外を、サービス コードがスローする場合 (たとえば、クライアントが要求に対する応答を取得できなかった場合など)、直接的な相関関係を示すために、サービスとクライアントの両方の警告メッセージまたはエラー メッセージは、同じアクティビティ内に発生します。 次の図に、サービスは、「サービスはユーザー コードでは、この要求の処理には拒否します」という例外をスローします クライアントでは、「サーバーでした内部エラーのための要求を処理できません」という例外もスローされます。  
@@ -140,5 +140,5 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  アクティビティを定義してアクティビティ ID を伝達することにより、エンドポイント間でエラーの直接相関関係を実行できます。 このようにして、エラーの根本原因をよりすばやく見つけることができるようになります。  
   
-## <a name="see-also"></a>関連項目  
- [トレースの拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+## <a name="see-also"></a>関連項目
+- [トレースの拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)

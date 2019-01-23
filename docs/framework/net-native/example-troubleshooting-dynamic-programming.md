@@ -1,17 +1,17 @@
 ---
-title: '例: 動的プログラミングのトラブルシューティング'
+title: 例:動的プログラミングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492287"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>例: 動的プログラミングのトラブルシューティング
+# <a name="example-troubleshooting-dynamic-programming"></a>例:動的プログラミングのトラブルシューティング
 > [!NOTE]
 >  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
@@ -60,6 +60,6 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="could-the-code-be-rewritten"></a>コードを書き換えることができるか  
  アプリで `typeof(LayoutApplicationVM)` ではなく `Type.GetType("LayoutApplicationVM")` を使用している場合、ツール チェーンに `browse` メタデータが保存されている可能性があります。  ただし、それでも `invoke` メタデータは作成されておらず、そのため型をインスタンス化するときに [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外が発生する可能性があります。 この例外を回避するには、名前空間または `dynamic` ポリシーを指定する型のランタイム ディレクティブを追加する必要があります。 ランタイム ディレクティブの詳細については、「[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [例: データ バインディング時の例外の処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+## <a name="see-also"></a>関連項目
+- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [例:データ バインディング時に例外を処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

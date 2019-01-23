@@ -8,23 +8,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497434"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize メソッドと Reset メソッドによる既定値の定義
-`ShouldSerialize` `Reset`プロパティ用に指定できるオプションのメソッドは、プロパティがない場合、単純な既定値があります。 プロパティの単純な既定値が、適用してください、<xref:System.ComponentModel.DefaultValueAttribute>し、代わりに、属性クラスのコンス トラクターを既定値を指定します。 これらのメカニズムのいずれかにより、デザイナーで、次の機能。  
+`ShouldSerialize` `Reset`プロパティで指定できる省略可能なメソッドをプロパティでない場合は、単純な既定値を設定します。 プロパティは、単純な既定値を持つ場合は適用して、<xref:System.ComponentModel.DefaultValueAttribute>代わりに、属性クラスのコンス トラクターを既定値を指定します。 これらのメカニズムのいずれかには、デザイナーで、次の機能が有効にします。  
   
--   プロパティが既定値から変更された場合に、プロパティ ブラウザーで表示を提供します。  
+-   プロパティが既定値から変更された場合、プロパティ ブラウザーでビジュアルを示す値を提供します。  
   
--   ユーザーが、プロパティを右クリックし、選択**リセット**プロパティを既定値に復元します。  
+-   ユーザーは、プロパティを右クリックし、選択**リセット**プロパティを既定値に復元します。  
   
 -   デザイナーより効率的なコードを生成します。  
   
     > [!NOTE]
-    >  適用するか、<xref:System.ComponentModel.DefaultValueAttribute>提供または`Reset` *PropertyName*と`ShouldSerialize` *PropertyName*メソッドです。 どちらも使用しないでください。  
+    >  いずれかが当てはまる、<xref:System.ComponentModel.DefaultValueAttribute>提供または`Reset` *PropertyName*と`ShouldSerialize` *PropertyName*メソッド。 どちらも使用しないでください。  
   
  `Reset` *PropertyName*メソッドは、次のコード フラグメントで示すように、既定値にプロパティを設定します。  
   
@@ -41,9 +42,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  プロパティがない場合、`Reset`メソッド、されていない、 <xref:System.ComponentModel.DefaultValueAttribute>、および、その宣言で指定された既定値はありません、`Reset`オプションのショートカット メニューでそのプロパティは無効になって、 **のプロパティ** Visual Studio での Windows フォーム デザイナーのウィンドウ。  
+>  プロパティがない場合、`Reset`メソッドが設定されていない、<xref:System.ComponentModel.DefaultValueAttribute>に、その宣言で指定された既定値がないと、`Reset`オプションのショートカット メニューでそのプロパティが無効になっている、 **プロパティ** Visual Studio での Windows フォーム デザイナーのウィンドウ。  
   
- Visual Studio などのデザイナーを使用して、 `ShouldSerialize` *PropertyName*プロパティが既定値から変更されたかどうかを確認し、プロパティ場合にのみフォームにコードを記述する方法を変更すると、のでより効率的なコード生成します。 例えば:  
+ Visual Studio などのデザイナーを使用して、 `ShouldSerialize` *PropertyName*プロパティが既定値から変更されたかどうかを確認し、プロパティを場合にのみフォームにコードを記述するメソッドが変更されたためより効率的なコードのことができます生成します。 例:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -140,9 +141,9 @@ public class MyControl : Control {
 }  
 ```  
   
- ここでは、プライベート変数の値がからアクセスする場合でも、`MyFont`プロパティは`null`、プロパティ ブラウザーは表示されません`null`代わりに、表示、<xref:System.Windows.Forms.Control.Font%2A>されていない場合は、親のプロパティ`null`、。既定値または<xref:System.Windows.Forms.Control.Font%2A>で定義された値<xref:System.Windows.Forms.Control>です。 既定値ため`MyFont`、単に設定することはできませんと<xref:System.ComponentModel.DefaultValueAttribute>このプロパティには適用できません。 代わりに、`ShouldSerialize`と`Reset`のメソッドを実装する必要があります、`MyFont`プロパティです。  
+ この場合、プライベート変数の値にアクセスしている場合でも、`MyFont`プロパティは`null`、プロパティ ブラウザーが表示されない`null`代わりに、が表示されます、<xref:System.Windows.Forms.Control.Font%2A>でない場合は、親のプロパティ`null`、。既定値または<xref:System.Windows.Forms.Control.Font%2A>で定義されている値<xref:System.Windows.Forms.Control>します。 既定値ため`MyFont`、単に設定することはできません、<xref:System.ComponentModel.DefaultValueAttribute>このプロパティには適用できません。 代わりに、`ShouldSerialize`と`Reset`のメソッドを実装する必要があります、`MyFont`プロパティ。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム コントロールのプロパティ](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [プロパティの定義](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [プロパティ変更イベント](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォーム コントロールのプロパティ](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [プロパティの定義](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
+- [プロパティ変更イベント](../../../../docs/framework/winforms/controls/property-changed-events.md)

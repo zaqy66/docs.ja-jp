@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491286"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 列挙型
 メソッド実装の機能を記述する値が格納されます。  
@@ -58,29 +58,29 @@ typedef enum CorMethodImpl {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`miCodeTypeMask`|コードの種類を説明するフラグ。|  
+|`miCodeTypeMask`|コードの種類を記述するフラグ。|  
 |`miIL`|メソッドの実装が Microsoft intermediate language (MSIL) であることを指定します。|  
 |`miNative`|メソッド実装がネイティブであることを指定します。|  
-|`miOPTIL`|メソッドの実装を optil で指定します。|  
-|`miRuntime`|メソッドの実装が、共通言語ランタイムによって提供されたことを指定します。|  
+|`miOPTIL`|メソッドの実装が OPTIL であることを指定します。|  
+|`miRuntime`|メソッドの実装が、共通言語ランタイムによって提供されることを指定します。|  
 |`miManagedMask`|コードがマネージかアンマネージかどうかを示すフラグです。|  
-|`miUnmanaged`|メソッドの実装が管理されていることを指定します。|  
+|`miUnmanaged`|メソッドの実装が管理されていないことを指定します。|  
 |`miManaged`|メソッドの実装が管理されていることを指定します。|  
-|`miForwardRef`|メソッドが定義されていることを指定します。 このフラグは、マージ シナリオで、主に使用します。|  
-|`miPreserveSig`|HRESULT の変換メソッドのシグネチャを変形することはできませんを指定します。|  
-|`miInternalCall`|共通言語ランタイムでは、内部使用に予約されています。|  
-|`miSynchronized`|メソッドがその内部から、シングル スレッドを指定します。|  
+|`miForwardRef`|メソッドが定義されていることを指定します。 このフラグは、マージのシナリオで主に使用されます。|  
+|`miPreserveSig`|メソッドのシグネチャは、その HRESULT 変換では変形ことはできませんを指定します。|  
+|`miInternalCall`|共通言語ランタイムでは、内部使用のため予約されています。|  
+|`miSynchronized`|メソッドがその内部から、シングル スレッドであるを指定します。|  
 |`miNoInlining`|メソッドがインライン化できないことを指定します。|  
-|`miAggressiveInlining`|メソッド必要があるないインライン展開可能な場合を指定します。|  
+|`miAggressiveInlining`|メソッドがインライン化できません可能な場合を指定します。|  
 |`miNoOptimization`|メソッドを最適化されていないことを指定します。|  
-|`miMaxMethodImplVal`|最大有効値、`CorMethodImpl`です。|  
+|`miMaxMethodImplVal`|最大有効値、`CorMethodImpl`します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

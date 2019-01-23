@@ -2,12 +2,12 @@
 title: Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497249"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ここでは、.NET Framework Data Provider for SQL Server (SqlClient) に関連する既知の問題について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "47072395"
 -   REF コンストラクターを引数に取る DEREF コンストラクターを含むクエリ。  
   
 ## <a name="skip-operator"></a>SKIP 演算子  
- 使用する場合[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]、非キー列で ORDER BY と共に SKIP を使用すると、誤った結果が返される可能性があります。 キー以外の列に重複するデータが存在する場合、指定された数を超える行はスキップされます。 これは、[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 用に SKIP が変換される方法によるものです。 たとえば、次のクエリでは、5 つを超える行場合はスキップされます`E.NonKeyColumn`重複した値。  
+ 使用する場合[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]、非キー列で ORDER BY と共に SKIP を使用すると、誤った結果が返される可能性があります。 キー以外の列に重複するデータが存在する場合、指定された数を超える行はスキップされます。 これは、 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]用に SKIP が変換される方法によるものです。 たとえば、次のクエリでは、5 つを超える行場合はスキップされます`E.NonKeyColumn`重複した値。  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
@@ -59,6 +59,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ## <a name="server-generated-guid-identity-values"></a>サーバー生成の GUID ID 値  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、サーバー生成の GUID 型 ID 値がサポートされますが、プロバイダーは、サーバー生成の ID 値を行の挿入後に返す動作をサポートする必要があります。 SQL Server 2005 以降、戻れますサーバー生成 GUID 型を使用して SQL Server データベースで、 [OUTPUT 句](https://go.microsoft.com/fwlink/?LinkId=169400)します。  
   
-## <a name="see-also"></a>関連項目  
- [Entity Framework 用 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [LINQ to Entities の既知の問題および注意点](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+## <a name="see-also"></a>関連項目
+- [Entity Framework 用 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [LINQ to Entities の既知の問題および注意点](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

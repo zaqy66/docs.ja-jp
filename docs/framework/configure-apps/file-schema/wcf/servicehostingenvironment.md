@@ -2,12 +2,12 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 47e683969a62541dd48a3c7211e1edf3bb7b4038
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493847"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 この要素は、環境をホストするサービスがインスタンス化する特定のトランスポートの型を定義します。 この要素が空の場合は、既定の型が使用されます。 この要素は、アプリケーション レベルまたはコンピューター レベルの構成ファイルでのみ使用できます。  
@@ -50,9 +50,9 @@ ms.locfileid: "54150319"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|サービス ホストによって使用されるベース アドレスのプレフィックス フィルターを指定する構成要素のコレクション。|  
-|[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|アクティベーション設定を記述する構成セクション。|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートの型を識別する構成要素のコレクション。|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|サービス ホストによって使用されるベース アドレスのプレフィックス フィルターを指定する構成要素のコレクション。|  
+|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|アクティベーション設定を記述する構成セクション。|  
+|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートの型を識別する構成要素のコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -92,8 +92,8 @@ ms.locfileid: "54150319"
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [WCF サービスと ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [WCF サービスと ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

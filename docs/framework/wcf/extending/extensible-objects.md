@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f2738d6e3a5fc75ab2f5714dc6644267e4fa1e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495839"
 ---
 # <a name="extensible-objects"></a>拡張可能オブジェクト
 拡張可能オブジェクト パターンは、既存のランタイム クラスに新しい機能を付加して拡張したり、オブジェクトに新しい状態を追加するために使用します。 このようなオブジェクトを実際に拡張することにより、処理の段階に応じて、共通の拡張可能オブジェクトに定義された共有の状態や機能にアクセスすることができます。  
@@ -36,11 +36,11 @@ where T : IExtensibleObject<T>
   
  <xref:System.ServiceModel.IExtension%601> を実装しても、他の標準のマネージ インターフェイスとやりとりできるとは限りません。 特に、所有者オブジェクトの <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> メソッドは、自分自身の拡張を解除しないのが普通です。  
   
- 拡張機能は、このコレクションに追加されたときに<xref:System.ServiceModel.IExtension%601.Attach%2A>コレクションに入る前と呼びます。 拡張機能は、コレクションから削除されたときに<xref:System.ServiceModel.IExtension%601.Detach%2A>は、削除された後に呼び出されます。 (該当する同期されている場合) ことを意味の拡張機能にのみ、その中にコレクション内で見つかったにカウントできるこの間隔は<xref:System.ServiceModel.IExtension%601.Attach%2A>と<xref:System.ServiceModel.IExtension%601.Detach%2A>です。  
+ 拡張機能は、コレクションに追加されたときに<xref:System.ServiceModel.IExtension%601.Attach%2A>コレクションに入る前に呼び出されます。 拡張機能は、コレクションから削除されたときに<xref:System.ServiceModel.IExtension%601.Detach%2A>が削除された後に呼び出されます。 (適切な同期を想定) 手段でのみ、その中にコレクション内で見つかった拡張機能をカウントできますこの間隔は<xref:System.ServiceModel.IExtension%601.Attach%2A>と<xref:System.ServiceModel.IExtension%601.Detach%2A>します。  
   
  <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> や <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> に渡すオブジェクトは、<xref:System.ServiceModel.IExtension%601> である必要はなく、任意のオブジェクトを渡すことができますが、返される拡張は <xref:System.ServiceModel.IExtension%601> です。  
   
- コレクション内の拡張機能がない場合、 <xref:System.ServiceModel.IExtension%601>、<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>は null を返しますと<xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>空のコレクションを返します。 複数の拡張機能を実装する場合<xref:System.ServiceModel.IExtension%601>、<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>それらのいずれかを返します。 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> から返される値はスナップショットです。
+ コレクション内の拡張機能がない場合、 <xref:System.ServiceModel.IExtension%601>、<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>は null を返しますと<xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>空のコレクションを返します。 複数の拡張機能を実装して場合<xref:System.ServiceModel.IExtension%601>、<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>うち 1 つを返します。 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> から返される値はスナップショットです。
   
  主な使い方として、次の 2 つのシナリオが考えられます。 1 つ目のシナリオでは、型ベースのディクショナリとして <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> プロパティを使用し、オブジェクトに状態を追加します。これは、別のコンポーネントが型に基づいて検索できます。  
   
@@ -57,7 +57,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> : 操作ごとにランタイムが収集した操作情報を表すクラスです。  具体的には、受け取ったメッセージのヘッダーやプロパティ、受け取ったセキュリティ ID などの情報があります。  <xref:System.ServiceModel.OperationContext> 自身の動作を拡張するほか、各操作の状態を保存しておくための拡張が可能です。  
   
--   <xref:System.ServiceModel.IContextChannel> – このインターフェイスは、チャネルと WCF ランタイムでビルドされたプロキシの各状態の検査できます。  <xref:System.ServiceModel.IClientChannel> 自身の動作を拡張するほか、各チャネルの状態を保存しておくための拡張が可能です。  
+-   <xref:System.ServiceModel.IContextChannel> – このインターフェイスは、チャネルと、WCF ランタイムによって作成されたプロキシの各状態の検査できます。  <xref:System.ServiceModel.IClientChannel> 自身の動作を拡張するほか、各チャネルの状態を保存しておくための拡張が可能です。  
   
 -  
   
@@ -65,7 +65,7 @@ where T : IExtensibleObject<T>
   
  [!code-csharp[IInstanceContextInitializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/iinstancecontextinitializer/cs/initializer.cs#1)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.IExtensibleObject%601>  
- <xref:System.ServiceModel.IExtension%601>  
- <xref:System.ServiceModel.IExtensionCollection%601>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.IExtensibleObject%601>
+- <xref:System.ServiceModel.IExtension%601>
+- <xref:System.ServiceModel.IExtensionCollection%601>

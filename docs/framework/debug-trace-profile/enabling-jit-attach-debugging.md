@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b92592500f0babf29891710cedf1228b0ddcb0e4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e74fc1e4ab48e73365d41594a7a84cbad6ec044
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496115"
 ---
 # <a name="enabling-jit-attach-debugging"></a>JIT アタッチ デバッグの有効化
 JIT アタッチ デバッグとは、エラーが発生したとき、または特定のメソッドまたは関数によってトリガーすることで、プロセスにデバッガーをアタッチすることを表すために使用される語句です。  
@@ -33,9 +33,9 @@ JIT アタッチ デバッグとは、エラーが発生したとき、または
   
 -   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 関数 (Win32)。  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、制御が 1 つのレジストリ キー、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug に統合されました。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリ キーの設定方法の詳細については、次を参照してください。[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)します。  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。 以降では、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]コントロールが 1 つのレジストリ キーの下に統合されます。Hkey_local_machine \software\microsoft\windows \current Version\AeDebug します。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリ キーの設定方法の詳細については、次を参照してください。[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)します。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ、トレース、およびプロファイリング](../../../docs/framework/debug-trace-profile/index.md)  
- [イメージのデバッグの簡略化](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [プロファイルの有効化](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)
+## <a name="see-also"></a>関連項目
+- [デバッグ、トレース、およびプロファイリング](../../../docs/framework/debug-trace-profile/index.md)
+- [イメージのデバッグの簡略化](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [プロファイルの有効化](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

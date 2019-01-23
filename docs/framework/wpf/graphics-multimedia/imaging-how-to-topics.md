@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 28df9bd2f313165f233c90149d26c60856b3926b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 872eb510e3e85046818987fc6aaf761fca21b320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493613"
 ---
 # <a name="imaging-how-to-topics"></a>イメージングに関する「方法」トピック
-このセクションのトピックでは、使用する方法をデモンストレーション[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を表示またはビットマップ イメージを変更するためにします。  
+このセクションのトピックでは、使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を表示またはビットマップ イメージを変更するためにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XAML で BitmapImage を使用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
@@ -43,5 +43,5 @@ ms.locfileid: "33563374"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>関連項目  
- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>関連項目
+- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
