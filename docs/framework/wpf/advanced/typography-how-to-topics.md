@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543579"
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="9c653-102">文字体裁に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="9c653-102">Typography How-to Topics</span></span>
-<span data-ttu-id="9c653-103">このセクションのトピックを使用する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション内のテキストの豊富なプレゼンテーションのサポートします。</span><span class="sxs-lookup"><span data-stu-id="9c653-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="61929-102">文字体裁に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="61929-102">Typography How-to Topics</span></span>
+<span data-ttu-id="61929-103">このセクションのトピックを使用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション内のテキストのリッチ プレゼンテーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="61929-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9c653-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9c653-104">In This Section</span></span>  
- [<span data-ttu-id="9c653-105">文字の装飾を作成する</span><span class="sxs-lookup"><span data-stu-id="9c653-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="9c653-106">ハイパーリンクに下線を引くかどうかを指定する</span><span class="sxs-lookup"><span data-stu-id="9c653-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="9c653-107">テキストに変換を適用する</span><span class="sxs-lookup"><span data-stu-id="9c653-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="9c653-108">アニメーションをテキストに適用する</span><span class="sxs-lookup"><span data-stu-id="9c653-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="9c653-109">影付きテキストを作成する</span><span class="sxs-lookup"><span data-stu-id="9c653-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="9c653-110">中抜きの文字列を作成する</span><span class="sxs-lookup"><span data-stu-id="9c653-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [<span data-ttu-id="9c653-111">コントロールの背景にテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="9c653-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="9c653-112">ビジュアルにテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="9c653-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="9c653-113">XAML で特殊文字を使用する</span><span class="sxs-lookup"><span data-stu-id="9c653-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="61929-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="61929-104">In This Section</span></span>  
+ [<span data-ttu-id="61929-105">文字の装飾を作成する</span><span class="sxs-lookup"><span data-stu-id="61929-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="61929-106">ハイパーリンクに下線を引くかどうかを指定する</span><span class="sxs-lookup"><span data-stu-id="61929-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="61929-107">テキストに変換を適用する</span><span class="sxs-lookup"><span data-stu-id="61929-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="61929-108">アニメーションをテキストに適用する</span><span class="sxs-lookup"><span data-stu-id="61929-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="61929-109">影付きテキストを作成する</span><span class="sxs-lookup"><span data-stu-id="61929-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="61929-110">中抜きの文字列を作成する</span><span class="sxs-lookup"><span data-stu-id="61929-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
+ [<span data-ttu-id="61929-111">コントロールの背景にテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="61929-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="61929-112">ビジュアルにテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="61929-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="61929-113">XAML で特殊文字を使用する</span><span class="sxs-lookup"><span data-stu-id="61929-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9c653-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="9c653-114">See Also</span></span>  
- <xref:System.Windows.Documents.Typography>  
- [<span data-ttu-id="9c653-115">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="9c653-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="9c653-116">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="9c653-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a><span data-ttu-id="61929-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="61929-114">See also</span></span>
+- <xref:System.Windows.Documents.Typography>
+- [<span data-ttu-id="61929-115">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="61929-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="61929-116">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="61929-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

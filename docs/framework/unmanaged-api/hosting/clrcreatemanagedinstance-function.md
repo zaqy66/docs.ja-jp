@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a375ea586bacc2d3dafe53d493a7467730fae889
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40a278945dc1a6c84a72221fd55e32f44a146662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564397"
 ---
-# <a name="clrcreatemanagedinstance-function"></a><span data-ttu-id="6190a-102">ClrCreateManagedInstance 関数</span><span class="sxs-lookup"><span data-stu-id="6190a-102">ClrCreateManagedInstance Function</span></span>
-<span data-ttu-id="6190a-103">指定したマネージ型のインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="6190a-103">Creates an instance of the specified managed type.</span></span>  
+# <a name="clrcreatemanagedinstance-function"></a><span data-ttu-id="30667-102">ClrCreateManagedInstance 関数</span><span class="sxs-lookup"><span data-stu-id="30667-102">ClrCreateManagedInstance Function</span></span>
+<span data-ttu-id="30667-103">指定したマネージド型のインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="30667-103">Creates an instance of the specified managed type.</span></span>  
   
- <span data-ttu-id="6190a-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="6190a-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="6190a-105">COM のアクティブ化を使用して、マネージ型のインスタンスを作成するか、ホストを使用して (を参照してください[CLR をホストしている .NET Framework 4 および 4.5 で追加されたインターフェイス](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md))。</span><span class="sxs-lookup"><span data-stu-id="6190a-105">Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span></span>  
+ <span data-ttu-id="30667-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="30667-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="30667-105">COM アクティブ化を使用して、管理対象の型のインスタンスを作成するか、ホストを使用して、(を参照してください[CLR をホストしている .NET Framework 4 および 4.5 で追加されたインターフェイス](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md))。</span><span class="sxs-lookup"><span data-stu-id="30667-105">Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6190a-106">構文</span><span class="sxs-lookup"><span data-stu-id="6190a-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30667-106">構文</span><span class="sxs-lookup"><span data-stu-id="30667-106">Syntax</span></span>  
   
 ```  
 STDAPI ClrCreateManagedInstance (  
@@ -41,29 +41,28 @@ STDAPI ClrCreateManagedInstance (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6190a-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6190a-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="30667-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="30667-107">Parameters</span></span>  
  `pTypeName`  
- <span data-ttu-id="6190a-108">[in]要求されているインスタンスの型の名前へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6190a-108">[in] A pointer to the name of the instance type being requested.</span></span>  
+ <span data-ttu-id="30667-108">[in]要求されているインスタンス型の名前へのポインター。</span><span class="sxs-lookup"><span data-stu-id="30667-108">[in] A pointer to the name of the instance type being requested.</span></span>  
   
  `riid`  
- <span data-ttu-id="6190a-109">[in]`IID`要求されているインスタンスの型のです。</span><span class="sxs-lookup"><span data-stu-id="6190a-109">[in] The `IID` of the instance type being requested.</span></span>  
+ <span data-ttu-id="30667-109">[in]`IID`の要求されているインスタンスの型。</span><span class="sxs-lookup"><span data-stu-id="30667-109">[in] The `IID` of the instance type being requested.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="6190a-110">[out]呼び出し元によって要求されたマネージ型のインスタンスへのポインターへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6190a-110">[out] A pointer to a pointer to an instance of the managed type that was requested by the caller.</span></span>  
+ <span data-ttu-id="30667-110">[out]呼び出し元によって要求されたマネージ型のインスタンスへのポインターへのポインター。</span><span class="sxs-lookup"><span data-stu-id="30667-110">[out] A pointer to a pointer to an instance of the managed type that was requested by the caller.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6190a-111">コメント</span><span class="sxs-lookup"><span data-stu-id="6190a-111">Remarks</span></span>  
- <span data-ttu-id="6190a-112">共通言語ランタイムは、プロセスに既に読み込まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="6190a-112">The common language runtime should already be loaded into a process.</span></span> <span data-ttu-id="6190a-113">たとえば、読み込むことができますに呼び出しを使用して、 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数の前に、`ClrCreateManagedInstance`関数が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="6190a-113">For example, it can be loaded by using a call to the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function before the `ClrCreateManagedInstance` function is called.</span></span> <span data-ttu-id="6190a-114">ランタイムが読み込まれていない場合`ClrCreateManagedInstance`最初に、ランタイムの v1.0.3705 の読み込みを試みます。</span><span class="sxs-lookup"><span data-stu-id="6190a-114">If the runtime is not loaded, `ClrCreateManagedInstance` first tries to load v1.0.3705 of the runtime.</span></span> <span data-ttu-id="6190a-115">失敗した場合、ランタイムの最新バージョンをロードしようとします。</span><span class="sxs-lookup"><span data-stu-id="6190a-115">If that fails, it attempts to load the latest version of the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30667-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="30667-111">Remarks</span></span>  
+ <span data-ttu-id="30667-112">共通言語ランタイムは、プロセスに既に読み込まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="30667-112">The common language runtime should already be loaded into a process.</span></span> <span data-ttu-id="30667-113">などへの呼び出しを使用して読み込むことがあります、 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数の前に、`ClrCreateManagedInstance`関数が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="30667-113">For example, it can be loaded by using a call to the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function before the `ClrCreateManagedInstance` function is called.</span></span> <span data-ttu-id="30667-114">ランタイムが読み込まれていない場合`ClrCreateManagedInstance`最初 v1.0.3705、ランタイムの読み込みを試みます。</span><span class="sxs-lookup"><span data-stu-id="30667-114">If the runtime is not loaded, `ClrCreateManagedInstance` first tries to load v1.0.3705 of the runtime.</span></span> <span data-ttu-id="30667-115">失敗した場合、ランタイムの最新バージョンをロードしようとします。</span><span class="sxs-lookup"><span data-stu-id="30667-115">If that fails, it attempts to load the latest version of the runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6190a-116">要件</span><span class="sxs-lookup"><span data-stu-id="6190a-116">Requirements</span></span>  
- <span data-ttu-id="6190a-117">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="6190a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30667-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="30667-116">Requirements</span></span>  
+ <span data-ttu-id="30667-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="30667-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6190a-118">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6190a-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="30667-118">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="30667-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6190a-119">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6190a-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="30667-119">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="30667-119">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6190a-120">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6190a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="30667-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30667-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6190a-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="6190a-121">See Also</span></span>  
- <span data-ttu-id="6190a-122">
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span><span class="sxs-lookup"><span data-stu-id="6190a-122">[Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span></span>  
- [<span data-ttu-id="6190a-123">ホスティング</span><span class="sxs-lookup"><span data-stu-id="6190a-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="30667-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="30667-121">See also</span></span>
+- [<span data-ttu-id="30667-122">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="30667-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="30667-123">ホスティング</span><span class="sxs-lookup"><span data-stu-id="30667-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

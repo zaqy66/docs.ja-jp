@@ -2,20 +2,20 @@
 title: System.ServiceModel.Channels.InitiatingTcpConnection
 ms.date: 03/30/2017
 ms.assetid: d0a2749d-3f97-41b8-ac08-37b5069fe41e
-ms.openlocfilehash: df9f7bf7a461f4de4e9eab899d22dbd8272dd583
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c31af9a0c17b0b8c9f14cb94a40e25cba761fa95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33476913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569077"
 ---
-# <a name="systemservicemodelchannelsinitiatingtcpconnection"></a><span data-ttu-id="55d52-102">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="55d52-102">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>
-<span data-ttu-id="55d52-103">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="55d52-103">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>  
+# <a name="systemservicemodelchannelsinitiatingtcpconnection"></a><span data-ttu-id="131ed-102">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="131ed-102">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>
+<span data-ttu-id="131ed-103">System.ServiceModel.Channels.InitiatingTcpConnection</span><span class="sxs-lookup"><span data-stu-id="131ed-103">System.ServiceModel.Channels.InitiatingTcpConnection</span></span>  
   
-## <a name="description"></a><span data-ttu-id="55d52-104">説明</span><span class="sxs-lookup"><span data-stu-id="55d52-104">Description</span></span>  
- <span data-ttu-id="55d52-105">TCP 接続を開始しています。</span><span class="sxs-lookup"><span data-stu-id="55d52-105">Initiating a TCP connection.</span></span>  
+## <a name="description"></a><span data-ttu-id="131ed-104">説明</span><span class="sxs-lookup"><span data-stu-id="131ed-104">Description</span></span>  
+ <span data-ttu-id="131ed-105">TCP 接続を開始しています。</span><span class="sxs-lookup"><span data-stu-id="131ed-105">Initiating a TCP connection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55d52-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="55d52-106">See Also</span></span>  
- [<span data-ttu-id="55d52-107">トレース</span><span class="sxs-lookup"><span data-stu-id="55d52-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="55d52-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="55d52-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="55d52-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="55d52-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="131ed-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="131ed-106">See also</span></span>
+- [<span data-ttu-id="131ed-107">トレース</span><span class="sxs-lookup"><span data-stu-id="131ed-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="131ed-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="131ed-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="131ed-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="131ed-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
