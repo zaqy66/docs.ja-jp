@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb7475623961fe2ee5fc821c5f237f0a2acfae1a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd85ac8b98d8613924a4acd73ac74a69f3d9b41d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535347"
 ---
 # <a name="get-function"></a>Get 関数
 存在する場合は、指定されたプロパティ値を取得します。
@@ -64,8 +64,8 @@ HRESULT Get (
 |定数  |値  |説明  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | プロパティは、標準のシステム プロパティです。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラス: プロパティは、親クラスから継承されます。 </br> インスタンス: プロパティを親クラスから継承中に変更されていないインスタンスによって。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラス: 派生クラスにプロパティが属しています。 </br> インスタンスのインスタンスでプロパティを変更。つまり、値が指定されましたまたは修飾子が追加または変更します。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラス。プロパティは、親クラスから継承されます。 </br> インスタンス。プロパティを親クラスから継承したときに変更されていないインスタンスがします。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラス。プロパティは、派生クラスに属しています。 </br> インスタンス。インスタンスでプロパティを変更します。つまり、値が指定されましたまたは修飾子が追加または変更します。 |
 
 ## <a name="return-value"></a>戻り値
 
@@ -87,12 +87,12 @@ HRESULT Get (
 
 `pVal`引数には、正しい型および修飾子と COM の値が割り当てられている[VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)関数
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

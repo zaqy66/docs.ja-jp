@@ -2,12 +2,12 @@
 title: '&lt;textMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 0ee50a4b5adeede2dd531ba734ac9fb420f3b713
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 68b5c9f1f158f7f78f4ea31dedb9b72eab409e05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540703"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 テキストベースの XML メッセージに使用される文字エンコーディングおよびメッセージ バージョン管理を指定します。  
@@ -37,7 +37,7 @@ ms.locfileid: "54150241"
 |maxReadPoolSize|新しいリーダーを割り当てずに同時に読み取り可能なメッセージの数を指定する整数です。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は 64 です。|  
 |maxWritePoolSize|新しいライターを割り当てずに同時に送信可能なメッセージの数を指定する整数です。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は 16 です。|  
 |messageVersion|バインディングを使用して送信されたメッセージの SOAP バージョンを指定します。 有効な値は、次のとおりです。<br /><br /> -Soap11Addressing10<br />-Soap12addressing10 です。<br /><br /> 既定値は Soap12Addressing10 です。 この属性は <xref:System.ServiceModel.Channels.MessageVersion> 型です。|  
-|writeEncoding|バインドでメッセージの発行に使用される文字セット エンコーディングを指定します。 有効な値は、次のとおりです。<br /><br /> -UnicodeFffeTextEncoding:Unicode BigEndian エンコーディング<br />-Utf16TextEncoding:Unicode エンコーディング<br />-Utf8TextEncoding:8 ビット エンコード<br /><br /> 既定値は Utf8TextEncoding です。 この属性は <xref:System.Text.Encoding> 型です。|  
+|writeEncoding|バインドでメッセージの発行に使用される文字セット エンコーディングを指定します。 有効な値は、次のとおりです。<br /><br /> -   UnicodeFffeTextEncoding:Unicode BigEndian エンコーディング<br />-   Utf16TextEncoding:Unicode エンコーディング<br />-   Utf8TextEncoding:8 ビット エンコード<br /><br /> 既定値は Utf8TextEncoding です。 この属性は <xref:System.Text.Encoding> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -65,14 +65,14 @@ ms.locfileid: "54150241"
                      textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.TextMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- [メッセージ エンコーダーを選択する](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [メッセージ エンコーディング](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.TextMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- [メッセージ エンコーダーを選択する](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [メッセージ エンコーディング](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

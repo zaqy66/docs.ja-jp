@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9d64ee6942d9397ceb45b812ef3c26179fac9b2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540300"
 ---
 # <a name="clr-etw-events"></a>CLR ETW イベント
 このセクションのトピックでは、Windows イベント トレーシング (ETW) イベントについて説明します。 各イベントは、キーワードとレベルに関連付けられています。詳細については、「[CLR ETW のキーワードとレベル](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」トピックを参照してください。 CLR には、イベントのプロバイダーが 2 つあります。  
@@ -61,10 +61,10 @@ ms.locfileid: "43504130"
  [スタック イベント](../../../docs/framework/performance/stack-etw-event.md)  
  イベントが発生した後に、他のイベントでスタック トレースの生成に使用された情報をキャプチャします。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグの向上およびパフォーマンス調整 ETW を](https://go.microsoft.com/fwlink/?LinkId=179696)  
- [Windows のパフォーマンスに関するブログ](https://go.microsoft.com/fwlink/?LinkId=179509)  
- [.NET Framework のログ記録の制御](../../../docs/framework/performance/controlling-logging.md)  
- [CLR ETW プロバイダー](../../../docs/framework/performance/clr-etw-providers.md)  
- [CLR ETW キーワードおよびレベル](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- [共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>関連項目
+- [デバッグの向上およびパフォーマンス調整 ETW を](https://go.microsoft.com/fwlink/?LinkId=179696)
+- [Windows のパフォーマンスに関するブログ](https://go.microsoft.com/fwlink/?LinkId=179509)
+- [.NET Framework のログ記録の制御](../../../docs/framework/performance/controlling-logging.md)
+- [CLR ETW プロバイダー](../../../docs/framework/performance/clr-etw-providers.md)
+- [CLR ETW キーワードおよびレベル](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
+- [共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法 : サポート資格情報を作成する'
+title: '方法: サポート資格情報を作成します。'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539806"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>方法 : サポート資格情報を作成する
+# <a name="how-to-create-a-supporting-credential"></a>方法: サポート資格情報を作成します。
 カスタムのセキュリティ スキームでは、複数の資格情報が必要になることがあります。 たとえば、サービスが、ユーザー名とパスワードだけでなく、クライアントが 18 歳以上であることを証明する資格情報もクライアントに要求することがあります。 2 番目の資格情報が、*資格情報をサポートしている*します。 このトピックでは、Windows Communication Foundation (WCF) クライアントでこのような資格情報を実装する方法について説明します。  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "43499992"
 |署名および暗号化|暗号化された署名付きサポート トークンは、`wsse:SecurityHeader` に表示されたときに暗号化されている署名付きサポート トークンです。|  
   
 ## <a name="programming-supporting-credentials"></a>サポート資格情報のプログラミング  
- サポート トークンを作成する必要がありますを使用するサービスを作成する、 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。 (詳細については、次を参照してください[方法: SecurityBindingElement 作成カスタム バインドを使用して、](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)。  
+ サポート トークンを作成する必要がありますを使用するサービスを作成する、 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。 (詳細については、次を参照してください。[方法。SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md))。  
   
  カスタム バインドを作成する最初の手順は、次の 3 種類のいずれかのセキュリティ バインド要素を作成することです。  
   
@@ -80,5 +80,5 @@ ms.locfileid: "43499992"
 ### <a name="code"></a>コード  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>関連項目  
- [方法 : SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>関連項目
+- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 89f6566bd733ff92d464c026102429d3fc5cf0c1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1b8bc004705be4113d875dd7909426e2d253112d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534983"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 コンパイラで、最初に発生した警告がエラーとして扱われます。  
@@ -29,7 +29,7 @@ ms.locfileid: "50192227"
 |+ &#124; -|任意。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
 |`numberList`|任意。 `-warnaserror` オプションを適用する、警告 ID 番号のコンマ区切りのリスト。 警告 ID が指定されていない場合、`-warnaserror`オプションはすべての警告に適用されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `-warnaserror` オプションで、すべての警告がエラーとして扱われます。 通常は警告として報告されるすべてのメッセージが、代わりにエラーとして報告されます。 コンパイラは、後続の同じ警告の発生を警告として報告します。  
   
  既定では `-warnaserror-` が有効であり、警告は情報提供のみになります。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。  
@@ -61,7 +61,7 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>参照  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)
+## <a name="see-also"></a>関連項目
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

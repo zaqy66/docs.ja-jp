@@ -2,12 +2,12 @@
 title: メッセージ エンコーダーを選択する
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538428"
 ---
 # <a name="choosing-a-message-encoder"></a>メッセージ エンコーダーを選択する
 このトピックでは、Windows Communication Foundation (WCF) に含まれているメッセージ エンコーダーを選択するための基準をについて説明します。 バイナリ、テキスト、および Message Transmission Optimization Mechanism (MTOM)。  
@@ -41,7 +41,7 @@ ms.locfileid: "44248931"
 |サードパーティ製ツールのサポート|エンコーディングのサポート領域には、開発と診断があります。 サードパーティの開発者は、POX 形式でエンコードされたメッセージを処理するためのライブラリとツールキットに多大な投資をしています。|テキスト (POX)|  
 |相互運用性|この要素は、WCF 以外のサービスとの相互運用する WCF のエンコーダーの機能を指します。|テキスト<br /><br /> MTOM (部分的)|  
   
-メモ: バイナリ エンコーダーを使用している場合、XMLReader を作成するときに IgnoreWhitespace の設定を使用しても効果はありません。  たとえば、サービス操作内で次の操作を実行するとします。  
+メモ:バイナリ エンコーダーを使用する場合、XMLReader を作成するときに IgnoreWhitespace の設定を使用して効果がありません。  たとえば、サービス操作内で次の操作を実行するとします。  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -84,4 +84,4 @@ WCF 4.5 以降の WCF バイナリ エンコーダーでは、圧縮がサポー
   
 ## <a name="see-also"></a>関連項目
 
-[バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)

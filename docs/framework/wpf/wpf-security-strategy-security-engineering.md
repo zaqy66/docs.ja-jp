@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 60def26d21ff065bda3209ac90161af0672a38af
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6006024f29c37545ce95e579c7b93727d8c6bc67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547749"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF のセキュリティ方針 - セキュリティ エンジニアリング
 信頼できるコンピューティングは、セキュリティで保護されたコードの実稼働環境を確保するための Microsoft イニシアチブです。 信頼できるコンピューティング イニシアチブの重要な要素は、[!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)] です。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] は、セキュリティで保護されたコードの配信を容易にする標準のエンジニアリング プロセスと組み合わせて使用するエンジニアリングの方法です。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] は、ベスト プラクティスと形式化、測定可能性、追加の構造を組み合わせた 10 のフェーズで構成しています。それらは次のとおりです。  
@@ -67,32 +67,32 @@ ms.locfileid: "50181697"
 ### <a name="source-analysis-and-editing-tools"></a>ソースの分析および編集ツール  
  [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] の手動セキュリティ コード レビュー要素に加えて、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] チームは、ソースの分析と関連する編集のためのいくつかのツールを使用してセキュリティの脆弱性を低減します。 さまざまなソースのツールを使用できます。それらは次のとおりです。  
   
--   **FXCop**: アンマネージド コードを安全に相互運用する方法について、継承ルールからコード アクセス セキュリティの使用法までの範囲にわたる、マネージド コードの一般的なセキュリティの問題を検出します。 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29) を参照してください。  
+-   **FXCop**:継承ルールからコード アクセス セキュリティと安全にアンマネージ コードと相互運用する方法の使用法に至るまで、マネージ コードでは、一般的なセキュリティ問題を検索します。 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29) を参照してください。  
   
--   **Prefix/Prefast**: バッファー オーバーラン、書式設定文字列の問題、エラー チェックなどのアンマネージ コードのセキュリティの脆弱性および一般的なセキュリティの問題を検出します。  
+-   **Prefix/prefast**:バッファー オーバーラン、書式文字列の問題、エラー チェックなどのアンマネージ コードでは、セキュリティの脆弱性および一般的なセキュリティ問題を検索します。  
   
--   **Banned APIs**: ソース コードを検索して、セキュリティ問題の原因としてよく知られている `strcpy` などの関数の偶発的な使用を識別します。 そのような関数が識別されると、よりセキュリティの高い代替手段に置き換えられます。  
+-   **Banned APIs**:ソースのセキュリティ問題の原因としてなどのよく知られている関数の偶発的な使用を識別するためにコードを検索`strcpy`します。 そのような関数が識別されると、よりセキュリティの高い代替手段に置き換えられます。  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>テスト手法  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] では、さまざまなテスト手法を使用します。それらは次のとおりです。  
   
--   **ホワイトボックス テスト**: テスト担当者はソース コードを見て、脆弱性攻撃のテストをビルドします。  
+-   **ホワイト ボックス テスト**:テスト担当者が、ソース コードを表示および悪用テストを作成し、  
   
--   **ブラックボックス テスト**: テスト担当者は、API と機能を調査してセキュリティの悪用を検出してから、製品の攻撃を試みます。  
+-   **ブラック ボックス テスト**:テスト担当者は、API と機能を調査してセキュリティの悪用を検索しようし、製品を攻撃ましょう。  
   
--   **他の製品でのセキュリティの問題の再現**: 該当する場合、関連する製品におけるセキュリティの問題をテストします。 たとえば、[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] の約 60 のセキュリティの問題に適した変種を特定して、それが [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] に適用できるかどうかを試します。  
+-   **その他の製品から問題を再現セキュリティ**:該当する場合、関連する製品からのセキュリティの問題がテストされます。 たとえば、[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] の約 60 のセキュリティの問題に適した変種を特定して、それが [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] に適用できるかどうかを試します。  
   
--   **ファイルのファジー テストを通じたツール ベースの侵入テスト**: ファイルのファジー テストでは、ファイル リーダーが行うさまざまな入力を通してその入力範囲を利用するものです。 この手法が使用される [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の一例は、イメージ デコード コードでエラーを確認することです。  
+-   **ツール ベースの侵入テストを通じたファイルのファジー テスト**:ファイルのファジー化は、ファイル リーダーの悪用のさまざまな入力からの範囲を入力します。 この手法が使用される [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の一例は、イメージ デコード コードでエラーを確認することです。  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>クリティカル コードの管理  
  [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]マークおよび特権を昇格させるセキュリティ クリティカルなコードを追跡するための .NET Framework のサポートを使用してセキュリティ サンド ボックスをビルド (を参照してください**セキュリティ クリティカルな手法**で[WPFセキュリティ方針 - プラットフォーム セキュリティ](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 セキュリティ クリティカルなコードに対して高度なセキュリティの品質要件を指定すると、このようなコードは、追加レベルのソース管理の制御とセキュリティの監査を受けします。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の約 5 ～ 10% はセキュリティ クリティカルなコードで構成され、専用のレビュー チームによって確認されます。 ソース コードとチェックイン プロセスの管理は、セキュリティ クリティカルなコードを追跡し、各クリティカル エンティティ (重要なコードを含むメソッド) をサイン オフ状態にマップすることにより行われています。 サイン オフ状態には、1 つ以上のレビュー担当者の名前が含まれています。 毎日の [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] のビルドは、前のビルドのクリティカル コードと比較されて、承認されていない変更がチェックされます。 エンジニアがレビュー チームからの承認を得ずにクリティカル コードを変更すると、そのクリティカル コードはすぐに識別および修正されます。 このプロセスでは、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] サンドボックス コードで特に高いレベルの監視の適用と維持が可能になります。  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ](../../../docs/framework/wpf/security-wpf.md)  
- [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [信頼できるコンピューティング](https://www.microsoft.com/mscorp/twc/default.mspx)  
- [アプリケーションの脅威モデリング](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)  
- [セキュリティのガイドライン: .NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)
+## <a name="see-also"></a>関連項目
+- [セキュリティ](../../../docs/framework/wpf/security-wpf.md)
+- [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [信頼できるコンピューティング](https://www.microsoft.com/mscorp/twc/default.mspx)
+- [アプリケーションの脅威モデリング](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)
+- [セキュリティのガイドライン: .NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547817"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント
 トレースとは、実行中のアプリケーションの実行状態を監視する方法です。 .NET Framework アプリケーションの開発時に、トレースとデバッグのインストルメンテーションをアプリケーションに追加できます。このインストルメンテーションは、アプリケーションの開発中でも開発したアプリケーションの配置後でも使用できます。 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>、および <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> の各クラスを使用すると、エラーおよびアプリケーションの実行についての情報を後で分析するために、ログ、テキスト ファイル、またはその他のデバイスに記録できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "33392958"
  <xref:System.Diagnostics.Trace> クラスおよび <xref:System.Diagnostics.Debug> クラスは、アプリケーションの開発中または配置後に、アプリケーションのパフォーマンスをモニターおよび検査する手段を提供します。 たとえば、(新しいデータベース接続の作成など) が配置されたアプリケーションの操作の特定の種類を追跡するために <xref:System.Diagnostics.Trace> クラスを使用すると、アプリケーションの効率を監視できるようになります。  
   
 ## <a name="code-tracing-and-debugging"></a>コードのトレースとデバッグ  
- 開発時に、Visual Studio 統合開発環境 (IDE) の出力ウィンドウにメッセージを表示するために <xref:System.Diagnostics.Debug> クラスの出力メソッドを使用できます。 例えば:  
+ 開発時に、Visual Studio 統合開発環境 (IDE) の出力ウィンドウにメッセージを表示するために <xref:System.Diagnostics.Debug> クラスの出力メソッドを使用できます。 例:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -58,11 +58,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  いずれの例でも、デバッガーで アプリケーションを実行したとき、出力ウィンドウに "Hello World!" が表示されます。  
   
- これにより、アプリケーションをデバッグし、テスト環境での動作に基づいてアプリケーションのパフォーマンスを最適化できます。 すべてのデバッグ出力を受け取ることができるよう、<xref:System.Diagnostics.Debug> 条件属性をオンにしてデバッグ ビルドでアプリケーションをデバッグできます。 アプリケーションのリリースの準備が整ったら、コンパイラが最終的な実行可能ファイルにデバッグ コードを含めないように <xref:System.Diagnostics.Debug> の条件属性をオンにしないでリリース ビルドをコンパイルできます。 詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」を参照してください。 アプリケーションのさまざまなビルド構成の詳細については、「[Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio)」(コンパイルとビルド) を参照してください。  
+ これにより、アプリケーションをデバッグし、テスト環境での動作に基づいてアプリケーションのパフォーマンスを最適化できます。 すべてのデバッグ出力を受け取ることができるよう、<xref:System.Diagnostics.Debug> 条件属性をオンにしてデバッグ ビルドでアプリケーションをデバッグできます。 アプリケーションのリリースの準備が整ったら、コンパイラが最終的な実行可能ファイルにデバッグ コードを含めないように <xref:System.Diagnostics.Debug> の条件属性をオンにしないでリリース ビルドをコンパイルできます。 詳細については、「[方法 :トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 アプリケーションのさまざまなビルド構成の詳細については、「[Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio)」(コンパイルとビルド) を参照してください。  
   
- <xref:System.Diagnostics.Trace> クラスのメソッドを使用してインストールされたアプリケーションのコード実行をトレースすることもできます。 コードに[トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)を配置することで、トレースが実行されるかどうかと、その対象範囲について、制御することができます。 これにより、運用環境におけるアプリケーションのステータスを監視できます。 複数のコンポーネントが複数のコンピューターで実行されるビジネス アプリケーションでは、この監視が特に重要です。 配置後のスイッチの機能は、構成ファイルで制御できます。 詳細については、「[方法 : トレース スイッチを作成、初期化、および構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。  
+ <xref:System.Diagnostics.Trace> クラスのメソッドを使用してインストールされたアプリケーションのコード実行をトレースすることもできます。 コードに[トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)を配置することで、トレースが実行されるかどうかと、その対象範囲について、制御することができます。 これにより、運用環境におけるアプリケーションのステータスを監視できます。 複数のコンポーネントが複数のコンピューターで実行されるビジネス アプリケーションでは、この監視が特に重要です。 配置後のスイッチの機能は、構成ファイルで制御できます。 詳細については、「[方法 :作成、初期化、およびトレース スイッチを構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)します。  
   
- トレースを使用するアプリケーションの開発時には、通常、アプリケーション コードにトレース メッセージとデバッグ メッセージの両方を組み込みます。 アプリケーションを配置する準備が整ったら、**Debug** 条件属性をオンにせずに、リリース ビルドをコンパイルできます。 ただし、**Trace** 条件属性をオンにして、コンパイラがトレース コードを実行可能ファイルに組み込むようにすることもできます。 詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」を参照してください。  
+ トレースを使用するアプリケーションの開発時には、通常、アプリケーション コードにトレース メッセージとデバッグ メッセージの両方を組み込みます。 アプリケーションを配置する準備が整ったら、**Debug** 条件属性をオンにせずに、リリース ビルドをコンパイルできます。 ただし、**Trace** 条件属性をオンにして、コンパイラがトレース コードを実行可能ファイルに組み込むようにすることもできます。 詳細については、「[方法 :トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。  
   
 ### <a name="phases-of-code-tracing"></a>コードのトレースの段階  
  コードのトレースには、次の 3 つの段階があります。  
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1.  アプリケーションを配置した後で受け取るトレース出力の種類を検討します。  
   
-2.  スイッチのセットを作成します。 詳細については、「[方法 : トレース スイッチを設定する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。  
+2.  スイッチのセットを作成します。 詳細については、「[方法 :トレース スイッチを構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)します。  
   
 3.  アプリケーションのコードにトレース ステートメントを追加します。  
   
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  トレース ステートメントを使用すると、オリジナル ソース コードを検査、変更、および再コンパイルしたり、デバッグ環境で実行時エラーを生成したりするなど、困難なタスクを避けることができます。  アプリケーションの実装は、エラーの表示だけでなく、パフォーマンスを監視するためにもすることができます。  
   
 ## <a name="strategic-placement-of-trace-statements"></a>トレース ステートメントの計画的な配置  
- 実行時に使用するトレース ステートメントを配置するときには、十分に注意する必要があります。 考えられるすべてのトレース シナリオが適切に処理されるように、配置されるアプリケーションで必要とされるトレース情報を考慮する必要があります。 しかし、トレースを使用するアプリケーションは多岐にわたっており、トレースの計画的な配置にあたっての一般的なガイドラインはありません。 トレース ステートメントを配置する詳細については、「[方法 : アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)」を参照してください。  
+ 実行時に使用するトレース ステートメントを配置するときには、十分に注意する必要があります。 考えられるすべてのトレース シナリオが適切に処理されるように、配置されるアプリケーションで必要とされるトレース情報を考慮する必要があります。 しかし、トレースを使用するアプリケーションは多岐にわたっており、トレースの計画的な配置にあたっての一般的なガイドラインはありません。 トレース ステートメントを配置する詳細については、次を参照してください。[方法。アプリケーション コードにトレース ステートメントを追加](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)します。  
   
 ## <a name="output-from-tracing"></a>トレースの出力  
  トレースの出力は*リスナー*と呼ばれるオブジェクトによって収集されます。 リスナーは、トレースの出力を受け取り、出力デバイス (通常は、ウィンドウ、ログ、またはテキスト ファイル) に書き込むためのオブジェクトです。 トレース リスナーが作成されると、多くの場合、<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> のコレクションに追加され、リスナーがすべてのトレース出力を受け取ることを許可します。  
@@ -136,20 +136,20 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 > [!NOTE]
 >  [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] では、以前のバージョンの Visual Basic で利用できた **Debug.Print** メソッドから **Debug.Write**、**Debug.WriteIf**、**Debug.WriteLine**、および **Debug.WriteLineIf** の各メソッドに置き換えられました。  
   
- **Write** メソッドおよび **WriteLine** メソッドでは、必ず指定されたテキストが書き込まれます。 **Assert**、**WriteIf**、および **WriteLineIf** は、指定されたテキストを書き込むかどうかを制御するブール型の引数を必要とします。式が **true** (**WriteIf** および **WriteLineIf** の場合)、または **false** (**Assert** の場合) の場合のみ、指定されたテキストを書き込みます。 **Fail** メソッドでは、常に指定されたテキストが書き込まれます。 詳細については、「[方法 : アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)」および「.NET Framework リファレンス」を参照してください。  
+ **Write** メソッドおよび **WriteLine** メソッドでは、必ず指定されたテキストが書き込まれます。 **Assert**、**WriteIf**、および **WriteLineIf** は、指定されたテキストを書き込むかどうかを制御するブール型の引数を必要とします。式が **true** (**WriteIf** および **WriteLineIf** の場合)、または **false** (**Assert** の場合) の場合のみ、指定されたテキストを書き込みます。 **Fail** メソッドでは、常に指定されたテキストが書き込まれます。 詳細については、「[方法 :アプリケーション コードにトレース ステートメントを追加](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)と .NET Framework の参照。  
   
 ## <a name="security-concerns"></a>セキュリティに関する注意事項  
- ASP.NET アプリケーションを配置する前にトレースとデバッグを無効にしないと、アプリケーションに関する情報が公開され、悪意を持ったプログラムによって利用される可能性があります。 詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」、「[Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio)」(コンパイルとビルド)、および「[方法 : トレース スイッチを作成、初期化、および構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。 デバッグは、IIS (Internet Information Services) で設定することもできます。  
+ ASP.NET アプリケーションを配置する前にトレースとデバッグを無効にしないと、アプリケーションに関する情報が公開され、悪意を持ったプログラムによって利用される可能性があります。 詳細については、「[方法 :トレースとデバッグによる条件付きでコンパイル](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)、[のコンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)、および[方法。作成、初期化、およびトレース スイッチを構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)します。 デバッグは、IIS (Internet Information Services) で設定することもできます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceSource>  
- [コード コントラクト](../../../docs/framework/debug-trace-profile/code-contracts.md)  
- [C#、F#、および Visual Basic のプロジェクト](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
- [方法 : アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [方法 : トレース スイッチを作成、初期化、および構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [方法: トレース ソースを作成し初期化する](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [方法 : TraceSource とフィルターをトレース リスナーと共に使用する](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
- [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceSource>
+- [コード コントラクト](../../../docs/framework/debug-trace-profile/code-contracts.md)
+- [C#、F#、および Visual Basic のプロジェクト](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
+- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [方法: 作成、初期化、およびトレース スイッチを構成します。](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [方法: 作成し、トレース ソースの初期化](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [方法: TraceSource とフィルターをトレース リスナーと共に使用します。](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547294"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate の作成による既存のコントロールの外観のカスタマイズ
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>視覚的な構造とコントロールの視覚的な動作を指定します。 コントロールの外観をカスタマイズするには、新しい it 提供することにより<xref:System.Windows.Controls.ControlTemplate>します。 作成するときに、 <xref:System.Windows.Controls.ControlTemplate>、その機能を変更することがなく、既存のコントロールの外観を置き換えます。 たとえば、行うことができます、ボタン、アプリケーションで、既定の四角形から丸い形が、ボタンが引き続き発生、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
@@ -261,5 +261,5 @@ ms.locfileid: "49121468"
   
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## <a name="see-also"></a>関連項目  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>関連項目
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)

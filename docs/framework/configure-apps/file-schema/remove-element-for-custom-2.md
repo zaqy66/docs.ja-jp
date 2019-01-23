@@ -1,5 +1,5 @@
 ---
-title: '&lt;削除&gt;NameValueSectionHandler と DictionarySectionHandler 要素'
+title: '&lt;削除&gt;NameValueSectionHandler および DictionarySectionHandler の要素'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece76f06f5ecbf47302b62a5e546cc13298106bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535581"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<削除 > NameValueSectionHandler と DictionarySectionHandler 要素
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<削除 > NameValueSectionHandler および DictionarySectionHandler の要素
 
 以前に定義された設定を削除します。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<削除 >**
+&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>構文
 
@@ -40,21 +40,21 @@ ms.locfileid: "32742914"
 
 | 要素 | 説明 |
 | ------- | ------------|
-| [**\<sectionName >** 要素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 使用するカスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラスです。 |
+| [**\<sectionName >** 要素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 使用して、カスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラス。 |
 
 ## <a name="child-elements"></a>子要素
 
 なし
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-使用することができます、 **\<削除 >** 構成ファイルの階層内の上位レベルで定義されているアプリケーションから設定を削除する要素。
+使用することができます、 **\<削除 >** 構成ファイル階層内の上位レベルで定義されているアプリケーションから設定を削除する要素。
 
 ## <a name="example"></a>例
 
-次の例を使用する方法を示しています、 **\<削除 >** マシン構成ファイルで定義済みの設定を削除するアプリケーション構成ファイル内の要素。
+次の例は、使用する方法を示します、 **\<削除 >** マシン構成ファイルで定義した設定を削除するアプリケーション構成ファイル内の要素。
 
-マシン構成ファイルのコードは、次のセクションを宣言して **\<mySection >** し、2 つの設定を追加`key1`と`key2`に。
+マシン構成ファイルのコードは、次のセクションを宣言します **\<mySection >** し、2 つの設定を追加`key1`と`key2`に。
 
 ```xml
 <!-- Machine.config file -->
@@ -86,4 +86,4 @@ ms.locfileid: "32742914"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)

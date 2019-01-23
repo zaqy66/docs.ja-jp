@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 115a998f8be233c38efac1a301b4b24b7d861662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540183"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue メソッド
-呼び出しの後にマネージ スレッドの実行を再開[Stop メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)です。  
+呼び出しの後にマネージ スレッドの実行を再開[Stop メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,25 +37,25 @@ HRESULT Continue (
   
 #### <a name="parameters"></a>パラメーター  
  `fIsOutOfBand`  
- [in]設定`true`帯域外のイベントから操作を続行する場合がそれ以外の場合に設定`false`です。  
+ [in]設定`true`帯域外のイベントを引き続き使用する場合がそれに設定`false`します。  
   
-## <a name="remarks"></a>コメント  
- `Continue` 呼び出しの後にプロセスを続行、`ICorDebugController::Stop`メソッドです。  
+## <a name="remarks"></a>Remarks  
+ `Continue` 呼び出しの後に、プロセスを続行、`ICorDebugController::Stop`メソッド。  
   
- 混合モード デバッグを行うときに呼び出すことはありません`Continue`win32 イベント スレッドの帯域外のイベントから続行する場合を除き、します。  
+ 混合モードのデバッグを行うときに呼び出さない`Continue`帯域外のイベントから続行する場合を除き、Win32 のイベントがスレッドします。  
   
- *インバンド イベント*はマネージ イベントまたはデバッガーがプロセスの管理対象の状態との対話をサポートする通常のアンマネージ イベント。 この場合、デバッガーを受け取る、 [icordebugunmanagedcallback::debugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)でコールバックの`fOutOfBand`パラメーターに設定`false`です。  
+ *帯域内イベント*マネージ イベントまたはデバッガーがプロセスの状態の管理との対話をサポートする通常の非管理対象イベントのいずれかです。 この場合、デバッガーを受け取る、 [icordebugunmanagedcallback::debugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)のコールバックをその`fOutOfBand`パラメーターに設定`false`します。  
   
- *帯域外のイベント*するプロセスの管理対象の状態との対話は、イベントのため、プロセスの停止中に管理されていないイベントします。 この場合、デバッガーを受け取る、`ICorDebugUnmanagedCallback::DebugEvent`でコールバックの`fOutOfBand`パラメーターに設定`true`です。  
+ *帯域外のイベント*はプロセスの状態の管理との対話にできなくなること、イベントのため、プロセスの停止中に非管理対象のイベントです。 この場合、デバッガーを受け取る、`ICorDebugUnmanagedCallback::DebugEvent`のコールバックをその`fOutOfBand`パラメーターに設定`true`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
+## <a name="see-also"></a>関連項目
+

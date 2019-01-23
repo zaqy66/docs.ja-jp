@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: a0a42f72d94adf1c10865374017fa61e833df40f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d4b2f73f8955b103e70e240e714e2b31d6198438
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535536"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Vs の 0 から始まる。Visual Basic における文字列の 1 から始まるアクセス
 このトピックでどのように Visual Basic、および[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]文字列内の文字へのアクセスを提供します。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Visual Basic では、関数によって、0 から始まると 1 つベースのアクセスは常に、文字列の文字に 0 から始まるへのアクセスを提供します。  
@@ -20,9 +20,9 @@ ms.locfileid: "43461671"
 ## <a name="zero-based"></a>0 から始まる  
  0 から始まる Visual Basic の関数の例は、検討してください、`Split`関数。 文字列を分割し、これらの部分文字列を含む配列を返します。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=nameWithType>もメソッドは文字列を分割し、部分文字列を含む配列を返します。 `Split`関数と<xref:System.String.Split%2A>メソッドの戻り値[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]配列、する必要がある 0 から始まる。  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- <xref:Microsoft.VisualBasic.Strings.Split%2A>  
- <xref:System.String.Substring%2A>  
- <xref:System.String.Split%2A>  
- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- <xref:Microsoft.VisualBasic.Strings.Split%2A>
+- <xref:System.String.Substring%2A>
+- <xref:System.String.Split%2A>
+- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

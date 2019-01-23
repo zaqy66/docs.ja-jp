@@ -1,5 +1,5 @@
 ---
-title: '方法 : デザイナーを使って ToolBar コントロールにボタンを追加する'
+title: '方法: デザイナーを使用してツール バー コントロールにボタンを追加します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: b96f112c83d2296356e3eb566a24315bcefeff1f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e18a2f9b8c22538bc545388af56ee929bc94d70c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538909"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>方法 : デザイナーを使って ToolBar コントロールにボタンを追加する
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>方法: デザイナーを使用してツール バー コントロールにボタンを追加します。
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。 メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。  
   
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ToolBar>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法: Windows アプリケーション プロジェクトを作成](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)と[方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
+ 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ToolBar>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows アプリケーション プロジェクトを作成](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)と[方法。Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -47,9 +47,9 @@ ms.locfileid: "44253170"
   
 5.  をクリックして**OK**をダイアログ ボックスを閉じて、指定したパネルを作成します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.ToolBar>  
- [方法: ツール バー ボタンのアイコンを定義する](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [方法: ツール バー ボタンのメニュー イベントをトリガーする](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar コントロールの概要](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar コントロール](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.ToolBar>
+- [方法: ツール バー ボタンのアイコンを定義します。](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [方法: ツール バー ボタンのメニュー イベントのトリガー](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar コントロールの概要](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [ToolBar コントロール](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

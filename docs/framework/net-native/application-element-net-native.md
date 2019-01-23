@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60145611981b53d4778e7c52c6138b6a9b58a592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 557b8a91c969a4c7e7b7a10c2117659a75ef9008
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537293"
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;Application&gt; 要素 (.NET ネイティブ)
 実行時にリフレクションに使用可能なメタデータを持つアプリケーション全体の型と型のメンバーのコンテナーとして機能し、アプリ内のすべてのプログラム要素にランタイム リフレクション ポリシーを適用します。  
@@ -76,7 +76,7 @@ ms.locfileid: "33394635"
 |-------------|-----------------|  
 |[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 要素には、0 または 1 個の `<Application>` 要素を含めることができます。 1 つのリフレクション ディレクティブ ファイルに複数の `<Application>` 要素を含めることはサポートされていません。  
   
  `<Application>` 要素は、次の 2 とおりの方法で使用できます。  
@@ -85,8 +85,8 @@ ms.locfileid: "33394635"
   
 -   リフレクション、シリアル化、および相互運用に関するアプリケーション全体のポリシーを設定する要素として。 `<Application>` 要素の属性はアプリケーション全体のポリシーを定義します。このポリシーは、`<Application>` 要素または [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により定義される子要素によってオーバーライドできます。  
   
-## <a name="see-also"></a>関連項目  
- [\<ライブラリ > 要素](../../../docs/framework/net-native/library-element-net-native.md)  
- [\<ディレクティブ > 要素](../../../docs/framework/net-native/directives-element-net-native.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>関連項目
+- [\<ライブラリ > 要素](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<ディレクティブ > 要素](../../../docs/framework/net-native/directives-element-net-native.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

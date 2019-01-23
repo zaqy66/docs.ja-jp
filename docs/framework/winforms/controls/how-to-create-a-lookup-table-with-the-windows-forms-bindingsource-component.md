@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム BindingSource コンポーネントを使用してルックアップ テーブルを作成する'
+title: '方法: Windows フォーム BindingSource コンポーネントを使用するルックアップ テーブルを作成します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539897"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>方法 : Windows フォーム BindingSource コンポーネントを使用してルックアップ テーブルを作成する
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>方法: Windows フォーム BindingSource コンポーネントを使用するルックアップ テーブルを作成します。
 ルックアップ テーブルは、関連するテーブル内のレコードのデータを表示する列を持つ、データ テーブルです。 以下の手順では、<xref:System.Windows.Forms.ComboBox> コントロールを使用して、親テーブルから子テーブルへの外部キー リレーションシップを持つフィールドを表示します。  
   
  これらの 2 つのテーブルとこの関係をわかりやすく視覚化するために、親テーブルと子テーブルの例を次に示します。  
@@ -91,8 +91,8 @@ ms.locfileid: "33535585"
   
 8.  <xref:System.Windows.Forms.ComboBox> および <xref:System.Windows.Forms.BindingNavigator> コントロール以外のコントロールを、表示する子テーブルの <xref:System.Windows.Forms.BindingSource> (`OrdersBindingSource` など) の詳細フィールドにバインドします。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox コントロール](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [Visual Studio でのデータへのコントロールのバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [ComboBox コントロール](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Visual Studio でのデータへのコントロールのバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ed3501930b94eae59cf38355f8255ecf4165bcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c457d8a6b3ab187b7d02c9c9be800c4ef1f0f58c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537986"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString メソッド
-現在参照スコープ内のテーブル列から、指定したインデックス位置文字列を取得します。  
+参照の現在のスコープ内のテーブル列から、指定したインデックス位置にある文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +38,20 @@ HRESULT GetString (
   
 #### <a name="parameters"></a>パラメーター  
  `ixString`  
- [in]次の値の検索を開始する位置のインデックス。  
+ [in][次へ] の値の検索を開始する位置のインデックス。  
   
  `ppString`  
  [out]返される文字列値へのポインターへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

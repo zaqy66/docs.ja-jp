@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f850ec24530dd9a7d80f826461cacd9c249dd0de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5503e89006411887de9b0def929ac1155df5aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537258"
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>&lt;Subtypes&gt; 要素 (.NET ネイティブ)
 それを含む型から継承されたすべてのクラスに実行時ポリシーを適用します。  
@@ -62,7 +62,7 @@ ms.locfileid: "33397989"
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `<Subtypes>` 要素は、それを含む型のすべてのサブタイプにポリシーを適用します。 派生型および基底クラスに異なるポリシーを適用する場合に使用します。  
   
  リフレクション、シリアル化、および相互運用属性はいずれも省略可能ですが、そのうち少なくとも 1 つが存在する必要があります。  
@@ -89,8 +89,8 @@ ms.locfileid: "33397989"
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>関連項目  
- [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>関連項目
+- [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

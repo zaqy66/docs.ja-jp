@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: a8c71551adc2b88b5300994134eaec329a083709
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f237831befab627ec603a9000a7cef6184e0ae65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546110"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;要素 (ネットワーク設定)
 FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
-\<defaultFtpCachePolicy >  
+\<requestCaching>  
+\<defaultFtpCachePolicy>  
   
 ## <a name="syntax"></a>構文  
   
@@ -79,8 +79,8 @@ FTP キャッシュがアクティブでかどうかし、既定のキャッシ�
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

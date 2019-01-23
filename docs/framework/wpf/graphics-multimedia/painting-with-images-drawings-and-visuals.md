@@ -12,12 +12,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d226ecb6e168a044cd9802b4278c25084d8c84fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537752"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>イメージ、描画、およびビジュアルによる塗りつぶし
 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、および<xref:System.Windows.Media.VisualBrush>イメージで領域を塗りつぶすオブジェクト、 <xref:System.Windows.Media.Drawing>、または<xref:System.Windows.Media.Visual>します。  
@@ -41,7 +41,7 @@ ImageBrush で描画されたオブジェクト
  既定で、<xref:System.Windows.Media.ImageBrush>領域がいっぱいにするには、そのイメージで描画される端まで拡大、イメージを引き伸ばして、描画領域のイメージよりも異なる縦横比がある場合。 この動作を変更するには変更することで、<xref:System.Windows.Media.TileBrush.Stretch%2A>プロパティの既定値から<xref:System.Windows.Media.Stretch.Fill>に<xref:System.Windows.Media.Stretch.None>、 <xref:System.Windows.Media.Stretch.Uniform>、または<xref:System.Windows.Media.Stretch.UniformToFill>。 <xref:System.Windows.Media.ImageBrush>の種類は、 <xref:System.Windows.Media.TileBrush>、正確にイメージ ブラシが出力領域を塗りつぶす方法を指定し、パターンを作成することもできます。 詳細設定の詳細については<xref:System.Windows.Media.TileBrush>については、「、 [TileBrush の概要](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)します。  
   
 <a name="fillingpanelwithimage"></a>   
-## <a name="example-paint-an-object-with-a-bitmap-image"></a>例: ビットマップ イメージによるオブジェクトの塗りつぶし  
+## <a name="example-paint-an-object-with-a-bitmap-image"></a>例:ビットマップ イメージによるオブジェクトを塗りつぶし  
  次の例では、<xref:System.Windows.Media.ImageBrush>を描画する、<xref:System.Windows.Controls.Panel.Background%2A>の<xref:System.Windows.Controls.Canvas>します。  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
@@ -73,7 +73,7 @@ DrawingBrush で塗りつぶされたオブジェクト
  ように、 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush>拡大その<xref:System.Windows.Media.DrawingBrush.Drawing%2A>出力領域に挿入します。 この動作をオーバーライドするには、変更することで、<xref:System.Windows.Media.TileBrush.Stretch%2A>プロパティの既定の設定から<xref:System.Windows.Media.Stretch.Fill>します。 詳細については、<xref:System.Windows.Media.TileBrush.Stretch%2A> プロパティを参照してください。  
   
 <a name="fillingareawithdrawingbrushexample"></a>   
-## <a name="example-paint-an-object-with-a-drawing"></a>例: 描画によるオブジェクトの塗りつぶし  
+## <a name="example-paint-an-object-with-a-drawing"></a>例:描画によるオブジェクトの塗りつぶし  
  次の例は、3 つの楕円の描画によってオブジェクトを塗りつぶす方法を示しています。 A<xref:System.Windows.Media.GeometryDrawing>省略記号を記述するために使用します。  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
@@ -90,16 +90,16 @@ DrawingBrush で塗りつぶされたオブジェクト
   
  2 つの方法を指定する、<xref:System.Windows.Media.VisualBrush.Visual%2A>のコンテンツを<xref:System.Windows.Media.VisualBrush>します。  
   
--   新規作成<xref:System.Windows.Media.Visual>に設定して、<xref:System.Windows.Media.VisualBrush.Visual%2A>のプロパティ、<xref:System.Windows.Media.VisualBrush>します。 例については、この後の「[例: ビジュアルによるオブジェクトの塗りつぶし](#examplevisualbrush1)」セクションを参照してください。  
+-   新規作成<xref:System.Windows.Media.Visual>に設定して、<xref:System.Windows.Media.VisualBrush.Visual%2A>のプロパティ、<xref:System.Windows.Media.VisualBrush>します。 例については、次を参照してください。、[例。ビジュアルを使用してオブジェクトのペイント](#examplevisualbrush1)以下のセクション。  
   
--   既存の使用<xref:System.Windows.Media.Visual>、ターゲットの重複するイメージを作成する<xref:System.Windows.Media.Visual>します。 使用することができますし、<xref:System.Windows.Media.VisualBrush>反射や拡大などの興味深い効果を作成します。 例については、「[方法 : 反射を作成する](#examplevisualbrush2)」セクションを参照してください。  
+-   既存の使用<xref:System.Windows.Media.Visual>、ターゲットの重複するイメージを作成する<xref:System.Windows.Media.Visual>します。 使用することができますし、<xref:System.Windows.Media.VisualBrush>反射や拡大などの興味深い効果を作成します。 例については、次を参照してください。、[例。反射を作成する](#examplevisualbrush2)セクション。  
   
  新しいを定義するとき<xref:System.Windows.Media.VisualBrush.Visual%2A>の<xref:System.Windows.Media.VisualBrush>と<xref:System.Windows.Media.Visual>は、 <xref:System.Windows.UIElement> (パネルやコントロール) など、レイアウト システムがで実行、<xref:System.Windows.UIElement>とその子要素と、<xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A>プロパティに設定されて`true`。 ただし、ルート<xref:System.Windows.UIElement>は基本的に、システムの残りの部分から分離されます。 スタイル、および外部のレイアウトは、この境界を超えることはできません。 そのため、ルートのサイズを指定する必要があります明示的に<xref:System.Windows.UIElement>はの唯一の親であるため、<xref:System.Windows.Media.VisualBrush>し、そのため、できませんサイズを自動的に塗りつぶされる領域にします。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのレイアウトの詳細については、「[レイアウト](../../../../docs/framework/wpf/advanced/layout.md)」を参照してください。  
   
  ような<xref:System.Windows.Media.ImageBrush>と<xref:System.Windows.Media.DrawingBrush>、<xref:System.Windows.Media.VisualBrush>出力領域に挿入するには、そのコンテンツを拡大します。 この動作をオーバーライドするには、変更することで、<xref:System.Windows.Media.TileBrush.Stretch%2A>プロパティの既定の設定から<xref:System.Windows.Media.Stretch.Fill>します。 詳細については、<xref:System.Windows.Media.TileBrush.Stretch%2A> プロパティを参照してください。  
   
 <a name="examplevisualbrush1"></a>   
-## <a name="example-paint-an-object-with-a-visual"></a>例: ビジュアルによるオブジェクトの塗りつぶし  
+## <a name="example-paint-an-object-with-a-visual"></a>例:ビジュアルを使用してオブジェクトを塗りつぶし  
  次の例では、さまざまなコントロールとパネルを使用して四角形を塗りつぶします。  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
@@ -108,7 +108,7 @@ DrawingBrush で塗りつぶされたオブジェクト
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
-## <a name="example-create-a-reflection"></a>方法 : 反射を作成する  
+## <a name="example-create-a-reflection"></a>例:反射を作成する  
  前の例では、新しいを作成する方法を示しました<xref:System.Windows.Media.Visual>を背景として使用します。 使用することも、<xref:System.Windows.Media.VisualBrush>既存のビジュアルを表示するこの機能では、反射や拡大などの興味深い視覚効果を生成することができます。 次の例では、<xref:System.Windows.Media.VisualBrush>の反射を作成、<xref:System.Windows.Controls.Border>いくつかの要素を格納しています。 次の図は、この例で生成される出力を示しています。  
   
  ![A がビジュアル オブジェクトを反映](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
@@ -134,16 +134,16 @@ DrawingBrush で塗りつぶされたオブジェクト
   
  タイル表示機能の詳細については<xref:System.Windows.Media.TileBrush>、オブジェクトを参照してください、 [TileBrush の概要](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [TileBrush の概要](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [WPF のブラシの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Drawing オブジェクトの概要](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [不透明度マスクの概要](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [TileBrush の概要](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)
+- [WPF のブラシの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)
+- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Drawing オブジェクトの概要](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [不透明度マスクの概要](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)
+- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)

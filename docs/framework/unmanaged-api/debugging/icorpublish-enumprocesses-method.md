@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2779138a0999e34ad6424d76ddfebbcfdf611d58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3af824a23d683f4d450ef6f60fd407928c41d51e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536959"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses メソッド
 このコンピューターで実行されている管理対象プロセスの列挙子を取得します。  
@@ -37,24 +38,24 @@ HRESULT EnumProcesses (
   
 #### <a name="parameters"></a>パラメーター  
  `Type`  
- 値、 [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)を取得するプロセスの種類を指定する列挙です。 現在のバージョンでのみ COR_PUB_MANAGEDONLY は有効です。  
+ 値、 [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)列挙型を取得するプロセスの種類を指定します。 現在のバージョンでのみ COR_PUB_MANAGEDONLY は有効です。  
   
  `ppIEnum`  
- アドレスへのポインター、 [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)プロセスの列挙子であるインスタンスです。  
+ アドレスへのポインター、 [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)プロセスの列挙子であるインスタンス。  
   
-## <a name="remarks"></a>コメント  
- プロセスの列挙子のコレクションが実行中のプロセスのスナップショットに基づいて、`EnumProcesses`メソッドが呼び出されます。 列挙子は前に終了または後に起動するプロセスは含まれません`EnumProcesses`と呼びます。  
+## <a name="remarks"></a>Remarks  
+ プロセスの列挙子のコレクションがときに実行しているプロセスのスナップショットに基づいた、`EnumProcesses`メソッドが呼び出されます。 列挙子が終了する前に、または後に起動するプロセスは含まれません`EnumProcesses`が呼び出されます。  
   
- `EnumProcesses`メソッドは、これで 2 回以上呼び出すことは[ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)プロセスの新しい最新の状態のコレクションを作成するインスタンス。 後続の呼び出しでない既存のコレクションを受ける、`EnumProcesses`メソッドです。  
+ `EnumProcesses`このメソッドを複数回呼び出すことが[ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)プロセスの新しい最新の状態のコレクションを作成するインスタンス。 後続の呼び出しの既存のコレクションを受けませんが、`EnumProcesses`メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorPub.idl、CorPub.h  
+ **ヘッダー:** CorPub.idl, CorPub.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorPublish インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorPublish インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

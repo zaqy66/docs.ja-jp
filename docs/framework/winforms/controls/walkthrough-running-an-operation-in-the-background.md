@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : 操作をバックグラウンドで実行する'
+title: 'チュートリアル: バック グラウンドで操作を実行します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 24c5a58d0064756b60596907178578f98b557d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540222"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>チュートリアル : 操作をバックグラウンドで実行する
+# <a name="walkthrough-running-an-operation-in-the-background"></a>チュートリアル: バック グラウンドで操作を実行します。
 完了に長い時間がかかる操作を実行しており、ユーザー インターフェイスで遅延が発生しないようにするには<xref:System.ComponentModel.BackgroundWorker> クラスを使用して別のスレッドで操作を実行できます。  
   
- この例で使用するコードの完全な一覧については、次を参照してください。[方法: バック グラウンドで操作を実行](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)します。  
+ この例で使用するコードの完全な一覧については、次を参照してください。[方法。バック グラウンドで操作を実行](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -34,14 +34,14 @@ ms.locfileid: "44084693"
   
     |ボタン|名前|テキスト|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Start**|  
+    |`button1`|`startBtn`|**[開始]**|  
     |`button2`|`cancelBtn`|**キャンセル**|  
   
 2.  開く、**ツールボックス**、クリックして、**コンポーネント**タブをクリックし、ドラッグ、<xref:System.ComponentModel.BackgroundWorker>コンポーネントをフォームにします。  
   
      `backgroundWorker1`コンポーネントに表示されます、**コンポーネント トレイ**します。  
   
-3.  **プロパティ**ウィンドウで、設定、<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>プロパティを`true`します。  
+3.  **[プロパティ]** ウィンドウで、 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> プロパティを `true`に設定します。  
   
 4.  **プロパティ**ウィンドウの**イベント**ボタンをクリックし、ダブルクリック、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。  
   
@@ -96,13 +96,13 @@ ms.locfileid: "44084693"
   
 ## <a name="next-steps"></a>次の手順  
   
--   非同期操作の進行に伴って進行状況を報告するフォームを実装します。 詳細については、次を参照してください。[方法: バック グラウンド操作を使用してフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)します。  
+-   非同期操作の進行に伴って進行状況を報告するフォームを実装します。 詳細については、「[方法 :バック グラウンド操作を使用してフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)します。  
   
 -   コンポーネントの非同期パターンをサポートするクラスを実装します。 詳細については、次を参照してください。[イベント ベースの非同期パターンを実装する](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ComponentModel.BackgroundWorker>  
- <xref:System.ComponentModel.DoWorkEventArgs>  
- [方法: バックグラウンド操作を使用するフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [方法: バックグラウンドで操作を実行する](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [BackgroundWorker コンポーネント](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ComponentModel.BackgroundWorker>
+- <xref:System.ComponentModel.DoWorkEventArgs>
+- [方法: バック グラウンド操作を使用してフォームを実装します。](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [方法: バック グラウンドで操作を実行します。](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [BackgroundWorker コンポーネント](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

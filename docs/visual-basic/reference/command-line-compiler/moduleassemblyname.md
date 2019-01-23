@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 92fd068ef0ff892c8b76396edbf1d532a36e338c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 35519be6ddaed64b3e5e2129efb611e0a812ebc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535179"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 このモジュールが一部となるアセンブリの名前を指定します。  
@@ -42,13 +42,13 @@ ms.locfileid: "50189512"
 > [!NOTE]
 >  `-moduleassemblyname`オプションは、Visual Studio 開発環境内からは使用できません。 コマンド プロンプトからコンパイルするときにのみ、は使用できます。  
   
-## <a name="see-also"></a>関連項目  
- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+## <a name="see-also"></a>関連項目
+- [方法: マルチファイル アセンブリをビルドします。](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : デザイナーを使用してピクチャを読み込む (Windows フォーム)'
+title: '方法: デザイナー (Windows フォーム) を使用してピクチャを読み込む.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - picture formats
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6142474c2009e0998852dc28d346e73f4abbf1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539091"
 ---
-# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>方法 : デザイナーを使用してピクチャを読み込む (Windows フォーム)
+# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>方法: デザイナー (Windows フォーム) を使用してピクチャを読み込む.
 Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール、読み込みし、設定して、デザイン時にフォームに画像を表示できます、<xref:System.Windows.Forms.PictureBox.Image%2A>に有効な画像のプロパティ。 次の表では、許容されるファイルの種類を示します。  
   
-|型|ファイル名拡張子|  
+|型|ファイル名の拡張子|  
 |----------|-------------------------|  
 |ビットマップ|.bmp|  
 |アイコン|.ico|  
@@ -43,9 +43,9 @@ Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール�
   
 1.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティと、イメージ オブジェクトの名前の左側に表示される小さなのサムネイル画像を右クリックします。 選択**リセット**します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.PictureBox>  
- [PictureBox コントロールの概要](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [方法: 実行時にピクチャのサイズまたは配置を変更する](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [方法: 実行時にピクチャを設定する](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- [PictureBox コントロール](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.PictureBox>
+- [PictureBox コントロールの概要](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
+- [方法: 実行時にサイズまたは画像の配置を変更します。](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [方法: 実行時にピクチャを設定します。](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox コントロール](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

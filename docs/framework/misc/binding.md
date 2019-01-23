@@ -3,12 +3,12 @@ title: '&lt;バインド&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-ms.openlocfilehash: d72b3a34e0696df944b2338c89f167c8bfa06400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb4fafda31205e2ce5efd01ab265fcacfa70bdf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539195"
 ---
 # <a name="ltbindinggt"></a>&lt;バインド&gt;
 `binding` 要素を使用して、Windows Communication Foundation (WCF) によって提供される異なる型の定義済みバインディングを構成できます。  
@@ -35,12 +35,12 @@ ms.locfileid: "33392253"
   
 5.  Transport  
   
- カスタム バインディングは、`name` 属性によって識別されます。  
+ カスタム バインドは、`name` 属性によって識別されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [バインディング](../../../docs/framework/wcf/bindings.md)  
- [カスタム バインディング](../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [バインディング](../../../docs/framework/wcf/bindings.md)
+- [カスタム バインディング](../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

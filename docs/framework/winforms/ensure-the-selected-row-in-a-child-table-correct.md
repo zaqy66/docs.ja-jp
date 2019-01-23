@@ -1,5 +1,5 @@
 ---
-title: '方法 : 子テーブルの選択行が現在位置を保持することを保証する'
+title: '方法: 子テーブルの選択行が正しい位置に保持することを確認します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547632"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>方法 : 子テーブルの選択行が現在位置を保持することを保証する
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>方法: 子テーブルの選択行が正しい位置に保持することを確認します。
 多くの場合、Windows フォームでデータ バインディングを処理するときは、いわゆる親/子ビューまたはマスター/詳細ビューにデータを表示します。 これは、同一ソースのデータが、2 つのコントロールに表示されるデータ バインディング シナリオを示します。 片方のコントロールで選択を変更すると、他方のコントロールに表示されるデータが変化します。 たとえば、第 1 のコントロールに顧客リストが含まれ、第 2 のコントロールに、第 1 のコントロールで選択された顧客に関連する注文リストが含まれます。  
   
  .NET Framework Version 2.0 以降、親/子ビューにデータを表示する場合は、子テーブルで現在選択されている行が、親テーブルの先頭行にリセットされないようにするために、追加の手順を実行する必要があります。 そのためには、子テーブルの位置をキャッシュし、親テーブルが変更された後で位置をリセットする必要があります。 通常、子テーブルのリセットは、親テーブルの行のフィールドが初めて変更されたときに発生します。  
@@ -81,9 +81,9 @@ ms.locfileid: "48841230"
   
 -   System、System.Data、System.Drawing、System.Windows.Forms、および System.XML の各アセンブリへの参照。  
   
- Visual Basic または Visual c# のコマンドラインからこの例を構築する方法については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ Visual Basic または Visual c# のコマンドラインからこの例を構築する方法については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: 複数のコントロールを 1 つのデータ ソースにバインドして同期状態を保つ](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [BindingSource コンポーネント](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
+- [BindingSource コンポーネント](../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
