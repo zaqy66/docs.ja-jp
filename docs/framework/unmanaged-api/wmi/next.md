@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15d470ccf9384695aa38a50c2c062c1b660fea96
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: aaebf06c63d7022c9798824097cd722a2ffadde5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584611"
 ---
 # <a name="next-function"></a>次の関数
 呼び出しで開始する列挙体では、次のプロパティを取得します。 [BeginEnumeration](beginenumeration.md)します。  
@@ -51,7 +51,7 @@ HRESULT Next (
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `lFlags`  
-[in]予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
 
 `pstrName`  
 [out]新しい`BSTR`プロパティ名を格納しています。 このパラメーターに設定することができます`null`名前が必要ない場合。
@@ -92,15 +92,15 @@ HRESULT Next (
 |定数  |値  |説明  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | プロパティは、標準のシステム プロパティです。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラス: プロパティは、親クラスから継承されます。 </br> インスタンス: プロパティを親クラスから継承中に変更されていないインスタンスによって。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラス: 派生クラスにプロパティが属しています。 </br> インスタンスのインスタンスでプロパティを変更。つまり、値が指定されましたまたは修飾子が追加または変更します。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラス。プロパティは、親クラスから継承されます。 </br> インスタンス。プロパティを親クラスから継承したときに変更されていないインスタンスがします。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラス。プロパティは、派生クラスに属しています。 </br> インスタンス。インスタンスでプロパティを変更します。つまり、値が指定されましたまたは修飾子が追加または変更します。 |
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

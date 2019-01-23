@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : バックグラウンド操作を使用するフォームの実装'
+title: 'チュートリアル: バック グラウンド操作を使用するフォームの実装'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543527"
 ---
-# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>チュートリアル : バックグラウンド操作を使用するフォームの実装
+# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>チュートリアル: バック グラウンド操作を使用するフォームの実装
 場合は、完了に長い時間がかかる操作があると応答を停止する、ユーザー インターフェイス (UI) を設定したくない、または「ハング」しを使用できます、<xref:System.ComponentModel.BackgroundWorker>クラスを別のスレッドで操作を実行します。  
   
  このチュートリアルで使用する方法、 <xref:System.ComponentModel.BackgroundWorker> ""バック グラウンドで時間のかかる計算を実行するクラス、ユーザー インターフェイスの応答性の高いままです。  このチュートリアルを完了すると、フィボナッチ数を非同期に計算するアプリケーションが作成されます。 大きなフィボナッチ数の計算にはかなりの時間がかかることがありますが、この遅延によってメイン UI スレッドが中断されることはなく、計算中もフォームは応答性を維持します。  
@@ -37,7 +37,7 @@ ms.locfileid: "44253131"
   
 -   進行状況の報告とキャンセルのサポートの追加  
   
- この例で使用するコード全体については、「[方法 : バックグラウンド操作を使用するフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)」を参照してください。  
+ この例で使用するコードの完全な一覧については、次を参照してください。[方法。バック グラウンド操作を使用してフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -57,7 +57,7 @@ ms.locfileid: "44253131"
   
 5.  最初の名前を変更<xref:System.Windows.Forms.Button>コントロール`startAsyncButton`設定と、<xref:System.Windows.Forms.Control.Text%2A>プロパティを`Start Async`します。 2 つ目の名前を変更<xref:System.Windows.Forms.Button>コントロール`cancelAsyncButton`、設定、<xref:System.Windows.Forms.Control.Text%2A>プロパティを`Cancel Async`します。 設定の<xref:System.Windows.Forms.Control.Enabled%2A>プロパティを`false`します。  
   
-6.  この 2 つのイベント ハンドラーを作成、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント。 詳細については、「[方法 : デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)」を参照してください。  
+6.  この 2 つのイベント ハンドラーを作成、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント。 詳細については、次を参照してください。[方法。デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)します。  
   
 7.  ドラッグ、<xref:System.Windows.Forms.Label>コントロールから、**ツールボックス**をフォームに名前を変更し、`resultLabel`します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "44253131"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>非同期イベント ハンドラーを実装するには  
   
-1.  **プロパティ** ウィンドウで、<xref:System.ComponentModel.BackgroundWorker>が選択されているコンポーネントをクリックして、**イベント**ボタン。 ダブルクリックして、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。 イベント ハンドラーの使用方法の詳細については、「[方法 : デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)」を参照してください。  
+1.  **プロパティ** ウィンドウで、<xref:System.ComponentModel.BackgroundWorker>が選択されているコンポーネントをクリックして、**イベント**ボタン。 ダブルクリックして、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。 イベント ハンドラーを使用する方法の詳細については、次を参照してください。[方法。デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)します。  
   
 2.  フォームで `ComputeFibonacci` という新しいメソッドを作成します。 このメソッドがバックグラウンドで実行され、実際の処理を行います。 このコードは、フィボナッチ アルゴリズムの再帰的実装を示しています。これは、非常に非効率であり、数が大きくなるにつれて、完了までの所要時間が急激に増大します。 ここでは、アプリケーションで長時間の遅延が発生する可能性のある操作を示すために、このコードを使用しています。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "44253131"
   
 -   複数回使用<xref:System.ComponentModel.BackgroundWorker>複数の同時操作のオブジェクト。  
   
--   マルチスレッド アプリケーションをデバッグする方法については、「[方法 : [スレッド] ウィンドウを使用する](/visualstudio/debugger/how-to-use-the-threads-window)」を参照してください。  
+-   マルチ スレッド アプリケーションをデバッグするを参照してください。[方法。[スレッド] ウィンドウを使用して、](/visualstudio/debugger/how-to-use-the-threads-window)します。  
   
 -   非同期プログラミング モデルをサポートする独自のコンポーネントを実装する。 詳細については、「[イベント ベースの非同期パターンの概要](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)」を参照してください。  
   
@@ -169,6 +169,6 @@ ms.locfileid: "44253131"
 - [マネージド スレッド処理](../../../../docs/standard/threading/index.md)
 - [マネージド スレッド処理の実施](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [イベントベースの非同期パターンの概要](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [方法: バックグラウンド操作を使用するフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)  
-- [チュートリアル: 操作をバックグラウンドで実行する](walkthrough-running-an-operation-in-the-background.md)
+- [方法: バック グラウンド操作を使用してフォームを実装します。](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [チュートリアル: バック グラウンドで操作を実行します。](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker コンポーネント](backgroundworker-component.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: b48fb59f0927056c8dba75211b4fffa6f25c5c52
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551920"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic でのコンポーネントの作成および使用
 *コンポーネント*は、<xref:System.ComponentModel.IComponent?displayProperty=nameWithType> インターフェイスを実装するか、<xref:System.ComponentModel.IComponent> を実装するクラスから直接的または間接的に派生するクラスです。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のコンポーネントは、再利用可能なオブジェクトで、他のオブジェクトとやり取りでき、外部リソースの制御やデザイン時サポートが備わっています。  
@@ -62,6 +62,6 @@ ms.locfileid: "39245233"
  [コントロールとコンポーネントの作成時のトラブルシューティング](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  一般的な問題に対処する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: Windows フォームでデザイン時サポートにアクセスする](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- 
+## <a name="see-also"></a>関連項目
+- [方法: Windows フォームでデザイン時サポートのアクセス](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+

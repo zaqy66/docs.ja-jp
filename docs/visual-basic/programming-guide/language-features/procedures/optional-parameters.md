@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651610"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552230"
 ---
 # <a name="optional-parameters-visual-basic"></a>省略可能なパラメーター (Visual Basic)
-プロシージャのパラメーターを省略可能にすると、呼び出し時に引数を指定する必要がなくなります。 *省略可能なパラメーター*によって示される、`Optional`プロシージャの定義のキーワードです。 次の規則が適用されます。  
+プロシージャのパラメーターを省略可能にすると、呼び出し時に引数を指定する必要がなくなります。 *省略可能なパラメーター*で示されます、`Optional`プロシージャ定義内のキーワード。 次の規則が適用されます。  
   
 -   プロシージャ定義のすべての省略可能なパラメーターについて、既定値を指定する必要があります。  
   
@@ -50,7 +50,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>省略可能な引数があるかどうかの確認  
- 引数が省略されているのか、呼び出し元のコードで既定値が明示的に指定されているのかについて、プロシージャで実行時に検出することはできません。 この区別が必要な場合は、ありそうにない値を既定値に設定します。 次の手順は省略可能なパラメーターを定義`office`、およびその既定値のテスト`QJZ`への呼び出しで省略されているかどうかを参照してください。  
+ 引数が省略されているのか、呼び出し元のコードで既定値が明示的に指定されているのかについて、プロシージャで実行時に検出することはできません。 この区別が必要な場合は、ありそうにない値を既定値に設定します。 次の手順は省略可能なパラメーターを定義します。 `office`、とその既定値のテスト`QJZ`、への呼び出しで省略されている場合を参照してください。  
   
  [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
@@ -59,12 +59,12 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>省略可能なパラメーターとオーバーロード  
  省略可能なパラメーターを持つプロシージャを定義するには、オーバーロードを使用する方法もあります。 省略可能なパラメーターが 1 つあるとすると、パラメーターを受け取る場合と受け取らない場合の、2 つのオーバーロードされたバージョンのプロシージャを定義できます。 この方法は、省略可能なパラメーターの数が増えるにつれて複雑になります。 しかし、それぞれの省略可能な引数が呼び出しプログラムによって指定されているかどうかを確実に把握できるという利点があります。  
   
-## <a name="see-also"></a>関連項目  
- [手順](./index.md)  
- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)  
- [位置と名前による引数渡し](./passing-arguments-by-position-and-by-name.md)  
- [パラメーター配列](./parameter-arrays.md)  
- [プロシージャのオーバーロード](./procedure-overloading.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>関連項目
+- [プロシージャ](./index.md)
+- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
+- [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
+- [位置と名前による引数渡し](./passing-arguments-by-position-and-by-name.md)
+- [パラメーター配列](./parameter-arrays.md)
+- [プロシージャのオーバーロード](./procedure-overloading.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

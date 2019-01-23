@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588575"
 ---
 # <a name="standard-query-operator-translation"></a>標準クエリ演算子の変換
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、標準クエリ演算子から SQL コマンドへの変換が行われます。 データベースのクエリ プロセッサは、SQL 変換の実行のセマンティクスを決定します。  
@@ -147,7 +147,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="inheritance-support"></a>継承のサポート  
   
 ### <a name="inheritance-mapping-restrictions"></a>継承の対応付けの制限  
- 詳細については、次を参照してください。[方法: 継承階層をマップ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)します。  
+ 詳細については、「[方法 :継承階層を割り当てる](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)します。  
   
 ### <a name="inheritance-in-queries"></a>クエリでの継承  
  C# のキャストは射影でのみサポートされます。 他の場所で使用したキャストは変換されず、無視されます。 SQL 関数名を除き、SQL が実行するのは、共通言語ランタイム (CLR: Common Language Runtime) の <xref:System.Convert> に相当する処理のみです。 つまり、SQL は、ある型の値を別の型に変更することはできます。 CLR のキャストに相当するものはありません。同じビット列を別の型として再解釈するという概念がないためです。 したがって、C# のキャストはローカルでのみ機能します。 リモート処理はされません。  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>関連項目  
- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [シーケンスの要素の取得またはスキップ](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [2 つのシーケンスの連結](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [2 つのシーケンスの差集合の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [2 つのシーケンスの積集合の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [2 つのシーケンスの和集合の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>関連項目
+- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [シーケンスの要素の取得またはスキップ](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [2 つのシーケンスの連結](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [2 つのシーケンスの差集合の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [2 つのシーケンスの積集合の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [2 つのシーケンスの和集合の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

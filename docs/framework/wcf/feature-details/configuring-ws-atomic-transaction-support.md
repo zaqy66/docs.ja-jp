@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592433"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-AtomicTransaction サポートの構成
 ここでは、WS-AtomicTransaction (WS-AT) 構成ユーティリティを使用して WS-AT サポートを構成する方法について説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "43525883"
 ### <a name="creating-and-exporting-certificates"></a>証明書の作成とエクスポート  
  この手順では、MMC 証明書スナップインを使用する必要があります。 このスナップインにアクセスするには、[スタート] ボタンをクリックして [ファイル名を指定して実行] をクリックし、入力ボックスに「mmc」と入力して [OK] をクリックします。 次に、 **Console1**ウィンドウに移動します**ファイル追加と削除**スナップインを追加 をクリックし、選択**証明書**から、**利用できるスタンドアロンスナップイン**一覧。 最後に、選択**コンピューター アカウント**を管理し、をクリックして**OK**します。 **証明書**ノード スナップイン コンソールに表示されます。  
   
- 信頼を確立するために必要な証明書は、あらかじめ用意されている必要があります。 作成し、次の手順の前に新しい証明書をインストールする方法については、次を参照してください。[方法: を作成し、開発時に WCF の一時的なクライアント証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=158925)します。  
+ 信頼を確立するために必要な証明書は、あらかじめ用意されている必要があります。 作成し、次の手順の前に新しい証明書をインストールする方法については、次を参照してください。[方法。作成し、開発時に WCF の一時的なクライアント証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=158925)します。  
   
 1.  コンピューター A で、MMC 証明書スナップインを使用して、既存の証明書 (certA) を LocalMachine\MY (Personal Node) ストアと LocalMachine\ROOT (信頼されたルート証明機関のノード) ストアにインポートします。 特定のノードに証明書をインポートするノードを右クリックし **すべてのタスク/インポート**です。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "43525883"
   
 -   31 : 詳細  
   
-## <a name="see-also"></a>関連項目  
- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [WS-AtomicTransaction 構成 MMC スナップイン](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>関連項目
+- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 構成 MMC スナップイン](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

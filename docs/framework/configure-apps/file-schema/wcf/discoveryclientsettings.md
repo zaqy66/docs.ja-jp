@@ -2,18 +2,18 @@
 title: '&lt;discoveryClientSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
-ms.openlocfilehash: bb443334e0713464e64ec9297bbab4ad11eda723
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dd02f6bb7674015d1c153b2dce38e7e29181d25f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599921"
 ---
 # <a name="ltdiscoveryclientsettingsgt"></a>&lt;discoveryClientSettings&gt;
 サービス探索プロセスにクライアントとして参加するためにアプリケーションが必要とする設定を格納します。  
   
 \<system.ServiceModel >  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,14 +55,14 @@ ms.locfileid: "54145056"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|探索サービスの検索にクライアント アプリケーションによって使用される基準を提供する構成要素。 条件は、(探しているサービスの種類を指定して) 検索条件にグループ化することができ、検索 (検索持続期間)、終了条件。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|探索サービスの検索にクライアント アプリケーションによって使用される基準を提供する構成要素。 条件は、(探しているサービスの種類を指定して) 検索条件にグループ化することができ、検索 (検索持続期間)、終了条件。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|アプリケーションが実行時に動的にエンドポイント アドレスを検索するクライアント プログラムとして機能するための情報を格納する標準エンドポイントを定義します。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|アプリケーションが実行時に動的にエンドポイント アドレスを検索するクライアント プログラムとして機能するための情報を格納する標準エンドポイントを定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
- <xref:System.ServiceModel.Discovery.Configuration.DiscoveryClientSettingsElement>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>
+- <xref:System.ServiceModel.Discovery.Configuration.DiscoveryClientSettingsElement>

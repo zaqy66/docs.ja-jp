@@ -1,16 +1,16 @@
 ---
-title: '方法 : WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する'
+title: '方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576396"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法 : WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する
-開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作は、WCF によってサポートされていない形式でデータを返す必要がある場合です。 このトピックでは、WCF WEB HTTP プログラミング モデルを使用して、このようなサービスを作成するについて説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成します。
+開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が WCF でサポートされていない形式のデータを返す必要があるときに、大文字と小文字です。 このトピックでは、WCF WEB HTTP プログラミング モデルを使用して、このようなサービスを作成するについて説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33498109"
         }  
     ```  
   
-     メソッドを返すため、 <xref:System.IO.Stream>WCF サービス操作から返されるバイト数を完全に制御が、操作に必要があることを想定しています、および適用なしに返されるデータの書式設定します。  
+     メソッドを返すため、<xref:System.IO.Stream>適用なしに返されるデータの書式設定、WCF は、操作がサービス操作から返されるバイト数を完全に制御を持つことを想定しています。  
   
 2.  サービス コントラクトを実装します。 コントラクトには 1 つの操作 (`GetImage`) しかありません。 このメソッドはビットマップを生成して、それを <xref:System.IO.MemoryStream> に .jpg 形式で保存します。 操作はそのストリームを呼び出し元に戻します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33498109"
   
      コードの最後から 2 番目の行にある `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";` に注意してください。  
   
-     これにより、コンテンツ タイプ ヘッダーに設定`"image/jpeg"`です。 この例では .jpg ファイルを戻す方法を示していますが、必要に応じて、任意の種類のデータを任意の形式で戻すように変更できます。 操作はデータを生成または取得してそれをストリームに書き込む必要があります。  
+     コンテンツ タイプのヘッダーにこの設定`"image/jpeg"`します。 この例では .jpg ファイルを戻す方法を示していますが、必要に応じて、任意の種類のデータを任意の形式で戻すように変更できます。 操作はデータを生成または取得してそれをストリームに書き込む必要があります。  
   
 ### <a name="to-host-the-service"></a>サービスをホストするには  
   
@@ -175,5 +175,5 @@ namespace RawImageService
   
 -   コード例のコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll を参照します。  
   
-## <a name="see-also"></a>関連項目  
- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>関連項目
+- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

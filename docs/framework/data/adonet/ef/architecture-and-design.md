@@ -2,12 +2,12 @@
 title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576331"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
 SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement は、"SELECT... の図形の正規 SQL SELECT ステートメントを表します 差出人 WHERE … グループ化してください. ORDER BY"。  
+ SqlSelectStatement は、"SELECT... の図形の正規 SQL SELECT ステートメントを表します FROM  .. WHERE … グループ化してください. ORDER BY"。  
   
  各 SQL 句は StringBuilder によって表されます。 また、Distinct が指定されているかどうか、およびステートメントが最上位かどうかを追跡します。 ステートメントが最上位ではなく、ステートメントに TOP 句も含まれていない場合は、ORDER BY 句は省略されます。  
   
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  エクステントの別名と列の両方について一意の名前を生成するには、<existing_name>_n を使用します。n はまだ使用されていない最小の別名です。 すべての別名のグローバル リストを使用すると、連鎖名前変更の必要性が高くなります。  
   
-## <a name="see-also"></a>関連項目  
- [サンプル プロバイダーでの SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>関連項目
+- [サンプル プロバイダーでの SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 755c64aa00b82bf2d8213217787f4dc1916c0898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599050"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps メソッド
 指定された `ManifestResource` メタデータ構造体を変更します。  
@@ -40,28 +40,28 @@ HRESULT SetManifestResourceProps (
   
 #### <a name="parameters"></a>パラメーター  
  `mr`  
- [in]トークンを指定する、`ManifestResource`メタデータ構造体を変更できます。  
+ [in]トークンを指定する、`ManifestResource`メタデータ構造を変更します。  
   
  `tkImplementation`  
- [in]型のトークン、`File`または`AssemblyRef`、リソース プロバイダーにマップします。  
+ [in]型のトークン`File`または`AssemblyRef`、リソース プロバイダーにマップされます。  
   
  `dwOffset`  
- [in]ファイル内のリソースの先頭までのオフセット。  
+ [in]リソース ファイル内の先頭までのオフセット。  
   
  `dwResourceFlags`  
- [in]リソースの属性を指定するフラグ値のビットごとの組み合わせ。  
+ [in]リソースの属性を指定するフラグの値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>コメント  
- 作成する、`ManifestResource`メタデータ構造体を使用して、 [imetadataassemblyemit::definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 作成する、`ManifestResource`メタデータ構造体を使用して、 [imetadataassemblyemit::definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

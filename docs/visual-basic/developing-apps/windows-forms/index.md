@@ -2,15 +2,9 @@
 title: Windows フォーム アプリケーションの基礎 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582581"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 Visual Basic の重要な部分は、ユーザーのコンピューターでローカルに実行する Windows フォーム アプリケーションを作成する機能です。 Visual Studio を使用して、Windows フォームを使用すると、アプリケーションとユーザー インターフェイスを作成することができます。 クラスを Windows フォーム アプリケーションが構築された、<xref:System.Windows.Forms>名前空間。  
@@ -46,10 +40,10 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
 |終了|解決方法については、|  
 |--------|---------|  
-|Visual Studio で新しい Windows フォーム アプリケーションを作成します。|[チュートリアル: 単純な Windows フォームの作成](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|フォーム上のコントロールを使用します。|[方法: Windows フォームにコントロールを追加する](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
+|Visual Studio で新しい Windows フォーム アプリケーションを作成します。|[チュートリアル: 単純な Windows フォームを作成します。](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|フォーム上のコントロールを使用します。|[方法: Windows フォームにコントロールを追加します。](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |使用したグラフィックを作成します。 <xref:System.Drawing>|[グラフィックス プログラミングについて](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
-|カスタム コントロールを作成します。|[方法: UserControl クラスを継承する](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
+|カスタム コントロールを作成します。|[方法: UserControl クラスを継承します。](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>データの表示と操作  
  多くのアプリケーションは、データベース、XML ファイル、XML Web サービス、またはその他のデータ ソースからデータを表示する必要があります。 Windows フォームは、柔軟なコントロールと呼ばれる、<xref:System.Windows.Forms.DataGridView>のすべてのデータが独自のセルを占有するので、従来の行と列の形式で表形式のデータを表示するためのコントロール。 使用して<xref:System.Windows.Forms.DataGridView>個々 のセルの外観をカスタマイズ、任意の行と列のロックおよびその他の機能の 1 つのセル内で複雑なコントロールを表示することができます。  
@@ -66,9 +60,9 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
 |終了|解決方法については、|  
 |--------|---------|  
-|使用して、<xref:System.Windows.Forms.BindingSource>コンポーネント|[方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データ ソース|[方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|データ ソース ウィンドウを使用します。|[チュートリアル: Windows フォームでのデータの表示](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
+|使用して、<xref:System.Windows.Forms.BindingSource>コンポーネント|[方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
+|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データ ソース|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|データ ソース ウィンドウを使用します。|[チュートリアル: Windows フォームでデータの表示](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>クライアント コンピューターにアプリケーションを配置する  
  アプリケーションを作成するとする必要がありますに送信するユーザーをインストールして、自分のクライアント コンピューターで実行できます。 使用して、[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]テクノロジ、ほんの数回のクリックを使用して Visual Studio 内からアプリケーションを展開し、Web 上のアプリケーションを指す URL をユーザーに提供します。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] すべての要素と、アプリケーションでの依存関係を管理し、により、アプリケーションがクライアント コンピューターに正しくインストールされているようになります。  
@@ -81,9 +75,9 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
 |終了|解決方法については、|  
 |--------|---------|  
-|アプリケーションをデプロイします。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル : ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|更新プログラム、[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]展開|[方法 : ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|セキュリティを管理します。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法 : ClickOnce のセキュリティ設定を有効にする](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|アプリケーションをデプロイします。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|更新プログラム、[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]展開|[方法: ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|セキュリティを管理します。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: [ClickOnce セキュリティ設定を有効にする]](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>その他のコントロールおよび機能  
  Windows フォームには、ダイアログ ボックスの作成、ヘルプやドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームは、の堅牢なセキュリティ システムに依存しています。、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]、をお客様により安全なアプリケーションをリリースできます。  
@@ -92,11 +86,11 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
 |終了|解決方法については、|  
 |--------|---------|  
-|フォームのコンテンツを印刷します。|[方法: Windows フォームでグラフィックスを印刷する](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [方法 : Windows フォームで複数ページのテキスト ファイルを印刷する](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
+|フォームのコンテンツを印刷します。|[方法: Windows フォームでグラフィックスを印刷します。](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [方法: Windows フォームで複数ページのテキスト ファイルを印刷します。](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Windows フォームのセキュリティについての詳細|[Windows フォームのセキュリティの概要](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
-- [Windows フォームの概要](../../../framework/winforms/windows-forms-overview.md)  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
+- [Windows フォームの概要](../../../framework/winforms/windows-forms-overview.md)
 - [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)

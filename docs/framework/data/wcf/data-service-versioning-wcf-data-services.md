@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 9a92346267012d3651d04648b357bbf530097e34
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: aef4c98390d1fda4828bea8b6b2e482cb0071c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558528"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>データ サービスのバージョン管理 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]クライアントは、Uri を使用してデータ モデルに基づくリソースとしてデータをアクセスできるように、データ サービスを作成することができます。 OData では、サービス操作の定義もサポートしています。 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、これらのデータ サービスを変更することが必要になる場合があります。 既存のデータ サービスに変更を加える場合は、新しいバージョンのデータ サービスを定義する必要性や、既存のクライアント アプリケーションへの影響を最小限に抑える最善の方法を検討する必要があります。 ここでは、新しいバージョンのデータ サービスをいつどのように作成するかに関するガイダンスを示します。 また、WCF Data Services がクライアントと、OData プロトコルの異なるバージョンをサポートするデータ サービスの間の交換を処理する方法についても説明します。
@@ -53,7 +53,7 @@ ms.locfileid: "47204075"
 ## <a name="odata-protocol-versions"></a>OData プロトコルのバージョン
  OData の新しいバージョンがリリースされるは、クライアント アプリケーションが同じバージョンのデータ サービスによってサポートされている OData プロトコルを使用していない可能性があります。 以前のバージョンのクライアント アプリケーションは、OData の新しいバージョンをサポートするデータ サービスにアクセスできます。 クライアント アプリケーションは、新しいバージョンにアクセスしているデータ サービスよりも新しいバージョンの OData をサポートする WCF Data Services クライアント ライブラリの使用可能性があります。
 
- WCF Data Services では、このようなバージョン管理シナリオを処理する OData で提供されるサポートを利用します。 生成と、クライアントが OData のデータとは異なるバージョンを使用する場合、クライアント データ サービス クラスを作成するデータ モデルのメタデータの使用はサポートされてもサービスが使用されます。 詳細については、次を参照してください。 [OData: プロトコルのバージョン管理](https://go.microsoft.com/fwlink/?LinkId=186071)します。
+ WCF Data Services では、このようなバージョン管理シナリオを処理する OData で提供されるサポートを利用します。 生成と、クライアントが OData のデータとは異なるバージョンを使用する場合、クライアント データ サービス クラスを作成するデータ モデルのメタデータの使用はサポートされてもサービスが使用されます。 詳細については、次を参照してください[OData:。プロトコルのバージョン管理](https://go.microsoft.com/fwlink/?LinkId=186071)します。
 
 ### <a name="version-negotiation"></a>バージョンのネゴシエーション
  クライアントによって要求されたバージョンに関係なく、サービスによって使用される OData プロトコルの最高バージョンを定義するデータ サービスを構成できます。 指定することでこれを行う、<xref:System.Data.Services.Common.DataServiceProtocolVersion>値、<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>のプロパティ、<xref:System.Data.Services.DataServiceBehavior>データ サービスで使用します。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。
@@ -69,9 +69,9 @@ ms.locfileid: "47204075"
 |バージョン 3|-ダウンロードしてから OData バージョン 3 をサポートするプレリリース バージョンをインストール、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=203885)します。|
 
 ### <a name="metadata-versions"></a>メタデータのバージョン
- 既定では、WCF Data Services は、CSDL のバージョン 1.1 を使用して、データ モデルを表します。 リフレクション プロバイダーまたはカスタム データ サービス プロバイダーに基づくデータ モデルの場合は、常にこの CSDL バージョンが使用されます。 ただし、[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] を使用してデータ モデルを定義している場合は、返される CSDL のバージョンは [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] で使用されるバージョンと同じになります。 CSDL のバージョンの名前空間が続く、[スキーマ要素](https://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f)します。 詳細については、仕様を参照してください。 [ \[MC-CSDL\]: 概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkId=159072)します。
+ 既定では、WCF Data Services は、CSDL のバージョン 1.1 を使用して、データ モデルを表します。 リフレクション プロバイダーまたはカスタム データ サービス プロバイダーに基づくデータ モデルの場合は、常にこの CSDL バージョンが使用されます。 ただし、[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] を使用してデータ モデルを定義している場合は、返される CSDL のバージョンは [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] で使用されるバージョンと同じになります。 CSDL のバージョンの名前空間が続く、[スキーマ要素](https://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f)します。 詳細については、仕様を参照してください[ \[MC-CSDL\]:。概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkId=159072)します。
 
- 返されたメタデータの `DataServices` 要素には `DataServiceVersion` 属性も含まれます。この属性は、応答メッセージの `DataServiceVersion` ヘッダーの値と同じです。 クライアント アプリケーションなど、**サービス参照の追加** ダイアログ ボックス Visual Studio は、この情報を使用してデータ サービスをホストする WCF Data Services のバージョンと正しく連動するクライアント データ サービス クラスを生成します。 詳細については、次を参照してください。 [OData: プロトコルのバージョン管理](https://go.microsoft.com/fwlink/?LinkId=186071)します。
+ 返されたメタデータの `DataServices` 要素には `DataServiceVersion` 属性も含まれます。この属性は、応答メッセージの `DataServiceVersion` ヘッダーの値と同じです。 クライアント アプリケーションなど、**サービス参照の追加** ダイアログ ボックス Visual Studio は、この情報を使用してデータ サービスをホストする WCF Data Services のバージョンと正しく連動するクライアント データ サービス クラスを生成します。 詳細については、次を参照してください[OData:。プロトコルのバージョン管理](https://go.microsoft.com/fwlink/?LinkId=186071)します。
 
 ## <a name="see-also"></a>関連項目
 

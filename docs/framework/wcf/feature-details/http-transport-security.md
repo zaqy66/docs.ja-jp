@@ -2,12 +2,12 @@
 title: HTTP トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bda749366b452a41a925fa36c90b3a2caa6bca32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602995"
 ---
 # <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 トランスポートとして HTTP を使用すると、SSL (Secure Sockets Layer) によりセキュリティが提供されます。 SSL はクライアントに対してサービスの認証を行い、機密性 (暗号化) をチャネルに提供する技術としてインターネットで広く使用されています。 このトピックでは、SSL のしくみし、Windows Communication Foundation (WCF) でその実装方法について説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "50201531"
 ## <a name="basic-ssl"></a>基本 SSL  
  SSL の機能について一般的なシナリオを用いて説明します。ここでは、銀行の Web サイトを考えます。 ユーザーはユーザー名とパスワードを使用してサイトにログオンできます。 認証された後、ユーザーは、残高照会、支払い、口座間振り替えなどの各種取引を実行できます。  
   
- まず、サイトにアクセスするユーザーと、SSL メカニズムは一連のネゴシエーションと呼ばれるを開始、*ハンドシェイク*、(この例では、Internet Explorer) では、ユーザーのクライアントを使用します。 SSL は最初にユーザーに対して銀行サイトの認証を行います。 ユーザーを誘導してユーザー名とパスワードを入力させる "なりすまし" サイトではなく、通信先が実際のサイトであることをユーザーが最初に認識する必要があるため、この手順は不可欠です。 SSL は、VeriSign などの信頼された機関から提供される SSL 証明書を使用してこの認証を行います。 論理上は、VeriSign が銀行サイトの識別情報を保証することになります。 Internet Explorer では VeriSign が信頼済みであるため、このサイトも信頼されます。 VeriSign に確認する場合は、VeriSign のロゴをクリックします。 有効期限や発行先 (銀行サイト) などの信頼性に関する報告が表示されます。  
+ まず、サイトにアクセスするユーザーと、SSL メカニズムは一連のネゴシエーションと呼ばれるを開始、*ハンドシェイク*、(この例では、Internet Explorer) では、ユーザーのクライアントを使用します。 SSL は最初にユーザーに対して銀行サイトの認証を行います。 ユーザーを誘導してユーザー名とパスワードを入力させる "なりすまし" サイトではなく、通信先が実際のサイトであることをユーザーが最初に認識する必要があるため、この手順は不可欠です。 SSL は、VeriSign などの信頼された機関から提供される SSL 証明書を使用してこの認証を行います。 次のようになります。VeriSign が銀行サイトの id を保証します。 Internet Explorer では VeriSign が信頼済みであるため、このサイトも信頼されます。 VeriSign に確認する場合は、VeriSign のロゴをクリックします。 有効期限や発行先 (銀行サイト) などの信頼性に関する報告が表示されます。  
   
  セキュリティで保護されたセッションを開始するには、クライアントは「もしもし」と同等の情報を暗号アルゴリズムのリストと共にサーバーに送信します。サーバーはこの暗号アルゴリズムのリストを使用して署名、ハッシュの生成、暗号化と複号化を行えます。 これに対して、サイトからは受信確認、およびサイトが選択したアルゴリズム スイートの 1 つが返送されます。 この初期ハンドシェイク中に、両方のパーティは nonce を送受信します。 A *nonce*は、ランダムに生成されたのデータで使用される、サイトの公開キーと組み合わせてハッシュを作成します。 A*ハッシュ*SHA1 などの標準的なアルゴリズムを使用して 2 つの数値から派生した新しい番号です。 (クライアントとサイトは、使用するハッシュ アルゴリズムに同意するためのメッセージも交換します)。ハッシュは一意の数値で、クライアントとサイト間のセッションでメッセージの暗号化および復号化を行うためにのみ使用されます。 クライアントとサービスの両方に、元の nonce と証明書の公開キーがあるので、両者で同じハッシュを生成できます。 したがって、クライアントがサービスから送信されたハッシュを検証するには、(a) 同意したアルゴリズムを使用してデータからハッシュを計算し、(b) サービスから送信されたハッシュと比較します。両方が一致する場合は、クライアントはハッシュが改ざんされていないことを確認できます。 次にクライアントはこのハッシュを、さらに別の新しいハッシュが含まれるメッセージを暗号化するキーとして使用します。 サービスはハッシュを使用してこのメッセージを複号化でき、最後から 2 番目のハッシュを復帰できます。 ここで、累積された情報 (nonce、公開キーなどのデータ) が両者で認識されるので、最後のハッシュ (マスター キー) を作成できます。 最後のキーは、最後から 2 番目のハッシュで暗号化され送信されます。 次に、マスター キーを使ってメッセージの暗号化と複号化が行われセッションがリセットされます。 クライアントとサービスは、同じキーを使用するためともいいます、*セッション キー*します。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "50201531"
 ### <a name="using-iis-for-transport-security"></a>トランスポート セキュリティのための IIS の使用  
   
 #### <a name="iis-70"></a>IIS 7.0  
- 設定する[!INCLUDE[iisver](../../../../includes/iisver-md.md)](SSL を使用) をセキュリティで保護されたホストとして、次を参照してください。 [IIS 7.0 Beta: Configuring Secure Sockets Layer in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600)します。  
+ 設定する[!INCLUDE[iisver](../../../../includes/iisver-md.md)](SSL を使用) をセキュリティで保護されたホストとして、次を参照してください[IIS 7.0 Beta:。IIS 7.0 のレイヤーを構成、セキュリティで保護されたソケット](https://go.microsoft.com/fwlink/?LinkId=88600)します。  
   
- 使用するための証明書を構成する[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta: Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
+ 使用するための証明書を構成する[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
   
 #### <a name="iis-60"></a>IIS 6.0  
  設定する[!INCLUDE[iis601](../../../../includes/iis601-md.md)](SSL を使用) をセキュリティで保護されたホストとして、次を参照してください。 [Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)します。  
@@ -50,8 +50,8 @@ ms.locfileid: "50201531"
 ### <a name="using-httpcfg-for-ssl"></a>SSL での HttpCfg の使用  
  自己ホスト型 WCF アプリケーションを作成する場合に使用可能な HttpCfg.exe ツールをダウンロード、 [Windows XP Service Pack 2 サポート ツール サイト](https://go.microsoft.com/fwlink/?LinkId=29002)します。  
   
- では、HttpCfg.exe ツールを使用して、X.509 証明書でポートを設定する方法の詳細については、次を参照してください。[方法: SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。  
+ では、HttpCfg.exe ツールを使用して、X.509 証明書でポートを設定する方法の詳細については、次を参照してください。[方法。SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [メッセージのセキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+## <a name="see-also"></a>関連項目
+- [トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [メッセージのセキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

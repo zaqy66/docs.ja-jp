@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603665"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField メソッド
-メソッド内ではない 1 つの変数を定義します。 このメソッドは、使用されるクラス内の特定のフィールド、ビット フィールドです。  
+メソッド内ではない 1 つの変数を定義します。 このメソッドは、使用のクラス内の特定のフィールド、ビット フィールド、および具合です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ HRESULT DefineField(
   
 #### <a name="parameters"></a>パラメーター  
  `parent`  
- [in]メタデータ型またはメソッド トークンです。  
+ [in]メタデータ型またはメソッド トークン。  
   
  `name`  
  [in]フィールド名です。  
@@ -53,28 +53,28 @@ HRESULT DefineField(
  [in]フィールドの属性。  
   
  `cSig`  
- [in]A`ULONG32`フィールド シグネチャの格納に必要なバッファーの文字のサイズはします。  
+ [in]A`ULONG32`文字のフィールドのシグネチャを格納するために必要なバッファーのサイズはします。  
   
  `signature`  
- [in]フィールド シグネチャの配列です。  
+ [in]フィールドの署名の配列。  
   
  `addrKind`  
  [in]アドレスの種類。  
   
  `addr1`  
- [in]フィールド定義の最初のアドレス。  
+ [in]フィールド指定の最初のアドレス。  
   
  `addr2`  
- [in]フィールド定義の 2 番目のアドレス。  
+ [in]フィールド指定の 2 番目のアドレス。  
   
  `addr3`  
- [in]フィールドの仕様の 3 番目のアドレス。  
+ [in]フィールド指定の 3 番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

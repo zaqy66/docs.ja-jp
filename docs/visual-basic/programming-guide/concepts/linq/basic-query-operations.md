@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: bcaefce4621fbfe3b3ac1a65ca634136fd9870e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585618"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
 このトピックで説明を簡単に紹介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]Visual Basic、およびいくつかのクエリを実行する操作の一般的な種類の式。 詳細については、次のトピックを参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "43461025"
   
  [クエリ](../../../../visual-basic/language-reference/queries/index.md)  
   
- [チュートリアル: Visual Basic でのクエリの作成](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [チュートリアル: Visual Basic におけるクエリの作成](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>(From) データ ソースを指定します。  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]のクエリでは、まず、クエリを実行するデータ ソースを指定します。 そのため、`From`クエリ句は常に最初は。 クエリ演算子は、選択し、図形のソースの種類に基づく結果。  
@@ -103,7 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
   
 > [!NOTE]
->  作成した受講者の一覧で、このコードを実行することができます[方法: 項目の一覧を作成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)します。  
+>  作成した受講者の一覧で、このコードを実行することができます[方法。項目の一覧を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)です。  
   
  `Join`キーワードは、 `INNER JOIN` sql です。 これは、2 つのコレクション内の要素間の一致するキー値に基づいて 2 つのコレクションを結合します。 クエリでは、キーの値が一致するコレクションの要素のすべてまたは一部を返します。 たとえば、次のコードでは、前の暗黙の結合のアクションが重複しています。  
   
@@ -116,9 +116,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
   
- 作成した受講者のリストを使用してこのコードを実行するかどうかは[方法: リストの項目を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)からの出力、`For Each`ステートメントは。  
+ 作成した受講者のリストを使用してこのコードを実行するかどうかは[方法。リストの項目を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)からの出力、`For Each`ステートメントは。  
   
- 年: Junior  
+ 年。Junior  
   
  Tucker です、Michael  
   
@@ -128,7 +128,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Lance、tucker です。  
   
- 年: シニア  
+ 年。シニア  
   
  Omelchenko、Svetlana  
   
@@ -140,7 +140,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Terry Adams は、  
   
- 年: 今  
+ 年。今  
   
  Mortensen、Sven  
   
@@ -152,9 +152,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  詳細については`Group By`を参照してください[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [クエリ](../../../../visual-basic/language-reference/queries/index.md)  
- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

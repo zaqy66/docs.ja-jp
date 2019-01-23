@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543579"
 ---
 # <a name="typography-how-to-topics"></a>文字体裁に関する「方法」トピック
-このセクションのトピックを使用する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション内のテキストの豊富なプレゼンテーションのサポートします。  
+このセクションのトピックを使用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション内のテキストのリッチ プレゼンテーションをサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [文字の装飾を作成する](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "33546316"
  [ビジュアルにテキストを描画する](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
  [XAML で特殊文字を使用する](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Documents.Typography>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Documents.Typography>
+- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

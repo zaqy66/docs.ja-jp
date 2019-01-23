@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90beb1487581ff4c031d6f10fb613430207dc026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575568"
 ---
 # <a name="contention-etw-events"></a>競合 ETW イベント
 競合イベントは、ランタイムによって使用される <xref:System.Threading.Monitor?displayProperty=nameWithType> ロックまたはネイティブ ロックの競合が発生するたびに発生します。 競合は、あるスレッドが、別のスレッドが保持しているロックを待機しているときに発生します。  
@@ -34,8 +34,8 @@ ms.locfileid: "33397521"
   
 |フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
-|フラグ|win:UInt8|マネージの場合は 0、ネイティブの場合は 1 です。|  
+|フラグ|win:UInt8|マネージドの場合は 0、ネイティブの場合は 1 です。|  
 |ClrInstanceID|win:UInt16|CLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

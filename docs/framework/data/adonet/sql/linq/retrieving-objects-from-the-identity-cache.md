@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569155"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID キャッシュからのオブジェクトの取得
 このトピックでは、<xref:System.Data.Linq.DataContext> によって管理される ID キャッシュからオブジェクトを返す、LINQ to SQL クエリの種類について説明します。  
@@ -20,7 +20,7 @@ ms.locfileid: "33357609"
  通常、LINQ to SQL で ID キャッシュからオブジェクトを取得するには、そのクエリがオブジェクトのプライマリ キーに基づき、1 つのオブジェクトを返すようにする必要があります。 特に、次に示す一般的な形式のいずれかでクエリを実行する必要があります。  
   
 > [!NOTE]
->  プリコンパイル済みクエリでは、ID キャッシュからオブジェクトが返されません。 事前にコンパイルされたクエリの詳細については、次を参照してください。<xref:System.Data.Linq.CompiledQuery>と[する方法: ストアとクエリの再利用](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)です。  
+>  プリコンパイル済みクエリでは、ID キャッシュからオブジェクトが返されません。 コンパイル済みクエリの詳細については、次を参照してください。<xref:System.Data.Linq.CompiledQuery>と[方法。格納およびクエリを再利用](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)します。  
   
  オブジェクトを ID キャッシュから取得するには、次に示す一般的な形式のいずれかでクエリを実行する必要があります。  
   
@@ -64,8 +64,8 @@ ms.locfileid: "33357609"
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>関連項目
+- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

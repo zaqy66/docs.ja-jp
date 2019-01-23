@@ -1,21 +1,21 @@
 ---
-title: '方法 : カスタム クライアント ID 検証機能を作成する'
+title: '方法: カスタムのクライアント Id 検証機能を作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569376"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>方法 : カスタム クライアント ID 検証機能を作成する
-*Identity* Windows Communication Foundation (WCF) の機能により、クライアントに事前に予想されるサービスの id を指定します。 サーバーがクライアントに対して自身を認証するたびに、ID がこの予想 ID と照合されます (Id およびそのしくみの詳細については、次を参照してください[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)。  
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>方法: カスタムのクライアント Id 検証機能を作成します。
+*Identity*機能の Windows Communication Foundation (WCF) が事前に予想されるサービスの id を指定するクライアントを使用できます。 サーバーがクライアントに対して自身を認証するたびに、ID がこの予想 ID と照合されます (Id とそのしくみの詳細については、次を参照してください[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)。  
   
- 必要に応じて、カスタム ID 検証機能を使用して検証をカスタマイズできます。 たとえば、追加のサービス ID 検証チェックを実行できます。 この例では、カスタム ID 検証機能で、サーバーから戻された X.509 証明書の追加のクレームをチェックします。 サンプル アプリケーションについては、次を参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)です。  
+ 必要に応じて、カスタム ID 検証機能を使用して検証をカスタマイズできます。 たとえば、追加のサービス ID 検証チェックを実行できます。 この例では、カスタム ID 検証機能で、サーバーから戻された X.509 証明書の追加のクレームをチェックします。 サンプル アプリケーションでは、次を参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>EndpointIdentity クラスを拡張するには  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33804477"
   
 ### <a name="to-implement-the-trygetidentity-method"></a>TryGetIdentity メソッドを実装するには  
   
-1.  <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> メソッドを実装します。このメソッドは、クライアントが <xref:System.ServiceModel.EndpointIdentity> クラスのインスタンスを返すことができるかどうかを判定します。 実装を呼び出す、WCF インフラストラクチャ、`TryGetIdentity`メッセージからサービスの id を取得するには、最初のメソッドです。 次に、インフラストラクチャは、返された `CheckAccess` と `EndpointIdentity` を使用して <xref:System.IdentityModel.Policy.AuthorizationContext> 実装を呼び出します。  
+1.  <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> メソッドを実装します。このメソッドは、クライアントが <xref:System.ServiceModel.EndpointIdentity> クラスのインスタンスを返すことができるかどうかを判定します。 WCF インフラストラクチャの実装を呼び出す、`TryGetIdentity`メッセージからサービスの id を取得するには、最初のメソッド。 次に、インフラストラクチャは、返された `CheckAccess` と `EndpointIdentity` を使用して <xref:System.IdentityModel.Policy.AuthorizationContext> 実装を呼び出します。  
   
 2.  `TryGetIdentity` メソッドに次のコードを追加します。  
   
@@ -81,10 +81,10 @@ ms.locfileid: "33804477"
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- <xref:System.ServiceModel.EndpointIdentity>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [サービス ID サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- <xref:System.ServiceModel.EndpointIdentity>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [サービス ID サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)
+- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)

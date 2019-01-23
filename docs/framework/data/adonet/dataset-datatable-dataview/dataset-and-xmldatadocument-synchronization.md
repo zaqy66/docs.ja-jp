@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 54991234d4eaa9edab218d3b0d221a6e477d2be5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587779"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet と XmlDataDocument の同期
 ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナル表現があります。 階層データにアクセスするには、.NET Framework で使用できる XML クラスを使用できます。 従来、この 2 つのデータ表現は個別に使用されていました。 ただし、.NET Framework により、リアルタイムの同期のアクセスを使用してデータのリレーショナルで階層的な表現の両方に、**データセット**オブジェクトと<xref:System.Xml.XmlDataDocument>オブジェクトに、それぞれします。  
@@ -19,7 +19,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
   
  同期するいくつかの方法がある、**データセット**で、 **XmlDataDocument**します。 次の操作を行うことができます。  
   
--   設定、**データセット**スキーマ (つまり、リレーショナル構造) およびデータを使用し、それを新しい同期**XmlDataDocument**。 この方法では、既存のリレーショナル データの階層ビューが作成されます。 例えば:  
+-   設定、**データセット**スキーマ (つまり、リレーショナル構造) およびデータを使用し、それを新しい同期**XmlDataDocument**。 この方法では、既存のリレーショナル データの階層ビューが作成されます。 例:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -112,5 +112,5 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
  <xref:System.Xml.XmlDataDocument>  
  に関するリファレンス情報を含む、 **XmlDataDocument**クラス。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

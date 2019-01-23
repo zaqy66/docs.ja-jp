@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b30203aaf36d4fa6c0b06d54da1abc1f99d22afc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576903"
 ---
 # <a name="application-settings-overview"></a>アプリケーション設定の概要
 このトピックでは、アプリケーションとユーザーのために設定のデータを作成して格納する方法について説明します。  
@@ -47,14 +47,14 @@ ms.locfileid: "43503598"
   
  また、 <xref:System.Windows.Forms.Binding> クラスを使用して、フォームとコントロールのプロパティに設定をプログラムでバインドすることもできます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- <xref:System.Configuration.IPersistComponentSettings>  
- [方法: アプリケーション設定を検証する](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [アプリケーションの設定の管理 (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
- [方法: 実行時に設定を C# で読み取る](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
- [アプリケーション設定とユーザー設定の使用](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [アプリケーション設定アーキテクチャ](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [カスタム コントロールのアプリケーション設定](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- <xref:System.Configuration.IPersistComponentSettings>
+- [方法: アプリケーション設定を検証します。](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+- [アプリケーションの設定の管理 (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)
+- [方法: 実行時の設定の読み取りC#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)
+- [アプリケーション設定とユーザー設定の使用](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
+- [アプリケーション設定アーキテクチャ](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)

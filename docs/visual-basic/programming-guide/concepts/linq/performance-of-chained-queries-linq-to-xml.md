@@ -2,12 +2,12 @@
 title: 連結クエリ (LINQ to XML) のパフォーマンス (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-ms.openlocfilehash: d390fc0e45967cd98697320eb6f61a51cb1c19da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a4893a000bc80fa703e7d47aa5d73f02b95a8ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601871"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>連結クエリ (LINQ to XML) のパフォーマンス (Visual Basic)
 LINQ (および LINQ to XML) の重要な利点の 1 つは、連結クエリが、大きい複雑な単一クエリと同様のパフォーマンスを発揮できるという点です。  
@@ -44,5 +44,5 @@ Next
   
  したがって、`query2` の反復は最初のクエリのソースにある項目数に直接比例します。つまり線形時間となります。  
   
-## <a name="see-also"></a>関連項目  
- [パフォーマンス (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+- [パフォーマンス (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

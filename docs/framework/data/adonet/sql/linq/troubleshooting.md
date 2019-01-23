@@ -2,12 +2,12 @@
 title: トラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586411"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 ここでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションで発生する可能性のある問題をいくつか示し、そうした問題を回避または影響を軽減するための提案を示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "47108352"
   
  このような操作を行わない場合、<xref:System.Data.SqlClient.SqlException> 例外がスローされます。  
   
- 詳細については、次を参照してください。[方法: 行をデータベースから削除](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)します。  
+ 詳細については、「[方法 :データベースから行を削除](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)します。  
   
 ## <a name="expression-not-queryable"></a>クエリ可能でない式  
  なら、"式 [式] はクエリ不可能です。アセンブリ参照が存在しますか?" エラーは、次のことを確認します。  
@@ -69,6 +69,6 @@ ms.locfileid: "47108352"
 ## <a name="oncreated-partial-method"></a>OnCreated() 部分メソッド  
  オブジェクト コンストラクターが呼び出されるたびに、生成されたメソッド `OnCreated()` が呼び出されます。これは、元の値をコピーするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] がコンストラクターを呼び出す場合にも当てはまります。 独自の部分クラスに `OnCreated()` メソッドを実装する場合には、この動作を考慮に入れてください。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>関連項目
+- [デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
