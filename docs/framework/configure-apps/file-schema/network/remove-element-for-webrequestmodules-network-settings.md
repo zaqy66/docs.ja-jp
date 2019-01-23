@@ -1,5 +1,5 @@
 ---
-title: 'webRequestModules の <remove> 要素 (ネットワーク設定)'
+title: webRequestModules の &lt;remove&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50190750"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>webRequestModules の <remove> 要素 (ネットワーク設定)
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>webRequestModules の &lt;remove&gt; 要素 (ネットワーク設定)
 アプリケーションからカスタム Web 要求モジュールを削除します。  
   
  \<configuration>  

@@ -1,5 +1,5 @@
 ---
-title: ''<interfacename>.<membername>' は、基本クラス '<baseclassname>' によって既に実装されています。<type> の再実装と見なされます。'
+title: "'<interfacename>.<membername>' は、基本クラス '<baseclassname>' によって既に実装されています。&lt;&gt;&lt;&gt;&lt;&gt; <type> の再実装と見なされます。&lt;&gt;"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33588971"
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>'<interfacename>.<membername>' は、基本クラス '<baseclassname>' によって既に実装されています。<type> の再実装と見なされます。
+# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>'<interfacename>.<membername>' は、基本クラス '<baseclassname>' によって既に実装されています。&lt;&gt;&lt;&gt;&lt;&gt; <type> の再実装と見なされます。&lt;&gt;
 プロパティ、プロシージャ、または派生クラスでイベントを使用して、`Implements`句は、基底クラスで既に実装されているインターフェイス メンバーを指定します。  
   
  派生クラスでは、その基底クラスによって実装されているインターフェイス メンバーを再実装できます。 このことは、基底クラスの実装をオーバーライドすることとは異なります。 詳細については、次を参照してください。 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)です。  

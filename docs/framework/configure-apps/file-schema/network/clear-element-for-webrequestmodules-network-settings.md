@@ -1,5 +1,5 @@
 ---
-title: 'webRequestModules の <clear> 要素 (ネットワーク設定)'
+title: webRequestModules の &lt;clear&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50190529"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>webRequestModules の <clear> 要素 (ネットワーク設定)
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>webRequestModules の &lt;clear&gt; 要素 (ネットワーク設定)
 アプリケーションから登録済みのすべての Web 要求モジュールを削除します。  
   
  \<configuration>  

@@ -15,7 +15,7 @@ ms.locfileid: "50192188"
 ## <a name="schema-hierarchy"></a>スキーマの階層  
  [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<uri >](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
 ## <a name="syntax"></a>構文  
   

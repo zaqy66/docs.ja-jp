@@ -1,5 +1,5 @@
 ---
-title: '<idn>要素 (Uri 設定)'
+title: '&lt;idn&gt;要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53153359"
 ---
-# <a name="ltidngt-element-uri-settings"></a><idn>要素 (Uri 設定)
+# <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;要素 (Uri 設定)
 ドメイン名に国際化ドメイン名 (IDN) 解析が適用されるかどうかを指定します。  
   
 ## <a name="schema-hierarchy"></a>スキーマの階層  

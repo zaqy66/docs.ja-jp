@@ -13,8 +13,8 @@ ms.locfileid: "50192552"
 <xref:System.Uri> が特定のスキームに解析される方法を指定します。  
   
  \<configuration>  
-\<uri >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
   
 ## <a name="syntax"></a>構文  
   

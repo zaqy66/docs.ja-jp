@@ -104,7 +104,7 @@ ms.locfileid: "48850375"
 ### <a name="narrowing-conversion-protection"></a>縮小変換の保護  
  縮小変換の欠点は、ことは、実行時に失敗したことができます。 たとえば場合、`String`変数のものを含む"True"または"False"に変換できない以外`Boolean`します。 区切り文字が含まれている、任意の数値型への変換は失敗します。 あるとわかっている場合を除き、`String`変数変換先の型を受け入れることができる値を常に保持する、変換しないでください。  
   
- 変換する必要がある場合`String`を別のデータ型では、最も安全な手順で実行しようとした変換を囲む、[お試しください.キャッチしてください.Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 これにより、実行時エラーに対処できます。  
+ 変換する必要がある場合`String`を別のデータ型では、最も安全な手順で実行しようとした変換を囲む、[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 これにより、実行時エラーに対処できます。  
   
 ### <a name="character-arrays"></a>文字配列  
  1 つ`Char`と配列の`Char`要素の両方に拡大変換する`String`します。 ただし、`String`に拡大変換されない`Char()`します。 変換する、`String`値を`Char`使用することができます、配列、<xref:System.String.ToCharArray%2A>のメソッド、<xref:System.String?displayProperty=nameWithType>クラス。  
