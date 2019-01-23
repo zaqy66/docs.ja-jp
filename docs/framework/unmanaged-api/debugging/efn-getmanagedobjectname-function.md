@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4eddb1461ad448a1a1718db8a11173e5e2e4a17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527784"
 ---
-# <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="cd57d-102">_EFN_GetManagedObjectName 関数</span><span class="sxs-lookup"><span data-stu-id="cd57d-102">_EFN_GetManagedObjectName Function</span></span>
-<span data-ttu-id="cd57d-103">指定したマネージ オブジェクトのポインターを使用して型の名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="cd57d-103">Gets the name of a type using the provided managed object pointer.</span></span>  
+# <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="8bd09-102">_EFN_GetManagedObjectName 関数</span><span class="sxs-lookup"><span data-stu-id="8bd09-102">_EFN_GetManagedObjectName Function</span></span>
+<span data-ttu-id="8bd09-103">指定されたマネージ オブジェクトへのポインターを使用して型の名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="8bd09-103">Gets the name of a type using the provided managed object pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd57d-104">構文</span><span class="sxs-lookup"><span data-stu-id="cd57d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8bd09-104">構文</span><span class="sxs-lookup"><span data-stu-id="8bd09-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedObjectName(  
@@ -37,28 +37,28 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cd57d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cd57d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8bd09-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8bd09-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="cd57d-106">[in]デバッグ クライアントへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cd57d-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="8bd09-106">[in]デバッグ クライアントへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8bd09-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="cd57d-107">[in]マネージ オブジェクトのポインター。</span><span class="sxs-lookup"><span data-stu-id="cd57d-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="8bd09-107">[in]マネージ オブジェクトのポインター。</span><span class="sxs-lookup"><span data-stu-id="8bd09-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="cd57d-108">szName</span><span class="sxs-lookup"><span data-stu-id="cd57d-108">szName</span></span>  
- <span data-ttu-id="cd57d-109">[out]型の名前です。</span><span class="sxs-lookup"><span data-stu-id="cd57d-109">[out] The name of the type.</span></span>  
+ <span data-ttu-id="8bd09-108">szName</span><span class="sxs-lookup"><span data-stu-id="8bd09-108">szName</span></span>  
+ <span data-ttu-id="8bd09-109">[out]型の名前。</span><span class="sxs-lookup"><span data-stu-id="8bd09-109">[out] The name of the type.</span></span>  
   
  `cbName`  
- <span data-ttu-id="cd57d-110">[out]文字列バッファー内の文字の数。</span><span class="sxs-lookup"><span data-stu-id="cd57d-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="8bd09-110">[out]文字列のバッファーで使用できる文字数。</span><span class="sxs-lookup"><span data-stu-id="8bd09-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cd57d-111">コメント</span><span class="sxs-lookup"><span data-stu-id="cd57d-111">Remarks</span></span>  
- <span data-ttu-id="cd57d-112">ない場合マネージ コードのスレッドで現在のコンテキストで、関数は、0xa0 の設備値と 0x1000 のエラー コードとマネージを返します。</span><span class="sxs-lookup"><span data-stu-id="cd57d-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8bd09-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="8bd09-111">Remarks</span></span>  
+ <span data-ttu-id="8bd09-112">ないマネージ コードのスレッドで現在のコンテキストの場合、関数は、0xa0 の施設の値と 0x1000 のエラー コードをマネージを返します。</span><span class="sxs-lookup"><span data-stu-id="8bd09-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd57d-113">要件</span><span class="sxs-lookup"><span data-stu-id="cd57d-113">Requirements</span></span>  
- <span data-ttu-id="cd57d-114">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="cd57d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8bd09-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="8bd09-113">Requirements</span></span>  
+ <span data-ttu-id="8bd09-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8bd09-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd57d-115">**ヘッダー:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="cd57d-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="8bd09-115">**ヘッダー:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="8bd09-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="cd57d-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd57d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8bd09-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bd09-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd57d-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="cd57d-117">See Also</span></span>  
- [<span data-ttu-id="cd57d-118">デバッグ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="cd57d-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="8bd09-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="8bd09-117">See also</span></span>
+- [<span data-ttu-id="8bd09-118">デバッグ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="8bd09-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
