@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 367c43dc08722288dc3b32b5133f7770ffc3a27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eee75bc16f46ba5ea58fc42c570e48b09ab9a2e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553231"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next メソッド
 移動、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)次のフレームにオブジェクト。  
@@ -38,26 +38,26 @@ HRESULT Next();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|ランタイムが正常に次のフレームをアンワインド (「解説」を参照してください)。|  
-|E_FAIL|`ICorDebugStackWalk`オブジェクトを advanced されませんでした。|  
-|CORDBG_S_AT_END_OF_STACK|このアンワインドの結果として、スタックの終わりに達しました。|  
-|CORDBG_E_PAST_END_OF_STACK|フレーム ポインターはスタックの最後に、既にそのため、追加のフレームにはアクセスできません。|  
+|S_OK|次のフレームに、ランタイムが正常にアンワインドされました (「解説」を参照してください)。|  
+|E_FAIL|`ICorDebugStackWalk`オブジェクトを移すことができません。|  
+|CORDBG_S_AT_END_OF_STACK|このアンワインドの結果として、スタックの末尾に達しました。|  
+|CORDBG_E_PAST_END_OF_STACK|フレーム ポインターがスタックの末尾に達してそのため、追加のフレームにはアクセスできません。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
- `Next`強化され、メソッド、`ICorDebugStackWalk`オブジェクト呼び出し元のフレームにのみ、ランタイムは、現在のフレームをアンワインドできます。 それ以外の場合、オブジェクトは、ランタイムはアンワインドすることが次のフレームを進めます。  
+## <a name="remarks"></a>Remarks  
+ `Next`メソッドの進歩、`ICorDebugStackWalk`呼び出し元のフレームにオブジェクトの場合にのみ、ランタイムは、現在のフレームをアンワインドできます。 それ以外の場合、オブジェクトは、ランタイムは、アンワインド可能な次のフレームを進めます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugStackWalk インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugStackWalk インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

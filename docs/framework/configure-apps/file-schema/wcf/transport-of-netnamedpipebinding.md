@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt; の &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7177dda08e1ce5b4f8adb072dce6155df714979d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556087"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; の &lt;transport&gt;
 名前付きパイプのトランスポート セキュリティ設定を定義します。  
@@ -49,13 +49,13 @@ ms.locfileid: "54148982"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|バインディングのセキュリティ設定を定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.NamedPipeTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.NamedPipeTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

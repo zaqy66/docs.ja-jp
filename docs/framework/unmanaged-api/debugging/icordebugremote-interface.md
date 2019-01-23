@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553478"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote インターフェイス
-リモート ターゲット プロセスに対してマネージ デバッガーを起動または接続する機能を提供します。  
+リモート ターゲット プロセスに対してマネージド デバッガーを起動または接続する機能を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,13 +63,13 @@ interface ICorDebugRemote : IUnknown
 |メソッド|説明|  
 |------------|-----------------|  
 |[ICorDebugRemote::CreateProcessEx メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|マネージ デバッグのために、リモート コンピューターでプロセスを作成します。|  
-|[ICorDebugRemote::DebugActiveProcessEx メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|デバッガーの下でリモート コンピューター上のプロセスを起動します。|  
+|[ICorDebugRemote::DebugActiveProcessEx メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|デバッガーでのリモート コンピューター上のプロセスを起動します。|  
   
-## <a name="remarks"></a>コメント  
- 現在、この機能はサポートされてのみリモート Macintosh コンピューターで実行されている Silverlight ベースのアプリケーションのターゲットをデバッグします。  
+## <a name="remarks"></a>Remarks  
+ 現時点では、Macintosh コンピューターをリモートで実行されている Silverlight ベースのアプリケーションのターゲットのデバッグにのみ、この機能がサポートされています。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -77,8 +77,8 @@ interface ICorDebugRemote : IUnknown
   
  **.NET framework のバージョン:** 4.5、4、3.5 SP1  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

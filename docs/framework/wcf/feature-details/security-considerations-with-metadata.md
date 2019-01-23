@@ -2,21 +2,21 @@
 title: メタデータを使用する場合のセキュリティ上の考慮事項
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 4afa040744b1b1a8a25addb954d5785436899434
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585566"
 ---
 # <a name="security-considerations-with-metadata"></a>メタデータを使用する場合のセキュリティ上の考慮事項
 Windows Communication Foundation (WCF) をメタデータ機能を使用する場合は、公開、取得、およびサービスのメタデータを使用してのセキュリティの影響を検討してください。  
   
 ## <a name="when-to-publish-metadata"></a>メタデータを公開する場合と公開しない場合  
- WCF サービスは、既定ではメタデータを公開しません。 サービスにメタデータ エンドポイントを追加して、WCF サービスのメタデータを公開するメタデータの公開に有効にする必要があります明示的にする (を参照してください[メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 メタデータの公開を無効のままにしておけば、攻撃者にとっては侵入経路が少ないことになり、したがって情報漏洩の危険を減らすことができます。 メタデータを公開する必要のないサービスもあります。 必要ないのであれば無効のままにしておくようお勧めします。 使用して、サービス アセンブリから直接メタデータやクライアント コードを生成することもできますに注意してください、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 Svcutil.exe を使用してメタデータをエクスポートする方法の詳細については、次を参照してください。[方法: メタデータのエクスポートに Svcutil.exe を使用してサービス コードのコンパイルから](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)します。  
+ WCF サービスは、既定ではメタデータを公開しません。 サービスにメタデータ エンドポイントを追加して、WCF サービスのメタデータを公開するメタデータの公開に有効にする必要があります明示的にする (を参照してください[メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 メタデータの公開を無効のままにしておけば、攻撃者にとっては侵入経路が少ないことになり、したがって情報漏洩の危険を減らすことができます。 メタデータを公開する必要のないサービスもあります。 必要ないのであれば無効のままにしておくようお勧めします。 使用して、サービス アセンブリから直接メタデータやクライアント コードを生成することもできますに注意してください、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 Svcutil.exe を使用してメタデータをエクスポートする方法の詳細については、次を参照してください。[方法。Svcutil.exe を使用してコンパイル済みサービス コードからメタデータをエクスポート](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)します。  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>セキュリティ保護されたバインディングによるメタデータの公開  
- WCF は、セキュリティで保護されていない既定のメタデータ バインディングと、メタデータへの匿名アクセスを許可します。 WCF サービスを発行するサービスのメタデータでは、サービスに関する詳細な説明が含まれています、意図的または意図せず機密情報を格納します。 たとえば、一般に公開するべきではない、インフラストラクチャ操作に関する情報が入った状態で発行される可能性があるのです。 権限のないアクセスを拒否する方法として、メタデータ エンドポイントで、セキュリティ保護されたバインディングを使う、というものがあります。 メタデータ エンドポイントは HTTP/GET 要求に応答しますが、ここに SSL (Secure Sockets Layer) を使用すれば、メタデータを保護できます。 詳細については、次を参照してください。[方法: メタデータ エンドポイントをセキュリティで保護された](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)します。  
+ WCF は、セキュリティで保護されていない既定のメタデータ バインディングと、メタデータへの匿名アクセスを許可します。 WCF サービスを発行するサービスのメタデータでは、サービスに関する詳細な説明が含まれています、意図的または意図せず機密情報を格納します。 たとえば、一般に公開するべきではない、インフラストラクチャ操作に関する情報が入った状態で発行される可能性があるのです。 権限のないアクセスを拒否する方法として、メタデータ エンドポイントで、セキュリティ保護されたバインディングを使う、というものがあります。 メタデータ エンドポイントは HTTP/GET 要求に応答しますが、ここに SSL (Secure Sockets Layer) を使用すれば、メタデータを保護できます。 詳細については、「[方法 :メタデータ エンドポイントをセキュリティで保護された](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)します。  
   
  メタデータ エンドポイントを保護することで、正当なユーザーが、改ざんやなりすましを恐れずに安全にサービス メタデータを取得できる手段も提供されます。  
   
@@ -38,6 +38,6 @@ Windows Communication Foundation (WCF) をメタデータ機能を使用する�
 ## <a name="protecting-application-configuration-files"></a>アプリケーション構成ファイルの保護  
  サービスのアプリケーション構成ファイルでは、メタデータを公開する方法、および公開の有無を制御できます。 攻撃者が設定を変更できないように、適切なアクセス制御リスト (ACL) でアプリケーション構成ファイルを保護することをお勧めします。  
   
-## <a name="see-also"></a>関連項目  
- [方法 : セキュリティで保護されたメタデータ エンドポイント](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>関連項目
+- [方法: メタデータ エンドポイントをセキュリティで保護します。](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)

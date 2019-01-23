@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: badd79926e8f039cf6b947dd6655e2cd679e3000
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 572087bd6f14c43b439910be32fca54af66a2e8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585537"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 列挙体
 スタック上のアクティブ (またはリーフ) フレーム上からのコンテキストなのか、別のフレームからのアンワインドにより計算されたコンテキストなのかを示します。  
@@ -41,20 +41,20 @@ typedef enum CorDebugSetContextFlag
 |メンバー|説明|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|コンテキストは、スレッドのアクティブなコンテキストです。|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|別のフレームからのアンワインドにより計算されたコンテキストであります。|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|コンテキストが別のフレームからのアンワインドにより計算されます。|  
   
-## <a name="remarks"></a>コメント  
- `CorDebugSetContextFlag` によって使用されている値を提供、 [icordebugstackwalk::setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ `CorDebugSetContextFlag` 使用される値を提供します、 [icordebugstackwalk::setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

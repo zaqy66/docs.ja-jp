@@ -1,25 +1,25 @@
 ---
-title: 'チュートリアル : リレーションシップ間でのクエリの実行 (Visual Basic)'
+title: 'チュートリアル: リレーションシップ (Visual Basic) 間でクエリを実行します。'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585472"
 ---
-# <a name="walkthrough-querying-across-relationships-visual-basic"></a>チュートリアル : リレーションシップ間でのクエリの実行 (Visual Basic)
-このチュートリアルの使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a>チュートリアル: リレーションシップ (Visual Basic) 間でクエリを実行します。
+このチュートリアルの使用を示します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  このチュートリアルは、Visual Basic 開発設定を使用して記述されています。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- 完了する必要があります[チュートリアル: 単純なオブジェクト モデルとクエリ (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)です。 このチュートリアルは前のチュートリアルに基づいて作成されており、c:\linqtest に northwnd.mdf ファイルがあることが前提です。  
+ 完了する必要があります[チュートリアル。単純なオブジェクト モデルとクエリ (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)します。 このチュートリアルは前のチュートリアルに基づいて作成されており、c:\linqtest に northwnd.mdf ファイルがあることが前提です。  
   
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 3 つの手順で構成されています。  
@@ -49,7 +49,7 @@ ms.locfileid: "33355205"
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer-Order リレーションシップ間のクエリを作成および実行する  
- `Order` オブジェクトから `Customer` オブジェクトに、またはその逆の順序で、直接アクセスできます。 必要としない、明示的な*結合*customers と orders のです。  
+ `Order` オブジェクトから `Customer` オブジェクトに、またはその逆の順序で、直接アクセスできます。 明示的な不要*結合*顧客と注文します。  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer オブジェクトを使用して Order オブジェクトにアクセスするには  
   
@@ -86,10 +86,10 @@ ms.locfileid: "33355205"
   
 4.  コンソール ウィンドウで Enter キーを押してアプリケーションを終了します。  
   
-5.  **ファイル** メニューのをクリックして**すべて保存**をこのアプリケーションを保存する場合。  
+5.  **ファイル** メニューのをクリックして**すべて保存**このアプリケーションを保存する場合。  
   
 ## <a name="next-steps"></a>次の手順  
- 次のチュートリアル ([チュートリアル: データの操作 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  
+ 次のチュートリアル ([チュートリアル。データの操作 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>関連項目
+- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

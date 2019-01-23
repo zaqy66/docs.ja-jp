@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcfb584fc2380a7ae1567d3d4d6203b537676220
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca2d7fe73fc749296f76e18ecce75b7fdd0795d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585592"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty メソッド
 指定したプロパティの識別子によって参照されるプロパティの値を設定します。  
@@ -42,17 +42,17 @@ HRESULT SetProperty (
  [in]値が設定されるプロパティの一意の識別子。  
   
  `pvProperty`  
- [in]によって参照されるプロパティを設定する値`PropertyId`です。  
+ [in]によって参照されるプロパティを設定する値`PropertyId`します。  
   
  `cbProperty`  
- [in]サイズをバイト単位での`pvProperty`します。  
+ [in]サイズ (バイト単位) の`pvProperty`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>関連項目
+- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

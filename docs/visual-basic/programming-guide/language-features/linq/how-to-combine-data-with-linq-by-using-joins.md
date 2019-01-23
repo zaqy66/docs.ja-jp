@@ -1,5 +1,5 @@
 ---
-title: '方法 : LINQ の結合を使用してデータを結合する (Visual Basic)'
+title: '方法: 結合 (Visual Basic) を使用してデータを LINQ を結合します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553699"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>方法 : LINQ の結合を使用してデータを結合する (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>方法: 結合 (Visual Basic) を使用してデータを LINQ を結合します。
 Visual Basic では、`Join`と`Group Join`コレクション間で共通の値に基づく複数のコレクションの内容を結合するための句をクエリします。 これらの値と呼ばれる*キー*値。 リレーショナル データベースの概念に慣れている開発者が認識、 `Join` INNER JOIN 句、`Group Join`として、実際には、左外部結合句。  
   
  このトピックの例を使用してデータを結合する方法をいくつかを示す、`Join`と`Group Join`クエリ句。  
@@ -79,12 +79,12 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 2.  F5 キーを押して、例を実行します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [WHERE 句](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [クエリ](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ によるデータ変換 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a>関連項目
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ によるデータ変換 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
