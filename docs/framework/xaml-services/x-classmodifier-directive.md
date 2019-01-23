@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507591"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier ディレクティブ
 XAML のコンパイルの動作を変更するときに`x:Class`も提供されます。 部分を作成する代わりに、具体的には、`class`を持つ、`Public`アクセス レベル (既定)、指定された`x:Class`で作成、`NotPublic`アクセス レベル。 この動作では、生成されたアセンブリ内のクラスのアクセス レベルに影響します。  
@@ -53,9 +53,9 @@ XAML のコンパイルの動作を変更するときに`x:Class`も提供され
 ## <a name="security-notes"></a>セキュリティに関する注意事項  
  アクセス レベルで宣言されている`x:ClassModifier`は特定のフレームワークとその機能によって解釈される可能性があります。 WPF に読み込むし、型のインスタンスを作成する機能が含まれています、`x:ClassModifier`は`internal`pack URI 参照を使用して、WPF リソースからそのクラスが参照されている場合、します。 この場合、可能性のある他のフレームワークによって実装されるような結果、管理者はで排他的に依存しない`x:ClassModifier`使用可能なすべてのインスタンス化をブロックしようとします。  
   
-## <a name="see-also"></a>関連項目  
- [x:Class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)  
- [WPF における分離コードと XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x:FieldModifier ディレクティブ](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
- [セキュリティ (WPF)](../../../docs/framework/wpf/security-wpf.md)  
- [WPF から System.Xaml に移行した型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>関連項目
+- [x:Class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)
+- [WPF における分離コードと XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:FieldModifier ディレクティブ](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
+- [セキュリティ (WPF)](../../../docs/framework/wpf/security-wpf.md)
+- [WPF から System.Xaml に移行した型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

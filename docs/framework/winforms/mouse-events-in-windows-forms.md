@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507578"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows フォームにおけるマウス イベント
 マウス入力を処理する場合、通常はマウスのポインターの位置とマウス ボタンの状態を確認しようとします。 このトピックでは、マウスのイベントからこの情報を取得する方法について詳しく説明し、Windows フォーム コントロールでマウス クリック イベントが発生する順序について説明します。 リストとすべてのマウス イベントの説明では、次を参照してください。 [Windows フォームにおけるマウス入力動作方法](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))、[イベントの概要 (Windows フォーム)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -62,7 +62,7 @@ ms.locfileid: "43864505"
   
 8.  <xref:System.Windows.Forms.Control.MouseUp> イベント。  
   
- イベントをクリックして、マウスの順序を示すコード例を参照してください[方法: Windows フォーム コントロールでのユーザー入力イベントの処理](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)します。  
+ イベントをクリックして、マウスの順序を示すコード例を参照してください[方法。イベントを Windows フォーム コントロール ユーザー入力処理](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)します。  
   
 ### <a name="individual-controls"></a>個別のコントロール  
  次のコントロールは、標準のマウス クリック イベントの動作に準拠していません。  
@@ -74,11 +74,11 @@ ms.locfileid: "43864505"
   
     -   左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   右クリック : クリック イベントは発生しません  
+    -   右クリックします。クリック イベントは発生しません  
   
     -   左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   右ダブルクリック : クリック イベントは発生しません  
+    -   右ダブル クリックします。クリック イベントは発生しません  
   
 -   <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> および <xref:System.Windows.Forms.CheckedListBox> の各コントロール  
   
@@ -87,11 +87,11 @@ ms.locfileid: "43864505"
   
     -   左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   右クリック : クリック イベントは発生しません  
+    -   右クリックします。クリック イベントは発生しません  
   
     -   左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
-    -   右ダブルクリック : クリック イベントは発生しません  
+    -   右ダブル クリックします。クリック イベントは発生しません  
   
 -   <xref:System.Windows.Forms.ListView> コントロール  
   
@@ -141,5 +141,5 @@ ms.locfileid: "43864505"
     > [!NOTE]
     >  マウス ボタンが押されているときにユーザーがポインターを切り替えコントロールの外に移動した (例 : <xref:System.Windows.Forms.Button> コントロールを押しているときにマウスを移動した) 場合、離された状態で切り替えコントロールが描画し、<xref:System.Windows.Forms.Control.MouseUp> イベントのみが発生します。 <xref:System.Windows.Forms.Control.Click> イベントまたは <xref:System.Windows.Forms.Control.MouseClick> イベントは、このような状況では発生しません。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム アプリケーションにおけるマウス入力](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォーム アプリケーションにおけるマウス入力](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
