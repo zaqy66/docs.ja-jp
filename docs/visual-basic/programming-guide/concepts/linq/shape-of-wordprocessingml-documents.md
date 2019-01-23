@@ -2,25 +2,25 @@
 title: WordprocessingML ドキュメント (Visual Basic) の構造
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 8f100078a5e764c8903512aca8bf5d46b9c9b056
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: ddd48823ded78fe5547e53ee5e9b1ffa8c696b7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549666"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a><span data-ttu-id="4dcc0-102">WordprocessingML ドキュメント (Visual Basic) の構造</span><span class="sxs-lookup"><span data-stu-id="4dcc0-102">Shape of WordprocessingML Documents (Visual Basic)</span></span>
-<span data-ttu-id="4dcc0-103">このトピックでは、WordprocessingML ドキュメントの XML 構造について説明します。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-103">This topic introduces the XML shape of a WordprocessingML document.</span></span>  
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a><span data-ttu-id="cbe96-102">WordprocessingML ドキュメント (Visual Basic) の構造</span><span class="sxs-lookup"><span data-stu-id="cbe96-102">Shape of WordprocessingML Documents (Visual Basic)</span></span>
+<span data-ttu-id="cbe96-103">このトピックでは、WordprocessingML ドキュメントの XML 構造について説明します。</span><span class="sxs-lookup"><span data-stu-id="cbe96-103">This topic introduces the XML shape of a WordprocessingML document.</span></span>  
   
-## <a name="microsoft-office-formats"></a><span data-ttu-id="4dcc0-104">Microsoft Office 形式</span><span class="sxs-lookup"><span data-stu-id="4dcc0-104">Microsoft Office Formats</span></span>  
- <span data-ttu-id="4dcc0-105">2007 Microsoft Office システムのネイティブ ファイル形式は Office Open XML (一般的な呼称は Open XML) です。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-105">The native file format for the 2007 Microsoft Office system is Office Open XML (commonly called Open XML).</span></span> <span data-ttu-id="4dcc0-106">Open XML は Ecma 標準の XML ベースの形式であり、現在は ISO-IEC 標準としての検討が進められている段階です。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-106">Open XML is an XML-based format that an Ecma standard and is currently going through the ISO-IEC standards process.</span></span> <span data-ttu-id="4dcc0-107">Open XML 内のワード プロセッシング ファイルのマークアップ言語は WordprocessingML と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-107">The markup language for word processing files within Open XML is called WordprocessingML.</span></span> <span data-ttu-id="4dcc0-108">このチュートリアルの例では、WordprocessingML ソース ファイルを入力として使用します。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-108">This tutorial uses WordprocessingML source files as input for the examples.</span></span>  
+## <a name="microsoft-office-formats"></a><span data-ttu-id="cbe96-104">Microsoft Office 形式</span><span class="sxs-lookup"><span data-stu-id="cbe96-104">Microsoft Office Formats</span></span>  
+ <span data-ttu-id="cbe96-105">2007 Microsoft Office システムのネイティブ ファイル形式は Office Open XML (一般的な呼称は Open XML) です。</span><span class="sxs-lookup"><span data-stu-id="cbe96-105">The native file format for the 2007 Microsoft Office system is Office Open XML (commonly called Open XML).</span></span> <span data-ttu-id="cbe96-106">Open XML は Ecma 標準の XML ベースの形式であり、現在は ISO-IEC 標準としての検討が進められている段階です。</span><span class="sxs-lookup"><span data-stu-id="cbe96-106">Open XML is an XML-based format that an Ecma standard and is currently going through the ISO-IEC standards process.</span></span> <span data-ttu-id="cbe96-107">Open XML 内のワード プロセッシング ファイルのマークアップ言語は WordprocessingML と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="cbe96-107">The markup language for word processing files within Open XML is called WordprocessingML.</span></span> <span data-ttu-id="cbe96-108">このチュートリアルの例では、WordprocessingML ソース ファイルを入力として使用します。</span><span class="sxs-lookup"><span data-stu-id="cbe96-108">This tutorial uses WordprocessingML source files as input for the examples.</span></span>  
   
- <span data-ttu-id="4dcc0-109">Microsoft Office 2003 を使用しており、Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats をインストールしている場合は、Office Open XML 形式でドキュメントを保存できます。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-109">If you are using Microsoft Office 2003, you can save documents in the Office Open XML format if you have installed the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
+ <span data-ttu-id="cbe96-109">Microsoft Office 2003 を使用しており、Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats をインストールしている場合は、Office Open XML 形式でドキュメントを保存できます。</span><span class="sxs-lookup"><span data-stu-id="cbe96-109">If you are using Microsoft Office 2003, you can save documents in the Office Open XML format if you have installed the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a><span data-ttu-id="4dcc0-110">WordprocessingML ドキュメントの構造</span><span class="sxs-lookup"><span data-stu-id="4dcc0-110">The Shape of WordprocessingML Documents</span></span>  
- <span data-ttu-id="4dcc0-111">最初に理解する必要があるのは WordprocessingML ドキュメントの構造です。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-111">The first thing to understand is the shape of WordprocessingML documents.</span></span> <span data-ttu-id="4dcc0-112">WordprocessingML ドキュメントには、ドキュメントの段落を含む本文要素 (名前は `w:body`) が 1 つあります。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-112">A WordprocessingML document contains a body element (named `w:body`) that contains the paragraphs of the document.</span></span> <span data-ttu-id="4dcc0-113">各段落には、1 つ以上のテキスト ラン (名前は `w:r`) が含まれています。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-113">Each paragraph contains one or more text runs (named `w:r`).</span></span> <span data-ttu-id="4dcc0-114">各テキスト ランには、1 つ以上のテキスト片 (名前は `w:t`) が含まれています。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-114">Each text run contains one or more text pieces (named `w:t`).</span></span>  
+## <a name="the-shape-of-wordprocessingml-documents"></a><span data-ttu-id="cbe96-110">WordprocessingML ドキュメントの構造</span><span class="sxs-lookup"><span data-stu-id="cbe96-110">The Shape of WordprocessingML Documents</span></span>  
+ <span data-ttu-id="cbe96-111">最初に理解する必要があるのは WordprocessingML ドキュメントの構造です。</span><span class="sxs-lookup"><span data-stu-id="cbe96-111">The first thing to understand is the shape of WordprocessingML documents.</span></span> <span data-ttu-id="cbe96-112">WordprocessingML ドキュメントには、ドキュメントの段落を含む本文要素 (名前は `w:body`) が 1 つあります。</span><span class="sxs-lookup"><span data-stu-id="cbe96-112">A WordprocessingML document contains a body element (named `w:body`) that contains the paragraphs of the document.</span></span> <span data-ttu-id="cbe96-113">各段落には、1 つ以上のテキスト ラン (名前は `w:r`) が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cbe96-113">Each paragraph contains one or more text runs (named `w:r`).</span></span> <span data-ttu-id="cbe96-114">各テキスト ランには、1 つ以上のテキスト片 (名前は `w:t`) が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cbe96-114">Each text run contains one or more text pieces (named `w:t`).</span></span>  
   
- <span data-ttu-id="4dcc0-115">非常に単純な WordprocessingML ドキュメントを次に示します。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-115">The following is a very simple WordprocessingML document:</span></span>  
+ <span data-ttu-id="cbe96-115">非常に単純な WordprocessingML ドキュメントを次に示します。</span><span class="sxs-lookup"><span data-stu-id="cbe96-115">The following is a very simple WordprocessingML document:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -51,11 +51,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- <span data-ttu-id="4dcc0-116">このドキュメントには、2 つの段落が含まれています。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-116">This document contains two paragraphs.</span></span> <span data-ttu-id="4dcc0-117">各段落には 1 つのテキスト ランが含まれており、各テキスト ランには 1 つのテキスト片が含まれています。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-117">They both contain a single text run, and each text run contains a single text piece.</span></span>  
+ <span data-ttu-id="cbe96-116">このドキュメントには、2 つの段落が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cbe96-116">This document contains two paragraphs.</span></span> <span data-ttu-id="cbe96-117">各段落には 1 つのテキスト ランが含まれており、各テキスト ランには 1 つのテキスト片が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cbe96-117">They both contain a single text run, and each text run contains a single text piece.</span></span>  
   
- <span data-ttu-id="4dcc0-118">WordprocessingML ドキュメントの内容を XML 形式で表示する最も簡単な方法は、Microsoft Word を使用して WordprocessingML ドキュメントを作成および保存し、次のプログラムを実行してコンソールに XML を出力することです。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-118">The easiest way to see the contents of a WordprocessingML document in XML form is to create one using Microsoft Word, save it, and then run the following program that prints the XML to the console.</span></span>  
+ <span data-ttu-id="cbe96-118">WordprocessingML ドキュメントの内容を XML 形式で表示する最も簡単な方法は、Microsoft Word を使用して WordprocessingML ドキュメントを作成および保存し、次のプログラムを実行してコンソールに XML を出力することです。</span><span class="sxs-lookup"><span data-stu-id="cbe96-118">The easiest way to see the contents of a WordprocessingML document in XML form is to create one using Microsoft Word, save it, and then run the following program that prints the XML to the console.</span></span>  
   
- <span data-ttu-id="4dcc0-119">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-119">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="4dcc0-120">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="4dcc0-120">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="cbe96-119">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="cbe96-119">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="cbe96-120">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="cbe96-120">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -87,12 +87,12 @@ Module Module1
 End Module  
 ```  
   
-## <a name="external-resources"></a><span data-ttu-id="4dcc0-121">外部リソース</span><span class="sxs-lookup"><span data-stu-id="4dcc0-121">External Resources</span></span>  
- <span data-ttu-id="4dcc0-122">[Office (2007) Open XML ファイル形式の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))</span><span class="sxs-lookup"><span data-stu-id="4dcc0-122">[Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))</span></span>  
+## <a name="external-resources"></a><span data-ttu-id="cbe96-121">外部リソース</span><span class="sxs-lookup"><span data-stu-id="cbe96-121">External Resources</span></span>  
+ <span data-ttu-id="cbe96-122">[Office (2007) Open XML ファイル形式の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))</span><span class="sxs-lookup"><span data-stu-id="cbe96-122">[Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))</span></span>  
   
- <span data-ttu-id="4dcc0-123">[WordprocessingML の概要](https://msdn.microsoft.com/library/aa212812(office.11).aspx)</span><span class="sxs-lookup"><span data-stu-id="4dcc0-123">[Overview of WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)</span></span>  
+ <span data-ttu-id="cbe96-123">[WordprocessingML の概要](https://msdn.microsoft.com/library/aa212812(office.11).aspx)</span><span class="sxs-lookup"><span data-stu-id="cbe96-123">[Overview of WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)</span></span>  
   
- [<span data-ttu-id="4dcc0-124">Office 2003:XML リファレンス スキーマのダウンロード ページ</span><span class="sxs-lookup"><span data-stu-id="4dcc0-124">Office 2003: XML Reference Schemas Download page</span></span>](https://go.microsoft.com/fwlink/?LinkId=98095)  
+ [<span data-ttu-id="cbe96-124">Office 2003:XML リファレンス スキーマのダウンロード ページ</span><span class="sxs-lookup"><span data-stu-id="cbe96-124">Office 2003: XML Reference Schemas Download page</span></span>](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
-## <a name="see-also"></a><span data-ttu-id="4dcc0-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="4dcc0-125">See Also</span></span>  
- [<span data-ttu-id="4dcc0-126">チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作</span><span class="sxs-lookup"><span data-stu-id="4dcc0-126">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="cbe96-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbe96-125">See also</span></span>
+- [<span data-ttu-id="cbe96-126">チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作</span><span class="sxs-lookup"><span data-stu-id="cbe96-126">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

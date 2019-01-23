@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4caf27fe45ce0a85b7e1800827a1e5cd0893ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b35abe6a11b96a88bdd610a4018469bf747fe90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550709"
 ---
-# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="66a3a-102">IMetaDataDispenserEx::FindAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="66a3a-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
-<span data-ttu-id="66a3a-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="66a3a-103">This method is not implemented.</span></span> <span data-ttu-id="66a3a-104">呼び出された場合、E_NOTIMPL を返します。</span><span class="sxs-lookup"><span data-stu-id="66a3a-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="54b41-102">IMetaDataDispenserEx::FindAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="54b41-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
+<span data-ttu-id="54b41-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="54b41-103">This method is not implemented.</span></span> <span data-ttu-id="54b41-104">呼び出された場合、E_NOTIMPL を返します。</span><span class="sxs-lookup"><span data-stu-id="54b41-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="66a3a-105">構文</span><span class="sxs-lookup"><span data-stu-id="66a3a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54b41-105">構文</span><span class="sxs-lookup"><span data-stu-id="54b41-105">Syntax</span></span>  
   
 ```  
 HRESULT FindAssembly(  
@@ -41,37 +41,37 @@ HRESULT FindAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="66a3a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="66a3a-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="54b41-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="54b41-106">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="66a3a-107">[in]使用しません。</span><span class="sxs-lookup"><span data-stu-id="66a3a-107">[in] Not used.</span></span>  
+ <span data-ttu-id="54b41-107">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="54b41-107">[in] Not used.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="66a3a-108">[in]使用しません。</span><span class="sxs-lookup"><span data-stu-id="66a3a-108">[in] Not used.</span></span>  
+ <span data-ttu-id="54b41-108">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="54b41-108">[in] Not used.</span></span>  
   
  `szGlobalBin`  
- <span data-ttu-id="66a3a-109">[in]使用しません。</span><span class="sxs-lookup"><span data-stu-id="66a3a-109">[in] Not used.</span></span>  
+ <span data-ttu-id="54b41-109">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="54b41-109">[in] Not used.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="66a3a-110">[in]検索するアセンブリ。</span><span class="sxs-lookup"><span data-stu-id="66a3a-110">[in] The assembly to be found.</span></span>  
+ <span data-ttu-id="54b41-110">[in]検索するアセンブリ。</span><span class="sxs-lookup"><span data-stu-id="54b41-110">[in] The assembly to be found.</span></span>  
   
  `szName`  
- <span data-ttu-id="66a3a-111">[out]アセンブリの簡易名。</span><span class="sxs-lookup"><span data-stu-id="66a3a-111">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="54b41-111">[out]アセンブリの簡易名。</span><span class="sxs-lookup"><span data-stu-id="54b41-111">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="66a3a-112">[in]サイズをバイト単位での`szName`します。</span><span class="sxs-lookup"><span data-stu-id="66a3a-112">[in] The size, in bytes, of `szName`.</span></span>  
+ <span data-ttu-id="54b41-112">[in]サイズ (バイト単位) の`szName`します。</span><span class="sxs-lookup"><span data-stu-id="54b41-112">[in] The size, in bytes, of `szName`.</span></span>  
   
  `pcName`  
- <span data-ttu-id="66a3a-113">[out]実際に返される文字数`szName`です。</span><span class="sxs-lookup"><span data-stu-id="66a3a-113">[out] The number of characters actually returned in `szName`.</span></span>  
+ <span data-ttu-id="54b41-113">[out]実際に返される文字数`szName`します。</span><span class="sxs-lookup"><span data-stu-id="54b41-113">[out] The number of characters actually returned in `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="66a3a-114">要件</span><span class="sxs-lookup"><span data-stu-id="66a3a-114">Requirements</span></span>  
- <span data-ttu-id="66a3a-115">**Platform:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="66a3a-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54b41-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="54b41-114">Requirements</span></span>  
+ <span data-ttu-id="54b41-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="54b41-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="66a3a-116">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="66a3a-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="54b41-116">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="54b41-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="66a3a-117">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="66a3a-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="54b41-117">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="54b41-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="66a3a-118">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66a3a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="54b41-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54b41-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="66a3a-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="66a3a-119">See Also</span></span>  
- [<span data-ttu-id="66a3a-120">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="66a3a-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [<span data-ttu-id="66a3a-121">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="66a3a-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a><span data-ttu-id="54b41-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="54b41-119">See also</span></span>
+- [<span data-ttu-id="54b41-120">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54b41-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="54b41-121">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54b41-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

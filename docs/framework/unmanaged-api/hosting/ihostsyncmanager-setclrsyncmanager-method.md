@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef7866d912951972ec9c66efccca671c3787da6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2cbf6d14ebb82b5e653596c735ed170c5bc7e763
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625225"
 ---
-# <a name="ihostsyncmanagersetclrsyncmanager-method"></a><span data-ttu-id="17efb-102">IHostSyncManager::SetCLRSyncManager メソッド</span><span class="sxs-lookup"><span data-stu-id="17efb-102">IHostSyncManager::SetCLRSyncManager Method</span></span>
-<span data-ttu-id="17efb-103">セット、 [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)に現在関連付けインスタンス[IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="17efb-103">Sets the [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) instance to associate with the current [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md) instance.</span></span>  
+# <a name="ihostsyncmanagersetclrsyncmanager-method"></a><span data-ttu-id="a2be7-102">IHostSyncManager::SetCLRSyncManager メソッド</span><span class="sxs-lookup"><span data-stu-id="a2be7-102">IHostSyncManager::SetCLRSyncManager Method</span></span>
+<span data-ttu-id="a2be7-103">セット、 [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)インスタンスに現在関連付ける[IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="a2be7-103">Sets the [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) instance to associate with the current [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17efb-104">構文</span><span class="sxs-lookup"><span data-stu-id="17efb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2be7-104">構文</span><span class="sxs-lookup"><span data-stu-id="a2be7-104">Syntax</span></span>  
   
 ```  
 HRESULT SetCLRSyncManager (  
@@ -35,33 +35,33 @@ HRESULT SetCLRSyncManager (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="17efb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="17efb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a2be7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a2be7-105">Parameters</span></span>  
  `pManager`  
- <span data-ttu-id="17efb-106">[in]ポインター、`ICLRSyncManager`共通言語ランタイム (CLR) で指定されたインスタンスです。</span><span class="sxs-lookup"><span data-stu-id="17efb-106">[in] A pointer to an `ICLRSyncManager` instance supplied by the common language runtime (CLR).</span></span>  
+ <span data-ttu-id="a2be7-106">[in]ポインター、`ICLRSyncManager`共通言語ランタイム (CLR) で指定されたインスタンス。</span><span class="sxs-lookup"><span data-stu-id="a2be7-106">[in] A pointer to an `ICLRSyncManager` instance supplied by the common language runtime (CLR).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="17efb-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="17efb-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a2be7-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a2be7-107">Return Value</span></span>  
   
-|<span data-ttu-id="17efb-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="17efb-108">HRESULT</span></span>|<span data-ttu-id="17efb-109">説明</span><span class="sxs-lookup"><span data-stu-id="17efb-109">Description</span></span>|  
+|<span data-ttu-id="a2be7-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a2be7-108">HRESULT</span></span>|<span data-ttu-id="a2be7-109">説明</span><span class="sxs-lookup"><span data-stu-id="a2be7-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="17efb-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="17efb-110">S_OK</span></span>|<span data-ttu-id="17efb-111">`SetCLRSyncManager` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="17efb-111">`SetCLRSyncManager` returned successfully.</span></span>|  
-|<span data-ttu-id="17efb-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="17efb-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="17efb-113">CLR が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。</span><span class="sxs-lookup"><span data-stu-id="17efb-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="17efb-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="17efb-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="17efb-115">呼び出しがタイムアウトしました。</span><span class="sxs-lookup"><span data-stu-id="17efb-115">The call timed out.</span></span>|  
-|<span data-ttu-id="17efb-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="17efb-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="17efb-117">呼び出し元は、ロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="17efb-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="17efb-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="17efb-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="17efb-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="17efb-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="17efb-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="17efb-120">E_FAIL</span></span>|<span data-ttu-id="17efb-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="17efb-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="17efb-122">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="17efb-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="17efb-123">メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。</span><span class="sxs-lookup"><span data-stu-id="17efb-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a2be7-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="a2be7-110">S_OK</span></span>|<span data-ttu-id="a2be7-111">`SetCLRSyncManager` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="a2be7-111">`SetCLRSyncManager` returned successfully.</span></span>|  
+|<span data-ttu-id="a2be7-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a2be7-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a2be7-113">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="a2be7-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="a2be7-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a2be7-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a2be7-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="a2be7-115">The call timed out.</span></span>|  
+|<span data-ttu-id="a2be7-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a2be7-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a2be7-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="a2be7-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a2be7-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a2be7-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a2be7-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="a2be7-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a2be7-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a2be7-120">E_FAIL</span></span>|<span data-ttu-id="a2be7-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="a2be7-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a2be7-122">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="a2be7-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a2be7-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="a2be7-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="17efb-124">コメント</span><span class="sxs-lookup"><span data-stu-id="17efb-124">Remarks</span></span>  
- <span data-ttu-id="17efb-125">ホストと CLR の間の通信を容易にホスト インターフェイスは、通常のペアになっています。</span><span class="sxs-lookup"><span data-stu-id="17efb-125">To facilitate communication between the host and the CLR, hosting interfaces generally come in pairs.</span></span> <span data-ttu-id="17efb-126">ペアの 1 つのメンバーは、ホストによって実装し、他のメンバーは、CLR で実装します。</span><span class="sxs-lookup"><span data-stu-id="17efb-126">One member of the pair is implemented by the host, and the other member is implemented by the CLR.</span></span> <span data-ttu-id="17efb-127">ホスト側の実装として、`IHostSyncManager`に対応するインターフェイス、 `ICLRSyncManager` CLR によって実装されるインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="17efb-127">As a host-side implementation, the `IHostSyncManager` interface corresponds to the `ICLRSyncManager` interface implemented by the CLR.</span></span> <span data-ttu-id="17efb-128">CLR 呼び出し`SetCLRSyncManager`を指定する、`ICLRSyncManager`現在に関連付けるホストをインスタンス`IHostSyncManager`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="17efb-128">The CLR calls `SetCLRSyncManager` to supply an `ICLRSyncManager` instance for the host to associate with the current `IHostSyncManager` instance.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a2be7-124">Remarks</span><span class="sxs-lookup"><span data-stu-id="a2be7-124">Remarks</span></span>  
+ <span data-ttu-id="a2be7-125">ホストと CLR の間の通信を容易にホスト インターフェイスは、通常のペアになっています。</span><span class="sxs-lookup"><span data-stu-id="a2be7-125">To facilitate communication between the host and the CLR, hosting interfaces generally come in pairs.</span></span> <span data-ttu-id="a2be7-126">ペアの 1 つのメンバーは、ホストによって実装され、その他のメンバーは、CLR によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="a2be7-126">One member of the pair is implemented by the host, and the other member is implemented by the CLR.</span></span> <span data-ttu-id="a2be7-127">ホスト側の実装として、`IHostSyncManager`インターフェイスに対応する、 `ICLRSyncManager` CLR によって実装されるインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="a2be7-127">As a host-side implementation, the `IHostSyncManager` interface corresponds to the `ICLRSyncManager` interface implemented by the CLR.</span></span> <span data-ttu-id="a2be7-128">CLR 呼び出し`SetCLRSyncManager`を指定する、`ICLRSyncManager`に関連付ける、現在のホスト インスタンス`IHostSyncManager`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="a2be7-128">The CLR calls `SetCLRSyncManager` to supply an `ICLRSyncManager` instance for the host to associate with the current `IHostSyncManager` instance.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17efb-129">要件</span><span class="sxs-lookup"><span data-stu-id="17efb-129">Requirements</span></span>  
- <span data-ttu-id="17efb-130">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="17efb-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2be7-129">必要条件</span><span class="sxs-lookup"><span data-stu-id="a2be7-129">Requirements</span></span>  
+ <span data-ttu-id="a2be7-130">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2be7-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17efb-131">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="17efb-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a2be7-131">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a2be7-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="17efb-132">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="17efb-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a2be7-132">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a2be7-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="17efb-133">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17efb-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a2be7-133">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2be7-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17efb-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="17efb-134">See Also</span></span>  
- [<span data-ttu-id="17efb-135">ICLRSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17efb-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [<span data-ttu-id="17efb-136">IHostSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17efb-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a2be7-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2be7-134">See also</span></span>
+- [<span data-ttu-id="a2be7-135">ICLRSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2be7-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="a2be7-136">IHostSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2be7-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
