@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583562"
 ---
 # <a name="getnames-function"></a>GetNames 関数
 オブジェクトのプロパティの名前の一部またはすべてが取得されます。 
@@ -104,12 +104,12 @@ HRESULT GetNames (
 
 関数は常に新しい割り当て`SAFEARRAY`返された場合`WBEM_S_NO_ERROR`、および`pstrNames`は常に設定されます。 指定したフィルターに一致するプロパティがない場合、返される配列要素の 0 ことができます。 関数を以外の値を返す場合`WBM_S_NO_ERROR`、新しい`SAFEARRAY`構造は返されません。
  
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

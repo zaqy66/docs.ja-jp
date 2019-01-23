@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 40c0ab5f18d5aae2c99dd66747d3435f0826af8b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a81e422c2e6d8c2d342821163f860c5cb54c083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583325"
 ---
-# <a name="configuration-element"></a>\<configuration> 要素
+# <a name="configuration-element"></a>\<configuration > 要素
 
 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。
 
@@ -61,4 +61,4 @@ ms.locfileid: "47200323"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)

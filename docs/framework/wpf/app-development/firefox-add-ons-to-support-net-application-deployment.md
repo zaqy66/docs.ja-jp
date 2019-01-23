@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: e8f6947a0fe39998d9dc229ad7b95bfd2d426f6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31c6313adb24cd1a2cfca319ac5e243fcdf2b6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583260"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET アプリケーションの配置をサポートするための Firefox のアドオン
 Firefox と、.NET Framework Assistant for Firefox プラグイン Windows Presentation Foundation (WPF) を有効にする[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、Mozilla Firefox ブラウザーを使用する ClickOnce アプリケーションとします。  
@@ -33,7 +33,7 @@ Firefox と、.NET Framework Assistant for Firefox プラグイン Windows Prese
   
  含まれている、.NET Framework Assistant for Firefox、[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]します。 Firefox 用の .NET Framework Assistant の削除方法の詳細については、次を参照してください。 [Firefox 用の .NET Framework Assistant の削除方法](https://go.microsoft.com/fwlink/?LinkId=177944)します。  
   
-## <a name="see-also"></a>関連項目  
- [WPF アプリケーションの配置](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [WPF XAML ブラウザー アプリケーションの概要](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
- [Firefox に対応した WPF プラグインがインストールされているかどうかを確認する](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+## <a name="see-also"></a>関連項目
+- [WPF アプリケーションの配置](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [WPF XAML ブラウザー アプリケーションの概要](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [Firefox に対応した WPF プラグインがインストールされているかどうかを確認する](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
