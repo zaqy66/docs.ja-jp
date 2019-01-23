@@ -16,25 +16,25 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e2a0352f52bd617738e6d7cfe33b4d7acdb6da0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a6eb99de44c2d3f1afe6dda2d6ec895ec57c617
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635004"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="0b92b-102">ISymUnmanagedReaderSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0b92b-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
-<span data-ttu-id="0b92b-103">シンボル検索情報を取得するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="0b92b-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="0b92b-104">このインターフェイスを呼び出すことによって取得`QueryInterface`を実装するオブジェクトに対して、 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="0b92b-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="18cac-102">ISymUnmanagedReaderSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="18cac-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
+<span data-ttu-id="18cac-103">シンボルの検索情報を取得するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="18cac-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="18cac-104">このインターフェイスを呼び出すことによって取得`QueryInterface`を実装するオブジェクトで、 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="18cac-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0b92b-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="0b92b-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="18cac-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="18cac-105">Methods</span></span>  
   
-|<span data-ttu-id="0b92b-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="0b92b-106">Method</span></span>|<span data-ttu-id="0b92b-107">説明</span><span class="sxs-lookup"><span data-stu-id="0b92b-107">Description</span></span>|  
+|<span data-ttu-id="18cac-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="18cac-106">Method</span></span>|<span data-ttu-id="18cac-107">説明</span><span class="sxs-lookup"><span data-stu-id="18cac-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0b92b-108">GetSymbolSearchInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="0b92b-108">GetSymbolSearchInfo Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="0b92b-109">シンボル検索情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="0b92b-109">Gets symbol search information.</span></span>|  
-|[<span data-ttu-id="0b92b-110">GetSymbolSearchInfoCount メソッド</span><span class="sxs-lookup"><span data-stu-id="0b92b-110">GetSymbolSearchInfoCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="0b92b-111">シンボル検索情報の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="0b92b-111">Gets a count of symbol search information.</span></span>|  
+|[<span data-ttu-id="18cac-108">GetSymbolSearchInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="18cac-108">GetSymbolSearchInfo Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="18cac-109">シンボルの検索情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="18cac-109">Gets symbol search information.</span></span>|  
+|[<span data-ttu-id="18cac-110">GetSymbolSearchInfoCount メソッド</span><span class="sxs-lookup"><span data-stu-id="18cac-110">GetSymbolSearchInfoCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="18cac-111">シンボルの検索情報の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="18cac-111">Gets a count of symbol search information.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0b92b-112">要件</span><span class="sxs-lookup"><span data-stu-id="0b92b-112">Requirements</span></span>  
- <span data-ttu-id="0b92b-113">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0b92b-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18cac-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="18cac-112">Requirements</span></span>  
+ <span data-ttu-id="18cac-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="18cac-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b92b-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b92b-114">See Also</span></span>  
- [<span data-ttu-id="0b92b-115">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0b92b-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="18cac-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="18cac-114">See also</span></span>
+- [<span data-ttu-id="18cac-115">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="18cac-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
