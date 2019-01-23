@@ -3,12 +3,12 @@ title: Windows Identity Foundation 4.5 の新機能
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 673294ccdb76e6016169a4e2b4e7713ba63fa1e7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: deb75494b2813aac3182270b027391b87fdeb0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619611"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 の新機能
 Windows Identity Foundation (WIF) の最初のバージョンは、スタンドアロンのダウンロードとして提供され、.NET 3.5 SP1 タイム フレームで導入されたため、WIF 3.5 と呼ばれています。 .NET 4.5 以降、WIF は .NET Framework の一部になっています。 .NET Framework で直接 WIF クラスを使用できるようになったため、.NET でクレーム ベースの ID をより深く統合できるようになり、クレームを簡単に使用できるようになりました。 WIF 3.5 用に作成されたアプリケーションは、新しいモデルを利用するために、変更する必要があります。詳細については、「[Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)」(WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン) を参照してください。  
@@ -56,8 +56,8 @@ Windows Identity Foundation (WIF) の最初のバージョンは、スタンド�
   
      **Identity and Access Tool for Visual Studio 2012** (前述の「**Visual Studio の機能の変更点**」を参照) を使用する場合、`useIdentityConfiguration` 属性が構成ファイルに設定された `<serviceCredentials>` 要素が追加されます。 また、WIF 構成設定が含まれ、対応する [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 要素も追加されます。選択した STS に認証を外部委託するために必要なバインディングやその他の設定も追加されます。  
   
-## <a name="see-also"></a>関連項目  
- [WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
- [WIF 3.5 と WIF 4.5 間での名前空間マッピング](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [WIF API リファレンス](../../../docs/framework/security/wif-api-reference.md)  
- [WIF 構成のリファレンス](../../../docs/framework/security/wif-configuration-reference.md)
+## <a name="see-also"></a>関連項目
+- [WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [WIF 3.5 と WIF 4.5 間での名前空間マッピング](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [WIF API リファレンス](../../../docs/framework/security/wif-api-reference.md)
+- [WIF 構成のリファレンス](../../../docs/framework/security/wif-configuration-reference.md)

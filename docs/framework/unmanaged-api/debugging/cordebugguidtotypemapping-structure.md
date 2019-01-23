@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c803a805da605bd52fd50eb1e292c0e277143d7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49290a37ca7ea101e3c8b458a5daa4995cb3beee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610046"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 構造体
-マップ、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を対応する ICorDebugType オブジェクトの GUID。  
+マップを[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を対応する ICorDebugType オブジェクトの GUID。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,18 +41,18 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`iid`|キャッシュされた GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型です。|  
-|`pType`|キャッシュの種類に関する情報を提供する ICorDebugType オブジェクトへのポインター。|  
+|`iid`|キャッシュされた GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型。|  
+|`pType`|キャッシュされている型に関する情報を提供する ICorDebugType オブジェクトへのポインター。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]します。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

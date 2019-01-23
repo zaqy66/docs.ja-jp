@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620387"
 ---
 # <a name="wcf-security-terminology"></a>WCF セキュリティ用語
 セキュリティについて説明するときに使用する用語の中には、だれもが知っているとは限らないものもあります。 ここでは、セキュリティ用語の一部を簡単に説明します。このトピックは、すべての項目について詳細に説明することを目的としたものではありません。  
@@ -181,7 +181,7 @@ ms.locfileid: "53126823"
  X.509  
  国際的に認知されている証明書の規格。証明書の必須部分が定義されています。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation の基本概念](../../../../docs/framework/wcf/fundamental-concepts.md)  
- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [Windows Communication Foundation の基本概念](../../../../docs/framework/wcf/fundamental-concepts.md)
+- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: 高可用性障害復旧のための SqlClient サポート
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609123"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
 このトピックでは、高可用性、ディザスター リカバリーのための SqlClient サポート ([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] に追加) である AlwaysOn 可用性グループについて説明します。  AlwaysOn 可用性グループ機能は、SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "43513027"
   
 -   SQL Server に接続する 64 を超える IP アドレスで構成されているインスタンスの接続エラーが発生します。  
   
--   使用するアプリケーションの動作、`MultiSubnetFailover`接続プロパティが認証の種類に基づく影響を受けません。 SQL Server 認証、Kerberos 認証、または Windows 認証。  
+-   使用するアプリケーションの動作、`MultiSubnetFailover`接続プロパティが認証の種類に基づく影響を受けません。SQL Server 認証、Kerberos 認証、または Windows 認証。  
   
 -   フェールオーバー時に対応し、アプリケーションの接続の再試行を減らすには、`Connect Timeout` の値を増やします。  
   
@@ -96,6 +96,6 @@ ms.locfileid: "43513027"
   
  読み取り専用のルーティングでは、最初にプライマリに接続し、最適な可用性の読み取り可能なセカンダリを検索するため、プライマリに接続するよりも時間がかかる場合があります。 そのため、ログインのタイムアウトを増やす必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

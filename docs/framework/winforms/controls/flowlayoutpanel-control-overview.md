@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 7c07f94ce25c972b73532f79ce5ba3da424a0f7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610358"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel コントロールの概要
 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールは、水平または垂直のフローの方向に内容を整列させます。 コントロールの内容をある行から次の行、またはある列から次の列にラップすることができます。 また、内容をラップする代わりにクリップすることができます。  
@@ -25,9 +25,9 @@ ms.locfileid: "48261408"
   
  Windows フォーム コントロールは、<xref:System.Windows.Forms.FlowLayoutPanel> の他のインスタンスを含めて、<xref:System.Windows.Forms.FlowLayoutPanel> コントロールの子にすることができます。 この機能により、実行時にフォームのサイズを調整する高度なレイアウトを構築することができます。  
   
- 参照してください[チュートリアル: Arranging Controls on Windows を使用して、FlowLayoutPanel フォーム](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))します。  
+ 参照してください[チュートリアル。FlowLayoutPanel を使用して Windows フォーム コントロールの配置](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [FlowLayoutPanel コントロール](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [FlowLayoutPanel コントロール](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)

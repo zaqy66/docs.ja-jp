@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f641f3dbcba32c77bcf73b14a9ac890d1ade5a2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611918"
 ---
 # <a name="char-data-type-visual-basic"></a>文字型 (Char) (Visual Basic)
 0 から 65535 まで符号なし 16 ビット (2 バイト) コード ポイントを保持します。 各*コード ポイント*、または文字コードを 1 つの Unicode 文字を表します。  
@@ -57,15 +57,15 @@ charVar = "Z"C
   
 -   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Char?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

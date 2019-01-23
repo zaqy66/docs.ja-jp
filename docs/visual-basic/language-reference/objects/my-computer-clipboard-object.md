@@ -5,31 +5,31 @@ helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3ef591844d16daac75abb36b3aa89c91a068fe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616161"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard オブジェクト
 クリップボードを操作するためのメソッドを提供します。  
   
 ## <a name="remarks"></a>Remarks  
- メソッドとプロパティについては、`My.Computer.Clipboard`オブジェクトを参照してください<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>します。  
+ `My.Computer.Clipboard` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>」をご覧ください。  
   
  詳細については、次を参照してください。[にデータを格納すると、クリップボードからの読み取り](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)します。  
   
 > [!NOTE]
 >  メソッドを使用することも、<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>クリップボードを操作するクラス。  
   
-## <a name="requirements"></a>要件  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+## <a name="requirements"></a>必要条件  
+ **名前空間:** <xref:Microsoft.VisualBasic.MyServices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (へのアクセスを提供します<xref:System.Windows.Forms.Clipboard>)。  
   
  **アセンブリ:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>  
- [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
+- [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

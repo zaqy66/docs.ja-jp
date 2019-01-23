@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609604"
 ---
 # <a name="use-automatic-layout-overview"></a>自動レイアウトの使用の概要
 このトピックで作成する方法に関する開発者向けのガイドラインは[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ローカライズ可能なアプリケーション[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]します。 以前は、UI のローカライズは時間のかかるプロセスでした。 各言語 UI が変更するには、ピクセル単位で調整が必要です。 今日は、適切な設計とコーディング標準、[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]ローカライザーがあるサイズ変更や、実行する位置を変更できるように構築できます。 簡単にサイズ変更や位置が変更された可能性のあるアプリケーションを作成する方法は、自動レイアウトをという名前を使用して実現できます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの設計。  
@@ -58,7 +58,7 @@ ms.locfileid: "50201557"
 
 **ウィンドウの固定サイズを設定しないでください。**
 
-- <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType> を使用してください。 例えば:
+- <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType> を使用してください。 例:
 
    [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
@@ -107,7 +107,7 @@ ms.locfileid: "50201557"
   
  **注**完全なコード サンプルでは、次を参照してください[共有サイズ設定プロパティの間でグリッド。](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>関連項目  
- [WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [自動レイアウトを使用してボタンを作成する](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [自動レイアウト用のグリッドを使用する](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a>関連項目
+- [WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [自動レイアウトを使用してボタンを作成する](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [自動レイアウト用のグリッドを使用する](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

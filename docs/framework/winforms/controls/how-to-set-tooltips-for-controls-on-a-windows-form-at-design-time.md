@@ -1,5 +1,5 @@
 ---
-title: '方法 : デザイン時に Windows フォームのコントロールにツールヒントを設定する'
+title: '方法: デザイン時に Windows フォーム上のコントロールのツールヒントを設定します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ebefe596728b5cabd9d24720d8c39f13c8836bd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609409"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>方法 : デザイン時に Windows フォームのコントロールにツールヒントを設定する
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>方法: デザイン時に Windows フォーム上のコントロールのツールヒントを設定します。
 設定することができます、<xref:System.Windows.Forms.ToolTip>コードや、Windows フォーム デザイナーでの文字列。 詳細については、<xref:System.Windows.Forms.ToolTip>コンポーネントを参照してください[ToolTip コンポーネントの概要](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)します。  
   
 > [!NOTE]
@@ -76,7 +76,7 @@ ms.locfileid: "49087220"
   
 2.  **プロパティ**ウィンドウ内のテキストを削除、 **ToolTip1 のツールヒント**します。  
 
-## <a name="see-also"></a>関連項目  
-- [ToolTip コンポーネントの概要](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
-- [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+## <a name="see-also"></a>関連項目
+- [ToolTip コンポーネントの概要](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)
+- [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更します。](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip コンポーネント](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

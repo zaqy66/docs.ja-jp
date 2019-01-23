@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: a8767ca492a514f3ee7a2d4688858282ec706ef7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618949"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder でのコマンドの生成
 `SelectCommand` プロパティが実行時に動的に指定される場合、たとえばクエリ ツールを使用してユーザーの記述したクエリ構文を解釈する場合は、適切な `InsertCommand`、`UpdateCommand`、または `DeleteCommand` をデザイン時に指定することはできません。 <xref:System.Data.DataTable> を単一データベース テーブルに割り当てたり、単一データベースから生成する場合は、<xref:System.Data.Common.DbCommandBuilder> オブジェクトを利用して自動的に `DeleteCommand` の `InsertCommand`、`UpdateCommand`、および <xref:System.Data.Common.DbDataAdapter> を生成できます。  
@@ -112,8 +112,8 @@ custDS.Tables.Remove(custDS.Tables["Customers"]);
 adapter.Fill(custDS, "Customers");  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [コマンドの実行](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [コマンドの実行](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

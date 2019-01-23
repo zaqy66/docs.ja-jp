@@ -2,20 +2,15 @@
 title: アプリ設定スキーマ
 ms.date: 05/01/2017
 helpviewer_keywords:
-- schema app settings
-- app settings, schema [Windows Forms]
-- Windows Forms, app settings schema
-- configuration schema [.NET Framework], app settings
+  - schema app settings
+  - 'app settings, schema [Windows Forms]'
+  - 'Windows Forms, app settings schema'
+  - 'configuration schema [.NET Framework], app settings'
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191149"
 ---
+
 # <a name="app-settings-schema"></a>アプリ設定スキーマ
 
 ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。
@@ -72,5 +67,5 @@ ms.locfileid: "50191149"
 
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーション設定の概要](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [アプリケーション設定の概要](~/docs/framework/winforms/advanced/application-settings-overview.md)
 - [アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)

@@ -2,12 +2,12 @@
 title: '&lt;clientCredentials&gt; 要素の &lt;windows&gt;'
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 780d73b747feae5495ad08cb2324e7d8f8de0d7d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1331456f6defc24511064684181f615451be5b93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610748"
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 要素の &lt;windows&gt;
 クライアントを表すために使用される Windows 資格情報の設定を指定します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54147474"
 \<endpointBehaviors>  
 \<behavior>  
 \<clientCredentials>  
-\<windows >  
+\<windows>  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,14 +45,14 @@ ms.locfileid: "54147474"
 |-------------|-----------------|  
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|サービスに対するクライアントの認証に使用される資格情報を指定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.WindowsClientElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.WindowsClientElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)
+- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

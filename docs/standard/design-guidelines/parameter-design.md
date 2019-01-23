@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: a639e1389d0771dfcb5635b7d78982150b684fd3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617214"
 ---
 # <a name="parameter-design"></a>パラメーターのデザイン
 このセクションでは、引数をチェックするためのガイドラインにセクションを含むパラメーターのデザインの大まかなガイドラインを提供します。 さらで説明されているガイドラインを参照する必要があります[パラメーターの名前付け](../../../docs/standard/design-guidelines/naming-parameters.md)します。  
@@ -157,5 +157,5 @@ public class String {
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

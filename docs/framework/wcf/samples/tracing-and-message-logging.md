@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 7f729e845fe552d523a46a1783404baf4e0bbfca
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5cd0e9620250b410e60c1fd378e7525bb2917756
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617006"
 ---
 # <a name="tracing-and-message-logging"></a>トレースとメッセージ ログ
 このサンプルでは、トレースとメッセージ ログを有効にする方法を示します。 結果のトレースとメッセージ ログを使用して表示、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
@@ -132,6 +132,6 @@ ms.locfileid: "46001078"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+- [トレース](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : SaveFileDialog コンポーネントを使用してファイルを保存する'
+title: '方法: SaveFileDialog コンポーネントを使用してファイルを保存します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 4755d950da6726f007ae3333a558f3cafdcada9b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615963"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>方法 : SaveFileDialog コンポーネントを使用してファイルを保存する
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>方法: SaveFileDialog コンポーネントを使用してファイルを保存します。
 <xref:System.Windows.Forms.SaveFileDialog>コンポーネントにより、ユーザーがファイル システムを参照して保存するファイルを選択します。 このダイアログ ボックスは、ユーザーがダイアログ ボックス内で選択したファイルのパスと名前を返します。 ただし、ファイルを実際にディスクに書き込むためのコードを記述する必要があります。  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>SaveFileDialog コンポーネントを使用してファイルを保存するには  
@@ -177,6 +177,6 @@ ms.locfileid: "43508161"
     > [!NOTE]
     >  などの特定のコントロール、<xref:System.Windows.Forms.RichTextBox>制御、ファイルを保存する機能があります。 詳細については、MSDN オンライン ライブラリの技術文書「[Windows フォーム ダイアログ ボックスの重要コード](https://go.microsoft.com/fwlink/?LinkID=102575)」の「SaveFileDialog コンポーネント」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.SaveFileDialog>  
- [SaveFileDialog コンポーネント](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.SaveFileDialog>
+- [SaveFileDialog コンポーネント](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)

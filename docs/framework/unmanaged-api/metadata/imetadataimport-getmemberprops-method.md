@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611411"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
 名前、バイナリ シグネチャ、相対仮想アドレスをなどのメタデータ情報を取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。  
@@ -55,47 +55,47 @@ HRESULT GetMemberProps (
  [out]メンバーのクラスを表すメタデータ トークンへのポインター。  
   
  `szMember`  
- [out]メンバーの名前です。  
+ [out]メンバーの名前。  
   
  `cchMember`  
- [in]ワイド文字単位のサイズ、`szMember`バッファー。  
+ [in]ワイド文字のサイズ、`szMember`バッファー。  
   
  `pchMember`  
  [out]返される名前のワイド文字単位のサイズ。  
   
  `pdwAttr`  
- [out]いずれかのメンバーに適用される値にフラグを設定します。  
+ [out]いずれかのフラグ値がメンバーに適用します。  
   
  `ppvSigBlob`  
  [out]メンバーのバイナリ メタデータ シグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out]バイト サイズ`ppvSigBlob`です。  
+ [out]バイト サイズ`ppvSigBlob`します。  
   
  `pulCodeRVA`  
  [out]メンバーの相対仮想アドレスへのポインター。  
   
  `pdwImplFlags`  
- [out]メンバーに関連付けられているどのメソッド実装フラグ。  
+ [out]メンバーに関連付けられているすべてメソッド実装フラグ。  
   
  `pdwCPlusTypeFlag`  
- [out]マークするフラグを<xref:System.ValueType>です。  
+ [out]マークするフラグを<xref:System.ValueType>します。  
   
  `ppValue`  
- [out]このメンバーによって返される定数文字列値。  
+ [out]このメンバーが返される定数文字列値。  
   
  `pcchValue`  
- [out]サイズの文字`ppValue`、または場合は 0`ppValue`文字列を保持しません。  
+ [out]サイズの文字で`ppValue`、または場合は 0`ppValue`文字列を保持しません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

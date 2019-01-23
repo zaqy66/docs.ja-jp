@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 10cdf5b8cf475c95e086b447b36a569da2173fa9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615073"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
@@ -133,13 +133,13 @@ ms.locfileid: "44195676"
 #### <a name="stretching-images"></a>イメージの引き伸ばし  
  <xref:System.Windows.Controls.Image.Stretch%2A>プロパティは、イメージを拡大して、コンテナーを入力する方法を制御します。 <xref:System.Windows.Controls.Image.Stretch%2A>プロパティによって定義された、次の値では、<xref:System.Windows.Media.Stretch>列挙体。  
   
--   <xref:System.Windows.Media.Stretch.None>: イメージが出力領域に引き伸ばされません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
+-   <xref:System.Windows.Media.Stretch.None>:イメージが出力領域に引き伸ばされません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
   
--   <xref:System.Windows.Media.Stretch.Fill>イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
+-   <xref:System.Windows.Media.Stretch.Fill>:イメージが出力領域に合わせて拡大縮小します。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>イメージに、出力領域内で完全に収まるように拡大縮小されます。 イメージの縦横比は保持されます。  
+-   <xref:System.Windows.Media.Stretch.Uniform>:イメージに、出力領域内で完全に収まるようにスケーリングします。 イメージの縦横比は保持されます。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>イメージは、イメージの元の縦横比を維持しながら、出力領域を完全に塗りつぶすされるように拡大縮小されます。  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>:イメージは、イメージの元の縦横比を維持しながら、出力領域を完全に塗りつぶすようにスケーリングします。  
   
  次の例では、適用の使用可能な各<xref:System.Windows.Media.Stretch>列挙を<xref:System.Windows.Controls.Image>します。  
   
@@ -189,10 +189,10 @@ ms.locfileid: "44195676"
 > [!NOTE]
 >  システムで認識するは、コーデックをデジタル署名する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Imaging.BitmapSource>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Controls.Image>  
- <xref:System.Windows.Media.Imaging.BitmapMetadata>  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Win32 サンプル コーデック](https://go.microsoft.com/fwlink/?LinkID=160052)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Imaging.BitmapSource>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Controls.Image>
+- <xref:System.Windows.Media.Imaging.BitmapMetadata>
+- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Win32 サンプル コーデック](https://go.microsoft.com/fwlink/?LinkID=160052)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : デザイン時に ElementHost コントロールをコピーして貼り付ける'
+title: '方法: コピーして、デザイン時に ElementHost コントロールを貼り付ける'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: a61a8538fb9b4245e3f3705c5d5cbb1b45ed0b72
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6ff1ccc5e8f188bdec2e09048974fdc20a785920
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572632"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>方法 : デザイン時に ElementHost コントロールをコピーして貼り付ける
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>方法: コピーして、デザイン時に ElementHost コントロールを貼り付ける
 この手順では、Windows フォーム上の Windows Presentation Foundation (WPF) コントロールをコピーする方法を示します。  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "48872925"
   
 ### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a>コピーしてデザイン時に ElementHost コントロールを貼り付ける  
   
-1.  新しい WPF 追加<xref:System.Windows.Controls.UserControl>を Windows フォーム プロジェクトにします。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、次を参照してください。[チュートリアル: 新しい WPF コンテンツの作成には、デザイン時に Windows フォーム](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
+1.  新しい WPF 追加<xref:System.Windows.Controls.UserControl>を Windows フォーム プロジェクトにします。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、「[チュートリアル:デザイン時に Windows フォームで新しい WPF コンテンツを作成する](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
   
 2.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティの`UserControl1`に`200`します。  
   
@@ -42,10 +42,10 @@ ms.locfileid: "48872925"
   
      新しい<xref:System.Windows.Forms.Integration.ElementHost>という名前のコントロール`elementHost2`フォーム上に作成されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Windows.Forms.Integration.ElementHost>  
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
-- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
-- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
