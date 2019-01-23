@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecdfff9d309a2e751d5f989760c42d6fa84fe99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47114958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562519"
 ---
 # <a name="encrypting-data"></a>データの暗号化
 対称暗号化と非対称暗号化は、異なるプロセスを使用して実行されます。 対称暗号化は、ストリーム上で実行されるため、大量のデータの暗号化に役立ちます。 非対称暗号化は、少ないバイト数で実行されるため、少量のデータにのみ役立ちます。  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>非対称暗号化  
  非対称アルゴリズムは、通常は対称キーと IV の暗号化など、少量のデータの暗号化に使用されます。 通常、非対称暗号化を行う個人や組織は、別のパーティによって生成された公開キーを使用します。 <xref:System.Security.Cryptography.RSACryptoServiceProvider> クラスは、この目的のために、.NET Framework によって提供されます。  
   
- 次の例では、公開キーの情報を使用して対称キーと IV を暗号化します。 サード パーティの公開キーを表す 2 つのバイト配列が初期化されます。 <xref:System.Security.Cryptography.RSAParameters> オブジェクトがこれらの値に初期化されます。 次に、 **RSAParameters** (と共にが表す公開キー) オブジェクトをインポート、 **RSACryptoServiceProvider**を使用して、<xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType>メソッド。 最後に、 <xref:System.Security.Cryptography.RijndaelManaged> クラスが作成した秘密キーと IV が暗号化されます。 この例では、システムに 128 ビット暗号化がインストールされている必要があります。  
+ 次の例では、公開キーの情報を使用して対称キーと IV を暗号化します。 サード パーティの公開キーを表す 2 つのバイト配列が初期化されます。 <xref:System.Security.Cryptography.RSAParameters> オブジェクトがこれらの値に初期化されます。 次に、 **RSAParameters** オブジェクトが (このオブジェクトが表す公開キーと共に) **メソッドを使用して** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> にインポートされます。 最後に、 <xref:System.Security.Cryptography.RijndaelManaged> クラスが作成した秘密キーと IV が暗号化されます。 この例では、システムに 128 ビット暗号化がインストールされている必要があります。  
   
 ```vb  
 Imports System  
@@ -264,6 +264,6 @@ class Class1
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [データの復号化](../../../docs/standard/security/decrypting-data.md)  
+- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [データの復号化](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566945"
 ---
 # <a name="constrained-execution-regions"></a>制約された実行領域
-制約された実行領域 (CER) は、信頼性のあるマネージ コードを作成するための機構の一部です。 CER は、領域内のコードが領域全体で実行されるのを防ぐ帯域外の例外を、共通言語ランタイム (CLR) がスローすることが制約された領域を定義します。 その領域内では、ユーザー コードは、帯域外の例外がスローされることになるコードの実行を制約されます。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> メソッドは `try` ブロックの直前にある必要があります。このメソッドによって、`catch`、`finally`、`fault` の各ブロックが制約された実行領域としてマークされます。 制約された領域としてマークされると、コードは信頼性の高いコントラクトでのみ他のコードを呼び出す必要があります。また、コードは、エラーを処理する準備ができている場合を除き、準備されていないメソッドや信頼性のないメソッドの割り当てや仮想呼び出しを行うことはできません。 CLR は、CER で実行されるコードのスレッドの中止を遅らせます。  
+制約された実行領域 (CER) は、信頼性のあるマネージド コードを作成するための機構の一部です。 CER は、領域内のコードが領域全体で実行されるのを防ぐ帯域外の例外を、共通言語ランタイム (CLR) がスローすることが制約された領域を定義します。 その領域内では、ユーザー コードは、帯域外の例外がスローされることになるコードの実行を制約されます。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> メソッドは `try` ブロックの直前にある必要があります。このメソッドによって、`catch`、`finally`、`fault` の各ブロックが制約された実行領域としてマークされます。 制約された領域としてマークされると、コードは信頼性の高いコントラクトでのみ他のコードを呼び出す必要があります。また、コードは、エラーを処理する準備ができている場合を除き、準備されていないメソッドや信頼性のないメソッドの割り当てや仮想呼び出しを行うことはできません。 CLR は、CER で実行されるコードのスレッドの中止を遅らせます。  
   
  制約された実行領域は、注釈付きの `try` ブロックだけでなく、特に <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> クラスから派生したクラス、および <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> メソッドを使用して実行されるコードで実行するクリティカル ファイナライザーなど、CLR のさまざまな形式で使用されます。  
   
@@ -114,5 +114,5 @@ ms.locfileid: "33394684"
   
 -   関数ポインターとデリゲート。  
   
-## <a name="see-also"></a>関連項目  
- [信頼性に関するベスト プラクティス](../../../docs/framework/performance/reliability-best-practices.md)
+## <a name="see-also"></a>関連項目
+- [信頼性に関するベスト プラクティス](../../../docs/framework/performance/reliability-best-practices.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567777"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt;要素 (ネットワーク設定)
 .NET Framework がネットワークに接続する方法を指定するための設定が含まれています。  
@@ -50,7 +50,7 @@ ms.locfileid: "50192539"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[構成](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|すべての名前空間の設定が含まれています。|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|すべての名前空間の設定が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
  [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)要素には内のクラスの設定が含まれています、<xref:System.Net>および関連子名前空間。 設定は、認証モジュール、接続の管理、メールの設定、プロキシ サーバー、およびインターネット ホストから情報を受け取るためのインターネット要求モジュールを構成します。  
@@ -92,5 +92,5 @@ ms.locfileid: "50192539"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

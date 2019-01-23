@@ -1,20 +1,20 @@
 ---
-title: 'チュートリアル: Windows フォームでの WPF 複合コントロールのホスト'
+title: 'チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f0fad58d269c89079237969fc03cf5edb6cf0358
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569665"
 ---
-# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、次を参照してください。[コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)します。  
   
- このチュートリアル手順について説明するアプリケーションをホストする、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロールを Windows フォーム アプリケーションでデータ入力を実行します。 複合コントロールは DLL にパッケージ化されています。 この一般的な手順は、より複雑なアプリケーションやコントロールに拡張することができます。 このチュートリアルの外観と機能をほぼ同じにする目的は[チュートリアル: WPF で Windows フォーム複合コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)します。 主な違いは、ホストする側とされる側が逆であることです。  
+ このチュートリアル手順について説明するアプリケーションをホストする、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロールを Windows フォーム アプリケーションでデータ入力を実行します。 複合コントロールは DLL にパッケージ化されています。 この一般的な手順は、より複雑なアプリケーションやコントロールに拡張することができます。 このチュートリアルの外観と機能をほぼ同じにする目的は[チュートリアル。WPF で複合コントロールをフォーム、Windows をホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)します。 主な違いは、ホストする側とされる側が逆であることです。  
   
  このチュートリアルは、2 つのセクションに分かれています。 最初のセクションでは、実装について簡単に説明します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロール。 2 番目のセクションは、Windows フォーム アプリケーションで複合コントロールをホスト、コントロールからイベントを受信して、コントロールのプロパティの一部にアクセスする方法の詳細について説明します。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48582815"
   
 ## <a name="prerequisites"></a>必須コンポーネント  
 
-Visual Studio でこのチュートリアルを完了する必要があります。  
+このチュートリアルを完了するには Visual Studio が必要です。  
   
 ## <a name="implementing-the-wpf-composite-control"></a>WPF 複合コントロールの実装  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]この例で使用される複合コントロールは、ユーザーの名前とアドレスを受け取る単純なデータ入力フォームです。 ユーザーが 2 つのボタンのいずれかをクリックして入力操作が終了したことを示すと、コントロールはカスタム イベントを発生させて入力情報をホストに返します。 次の図はレンダリングされたコントロールを示しています。  
@@ -110,7 +110,7 @@ WPF 複合コントロール
   
 3.  カスタムを発生させます。`OnButtonClick`と、ユーザーが完成したデータをホストに渡すことをホストに通知するイベントです。  
   
- コントロールは、外観を変更するための色とフォントの多くのプロパティも公開します。 異なり、<xref:System.Windows.Forms.Integration.WindowsFormsHost>クラス、Windows フォーム コントロールをホストするために使用、<xref:System.Windows.Forms.Integration.ElementHost>クラスは、コントロールの公開<xref:System.Windows.Controls.Panel.Background%2A>プロパティのみです。 このコード例で説明した例の間の類似性を維持するために[チュートリアル: WPF で Windows フォーム複合コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)コントロールが、残りのプロパティを直接公開します。  
+ コントロールは、外観を変更するための色とフォントの多くのプロパティも公開します。 異なり、<xref:System.Windows.Forms.Integration.WindowsFormsHost>クラス、Windows フォーム コントロールをホストするために使用、<xref:System.Windows.Forms.Integration.ElementHost>クラスは、コントロールの公開<xref:System.Windows.Controls.Panel.Background%2A>プロパティのみです。 このコード例で説明した例の間の類似性を維持するために[チュートリアル。WPF で Windows フォーム複合コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)コントロールが、残りのプロパティを直接公開します。  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>分離コード ファイルの基本構造  
  分離コード ファイルには、単一の名前空間の`MyControls`、2 つのクラスを含む`MyControl1`と`MyControlEventArgs`します。  
@@ -320,9 +320,9 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
   
  アプリケーションをビルドして実行します。 別のオプション ボタンをクリックして、WPF 複合コントロール上の影響を確認します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [チュートリアル: Windows フォームでの 3D WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの 3d WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

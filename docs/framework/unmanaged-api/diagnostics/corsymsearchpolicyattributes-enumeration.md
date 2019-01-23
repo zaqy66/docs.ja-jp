@@ -16,17 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c3aedea4cc8ce2d8fb8c0c0bf3fead727dcf64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561622"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 列挙体
-シンボル リーダーの検索を実行するときに使用されるポリシーを指定します。 これらの定数がによって使用される、 [isymunmanagedbinder 2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)と[isymunmanagedbinder 3::getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)メソッドです。  
+シンボル リーダーの検索を行うときに使用されるポリシーを指定します。 これらの定数を使って、 [isymunmanagedbinder 2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)と[isymunmanagedbinder 3::getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)メソッド。  
   
 > [!IMPORTANT]
->  信頼できないソースからプログラム データベース (PDB) ファイルを開く、セキュリティ上のリスクを勧めします。  
+>  信頼できないソースからプログラム データベース (PDB) ファイルをセキュリティ リスクになります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,13 +45,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|シンボル検索パスのレジストリを照会します。|  
+|`AllowRegistryAccess`|シンボルの検索パスのレジストリを照会します。|  
 |`AllowSymbolServerAccess`|シンボル サーバーにアクセスします。|  
 |`AllowOriginalPathAccess`|デバッグ ディレクトリで指定されたパスを検索します。|  
-|`AllowReferencePathAccess`|.Exe ファイルのある場所に pdb ファイルを検索します。|  
+|`AllowReferencePathAccess`|.Exe ファイルのある場所に PDB を検索します。|  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

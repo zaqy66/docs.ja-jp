@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562675"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod メソッド
 このメソッドの行が含まれるドキュメントを取得します。  
@@ -38,7 +38,7 @@ HRESULT GetDocumentsForMethod(
   
 #### <a name="parameters"></a>パラメーター  
  `cDocs`  
- [in]バッファーの長さを指す`pcDocs`です。  
+ [in]バッファーの長さが指す`pcDocs`します。  
   
  `pcDocs`  
  [out]ポインター、`ULONG32`ドキュメントの格納に必要なバッファーの文字のサイズを受け取る。  
@@ -47,10 +47,10 @@ HRESULT GetDocumentsForMethod(
  [in]ドキュメントを格納するバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、エラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、エラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

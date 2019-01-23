@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569955"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>配置、余白、パディングの概要
 <xref:System.Windows.FrameworkElement>クラスは、子要素の正確な配置に使用されるいくつかのプロパティを公開します。 このトピックでは、4 つの最も重要なプロパティについて説明します。 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、 <xref:System.Windows.FrameworkElement.Margin%2A>、 <xref:System.Windows.Controls.Border.Padding%2A>、および<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>します。 これらのプロパティの効果を理解することが重要です。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの要素の位置を制御するための基本となるためです。  
@@ -139,13 +139,13 @@ ms.locfileid: "43800889"
 ## <a name="whats-next"></a>次の内容  
  配置プロパティで定義されている、<xref:System.Windows.FrameworkElement>クラス内で要素配置の制御を有効にする[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 これで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を利用して効果的に要素を配置するための手法を理解できたことでしょう。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトの詳細はその他の資料で確認できます。 [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)トピックには、さまざまな詳細が含まれています。<xref:System.Windows.Controls.Panel>要素。 トピック[チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)コンポーネントを配置して、その操作をデータ ソースにバインドするレイアウト要素を使用して高度な手法が導入されています。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトの詳細はその他の資料で確認できます。 [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)トピックには、さまざまな詳細が含まれています。<xref:System.Windows.Controls.Panel>要素。 トピック[チュートリアル。初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)コンポーネントを配置して、その操作をデータ ソースにバインドするレイアウト要素を使用して高度な手法が導入されています。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF レイアウト ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF レイアウト ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160054)

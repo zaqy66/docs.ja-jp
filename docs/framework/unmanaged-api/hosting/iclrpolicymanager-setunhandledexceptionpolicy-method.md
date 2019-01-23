@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6a3d5bb8a8cc5acc88373fa4952848d08ccd485
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6190d867e86ae7e77f701b8b0bdad9caee4421a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561011"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy メソッド
 ハンドルされない例外が発生したときに、共通言語ランタイム (CLR) の動作を指定します。  
@@ -44,26 +44,26 @@ HRESULT SetUnhandledExceptionPolicy (
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`SetUnhandledExceptionPolicy` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|CLR が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
-|HOST_E_NOT_OWNER|呼び出し元は、ロックを所有していません。|  
+|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返された、後に、CLR はプロセス内で使用可能ではなくなりました。 メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>コメント  
- 既定では、CLR は、すべてのハンドルされない例外では、最後のハンドラーであり、その既定の動作は、プロセスをダウン破棄します。 ホストは設定してこの動作を変更することができます、 `policy` eHostDeterminedPolicy する値。 CLR の以前のバージョンと同じように、この値により、ホストが独自の既定の動作を実装します。  
+## <a name="remarks"></a>Remarks  
+ 既定では、CLR は、すべてのハンドルされない例外、最後のハンドラーであり、その既定の動作はプロセスを破棄です。 ホストは設定してこの動作を変更することができます、 `policy` eHostDeterminedPolicy する値。 CLR の以前のバージョンと同じように、この値により、独自の既定の動作を実装するためにホストします。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [EClrUnhandledException 列挙型](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
- [ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [ICLRPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+## <a name="see-also"></a>関連項目
+- [EClrUnhandledException 列挙型](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)
+- [ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

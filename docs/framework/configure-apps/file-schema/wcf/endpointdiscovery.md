@@ -2,12 +2,12 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556445"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 エンドポイントのさまざまな探索設定を指定します (探索可能性、スコープ、メタデータに対するカスタム拡張など)。  
@@ -16,7 +16,7 @@ ms.locfileid: "54150917"
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<endpointDiscovery >  
+\<endpointDiscovery>  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,9 +48,9 @@ ms.locfileid: "54150917"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<スコープ >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|エンドポイントのスコープ URI のコレクション。 複数の URI を 1 つのエンドポイントに関連付けることができます。|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|エンドポイントのスコープ URI のコレクション。 複数の URI を 1 つのエンドポイントに関連付けることができます。|  
 |[\<拡張機能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [の\<endpointDiscovery >]|エンドポイントで発行されるカスタム メタデータを指定できる、XML 要素のコレクション。|  
-|\<型 >|検索するインターフェイスのコレクション。|  
+|\<types>|検索するインターフェイスのコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -104,5 +104,5 @@ ms.locfileid: "54150917"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

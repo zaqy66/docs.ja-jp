@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 8b5a7f7d428925590236351d56073024f6ad32b7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cfa796d40fad35077c3d7b55e36bc7336c5d26b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562766"
 ---
 # <a name="brush-transformation-overview"></a>ブラシの変換の概要
 Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.Brush.Transform%2A>と<xref:System.Windows.Media.Brush.RelativeTransform%2A>します。 これらのプロパティを使うと、ブラシの内容を回転、拡大縮小、傾斜、移動できます。 このトピックでは、これら 2 つのプロパティの違いについて説明し、それらの使用例を示します。  
@@ -78,7 +78,7 @@ Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.B
      ![変換されたブラシを出力領域に投影する](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
 <a name="rotateexample"></a>   
-## <a name="example-rotate-an-imagebrush-45-degrees"></a>例: ImageBrush を 45 度回転する  
+## <a name="example-rotate-an-imagebrush-45-degrees"></a>例:ImageBrush の回転 45 度  
  次の例では、適用、<xref:System.Windows.Media.RotateTransform>を<xref:System.Windows.Media.Brush.RelativeTransform%2A>のプロパティ、<xref:System.Windows.Media.ImageBrush>します。 <xref:System.Windows.Media.RotateTransform>オブジェクトの<xref:System.Windows.Media.RotateTransform.CenterX%2A>と<xref:System.Windows.Media.RotateTransform.CenterY%2A>プロパティが両方とも設定である 0.5 に、コンテンツの中心の相対座標にポイントします。 その結果、ブラシの内容は中心の周りに回転されます。  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
@@ -97,11 +97,11 @@ Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.B
   
  この例は、さらに大きなサンプルの一部です。 完全なサンプルについては、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」をご覧ください。 ブラシについて詳しくは、「[WPF のブラシの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Brush.Transform%2A>  
- <xref:System.Windows.Media.Brush.RelativeTransform%2A>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Brush>  
- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Brush.Transform%2A>
+- <xref:System.Windows.Media.Brush.RelativeTransform%2A>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Brush>
+- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

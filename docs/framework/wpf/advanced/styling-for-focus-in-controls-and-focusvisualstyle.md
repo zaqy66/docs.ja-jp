@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562595"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>コントロールのフォーカスのスタイルと FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] キーボード フォーカスを受け取るときに、コントロールの外観を変更するための 2 つの並列メカニズムを提供します。 最初のメカニズムは、プロパティなどのプロパティ set アクセス操作子を使用する<xref:System.Windows.UIElement.IsKeyboardFocused%2A>スタイルまたはコントロールに適用されているテンプレート内で。 2 つ目のメカニズムの値として別のスタイルを提供する、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティまたはその他の UI コントロールのビジュアル ツリーを変更するのではなく、コントロールの上に描画される装飾の個別のビジュアル ツリーを作成する「フォーカスのビジュアル スタイル」置換することで要素。 このトピックでは、これらのメカニズムが適切なシナリオについて説明します。  
@@ -76,8 +76,8 @@ ms.locfileid: "43744986"
 ### <a name="other-focus-properties"></a>その他のフォーカス プロパティ  
  Setter の基本やをトリガーする必要がありますのフォーカスを変更するすべての考えられる原因を視覚的な動作を生成する場合は、<xref:System.Windows.UIElement.IsFocused%2A>依存関係プロパティでは、別の方法で、<xref:System.Windows.UIElement.GotFocus>または<xref:System.Windows.UIElement.LostFocus>に使用されるイベント、<xref:System.Windows.EventSetter>します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)

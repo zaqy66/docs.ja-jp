@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562779"
 ---
 # <a name="drawing-formatted-text"></a>書式設定されたテキストの描画
 このトピックでの機能の概要、<xref:System.Windows.Media.FormattedText>オブジェクト。 このオブジェクトは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのテキストの描画に対する低レベルの制御を提供します。  
@@ -85,7 +85,7 @@ FormattedText オブジェクトを使用して表示されるテキスト
  ![テキストのパス ジオメトリに続く球](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 テキストのパス ジオメトリに続く球  
   
- 詳細については、「[How to: Create a PathGeometry Animation for Text](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)」(方法: テキストの PathGeometry アニメーションを作成する) を参照してください。  
+ 詳細については、「[方法 :テキストの PathGeometry アニメーションを作成する](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)します。  
   
  その他の興味深い使用の書式設定されたテキストを作成するに変換された後、<xref:System.Windows.Media.PathGeometry>オブジェクト。 たとえば、ビデオをクリップしてテキスト内に表示することができます。  
   
@@ -115,7 +115,7 @@ FormattedText オブジェクトを使用して表示されるテキスト
 |DT_PREFIX|なし|サポートされていません。 アンダー スコア、アクセラレータ キーやリンクなどのテキストを使用する場合は、使用、<xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>メソッド。|  
 |DT_PREFIXONLY|なし|サポートされていません。|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用して、<xref:System.Windows.Media.FormattedText.TextAlignment%2A>プロパティ値を設定して<xref:System.Windows.TextAlignment.Right>します。 (WPF のみ)。|  
-|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|<xref:System.Windows.Media.FormattedText.FlowDirection%2A> プロパティを <xref:System.Windows.FlowDirection.RightToLeft> に設定します。|  
+|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|<xref:System.Windows.Media.FormattedText.FlowDirection%2A> プロパティを <xref:System.Windows.FlowDirection.RightToLeft>に設定します。|  
 |DT_SINGLELINE|なし|不要。 <xref:System.Windows.Media.FormattedText> オブジェクトは、しない限りは単一行コントロールとして動作しますか、<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>プロパティを設定またはテキストにキャリッジ リターン/ライン フィード (CR/LF) が含まれています。|  
 |DT_TABSTOP|なし|ユーザー定義のタブ位置はサポートされていません。|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|不要。 上端揃えが既定値です。 その他の垂直方向の配置の値を使用して定義することができます、<xref:System.Windows.Media.FormattedText.Height%2A>プロパティを適切なコンピューティング[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText の 'y' 位置。|  
@@ -123,9 +123,9 @@ FormattedText オブジェクトを使用して表示されるテキスト
 |DT_WORDBREAK|なし|不要。 単語区切り処理が自動的に行われる<xref:System.Windows.Media.FormattedText>オブジェクト。 無効にすることはできません。|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用して、<xref:System.Windows.Media.FormattedText.Trimming%2A>プロパティ値を持つ<xref:System.Windows.TextTrimming.WordEllipsis>します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.FormattedText>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [中抜きの文字列を作成する](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [方法: テキストの PathGeometry アニメーションを作成する](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.FormattedText>
+- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [中抜きの文字列を作成する](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [方法: テキストの PathGeometry アニメーションを作成します。](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

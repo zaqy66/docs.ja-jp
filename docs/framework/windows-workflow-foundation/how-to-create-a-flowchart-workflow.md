@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b8de9852a29c9cc20e2c607506ae3d804e6d406e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569980"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>方法: フローチャート ワークフローを作成します。
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Flowchart>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
@@ -150,11 +150,11 @@ ms.locfileid: "54415248"
   
      ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)ステップのワークフローのさまざまなスタイルと共に、フローチャート ワークフローがこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [ワークフローの設計](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [方法: アクティビティを作成します。](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [方法: ワークフローを実行します。](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [ワークフローの設計](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [方法: アクティビティを作成します。](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [方法: ワークフローを実行します。](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

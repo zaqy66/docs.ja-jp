@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b370e92aaab88a7f0d49f1de60b50fa6bbf1e161
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39323015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565905"
 ---
 # <a name="function-statement-visual-basic"></a>Function ステートメント (Visual Basic)
 宣言名、パラメーター、および定義するコードを`Function`プロシージャ。  
@@ -67,11 +67,11 @@ End Function
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   [保護されたフレンド](../../language-reference/modifiers/protected-friend.md)
+    -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
     - [Private Protected](../../language-reference/modifiers/private-protected.md)  
   
-     参照してください[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+     「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 -   `proceduremodifiers`  
   
@@ -109,7 +109,7 @@ End Function
   
 -   `name`  
   
-     必須。 プロシージャの名前。 参照してください[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+     必須。 プロシージャの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
   
 -   `typeparamlist`  
   
@@ -254,15 +254,15 @@ End Function
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Sub ステートメント](sub-statement.md)  
- [Function プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [パラメーター リスト](parameter-list.md)  
- [Dim ステートメント](dim-statement.md)  
- [Call ステートメント](call-statement.md)  
- [Of](of-clause.md)  
- [パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [方法 : ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [プロシージャのトラブルシューティング](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Function 式](../../../visual-basic/language-reference/operators/function-expression.md)
+## <a name="see-also"></a>関連項目
+- [Sub ステートメント](sub-statement.md)
+- [Function プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
+- [パラメーター リスト](parameter-list.md)
+- [Dim ステートメント](dim-statement.md)
+- [Call ステートメント](call-statement.md)
+- [Of](of-clause.md)
+- [パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [方法: ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [プロシージャのトラブルシューティング](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Function 式](../../../visual-basic/language-reference/operators/function-expression.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : アプリケーション設定を作成する'
+title: '方法: アプリケーション設定を作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558957"
 ---
-# <a name="how-to-create-application-settings"></a>方法 : アプリケーション設定を作成する
+# <a name="how-to-create-application-settings"></a>方法: アプリケーション設定を作成します。
 マネージド コードを使用することにより、新しいアプリケーション設定を作成し、フォームまたはフォームのコントロールのプロパティにバインドして、これらの設定が実行時に自動的に読み込まれて保存されるようにすることができます。  
   
  次の手順では、<xref:System.Configuration.ApplicationSettingsBase> から派生するラッパー クラスを手動で作成します。 このクラスには、公開する各アプリケーション設定に対して、パブリックにアクセスできるプロパティを追加します。  
   
- また、Visual Studio デザイナーで最小限のコードを使用してこの手順を実行することもできます。  参照してください[方法: アプリケーション設定を使用して作成デザイナー](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))します。  
+ また、Visual Studio デザイナーで最小限のコードを使用してこの手順を実行することもできます。  参照してください[方法。デザイナーを使用してアプリケーション設定を作成する](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))します。  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>新しいアプリケーション設定をプログラムで作成するには  
   
@@ -46,8 +46,8 @@ ms.locfileid: "48581876"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  既定の設定プロバイダーの <xref:System.Configuration.LocalFileSettingsProvider> は、情報をプレーン テキストとして構成ファイルに保存します。 これにより、セキュリティがオペレーティング システムが現在のユーザーに対して提供するファイル アクセスのセキュリティに制限されます。 このため、構成ファイルに保存される情報に注意する必要があります。 たとえば、アプリケーション設定の一般的な用途の 1 つとして、アプリケーションのデータ ストアをポイントする接続文字列を格納します。 ただし、セキュリティの問題があるため、このような文字列にパスワードは含まれません。 接続文字列の詳細については、「<xref:System.Configuration.SpecialSetting>」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [方法: アプリケーション設定を検証する](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [方法: アプリケーション設定を検証します。](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

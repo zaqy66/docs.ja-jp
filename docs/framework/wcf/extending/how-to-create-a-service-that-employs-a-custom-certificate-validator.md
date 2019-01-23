@@ -1,5 +1,5 @@
 ---
-title: '方法 : カスタム証明書検証を使用するサービスを作成する'
+title: '方法: カスタム証明書の検証を使用するサービスを作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569324"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>方法 : カスタム証明書検証を使用するサービスを作成する
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>方法: カスタム証明書の検証を使用するサービスを作成します。
 このトピックでは、カスタム証明書検証を実装する方法、クライアントまたはサービスの資格情報の設定により、既定の証明書検証機能を、カスタム証明書検証で置き換える方法について解説します。  
   
- X.509 証明書がクライアントまたはサービスの認証に使用されている場合既定で Windows Communication Foundation (WCF) を使用して、Windows 証明書ストアと Crypto API 証明書を検証し、信頼されていることを確認してください。 ただし、組み込みの検証機能では不十分で、処理内容を変更する必要がある場合もあります。 WCF には、ユーザーがカスタム証明書検証を追加することで、検証ロジックを変更する簡単な方法が用意されています。 カスタム証明書検証が指定されている場合、WCF は組み込みの証明書の検証ロジックを使用しませんが、代わりにカスタムの検証に依存します。  
+ クライアントまたはサービスの認証に X.509 証明書を使用する場合既定で Windows Communication Foundation (WCF) を使用して Windows 証明書ストアと Crypto API 証明書を検証して、信頼されていることを確認します。 ただし、組み込みの検証機能では不十分で、処理内容を変更する必要がある場合もあります。 WCF には、カスタム証明書検証を追加するユーザーを許可することで、検証ロジックを変更する簡単な方法が用意されています。 カスタム証明書の検証が指定されている場合、WCF は組み込みの証明書の検証ロジックを使用しませんが、代わりにカスタム検証に依存しています。  
   
 ## <a name="procedures"></a>手順  
   
@@ -35,9 +35,9 @@ ms.locfileid: "33808144"
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>サービス構成でカスタム検証処理を指定するには  
   
-1.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素、および[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)を[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素。  
+1.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素と[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)を[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素。  
   
-2.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)設定と、`name`属性を適切な値にします。  
+2.  [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) を追加し、`name` 属性に適切な値を設定  
   
 3.  追加、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)を`<behavior>`要素。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33808144"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>クライアント側の設定でカスタム証明書検証を指定するには  
   
-1.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素、および[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)を[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素。  
+1.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素と[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)を[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素。  
   
 2.  追加、 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)要素。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33808144"
   
 4.  追加、 [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)要素。  
   
-5.  追加、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)です。  
+5.  追加、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)します。  
   
 6.  追加、 [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)次の例に示すようにします。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "33808144"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>クライアント側のコードでカスタム証明書検証を指定するには  
   
-1.  カスタム証明書検証を、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> プロパティを使って指定します。 クライアントの資格情報には、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> プロパティを使用してアクセスできます。 (によって生成されたクライアント クラス[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)から派生して常に、<xref:System.ServiceModel.ClientBase%601>クラスです)。  
+1.  カスタム証明書検証を、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> プロパティを使って指定します。 クライアントの資格情報には、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> プロパティを使用してアクセスできます。 (によって生成されたクライアント クラス[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)から常に派生、<xref:System.ServiceModel.ClientBase%601>クラスです)。  
   
-2.  <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> プロパティを <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> に設定します。  
+2.  <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> プロパティを <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>に設定します。  
   
 ## <a name="example"></a>例  
   
@@ -129,5 +129,5 @@ ms.locfileid: "33808144"
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Selectors.X509CertificateValidator>
+## <a name="see-also"></a>関連項目
+- <xref:System.IdentityModel.Selectors.X509CertificateValidator>

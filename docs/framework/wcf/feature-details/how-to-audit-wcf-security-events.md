@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows Communication Foundation セキュリティ イベントを監査する'
+title: '方法: Windows Communication Foundation セキュリティ イベントを監査します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 90169aac0c0c2cac8860b2809467ffa3a27d0e91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566828"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>方法 : Windows Communication Foundation セキュリティ イベントを監査する
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>方法: Windows Communication Foundation セキュリティ イベントを監査します。
 Windows Communication Foundation (WCF)、Windows イベント ビューアーを使用して表示できる Windows イベント ログにセキュリティ イベント ログに記録することができます。 このトピックでは、セキュリティ イベントをログ出力するようにアプリケーションを設定する方法について説明します。 WCF が監査の詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
   
 ### <a name="to-audit-security-events-in-code"></a>セキュリティ イベントを監査するコードを記述するには  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF)、Windows イベント ビューアーを
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定すると、セキュリティ監査を生成する失敗が抑制されます (`false` に設定した場合は、例外がスローされます)。 ただし、次の Windows を有効にした場合**ローカル セキュリティ設定**プロパティ、イベントの監査の生成に失敗したの Windows をすぐにシャット ダウンが発生します。  
   
- **監査: セキュリティ監査ログを記録できない場合は直ちにシステムをシャット ダウンします。**  
+ **監査:セキュリティ監査を記録できない場合は直ちにシステムをシャット ダウン**  
   
  プロパティを設定するには、開く、**ローカル セキュリティ設定** ダイアログ ボックス。 [**セキュリティ設定**、] をクリックして**ローカル ポリシー**します。 クリックして**セキュリティ オプション**します。  
   
  場合、<xref:System.ServiceModel.AuditLogLocation>プロパティに設定されて<xref:System.ServiceModel.AuditLogLocation.Security>と**オブジェクト アクセスの監査**に設定されていない、**ローカル セキュリティ ポリシー**、監査イベントは、セキュリティ ログに書き込まれません。 エラーが返らない場合でも、監査エントリはセキュリティ ログに書き込まれません。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

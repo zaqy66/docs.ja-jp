@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30491
 ms.assetid: 8399d7ae-bc0a-49e6-81dc-2e7229708bc9
-ms.openlocfilehash: a6f2a750f390880eec0a3838d6c841981cce3305
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2acd171eebf6592b8c6f79794611d9a68ab424df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565281"
 ---
 # <a name="expression-does-not-produce-a-value"></a>式は値を生成しません。
-呼び出しなどの値生成のコンテキストで値を生成しない式を使用しようとした、`Sub`コンテキストで場所、`Function`が必要です。  
+呼び出しなどの価値を生み出すのコンテキスト内の値を生成しない式を使用しようとしている、`Sub`コンテキストで場所、`Function`が必要です。  
   
  **エラー ID:** BC30491  
   
@@ -23,5 +23,5 @@ ms.locfileid: "33586658"
   
 -   値を生成するには、式を変更します。  
   
-## <a name="see-also"></a>関連項目  
- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>関連項目
+- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

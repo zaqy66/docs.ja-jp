@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566984"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 関数
-イベントを受信するクエリを実行します。 呼び出しが直ちに返され、呼び出し元は、到着すると、イベントの返された列挙子をポーリングします。 返された列挙子を解放するクエリをキャンセルします。  
+イベントを受信するクエリが実行されます。 呼び出しが直ちに返され、呼び出し元は、到着すると、イベントの返された列挙子をポーリングします。 返された列挙子を解放するクエリをキャンセルします。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -52,7 +52,7 @@ HRESULT ExecNotificationQueryWmi (
 [in]Windows の管理でサポートされる有効なクエリ言語を含む文字列。 WMI クエリ言語の頭字語である"WQL"必要があります。
 
 `strQuery`  
-[in]クエリのテキスト。 このパラメーターにすることはできません`null`します。
+[in]クエリのテキスト。 このパラメーターを `null` とすることはできません。
 
 `lFlags`   
 [in]この関数の動作に影響する次の 2 つのフラグの組み合わせ。 これらの値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。 
@@ -116,12 +116,12 @@ HRESULT ExecNotificationQueryWmi (
 
 呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

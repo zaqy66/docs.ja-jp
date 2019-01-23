@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fed7519402b4c3c1b2405ea99f8ba484781e95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558632"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost コクラス
-ランタイムによってコードの実行を管理するためのインターフェイスを提供します。  
+ランタイムによってコードが実行を管理するためのインターフェイスを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ coclass CLRRuntimeHost {
 |Interface|説明|  
 |---------------|-----------------|  
 |[ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|ランタイムによってアプリケーションの実行を制御するためのメソッドを提供します。|  
-|[ICLRValidator インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|ポータブル実行可能イメージの検証と検証エラーの詳細なレポート作成のメソッドを提供します。|  
+|[ICLRValidator インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|ポータブル実行可能イメージの検証し、検証エラーの詳細なレポートのメソッドを提供します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.idl  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>関連項目
+- [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

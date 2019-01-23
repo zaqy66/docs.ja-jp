@@ -1,5 +1,5 @@
 ---
-title: '方法 : RichTextBox コンテンツを保存、読み込み、および印刷する'
+title: '方法: RichTextBox コンテンツの保存、読み込み、および印刷'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - RichTextBox control [WPF], printing
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
-ms.openlocfilehash: df43a5f5cabd664bb8514967456a67ba3699d5a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1f5b1d33518d19f6c0976e883500d27cf9adbec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562129"
 ---
-# <a name="how-to-save-load-and-print-richtextbox-content"></a>方法 : RichTextBox コンテンツを保存、読み込み、および印刷する
-次の例の内容を保存する方法を示しています、<xref:System.Windows.Controls.RichTextBox>をファイルにそのコンテンツの状態に戻してを読み込み、 <xref:System.Windows.Controls.RichTextBox>、および内容を印刷します。  
+# <a name="how-to-save-load-and-print-richtextbox-content"></a>方法: RichTextBox コンテンツの保存、読み込み、および印刷
+次の例の内容を保存する方法を示しています、<xref:System.Windows.Controls.RichTextBox>ファイルに読み込むにその内容を<xref:System.Windows.Controls.RichTextBox>、および内容を印刷します。  
   
 ## <a name="example"></a>例  
  この例のマークアップを次に示します。  
@@ -33,6 +33,6 @@ ms.locfileid: "33552920"
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## <a name="see-also"></a>関連項目  
- [RichTextBox の概要](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [TextBox の概要](../../../../docs/framework/wpf/controls/textbox-overview.md)
+## <a name="see-also"></a>関連項目
+- [RichTextBox の概要](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [TextBox の概要](../../../../docs/framework/wpf/controls/textbox-overview.md)

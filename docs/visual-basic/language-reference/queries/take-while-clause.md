@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3dfb70066d88683e60f3bf4199441ab3024ef36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565112"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 句 (Visual Basic)
 指定された条件が `true` である限り、コレクションの要素を含むようにし、残りの要素をバイパスします。  
@@ -40,11 +40,11 @@ Take While expression
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)

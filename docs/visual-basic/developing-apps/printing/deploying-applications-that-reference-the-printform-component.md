@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
-ms.openlocfilehash: 6384ad6e3bf0520362267eddc8f7bbb05b37f283
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 78d332c88b45fa9b1204d9d5352a6027409254e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562428"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>PrintForm コンポーネント (Visual Basic) を参照するアプリケーションの配置
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを参照するアプリケーションを配置する場合は、コンポーネントをターゲット コンピューターにインストールする必要があります。  
   
- PowerPack コントロールは不要になった Visual Studio で、含まれていますからダウンロードすることができます、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=25169)します。  
+ PowerPack コントロールは、Visual Studio には含まれなくなりましたが、 [ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=25169)からダウンロードできます。  
   
 ## <a name="installing-the-printform-as-a-prerequisite"></a>必要条件として PrintForm をインストールする  
  アプリケーションを正しく配置するためには、アプリケーションによって参照されるすべてのコンポーネントを配置する必要もあります。 必須コンポーネントのインストール プロセスは、 *ブートストラップ*と呼ばれます。  
@@ -30,6 +30,6 @@ ms.locfileid: "43787648"
   
  ブートストラップの代わりに、Microsoft Systems Management Server などの電子ソフトウェア配布システムを使って <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントを事前に配置することもできます。  
   
-## <a name="see-also"></a>関連項目  
- [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [PrintForm コンポーネント](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>関連項目
+- [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [PrintForm コンポーネント](../../../visual-basic/developing-apps/printing/printform-component.md)

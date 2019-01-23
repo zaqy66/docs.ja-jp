@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 6ede7bc8a6c2a45630c48417c7ab90eb8decdc39
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559386"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource のマークアップ拡張機能
 プロパティを指定します、<xref:System.Windows.Data.RelativeSource>内で使用する、バインディング ソースを[バインディング マークアップ拡張](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)を設定するとき、または、<xref:System.Windows.Data.Binding.RelativeSource%2A>のプロパティを<xref:System.Windows.Data.Binding>XAML に設定されている要素。  
@@ -38,7 +38,7 @@ ms.locfileid: "54029438"
   </Binding.RelativeSource>  
 </Binding>  
 ```
-または  
+- または -  
 ```xml
 <Binding>  
   <Binding.RelativeSource>  
@@ -105,11 +105,11 @@ ms.locfileid: "54029438"
   
  `RelativeSource` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が、属性を処理する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Data.Binding>  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [バインディング宣言の概要](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [x:Type マークアップ拡張機能](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Data.Binding>
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [バインディング宣言の概要](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [x:Type マークアップ拡張機能](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

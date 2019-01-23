@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559542"
 ---
 # <a name="nested-types"></a>入れ子にされた型
 入れ子になった型は、それを囲む型と呼ばれる別の型のスコープ内で定義されている型です。 入れ子にされた型が、その外側の型のすべてのメンバーにアクセスします。 たとえば、それを囲む型のすべての先祖で定義されているフィールドを保護して、外側の型で定義されてプライベート フィールドにアクセス権があります。  
@@ -47,5 +47,5 @@ ms.locfileid: "53148877"
   
 ## <a name="see-also"></a>関連項目
 
-- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)  
+- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
