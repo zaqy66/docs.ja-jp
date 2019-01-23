@@ -1,25 +1,25 @@
 ---
-title: '方法 : コード内でクライアント バインディングを指定する'
+title: '方法: コードでクライアント バインディングを指定します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: 3a05c60b6e68f87c31e74774bf0b50e535477b56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632843"
 ---
-# <a name="how-to-specify-a-client-binding-in-code"></a>方法 : コード内でクライアント バインディングを指定する
+# <a name="how-to-specify-a-client-binding-in-code"></a>方法: コードでクライアント バインディングを指定します。
 この例では、電卓サービスを使用するためのクライアントを作成し、そのクライアントのバインディングを強制的にコードで指定します。 クライアントは `CalculatorService` にアクセスします。これにより、`ICalculator` インターフェイスが実装され、サービスとクライアントの両方で <xref:System.ServiceModel.BasicHttpBinding> クラスが使用されます。  
   
- ここで説明する手順では、電卓サービスが実行されていることを前提としています。 サービスの構築方法の詳細については、次を参照してください。[する方法: 構成では、サービス バインドを指定して](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)です。 また、使用、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアント コンポーネントを自動的に生成する Windows Communication Foundation (WCF) を提供します。 このツールでは、サービスにアクセスするためのクライアント コードが生成されます。  
+ ここで説明する手順では、電卓サービスが実行されていることを前提としています。 サービスの構築方法の詳細については、次を参照してください。[方法。構成でサービス バインディング指定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。 また、使用、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアント コンポーネントを自動的に生成する Windows Communication Foundation (WCF) を提供します。 このツールでは、サービスにアクセスするためのクライアント コードが生成されます。  
   
  クライアントは 2 つの部分で構成されます。 Svcutil.exe によって、`ClientCalculator` インターフェイスを実装する `ICalculator` が生成されます。 次に、`ClientCalculator` のインスタンスを作成し、サービスのバインディングとアドレスをコードで指定して、このクライアント アプリケーションを作成します。  
   
- この例の元のコピーを次を参照してください。、 [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md)サンプルです。  
+ この例のソースのコピーを次を参照してください。、 [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md)サンプル。  
   
 ### <a name="to-specify-a-custom-binding-in-code"></a>コード内でカスタム バインドを指定するには  
   
@@ -46,5 +46,5 @@ ms.locfileid: "33498372"
   
 5.  クライアントをコンパイルして実行します。  
   
-## <a name="see-also"></a>関連項目  
- [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+- [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : デジタル署名で XML ドキュメントに署名する'
+title: '方法: XML ドキュメントにデジタル署名を使用'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622625"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>方法 : デジタル署名で XML ドキュメントに署名する
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>方法: XML ドキュメントにデジタル署名を使用
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用すると、XML ドキュメントまたは XML ドキュメントの一部にデジタル署名で署名することができます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細については、World Wide Web Consortium (W3C) の推奨事項 [XML 署名の構文と処理](https://www.w3.org/TR/xmldsig-core/) を参照してください。  
   
  この手順のコード例は、XML ドキュメント全体にデジタル署名する方法、および <`Signature`> 要素内のドキュメントに署名を付す方法を示しています。  この例では、RSA 署名キーを作成し、キーをセキュリティで保護されたキー コンテナーに追加してから、キーを使用して XML ドキュメントにデジタル署名しています。  キーは、XML デジタル署名を確認するために取得したり、別の XML ドキュメントの署名に使用したりすることができます。  
   
- この手順を使用して作成された XML デジタル署名を確認する方法については [方法: XML ドキュメントのデジタル署名を検証する](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md) を参照してください。  
+ この手順を使用して作成された XML デジタル署名を確認する方法については、次を参照してください。[方法。XML ドキュメントのデジタル署名を検証](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)です。  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>XML ドキュメントにデジタル署名するには  
   
@@ -120,5 +120,5 @@ ms.locfileid: "45664606"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Security.Cryptography.Xml>  
-- [方法: XML ドキュメントのデジタル署名を検証する](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- <xref:System.Security.Cryptography.Xml>
+- [方法: XML ドキュメントのデジタル署名を確認します。](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
