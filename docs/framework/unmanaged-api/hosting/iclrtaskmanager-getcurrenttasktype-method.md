@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51c103fb38dd97ec076096037932925e31280f02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d2a8818ef180b3522a53e29fa84453ea9033a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522402"
 ---
-# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="386b1-102">ICLRTaskManager::GetCurrentTaskType メソッド</span><span class="sxs-lookup"><span data-stu-id="386b1-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
-<span data-ttu-id="386b1-103">現在実行中のタスクの種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="386b1-103">Gets the type of the task that is currently executing.</span></span>  
+# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="8bc7c-102">ICLRTaskManager::GetCurrentTaskType メソッド</span><span class="sxs-lookup"><span data-stu-id="8bc7c-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
+<span data-ttu-id="8bc7c-103">現在実行しているタスクの種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="8bc7c-103">Gets the type of the task that is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="386b1-104">構文</span><span class="sxs-lookup"><span data-stu-id="386b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8bc7c-104">構文</span><span class="sxs-lookup"><span data-stu-id="8bc7c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentTaskType(  
@@ -35,18 +35,18 @@ HRESULT GetCurrentTaskType(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="386b1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="386b1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8bc7c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8bc7c-105">Parameters</span></span>  
  `pTaskType`  
- <span data-ttu-id="386b1-106">[out]値へのポインター、 [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)を現在実行中のタスクの種類を示す列挙体です。</span><span class="sxs-lookup"><span data-stu-id="386b1-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
+ <span data-ttu-id="8bc7c-106">[out]値へのポインター、 [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)現在実行しているタスクの種類を示す列挙体。</span><span class="sxs-lookup"><span data-stu-id="8bc7c-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="386b1-107">要件</span><span class="sxs-lookup"><span data-stu-id="386b1-107">Requirements</span></span>  
- <span data-ttu-id="386b1-108">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="386b1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8bc7c-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="8bc7c-107">Requirements</span></span>  
+ <span data-ttu-id="8bc7c-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8bc7c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="386b1-109">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="386b1-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8bc7c-109">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8bc7c-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="386b1-110">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="386b1-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8bc7c-110">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="8bc7c-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="386b1-111">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="386b1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8bc7c-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bc7c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="386b1-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="386b1-112">See Also</span></span>  
- [<span data-ttu-id="386b1-113">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="386b1-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8bc7c-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="8bc7c-112">See also</span></span>
+- [<span data-ttu-id="8bc7c-113">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8bc7c-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

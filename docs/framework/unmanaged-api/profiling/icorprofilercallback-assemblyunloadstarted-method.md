@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10475831be02bd4a958da84b7b75409cf3ad4097
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 88ac588cd7eb98b4949aa993c66452de77dd100e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514734"
 ---
-# <a name="icorprofilercallbackassemblyunloadstarted-method"></a><span data-ttu-id="d128a-102">ICorProfilerCallback::AssemblyUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="d128a-102">ICorProfilerCallback::AssemblyUnloadStarted Method</span></span>
-<span data-ttu-id="d128a-103">アセンブリがアンロードされることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="d128a-103">Notifies the profiler that an assembly is being unloaded.</span></span>  
+# <a name="icorprofilercallbackassemblyunloadstarted-method"></a><span data-ttu-id="8c1fe-102">ICorProfilerCallback::AssemblyUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="8c1fe-102">ICorProfilerCallback::AssemblyUnloadStarted Method</span></span>
+<span data-ttu-id="8c1fe-103">アセンブリがアンロードされることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="8c1fe-103">Notifies the profiler that an assembly is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d128a-104">構文</span><span class="sxs-lookup"><span data-stu-id="d128a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c1fe-104">構文</span><span class="sxs-lookup"><span data-stu-id="8c1fe-104">Syntax</span></span>  
   
 ```  
 HRESULT AssemblyUnloadStarted(  
     [in] AssemblyID assemblyId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d128a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d128a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8c1fe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8c1fe-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="d128a-106">[in]モジュールはアンロードされているアセンブリを識別します。</span><span class="sxs-lookup"><span data-stu-id="d128a-106">[in] Identifies the assembly that is being unloaded.</span></span>  
+ <span data-ttu-id="8c1fe-106">[in]アンロードされているアセンブリを識別します。</span><span class="sxs-lookup"><span data-stu-id="8c1fe-106">[in] Identifies the assembly that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d128a-107">コメント</span><span class="sxs-lookup"><span data-stu-id="d128a-107">Remarks</span></span>  
- <span data-ttu-id="d128a-108">値`assemblyId`後情報の要求に対して無効です、`AssemblyUnloadStarted`メソッドを返します。-これは、プロファイラーの最後のチャンスをこのアセンブリに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d128a-108">The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c1fe-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="8c1fe-107">Remarks</span></span>  
+ <span data-ttu-id="8c1fe-108">値`assemblyId`は後の情報の要求は無効です、`AssemblyUnloadStarted`メソッドを返します。-これはこのアセンブリに関する情報を取得、プロファイラーの最後のチャンスです。</span><span class="sxs-lookup"><span data-stu-id="8c1fe-108">The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d128a-109">要件</span><span class="sxs-lookup"><span data-stu-id="d128a-109">Requirements</span></span>  
- <span data-ttu-id="d128a-110">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="d128a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c1fe-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="8c1fe-109">Requirements</span></span>  
+ <span data-ttu-id="8c1fe-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8c1fe-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d128a-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d128a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8c1fe-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8c1fe-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d128a-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d128a-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8c1fe-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8c1fe-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d128a-113">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d128a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8c1fe-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c1fe-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d128a-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="d128a-114">See Also</span></span>  
- [<span data-ttu-id="d128a-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d128a-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="d128a-116">AssemblyUnloadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="d128a-116">AssemblyUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
+## <a name="see-also"></a><span data-ttu-id="8c1fe-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="8c1fe-114">See also</span></span>
+- [<span data-ttu-id="8c1fe-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8c1fe-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="8c1fe-116">AssemblyUnloadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="8c1fe-116">AssemblyUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)

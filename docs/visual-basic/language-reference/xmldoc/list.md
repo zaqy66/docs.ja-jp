@@ -13,17 +13,17 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 98c3b8bd809ac550468a5d80e01e6fd16e6d96ea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 8d9bcffc32a1d1670aba1ce0e7b0ff0a6dc7112d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521115"
 ---
-# <a name="ltlistgt-visual-basic"></a><span data-ttu-id="73440-102">&lt;list&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73440-102">&lt;list&gt; (Visual Basic)</span></span>
-<span data-ttu-id="73440-103">リストまたはテーブルを定義します。</span><span class="sxs-lookup"><span data-stu-id="73440-103">Defines a list or table.</span></span>  
+# <a name="ltlistgt-visual-basic"></a><span data-ttu-id="8cde1-102">&lt;list&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cde1-102">&lt;list&gt; (Visual Basic)</span></span>
+<span data-ttu-id="8cde1-103">リストまたはテーブルを定義します。</span><span class="sxs-lookup"><span data-stu-id="8cde1-103">Defines a list or table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73440-104">構文</span><span class="sxs-lookup"><span data-stu-id="73440-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8cde1-104">構文</span><span class="sxs-lookup"><span data-stu-id="8cde1-104">Syntax</span></span>  
   
 ```xml  
 <list type="type">  
@@ -38,29 +38,29 @@ ms.locfileid: "42924935"
 </list>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="73440-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="73440-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8cde1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8cde1-105">Parameters</span></span>  
  `type`  
- <span data-ttu-id="73440-106">リストの型。</span><span class="sxs-lookup"><span data-stu-id="73440-106">The type of the list.</span></span> <span data-ttu-id="73440-107">箇条書き、番号付きリスト、または 2 つの列のテーブルには、"table"の"number"の"bullet"があります。</span><span class="sxs-lookup"><span data-stu-id="73440-107">Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.</span></span>  
+ <span data-ttu-id="8cde1-106">リストの型。</span><span class="sxs-lookup"><span data-stu-id="8cde1-106">The type of the list.</span></span> <span data-ttu-id="8cde1-107">箇条書き、番号付きリスト、または 2 つの列のテーブルには、"table"の"number"の"bullet"があります。</span><span class="sxs-lookup"><span data-stu-id="8cde1-107">Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.</span></span>  
   
  `term`  
- <span data-ttu-id="73440-108">場合のみ使用`type`"table"には</span><span class="sxs-lookup"><span data-stu-id="73440-108">Only used when `type` is "table."</span></span> <span data-ttu-id="73440-109">説明タグで定義されている用語を定義します。</span><span class="sxs-lookup"><span data-stu-id="73440-109">A term to define, which is defined in the description tag.</span></span>  
+ <span data-ttu-id="8cde1-108">場合のみ使用`type`"table"には</span><span class="sxs-lookup"><span data-stu-id="8cde1-108">Only used when `type` is "table."</span></span> <span data-ttu-id="8cde1-109">説明タグで定義されている用語を定義します。</span><span class="sxs-lookup"><span data-stu-id="8cde1-109">A term to define, which is defined in the description tag.</span></span>  
   
  `description`  
- <span data-ttu-id="73440-110">ときに`type`"bullet"または"number" `description` 、リスト内の項目は、ときに`type`は"table"`description`の定義は、 `term`。</span><span class="sxs-lookup"><span data-stu-id="73440-110">When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.</span></span>  
+ <span data-ttu-id="8cde1-110">ときに`type`"bullet"または"number" `description` 、リスト内の項目は、ときに`type`は"table"`description`の定義は、 `term`。</span><span class="sxs-lookup"><span data-stu-id="8cde1-110">When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="73440-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="73440-111">Remarks</span></span>  
- <span data-ttu-id="73440-112">`<listheader>`ブロックは、テーブルまたは定義の一覧の見出しを定義します。</span><span class="sxs-lookup"><span data-stu-id="73440-112">The `<listheader>` block defines the heading of either a table or definition list.</span></span> <span data-ttu-id="73440-113">のみのエントリを指定する必要があるテーブルを定義するときに`term`見出し。</span><span class="sxs-lookup"><span data-stu-id="73440-113">When defining a table, you only have to supply an entry for `term` in the heading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8cde1-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="8cde1-111">Remarks</span></span>  
+ <span data-ttu-id="8cde1-112">`<listheader>`ブロックは、テーブルまたは定義の一覧の見出しを定義します。</span><span class="sxs-lookup"><span data-stu-id="8cde1-112">The `<listheader>` block defines the heading of either a table or definition list.</span></span> <span data-ttu-id="8cde1-113">のみのエントリを指定する必要があるテーブルを定義するときに`term`見出し。</span><span class="sxs-lookup"><span data-stu-id="8cde1-113">When defining a table, you only have to supply an entry for `term` in the heading.</span></span>  
   
- <span data-ttu-id="73440-114">リスト内の各項目を指定した、`<item>`ブロックします。</span><span class="sxs-lookup"><span data-stu-id="73440-114">Each item in the list is specified with an `<item>` block.</span></span> <span data-ttu-id="73440-115">定義リストを作成するときに、両方を指定する必要があります`term`と`description`します。</span><span class="sxs-lookup"><span data-stu-id="73440-115">When creating a definition list, you must specify both `term` and `description`.</span></span> <span data-ttu-id="73440-116">ただし、テーブル、箇条書きまたは番号付きリストだけであるエントリを指定する`description`します。</span><span class="sxs-lookup"><span data-stu-id="73440-116">However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.</span></span>  
+ <span data-ttu-id="8cde1-114">リスト内の各項目を指定した、`<item>`ブロックします。</span><span class="sxs-lookup"><span data-stu-id="8cde1-114">Each item in the list is specified with an `<item>` block.</span></span> <span data-ttu-id="8cde1-115">定義リストを作成するときに、両方を指定する必要があります`term`と`description`します。</span><span class="sxs-lookup"><span data-stu-id="8cde1-115">When creating a definition list, you must specify both `term` and `description`.</span></span> <span data-ttu-id="8cde1-116">ただし、テーブル、箇条書きまたは番号付きリストだけであるエントリを指定する`description`します。</span><span class="sxs-lookup"><span data-stu-id="8cde1-116">However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.</span></span>  
   
- <span data-ttu-id="73440-117">リストまたはテーブルとして多く持つことができます`<item>`に応じてをブロックします。</span><span class="sxs-lookup"><span data-stu-id="73440-117">A list or table can have as many `<item>` blocks as needed.</span></span>  
+ <span data-ttu-id="8cde1-117">リストまたはテーブルとして多く持つことができます`<item>`に応じてをブロックします。</span><span class="sxs-lookup"><span data-stu-id="8cde1-117">A list or table can have as many `<item>` blocks as needed.</span></span>  
   
- <span data-ttu-id="73440-118">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="73440-118">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="8cde1-118">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="8cde1-118">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="73440-119">例</span><span class="sxs-lookup"><span data-stu-id="73440-119">Example</span></span>  
- <span data-ttu-id="73440-120">この例では、 `<list>` 「解説」セクションで、箇条書きリストを定義するタグ。</span><span class="sxs-lookup"><span data-stu-id="73440-120">This example uses the `<list>` tag to define a bulleted list in the remarks section.</span></span>  
+## <a name="example"></a><span data-ttu-id="8cde1-119">例</span><span class="sxs-lookup"><span data-stu-id="8cde1-119">Example</span></span>  
+ <span data-ttu-id="8cde1-120">この例では、 `<list>` 「解説」セクションで、箇条書きリストを定義するタグ。</span><span class="sxs-lookup"><span data-stu-id="8cde1-120">This example uses the `<list>` tag to define a bulleted list in the remarks section.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="73440-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="73440-121">See Also</span></span>  
- [<span data-ttu-id="73440-122">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="73440-122">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="8cde1-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="8cde1-121">See also</span></span>
+- [<span data-ttu-id="8cde1-122">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="8cde1-122">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

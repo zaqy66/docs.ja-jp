@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd8f1adee6bbcb3b57b87a2d6c85c01c624da9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520374"
 ---
-# <a name="icordebugnativeframe2-interface"></a><span data-ttu-id="8a144-102">ICorDebugNativeFrame2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8a144-102">ICorDebugNativeFrame2 Interface</span></span>
-<span data-ttu-id="8a144-103">子と親のフレームの関係をテストするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="8a144-103">Provides methods that test for child and parent frame relationships.</span></span>  
+# <a name="icordebugnativeframe2-interface"></a><span data-ttu-id="9e024-102">ICorDebugNativeFrame2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9e024-102">ICorDebugNativeFrame2 Interface</span></span>
+<span data-ttu-id="9e024-103">子と親のフレームの関係をテストするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="9e024-103">Provides methods that test for child and parent frame relationships.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8a144-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="8a144-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9e024-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="9e024-104">Methods</span></span>  
   
-|<span data-ttu-id="8a144-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="8a144-105">Method</span></span>|<span data-ttu-id="8a144-106">説明</span><span class="sxs-lookup"><span data-stu-id="8a144-106">Description</span></span>|  
+|<span data-ttu-id="9e024-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="9e024-105">Method</span></span>|<span data-ttu-id="9e024-106">説明</span><span class="sxs-lookup"><span data-stu-id="9e024-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8a144-107">IsChild メソッド</span><span class="sxs-lookup"><span data-stu-id="8a144-107">IsChild Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|<span data-ttu-id="8a144-108">現在のフレームが子フレームであるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="8a144-108">Determines whether the current frame is a child frame.</span></span>|  
-|[<span data-ttu-id="8a144-109">IsMatchingParentFrame メソッド</span><span class="sxs-lookup"><span data-stu-id="8a144-109">IsMatchingParentFrame Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|<span data-ttu-id="8a144-110">指定したフレームが現在のフレームの親であるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="8a144-110">Determines whether the specified frame is the parent of the current frame.</span></span>|  
-|[<span data-ttu-id="8a144-111">GetStackParameterSize メソッド</span><span class="sxs-lookup"><span data-stu-id="8a144-111">GetStackParameterSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|<span data-ttu-id="8a144-112">X86 オペレーティング システム上のスタック上には、パラメーターの合計サイズを返します。</span><span class="sxs-lookup"><span data-stu-id="8a144-112">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>|  
+|[<span data-ttu-id="9e024-107">IsChild メソッド</span><span class="sxs-lookup"><span data-stu-id="9e024-107">IsChild Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|<span data-ttu-id="9e024-108">現在のフレームが子フレームであるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="9e024-108">Determines whether the current frame is a child frame.</span></span>|  
+|[<span data-ttu-id="9e024-109">IsMatchingParentFrame メソッド</span><span class="sxs-lookup"><span data-stu-id="9e024-109">IsMatchingParentFrame Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|<span data-ttu-id="9e024-110">指定したフレームの現在のフレームの親であるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="9e024-110">Determines whether the specified frame is the parent of the current frame.</span></span>|  
+|[<span data-ttu-id="9e024-111">GetStackParameterSize メソッド</span><span class="sxs-lookup"><span data-stu-id="9e024-111">GetStackParameterSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|<span data-ttu-id="9e024-112">X86 オペレーティング システム上のスタックで、パラメーターの合計サイズを返します。</span><span class="sxs-lookup"><span data-stu-id="9e024-112">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8a144-113">コメント</span><span class="sxs-lookup"><span data-stu-id="8a144-113">Remarks</span></span>  
- <span data-ttu-id="8a144-114">このインターフェイスは、"ICorDebugNativeFrame"インターフェイスを論理的に拡張します。</span><span class="sxs-lookup"><span data-stu-id="8a144-114">This interface logically extends the "ICorDebugNativeFrame" interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e024-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="9e024-113">Remarks</span></span>  
+ <span data-ttu-id="9e024-114">このインターフェイスは、"ICorDebugNativeFrame"インターフェイスを論理的に拡張します。</span><span class="sxs-lookup"><span data-stu-id="9e024-114">This interface logically extends the "ICorDebugNativeFrame" interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8a144-115">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="8a144-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="9e024-115">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="9e024-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8a144-116">要件</span><span class="sxs-lookup"><span data-stu-id="8a144-116">Requirements</span></span>  
- <span data-ttu-id="8a144-117">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="8a144-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e024-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="9e024-116">Requirements</span></span>  
+ <span data-ttu-id="9e024-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e024-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a144-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8a144-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9e024-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e024-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8a144-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a144-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9e024-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e024-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8a144-120">**.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a144-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9e024-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e024-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a144-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="8a144-121">See Also</span></span>  
-    
- [<span data-ttu-id="8a144-122">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8a144-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="8a144-123">デバッグ</span><span class="sxs-lookup"><span data-stu-id="8a144-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="9e024-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="9e024-121">See also</span></span>
+
+- [<span data-ttu-id="9e024-122">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9e024-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9e024-123">デバッグ</span><span class="sxs-lookup"><span data-stu-id="9e024-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

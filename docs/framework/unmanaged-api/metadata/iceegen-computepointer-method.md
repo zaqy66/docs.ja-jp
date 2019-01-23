@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1239546072192d6ff9497013ad7b7140ea13085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522415"
 ---
-# <a name="iceegencomputepointer-method"></a><span data-ttu-id="128ba-102">ICeeGen::ComputePointer メソッド</span><span class="sxs-lookup"><span data-stu-id="128ba-102">ICeeGen::ComputePointer Method</span></span>
-<span data-ttu-id="128ba-103">指定されたコードのセクションのバッファーを決定します。</span><span class="sxs-lookup"><span data-stu-id="128ba-103">Determines the buffer for the specified code section.</span></span>  
+# <a name="iceegencomputepointer-method"></a><span data-ttu-id="6b3ff-102">ICeeGen::ComputePointer メソッド</span><span class="sxs-lookup"><span data-stu-id="6b3ff-102">ICeeGen::ComputePointer Method</span></span>
+<span data-ttu-id="6b3ff-103">指定したコードのセクションのバッファーを決定します。</span><span class="sxs-lookup"><span data-stu-id="6b3ff-103">Determines the buffer for the specified code section.</span></span>  
   
- <span data-ttu-id="128ba-104">このメソッドは、古いは使用できません。</span><span class="sxs-lookup"><span data-stu-id="128ba-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="6b3ff-104">このメソッドは廃止され、使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6b3ff-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="128ba-105">構文</span><span class="sxs-lookup"><span data-stu-id="128ba-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b3ff-105">構文</span><span class="sxs-lookup"><span data-stu-id="6b3ff-105">Syntax</span></span>  
   
 ```  
 HRESULT ComputePointer (  
@@ -39,24 +39,24 @@ HRESULT ComputePointer (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="128ba-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="128ba-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6b3ff-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6b3ff-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="128ba-107">[in]バッファーを取得するコード セクションです。</span><span class="sxs-lookup"><span data-stu-id="128ba-107">[in] The code section for which to return a buffer.</span></span>  
+ <span data-ttu-id="6b3ff-107">[in]バッファーを返す対象のコード セクション。</span><span class="sxs-lookup"><span data-stu-id="6b3ff-107">[in] The code section for which to return a buffer.</span></span>  
   
  `RVA`  
- <span data-ttu-id="128ba-108">[in]ポインターを取得する対象のメソッドの相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="128ba-108">[in] The relative virtual address of the method for which to get a pointer.</span></span>  
+ <span data-ttu-id="6b3ff-108">[in]ポインターを取得する対象のメソッドの相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="6b3ff-108">[in] The relative virtual address of the method for which to get a pointer.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="128ba-109">[out]返されたバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="128ba-109">[out] A pointer to the returned buffer.</span></span>  
+ <span data-ttu-id="6b3ff-109">[out]返されたバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6b3ff-109">[out] A pointer to the returned buffer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="128ba-110">要件</span><span class="sxs-lookup"><span data-stu-id="128ba-110">Requirements</span></span>  
- <span data-ttu-id="128ba-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="128ba-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b3ff-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="6b3ff-110">Requirements</span></span>  
+ <span data-ttu-id="6b3ff-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6b3ff-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="128ba-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="128ba-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6b3ff-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6b3ff-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="128ba-113">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="128ba-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6b3ff-113">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="6b3ff-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="128ba-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="128ba-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6b3ff-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b3ff-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="128ba-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="128ba-115">See Also</span></span>  
- [<span data-ttu-id="128ba-116">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="128ba-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6b3ff-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b3ff-115">See also</span></span>
+- [<span data-ttu-id="6b3ff-116">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6b3ff-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

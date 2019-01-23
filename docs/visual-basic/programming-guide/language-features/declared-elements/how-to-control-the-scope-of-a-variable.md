@@ -1,5 +1,5 @@
 ---
-title: '方法: 変数のスコープを制御する (Visual Basic)'
+title: '方法: 変数 (Visual Basic) のスコープを制御します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,53 +12,53 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 6e8d1178398711226b88fee7e6defd5162b91fcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521414"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="0dd4e-102">方法: 変数のスコープを制御する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0dd4e-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
-<span data-ttu-id="0dd4e-103">変数が、通常、*スコープ*、リファレンスについては、それを宣言する領域全体で表示します。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="0dd4e-104">場合によっては、変数の*アクセス レベル*そのスコープに影響を与えることができます。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-104">In some cases, the variable's *access level* can influence its scope.</span></span>  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="05e41-102">方法: 変数 (Visual Basic) のスコープを制御します。</span><span class="sxs-lookup"><span data-stu-id="05e41-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
+<span data-ttu-id="05e41-103">変数が、通常、*スコープ*、または宣言をリージョン全体での参照を表示します。</span><span class="sxs-lookup"><span data-stu-id="05e41-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="05e41-104">場合によっては、変数の*アクセス レベル*そのスコープに影響を与えることができます。</span><span class="sxs-lookup"><span data-stu-id="05e41-104">In some cases, the variable's *access level* can influence its scope.</span></span>  
   
- <span data-ttu-id="0dd4e-105">詳細については、次を参照してください。 [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)です。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-105">For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span></span>  
+ <span data-ttu-id="05e41-105">詳細については、「 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="05e41-105">For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span></span>  
   
-## <a name="scope-at-block-or-procedure-level"></a><span data-ttu-id="0dd4e-106">ブロックまたはプロシージャ レベルのスコープ</span><span class="sxs-lookup"><span data-stu-id="0dd4e-106">Scope at Block or Procedure Level</span></span>  
+## <a name="scope-at-block-or-procedure-level"></a><span data-ttu-id="05e41-106">ブロックまたはプロシージャ レベルのスコープ</span><span class="sxs-lookup"><span data-stu-id="05e41-106">Scope at Block or Procedure Level</span></span>  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a><span data-ttu-id="0dd4e-107">変数をブロック内でのみ表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="0dd4e-107">To make a variable visible only within a block</span></span>  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a><span data-ttu-id="05e41-107">変数をブロック内でのみ表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="05e41-107">To make a variable visible only within a block</span></span>  
   
--   <span data-ttu-id="0dd4e-108">場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)の開始との間など、そのブロックの宣言ステートメントを終了して、変数、`For`と`Next`のステートメント、`For`ループします。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-108">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.</span></span>  
+-   <span data-ttu-id="05e41-108">場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)の開始との間など、そのブロックの宣言ステートメントの終了の間、変数、`For`と`Next`のステートメントを`For`ループします。</span><span class="sxs-lookup"><span data-stu-id="05e41-108">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.</span></span>  
   
-     <span data-ttu-id="0dd4e-109">ブロック内からのみ、変数を参照することができます。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-109">You can refer to the variable only from within the block.</span></span>  
+     <span data-ttu-id="05e41-109">ブロック内からのみ、変数を参照することができます。</span><span class="sxs-lookup"><span data-stu-id="05e41-109">You can refer to the variable only from within the block.</span></span>  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a><span data-ttu-id="0dd4e-110">変数をプロシージャ内でのみ表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="0dd4e-110">To make a variable visible only within a procedure</span></span>  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a><span data-ttu-id="05e41-110">変数をプロシージャ内でのみ表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="05e41-110">To make a variable visible only within a procedure</span></span>  
   
--   <span data-ttu-id="0dd4e-111">場所、 `Dim` 、変数、プロシージャ内では、任意のブロックの外側のステートメント (など、 `With`.`End With`ブロック) します。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-111">Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).</span></span>  
+-   <span data-ttu-id="05e41-111">場所、`Dim`変数、プロシージャ内では、ブロックの外側のステートメント (など、 `With`.`End With`ブロック)。</span><span class="sxs-lookup"><span data-stu-id="05e41-111">Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).</span></span>  
   
-     <span data-ttu-id="0dd4e-112">プロシージャに含まれているすべてのブロックの内側など、プロシージャ内からのみ、変数を参照することができます。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-112">You can refer to the variable only from within the procedure, including inside any block contained in the procedure.</span></span>  
+     <span data-ttu-id="05e41-112">プロシージャに含まれる各ブロックの内部を含むプロシージャ内からのみ、変数を参照することができます。</span><span class="sxs-lookup"><span data-stu-id="05e41-112">You can refer to the variable only from within the procedure, including inside any block contained in the procedure.</span></span>  
   
-## <a name="scope-at-module-or-namespace-level"></a><span data-ttu-id="0dd4e-113">モジュールまたは Namespace レベルのスコープ</span><span class="sxs-lookup"><span data-stu-id="0dd4e-113">Scope at Module or Namespace Level</span></span>  
- <span data-ttu-id="0dd4e-114">便宜上、1 つの用語*モジュール レベル*モジュール、クラス、および構造体に適用されます。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-114">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="0dd4e-115">モジュール レベルの変数のアクセス レベルでは、そのスコープを決定します。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-115">The access level of a module level variable determines its scope.</span></span> <span data-ttu-id="0dd4e-116">モジュール、クラスまたは構造体を含む名前空間もスコープに影響します。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-116">The namespace that contains the module, class, or structure also influences the scope.</span></span>  
+## <a name="scope-at-module-or-namespace-level"></a><span data-ttu-id="05e41-113">モジュールまたは Namespace レベルのスコープ</span><span class="sxs-lookup"><span data-stu-id="05e41-113">Scope at Module or Namespace Level</span></span>  
+ <span data-ttu-id="05e41-114">便宜上、1 つの用語*モジュール レベル*モジュール、クラス、および構造に当てはまります。</span><span class="sxs-lookup"><span data-stu-id="05e41-114">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="05e41-115">モジュール レベル変数のアクセス レベルは、そのスコープを決定します。</span><span class="sxs-lookup"><span data-stu-id="05e41-115">The access level of a module level variable determines its scope.</span></span> <span data-ttu-id="05e41-116">モジュール、クラスまたは構造体を含む名前空間スコープにも影響します。</span><span class="sxs-lookup"><span data-stu-id="05e41-116">The namespace that contains the module, class, or structure also influences the scope.</span></span>  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a><span data-ttu-id="0dd4e-117">変数をモジュール、クラスまたは構造体全体にわたって表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="0dd4e-117">To make a variable visible throughout a module, class, or structure</span></span>  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a><span data-ttu-id="05e41-117">変数をモジュール、クラスまたは構造体全体にわたって表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="05e41-117">To make a variable visible throughout a module, class, or structure</span></span>  
   
-1.  <span data-ttu-id="0dd4e-118">場所、`Dim`変数、プロシージャの外部ではなく、モジュール、クラス、または構造体、内部のステートメント。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-118">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="05e41-118">場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。</span><span class="sxs-lookup"><span data-stu-id="05e41-118">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="0dd4e-119">含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメントです。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-119">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="05e41-119">含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="05e41-119">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
   
-3.  <span data-ttu-id="0dd4e-120">ではなく、モジュール、クラス、または構造内で任意の場所から変数を参照することが外側にします。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-120">You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
+3.  <span data-ttu-id="05e41-120">なく、モジュール、クラス、または構造内で任意の場所から変数を参照できる外です。</span><span class="sxs-lookup"><span data-stu-id="05e41-120">You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a><span data-ttu-id="0dd4e-121">変数を名前空間全体にわたって表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="0dd4e-121">To make a variable visible throughout a namespace</span></span>  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a><span data-ttu-id="05e41-121">変数を名前空間全体で表示されるようにするには</span><span class="sxs-lookup"><span data-stu-id="05e41-121">To make a variable visible throughout a namespace</span></span>  
   
-1.  <span data-ttu-id="0dd4e-122">場所、`Dim`変数、プロシージャの外部ではなく、モジュール、クラス、または構造体、内部のステートメント。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-122">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="05e41-122">場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。</span><span class="sxs-lookup"><span data-stu-id="05e41-122">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="0dd4e-123">含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)または[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメントです。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-123">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="05e41-123">含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)または[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="05e41-123">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
   
-3.  <span data-ttu-id="0dd4e-124">任意の場所から変数を参照できるモジュール、クラスまたは構造体を含む名前空間内で。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-124">You can refer to the variable from anywhere within the namespace containing the module, class, or structure.</span></span>  
+3.  <span data-ttu-id="05e41-124">任意の場所から変数を参照できるモジュール、クラスまたは構造体を含む名前空間内で。</span><span class="sxs-lookup"><span data-stu-id="05e41-124">You can refer to the variable from anywhere within the namespace containing the module, class, or structure.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0dd4e-125">例</span><span class="sxs-lookup"><span data-stu-id="0dd4e-125">Example</span></span>  
- <span data-ttu-id="0dd4e-126">次の例では、モジュール レベル変数を宣言し、モジュール内のコードを可視性を制限します。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-126">The following example declares a variable at module level and limits its visibility to code within the module.</span></span>  
+## <a name="example"></a><span data-ttu-id="05e41-125">例</span><span class="sxs-lookup"><span data-stu-id="05e41-125">Example</span></span>  
+ <span data-ttu-id="05e41-126">次の例では、モジュール レベル変数を宣言し、モジュール内のコードをその可視性を制限します。</span><span class="sxs-lookup"><span data-stu-id="05e41-126">The following example declares a variable at module level and limits its visibility to code within the module.</span></span>  
   
 ```  
 Module demonstrateScope  
@@ -72,24 +72,24 @@ Module demonstrateScope
 End Module  
 ```  
   
- <span data-ttu-id="0dd4e-127">前の例では、モジュールで定義されたすべてのプロシージャ`demonstrateScope`を参照できる、`String`変数`strMsg`です。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-127">In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`.</span></span> <span data-ttu-id="0dd4e-128">ときに、`usePrivateVariable`プロシージャが呼び出されると、文字列変数の内容を表示`strMsg` ダイアログ ボックス。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-128">When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
+ <span data-ttu-id="05e41-127">前の例では、すべてのプロシージャはモジュールで定義されている`demonstrateScope`できますを参照してください、`String`変数`strMsg`します。</span><span class="sxs-lookup"><span data-stu-id="05e41-127">In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`.</span></span> <span data-ttu-id="05e41-128">ときに、`usePrivateVariable`プロシージャが呼び出されると、文字列変数の内容を表示`strMsg` ダイアログ ボックス。</span><span class="sxs-lookup"><span data-stu-id="05e41-128">When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
   
- <span data-ttu-id="0dd4e-129">次の部分を変更前の例では、文字列変数に`strMsg`宣言の名前空間内の任意の場所のコードによって参照することができます。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-129">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
+ <span data-ttu-id="05e41-129">上記の例では、文字列変数に次の変更と`strMsg`宣言の名前空間内のすべてのコードで参照できます。</span><span class="sxs-lookup"><span data-stu-id="05e41-129">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
   
 ```  
 Public strMsg As String  
 ```  
   
-## <a name="robust-programming"></a><span data-ttu-id="0dd4e-130">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="0dd4e-130">Robust Programming</span></span>  
- <span data-ttu-id="0dd4e-131">同じ名前の別の変数の代わりに誤って参照することがある可能性は少なく、変数より狭いスコープ</span><span class="sxs-lookup"><span data-stu-id="0dd4e-131">The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name.</span></span> <span data-ttu-id="0dd4e-132">参照の対応付けの問題を最小限に抑えることができますも。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-132">You can also minimize problems of reference matching.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="05e41-130">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="05e41-130">Robust Programming</span></span>  
+ <span data-ttu-id="05e41-131">同じ名前の別の変数の代わりに誤って参照することがある可能性は少なく、変数より狭いスコープ</span><span class="sxs-lookup"><span data-stu-id="05e41-131">The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name.</span></span> <span data-ttu-id="05e41-132">参照の対応付けの問題を最小限に抑えることができますも。</span><span class="sxs-lookup"><span data-stu-id="05e41-132">You can also minimize problems of reference matching.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="0dd4e-133">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="0dd4e-133">.NET Framework Security</span></span>  
- <span data-ttu-id="0dd4e-134">変数のスコープが狭い、される可能性が少なく悪意のあるコードが不正にそれを使用します。</span><span class="sxs-lookup"><span data-stu-id="0dd4e-134">The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="05e41-133">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="05e41-133">.NET Framework Security</span></span>  
+ <span data-ttu-id="05e41-134">変数のスコープが狭い悪意のあるコードが不正に、小さい方の可能性は、その使用します。</span><span class="sxs-lookup"><span data-stu-id="05e41-134">The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0dd4e-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="0dd4e-135">See Also</span></span>  
- [<span data-ttu-id="0dd4e-136">Visual Basic におけるスコープ</span><span class="sxs-lookup"><span data-stu-id="0dd4e-136">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [<span data-ttu-id="0dd4e-137">Visual Basic における有効期間</span><span class="sxs-lookup"><span data-stu-id="0dd4e-137">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [<span data-ttu-id="0dd4e-138">Visual Basic でのアクセス レベル</span><span class="sxs-lookup"><span data-stu-id="0dd4e-138">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [<span data-ttu-id="0dd4e-139">変数</span><span class="sxs-lookup"><span data-stu-id="0dd4e-139">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [<span data-ttu-id="0dd4e-140">変数宣言</span><span class="sxs-lookup"><span data-stu-id="0dd4e-140">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [<span data-ttu-id="0dd4e-141">Dim ステートメント</span><span class="sxs-lookup"><span data-stu-id="0dd4e-141">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a><span data-ttu-id="05e41-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="05e41-135">See also</span></span>
+- [<span data-ttu-id="05e41-136">Visual Basic におけるスコープ</span><span class="sxs-lookup"><span data-stu-id="05e41-136">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="05e41-137">Visual Basic での有効期間</span><span class="sxs-lookup"><span data-stu-id="05e41-137">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [<span data-ttu-id="05e41-138">Visual Basic でのアクセス レベル</span><span class="sxs-lookup"><span data-stu-id="05e41-138">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [<span data-ttu-id="05e41-139">変数</span><span class="sxs-lookup"><span data-stu-id="05e41-139">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [<span data-ttu-id="05e41-140">変数宣言</span><span class="sxs-lookup"><span data-stu-id="05e41-140">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="05e41-141">Dim ステートメント</span><span class="sxs-lookup"><span data-stu-id="05e41-141">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
