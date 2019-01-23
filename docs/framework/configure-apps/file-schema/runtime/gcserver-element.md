@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80421a66a3ace4970324fb295e167b7d4875063f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: dc54b8554d788cacf48aeeda31f8ed300c469b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506850"
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt;要素
 共通言語ランタイムがサーバーのガベージ コレクションを実行するかどうかを指定します。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<gcServer>  
   
 ## <a name="syntax"></a>構文  
@@ -78,8 +78,8 @@ ms.locfileid: "53610685"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

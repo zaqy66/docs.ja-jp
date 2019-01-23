@@ -2,12 +2,6 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519917"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET は、.NET Framework のプログラミングでデータ アクセス サービスを使用できるようにするためのクラスの集合です。 ADO.NET は、分散型データ共有アプリケーションを作成する、さまざまなコンポーネントのセットを提供します。 ADO.NET は .NET Framework の不可欠な部分であり、リレーショナル データ、XML データ、およびアプリケーション データへのアクセス機能を提供します。 ADO.NET は、アプリケーション、ツール、言語、またはインターネット ブラウザーが使用するフロントエンド データベース クライアントや中間層ビジネス オブジェクトの作成を含む、各種の開発ニーズをサポートします。  
@@ -62,6 +56,6 @@ ADO.NET は、.NET Framework のプログラミングでデータ アクセス �
  [サンプルとクイック スタート](https://msdn.microsoft.com/library/ms184422.aspx)  
  .NET Framework に関連するすべてのサンプルとクイックスタート サンプルの詳細な一覧が掲載されています。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

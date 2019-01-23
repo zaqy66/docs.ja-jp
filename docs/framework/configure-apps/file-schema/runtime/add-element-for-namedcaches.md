@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa11cea7e78a56c3f5cbfd9d0678e1ed671f6f3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506044"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;追加&gt;要素&lt;namedCaches&gt;
 追加、`namedCache`エントリを`namedCaches`メモリ キャッシュのコレクション。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -78,5 +78,5 @@ ms.locfileid: "50198186"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 - [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

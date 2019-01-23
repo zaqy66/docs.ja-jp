@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 368faf0881c5c0073fe8367a051b6c6c802b9110
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505693"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF トラブルシューティング クイックスタート
-このトピックでは、WCF クライアントと WCF サービスの開発時に生じるさまざまな既知の問題の一覧を示します。 発生している問題がこの一覧にない場合は、サービスに対してトレースを構成することをお勧めします。 これにより、トレース ファイル ビューアーで表示し、サービス内で発生することがある例外に関する詳細情報を取得できるトレース ファイルが生成されます。 トレースの構成の詳細については、「 [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。 トレース ファイル ビューアーの詳細については、「 [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)」を参照してください。  
+このトピックでは、WCF クライアントと WCF サービスの開発時に生じるさまざまな既知の問題の一覧を示します。 発生している問題がこの一覧にない場合は、サービスに対してトレースを構成することをお勧めします。 これにより、トレース ファイル ビューアーで表示し、サービス内で発生することがある例外に関する詳細情報を取得できるトレース ファイルが生成されます。 トレースの構成の詳細についてを参照してください。[トレースの構成](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)します。 トレース ファイル ビューアーの詳細についてを参照してください。[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。  
   
-1.  [Windows 7 と IIS のインストール後に WCF サービスを参照しようとすると、"HTTP エラー 404.3 - Not Found" というエラー メッセージが表示されます](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1.  [Windows 7 と IIS をインストールした後は、WCF サービスを参照するときに、次のエラー メッセージは取得します。HTTP エラー 404.3-Not Found](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      HTTP エラー 404.3 - Not Found 拡張構成により、要求しているページは使用できません。 ページがスクリプトの場合は、ハンドラーを追加します。 ファイルをダウンロードする場合は、MIME マップを追加します。 エラーの詳細: InformationModule StaticFileModule。  
   
@@ -37,12 +37,12 @@ ms.locfileid: "47200855"
   
 10. [トレース ツールの 1 つを使用していますが、EndpointNotFoundException を受け取りました。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
-11. [WCF SOAP アプリケーションから WCF Web HTTP アプリケーションを呼び出すと、サービスから "405 メソッドは許可されていません" というエラーが返されます](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
+11. [WCF SOAP アプリケーションから WCF Web HTTP アプリケーションを呼び出すときに、サービスには、次のエラーが返されます。許可されていない 405 メソッド](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
  [ベース アドレスについて教えてください。エンドポイント アドレスとどのように関連していますか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
-## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Windows 7 と IIS のインストール後に WCF サービスを参照しようとすると、"HTTP エラー 404.3 - Not Found" というエラー メッセージが表示されます  
+## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Windows 7 と IIS をインストールした後は、WCF サービスを参照するときに、次のエラー メッセージは取得します。HTTP エラー 404.3-Not Found  
  エラー メッセージの全文は次のとおりです。  
   
  HTTP エラー 404.3 - Not Found 拡張構成により、要求しているページは使用できません。 ページがスクリプトの場合は、ハンドラーを追加します。 ファイルをダウンロードする場合は、MIME マップを追加します。 エラーの詳細: InformationModule StaticFileModule。  
@@ -51,7 +51,7 @@ ms.locfileid: "47200855"
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>最初の要求の後でクライアントがしばらくアイドル状態になった場合、2 番目の要求で MessageSecurityException を受け取ることがあります。 どうしてでしょうか。  
- 2 番目の要求は、主に次の 2 つの理由から失敗する可能性があります。(1) セッションがタイムアウトした。(2) サービスをホストしている Web サーバーがリサイクルされている。 最初の理由の場合、セッションはサービスがタイムアウトするまで有効です。サービスは、サービスのバインディング (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) で指定された期間内にクライアントから要求を受信しなかった場合、セキュリティ セッションを終了します。 それ以降のクライアント メッセージでは、 <xref:System.ServiceModel.Security.MessageSecurityException>が発生します。 クライアントは、セキュリティで保護されたセッションをサービスとの間に再度確立して、後続のメッセージを送信するか、ステートフルなセキュリティ コンテキスト トークンを使用する必要があります。 また、ステートフルなセキュリティ コンテキスト トークンによって、セキュリティで保護されたセッションは、再利用される Web サーバーで存続することができます。 セキュリティで保護されたセッションでステートフルなセキュリティ コンテキスト トークンの使用に関する詳細については、次を参照してください。[方法: セキュリティで保護されたセッションのセキュリティ コンテキスト トークン作成](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)です。 また、セキュリティで保護されたセッションは無効にできます。 使用すると、 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)設定できる、バインド、`establishSecurityContext`プロパティを`false`をセキュリティで保護されたセッションを無効にします。 その他のバインディングでセキュリティで保護されたセッションを無効にするには、カスタム バインディングを作成する必要があります。 カスタム バインディングの作成の詳細については、「 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)」を参照してください。 このオプションを適用する前に、アプリケーションのセキュリティ要件を確認する必要があります。  
+ 2 つの理由を主に 2 番目の要求を実行できます。(1)、セッションがタイムアウトまたは (2)、サービスをホストする Web サーバーを再利用します。 最初の理由の場合、セッションはサービスがタイムアウトするまで有効です。サービスは、サービスのバインディング (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) で指定された期間内にクライアントから要求を受信しなかった場合、セキュリティ セッションを終了します。 それ以降のクライアント メッセージでは、 <xref:System.ServiceModel.Security.MessageSecurityException>が発生します。 クライアントは、セキュリティで保護されたセッションをサービスとの間に再度確立して、後続のメッセージを送信するか、ステートフルなセキュリティ コンテキスト トークンを使用する必要があります。 また、ステートフルなセキュリティ コンテキスト トークンによって、セキュリティで保護されたセッションは、再利用される Web サーバーで存続することができます。 セキュリティで保護されたセッションでステートフルなセキュリティ コンテキスト トークンの使用に関する詳細については、次を参照してください。[方法。セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)します。 また、セキュリティで保護されたセッションは無効にできます。 使用すると、 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)設定できる、バインド、`establishSecurityContext`プロパティを`false`をセキュリティで保護されたセッションを無効にします。 その他のバインディングでセキュリティで保護されたセッションを無効にするには、カスタム バインディングを作成する必要があります。 カスタム バインドを作成する方法については、次を参照してください。[方法。SecurityBindingElement を使用してカスタム バインディングを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)します。 このオプションを適用する前に、アプリケーションのセキュリティ要件を確認する必要があります。  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>サービスと対話しているクライアントの数が約 10 個になると、サービスが新しいクライアントを拒否し始めます。 どうしてでしょうか。  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   場合によっては、アプリケーションに対してポートを開く必要があります。 詳細については、SDK サンプルから「 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 」を参照してください。  
   
--   その他の考えられる問題は、サンプル トピックの「を参照してください。 [Workgroup and Across Machines でのサンプルを実行している](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)します。  
+-   考えられる他の問題については、サンプル トピックの「 [Running the Samples in a Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)」を参照してください。  
   
 -   クライアントが Windows 資格情報を使用し、例外が <xref:System.ServiceModel.Security.SecurityNegotiationException>の場合、次のように Kerberos を設定します。  
   
@@ -136,7 +136,7 @@ public class MyServiceHost : ServiceHost
   
 -   [Windows 認証エラーのデバッグ](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Http.sys を使用した Kerberos サービス プリンシパル名を登録します。](https://go.microsoft.com/fwlink/?LinkId=86943)  
+-   [Http.sys を使用した Kerberos サービス プリンシパル名の登録](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
 -   [Kerberos の説明](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
@@ -162,7 +162,7 @@ public class MyServiceHost : ServiceHost
   
  この場合、秘密キーを格納しているファイルについて、プロセスのアカウントに読み取りアクセス権を与える必要があります。 たとえば、IIS ワーカー プロセスを Bob というアカウントで実行している場合、秘密キーを格納しているファイルへの読み取りアクセス権を Bob に与える必要があります。  
   
- 特定の X.509 証明書の秘密キーを含むファイルへの適切なユーザー アカウントのアクセスを付与する方法の詳細については、次を参照してください。[方法: Make X.509 Certificates Accessible wcf](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)します。  
+ 特定の X.509 証明書の秘密キーを含むファイルへの適切なユーザー アカウントのアクセスを付与する方法の詳細については、次を参照してください。[方法。X.509 証明書を WCF からアクセスできるように](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)します。  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>操作の最初のパラメーターを大文字から小文字に変更したら、クライアントが例外をスローするようになりました。 どうしてでしょうか。  
@@ -176,7 +176,7 @@ public class MyServiceHost : ServiceHost
   
 ```xml
 <endpoint   
-  address=http://localhost:8000/MyServer/  
+  address="http://localhost:8000/MyServer/"  
   binding="wsHttpBinding"  
   bindingConfiguration="WSHttpBinding_IMyContract"  
   behaviorConfiguration="MyClient"   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- 次のようなエラーが表示されます: ハンドルされない例外: System.ServiceModel.AddressAlreadyInUseException: このエラーを回避するには、別のポートでの完全修飾 URL を指定することで、IP エンドポイント 0.0.0.0:9000 には既にリスナーがあります次の構成スニペットに示すようには、MEX エンドポイント:  
+ 次のようなエラーが表示されます。未処理の例外:System.ServiceModel.AddressAlreadyInUseException:このエラーを回避するには、次の構成スニペットに示すように、MEX エンドポイントの別のポートを完全修飾 URL を指定することで、IP エンドポイント 0.0.0.0:9000 には既にリスナーがあります。  
   
 ```xml
 <services>  
@@ -236,8 +236,8 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BK_MK99"></a>   
-## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF SOAP アプリケーションから WCF Web HTTP アプリケーションを呼び出すと、サービスから "405 メソッドは許可されていません" というエラーが返されます  
- WCF Web HTTP アプリケーションを呼び出す (を使用するサービス、<xref:System.ServiceModel.WebHttpBinding>と<xref:System.ServiceModel.Description.WebHttpBehavior>) サービスは WCF から、次の例外を生成する可能性があります: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: リモート サーバーが予期しない応答を返しました: (405) メソッドいない許可済みです。 '、発信 WCF が上書きされるため、この例外が発生します<xref:System.ServiceModel.OperationContext>を受信<xref:System.ServiceModel.OperationContext>します。 この問題を解決するには、WCF Web HTTP サービス操作内で <xref:System.ServiceModel.OperationContextScope> を作成します。 例えば:  
+## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF SOAP アプリケーションから WCF Web HTTP アプリケーションを呼び出すときに、サービスには、次のエラーが返されます。許可されていない 405 メソッド  
+ WCF Web HTTP アプリケーションを呼び出す (を使用するサービス、<xref:System.ServiceModel.WebHttpBinding>と<xref:System.ServiceModel.Description.WebHttpBehavior>) サービスは WCF から、次の例外を生成する可能性があります。`Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]:リモート サーバーには、予期しない応答が返されます。(405) メソッドいない許可済みです。 '、発信 WCF が上書きされるため、この例外が発生します<xref:System.ServiceModel.OperationContext>を受信<xref:System.ServiceModel.OperationContext>します。 この問題を解決するには、WCF Web HTTP サービス操作内で <xref:System.ServiceModel.OperationContextScope> を作成します。 例:  
   
 ```csharp
 public string Echo(string input)  
@@ -249,5 +249,5 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Windows 認証エラーのデバッグ](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)
+## <a name="see-also"></a>関連項目
+- [Windows 認証エラーのデバッグ](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

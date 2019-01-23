@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507370"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows フォームの構成要素を追加します。
 
@@ -71,13 +71,13 @@ Windows フォームの高 DPI サポートの概要については、次を参�
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-.NET Framework で導入された 高 DPI 機能強化を活用するために .NET Framework 4.7 以降では Windows 10 Creators Edition と .NET Framework のターゲット バージョン以降の Windows バージョンで実行される Windows フォーム アプリを構成することができます。4.7。 次の設定があります。
+.NET Framework で導入された 高 DPI 機能強化を活用するために .NET Framework 4.7 以降では Windows 10 Creators Edition と .NET Framework のターゲット バージョン以降の Windows バージョンで実行される Windows フォーム アプリを構成することができます。4.7。 不足している機能には次が含まれます。
 
 - Windows フォーム アプリケーションが起動された後に、ユーザー、DPI またはスケール ファクターを変更、動的 DPI シナリオのサポート。
 
 - スケーリングとさまざまな Windows フォームのレイアウトの機能強化を制御するなど、<xref:System.Windows.Forms.MonthCalendar>コントロールと<xref:System.Windows.Forms.CheckedListBox>コントロール。 
 
-高 DPI 対応は、オプトイン機能です。既定の値で`DpiAwareness`は`false`します。 DPI 対応にこのキーの値を設定して Windows フォームのサポートを選択できます`PerMonitorV2`アプリケーション構成ファイルでします。 DPI 対応を有効にすると、個々 のすべての DPI 機能も有効にします。 次の設定があります。
+高 DPI 対応は、オプトイン機能です。既定の値で`DpiAwareness`は`false`します。 DPI 対応にこのキーの値を設定して Windows フォームのサポートを選択できます`PerMonitorV2`アプリケーション構成ファイルでします。 DPI 対応を有効にすると、個々 のすべての DPI 機能も有効にします。 不足している機能には次が含まれます。
 
 - DPI 変更によって制御される、メッセージ、`DisableDpiChangedMessageHandling`キー。
 
@@ -109,6 +109,6 @@ Windows フォーム アプリケーションの高 DPI サポートの利用の
 調整ので、ユーザー インターフェイスの認識される応答性とユーザー インターフェイス要素の視覚的な外観に影響 1 つまたは複数のパスをスケーリングします。 以降、.NET Framework 4.7 では、Windows フォームは、単一のパスのスケーリングを使用します。 .NET Framework の以前のバージョンでスケーリングが必要以上にスケールする一部のコントロールの原因とする複数のパスから実行されました。 アプリが古い動作に依存している場合、単一パス scaling を無効のみ必要があります。  
 
 ## <a name="see-also"></a>関連項目
- 
-[Windows フォームの構成セクション](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Windows フォームの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Windows フォームの構成セクション](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Windows フォームの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

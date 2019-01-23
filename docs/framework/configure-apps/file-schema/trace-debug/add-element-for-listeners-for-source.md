@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c0ab15f6eca8b20653530583016eb849273c4ce1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c22263fd51b80e7bd99ada8452696debdcc44140
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507395"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;追加&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;
 トレース ソースの `Listeners` コレクションにリスナーを追加します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<ソース >  
 \<ソース >  
-\<リスナー >  
+\<listeners>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -120,8 +120,8 @@ ms.locfileid: "47216867"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
