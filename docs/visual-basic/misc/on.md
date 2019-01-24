@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: f7412d11acfa16b5e03f7ee9e917159e47409297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26a2380bbb0591788adf98078f4290df849ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684815"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
 実行時エラーへの応答が導入されていますか、コンパイラ オプションをオンにします。  
   
- クエリでは、結合するコレクションのキーを識別します。  
+ クエリでは、結合されているコレクションのキーを識別します。  
   
-## <a name="remarks"></a>コメント  
- `On`キーワードがこれらのコンテキストで使用されます。  
+## <a name="remarks"></a>Remarks  
+ `On`キーワードはこれらのコンテキストで使用します。  
   
  [Group Join 句](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -34,5 +34,5 @@ ms.locfileid: "33640594"
   
  [Option Strict ステートメント](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [キーワード](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>関連項目
+- [キーワード](../../visual-basic/language-reference/keywords/index.md)

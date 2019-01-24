@@ -1,5 +1,5 @@
 ---
-title: '方法: 既定のプロパティを宣言して呼び出す (Visual Basic)'
+title: '方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 7805ee4dcd4bad0d0624c97ccc25232e9bc31ba4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca282acbe6831f2189d83faa2f83d32d420d9b53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640967"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>方法: 既定のプロパティを宣言して呼び出す (Visual Basic)
-A*既定プロパティ*クラスまたは構造体のプロパティで指定することがなく、コードにアクセスできます。 呼び出し元のコードは、クラスまたは構造体がない、プロパティ、およびコンテキスト プロパティへのアクセスを許可、Visual Basic が存在する場合に、そのクラスまたは構造体の既定のプロパティにアクセスを解決します。  
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す
+A*プロパティの既定*クラスまたは構造体のプロパティで、指定しなくても、コードにアクセスできます。 呼び出し元のコードは、クラスまたは構造体がないプロパティ、およびコンテキスト プロパティへのアクセスを許可、存在する場合、Visual Basic がそのクラスまたは構造体の既定のプロパティにアクセスを解決します。  
   
- クラスまたは構造体は最大で 1 つの既定プロパティをできます。 ただし、既定のプロパティをオーバー ロードして、という 2 つ以上のバージョンであります。  
+ クラスまたは構造体が多くて 1 つの既定のプロパティ。 ただし、既定プロパティはオーバー ロードし、その 1 つ以上のバージョンがあります。  
   
- 詳細については、次を参照してください。[既定](../../../../visual-basic/language-reference/modifiers/default.md)です。  
+ 詳細については、次を参照してください。[既定](../../../../visual-basic/language-reference/modifiers/default.md)します。  
   
 ### <a name="to-declare-a-default-property"></a>既定のプロパティを宣言するには  
   
@@ -30,7 +30,7 @@ A*既定プロパティ*クラスまたは構造体のプロパティで指定�
   
 2.  含める、`Default`プロパティ宣言でキーワード。  
   
-3.  プロパティの 1 つ以上のパラメーターを指定します。 少なくとも 1 つの引数を取らない既定のプロパティを定義することはできません。  
+3.  プロパティの少なくとも 1 つのパラメーターを指定します。 少なくとも 1 つの引数を受け取らない既定のプロパティを定義することはできません。  
   
      [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
@@ -40,55 +40,55 @@ A*既定プロパティ*クラスまたは構造体のプロパティで指定�
   
      [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
-2.  プロパティ名を通常含めるは式の中だけで、変数名を使用します。  
+2.  プロパティ名を通常は式の中で単独で変数名を使用します。  
   
      [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
-3.  かっこ内に引数リストを持つ変数の名前に従います。 既定のプロパティは、少なくとも 1 つの引数を受け取る必要があります。  
+3.  引数リストをかっこで、変数名に従ってください。 既定のプロパティは、少なくとも 1 つの引数を受け取る必要があります。  
   
      [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
-4.  プロパティの既定値を取得するには、引数リスト、または等しい、次の式で指定した変数の名前を使用 (`=`) 代入ステートメントにサインインします。  
+4.  プロパティの既定値を取得するには、次の等値または式の中で、引数リストでという名前の変数を使用 (`=`)、代入ステートメントにサインインします。  
   
      [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
-5.  既定のプロパティ値を設定するには、代入ステートメントの左側にある、引数リストを持つという名前の変数を使用します。  
+5.  プロパティの既定値を設定するには、代入ステートメントの左側にある、引数のリストを持つという名前の変数を使用します。  
   
      [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
-6.  他のプロパティにアクセスする場合と同様、という名前の変数と共に既定のプロパティ名を必ず指定することができます。  
+6.  他のプロパティにアクセスするための作業と同様、という名前の変数と共に既定のプロパティ名を必ず指定することができます。  
   
      [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
 ## <a name="example"></a>例  
- 次の例では、クラスを既定のプロパティを宣言します。  
+ 次の例では、クラスの既定のプロパティを宣言します。  
   
  [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
 ## <a name="example"></a>例  
- 次の例では、既定のプロパティを呼び出して`myProperty`クラス`class1`です。 次の 3 つの代入ステートメントで値を格納する`myProperty`、および<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>呼び出しは、値を読み取ります。  
+ 次の例では、既定のプロパティを呼び出す方法`myProperty`クラス`class1`します。 次の 3 つの代入ステートメントで値を格納する`myProperty`、および<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>呼び出しは、値を読み取ります。  
   
  [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
- 既定のプロパティの最も一般的な用途は、<xref:Microsoft.VisualBasic.Collection.Item%2A>さまざまなコレクション クラスのプロパティです。  
+ 既定のプロパティの最も一般的な用途は、<xref:Microsoft.VisualBasic.Collection.Item%2A>さまざまなコレクション クラスのプロパティ。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- 既定のプロパティは、ソース コードの文字のわずかな低下につながるが行えるコード読みにくくなります。 クラスまたは構造体名への参照を行うときに、呼び出し元のコードがクラスまたは構造に習熟していない場合は指定できません特定その参照が、クラスまたは構造体自体、または既定のプロパティにアクセスするかどうか。 これは、コンパイラ エラーまたは実行時の微妙な論理エラーを可能性があります。  
+ 既定のプロパティは、ソース コードの文字のわずかな低下につながるが行えるように、コードが読みにくくします。 クラスまたは構造体名への参照を行うときに、呼び出し元のコードがクラスまたは構造に習熟していない場合にすることはできません特定その参照が、クラスまたは構造体自体、または既定のプロパティにアクセスするかどうか。 これについては、コンパイラ エラーまたはランタイム ロジックの微妙なエラーにつながります。  
   
- 常を使用して既定のプロパティのエラーの可能性を低くことができます多少、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)をチェックインするコンパイラ タイプを設定する`On`です。  
+ 常を使用して既定のプロパティのエラーの可能性を低くことができますやや、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)コンパイラ型チェックを設定する`On`します。  
   
- 使用を計画して、定義済みのクラスまたは構造体、コード内を決定する必要がありますを既定のプロパティがあるかどうかと、その場合、どのような名前です。  
+ 使用して、定義済みのクラスまたは構造体コードで判断する必要があります、既定のプロパティがあるかどうかであればしようとしている場合、名前は。  
   
- これらの欠点のためには、既定のプロパティを定義しないを検討してください。 コードの読みやすさも常にすべてのプロパティを明示的に参照を検討も既定のプロパティする必要があります。  
+ このような短所のためには、既定のプロパティを定義しないを検討してください。 コードを読みやすくは必要がありますも常に明示的に参照するすべてのプロパティを検討してくださいも既定のプロパティ。  
   
-## <a name="see-also"></a>関連項目  
- [Property プロシージャ](./property-procedures.md)  
- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [既定値](../../../../visual-basic/language-reference/modifiers/default.md)  
- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)  
- [方法 : プロパティを作成する](./how-to-create-a-property.md)  
- [方法 : 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [方法 : プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)  
- [方法 : プロパティに値を格納する](./how-to-put-a-value-in-a-property.md)  
- [方法 : プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>関連項目
+- [Property プロシージャ](./property-procedures.md)
+- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
+- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)
+- [方法: プロパティを作成します。](./how-to-create-a-property.md)
+- [方法: 混合アクセス レベルを持つプロパティを宣言します。](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [方法: プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
+- [方法: プロパティに値を格納します。](./how-to-put-a-value-in-a-property.md)
+- [方法: プロパティから値を取得します。](./how-to-get-a-value-from-a-property.md)

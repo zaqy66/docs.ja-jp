@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653860"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo メソッド
-指定された検証エラーに対応するエラー メッセージを取得します。  
+指定した検証エラーに対応するエラー メッセージを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,22 +47,22 @@ HRESULT FormatEventInfo(
  [in]A`VEContext`検証エラーに関するコンテキスト情報を格納しているインスタンス。  
   
  `msg`  
- [入力、出力].返されたエラー メッセージを含む文字列です。  
+ [入力、出力]返されたエラー メッセージを含む文字列。  
   
  `ulMaxLength`  
  [in]エラー メッセージの最大長。  
   
  `psa`  
- [in]エラーを説明する追加のパラメーターを格納するセーフである配列。  
+ [in]エラーを説明する追加のパラメーターを格納するセーフ配列。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** IValidator.idl、IValidator.h  
+ **ヘッダー:** IValidator.idl, IValidator.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
+## <a name="see-also"></a>関連項目
+

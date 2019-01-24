@@ -2,19 +2,19 @@
 title: '&lt;transportConfigurationType&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 1079b25ce137dc89fc31f46a11f3720486462021
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2a72fe8cfa78c7e6edfec9f9f6ff8f1f55eceb15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656818"
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;transportConfigurationType&gt; の &lt;add&gt;
 この要素は、特定のトランスポートの種類を識別するキーと値のペアです。  
   
  \<system.ServiceModel >  
 \<serviceHostingEnvironment >  
-\<transportConfigurationTypes >  
+\<transportConfigurationTypes>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -45,7 +45,7 @@ ms.locfileid: "54149138"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
+|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
   
 ## <a name="example"></a>例  
   
@@ -58,8 +58,8 @@ ms.locfileid: "54149138"
 </serviceHostingEnvironment>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)

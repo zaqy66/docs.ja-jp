@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742134"
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;expression&gt;&#39;を型制約として使用することはできません。
 制約リストに、型パラメーターについて有効な制約を表していない式が含まれています。  
@@ -41,10 +41,10 @@ ms.locfileid: "33588175"
   
 -   式が上記の要件リストを満たしていない場合は、制約リストから削除します。  
   
--   式でインターフェイスまたはクラスを参照する場合、コンパイラにそのインターフェイスまたはクラスへのアクセス権があることを確認します。 その名前を修飾し、プロジェクトに参照を追加することが必要な場合があります。 詳細についてを参照してください「の参照をプロジェクト」[宣言された要素への参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)です。  
+-   式でインターフェイスまたはクラスを参照する場合、コンパイラにそのインターフェイスまたはクラスへのアクセス権があることを確認します。 その名前を修飾し、プロジェクトに参照を追加することが必要な場合があります。 詳細についてを参照してください「の参照をプロジェクト」 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [値型と参照型](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- 
+## <a name="see-also"></a>関連項目
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [値型と参照型](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+

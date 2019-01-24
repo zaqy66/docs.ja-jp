@@ -1,19 +1,19 @@
 ---
-title: '方法 : バインド コントロールを作成して表示データの書式を設定する'
+title: '方法: バインドされたコントロールを作成し、表示されているデータの書式設定'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689732"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法 : バインド コントロールを作成して表示データの書式を設定する
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインドされたコントロールを作成し、表示されているデータの書式設定
 Windows フォーム データ バインディングでは、データ バインド コントロールを使用して表示データの書式を設定することができます、**フォーマットと詳細バインド** ダイアログ ボックス。  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Windows フォーム データ バインディングでは、データ バイン
     |通貨|使用して小数点以下桁数を指定**小数点**アップダウン コントロール。|  
     |日付と時刻|日付と時刻を内の項目のいずれかを選択して表示する必要がある方法を選択、**型**選択ボックス。|  
     |指数|使用して小数点以下桁数を指定**小数点**アップダウン コントロール。|  
-    |カスタム|カスタム書式指定文字列を使用するように指定します。<br /><br /> 詳細については、[型の書式設定](../../../docs/standard/base-types/formatting-types.md)に関するページをご覧ください。 **注:** カスタム書式指定文字列は、データ ソースとバインドされたコントロール間のラウンド トリップが正常に保証されていません。 その代わりに、バインディングで <xref:System.Windows.Forms.Binding.Parse> イベントまたは <xref:System.Windows.Forms.Binding.Format> イベントを処理し、イベント処理コードでカスタム書式を適用します。|  
+    |カスタム|カスタム書式指定文字列を使用するように指定します。<br /><br /> 詳細については、[型の書式設定](../../../docs/standard/base-types/formatting-types.md)に関するページをご覧ください。 **注:** カスタム書式指定文字列を使用した場合、データ ソースとバインド コントロールの間を往復したときにデータが正常に維持される保証はありません その代わりに、バインディングで <xref:System.Windows.Forms.Binding.Parse> イベントまたは <xref:System.Windows.Forms.Binding.Format> イベントを処理し、イベント処理コードでカスタム書式を適用します。|  
   
 8.  をクリックして**OK**を閉じる、**フォーマットと詳細バインド** ダイアログ ボックスと プロパティ ウィンドウに戻ります。  
   
-## <a name="see-also"></a>関連項目  
- [方法: Windows フォームに単純バインド コントロールを作成する](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Windows フォームでのユーザー入力の検証](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>関連項目
+- [方法: Windows フォームに単純バインド コントロールを作成します。](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows フォームでのユーザー入力の検証](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)

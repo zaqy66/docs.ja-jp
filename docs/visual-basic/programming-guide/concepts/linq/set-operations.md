@@ -2,12 +2,12 @@
 title: セット操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 2620fa02c8f1f07edbf149c3202af8ab1decc072
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741877"
 ---
 # <a name="set-operations-visual-basic"></a>セット操作 (Visual Basic)
 LINQ のセット操作は、同一または別個のコレクション (またはセット) に等しい要素があるかどうかに基づいて、結果を生成するクエリ操作です。  
@@ -50,9 +50,9 @@ LINQ のセット操作は、同一または別個のコレクション (また�
   
  [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Linq>  
- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Distinct 句](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [方法: 結合および比較文字列のコレクションに (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
- [方法: 2 つのリスト (LINQ) (Visual Basic) の差集合を検索](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Distinct 句](../../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [方法: 結合および比較文字列のコレクション (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [方法: 2 つのリスト (LINQ) (Visual Basic) の差集合を見つける](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701925"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt;要素
 パフォーマンス カウンターが共有するグローバル メモリのサイズを指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>構文  
@@ -56,8 +56,8 @@ ms.locfileid: "48032466"
   
  別の共有メモリのサイズが、レジストリの DWORD FileMappingSize 値キーの hkey_local_machine \system\currentcontrolset\services\\*\<カテゴリ名 >* \Performance が参照されています。最初に、構成ファイルのグローバル共有メモリに指定された値に続きます。 FileMappingSize 値が存在しないかどうかは、別の共有メモリのサイズが 4 分の 1 に設定されて (1/4)、構成ファイルのグローバル設定です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.PerformanceCounter>  
- <xref:System.Diagnostics.PerformanceCounterCategory>  
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
+## <a name="see-also"></a>関連項目
+- <xref:System.Diagnostics.PerformanceCounter>
+- <xref:System.Diagnostics.PerformanceCounterCategory>
+- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
+- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
