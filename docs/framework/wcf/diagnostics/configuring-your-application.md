@@ -2,12 +2,12 @@
 title: アプリケーションの構成
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: e9a5429ef573fdee9478b63b76d2da8005215c93
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39d8c73809b8c2695ccebb1d69d1c016fd2313d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584637"
 ---
 # <a name="configuring-your-application"></a>アプリケーションの構成
 Windows Communication Foundation (WCF) は、.NET 構成システムを使用し、コンピューターとアプリケーションの両方のスコープでサービスを構成することができます。  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) は、.NET 構成システムを使用し
 > [!NOTE]
 >  右クリックして Visual Studio での WCF Web サービス プロジェクトの構成ファイルを編集する場合**ソリューション エクスプ ローラー**、注意、 **Edit WCF Config**コンテキスト メニュー項目がありません。 この問題を回避するには、をクリックして、**ツール**] メニューの [選択**WCF Service Config Editor**します。 その後、構成ファイルを右クリックし、使用して、、 **Edit WCF Config**コンテキスト メニュー項目。  
   
-## <a name="see-also"></a>関連項目  
- [構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [サービスの構成](../../../../docs/framework/wcf/configuring-services.md)  
- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)
+## <a name="see-also"></a>関連項目
+- [構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [サービスの構成](../../../../docs/framework/wcf/configuring-services.md)
+- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

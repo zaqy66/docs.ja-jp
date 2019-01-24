@@ -2,12 +2,12 @@
 title: 部分信頼機能の互換性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564725"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信頼機能の互換性
 Windows Communication Foundation (WCF) では、部分信頼環境で実行されている場合、機能の限定されたサブセットがサポートされます。 部分信頼でサポートされる機能は、「 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 」のトピックで説明される特定のシナリオを念頭にデザインされています。  
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
   
 -   アプリケーションが完全信頼アプリケーションとして配置されている場合に、ユーザーが部分信頼環境でアプリケーションを実行するようにコード アクセス セキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、動作は実行されず、例外もスローされません。 これを確実に、次を参照してください。、 **levelfinal**オプションを使用して[Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)します。  
   
- 一般的な動作の例は、次を参照してください。[方法: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)します。  
+ 一般的な動作の例は、次を参照してください。[方法。企業内のエンドポイントをロックダウン](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)します。  
   
 ## <a name="configuration"></a>構成  
  1 つの例外を除き、部分信頼コードではのみ、ローカルの WCF 構成セクションを読み込む`app.config`ファイル。 WCF のセクションでは machine.config またはルートを参照している WCF 構成セクションを読み込むには、web.config ファイルには、configurationpermission (unrestricted) が必要です。 この権限がない、構成が読み込まれるときに、例外が、結果のローカル構成ファイルの外部での WCF 構成セクション (behaviors、bindings) への参照します。  
@@ -159,10 +159,10 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
 ## <a name="unlisted-features"></a>記載されていない機能  
  部分信頼環境で利用できない情報やアクションを見つけ出す最善の方法は、リソースへのアクセスまたはアクションの実行を `try` ブロックの内側で試みて、エラーを `catch` することです。 重複するエラーがあるトレース ファイルの混雑を避けるためには、WCF では、リソースまたは最初のセキュリティ エラーの後にアクションのトレースが無効にします。 リソースへのアクセスまたはアクションの実行が初めて行われようとしたとき、例外トレースはリソース アクセスの各失敗に対して、1 回だけ行われます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [サポートされている配置シナリオ](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [部分信頼のベスト プラクティス](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [サポートされている配置シナリオ](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [部分信頼のベスト プラクティス](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

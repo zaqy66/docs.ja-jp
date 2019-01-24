@@ -2,12 +2,12 @@
 title: LINQ to SQL におけるセキュリティ
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: c078d2b19629ed4b99180af85528952548d92045
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7730419509cd0c3530813734a98f777ddf9d9f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625680"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL におけるセキュリティ
 データベースに接続するときは、常にセキュリティのリスクがあります。 LINQ to SQL には SQL Server のデータを操作する新しい方法が含まれていますが、セキュリティ メカニズムは追加されていません。  
@@ -33,6 +33,6 @@ ms.locfileid: "53127317"
   
 -   すべての接続文字列の期限と接触点を最小限にします。  
   
-## <a name="see-also"></a>関連項目  
- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>関連項目
+- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: 854160e8b1b049fdb2f3421b9eb24cf410f33672
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: af9ea902cba2c8be0fbee621297af3198bbec150
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620475"
 ---
 # <a name="button-styles-and-templates"></a>ボタンのスタイルとテンプレート
-このトピックは、のスタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Button>コントロール。 既定値を変更することができます<xref:System.Windows.Controls.ControlTemplate>コントロールの外観を一意にします。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Button>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
 ## <a name="button-parts"></a>ボタンのパーツ  
- <xref:System.Windows.Controls.Button>コントロールには、その名前付きの部分はありません。  
+ <xref:System.Windows.Controls.Button>コントロールには、名前付きパーツはありません。  
   
 ## <a name="button-states"></a>ボタンの状態  
- 次の表に、用ビジュアル状態、<xref:System.Windows.Controls.Button>コントロール。  
+ 次の表のビジュアルの状態、<xref:System.Windows.Controls.Button>コントロール。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
@@ -48,10 +48,10 @@ ms.locfileid: "34457165"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

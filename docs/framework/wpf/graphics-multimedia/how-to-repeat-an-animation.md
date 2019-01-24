@@ -1,5 +1,5 @@
 ---
-title: '方法 : アニメーションを反復する'
+title: '方法: アニメーションを反復する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RepeatBehavior property of timelines [WPF]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: 176fc9c31f85361a243cd9357d79608e0ff6a4cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 213fca0796840ae87035be4f474cfdf4648460a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609643"
 ---
-# <a name="how-to-repeat-an-animation"></a>方法 : アニメーションを反復する
+# <a name="how-to-repeat-an-animation"></a>方法: アニメーションを反復する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>のプロパティを<xref:System.Windows.Media.Animation.Timeline>アニメーションの繰り返し動作を制御するためにします。  
   
 ## <a name="example"></a>例  
@@ -28,10 +28,10 @@ ms.locfileid: "43855297"
   
  サンプル全体については、次を参照してください。[アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)します。  
   
-## <a name="see-also"></a>関連項目  
- [反復サイクル中にアニメーション値を累積する](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [タイムラインを自動的に反転するかどうかを指定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [アニメーションとタイミング](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>関連項目
+- [反復サイクル中にアニメーション値を累積する](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [タイムラインを自動的に反転するかどうかを指定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [アニメーションとタイミング](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)

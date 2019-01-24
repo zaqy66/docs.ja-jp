@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 50a7e1b08c31b5d0fb779dabf617a08bbb4c6cf4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634585"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 主要なサブシステムの大半に対応[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、やり取りする方法について説明します。 一部のアーキテクトが行う選択の詳細も[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。  
@@ -141,14 +141,14 @@ ms.locfileid: "50195919"
   
  開発を開始すると、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ベースのアプリケーションでは、非常によくと考える必要があります。 オブジェクトを使用して、すべてのプロパティを設定することができ、データ バインドで同じ方法を使用できる[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]します。 アーキテクチャにさらに調査すると[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、根本的に、アプリケーションの中核となるドライバーとしてデータを処理するより充実したアプリケーションを作成するためにできる可能性があることがわかります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.UIElement>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.Threading.DispatcherObject>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Controls.Control>  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.UIElement>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.Threading.DispatcherObject>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Controls.Control>
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

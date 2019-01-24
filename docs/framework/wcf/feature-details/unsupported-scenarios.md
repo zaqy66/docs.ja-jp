@@ -2,12 +2,12 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631266"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 さまざまな理由は、Windows Communication Foundation (WCF) は一部の特定のセキュリティ シナリオをサポートしていません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していないため WCF サポートしていないプラットフォームで Windows 認証を使用したサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
@@ -28,7 +28,7 @@ ms.locfileid: "48845685"
   
 -   状態ベースのセキュリティ コンテキスト トークン (SCT: Security Context Token) が作成された (既定では、作成は無効になっています)。  
   
- 状態ベースの SCT はカスタム バインドの使用によってのみ作成できます。 詳細については、次を参照してください[方法: セキュリティで保護されたセッションのセキュリティ コンテキスト トークン作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)。コードでトークンを有効にするには、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> メソッドまたは <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> メソッドを使用して、セキュリティ バインディング要素 (<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> または <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>) を作成し、`requireCancellation` パラメーターを `false` に設定します。 このパラメーターは、SCT のキャッシュを参照します。 値を `false` に設定することによって、状態ベースの SCT 機能が有効になります。  
+ 状態ベースの SCT はカスタム バインドの使用によってのみ作成できます。 詳細については、「[方法 :セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md))。コードでトークンを有効にするには、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> メソッドまたは <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> メソッドを使用して、セキュリティ バインディング要素 (<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> または <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>) を作成し、`requireCancellation` パラメーターを `false` に設定します。 このパラメーターは、SCT のキャッシュを参照します。 値を `false` に設定することによって、状態ベースの SCT 機能が有効になります。  
   
  または、構成において、<`customBinding`> を作成し、<`security`> 要素を追加して `authenticationMode` 属性に SecureConversation および `requireSecurityContextCancellation` 属性に `true` を設定することによってもトークンが有効になります。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48845685"
  FIPS 準拠の AES 暗号化は、ID レベルの偽装での双方向コールバックでは機能しません。  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 証明書  
- *Cryptography API: Next Generation (CNG)* 長期にわたって置き換え、CryptoAPI のです。 この API は、アンマネージ コードで使用できる[!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]以降の Windows バージョン。  
+ *Cryptography API:Next Generation (CNG)* 長期にわたって置き換え、CryptoAPI のです。 この API は、アンマネージ コードで使用できる[!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]以降の Windows バージョン。  
   
  .NET framework 4.6.1 と以前のバージョンは、従来の CryptoAPI CNG/KSP 証明書を処理するために使用されるため、これらの証明書をサポートしています。 .NET Framework 4.6.1 と以前のバージョンでこれらの証明書の使用には、例外が発生します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48845685"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET の偽装と ASP.NET 互換を使用する必要がある場合にメッセージ セキュリティが失敗する  
  WCF では、クライアント認証を防止するため、次の設定の組み合わせはサポートされません。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これは、Web.config ファイルで設定して、`impersonate`の属性、<`identity`> 要素を`true`します。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48845685"
   
  解決策は、インポートを行った後、クライアント側で直接バインディングを変更することです。  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [情報の漏えい](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [改変](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [リプレイ攻撃](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>関連項目
+- [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [情報の漏えい](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [改変](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [リプレイ攻撃](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

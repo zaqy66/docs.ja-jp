@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565866"
 ---
 # <a name="choosing-between-class-and-struct"></a>クラスまたは構造体の選択
 すべての framework デザイナーに直面して基本的な設計上の決定の 1 つが、クラス (参照型)、または構造体 (値型) として型を設計するかどうか。 参照型と値の型の動作の違いの理解は、この選択を行うに不可欠です。  
@@ -55,5 +55,5 @@ ms.locfileid: "53131327"
   
 ## <a name="see-also"></a>関連項目
 
-- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)  
+- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

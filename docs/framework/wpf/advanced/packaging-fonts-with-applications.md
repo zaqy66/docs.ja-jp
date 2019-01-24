@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 0ad8d071a91edaef184c4cc1fa28298f8ec3d71a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632349"
 ---
 # <a name="packaging-fonts-with-applications"></a>アプリケーションでのフォントのパッケージング
 このトピックでは、フォントをパッケージングする方法の概要を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  
@@ -166,16 +166,16 @@ ms.locfileid: "43391767"
   
 -   **パックを使用して絶対 URI: 表記:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは作成することはできません、<xref:System.Windows.Media.FontFamily>オブジェクトを使用してプログラムで"pack:"、絶対パスの一部として[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]フォントへの参照。 たとえば、`"pack://application:,,,/resources/#Pericles Light"`は無効なフォント参照です。  
   
--   **自動フォント埋め込み:** デザイン時に、アプリケーションのフォントの使用を検索したり、アプリケーションのリソースにフォントを自動的に埋め込んだりすることはサポートされていません。  
+-   **自動フォント埋め込み:** 設計時に、アプリケーションのフォントの使用を検索して、自動的にアプリケーションのリソースで、フォントの埋め込みのサポートはありません。  
   
 -   **フォント サブセット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、固定ドキュメント以外でフォント サブセットの作成はサポートされていません。  
   
 -   正しくない参照がある場合、アプリケーションは使用可能なフォントの使用に戻ります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Documents.Typography>  
- <xref:System.Windows.Media.FontFamily>  
- [Microsoft タイポグラフィ: リンク、ニュース、および連絡先](https://www.microsoft.com/typography/links/)  
- [OpenType の仕様](https://www.microsoft.com/typography/otspec/)  
- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [OpenType フォント パックのサンプル](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Documents.Typography>
+- <xref:System.Windows.Media.FontFamily>
+- [Microsoft タイポグラフィ:リンク、ニュース、および連絡先](https://www.microsoft.com/typography/links/)
+- [OpenType の仕様](https://www.microsoft.com/typography/otspec/)
+- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [OpenType フォント パックのサンプル](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

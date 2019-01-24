@@ -1,20 +1,20 @@
 ---
-title: '方法 : 構成を使用して ASP.NET AJAX エンドポイントを追加する'
+title: '方法: 構成を使用して ASP.NET AJAX エンドポイントを追加するには'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 188e88d40536b1d31c72f404957ef2de4ff87b1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573791"
 ---
-# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>方法 : 構成を使用して ASP.NET AJAX エンドポイントを追加する
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>方法: 構成を使用して ASP.NET AJAX エンドポイントを追加するには
 Windows Communication Foundation (WCF) をクライアントの Web サイトの JavaScript から呼び出すことが使用可能な ASP.NET AJAX 対応エンドポイントを利用するサービスを作成することができます。 このようなエンドポイントを作成するには、他のすべての Windows Communication Foundation (WCF) エンドポイントと同様に、構成ファイルを使用するか、構成要素を必要としないメソッドを使用します。 ここでは、構成を使用する方法について説明します。  
   
  使用するエンドポイントの構成で構成されますが、ASP.NET AJAX 対応のサービス エンドポイントを有効にする手順の一部、<xref:System.ServiceModel.WebHttpBinding>を追加して、 [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)エンドポイントの動作。 エンドポイントを構成した後を実装し、サービスをホストする手順は、すべての WCF サービスで使用されるものに似ています。 実際の例を参照してください、 [AJAX サービスを使用して HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)します。  
   
- 構成を使用せず、ASP.NET AJAX エンドポイントを構成する方法の詳細については、次を参照してください。[方法: ASP.NET AJAX エンドポイントなしを使用して構成を追加](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)します。  
+ 構成を使用せず、ASP.NET AJAX エンドポイントを構成する方法の詳細については、次を参照してください。[方法。構成を使用せずに ASP.NET AJAX エンドポイントを追加](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)します。  
   
 ### <a name="to-create-a-basic-wcf-service"></a>基本的な WCF サービスを作成するには  
   
@@ -98,12 +98,12 @@ Windows Communication Foundation (WCF) をクライアントの Web サイトの
     %>  
     ```  
   
-2.  IIS でホストする方法の詳細については、次を参照してください。[方法: IIS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)します。  
+2.  IIS でホストする方法の詳細については、次を参照してください。[方法。IIS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)します。  
   
 ### <a name="to-call-the-service"></a>サービスを呼び出すには  
   
 1.  サービスが利用できるようになりましたしに対してに要求を送信することによって呼び出すことができます、.svc ファイルに相対する空のアドレスにエンドポイントが構成されている\<操作 > - たとえば、service.svc/Add の`Add`操作。 これは、ASP.NET AJAX Script Manager コントロールのスクリプト コレクションにエンドポイント URL を入力することで使用できます。 例については、次を参照してください。、 [AJAX サービスを使用して HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [ASP.NET AJAX 用の WCF サービスの作成](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- [方法 : AJAX 対応 ASP.NET Web サービスを WCF に移行する](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a>関連項目
+- [ASP.NET AJAX 用の WCF サービスの作成](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
+- [方法: AJAX 対応 ASP.NET Web サービスを WCF に移行します。](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

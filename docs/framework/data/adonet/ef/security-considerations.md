@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612828"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 このほかに、安全な [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションを作成するための推奨事項にも従うようにしてください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
@@ -46,7 +46,7 @@ ms.locfileid: "45591953"
   
 -   接続を動的に作成する場合は接続文字列ビルダーを使用する。  
   
-     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、次を参照してください。[方法: EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。 一部であるデータ ソース接続文字列を構築する、適切な文字列ビルダー クラスを使用しても、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接続文字列。 ADO.NET プロバイダー用接続文字列ビルダーの詳細については、次を参照してください。[接続文字列ビルダー](../../../../../docs/framework/data/adonet/connection-string-builders.md)します。  
+     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。 一部であるデータ ソース接続文字列を構築する、適切な文字列ビルダー クラスを使用しても、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接続文字列。 ADO.NET プロバイダー用接続文字列ビルダーの詳細については、次を参照してください。[接続文字列ビルダー](../../../../../docs/framework/data/adonet/connection-string-builders.md)します。  
   
  詳細については、「[接続情報の保護](../../../../../docs/framework/data/adonet/protecting-connection-information.md)」を参照してください。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "45591953"
   
 -   データベース接続を開くし、など、データベースに対してコマンドを実行するアクセス許可<xref:System.Data.SqlClient.SqlClientPermission>SQL Server データベース。  
   
- 詳細については、「[コード アクセス セキュリティと ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)」を参照してください。  
+ 詳細については、「 [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)」を参照してください。  
   
 #### <a name="do-not-install-untrusted-applications"></a>信頼できないアプリケーションをインストールしない  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ではセキュリティのアクセス許可が適用されません。ユーザーが指定したデータ オブジェクト コードは、信頼されているかどうかに関係なくインプロセスで呼び出されます。 データ ストアとアプリケーションでクライアントの認証および承認が行われるようにしてください。  
@@ -161,7 +161,7 @@ ms.locfileid: "45591953"
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>信頼されていないソースから MetadataWorkspace オブジェクトを受け取らない  
  信頼されていないソースから <xref:System.Data.Metadata.Edm.MetadataWorkspace> クラスのインスタンスをアプリケーションで受け取らないようにしてください。 代わりに、それらのソースから明示的にワークスペースを作成および設定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [配置に関する注意事項](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [移行に関する注意事項](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>関連項目
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [配置に関する注意事項](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [移行に関する注意事項](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

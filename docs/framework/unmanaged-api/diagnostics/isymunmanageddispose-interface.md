@@ -16,23 +16,24 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 973fc35bb99bea6b3302760763069b9df6c548e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90f5924bc03a9896442fd61a4c618d18ed999faf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638874"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose インターフェイス
-アンマネージ リソースを解放します。  
+アンマネージ リソースを破棄します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[destroy メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|により、基になるオブジェクトをすべての内部参照を解放し、後続のメソッド呼び出しでエラーを返します。|  
+|[destroy メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|基になるオブジェクトを内部参照をすべて解放し、後続のメソッド呼び出しでエラーを返します。|  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

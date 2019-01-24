@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化'
+title: 'チュートリアル: 有効にするドラッグ アンド ドロップ ユーザー コントロールで'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600675"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>チュートリアル: 有効にするドラッグ アンド ドロップ ユーザー コントロールで
 
 このチュートリアルでのドラッグ アンド ドロップのデータ転送に含めることができるカスタム ユーザー コントロールを作成する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。
 
@@ -33,12 +33,12 @@ ms.locfileid: "47193735"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-Visual Studio でこのチュートリアルを完了する必要があります。
+このチュートリアルを完了するには Visual Studio が必要です。
 
 ## <a name="create-the-application-project"></a>アプリケーション プロジェクトを作成します。
  このセクションでは、2 つのパネルでのメイン ページを含むアプリケーション インフラストラクチャを作成します、<xref:System.Windows.Controls.TextBox>します。
 
-1.  Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`DragDropExample`します。 詳細については、次を参照してください。[方法: 新しい WPF アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)します。
+1.  Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`DragDropExample`します。 詳細については、「[方法 :新しい WPF アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)します。
 
 2.  MainWindow.xaml を開きます。
 

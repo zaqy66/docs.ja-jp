@@ -2,12 +2,12 @@
 title: '&lt;header&gt;'
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 84b9a9437d4b0dfae72a6e625b21f2b830eb28d8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f47462ba63b9bd8868420ee9d3a320ba18c83c65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557826"
 ---
 # <a name="ltheadersgt"></a>&lt;header&gt;
 エンドポイントは、基本となる URI だけでなく、1 つ以上の SOAP ヘッダーによってアドレス指定することもできます。 これが役に立つのは、エンドポイントのクライアントに中継局を指す SOAP ヘッダーを含める必要がある、SOAP 中継局のシナリオの場合です。 この構成要素を使用して、カスタムのアドレス ヘッダーを定義できます。 エンドポイント ヘッダー コレクション内のエントリは、ユーザー定義の XML 要素です。 各要素は、正しい形式の XML である必要があります。  
@@ -32,11 +32,7 @@ ms.locfileid: "54147864"
  なし。  
   
 ### <a name="child-elements"></a>子要素  
-  
-|要素|説明|  
-|-------------|-----------------|  
-|Region||  
-|メンバー||  
+ ユーザー定義の XML 要素。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -47,9 +43,9 @@ ms.locfileid: "54147864"
 ## <a name="remarks"></a>Remarks  
  オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 たとえば、ヘッダーを使用して、受信メッセージの処理方法や、エンドポイントからの応答メッセージの送信先を指定できるほか、複数のサービス インスタンスが使用できる場合に、特定ユーザーからの受信メッセージの処理に使用するインスタンスを指定できます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
- <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Headers%2A>
+- <xref:System.ServiceModel.Channels.AddressHeaderCollection>
+- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

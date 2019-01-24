@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 001baa8d3cbd294772bef634825c67ea13b23458
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597282"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 1 つまたは複数の宣言されたプログラミング要素がクラスまたは構造体全体、クラスまたは構造体の特定のインスタンスではなくと関連付けられていることを指定します。  
@@ -26,7 +26,7 @@ ms.locfileid: "37143532"
 ## <a name="when-to-use-shared"></a>共有を使用する場合  
  すべてのインスタンスを使用できるクラスまたは構造体のメンバーを共有するようになく*非共有*、各インスタンスが独自のコピーを保持します。 これは、変数の値は、アプリケーション全体に適用される場合に便利です。 その変数を宣言する場合`Shared`すべてのインスタンスが、同じストレージの場所にアクセスし、更新された値にアクセスするすべてのインスタンス 1 つのインスタンスには、変数の値が変更された場合。  
   
- 共有メンバーのアクセス レベルは変更されません。 たとえば、クラス メンバーを共有できるとプライベート (クラス内からのみアクセスできます)、または非共有と公開。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+ 共有メンバーのアクセス レベルは変更されません。 たとえば、クラス メンバーを共有できるとプライベート (クラス内からのみアクセスできます)、または非共有と公開。 詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
@@ -92,10 +92,10 @@ ms.locfileid: "37143532"
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
- [Visual Basic での有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>関連項目
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Static](../../../visual-basic/language-reference/modifiers/static.md)
+- [Visual Basic での有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
