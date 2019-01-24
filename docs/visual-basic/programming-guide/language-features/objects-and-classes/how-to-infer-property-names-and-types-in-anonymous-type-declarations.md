@@ -1,19 +1,19 @@
 ---
-title: '方法: 匿名型の宣言におけるプロパティ名と型を推論する (Visual Basic)'
+title: '方法: 匿名型の宣言 (Visual Basic) におけるプロパティ名と型を推論します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 80127c05d56162397cfa421122ddd9698750b376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67cc9e85d249365a7b4b7636c99766087314622d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596862"
 ---
-# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>方法: 匿名型の宣言におけるプロパティ名と型を推論する (Visual Basic)
+# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>方法: 匿名型の宣言 (Visual Basic) におけるプロパティ名と型を推論します。
 匿名型には、プロパティのデータ型を直接指定する機構はありません。 すべてのプロパティの型は、推論されます。 次の例では、 `Name` と `Price` の型は、それらを初期化するために使われる値から、直接推論されます。  
   
  [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
@@ -120,8 +120,8 @@ ms.locfileid: "33653313"
   
      [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクト初期化子 : 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+## <a name="see-also"></a>関連項目
+- [オブジェクト初期化子:名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Key](../../../../visual-basic/language-reference/modifiers/key.md)

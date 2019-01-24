@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームにコントロールを追加する'
+title: '方法: Windows フォームにコントロールを追加します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611359"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>方法 : Windows フォームにコントロールを追加する
+# <a name="how-to-add-controls-to-windows-forms"></a>方法: Windows フォームにコントロールを追加します。
 ほとんどのフォームは、ユーザー インターフェイス (UI) を定義するフォームのサーフェイスにコントロールを追加して設計されています。 A*コントロール*は情報を表示するか、ユーザー入力をそのまま使用するためのフォーム上のコンポーネントです。 コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)します。  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "44213093"
   
 ### <a name="to-draw-a-control-on-a-form"></a>フォームのコントロールを描画するには  
   
-1.  フォームを開きます。 詳細については、次を参照してください。[方法: デザイナーでの Windows フォームの表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
+1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
   
 2.  **ツールボックス**フォームに追加するコントロールをクリックします。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "44213093"
   
 ### <a name="to-drag-a-control-to-a-form"></a>コントロールをフォームにドラッグするには  
   
-1.  フォームを開きます。 詳細については、次を参照してください。[方法: デザイナーでの Windows フォームの表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
+1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
   
 2.  **ツールボックス**フォームにドラッグしてコントロールをクリックします。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "44213093"
     > [!IMPORTANT]
     >  悪意のあるを参照して、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する`UserControl`します。 誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合の問題のみなります。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)  
- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [方法: Windows フォーム上のコントロールのサイズを変更する](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
+- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [方法: Windows フォーム上のコントロールのサイズを変更します。](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
+- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

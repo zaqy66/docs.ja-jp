@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581983"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンドラインから Windows フォーム アプリケーションを作成します。
-次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル: 単純な Windows フォームを作成する](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))します。  
+次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。単純な Windows フォームを作成する](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))します。  
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -113,9 +113,9 @@ ms.locfileid: "43804806"
   
 -   コードをコンパイルするには、アプリケーションをコンパイルして実行する方法を説明した、前述の手順に従います。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [Windows フォームの表示形式の変更](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Windows フォーム アプリケーションの拡張](../../../docs/framework/winforms/advanced/index.md)  
- [Windows フォームについて](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [Windows フォームの表示形式の変更](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [Windows フォーム アプリケーションの拡張](../../../docs/framework/winforms/advanced/index.md)
+- [Windows フォームについて](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
