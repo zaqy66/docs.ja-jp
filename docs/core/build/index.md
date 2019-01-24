@@ -4,13 +4,8 @@ description: ソース コードから .NET Core と .NET Core CLI をビルド�
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170068"
 ---
+
 # <a name="build-net-core-from-source"></a>ソースから .NET Core をビルドする
 
 ソース コードから .NET Core をビルドできることは、複数の方法において重要なことです。 .NET Core を新しいプラットフォームに簡単に移植でき、製品に対するコントリビューションと修正を有効にすることができ、また、.NET のカスタム バージョンを作成することができます。
@@ -101,6 +96,6 @@ OS 間でのクロス ビルドはありません (X64 にビルドされる ARM
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core 共通言語ランタイム (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [.NET Core CLI 開発者ガイド](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [.NET Core の配布パッケージ](./distribution-packaging.md)
+- [.NET Core 共通言語ランタイム (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET Core CLI 開発者ガイド](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [.NET Core の配布パッケージ](./distribution-packaging.md)

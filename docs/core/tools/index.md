@@ -3,12 +3,6 @@ title: .NET Core コマンドライン インターフェイス (CLI) ツール
 description: .NET Core コマンドライン インターフェイス (CLI) ツールとその機能の概要です。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170199"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core コマンドライン インターフェイス (CLI) ツール
 
@@ -146,5 +140,5 @@ Preview 2 ツールを使用して *project.json* ベースのプロジェクト
 
 ## <a name="see-also"></a>関連項目
 
-* [dotnet/CLI GitHub リポジトリ](https://github.com/dotnet/cli/)  
-* [.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)  
+- [dotnet/CLI GitHub リポジトリ](https://github.com/dotnet/cli/)
+- [.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)

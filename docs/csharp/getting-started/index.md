@@ -1,18 +1,12 @@
 ---
-title: 概要 - C# ガイド
-description: 短期間で C# の概念について学習でき、.NET Core アプリケーションを作成することができるようになるような、短くて簡単なチュートリアルを探します。
+title: '概要 - C# ガイド'
+description: '短期間で C# の概念について学習でき、.NET Core アプリケーションを作成することができるようになるような、短くて簡単なチュートリアルを探します。'
 helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
+  - 'Visual C#, getting started'
+  - 'getting started, Visual C#'
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837894"
 ---
 # <a name="get-started-with-c"></a>C\# の使用を開始する
 
@@ -64,4 +58,4 @@ ms.locfileid: "48837894"
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio を使用した Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Visual Studio を使用した Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

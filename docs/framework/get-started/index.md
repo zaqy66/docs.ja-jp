@@ -3,18 +3,13 @@ title: .NET Framework の概要
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453136"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>.NET Framework の概要
 
 .NET Framework は、.NET Framework を対象としたアプリを管理するランタイム実行環境です。 これは、メモリ管理やその他のシステム サービスを提供する共通言語ランタイムと、プログラマがアプリ開発のすべての主要領域で堅牢性と信頼性の高いコードを利用できるようにするための広範なクラス ライブラリから構成されています。
@@ -89,7 +84,7 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework ガイド](../../../docs/framework/index.md)   
-- [新機能](../../../docs/framework/whats-new/index.md)   
-- [.NET API ブラウザー](/dotnet/api/)   
+- [.NET Framework ガイド](../../../docs/framework/index.md)
+- [新機能](../../../docs/framework/whats-new/index.md)
+- [.NET API ブラウザー](/dotnet/api/)
 - [開発ガイド](../../../docs/framework/development-guide.md)

@@ -4,13 +4,8 @@ description: この記事では、.NET Core SDK と ランタイムをバージ�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334809"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
 .NET Core とは .NET Core ランタイムと .NET Core SDK を示しており、これにはアプリケーションを開発するのに必要なツールが含まれています。 .NET Core SDK は、前のバージョンの .NET Core ランタイムをどれでも使用できるように設計されています。 この記事では、ランタイムおよび SDK のバージョン戦略について説明します。 .NET Standard のバージョン番号については、[.NET Standard](../../standard/net-standard.md#net-implementation-support) に関する記事を参照してください。
@@ -106,8 +101,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>関連項目
 
-* [ターゲット フレームワーク](../../standard/frameworks.md)  
-* [.NET Core の配布パッケージ](../build/distribution-packaging.md)  
-* [.NET Core サポート ライフサイクルのファクト シート](https://www.microsoft.com/net/core/support)  
-* [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)  
-* [.NET Core の Docker イメージ](https://hub.docker.com/r/microsoft/dotnet/)
+- [ターゲット フレームワーク](../../standard/frameworks.md)
+- [.NET Core の配布パッケージ](../build/distribution-packaging.md)
+- [.NET Core サポート ライフサイクルのファクト シート](https://www.microsoft.com/net/core/support)
+- [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
+- [.NET Core の Docker イメージ](https://hub.docker.com/r/microsoft/dotnet/)

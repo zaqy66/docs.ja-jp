@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415690"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
@@ -98,7 +92,7 @@ CLI ツールで .NET Core アプリを展開する手順の例については�
 
 ## <a name="see-also"></a>関連項目
 
-* [CLI ツールで .NET Core アプリを展開する](deploy-with-cli.md)
-* [Visual Studio で .NET Core アプリを展開する](deploy-with-vs.md)
-* [パッケージ、メタパッケージ、フレームワーク](../packages.md)
-* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [CLI ツールで .NET Core アプリを展開する](deploy-with-cli.md)
+- [Visual Studio で .NET Core アプリを展開する](deploy-with-vs.md)
+- [パッケージ、メタパッケージ、フレームワーク](../packages.md)
+- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
