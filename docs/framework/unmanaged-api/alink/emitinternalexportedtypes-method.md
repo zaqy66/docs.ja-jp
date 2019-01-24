@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55b9d185804f25c7431f2696d67753cc3ba02d1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68373e9277a9d87bba6941259588f25a92af90a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710548"
 ---
-# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="e7c97-102">EmitInternalExportedTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="e7c97-102">EmitInternalExportedTypes Method</span></span>
-<span data-ttu-id="e7c97-103">アセンブリに追加された型を出力します。</span><span class="sxs-lookup"><span data-stu-id="e7c97-103">Emits types added to the assembly.</span></span> <span data-ttu-id="e7c97-104">既知の内部型が追加された後は、このメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e7c97-104">Call this method after known internal types have been added.</span></span>  
+# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="5f32b-102">EmitInternalExportedTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="5f32b-102">EmitInternalExportedTypes Method</span></span>
+<span data-ttu-id="5f32b-103">アセンブリに追加された型を出力します。</span><span class="sxs-lookup"><span data-stu-id="5f32b-103">Emits types added to the assembly.</span></span> <span data-ttu-id="5f32b-104">既知の内部型が追加された後は、このメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="5f32b-104">Call this method after known internal types have been added.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7c97-105">構文</span><span class="sxs-lookup"><span data-stu-id="e7c97-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f32b-105">構文</span><span class="sxs-lookup"><span data-stu-id="5f32b-105">Syntax</span></span>  
   
 ```  
 HRESULT EmitInternalExportedTypes(  
@@ -35,17 +35,17 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e7c97-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e7c97-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5f32b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5f32b-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="e7c97-107">アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="e7c97-107">ID of assembly.</span></span>  
+ <span data-ttu-id="5f32b-107">アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="5f32b-107">ID of assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e7c97-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="e7c97-108">Return Value</span></span>  
- <span data-ttu-id="e7c97-109">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="e7c97-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5f32b-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="5f32b-108">Return Value</span></span>  
+ <span data-ttu-id="5f32b-109">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="5f32b-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7c97-110">要件</span><span class="sxs-lookup"><span data-stu-id="e7c97-110">Requirements</span></span>  
- <span data-ttu-id="e7c97-111">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="e7c97-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f32b-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="5f32b-110">Requirements</span></span>  
+ <span data-ttu-id="5f32b-111">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="5f32b-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7c97-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7c97-112">See Also</span></span>  
- [<span data-ttu-id="e7c97-113">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e7c97-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="e7c97-114">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e7c97-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="e7c97-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="e7c97-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="5f32b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="5f32b-112">See also</span></span>
+- [<span data-ttu-id="5f32b-113">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5f32b-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="5f32b-114">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5f32b-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="5f32b-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="5f32b-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

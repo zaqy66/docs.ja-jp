@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: abe9fe0f6216f81fa223fe83a122b580577e1c32
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0f276781165e80b2d869da2518dbe34b33085d5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649948"
 ---
-# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a><span data-ttu-id="6e748-102">XML コメントの例外があります、 &#39;cref&#39;属性</span><span class="sxs-lookup"><span data-stu-id="6e748-102">XML comment exception must have a &#39;cref&#39; attribute</span></span>
-<span data-ttu-id="6e748-103">\<例外 > タグは、メソッドによってスローされる可能性が例外を文書化する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="6e748-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="6e748-104">必要な`cref`属性は、ドキュメントのジェネレーターがチェックされているメンバーの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="6e748-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="6e748-105">メンバーが存在する場合は、ドキュメント ファイルで正規要素名に変換されます。</span><span class="sxs-lookup"><span data-stu-id="6e748-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>  
+# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a><span data-ttu-id="1f0e9-102">XML コメントの例外があります、 &#39;cref&#39;属性</span><span class="sxs-lookup"><span data-stu-id="1f0e9-102">XML comment exception must have a &#39;cref&#39; attribute</span></span>
+<span data-ttu-id="1f0e9-103">\<例外 > タグは、メソッドによってスローされる可能性が例外を文書化する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="1f0e9-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="1f0e9-104">必要な`cref`属性は、ドキュメントのジェネレーターがチェックされているメンバーの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="1f0e9-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="1f0e9-105">メンバーが存在する場合は、ドキュメント ファイルで正規要素名に変換されます。</span><span class="sxs-lookup"><span data-stu-id="1f0e9-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>  
   
- <span data-ttu-id="6e748-106">**エラー ID:** BC42319</span><span class="sxs-lookup"><span data-stu-id="6e748-106">**Error ID:** BC42319</span></span>  
+ <span data-ttu-id="1f0e9-106">**エラー ID:** BC42319</span><span class="sxs-lookup"><span data-stu-id="1f0e9-106">**Error ID:** BC42319</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6e748-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="6e748-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1f0e9-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="1f0e9-107">To correct this error</span></span>  
   
--   <span data-ttu-id="6e748-108">追加、`cref`属性、例外を次のようにします。</span><span class="sxs-lookup"><span data-stu-id="6e748-108">Add the `cref` attribute to the exception as follows:</span></span>  
+-   <span data-ttu-id="1f0e9-108">追加、`cref`属性、例外を次のようにします。</span><span class="sxs-lookup"><span data-stu-id="1f0e9-108">Add the `cref` attribute to the exception as follows:</span></span>  
   
     ```  
     '''<exception cref="member">description</exception>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6e748-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e748-109">See Also</span></span>  
- [<span data-ttu-id="6e748-110">\<exception></span><span class="sxs-lookup"><span data-stu-id="6e748-110">\<exception></span></span>](../../../visual-basic/language-reference/xmldoc/exception.md)  
- [<span data-ttu-id="6e748-111">方法: XML ドキュメントを作成する</span><span class="sxs-lookup"><span data-stu-id="6e748-111">How to: Create XML Documentation</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [<span data-ttu-id="6e748-112">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="6e748-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="1f0e9-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f0e9-109">See also</span></span>
+- [<span data-ttu-id="1f0e9-110">\<exception></span><span class="sxs-lookup"><span data-stu-id="1f0e9-110">\<exception></span></span>](../../../visual-basic/language-reference/xmldoc/exception.md)
+- [<span data-ttu-id="1f0e9-111">方法: XML ドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="1f0e9-111">How to: Create XML Documentation</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [<span data-ttu-id="1f0e9-112">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="1f0e9-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

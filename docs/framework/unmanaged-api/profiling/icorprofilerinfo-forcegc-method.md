@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06601b1aa675dd9ecf023a9f83d881ba1591ac52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c30a666dcbac553d05cc5f54d5dbb326eb6a10e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706697"
 ---
-# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="b849c-102">ICorProfilerInfo::ForceGC メソッド</span><span class="sxs-lookup"><span data-stu-id="b849c-102">ICorProfilerInfo::ForceGC Method</span></span>
-<span data-ttu-id="b849c-103">強制的にガベージ コレクションに共通言語ランタイム (CLR) 内で発生します。</span><span class="sxs-lookup"><span data-stu-id="b849c-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="8b9af-102">ICorProfilerInfo::ForceGC メソッド</span><span class="sxs-lookup"><span data-stu-id="8b9af-102">ICorProfilerInfo::ForceGC Method</span></span>
+<span data-ttu-id="8b9af-103">共通言語ランタイム (CLR) 内に発生する強制的にガベージ コレクション。</span><span class="sxs-lookup"><span data-stu-id="8b9af-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b849c-104">構文</span><span class="sxs-lookup"><span data-stu-id="b849c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b9af-104">構文</span><span class="sxs-lookup"><span data-stu-id="8b9af-104">Syntax</span></span>  
   
 ```  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="b849c-105">コメント</span><span class="sxs-lookup"><span data-stu-id="b849c-105">Remarks</span></span>  
- <span data-ttu-id="b849c-106">`ForceGC`メソッドは、マネージ コードが一度も実行し、そのスタックのプロファイラー コールバックを持たないスレッドからのみ呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="b849c-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="b849c-107">呼び出して、プロファイラー内で別のスレッドを作成する最も便利な実装は、`ForceGC`シグナルを受け取るとします。</span><span class="sxs-lookup"><span data-stu-id="b849c-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b9af-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="8b9af-105">Remarks</span></span>  
+ <span data-ttu-id="8b9af-106">`ForceGC`メソッドは、マネージ コードを実行していないと、スタックに任意のプロファイラーのコールバックがないスレッドからのみ呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="8b9af-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="8b9af-107">呼び出すプロファイラー内で別のスレッドを作成する最も便利な実装は、`ForceGC`シグナルを受け取るとします。</span><span class="sxs-lookup"><span data-stu-id="8b9af-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b849c-108">要件</span><span class="sxs-lookup"><span data-stu-id="b849c-108">Requirements</span></span>  
- <span data-ttu-id="b849c-109">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="b849c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b9af-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="8b9af-108">Requirements</span></span>  
+ <span data-ttu-id="8b9af-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8b9af-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b849c-110">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b849c-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8b9af-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8b9af-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b849c-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b849c-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8b9af-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b9af-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b849c-112">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b849c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8b9af-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b9af-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b849c-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b849c-113">See Also</span></span>  
- [<span data-ttu-id="b849c-114">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b849c-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8b9af-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b9af-113">See also</span></span>
+- [<span data-ttu-id="8b9af-114">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8b9af-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
