@@ -1,5 +1,5 @@
 ---
-title: '方法 : カスタム コンテキスト メニューを RichTextBox に配置する'
+title: '方法: カスタム コンテキスト メニューを RichTextBox に配置する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +10,30 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: bde28cdb87bdaef3198d1efd3059fed3d0ae0ce2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f6e7255286d065eb26773d524a3147801933406
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727899"
 ---
-# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a><span data-ttu-id="1b352-102">方法 : カスタム コンテキスト メニューを RichTextBox に配置する</span><span class="sxs-lookup"><span data-stu-id="1b352-102">How to: Position a Custom Context Menu in a RichTextBox</span></span>
-<span data-ttu-id="1b352-103">この例では、配置用のカスタムのコンテキスト メニュー、<xref:System.Windows.Controls.RichTextBox>です。</span><span class="sxs-lookup"><span data-stu-id="1b352-103">This example shows how to position a custom context menu for a <xref:System.Windows.Controls.RichTextBox>.</span></span>  
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a><span data-ttu-id="3e9a5-102">方法: カスタム コンテキスト メニューを RichTextBox に配置する</span><span class="sxs-lookup"><span data-stu-id="3e9a5-102">How to: Position a Custom Context Menu in a RichTextBox</span></span>
+<span data-ttu-id="3e9a5-103">この例のカスタム コンテキスト メニューを配置する方法を示しています、<xref:System.Windows.Controls.RichTextBox>します。</span><span class="sxs-lookup"><span data-stu-id="3e9a5-103">This example shows how to position a custom context menu for a <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
- <span data-ttu-id="1b352-104">**RichTextBox** のカスタム コンテキスト メニューを実装する場合、コンテキスト メニューの配置の処理を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b352-104">When you implement a custom context menu for a **RichTextBox**, you are responsible for handling the placement of the context menu.</span></span>  <span data-ttu-id="1b352-105">既定では、**RichTextBox** の中央でカスタム コンテキスト メニューが開きます。</span><span class="sxs-lookup"><span data-stu-id="1b352-105">By default, a custom context menu is opened at the center of the **RichTextBox**.</span></span>  
+ <span data-ttu-id="3e9a5-104">**RichTextBox** のカスタム コンテキスト メニューを実装する場合、コンテキスト メニューの配置の処理を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="3e9a5-104">When you implement a custom context menu for a **RichTextBox**, you are responsible for handling the placement of the context menu.</span></span>  <span data-ttu-id="3e9a5-105">既定では、**RichTextBox** の中央でカスタム コンテキスト メニューが開きます。</span><span class="sxs-lookup"><span data-stu-id="3e9a5-105">By default, a custom context menu is opened at the center of the **RichTextBox**.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1b352-106">例</span><span class="sxs-lookup"><span data-stu-id="1b352-106">Example</span></span>  
- <span data-ttu-id="1b352-107">既定の配置の動作を無効にする追加のリスナーを<xref:System.Windows.FrameworkContentElement.ContextMenuOpening>イベント。</span><span class="sxs-lookup"><span data-stu-id="1b352-107">To override the default placement behavior, add a listener for the <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event.</span></span>  <span data-ttu-id="1b352-108">次の例では、プログラムによってこれを実行する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="1b352-108">The following example shows how to do this programmatically.</span></span>  
+## <a name="example"></a><span data-ttu-id="3e9a5-106">例</span><span class="sxs-lookup"><span data-stu-id="3e9a5-106">Example</span></span>  
+ <span data-ttu-id="3e9a5-107">既定の配置動作を上書きするには、追加のリスナーを<xref:System.Windows.FrameworkContentElement.ContextMenuOpening>イベント。</span><span class="sxs-lookup"><span data-stu-id="3e9a5-107">To override the default placement behavior, add a listener for the <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event.</span></span>  <span data-ttu-id="3e9a5-108">次の例では、プログラムによってこれを実行する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="3e9a5-108">The following example shows how to do this programmatically.</span></span>  
   
  [!code-csharp[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_addlistener)]
  [!code-vb[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_addlistener)]  
   
-## <a name="example"></a><span data-ttu-id="1b352-109">例</span><span class="sxs-lookup"><span data-stu-id="1b352-109">Example</span></span>  
- <span data-ttu-id="1b352-110">次の例は、対応する実装を示します<xref:System.Windows.FrameworkContentElement.ContextMenuOpening>イベント リスナー。</span><span class="sxs-lookup"><span data-stu-id="1b352-110">The following example shows an implementation the corresponding <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event listener.</span></span>  
+## <a name="example"></a><span data-ttu-id="3e9a5-109">例</span><span class="sxs-lookup"><span data-stu-id="3e9a5-109">Example</span></span>  
+ <span data-ttu-id="3e9a5-110">次の例は、対応する実装を示します<xref:System.Windows.FrameworkContentElement.ContextMenuOpening>イベント リスナー。</span><span class="sxs-lookup"><span data-stu-id="3e9a5-110">The following example shows an implementation the corresponding <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event listener.</span></span>  
   
  [!code-csharp[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_listenerbody)]
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
-## <a name="see-also"></a><span data-ttu-id="1b352-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b352-111">See Also</span></span>  
- [<span data-ttu-id="1b352-112">RichTextBox の概要</span><span class="sxs-lookup"><span data-stu-id="1b352-112">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [<span data-ttu-id="1b352-113">TextBox の概要</span><span class="sxs-lookup"><span data-stu-id="1b352-113">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3e9a5-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="3e9a5-111">See also</span></span>
+- [<span data-ttu-id="3e9a5-112">RichTextBox の概要</span><span class="sxs-lookup"><span data-stu-id="3e9a5-112">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [<span data-ttu-id="3e9a5-113">TextBox の概要</span><span class="sxs-lookup"><span data-stu-id="3e9a5-113">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
