@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e35f06cfe5175ef3666dd5466d79384b17f2f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfe71abfa97a3773c8ff50c0f908d48681ebdc8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680349"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="42297-102">ICorDebugEditAndContinueSnapshot::SetILMap メソッド</span><span class="sxs-lookup"><span data-stu-id="42297-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="42297-103">`SetILMap` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="42297-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="42297-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="42297-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="50442-102">ICorDebugEditAndContinueSnapshot::SetILMap メソッド</span><span class="sxs-lookup"><span data-stu-id="50442-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+<span data-ttu-id="50442-103">`SetILMap` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="50442-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="50442-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="50442-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42297-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="42297-105">See Also</span></span>  
- [<span data-ttu-id="42297-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="42297-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="50442-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="50442-105">See also</span></span>
+- [<span data-ttu-id="50442-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="50442-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

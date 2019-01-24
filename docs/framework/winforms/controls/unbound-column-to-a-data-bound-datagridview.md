@@ -1,5 +1,5 @@
 ---
-title: '方法 : データバインドされた Windows フォーム DataGridView コントロールに非バインド列を追加する'
+title: '方法: データ バインド Windows フォーム DataGridView コントロールにバインドされていない列を追加します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: 39c637fe30ed852f7d6e9fa7a1dbbfa72af9e4b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e877545f93fb57b636fd2e1559f52b4ad70a0b4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722765"
 ---
-# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a><span data-ttu-id="9d8d7-102">方法 : データバインドされた Windows フォーム DataGridView コントロールに非バインド列を追加する</span><span class="sxs-lookup"><span data-stu-id="9d8d7-102">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="9d8d7-103"><xref:System.Windows.Forms.DataGridView> コントロールに表示するデータは、通常なんらかのデータ ソースから取得されるデータですが、データ ソース以外からのデータの列を表示する必要が生じることがあります。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-103">The data you display in the <xref:System.Windows.Forms.DataGridView> control will normally come from a data source of some kind, but you might want to display a column of data that does not come from the data source.</span></span> <span data-ttu-id="9d8d7-104">この種類の列は、非バインド列と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-104">This kind of column is called an unbound column.</span></span> <span data-ttu-id="9d8d7-105">非バインド列の形式はさまざまです。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-105">Unbound columns can take many forms.</span></span> <span data-ttu-id="9d8d7-106">しばしば、データ行の詳細へのアクセスに使用されます。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-106">Frequently, they are used to provide access to the details of a data row.</span></span>  
+# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a><span data-ttu-id="3e4e2-102">方法: データ バインド Windows フォーム DataGridView コントロールにバインドされていない列を追加します。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-102">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="3e4e2-103"><xref:System.Windows.Forms.DataGridView> コントロールに表示するデータは、通常なんらかのデータ ソースから取得されるデータですが、データ ソース以外からのデータの列を表示する必要が生じることがあります。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-103">The data you display in the <xref:System.Windows.Forms.DataGridView> control will normally come from a data source of some kind, but you might want to display a column of data that does not come from the data source.</span></span> <span data-ttu-id="3e4e2-104">この種類の列は、非バインド列と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-104">This kind of column is called an unbound column.</span></span> <span data-ttu-id="3e4e2-105">非バインド列の形式はさまざまです。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-105">Unbound columns can take many forms.</span></span> <span data-ttu-id="3e4e2-106">しばしば、データ行の詳細へのアクセスに使用されます。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-106">Frequently, they are used to provide access to the details of a data row.</span></span>  
   
- <span data-ttu-id="9d8d7-107">次のコード例のバインドされていない列を作成する方法を示します**詳細**マスター/詳細シナリオを実装するときに親テーブルで特定の行に関連する子テーブルを表示するボタン。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-107">The following code example demonstrates how to create an unbound column of **Details** buttons to display a child table related to a particular row in a parent table when you implement a master/detail scenario.</span></span> <span data-ttu-id="9d8d7-108">ボタンのクリックに応答するには、子テーブルを含むフォームを表示する <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> イベント ハンドラーを実装します。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-108">To respond to button clicks, implement a <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event handler that displays a form containing the child table.</span></span>  
+ <span data-ttu-id="3e4e2-107">次のコード例のバインドされていない列を作成する方法を示します**詳細**マスター/詳細シナリオを実装するときに親テーブルで特定の行に関連する子テーブルを表示するボタン。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-107">The following code example demonstrates how to create an unbound column of **Details** buttons to display a child table related to a particular row in a parent table when you implement a master/detail scenario.</span></span> <span data-ttu-id="3e4e2-108">ボタンのクリックに応答するには、子テーブルを含むフォームを表示する <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> イベント ハンドラーを実装します。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-108">To respond to button clicks, implement a <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event handler that displays a form containing the child table.</span></span>  
   
- <span data-ttu-id="9d8d7-109">Visual Studio では、このタスクに対するサポートが用意されています。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-109">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="9d8d7-110">参照してください[方法: 追加して、Windows フォーム DataGridView コントロールを使用して、デザイナーで列を削除](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="9d8d7-110">Also see [How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))</span></span>  
+ <span data-ttu-id="3e4e2-109">Visual Studio では、このタスクに対するサポートが用意されています。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-109">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="3e4e2-110">参照してください[方法。追加して、デザイナーを使用して Windows フォーム DataGridView コントロールで列を削除](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="3e4e2-110">Also see [How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9d8d7-111">例</span><span class="sxs-lookup"><span data-stu-id="9d8d7-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3e4e2-111">例</span><span class="sxs-lookup"><span data-stu-id="3e4e2-111">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#010)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9d8d7-112">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="9d8d7-112">Compiling the Code</span></span>  
- <span data-ttu-id="9d8d7-113">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3e4e2-112">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="3e4e2-112">Compiling the Code</span></span>  
+ <span data-ttu-id="3e4e2-113">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-113">This example requires:</span></span>  
   
--   <span data-ttu-id="9d8d7-114">`dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-114">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+-   <span data-ttu-id="3e4e2-114">`dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-114">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="9d8d7-115"><xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="9d8d7-115">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="3e4e2-115"><xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="3e4e2-115">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d8d7-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="9d8d7-116">See Also</span></span>  
- <xref:System.Windows.Forms.DataGridView>  
- [<span data-ttu-id="9d8d7-117">Windows フォーム DataGridView コントロールでのデータの表示</span><span class="sxs-lookup"><span data-stu-id="9d8d7-117">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="9d8d7-118">Windows フォーム DataGridView コントロールでのデータ表示モード</span><span class="sxs-lookup"><span data-stu-id="9d8d7-118">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="3e4e2-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="3e4e2-116">See also</span></span>
+- <xref:System.Windows.Forms.DataGridView>
+- [<span data-ttu-id="3e4e2-117">Windows フォーム DataGridView コントロールでのデータの表示</span><span class="sxs-lookup"><span data-stu-id="3e4e2-117">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="3e4e2-118">Windows フォーム DataGridView コントロールでのデータ表示モード</span><span class="sxs-lookup"><span data-stu-id="3e4e2-118">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

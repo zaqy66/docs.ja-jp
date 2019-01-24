@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727093"
 ---
-# <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="36103-102">ICorProfilerInfo3::GetThreadStaticAddress2 メソッド</span><span class="sxs-lookup"><span data-stu-id="36103-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
-<span data-ttu-id="36103-103">指定したスレッドおよびアプリケーション ドメインのスコープ内にある、指定したスレッド内静的フィールドのアドレスを取得します。</span><span class="sxs-lookup"><span data-stu-id="36103-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  
+# <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="b2a1d-102">ICorProfilerInfo3::GetThreadStaticAddress2 メソッド</span><span class="sxs-lookup"><span data-stu-id="b2a1d-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
+<span data-ttu-id="b2a1d-103">指定したスレッドおよびアプリケーション ドメインのスコープ内にある、指定したスレッド内静的フィールドのアドレスを取得します。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36103-104">構文</span><span class="sxs-lookup"><span data-stu-id="36103-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2a1d-104">構文</span><span class="sxs-lookup"><span data-stu-id="b2a1d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadStaticAddress2(  
@@ -38,43 +38,43 @@ HRESULT GetThreadStaticAddress2(
                 [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="36103-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="36103-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b2a1d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b2a1d-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="36103-106">[in]要求されたスレッド内静的フィールドを格納するクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="36103-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
+ <span data-ttu-id="b2a1d-106">[in]要求されたスレッド内静的フィールドを含むクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-106">[in] The ID of the class that contains the requested thread-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="36103-107">[in]要求されたスレッド内静的フィールドのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="36103-107">[in] The metadata token for the requested thread-static field.</span></span>  
+ <span data-ttu-id="b2a1d-107">[in]要求されたスレッド内静的フィールドのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-107">[in] The metadata token for the requested thread-static field.</span></span>  
   
  `appDomainId`  
- <span data-ttu-id="36103-108">[in] アプリケーション ドメインの ID。</span><span class="sxs-lookup"><span data-stu-id="36103-108">[in] The ID of the application domain.</span></span>  
+ <span data-ttu-id="b2a1d-108">[in] アプリケーション ドメインの ID。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-108">[in] The ID of the application domain.</span></span>  
   
  `threadId`  
- <span data-ttu-id="36103-109">[in]要求された静的フィールドのスコープにあるスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="36103-109">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="b2a1d-109">[in]要求された静的フィールドのスコープにあるスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-109">[in] The ID of the thread that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="36103-110">[out]指定したスレッド内静的フィールドのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="36103-110">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
+ <span data-ttu-id="b2a1d-110">[out]指定したスレッド内の静的フィールドのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-110">[out] A pointer to the address of the static field that is within the specified thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="36103-111">コメント</span><span class="sxs-lookup"><span data-stu-id="36103-111">Remarks</span></span>  
- <span data-ttu-id="36103-112">`GetThreadStaticAddress2`メソッドは、次のいずれかを返す可能性があります。</span><span class="sxs-lookup"><span data-stu-id="36103-112">The `GetThreadStaticAddress2` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2a1d-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="b2a1d-111">Remarks</span></span>  
+ <span data-ttu-id="b2a1d-112">`GetThreadStaticAddress2`メソッドは、次のいずれかを返す可能性があります。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-112">The `GetThreadStaticAddress2` method may return one of the following:</span></span>  
   
--   <span data-ttu-id="36103-113">指定された静的フィールドに指定されたコンテキスト内のアドレスが割り当てられていない場合の CORPROF_E_DATAINCOMPLETE HRESULT です。</span><span class="sxs-lookup"><span data-stu-id="36103-113">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+-   <span data-ttu-id="b2a1d-113">指定された静的フィールドに指定したコンテキスト内のアドレスが割り当てられていない場合の CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-113">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
--   <span data-ttu-id="36103-114">ガベージ コレクション ヒープ内で使用できるオブジェクトのアドレス。</span><span class="sxs-lookup"><span data-stu-id="36103-114">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="36103-115">これらのアドレスはガベージ コレクションの後にプロファイラーを想定しないでくださいが有効であるために、ガベージ コレクションの後に無効になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="36103-115">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+-   <span data-ttu-id="b2a1d-114">ガベージ コレクション ヒープで可能性のあるオブジェクトのアドレス。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-114">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="b2a1d-115">これらのアドレスは、ガベージ コレクション後にプロファイラーを想定しないでくださいが有効であるために、ガベージ コレクションの後無効になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-115">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="36103-116">クラスのクラスのコンス トラクターが完了するまで`GetThreadStaticAddress2`静的フィールドの一部は既に初期化可能性がありますが、すべての静的フィールドの CORPROF_E_DATAINCOMPLETE が返され、ガベージ コレクション オブジェクトをルートします。</span><span class="sxs-lookup"><span data-stu-id="36103-116">Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="b2a1d-116">クラスのクラスのコンス トラクターが完了したら、前に`GetThreadStaticAddress2`はいくつかの静的フィールドは既に初期化可能性がありますが、すべての静的フィールドの CORPROF_E_DATAINCOMPLETE を返し、ガベージ コレクション オブジェクトのルートします。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-116">Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
- <span data-ttu-id="36103-117">[Icorprofilerinfo 2::getthreadstaticaddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md)メソッドがに似ていますが、`GetThreadStaticAddress2`メソッドは、アプリケーション ドメインの引数を受け付けられません。</span><span class="sxs-lookup"><span data-stu-id="36103-117">The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.</span></span>  
+ <span data-ttu-id="b2a1d-117">[Icorprofilerinfo 2::getthreadstaticaddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md)メソッドは、`GetThreadStaticAddress2`メソッドがアプリケーション ドメインの引数は受け付けません。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-117">The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36103-118">要件</span><span class="sxs-lookup"><span data-stu-id="36103-118">Requirements</span></span>  
- <span data-ttu-id="36103-119">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="36103-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2a1d-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="b2a1d-118">Requirements</span></span>  
+ <span data-ttu-id="b2a1d-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b2a1d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36103-120">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="36103-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b2a1d-120">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b2a1d-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="36103-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36103-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2a1d-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2a1d-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="36103-122">**.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36103-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="b2a1d-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2a1d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36103-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="36103-123">See Also</span></span>  
- [<span data-ttu-id="36103-124">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="36103-124">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="36103-125">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="36103-125">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="36103-126">プロファイル</span><span class="sxs-lookup"><span data-stu-id="36103-126">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="b2a1d-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="b2a1d-123">See also</span></span>
+- [<span data-ttu-id="b2a1d-124">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b2a1d-124">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="b2a1d-125">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="b2a1d-125">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="b2a1d-126">プロファイル</span><span class="sxs-lookup"><span data-stu-id="b2a1d-126">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
