@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b9d9b5baee856f09dd24a62767aff604728997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ed8b6f047f26235e984fb514381a9b1d85543ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675133"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize 関数
-指定したハッシュ アルゴリズムを使用して、ハッシュに必要なバッファー サイズを取得します。  
+指定したハッシュ アルゴリズムを使用して、ハッシュに必須のバッファー サイズが取得されます。  
   
- この関数は廃止されました。 使用して、 [iclrstrongname::strongnamehashsize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)メソッド代わりにします。  
+ この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamehashsize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,23 +42,23 @@ BOOLEAN StrongNameHashSize (
  [in]バッファー サイズを計算するために使用するハッシュ アルゴリズム。  
   
  `pcbSize`  
- [out]返されたバッファーのサイズ (バイト)。  
+ [out]返されたバッファー サイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`です。  
+ `true` 正常に終了します。それ以外の場合、`false`します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  場合、`StrongNameHashSize`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [StrongNameHashSize メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)  
- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>関連項目
+- [StrongNameHashSize メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)
+- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

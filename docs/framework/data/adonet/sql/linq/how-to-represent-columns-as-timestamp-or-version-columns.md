@@ -1,15 +1,15 @@
 ---
-title: '方法 : 列をタイムスタンプ列またはバージョン列として表現する'
+title: '方法: タイムスタンプ列またはバージョン列を表す'
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
-ms.openlocfilehash: 2fc8aaf260dc3657e33e539939fdf58ad8224c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa9ffe01c45df3ce0342b62e12007ddf88ee412d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674571"
 ---
-# <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>方法 : 列をタイムスタンプ列またはバージョン列として表現する
+# <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>方法: タイムスタンプ列またはバージョン列を表す
 使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>のプロパティ、<xref:System.Data.Linq.Mapping.ColumnAttribute>データベース タイムスタンプまたはバージョン番号を保持するデータベース列を表すフィールドまたはプロパティを指定する属性。  
   
  コード例については、「<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>」を参照してください。  
@@ -20,7 +20,7 @@ ms.locfileid: "33361240"
   
 2.  <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> プロパティ値を `true` に設定します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [方法 : 同時実行の競合を検査するメンバーを指定する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
- [方法 : コード エディターを使用してエンティティ クラスをカスタマイズする](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [方法: 同時実行の競合を検査するメンバーを指定します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
+- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

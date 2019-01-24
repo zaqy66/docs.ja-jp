@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c49dfb8eaf5a91c7ebdf10833b229c4b05a7ce56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664812"
 ---
 # <a name="creating-an-ink-input-control"></a>インク入力コントロールの作成
 できるカスタム コントロールを動的に作成し、静的にインクを描画します。 つまり、ユーザーが"flow"、タブレット ペンからおよびインクをその後に表示を追加するコントロールに、クリップボードから貼り付ける、タブレット ペンを使用していずれか、またはファイルから読み込まれたを表示するインク ストロークを描画するインクをレンダリングします。 インクを動的にレンダリングするコントロールを使用する必要があります、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>します。 静的にインクをレンダリングするには、スタイラス イベント メソッドをオーバーライドする必要があります (<xref:System.Windows.UIElement.OnStylusDown%2A>、 <xref:System.Windows.UIElement.OnStylusMove%2A>、および<xref:System.Windows.UIElement.OnStylusUp%2A>) を収集する<xref:System.Windows.Input.StylusPoint>データ、ストロークの作成に追加して、 <xref:System.Windows.Controls.InkPresenter> (このコントロールでインクを描画)。  
@@ -98,6 +98,6 @@ ms.locfileid: "44085774"
 ## <a name="conclusion"></a>まとめ  
  収集し、スタイラス イベント メソッドをオーバーライドすることで、インクをレンダリングするコントロールを作成することができます。 独自のコントロールを作成すると、派生独自<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>クラス、および挿入しに<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>、デジタル インクの考えられるあらゆる動作を実装することができます。 アクセスがある、<xref:System.Windows.Input.StylusPoint>ほどデータの生成をカスタマイズする機会を与える<xref:System.Windows.Input.Stylus>入力し、それをアプリケーションに適したとして画面にレンダリングします。 このような低レベルのアクセス権があるため、<xref:System.Windows.Input.StylusPoint>データ、インクのコレクションを実装して、アプリケーションの最適なパフォーマンスでレンダリングします。  
   
-## <a name="see-also"></a>関連項目  
- [高度なインク処理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [アクセスして、ペン入力を操作します。](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [高度なインク処理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [アクセスして、ペン入力を操作します。](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

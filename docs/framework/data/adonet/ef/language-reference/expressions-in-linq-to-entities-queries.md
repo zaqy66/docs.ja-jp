@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: dccf3ab1a619222cdf2db54673718eb103aee2fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f449e7d5626d4a8c9709ae2cb4c026869d1e2dc9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661777"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities クエリ内の式
 式は、単一の値、オブジェクト、メソッド、または名前空間として評価されるコード フラグメントです。 式には、リテラル値、メソッド呼び出し、演算子とそのオペランド、または単純な名前を含めることができます。 単純な名前には、変数、型メンバー、メソッド パラメーター、名前空間、または型の名前を指定できます。 式では、他の式をパラメーターとして使用する演算子、またはパラメーターが他のメソッド呼び出しであるメソッド呼び出しを使用できます。 したがって、単純な式だけでなく、非常に複雑な式も作成できます。  
@@ -36,5 +36,5 @@ ms.locfileid: "43504872"
   
  [ナビゲーション プロパティ](https://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a>関連項目
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

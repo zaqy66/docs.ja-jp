@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 145b4d00f5ceac621274b010e8220a63319e1425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 63fc2001f611bc4c199d2a8800af8e5210f37c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653230"
 ---
 # <a name="icordebugobjectvalue2-interface1"></a>ICorDebugObjectValue2 Interface1
-継承をサポートする"ICorDebugObjectValue"インターフェイスを拡張し、上書きします。  
+継承をサポートするために"ICorDebugObjectValue"インターフェイスを拡張しよりも優先されます。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -32,13 +32,13 @@ ms.locfileid: "33420922"
 |------------|-----------------|  
 |[GetVirtualMethodAndType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` まだ実装されていません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -46,6 +46,6 @@ ms.locfileid: "33420922"
   
  **NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- 
+## <a name="see-also"></a>関連項目
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+

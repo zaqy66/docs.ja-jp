@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653620"
 ---
 # <a name="event-statement"></a>Event ステートメント
 ユーザー定義イベントを宣言します。  
@@ -65,7 +65,7 @@ End Event
 |`eventname`|必須。 イベントの名前です。変数の標準的な名前付け規則に従って名前を付けます。|  
 |`parameterlist`|任意。 このイベントのパラメーターを表すローカル変数のリストです。 囲む必要があります、[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)かっこ内に示します。|  
 |`Implements`|任意。 このイベントがインターフェイスのイベントを実装することを示します。|  
-|`implementslist`|`Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。 複数のプロシージャを指定するときは、コンマで区切ります。<br /><br /> *implementedprocedure* [、 *implementedprocedure* ...]<br /><br /> `implementedprocedure` の構文と指定項目は次のとおりです。<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` 必須。 このプロシージャの包含クラスまたは包含構造体が実装しているインターフェイスの名前です。<br />-   `Definedname` 必須。 `interface` の中でプロシージャを定義するために使用する名前。 これは、`name` (定義されているプロシージャを実装するためにこのプロシージャが使用している名前) と同じである必要はありません。|  
+|`implementslist`|`Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。 複数のプロシージャを指定するときは、コンマで区切ります。<br /><br /> *implementedprocedure* [ , *implementedprocedure* ... ]<br /><br /> `implementedprocedure` の構文と指定項目は次のとおりです。<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` 必須。 このプロシージャの包含クラスまたは包含構造体が実装しているインターフェイスの名前です。<br />-   `Definedname` 必須。 `interface` の中でプロシージャを定義するために使用する名前。 これは、`name` (定義されているプロシージャを実装するためにこのプロシージャが使用している名前) と同じである必要はありません。|  
 |`Custom`|必須。 `Custom` として宣言されたイベントでは、`AddHandler`、`RemoveHandler`、および `RaiseEvent` の各カスタム アクセサーを定義する必要があります。|  
 |`delegatename`|任意。 イベント ハンドラーの署名を指定するデリゲートの名前。|  
 |`AddHandler`|必須。 `AddHandler` アクセサーを宣言します。ここでは、イベント ハンドラーが追加されたとき実行するステートメントを、`AddHandler` ステートメントを使って明示的に指定するか、`Handles` 句を使って暗黙的に指定します。|  
@@ -91,7 +91,7 @@ End Event
   
  `Event` は、モジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*イベントは、クラス、構造体、モジュール、またはインターフェイスである必要があり、ソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 例については、次を参照してください。[方法。メモリを節約するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)と[方法。ブロックを回避するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)します。  
+ ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 たとえば、「[方法:メモリを節約するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)と[方法。ブロックを回避するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメントの例を示しています。 `RaiseEvent` ステートメントの使用例も含まれています。  
@@ -117,15 +117,15 @@ End Event
 > [!NOTE]
 >  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [操作方法：メモリを節約するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [操作方法：ブロックを回避するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+## <a name="see-also"></a>関連項目
+- [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [方法: メモリを節約するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [方法: ブロックを回避するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

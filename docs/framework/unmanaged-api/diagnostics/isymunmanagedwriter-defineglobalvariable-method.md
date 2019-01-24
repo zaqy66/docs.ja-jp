@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1dd657c004c58480ea2f603ad4494753463c79b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 920c768523e422220862b04fa069fc8cbea8960a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677707"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable メソッド
-単一のグローバル変数を定義します。  
+1 つのグローバル変数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ HRESULT DefineGlobalVariable(
  [in]グローバル変数の属性。  
   
  `cSig`  
- [in]A`ULONG32`の文字のサイズを示す、`signature`バッファー。  
+ [in]A`ULONG32`の文字数、サイズを示す、`signature`バッファー。  
   
  `signature`  
  [in]グローバル変数シグネチャ。  
@@ -67,12 +67,12 @@ HRESULT DefineGlobalVariable(
  [in]パラメーター指定の 3 番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineLocalVariable メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)  
- [DefineGlobalVariable2 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineLocalVariable メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

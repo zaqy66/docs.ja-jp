@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム TreeView コントロールのすべてのノードを反復処理する'
+title: '方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 89a2c1411ab64b4a20ad291165cfa6d83511c4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6345ab5e5d4f4e480bb2724e7a1d795de2bef5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651852"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>方法 : Windows フォーム TreeView コントロールのすべてのノードを反復処理する
-Windows フォーム内の各ノードをチェックすると役立つ場合があります<xref:System.Windows.Forms.TreeView>ノードの値に対していくつか計算を実行するために管理します。 この操作は、ツリーの各コレクションの各ノードを反復処理する再帰プロシージャ (C# および C++ の場合は再帰メソッド) を使用して実行できます。  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理します。
+Windows フォーム内の各ノードをチェックすると役立つ場合があります<xref:System.Windows.Forms.TreeView>ノード値にいくつかの計算を実行するために制御します。 この操作は、ツリーの各コレクションの各ノードを反復処理する再帰プロシージャ (C# および C++ の場合は再帰メソッド) を使用して実行できます。  
   
- 各<xref:System.Windows.Forms.TreeNode>ツリー ビュー内のオブジェクトは、ツリー ビューの移動に使用できるプロパティ: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>、 <xref:System.Windows.Forms.TreeNode.LastNode%2A>、 <xref:System.Windows.Forms.TreeNode.NextNode%2A>、 <xref:System.Windows.Forms.TreeNode.PrevNode%2A>、および<xref:System.Windows.Forms.TreeNode.Parent%2A>です。 値、<xref:System.Windows.Forms.TreeNode.Parent%2A>プロパティの現在のノードの親ノードです。 現在のノードの子ノードは、いずれかを使用する必要がある場合で表示されます、<xref:System.Windows.Forms.TreeNode.Nodes%2A>プロパティです。 <xref:System.Windows.Forms.TreeView>コントロール自体が、<xref:System.Windows.Forms.TreeView.TopNode%2A>プロパティで、全体のツリー ビューのルート ノードです。  
+ 各<xref:System.Windows.Forms.TreeNode>ツリー ビュー内のオブジェクトがツリー ビュー内を移動する際のプロパティ: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>、 <xref:System.Windows.Forms.TreeNode.LastNode%2A>、 <xref:System.Windows.Forms.TreeNode.NextNode%2A>、 <xref:System.Windows.Forms.TreeNode.PrevNode%2A>、および<xref:System.Windows.Forms.TreeNode.Parent%2A>します。 値、<xref:System.Windows.Forms.TreeNode.Parent%2A>プロパティの現在のノードの親ノードです。 現在のノードの子ノードは、いずれかを使用する必要がある場合に表示されます、<xref:System.Windows.Forms.TreeNode.Nodes%2A>プロパティ。 <xref:System.Windows.Forms.TreeView>コントロール自体には、<xref:System.Windows.Forms.TreeView.TopNode%2A>プロパティで、全体のツリー ビューのルート ノードです。  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>TreeView コントロールのすべてのノードを反復処理するには  
   
@@ -123,6 +123,6 @@ Windows フォーム内の各ノードをチェックすると役立つ場合が
        }  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [TreeView コントロール](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [再帰プロシージャ](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+## <a name="see-also"></a>関連項目
+- [TreeView コントロール](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [再帰プロシージャ](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

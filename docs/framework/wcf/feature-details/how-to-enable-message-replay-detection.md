@@ -1,5 +1,5 @@
 ---
-title: '方法 : メッセージ リプレイ検出を有効にする'
+title: '方法: メッセージ リプレイ検出を有効にします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: df56d3f2bfe351c38ca2e64539de13e4cc556d2a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8a5f693b98d1437ccf0c8a373fcb11aa96ee6191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653581"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>方法 : メッセージ リプレイ検出を有効にする
+# <a name="how-to-enable-message-replay-detection"></a>方法: メッセージ リプレイ検出を有効にします。
 リプレイ攻撃は、攻撃者がメッセージのストリームを 2 つのパーティ間でコピーし、そのストリームを他の 1 つ以上のパーティにリプレイすることで発生します。 攻撃が止むまで、攻撃対象になったコンピューターはストリームを正当なメッセージとして処理しようとし、その結果、命令が重複するなど、望ましくない状況に陥ります。  
   
  メッセージ リプレイ検出の詳細については、次を参照してください。[メッセージ リプレイ検出](https://go.microsoft.com/fwlink/?LinkId=88536)します。  
@@ -26,7 +26,7 @@ ms.locfileid: "43862278"
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>コードを使用してクライアントでのリプレイ検出を制御するには  
   
-1.  <xref:System.ServiceModel.Channels.SecurityBindingElement> で使用する <xref:System.ServiceModel.Channels.CustomBinding> を作成します。 詳細については、次を参照してください。[方法: SecurityBindingElement 作成カスタム バインドを使用して、](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)します。 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> を使用して作成された <xref:System.ServiceModel.Channels.SecurityBindingElement> を使用します。  
+1.  <xref:System.ServiceModel.Channels.SecurityBindingElement> で使用する <xref:System.ServiceModel.Channels.CustomBinding> を作成します。 詳細については、「[方法 :SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)します。 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> を使用して作成された <xref:System.ServiceModel.Channels.SecurityBindingElement> を使用します。  
   
 2.  <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> プロパティを使用して <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> クラスへの参照を返し、次のプロパティを適切な値に設定します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "43862278"
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
-## <a name="scope-of-replay-message-security-only"></a>リプレイのスコープ : メッセージ セキュリティのみ  
+## <a name="scope-of-replay-message-security-only"></a>リプレイのスコープ:メッセージ セキュリティのみ  
  次の手順は、メッセージ セキュリティ モードにのみ適用されます。 トランスポート モードとメッセージ資格情報付きトランスポート モードでは、トランスポート機構がリプレイを検出します。  
   
 ## <a name="secure-conversation-notes"></a>セキュリティで保護されたメッセージ交換に関するメモ  
@@ -102,9 +102,9 @@ ms.locfileid: "43862278"
   
 -   <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- [セキュリティ保護されたメッセージ交換とセッション](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)  
- [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)  
- [方法 : SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- [セキュリティ保護されたメッセージ交換とセッション](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
+- [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

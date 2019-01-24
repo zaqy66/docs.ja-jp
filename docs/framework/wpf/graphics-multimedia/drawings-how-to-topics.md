@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670317"
 ---
 # <a name="drawings-how-to-topics"></a>描画に関する「方法」トピック
-このセクションのトピックを使用する方法について説明<xref:System.Windows.Media.Drawing>図形、画像、またはテキストを描画するオブジェクト。  
+このセクションのトピックを使用する方法を説明<xref:System.Windows.Media.Drawing>図形、画像、またはテキストを描画するオブジェクト。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [描画に GuidelineSet を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
@@ -29,8 +29,8 @@ ms.locfileid: "33556667"
   [VideoDrawing を使用してメディアを再生する](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
   [描画をイメージ ソースとして使用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Drawing>  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Drawing>
+- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)

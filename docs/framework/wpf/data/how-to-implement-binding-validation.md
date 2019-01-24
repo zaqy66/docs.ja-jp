@@ -1,19 +1,19 @@
 ---
-title: '方法 : バインディングの検証の実装'
+title: '方法: バインディングの検証の実装'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678357"
 ---
-# <a name="how-to-implement-binding-validation"></a>方法 : バインディングの検証の実装
+# <a name="how-to-implement-binding-validation"></a>方法: バインディングの検証の実装
 この例は、使用する方法を示します、<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>し、無効な値を入力したら、ユーザーに通知する視覚的なフィードバックを提供するスタイルのトリガーのカスタム検証規則に基づいています。  
   
 ## <a name="example"></a>例  
@@ -35,8 +35,8 @@ ms.locfileid: "43510453"
   
  コード例全体については、「[バインディングの検証のサンプル](https://go.microsoft.com/fwlink/?LinkID=159972)」をご覧ください。  
   
- カスタムを指定しない場合<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>検証エラーがある場合に、ユーザーに視覚的なフィードバックを提供する既定のエラー テンプレートが表示されます。 詳しくは、「[データ バインドの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」の「データの検証」をご覧ください。 さらに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、バインディング ソース プロパティの更新中にスローされる例外をキャッチするための、組み込みの検証規則を提供します。 詳細については、「<xref:System.Windows.Controls.ExceptionValidationRule>」を参照してください。  
+ カスタムを指定しない場合<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>検証エラーがある場合に、ユーザーに視覚的なフィードバックを提供する既定のエラー テンプレートが表示されます。 詳しくは、「[データ バインドの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」の「データの検証」をご覧ください。 さらに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、バインディング ソース プロパティの更新中にスローされる例外をキャッチするための、組み込みの検証規則を提供します。 詳細については、「 <xref:System.Windows.Controls.ExceptionValidationRule> 」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

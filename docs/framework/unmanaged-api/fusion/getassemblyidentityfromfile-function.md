@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6dfb0b404413351761d269c800be19e75acfb41f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: feb8e5c56ee6ea766cd5f1d10af42699777db453
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654890"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 関数
 ポインターを取得、 `IUnknown` 、指定したオブジェクト`IID`のアセンブリにある指定したファイル パス。  
@@ -48,13 +48,13 @@ HRESULT GetAssemblyIdentityFromFile (
  `ppIdentity`  
  [out]返されるインターフェイス ポインター。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IUnknown](/cpp/atl/iunknown)  
- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+- [IUnknown](/cpp/atl/iunknown)
+- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

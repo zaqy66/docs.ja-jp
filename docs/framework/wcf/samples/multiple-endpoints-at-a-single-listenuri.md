@@ -2,12 +2,12 @@
 title: 単一 ListenUri に対する複数のエンドポイント
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 45963bcf03a6734b85a1213c99facd9023711bf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbf636acf5e2cf4ef0f417b6b50a93d3e25c3ea6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643469"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>単一 ListenUri に対する複数のエンドポイント
 このサンプルでは、単一 `ListenUri` で複数のエンドポイントをホストするサービスを示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  

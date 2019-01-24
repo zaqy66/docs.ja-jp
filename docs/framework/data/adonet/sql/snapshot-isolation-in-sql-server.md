@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643053"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server でのスナップショット分離
 スナップショット分離により、OLTP アプリケーションのコンカレンシーが向上しています。  
@@ -141,7 +141,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  アプリケーションで競合が多数発生する場合、スナップショット分離は適切な選択肢ではない可能性があります。 ヒントの使用は、本当に必要な場合のみに制限する必要があります。 アプリケーションは、ロック ヒントに常に依存する操作にならないように設計されている必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET マネージ プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)      
- [トランザクションのロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
+## <a name="see-also"></a>関連項目
+- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [トランザクションのロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

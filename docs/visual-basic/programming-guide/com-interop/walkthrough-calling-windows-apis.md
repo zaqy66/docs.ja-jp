@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Windows API の呼び出し (Visual Basic)'
+title: 'チュートリアル: Windows Api の呼び出し (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657975"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>チュートリアル: Windows API の呼び出し (Visual Basic)
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>チュートリアル: Windows Api の呼び出し (Visual Basic)
 Windows Api は、Windows オペレーティング システムの一部であるダイナミック リンク ライブラリ (Dll) です。 それらを使用するには、独自の同等のプロシージャを記述するのにことは困難である場合は、タスクを実行します。 たとえば、という名前の関数は、Windows`FlashWindowEx`を可能にすること、アプリケーションのタイトル バーを薄いおよび濃い網掛けを切り替える。  
   
  Windows Api を使用して、コード内の利点は、数十個は既に書き込まれている便利な関数の使用を待機しているが含まれているため、開発時間を保存することができます。 欠点は、問題が生じた場合、および晙の処理が難しくなって Windows Api であることができます。  
@@ -77,7 +77,7 @@ Windows Api は、Windows オペレーティング システムの一部であ�
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  同等の追加`Const`ステートメントをクラスまたはモジュールがアプリケーションで利用できるこれらの定数を確認します。 例えば:  
+3.  同等の追加`Const`ステートメントをクラスまたはモジュールがアプリケーションで利用できるこれらの定数を確認します。 例:  
   
      [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
   
@@ -147,13 +147,12 @@ Windows Api は、Windows オペレーティング システムの一部であ�
   
 12. クリックして**Button2**します。 ファイルを移動できる場合は、「ファイルが正常に移動されました」メッセージが表示されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
- 
-  [マネージド コードでのプロトタイプの作成](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [コールバック メソッドとしてのデリゲートのマーシャ リング](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
+- [マネージド コードでのプロトタイプの作成](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [コールバック メソッドとしてのデリゲートのマーシャ リング](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする'
+title: '方法: Windows フォームの DataGridView コントロールでの並べ替えをカスタマイズします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
-ms.openlocfilehash: 34a92af246e1145e8d0d1d6874b2d64d7dee7846
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bfe70d01c00257aeddf74dfc676ee73d1a03971b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650799"
 ---
-# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>方法 : Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする
+# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>方法: Windows フォームの DataGridView コントロールでの並べ替えをカスタマイズします。
 <xref:System.Windows.Forms.DataGridView> コントロールは、自動並べ替え機能を提供しますが、ニーズに応じて、並べ替え操作をカスタマイズすることが必要な場合があります。 たとえば、プログラムによる並べ替え機能を使用して、代替のユーザー インターフェイス (UI) を作成することができます。 また、複数の列の並べ替えなど、並べ替え柔軟性を高めるために、<xref:System.Windows.Forms.DataGridView.SortCompare> イベントを処理したり、<xref:System.Windows.Forms.DataGridView.Sort%2A> メソッドの `Sort(IComparer)` のオーバーロードを呼び出したりすることができます。  
   
  次のコード例は、カスタムの並べ替えの 3 つの方法を示します。 詳細については、「[Windows フォーム DataGridView コントロール内の列の並べ替えモード](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)」を参照してください。  
@@ -44,10 +44,10 @@ ms.locfileid: "45964151"
   
 -   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこれらの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ コマンドラインからこれらの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.DataGridView>  
- [Windows フォームの DataGridView コントロールでのデータの並べ替え](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
- [Windows フォーム DataGridView コントロール内の列の並べ替えモード](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
- [方法: Windows フォーム DataGridView コントロール内の列の並べ替えモードを設定する](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.DataGridView>
+- [Windows フォームの DataGridView コントロールでのデータの並べ替え](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロール内の列の並べ替えモード](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロール内の列の並べ替えモードを設定します。](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)

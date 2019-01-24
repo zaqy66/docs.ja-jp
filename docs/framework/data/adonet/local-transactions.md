@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: d8fb10d1ad9218d8113c95a4c67dbb32cf87beb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656181"
 ---
 # <a name="local-transactions"></a>ローカル トランザクション
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] でのトランザクションは、複数のタスクをバインドして単一の作業単位として実行する場合に使用します。 たとえば、あるアプリケーションが 2 つのタスクを実行するものとします。 まず、注文情報に従ってテーブルが更新されます。 次に、在庫情報を含むテーブルが更新され、注文品の金額が借方記入されます。 いずれかのタスクが失敗すると両方の更新がロールバックされます。  
@@ -47,8 +47,8 @@ ms.locfileid: "53131366"
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [分散トランザクション](../../../../docs/framework/data/adonet/distributed-transactions.md)  
- [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [分散トランザクション](../../../../docs/framework/data/adonet/distributed-transactions.md)
+- [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665137"
 ---
 # <a name="names-of-namespaces"></a>名前空間の名前
 として他の名前付けのガイドラインと名前空間の名前を付けるときの目標を作成するための十分なわかりやすくするために名前空間のコンテンツがある可能性がありますをすぐにいるフレームワークを使用するプログラマにとって。 次のテンプレートは、名前空間の名前付けに関する一般的な規則を指定します。  
@@ -36,7 +36,7 @@ ms.locfileid: "53143442"
   
  **✓ CONSIDER** 適切な場所に複数形の名前空間の名前を使用します。  
   
- たとえば、使用して`System.Collections`の代わりに`System.Collection`します。 ブランド名や略語は、この規則の例外をただしです。 たとえば、使用して`System.IO`の代わりに`System.IOs`します。  
+ たとえば、`System.Collection` の代わりに `System.Collections` を使用します。 ブランド名や略語は、この規則の例外をただしです。 たとえば、`System.IOs` の代わりに `System.IO` を使用します。  
   
  **X DO NOT** その名前空間、名前空間と型に同じ名前を使用します。  
   
@@ -86,5 +86,5 @@ ms.locfileid: "53143442"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

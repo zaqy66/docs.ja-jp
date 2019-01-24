@@ -1,18 +1,18 @@
 ---
-title: '方法 : IIS で WCF サービスをホストする'
+title: '方法: IIS で WCF サービスをホストします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651124"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>方法 : IIS で WCF サービスをホストする
+# <a name="how-to-host-a-wcf-service-in-iis"></a>方法: IIS で WCF サービスをホストします。
 このトピックでは、インターネット インフォメーション サービス (IIS) でホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 このトピックは、IIS に関する知識があり、IIS 管理ツールを使用して IIS アプリケーションを作成および管理する方法を理解していることを前提としています。 IIS の詳細については、次を参照してください。[インターネット インフォメーション サービス](https://go.microsoft.com/fwlink/?LinkId=132449)します。 IIS 環境での実行がプロセスのリサイクルなどの IIS 機能を最大限に活用する WCF サービスはアイドル シャット ダウン、処理状況の監視、およびメッセージ ベースのアクティブ化します。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 IIS ホストは、HTTP トランスポートでのみ使用できます。  
   
  方法の詳細についての WCF と[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]操作は、「 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。 セキュリティの構成の詳細については、次を参照してください。[セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)します。  
@@ -75,9 +75,9 @@ ms.locfileid: "43510756"
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>関連項目  
- [インターネット インフォメーション サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)  
- [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+- [インターネット インフォメーション サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)
+- [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

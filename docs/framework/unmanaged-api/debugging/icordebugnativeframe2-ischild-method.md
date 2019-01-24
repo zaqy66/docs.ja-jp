@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9d613e810724b8e133b490c17a37ecc6565f09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b330f628256f9d8b21bfb483500c878b7b90d2b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652054"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild メソッド
 現在のフレームが子フレームであるかどうかを判断します。  
@@ -35,32 +35,32 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 #### <a name="parameters"></a>パラメーター  
  `pIsChild`  
- [out]現在のフレームは子フレームであるかどうかを指定するブール値。  
+ [out]現在のフレームが子フレームであるかどうかを指定するブール値。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|子の状態が正常に返されます。|  
-|E_FAIL|子の状態は返されませんでした。|  
+|S_OK|子の状態が正常に返されました。|  
+|E_FAIL|子の状態が返されませんでした。|  
 |E_INVALIDARG|`pIsChild` が null です。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
- `IsChild`メソッドを返します。`true`メソッドを呼び出すフレーム オブジェクト別のフレームの子である場合。 大文字と小文字の場合を使用して、 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)フレームがその親であるかどうかを確認します。  
+## <a name="remarks"></a>Remarks  
+ `IsChild`メソッドを返します。`true`フレーム オブジェクトを、メソッドを呼び出すことが別のフレームの子である場合。 大文字と小文字の場合を使用して、 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)フレームを親となっているかどうかを確認する方法。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugNativeFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugNativeFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

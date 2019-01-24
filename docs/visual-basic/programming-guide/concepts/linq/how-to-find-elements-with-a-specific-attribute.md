@@ -2,12 +2,12 @@
 title: '方法: 特定の属性 (XPATH-LINQ to XML) を持つ要素を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 9a50eb792a074d245651231678bfea72f124f344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0efc0d6cebce760d90213d5149ca729a7b04663e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654426"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>方法: 特定の属性 (XPATH-LINQ to XML) を持つ要素を検索 (Visual Basic)
 特定の属性を持つすべての要素を検索しなければならない場合があります。 属性の内容は問わず、 属性の存在に基づいて選択を行うような場合です。  
@@ -59,5 +59,5 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML を XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

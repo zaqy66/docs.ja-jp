@@ -2,17 +2,17 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: a376f1eaa7c8790cf2174335749ed3001b403967
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 199a5d820a80565ccdfa2cb11fe749d63bd65087
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644261"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義する構成セクションを表します。 実行時に既定のエンドポイントを作成するときに、Windows Communication Foundation (WCF) が構成済みのマッピングではされ、特定に使用するバインディングをベース アドレスを決定します。  
   
-[**\<system.serviceModel >**](system-servicemodel.md)  
+[**\<system.serviceModel>**](system-servicemodel.md)  
 &nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +35,7 @@ ms.locfileid: "54147305"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<フィルター >](filters-of-routing.md)|トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングが含まれています。|  
+|[\<filters>](filters-of-routing.md)|トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -59,6 +59,6 @@ ms.locfileid: "54147305"
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

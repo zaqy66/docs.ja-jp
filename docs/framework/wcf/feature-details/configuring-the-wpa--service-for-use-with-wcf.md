@@ -2,12 +2,12 @@
 title: Windows Communication Foundation で使用するための Windows プロセス アクティブ化サービスを設定する
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 388907f847d40ad5634a27ac6b350638ddc5a45e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e590302c2bf82db2b584fcc21f94d078f7c07712
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643339"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation で使用するための Windows プロセス アクティブ化サービスを設定する
 このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明で[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP では通信しないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。 以降の各セクションで、この構成に関する手順について概説します。  
@@ -89,13 +89,13 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- このエラーが表示された場合は、非 HTTP アクティブ化の WAS が適切にインストールおよび構成されていることを確認してください。 詳細については、次を参照してください。[方法。インストールし、構成の WCF アクティブ化コンポーネント](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)します。  
+ このエラーが表示された場合は、非 HTTP アクティブ化の WAS が適切にインストールおよび構成されていることを確認してください。 詳細については、「[方法 :インストールし、構成の WCF アクティブ化コンポーネント](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)します。  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>非 HTTP のアクティブ化で WAS を使用する WCF サービスの構築  
  一度インストールして WAS を構成する手順を実行すると (を参照してください[方法。WCF アクティブ化コンポーネントの構成のインストールと](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md))、ライセンス認証は IIS でホストされているサービス構成のように WAS を使用するためのサービスを構成します。  
   
  WAS アクティブ化される WCF サービスの構築に関する詳細な手順については、次を参照してください。[方法。WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows プロセス アクティブ化サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+- [Windows プロセス アクティブ化サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

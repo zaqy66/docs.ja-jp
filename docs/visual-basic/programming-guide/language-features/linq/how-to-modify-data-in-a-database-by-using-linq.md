@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bcc56e1f7a36c705aec6750b76a4ad5d99fe7101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658417"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用して、データベース内のデータを変更します。
 統合言語クエリ (LINQ) クエリを行う簡単にデータベース情報にアクセスして、データベース内の値を変更します。  
@@ -160,9 +160,9 @@ ms.locfileid: "54415209"
   
 7.  F5 キーを押してプロジェクトを実行します。 クリックして**追加**新しいレコードを追加します。 クリックして**Update**新しいレコードを変更します。 クリックして**削除**新しいレコードを削除します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [クエリ](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>関連項目
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

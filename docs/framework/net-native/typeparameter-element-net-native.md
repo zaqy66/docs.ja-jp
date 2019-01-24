@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cc2faf9768b60d49f573720df8763813000a6b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79e7a61f66a29ad4eeca1c6413b87d4b9ee9632e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644340"
 ---
 # <a name="lttypeparametergt-element-net-native"></a>&lt;TypeParameter&gt; 要素 (.NET ネイティブ)
 メソッドに渡される型引数により表される型にポリシーを適用します。  
@@ -70,7 +70,7 @@ ms.locfileid: "33393869"
 |-------------|-----------------|  
 |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `<TypeParameter>` 要素は [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md) 要素に似ていますが、<xref:System.Type> 型のパラメーターにのみ適用できる点が異なります。 これは、実行時に `Name` 属性により指定される型引数で表されるすべての型にポリシーを適用します。  
   
  たとえば、NewtonSoft の JSON シリアライザーには静的 `JsonConvert.DeserializeObject(String value, Type type)` メソッドが含まれています。 次のリフレクション ディレクティブは、  
@@ -94,8 +94,8 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  リフレクション ディレクティブによって、`StockQuote` 型のメタデータが実行時に NewtonSoft の JSON シリアライザーで使用可能になります。  
   
-## <a name="see-also"></a>関連項目  
- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>関連項目
+- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)

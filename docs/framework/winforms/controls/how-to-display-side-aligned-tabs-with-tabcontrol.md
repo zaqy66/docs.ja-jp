@@ -1,5 +1,5 @@
 ---
-title: '方法 : TabControl を使用して側面に位置を合わせて表示する'
+title: '方法: TabControl 側で固定されたタブを表示します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: e145547ba4c8648a765e9507b7f35e50cb15fd82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b2d691cb41a48b51bb48291e321d763a9ff7e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650578"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>方法 : TabControl を使用して側面に位置を合わせて表示する
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>方法: TabControl 側で固定されたタブを表示します。
 <xref:System.Windows.Forms.TabControl> の <xref:System.Windows.Forms.TabControl.Alignment%2A> プロパティは、水平方向 (コントロールの上部または下部) ではなく、垂直方向 (コントロールの左端または右端) でのタブの表示をサポートします。 <xref:System.Windows.Forms.TabPage> オブジェクトの <xref:System.Windows.Forms.TabPage.Text%2A> プロパティは、視覚スタイルを有効にしたときにタブが表示されないため、既定では、この垂直方向の表示はユーザーの操作性が低下します。 また、タブ内のテキストの方向を制御する直接的な方法がありません。この操作性を向上させるために、<xref:System.Windows.Forms.TabControl> でオーナー描画を使用できます。  
   
  次の手順では、「オーナー描画」機能を使用して、タブのテキストが左から右に実行されているときに、右揃えのタブを表示する方法を示します。  
@@ -40,5 +40,5 @@ ms.locfileid: "33532462"
      [!code-csharp[TabControl.RightAlignedTabs#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
      [!code-vb[TabControl.RightAlignedTabs#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [TabControl コントロール](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [TabControl コントロール](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 490a462859a916d21c816ff96c47d2deeb9312ee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655050"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>その他のデータ型 (Visual Basic)
 Visual Basic ではない数字や文字を対象とするいくつかのデータ型が用意されています。 代わりに、それらを扱う特化されたデータなど、はい/いいえ値、日付/時刻値、およびオブジェクトのアドレス。  
@@ -30,10 +30,10 @@ Visual Basic ではない数字や文字を対象とするいくつかのデー�
   
  利点、`Object`データ型は、任意のデータ型のデータの格納に使用できます。 デメリットは、実行時間がかかると、アプリケーションの実行速度が遅く、余分な処理が発生することです。 使用する場合、`Object`発生する値の型の変数、*ボックス化*と*ボックス化解除*します。 に参照型を使用する場合に発生する*遅延バインディング*します。  
   
-## <a name="see-also"></a>関連項目  
- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [数値のデータ型](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [文字データ型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [事前バインディングと遅延バインディング](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+## <a name="see-also"></a>関連項目
+- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [数値のデータ型](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
+- [文字データ型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [事前バインディングと遅延バインディング](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

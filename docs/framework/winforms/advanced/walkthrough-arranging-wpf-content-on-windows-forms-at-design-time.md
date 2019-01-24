@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの配置'
+title: 'チュートリアル: デザイン時に Windows フォームでの WPF コンテンツの配置'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 66fb814bbf0a40ccaa9339eb24dcc49332861deb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647667"
 ---
-# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの配置
+# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームでの WPF コンテンツの配置
 このチュートリアルでは、固定やスナップ線などの Windows フォームのレイアウト機能を使用して、Windows Presentation Foundation (WPF) コントロールを配置する方法を説明します。
 
  このチュートリアルでは次のタスクを実行します。
@@ -54,9 +54,9 @@ ms.locfileid: "48846475"
   
 #### <a name="to-create-wpf-controls"></a>WPF コントロールを作成するには  
   
-1.  新しい WPF <xref:System.Windows.Controls.UserControl> をプロジェクトに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、次を参照してください。[チュートリアル: 新しい WPF コンテンツの作成には、デザイン時に Windows フォーム](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
+1.  新しい WPF <xref:System.Windows.Controls.UserControl> をプロジェクトに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、「[チュートリアル:デザイン時に Windows フォームで新しい WPF コンテンツを作成する](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
   
-2.  デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、次を参照してください。[方法: 選択し、デザイン サーフェイス上の要素の移動](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)します。  
+2.  デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :選択し、デザイン サーフェイス上の要素の移動](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)します。  
   
 3.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティ`200`します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48846475"
      両方の <xref:System.Windows.Forms.Integration.ElementHost> コントロールが、新しいレイアウトに収まるようにサイズ変更されました。  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>WPF コントロールを配置するスナップ線を使用する  
- スナップ線により、フォームのコントロールの配置を簡単に調整できます。 スナップ線を使用して、WPF コントロールも配置することができます。 詳細については、次を参照してください。[チュートリアル: Arranging Controls on Windows フォームを使用してスナップ](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
+ スナップ線により、フォームのコントロールの配置を簡単に調整できます。 スナップ線を使用して、WPF コントロールも配置することができます。 詳細については、「[チュートリアル:フォームのスナップ線を使用して Windows 上のコントロール](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>WPF コントロールを配置するスナップ線を使用するには  
   
@@ -145,14 +145,14 @@ ms.locfileid: "48846475"
   
      3 つすべての <xref:System.Windows.Forms.Integration.ElementHost> コントロールのサイズを適切に変更します。  
   
-     詳細については、次を参照してください。[方法: アンカーと TableLayoutPanel コントロールで子コントロールをドッキング](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)します。  
+     詳細については、「[方法 :固定およびドッキング TableLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [方法: デザイン時にフォームの端に合わせてコントロールを配置する](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [方法: デザイン時にコントロールをフォームの端を揃える](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)

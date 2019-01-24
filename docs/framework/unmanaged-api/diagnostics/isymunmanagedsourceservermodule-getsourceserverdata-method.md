@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afc041896615e906ac49eed9a7be139dff217463
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71251af116fc8d634b822e1daa49d90e91fec6f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648824"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData メソッド
-モジュールのソース サーバーのデータを返します。 使用して、呼び出し元がリソースを解放する必要があります`CoTaskMemFree`です。  
+モジュールのソース サーバーのデータを返します。 使用して、呼び出し元がリソースを解放する必要があります`CoTaskMemFree`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +37,16 @@ HRESULT GetSourceServerData(
   
 #### <a name="parameters"></a>パラメーター  
  `pDataByteCount`  
- [out]ポインター、`ULONG32`元サーバーのデータのバイト単位のサイズを受け取る。  
+ [out]ポインター、`ULONG32`ソース サーバーのデータのバイト単位のサイズを受け取る。  
   
  `ppData`  
- [out]返されたへのポインター`pDataByteCount`値。  
+ [out]返されたポインター`pDataByteCount`値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedSourceServerModule インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedSourceServerModule インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

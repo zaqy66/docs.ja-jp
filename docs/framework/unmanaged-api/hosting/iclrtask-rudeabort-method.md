@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a99bda7a6d21fea159c8f616f2db7d12b1f27579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e2145f321d2850468eaa73cc35a9dbd19af0480
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649479"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort メソッド
-共通言語ランタイム (CLR) を現在のタスクを中止するように指示[ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンス直ちにおよび無条件にします。  
+共通言語ランタイム (CLR) が現在によって表されるタスクを中止するように指示します[ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)直ちに無条件でインスタンスします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +38,26 @@ HRESULT RudeAbort ();
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`RudeAbort` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|CLR が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
-|HOST_E_NOT_OWNER|呼び出し元は、ロックを所有していません。|  
+|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>コメント  
- ホストは`RudeAbort`タスクをすぐに中止します。 ファイナライザーおよび例外処理ルーチンは、実行される保証はありません。  
+## <a name="remarks"></a>Remarks  
+ ホストは`RudeAbort`をすぐにタスクを中止します。 ファイナライザーおよび例外処理ルーチンが実行される保証はありません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

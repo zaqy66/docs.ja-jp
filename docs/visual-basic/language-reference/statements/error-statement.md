@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e819ba043dec2d5e8e792fdf57dc0c273a24e881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654816"
 ---
 # <a name="error-statement"></a>Error ステートメント
 エラーの発生をシミュレートします。  
@@ -57,15 +57,15 @@ On Error Resume Next   ' Defer error handling.
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a>要件  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>必要条件  
+ **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
- <xref:Microsoft.VisualBasic.Information.Err%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [Resume ステートメント](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [エラー メッセージ](../../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
+- <xref:Microsoft.VisualBasic.Information.Err%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
+- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Resume ステートメント](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [エラー メッセージ](../../../visual-basic/language-reference/error-messages/index.md)

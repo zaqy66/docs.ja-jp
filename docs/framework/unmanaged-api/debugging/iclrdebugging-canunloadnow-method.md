@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 557b53df3669bb0567e4d1261124ac725c796c70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8fd0a7322437cb89fe62729f86f5ce8005ed3b5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646751"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow メソッド
-ライブラリで提供されているかどうかを判断、 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)インターフェイスが使用されているまたは読み込むことができます。  
+ライブラリで提供されているかどうかを決定する、 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)インターフェイスが使用されている、またはアンロードできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,23 +43,23 @@ HRESULT CanUnloadNow(HMODULE hModule);
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|によって参照されるモジュール`hmodule`アンロードできます。|  
-|S_FALSE|によって参照されるモジュール`hmodule`はまだ使用されています。|  
+|S_FALSE|によって参照されるモジュール`hmodule`使用されています。|  
 |COR_E_NOT_CLR|指定されたモジュールが CLR モジュールではありません。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
- このメソッドはすべてかどうかを確認のインスタンス`ICorDebug*`インターフェイスが解放されているし、スレッドが現在内に存在する呼び出し、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドはすべてかどうかをチェックのインスタンス`ICorDebug*`インターフェイスがリリースされた、スレッドがない現在の呼び出し内で、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

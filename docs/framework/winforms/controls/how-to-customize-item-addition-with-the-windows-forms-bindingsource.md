@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム BindingSource を使用した項目の追加をカスタマイズする'
+title: '方法: Windows フォーム BindingSource を使用した項目の追加をカスタマイズします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - BindingSource component [Windows Forms], examples
 ms.assetid: 1aae11fc-6fb2-4cb9-b3d0-e0638fe77ef0
-ms.openlocfilehash: f8956ceb8da2aa14aea8b7e62b9d60ab656a3891
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d163eb04112ce25ca722e461076b384effd7ceb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653958"
 ---
-# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>方法 : Windows フォーム BindingSource を使用した項目の追加をカスタマイズする
+# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>方法: Windows フォーム BindingSource を使用した項目の追加をカスタマイズします。
 <xref:System.Windows.Forms.BindingSource> コンポーネントを使用して Windows フォーム コントロールをデータ ソースにバインドする場合、新しい項目の作成のカスタマイズが必要な場合があります。 <xref:System.Windows.Forms.BindingSource> コンポーネントでは、通常は、バインドされたコントロールで新しい項目の作成が必要になる際に発生する <xref:System.Windows.Forms.BindingSource.AddingNew> イベントが提供されるため、これが簡単になります。 イベント ハンドラーは、カスタム動作が必要なものをすべて提供できます (Web サービスでのメソッドの呼び出し、クラス ファクトリからの新しいオブジェクトの取得など)。  
   
 > [!NOTE]
@@ -36,11 +36,11 @@ ms.locfileid: "43529429"
   
 -   System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- Visual Basic または Visual c# のコマンドラインからこの例の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ Visual Basic または Visual c# のコマンドラインからこの例の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [方法: Windows フォーム コントロールを型にバインドする](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [方法: Windows フォーム コントロールを型にバインドします。](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

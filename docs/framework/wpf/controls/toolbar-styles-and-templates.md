@@ -9,28 +9,28 @@ helpviewer_keywords:
 - ToolBar [WPF], styles and templates
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-ms.openlocfilehash: 593968d0f9107ac608978d33032e6dd1c6c61262
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 022581c6ef154874e563513a719fc8590a13b30a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655687"
 ---
 # <a name="toolbar-styles-and-templates"></a>ToolBar のスタイルとテンプレート
-このトピックは、のスタイルとテンプレートについて説明します、<xref:System.Windows.Controls.ToolBar>コントロール。 既定値を変更することができます<xref:System.Windows.Controls.ControlTemplate>コントロールの外観を一意にします。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.ToolBar>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
-## <a name="toolbar-parts"></a>ツールバーのパーツ  
- 次の表に、名前付きのパーツの<xref:System.Windows.Controls.ToolBar>コントロール。  
+## <a name="toolbar-parts"></a>ツールバーの部分  
+ 次の表に、名前付きパーツ、<xref:System.Windows.Controls.ToolBar>コントロール。  
   
 |パーツ|型|説明|  
 |-|-|-|  
-|PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|上のコントロールを格納しているオブジェクト、<xref:System.Windows.Controls.ToolBar>です。|  
-|PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|オーバーフロー領域内にあるコントロールを格納しているオブジェクト、<xref:System.Windows.Controls.ToolBar>です。|  
+|PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|コントロールを格納しているオブジェクト、<xref:System.Windows.Controls.ToolBar>します。|  
+|PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|オーバーフロー領域内にあるコントロールを格納しているオブジェクト、<xref:System.Windows.Controls.ToolBar>します。|  
   
- 作成するときに、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ToolBar>、テンプレートを含めることがあります、<xref:System.Windows.Controls.ItemsPresenter>内で、<xref:System.Windows.Controls.ScrollViewer>です。 (、<xref:System.Windows.Controls.ItemsPresenter>内の各項目を表示、 <xref:System.Windows.Controls.ToolBar>;<xref:System.Windows.Controls.ScrollViewer>コントロール内でスクロールできるように) します。  場合、<xref:System.Windows.Controls.ItemsPresenter>の直接の子ではない、<xref:System.Windows.Controls.ScrollViewer>を付ける必要があります、<xref:System.Windows.Controls.ItemsPresenter>名、`ItemsPresenter`です。  
+ 作成するときに、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ToolBar>、テンプレートが含まれます、<xref:System.Windows.Controls.ItemsPresenter>内、 <xref:System.Windows.Controls.ScrollViewer>。 (、<xref:System.Windows.Controls.ItemsPresenter>内の各項目が表示されます、 <xref:System.Windows.Controls.ToolBar>、<xref:System.Windows.Controls.ScrollViewer>コントロール内でスクロールできます)。  場合、<xref:System.Windows.Controls.ItemsPresenter>の直接の子ではない、<xref:System.Windows.Controls.ScrollViewer>を付ける必要があります、<xref:System.Windows.Controls.ItemsPresenter>名、`ItemsPresenter`します。  
   
 ## <a name="toolbar-states"></a>ツールバーの状態  
- 次の表に、用ビジュアル状態、<xref:System.Windows.Controls.ToolBar>コントロール。  
+ 次の表のビジュアルの状態、<xref:System.Windows.Controls.ToolBar>コントロール。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
@@ -38,7 +38,7 @@ ms.locfileid: "34457735"
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|  
   
-## <a name="toolbar-controltemplate-example"></a>ツールバー ControlTemplate の例  
+## <a name="toolbar-controltemplate-example"></a>ツールバーの ControlTemplate の例  
  次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ToolBar>コントロール。  
   
  [!code-xaml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
@@ -49,10 +49,10 @@ ms.locfileid: "34457735"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -2,12 +2,12 @@
 title: '&lt;webHttpBinding&gt; の &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 70145678048b3e7843d9d458f80d3d149544447a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 657de92129d27e70834cb401cde42d24b633f7ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677018"
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; の &lt;transport&gt;
 HTTP 要求を受信するように構成されたサービス エンドポイントのトランスポート レベルのセキュリティ設定を定義します。  
@@ -84,14 +84,14 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|セキュリティ機能を表す、 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [WCF Web HTTP プログラミング モデル](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [WCF Web HTTP プログラミング モデル](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

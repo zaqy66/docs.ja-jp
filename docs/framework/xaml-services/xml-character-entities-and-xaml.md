@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661350"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 文字エンティティと XAML
 XAML は、特殊文字に、XML で定義される文字エンティティを使用します。 ここでは、いくつかの特定の文字エンティティ、および XAML における他の XML の概念に関する一般的な考慮事項について説明します。  
@@ -62,8 +62,8 @@ XAML は、特殊文字に、XML で定義される文字エンティティを�
 ## <a name="xml-processing-instructions"></a>XML 処理命令  
  XAML では、XML 仕様に従って XML 処理命令が処理されます。つまり、命令は必ず素通しされます。 .NET Framework XAML サービスで処理する XAML では、ある処理命令は使用しません。 XAML を使用する他の既存のフレームワークでも、XAML の処理命令は使用されません。  
   
-## <a name="see-also"></a>関連項目  
- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [マークアップ拡張機能と WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XamlName の文法](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [空白 XAML での処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>関連項目
+- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [マークアップ拡張機能と WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName の文法](../../../docs/framework/xaml-services/xamlname-grammar.md)
+- [空白 XAML での処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

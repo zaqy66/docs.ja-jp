@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 7588b2b4592a5298a69eb4adfbc06edb6913ef76
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b13d1e3e210964331a710512876bd1f8503069e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648077"
 ---
 # <a name="performing-catalog-operations"></a>カタログ操作の実行
 データベースまたは CREATE TABLE または CREATE PROCEDURE ステートメントなどのカタログを変更するコマンドを実行するには、作成、**コマンド**オブジェクト、適切な SQL ステートメントを使用して、**接続**オブジェクト。 コマンドを実行、 **ExecuteNonQuery**のメソッド、**コマンド**オブジェクト。  
@@ -45,7 +45,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [コマンドを使用したデータ変更](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [コマンドを使用したデータ変更](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

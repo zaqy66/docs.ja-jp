@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する'
+title: '方法: 保存、読み込みを追加し、[キャンセル] ボタンを Windows フォーム BindingNavigator コントロール'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 97be77b6591e4b7fa3db8176222dcb1feb3481bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671110"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法 : Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法: 保存、読み込みを追加し、[キャンセル] ボタンを Windows フォーム BindingNavigator コントロール
 <xref:System.Windows.Forms.BindingNavigator>コントロールが特別な用途<xref:System.Windows.Forms.ToolStrip>移動し、フォーム上のデータにバインドされているコントロールを操作することが想定されているコントロール。  
   
  ある、<xref:System.Windows.Forms.ToolStrip>コントロール、<xref:System.Windows.Forms.BindingNavigator>コンポーネントは、ユーザーの追加のまたは別のコマンドを含めるに簡単に変更できます。  
@@ -109,9 +109,9 @@ ms.locfileid: "45972690"
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>メソッドのスコープは、データの行にします。 次のレコードに移動する前に個々 のレコードを表示中に加えたあらゆる変更を保存します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.ToolStrip>  
- [BindingNavigator コントロール](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [BindingSource コンポーネントの概要](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.ToolStrip>
+- [BindingNavigator コントロール](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [BindingSource コンポーネントの概要](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

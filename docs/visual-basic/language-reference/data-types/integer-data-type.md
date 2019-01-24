@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 8c349104ed566e9a663afe01da3838f0167dc74e
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 2eb1afb1400b8770c4c1ddb0ec90bb44979e702f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662804"
 ---
 # <a name="integer-data-type-visual-basic"></a>`Integer` データ型 (Visual Basic)
 -2,147,483,648 から 2,147,483,647 までの符号付き 32 ビット (4 バイト) の整数を保持します。  
@@ -51,7 +51,7 @@ Visual Basic 2017 から始めて、使用することできますも、アン�
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -95,10 +95,10 @@ k = 5.5
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Int32?displayProperty=nameWithType>   
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int32?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

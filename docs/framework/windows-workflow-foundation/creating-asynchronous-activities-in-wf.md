@@ -2,12 +2,12 @@
 title: WF 内での非同期アクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650929"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>WF 内での非同期アクティビティの作成
 <xref:System.Activities.AsyncCodeActivity> は使用する基本クラスをアクティビティ作成者に提供します。その結果、派生アクティビティが非同期実行ロジックを実装できるようになります。 これは、ワークフローのスケジューラ スレッドを保持したり、並行して実行される可能性があるすべてのアクティビティをブロックしたりすることなく、非同期作業を実行する必要があるカスタム アクティビティに役立ちます。 ここでは、<xref:System.Activities.AsyncCodeActivity> を使用してカスタムの非同期アクティビティを作成する方法の概要を説明します。  
@@ -44,9 +44,9 @@ ms.locfileid: "48266560"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>AsyncCodeActivity を使用した、アクションまたは子アクティビティのスケジュール設定  
- <xref:System.Activities.AsyncCodeActivity> 派生カスタム アクティビティはワークフローのスレッドに関する作業を非同期に実行するメソッドを提供しますが、子アクティビティやアクションをスケジュールする機能はありません。 ただし、非同期動作は、コンポジションを介して子アクティビティのスケジュール設定と組み合わせることができます。 非同期アクティビティを作成してから、<xref:System.Activities.Activity> または <xref:System.Activities.NativeActivity> の派生アクティビティと共に構成すると、子アクティビティまたはアクションの非同期動作とスケジュール機能を提供できます。 たとえば、アクティビティを <xref:System.Activities.Activity> から派生するように作成し、その実装時に <xref:System.Activities.Statements.Sequence> に非同期アクティビティと共にアクティビティのロジックを実装する他のアクティビティを含めることができます。 使用してアクティビティの作成の例について<xref:System.Activities.Activity>と<xref:System.Activities.NativeActivity>を参照してください[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)と[アクティビティ作成オプション](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)します。  
+ <xref:System.Activities.AsyncCodeActivity> 派生カスタム アクティビティはワークフローのスレッドに関する作業を非同期に実行するメソッドを提供しますが、子アクティビティやアクションをスケジュールする機能はありません。 ただし、非同期動作は、コンポジションを介して子アクティビティのスケジュール設定と組み合わせることができます。 非同期アクティビティを作成してから、<xref:System.Activities.Activity> または <xref:System.Activities.NativeActivity> の派生アクティビティと共に構成すると、子アクティビティまたはアクションの非同期動作とスケジュール機能を提供できます。 たとえば、アクティビティを <xref:System.Activities.Activity> から派生するように作成し、その実装時に <xref:System.Activities.Statements.Sequence> に非同期アクティビティと共にアクティビティのロジックを実装する他のアクティビティを含めることができます。 使用してアクティビティの作成の例について<xref:System.Activities.Activity>と<xref:System.Activities.NativeActivity>を参照してください[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)と[アクティビティ作成オプション](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

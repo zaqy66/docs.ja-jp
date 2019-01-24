@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e18d64bdc67bfa5dce01c9125ee2e8585ab7db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671955"
 ---
 # <a name="method-etw-events"></a>メソッド ETW イベント
 <a name="top"></a> これらのイベントは、メソッド固有の情報を収集します。 これらのイベントのペイロードは、シンボルの解決に必要です。 さらに、これらのイベントは、メソッドが呼び出された回数などの有用な情報を提供します。  
@@ -60,7 +60,7 @@ ms.locfileid: "33398106"
 |MethodStartAddress|win:UInt64|メソッドの開始アドレス。|  
 |MethodSize|win:UInt32|メソッドのサイズ。|  
 |MethodToken|win:UInt32|動的メソッドおよび JIT ヘルパーの場合は 0。|  
-|MethodFlags|win:UInt32|0x1: 動的メソッド。<br /><br /> 0x2: ジェネリック メソッド。<br /><br /> 0x4: JIT コンパイル済みコード メソッド (それ以外の場合は NGEN ネイティブ イメージ コード)。<br /><br /> 0x8: ヘルパー メソッド。|  
+|MethodFlags|win:UInt32|0x1:動的メソッド。<br /><br /> 0x2:ジェネリック メソッド。<br /><br /> 0x4:コードの JIT コンパイルされたメソッド (それ以外の場合の NGEN ネイティブ イメージ コード)。<br /><br /> 0x8:ヘルパー メソッドです。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
  [ページのトップへ](#top)  
@@ -123,7 +123,7 @@ ms.locfileid: "33398106"
 |MethodStartAddress|win:UInt64|開始アドレス。|  
 |MethodSize|win:UInt32|メソッドの長さ。|  
 |MethodToken|win:UInt32|動的メソッドおよび JIT ヘルパーの場合は 0。|  
-|MethodFlags|win:UInt32|0x1: 動的メソッド。<br /><br /> 0x2: ジェネリック メソッド。<br /><br /> 0x4: JIT コンパイル済みメソッド (それ以外の場合は NGen.exe により生成)<br /><br /> 0x8: ヘルパー メソッド。|  
+|MethodFlags|win:UInt32|0x1:動的メソッド。<br /><br /> 0x2:ジェネリック メソッド。<br /><br /> 0x4:(それ以外の場合、NGen.exe によって生成された) メソッドを JIT コンパイル<br /><br /> 0x8:ヘルパー メソッドです。|  
 |MethodNameSpace|win:UnicodeString|メソッドに関連付けられた完全な名前空間名。|  
 |MethodName|win:UnicodeString|メソッドに関連付けられた完全クラス名。|  
 |MethodSignature|win:UnicodeString|メソッドのシグネチャ (型名のコンマ区切りリスト)。|  
@@ -161,5 +161,5 @@ ms.locfileid: "33398106"
 |MethodSignature|win:UnicodeString|メソッドのシグネチャ (型名のコンマ区切りリスト)。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

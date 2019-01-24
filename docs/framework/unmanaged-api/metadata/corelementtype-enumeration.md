@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2520c37b1969e5e98f02772857f96195b211b549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674162"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 共通言語ランタイムを指定します<xref:System.Type>、型修飾子、またはメタデータの型シグネチャの種類に関する情報。  
@@ -126,24 +126,24 @@ typedef enum CorElementType {
 |型修飾子|形式|  
 |-------------------|------------|  
 |`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR < を`CorElementType`値 >|  
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF < を`CorElementType`値 >|  
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF <a `CorElementType` value>|  
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE <、`mdTypeDef`メタデータ トークン >|  
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS <、`mdTypeDef`メタデータ トークン >|  
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<番号 >|  
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY < を`CorElementType`値 >\<ランク > \<count1 > \<bound1 >.\<countN > \<boundN >|  
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|  
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|  
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST <、`mdTypeDef`メタデータ トークン >\<引数カウント > \<arg1 >.\<argN >|  
 |`ELEMENT_TYPE_FNPTR`|Typ ELEMENT_TYPE_FNPTR\<には関数の呼び出し規約を含む完全なシグネチャ >|  
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY < を`CorElementType`値 >|  
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<番号 >|  
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|  
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_ < を`mdTypeRef`または`mdTypeDef`メタデータ トークン >|  
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < を`mdTypeRef`または`mdTypeDef`メタデータ トークン >|  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

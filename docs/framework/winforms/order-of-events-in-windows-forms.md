@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 10a6451827a16605ba738cf74b7f684b69adb5dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643963"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows フォームのイベントの順序
-Windows フォーム アプリケーションでイベントが発生する順序は、各イベントを順番に処理する必要がある開発者にとって重要な問題です。 フォームの構成要素を再描画するときなど、イベント処理に細心の注意が必要な状況では、実行時におけるイベントの正確な発生順序に気を配る必要があります。 このトピックでは、アプリケーションとコントロールの有効期間におけるいくつかの重要な段階での、イベントの順序について詳しく説明します。 特定の詳細については、マウス入力イベントの順序では、次を参照してください。 [Windows フォームにおけるマウス イベント](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)です。 Windows フォーム内のイベントの概要については、次を参照してください。[イベントの概要](../../../docs/framework/winforms/events-overview-windows-forms.md)です。 イベント ハンドラーの構成の詳細については、次を参照してください。[イベント ハンドラーの概要](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)です。  
+Windows フォーム アプリケーションでイベントが発生する順序は、各イベントを順番に処理する必要がある開発者にとって重要な問題です。 フォームの構成要素を再描画するときなど、イベント処理に細心の注意が必要な状況では、実行時におけるイベントの正確な発生順序に気を配る必要があります。 このトピックでは、アプリケーションとコントロールの有効期間におけるいくつかの重要な段階での、イベントの順序について詳しく説明します。 特定の詳細については、マウス入力イベントの順序では、次を参照してください。 [Windows フォームにおけるマウス イベント](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)します。 Windows フォームのイベントの概要については、次を参照してください。[イベントの概要](../../../docs/framework/winforms/events-overview-windows-forms.md)します。 イベント ハンドラーの構成の詳細については、次を参照してください。[イベント ハンドラーの概要](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)します。  
   
 ## <a name="application-startup-and-shutdown-events"></a>アプリケーションのスタートアップ イベントとシャットダウン イベント。  
  <xref:System.Windows.Forms.Form> クラスおよび <xref:System.Windows.Forms.Control> クラスは、アプリケーションのスタートアップおよびシャットダウンに関連する一連のイベントを公開しています。 Windows フォーム アプリケーションが起動すると、メイン フォームのスタートアップ イベントが次の順序で発生します。  
@@ -80,5 +80,5 @@ Windows フォーム アプリケーションでイベントが発生する順�
   
 -   <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム内でのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォーム内でのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

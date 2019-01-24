@@ -1,5 +1,5 @@
 ---
-title: '方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス'
+title: '方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセスします。'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f074e6f6d9b11cc7d7405adced3a4523a31676fa
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658027"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセスします。
 
 <xref:System.TimeZoneInfo>クラスは、2 つのプロパティを提供します。<xref:System.TimeZoneInfo.Utc%2A>と<xref:System.TimeZoneInfo.Local%2A>、定義済みのタイム ゾーン オブジェクトへのコード アクセス権を付与します。 このトピックでは、これらのプロパティから返される <xref:System.TimeZoneInfo> オブジェクトにアクセスする方法について説明します。
 
@@ -57,6 +57,6 @@ ms.locfileid: "44086914"
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-* [方法: TimeZoneInfo オブジェクトをインスタンス化する](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [ローカル システムで定義されているタイム ゾーンの検索](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [方法: TimeZoneInfo オブジェクトをインスタンス化します。](../../../docs/standard/datetime/instantiate-time-zone-info.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : ジオメトリック パスを使用してオブジェクトを回転させる'
+title: '方法: ジオメトリック パスを使用してオブジェクトを回転させる'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - geometric paths [WPF], rotating objects by
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
-ms.openlocfilehash: 6d6d21f3f7b609cb2933093a6990425deb39d4a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd8aaee7563d684e70dc29f1c293b091c1e6cff9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661491"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>方法 : ジオメトリック パスを使用してオブジェクトを回転させる
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>方法: ジオメトリック パスを使用してオブジェクトを回転させる
 この例では回転 (ピボット) 方法によって定義されたジオメトリック パスに沿ってオブジェクトを<xref:System.Windows.Media.PathGeometry>オブジェクト。  
   
 ## <a name="example"></a>例  
@@ -34,7 +34,7 @@ ms.locfileid: "43398149"
   
  サンプル全体については、次を参照してください。[パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)します。  
   
-## <a name="see-also"></a>関連項目  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [パス アニメーションに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [パス アニメーションに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

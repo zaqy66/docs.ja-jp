@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658901"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 認証モード
 Windows Communication Foundation (WCF) は、クライアントとサービスを相互に認証されるいくつかのモードを提供します。 <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの静的メソッドまたは構成を使用して、この認証モード用のセキュリティ バインド要素を作成できます。 このトピックでは、18 の認証モードについて簡単に説明します。  
   
- 認証モードのいずれかの要素を使用しての例は、次を参照してください。[方法: 指定された認証モード用の SecurityBindingElement を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)です。  
+ 認証モードのいずれかの要素を使用しての例は、次を参照してください。[方法。指定した認証モード用の SecurityBindingElement を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)です。  
   
 ## <a name="basic-configuration-programming"></a>基本的な構成プログラミング  
  構成ファイルで認証モードを設定する手順を次に示します。  
@@ -120,6 +120,6 @@ Windows Communication Foundation (WCF) は、クライアントとサービス�
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  この認証モードでは、クライアントは、署名付きサポート トークン、つまりメッセージ署名で署名されたトークンとして SOAP 層に表示されるユーザー名トークンを使用して認証を行います。 サービスはトランスポート層で X.509 証明書を使用して認証されます。 セキュリティ バインド要素は、`TransportSecurityBindingElement` メソッドによって返される <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A> です。 代わりに、`authenticationMode` 属性に `UserNameOverTransport` を設定します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [方法 : 指定した認証モード用の SecurityBindingElement を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [方法: 指定した認証モード用の SecurityBindingElement を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

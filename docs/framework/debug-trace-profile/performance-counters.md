@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672397"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework のパフォーマンス カウンター
 ここで見つかりますパフォーマンス カウンターの一覧では、 [Windows パフォーマンス モニター](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)します。  
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Stack Walk Depth**|最後のランタイム コード アクセス セキュリティ チェック時のスタックの深さを表示します。 ランタイム コード アクセス セキュリティ チェックは、スタックを調査することによって実行されます。 このカウンターは、平均値ではなく、最後に計測された値のみを表示します。|  
 |**Total Runtime Checks**|アプリケーションの開始後に実行されたランタイム コード アクセス セキュリティ チェックの総数を表示します。 ランタイム コード アクセス セキュリティ チェックは、呼び出し元が特別のアクセス許可を要求したときに実行されます。 ランタイム チェックは、呼び出し元からのすべての呼び出しに対して実行され、呼び出し元の現在のスレッド スタックをチェックします。 このカウンターを **Stack Walk Depth** カウンターと共に使用することで、セキュリティ チェック時に発生するパフォーマンス低下を把握できます。|  
   
-## <a name="see-also"></a>関連項目  
- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [ランタイム プロファイリング](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>関連項目
+- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [ランタイム プロファイリング](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

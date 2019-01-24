@@ -2,20 +2,14 @@
 title: キーワード (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- reserved keywords, Visual Basic
-- keywords [Visual Basic]
-- Members [Visual Basic], Visual Basic run-time
-- Visual Basic code, keywords
-- Visual Basic, language reference
-- reserved words, Visual Basic keywords
-- Visual Basic, keywords
+  - 'reserved keywords, Visual Basic'
+  - 'keywords [Visual Basic]'
+  - 'Members [Visual Basic], Visual Basic run-time'
+  - 'Visual Basic code, keywords'
+  - 'Visual Basic, language reference'
+  - 'reserved words, Visual Basic keywords'
+  - 'Visual Basic, keywords'
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605317"
 ---
 # <a name="keywords-visual-basic"></a>キーワード (Visual Basic)
 次の表には、すべての Visual Basic 言語のキーワードが一覧表示します。  
@@ -77,7 +71,7 @@ ms.locfileid: "33605317"
 |[>> 演算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`、 `GoSub`、 `Variant`、および`Wend`、、Visual Basic では使用されなくが予約されたキーワード、として保持されます。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../../../visual-basic/language-reference/queries/let-clause.md)」を参照してください。  
+>  `EndIf`、 `GoSub`、 `Variant`、および`Wend`Visual Basic では使用されなくが予約されたキーワード、として保持されます。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../../../visual-basic/language-reference/queries/let-clause.md)」を参照してください。  
   
 ## <a name="unreserved-keywords"></a>予約されていないキーワード  
  次のキーワードは予約されていません。したがって、プログラミングの要素の名前として使用できます。 ただし、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、これらのキーワードを要素の名前として使用することは避けてください。  
@@ -117,5 +111,5 @@ ms.locfileid: "33605317"
 |[レジストリの概要](../../../visual-basic/language-reference/keywords/registry-summary.md)|プログラム設定の読み込み、保存、および削除に使用される関数の一覧を示します。|  
 |[文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|文字列操作に使用される関数の一覧を示します。|  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

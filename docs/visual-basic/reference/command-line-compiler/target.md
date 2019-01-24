@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 7db9b71ee5b2c6b82bdb638471f9598df7f64097
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5208d5a5291969b7060ef5a48e3f6c3ae42aa22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671916"
 ---
 # <a name="-target-visual-basic"></a>-ターゲット (Visual Basic)
 コンパイラの出力形式を指定します。  
@@ -25,7 +25,7 @@ ms.locfileid: "53148674"
 ## <a name="remarks"></a>Remarks  
  次の表に、効果、`-target`オプション。  
   
-|**オプション**|**動作**|  
+|**Option**|**Behavior**|  
 |----------------|------------------|  
 |`-target:exe`|コンパイラ実行可能ファイルのコンソール アプリケーションを作成します。<br /><br /> ない場合、既定のオプションは、この`-target`オプションを指定します。 拡張子が .exe の実行可能ファイルが作成されます。<br /><br /> それ以外の場合を指定しない限り、`/out`オプション、出力ファイル名を含む入力ファイルの名前、`Sub Main`プロシージャ。<br /><br /> 1 つだけ`Sub Main`.exe ファイルにコンパイルされるソース コード ファイル内のプロシージャが必要です。 使用して、`-main`コンパイラ オプションを指定するクラスが含まれています、`Sub Main`プロシージャ。|  
 |`-target:library`|コンパイラがダイナミック リンク ライブラリ (DLL) を作成します。<br /><br /> ダイナミック リンク ライブラリ ファイルは、拡張子が .dll で作成されます。<br /><br /> それ以外の場合を指定しない限り、`-out`オプション、出力ファイル名は、最初の入力ファイルの名前を受け取ります。<br /><br /> DLL を作成するときに、`Sub Main`手順は必要ありません。|  
@@ -57,11 +57,11 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
-- [-除外 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
-- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
-- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
-- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
-- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-除外 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
+- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

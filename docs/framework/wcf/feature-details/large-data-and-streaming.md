@@ -2,12 +2,12 @@
 title: 大規模データとストリーミング
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674116"
 ---
 # <a name="large-data-and-streaming"></a>大規模データとストリーミング
 Windows Communication Foundation (WCF) は、XML ベースの通信インフラストラクチャです。 XML データは通常で定義されている標準のテキスト形式でエンコードするため、 [XML 1.0 仕様](https://go.microsoft.com/fwlink/?LinkId=94838)、接続されたシステムの開発者やアーキテクトが通常懸念送信されたメッセージのワイヤのフット プリント (またはサイズ) 間でネットワーク、および XML のテキストに基づくエンコーディングは、効率的なバイナリ データを転送するため特別な課題をもたらします。  
@@ -238,5 +238,5 @@ public class UploadStreamMessage
 > [!NOTE]
 >  バッファー転送とストリーミング転送のどちらを使用するかは、エンドポイントごとにローカルに決定します。 HTTP トランスポートの場合、転送モードは、接続、つまりプロキシ サーバーなどの中継局に伝達されません。 転送モードの設定は、サービス インターフェイスの記述に反映されません。 サービスの WCF クライアントを生成した後は、ストリーミング転送モードの設定を使用する予定のサービスの構成ファイルを編集する必要があります。 TCP トランスポートと名前付きパイプ トランスポートの場合、転送モードはポリシー アサーションとして伝達されます。  
   
-## <a name="see-also"></a>関連項目  
- [操作方法：ストリーミングを有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>関連項目
+- [方法: ストリーミングを有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

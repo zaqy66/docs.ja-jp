@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e6e95bbcca35ad39f30adcf100519748c02838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c3a3581d2a9a1cb79f4ffe1d0a37269c18789a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652180"
 ---
 # <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE 列挙体
-共通言語ランタイム (CLR) のバージョンを示す値が含まれています。 デスクトップまたは Silverlight で使用されている CoreCLR です。  
+共通言語ランタイム (CLR) のバージョンを示す値を含みます。 デスクトップまたは CoreCLR は Silverlight で使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,19 +40,19 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|CLR のデスクトップ バージョン。|  
-|`COR_PRF_CORE_CLR`|Silverlight で使用される、CLR のコア バージョン。|  
+|`COR_PRF_DESKTOP_CLR`|デスクトップ CLR のバージョン。|  
+|`COR_PRF_CORE_CLR`|Silverlight で使用される、CLR の core バージョン。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

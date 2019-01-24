@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643391"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter メソッド
-現在のメソッドの 1 つのパラメーターを定義します。 パラメーターの型は、メソッドのシグネチャ内のパラメーターの位置 (シーケンス) から取得されます。  
+現在のメソッドでは、1 つのパラメーターを定義します。 パラメーターの型は、メソッドのシグネチャ内のパラメーターの位置 (シーケンス) から取得されます。  
   
- パラメーターは、特定のメソッドのメタデータで定義されて場合、このメソッドを使用して、再定義するはありません。 シンボル リーダーは、シンボル ストアをチェックする前に、パラメーターの通常のメタデータをチェックする必要があります。  
+ パラメーターは、特定のメソッドのメタデータで定義されているが場合、このメソッドを使用して、再定義することはありません。 シンボル リーダーは、シンボル ストアを確認する前に、パラメーターの通常のメタデータをチェックする必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +50,7 @@ HRESULT DefineParameter(
  [in]パラメーターの属性。  
   
  `sequence`  
- [in]パラメーターのシグネチャ。  
+ [in]パラメーター シグネチャ。  
   
  `addrKind`  
  [in]アドレスの種類。  
@@ -65,10 +65,10 @@ HRESULT DefineParameter(
  [in]パラメーター指定の 3 番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>関連項目
+- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

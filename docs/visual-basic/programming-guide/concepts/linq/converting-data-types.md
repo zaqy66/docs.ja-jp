@@ -1,15 +1,15 @@
 ---
-title: 変換する際のデータ型 (Visual Basic)
+title: データ型 (Visual Basic) の変換
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 9821b2d6caad8feeac856185b92518c25de88da3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3845c14bc7390d486668916fe7d5d5ad840b7990
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653737"
 ---
-# <a name="converting-data-types-visual-basic"></a>変換する際のデータ型 (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>データ型 (Visual Basic) の変換
 変換メソッドは、入力オブジェクトの型を変更します。  
   
  LINQ クエリの変換操作は、さまざまなアプリケーションで役に立ちます。 次にいくつかの例を示します。  
@@ -77,8 +77,8 @@ Sub Cast()
 End Sub  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Linq>  
- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [方法: LINQ (Visual Basic) で ArrayList を照会します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [方法: ArrayList を照会する linq (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

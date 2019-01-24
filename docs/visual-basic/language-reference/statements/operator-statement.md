@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658196"
 ---
 # <a name="operator-statement"></a>Operator Statement
 演算子記号、オペランド、およびクラスまたは構造体に演算子プロシージャを定義するコードを宣言します。  
@@ -77,7 +77,7 @@ End Operator
 |パーツ|説明|  
 |----------|-----------------|  
 |`ByVal`|省略可能、ただし引き渡し方法があります[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)します。|  
-|`operandname`|必須。 このオペランドを表す変数の名前。 参照してください[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。|  
+|`operandname`|必須。 このオペランドを表す変数の名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`operandtype`|省略可能な場合を除き、`Option Strict`は`On`します。 このオペランドのデータ型。|  
   
  `type`  
@@ -170,14 +170,14 @@ End Operator
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [方法 : 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [方法 : 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [方法 : 演算子プロシージャを呼び出す](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
- [方法: 演算子を定義するクラスを使用する](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a>関連項目
+- [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [方法: 演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [方法: 変換演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [方法: 演算子プロシージャを呼び出す](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [方法: 演算子を定義するクラスを使用して、](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

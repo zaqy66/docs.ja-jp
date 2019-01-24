@@ -1,15 +1,15 @@
 ---
-title: '方法 : 要求/応答コントラクトを作成する'
+title: '方法: 要求/応答コントラクトを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 085514e09eb13676d5c939724071e89535d443f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663610"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>方法 : 要求/応答コントラクトを作成する
+# <a name="how-to-create-a-request-reply-contract"></a>方法: 要求/応答コントラクトを作成します。
 要求/応答コントラクトは、応答を返すメソッドを指定します。 応答が送信され、このコントラクトの条件の下で要求に関連付けられる必要があります。 メソッドが応答を返さない場合 (C# の場合は `void` または Visual Basic の場合は `Sub`) でも、インフラストラクチャは、空のメッセージを作成して送信することで、メソッドが返ったことを呼び出し元に示します。 空の応答メッセージが送信されるのを防ぐには、操作で 1 方向コントラクトを使用します。  
   
 ### <a name="to-create-a-request-reply-contract"></a>要求/応答コントラクトを作成するには  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 -   <xref:System.ServiceModel.ServiceContractAttribute> 属性と <xref:System.ServiceModel.OperationContractAttribute> 属性を適用すると、サービスを展開した後に Web サービス記述言語 (WSDL) ドキュメントでサービス コントラクト定義が自動的に生成されます。 ドキュメントは、サービスの HTTP ベース アドレスに `?wsdl` を付け加えてしてダウンロードできます。 たとえば、`http://microsoft/CalculatorService?wsdl`  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [サービス コントラクトの設計](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [方法 : 双方向コントラクトを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [サービス コントラクトの設計](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [方法: 双方向コントラクトを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

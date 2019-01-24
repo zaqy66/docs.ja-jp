@@ -1,15 +1,15 @@
 ---
-title: モデル ファイルとマッピング ファイルを組み込みリソースにする方法
+title: '方法: モデルとマッピング ファイルの埋め込みリソース'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 35507f92d0ba9f434156773c8dc5621ed3c423c0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0fd7e4fe751fd05a8b48f3dee79d374f669917fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660347"
 ---
-# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>モデル ファイルとマッピング ファイルを組み込みリソースにする方法
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>方法: モデルとマッピング ファイルの埋め込みリソース
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]モデル ファイルとマッピング ファイルをアプリケーションの埋め込みリソースとしてデプロイすることができます。 モデル ファイルとマッピング ファイルが組み込まれたアセンブリは、エンティティ接続と同じアプリケーション ドメインに読み込む必要があります。 詳細については、「[Connection Strings (接続文字列)](../../../../../docs/framework/data/adonet/ef/connection-strings.md)」をご覧ください。 既定では、[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ツールによって、モデル ファイルとマッピング ファイルが組み込まれます。 モデル ファイルとマッピング ファイルを手動で定義する場合は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションと共にモデル ファイルとマッピング ファイルが組み込みリソースとして確実に配置されるように、この手順を使用します。  
   
 > [!NOTE]
@@ -38,8 +38,8 @@ ms.locfileid: "43864282"
   
   
   
-## <a name="see-also"></a>関連項目  
- [モデリングとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
- [接続文字列を定義する方法](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
- [EntityConnection の接続文字列を作成する方法](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
- [ADO.NET Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>関連項目
+- [モデリングとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [方法: 接続文字列を定義します。](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
+- [方法: EntityConnection の接続文字列を作成します。](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
+- [ADO.NET Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

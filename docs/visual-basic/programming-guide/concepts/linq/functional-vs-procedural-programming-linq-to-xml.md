@@ -2,12 +2,12 @@
 title: 関数型プログラミングと手続き型プログラミング (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: 55f1e354f71e58c3592f91e198925c0fd5f0da71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5db2f686d72390cdb7e338235a39e4039281e6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645003"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>関数型プログラミングと手続き型プログラミング (LINQ to XML) (Visual Basic)
 XML アプリケーションには、次のようにさまざまな種類があります。  
@@ -36,9 +36,9 @@ XML アプリケーションには、次のようにさまざまな種類があ�
   
  いずれの方法でも LINQ to XML を使用できます。 同じクラスを使用し、場合によっては同じメソッドを使用します。 ただし、2 つの方法の構造と目標はかなり異なります。 たとえば、これらの方法のうち、どちらのパフォーマンスが優れているか、また使用するメモリ量はどちらが多い (または少ない) かは、状況によって異なる場合があります。 また、どちらの方法が保守性に優れたコードをより簡単に記述し生成できるかも、状況によって異なります。  
   
- 2 つの方法の違いについては、「[メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)です。  
+ 2 つの方法の違いについては、「[メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)します。  
   
- 関数型変換の作成方法のチュートリアルでは、次を参照してください。[純粋関数型変換の XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)です。  
+ 関数型変換の記述に関するチュートリアルについては、次を参照してください。[純粋関数型の XML 変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

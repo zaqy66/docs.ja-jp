@@ -1,18 +1,18 @@
 ---
-title: '方法 : PathGeometry を使用して図形を作成する'
+title: '方法: PathGeometry を使用して図形を作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], creating with PathGeometry class
 - graphics [WPF], shapes
 ms.assetid: 49a4a8b7-e738-45be-8dac-b54a6d8f5b21
-ms.openlocfilehash: 4c9cd7a1af921a0a547c7dec3afc5f69b29e6aed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: acc50c279995835111e98dd2b74d06f705776f9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649363"
 ---
-# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>方法 : PathGeometry を使用して図形を作成する
+# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>方法: PathGeometry を使用して図形を作成する
 この例を使用して図形を作成する方法を示しています、<xref:System.Windows.Media.PathGeometry>クラス。 <xref:System.Windows.Media.PathGeometry> オブジェクトが 1 つまたは複数で構成される<xref:System.Windows.Media.PathFigure>オブジェクト。 各<xref:System.Windows.Media.PathFigure>異なる"図"または図形を表します。 各<xref:System.Windows.Media.PathFigure>自体は 1 つ以上ので構成されます<xref:System.Windows.Media.PathSegment>それぞれ図や図形の接続されている部分を表すオブジェクトします。 セグメントの種類<xref:System.Windows.Media.LineSegment>、 <xref:System.Windows.Media.ArcSegment>、および<xref:System.Windows.Media.BezierSegment>します。  
   
 ## <a name="example"></a>例  
@@ -29,8 +29,8 @@ PathGeometry で作成された三角形
   
  この例は、より大きなサンプルの一部です。完全なサンプルについては、「[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.GeometryDrawing>  
- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.GeometryDrawing>
+- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 79fc91092badfd871a1409e2ee602272f3eae100
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 546b877dc9eb1e7422505b710690d92937cf2b42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659190"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>DataRow の比較 (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] では、ソース要素を比較し、両者が等しいかどうかを調べるための各種の集合演算子が定義されています。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] が提供している集合演算子は次のとおりです。  
@@ -38,7 +38,7 @@ ms.locfileid: "32756281"
   
  [!code-vb[DP LINQ to DataSet Examples#CompareDifferentRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#comparedifferentrows)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataRowComparer>  
- [DataSet へのデータの読み込み](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [LINQ to DataSet の例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Data.DataRowComparer>
+- [DataSet へのデータの読み込み](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [LINQ to DataSet の例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

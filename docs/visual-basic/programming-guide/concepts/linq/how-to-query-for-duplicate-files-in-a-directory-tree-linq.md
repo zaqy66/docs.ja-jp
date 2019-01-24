@@ -1,15 +1,15 @@
 ---
-title: '方法: ディレクトリ ツリー (LINQ) (Visual Basic) で重複するファイルのクエリ'
+title: '方法: クエリ (LINQ) (Visual Basic) ディレクトリ ツリーで重複するファイル'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: c9243d98c73571fcde009cddb2d5435365f20760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cfa86aa3750b7a102bfe6787bf589b5662efa15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667181"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>方法: ディレクトリ ツリー (LINQ) (Visual Basic) で重複するファイルのクエリ
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>方法: クエリ (LINQ) (Visual Basic) ディレクトリ ツリーで重複するファイル
 同じ名前のファイルが複数のフォルダーに存在することがあります。 たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。 次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。 また、2 番目の例では、名前のほかにサイズと作成時刻が一致するファイルをクエリする方法を示します。  
   
 ## <a name="example"></a>例  
@@ -103,6 +103,6 @@ End Module
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
