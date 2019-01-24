@@ -2,18 +2,18 @@
 title: '&lt;system.serviceModel.activation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: fed7bf41e8c893d10254e09a9733572765ce1661
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 10496b9624e1edb044187c08c9dfac0b852fe490
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666350"
 ---
-# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="25c90-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="25c90-102">&lt;system.serviceModel.activation&gt;</span></span>
-<span data-ttu-id="25c90-103">この構成セクションは、SMSvcHost.exe ツールの構成設定を表します。</span><span class="sxs-lookup"><span data-stu-id="25c90-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="25c90-104">構成要素は、SMSvcHost.exe.config ファイルで構成できます。</span><span class="sxs-lookup"><span data-stu-id="25c90-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="25c90-105">特にここには、構成される必要があるコンピューター全体のすべての設定が含まれます。</span><span class="sxs-lookup"><span data-stu-id="25c90-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="243e9-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="243e9-102">&lt;system.serviceModel.activation&gt;</span></span>
+<span data-ttu-id="243e9-103">この構成セクションは、SMSvcHost.exe ツールの構成設定を表します。</span><span class="sxs-lookup"><span data-stu-id="243e9-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="243e9-104">構成要素は、SMSvcHost.exe.config ファイルで構成できます。</span><span class="sxs-lookup"><span data-stu-id="243e9-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="243e9-105">特にここには、構成される必要があるコンピューター全体のすべての設定が含まれます。</span><span class="sxs-lookup"><span data-stu-id="243e9-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="25c90-106">サンプル構成ファイル</span><span class="sxs-lookup"><span data-stu-id="25c90-106">Sample Configuration File</span></span>  
- <span data-ttu-id="25c90-107">次は、リスナー プロセス SMSvcHost.exe で使用されるサンプル構成ファイル (SMSvcHost.exe.config) です。</span><span class="sxs-lookup"><span data-stu-id="25c90-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="243e9-106">サンプル構成ファイル</span><span class="sxs-lookup"><span data-stu-id="243e9-106">Sample Configuration File</span></span>  
+ <span data-ttu-id="243e9-107">次は、リスナー プロセス SMSvcHost.exe で使用されるサンプル構成ファイル (SMSvcHost.exe.config) です。</span><span class="sxs-lookup"><span data-stu-id="243e9-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>
@@ -60,5 +60,5 @@ ms.locfileid: "54146720"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="25c90-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="25c90-108">See Also</span></span>  
- <xref:System.ServiceModel.Activation.Configuration>
+## <a name="see-also"></a><span data-ttu-id="243e9-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="243e9-108">See also</span></span>
+- <xref:System.ServiceModel.Activation.Configuration>

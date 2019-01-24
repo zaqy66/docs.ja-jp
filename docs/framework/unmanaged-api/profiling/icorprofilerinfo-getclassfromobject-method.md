@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104dfcaa4120d72f3aa758b66134050f178fef75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9031ae9b4870c182922baaa41883de4cddb469d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676680"
 ---
-# <a name="icorprofilerinfogetclassfromobject-method"></a><span data-ttu-id="ded13-102">ICorProfilerInfo::GetClassFromObject メソッド</span><span class="sxs-lookup"><span data-stu-id="ded13-102">ICorProfilerInfo::GetClassFromObject Method</span></span>
-<span data-ttu-id="ded13-103">取得、`ClassID`指定して、オブジェクトの`ObjectID`です。</span><span class="sxs-lookup"><span data-stu-id="ded13-103">Gets the `ClassID` of an object, given its `ObjectID`.</span></span>  
+# <a name="icorprofilerinfogetclassfromobject-method"></a><span data-ttu-id="20ba9-102">ICorProfilerInfo::GetClassFromObject メソッド</span><span class="sxs-lookup"><span data-stu-id="20ba9-102">ICorProfilerInfo::GetClassFromObject Method</span></span>
+<span data-ttu-id="20ba9-103">取得、 `ClassID` 、指定したオブジェクトの`ObjectID`します。</span><span class="sxs-lookup"><span data-stu-id="20ba9-103">Gets the `ClassID` of an object, given its `ObjectID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ded13-104">構文</span><span class="sxs-lookup"><span data-stu-id="ded13-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20ba9-104">構文</span><span class="sxs-lookup"><span data-stu-id="20ba9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassFromObject(  
@@ -35,24 +35,24 @@ HRESULT GetClassFromObject(
     [out] ClassID *pClassId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ded13-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ded13-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="20ba9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="20ba9-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="ded13-106">[in]取得する対象のオブジェクトの ID、`ClassID`です。</span><span class="sxs-lookup"><span data-stu-id="ded13-106">[in] The ID of the object for which to get the `ClassID`.</span></span>  
+ <span data-ttu-id="20ba9-106">[in]取得する対象のオブジェクトの ID、`ClassID`します。</span><span class="sxs-lookup"><span data-stu-id="20ba9-106">[in] The ID of the object for which to get the `ClassID`.</span></span>  
   
  `pClassId`  
- <span data-ttu-id="ded13-107">[out]返されたへのポインター`ClassID`です。</span><span class="sxs-lookup"><span data-stu-id="ded13-107">[out] A pointer to the returned `ClassID`.</span></span>  
+ <span data-ttu-id="20ba9-107">[out]返されたポインター`ClassID`します。</span><span class="sxs-lookup"><span data-stu-id="20ba9-107">[out] A pointer to the returned `ClassID`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ded13-108">コメント</span><span class="sxs-lookup"><span data-stu-id="ded13-108">Remarks</span></span>  
- <span data-ttu-id="ded13-109">Null`pClassId`ことを示します`objectId`型がアンロード中が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ded13-109">A null `pClassId` indicates that `objectId` has a type that is unloading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="20ba9-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="20ba9-108">Remarks</span></span>  
+ <span data-ttu-id="20ba9-109">Null`pClassId`ことを示します`objectId`型をアンロードしていますがあります。</span><span class="sxs-lookup"><span data-stu-id="20ba9-109">A null `pClassId` indicates that `objectId` has a type that is unloading.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ded13-110">要件</span><span class="sxs-lookup"><span data-stu-id="ded13-110">Requirements</span></span>  
- <span data-ttu-id="ded13-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="ded13-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20ba9-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="20ba9-110">Requirements</span></span>  
+ <span data-ttu-id="20ba9-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="20ba9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ded13-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ded13-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="20ba9-112">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="20ba9-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ded13-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ded13-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="20ba9-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20ba9-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ded13-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ded13-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="20ba9-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20ba9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ded13-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ded13-115">See Also</span></span>  
- [<span data-ttu-id="ded13-116">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ded13-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="20ba9-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="20ba9-115">See also</span></span>
+- [<span data-ttu-id="20ba9-116">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="20ba9-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

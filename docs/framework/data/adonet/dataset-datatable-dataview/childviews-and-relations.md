@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 72ab53c9b7687246e1ab219774a67b7b1d42938f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666827"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="01dcc-102">ChildView とリレーション</span><span class="sxs-lookup"><span data-stu-id="01dcc-102">ChildViews and Relations</span></span>
-<span data-ttu-id="01dcc-103"><xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="01dcc-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="01dcc-104">たとえば、次のコードが表示されます**カテゴリ**とその関連**製品**で並べ替えられた順序はアルファベット順で**CategoryName**と**ProductName**.</span><span class="sxs-lookup"><span data-stu-id="01dcc-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="1299e-102">ChildView とリレーション</span><span class="sxs-lookup"><span data-stu-id="1299e-102">ChildViews and Relations</span></span>
+<span data-ttu-id="1299e-103"><xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="1299e-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="1299e-104">たとえば、次のコードが表示されます**カテゴリ**とその関連**製品**で並べ替えられた順序はアルファベット順で**CategoryName**と**ProductName**.</span><span class="sxs-lookup"><span data-stu-id="1299e-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -73,9 +73,9 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="01dcc-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="01dcc-105">See Also</span></span>  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataView>  
- <xref:System.Data.DataRowView>  
- [<span data-ttu-id="01dcc-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="01dcc-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [<span data-ttu-id="01dcc-107">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="01dcc-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1299e-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="1299e-105">See also</span></span>
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataView>
+- <xref:System.Data.DataRowView>
+- [<span data-ttu-id="1299e-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="1299e-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [<span data-ttu-id="1299e-107">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="1299e-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

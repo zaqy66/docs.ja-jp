@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2515eb0e33a033e78843d68754d3175e91165dff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e55a94cc5a877efa0ddc8e2a5e554f5d5791e53f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676121"
 ---
-# <a name="iclrstrongnamestrongnamekeydelete-method"></a><span data-ttu-id="ae84a-102">ICLRStrongName::StrongNameKeyDelete メソッド</span><span class="sxs-lookup"><span data-stu-id="ae84a-102">ICLRStrongName::StrongNameKeyDelete Method</span></span>
-<span data-ttu-id="ae84a-103">指定したキー コンテナーが削除されます。</span><span class="sxs-lookup"><span data-stu-id="ae84a-103">Deletes the specified key container.</span></span>  
+# <a name="iclrstrongnamestrongnamekeydelete-method"></a><span data-ttu-id="991e3-102">ICLRStrongName::StrongNameKeyDelete メソッド</span><span class="sxs-lookup"><span data-stu-id="991e3-102">ICLRStrongName::StrongNameKeyDelete Method</span></span>
+<span data-ttu-id="991e3-103">指定したキー コンテナーが削除されます。</span><span class="sxs-lookup"><span data-stu-id="991e3-103">Deletes the specified key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae84a-104">構文</span><span class="sxs-lookup"><span data-stu-id="ae84a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="991e3-104">構文</span><span class="sxs-lookup"><span data-stu-id="991e3-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyDelete (  
@@ -35,25 +35,25 @@ HRESULT StrongNameKeyDelete (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ae84a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ae84a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="991e3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="991e3-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="ae84a-106">[in]削除するキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="ae84a-106">[in] The name of the key container to delete.</span></span>  
+ <span data-ttu-id="991e3-106">[in]削除するキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="991e3-106">[in] The name of the key container to delete.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ae84a-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="ae84a-107">Return Value</span></span>  
- <span data-ttu-id="ae84a-108">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="ae84a-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="991e3-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="991e3-107">Return Value</span></span>  
+ <span data-ttu-id="991e3-108">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="991e3-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ae84a-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="ae84a-109">Remarks</span></span>  
- <span data-ttu-id="ae84a-110">使用して、 [iclrstrongname::strongnamekeyinstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)公開/秘密キー ペアをコンテナーにインポートするメソッド。</span><span class="sxs-lookup"><span data-stu-id="ae84a-110">Use the [ICLRStrongName::StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) method to import a public/private key pair into a container.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="991e3-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="991e3-109">Remarks</span></span>  
+ <span data-ttu-id="991e3-110">使用して、 [iclrstrongname::strongnamekeyinstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)公開/秘密キー ペアをコンテナーにインポートするメソッド。</span><span class="sxs-lookup"><span data-stu-id="991e3-110">Use the [ICLRStrongName::StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) method to import a public/private key pair into a container.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae84a-111">要件</span><span class="sxs-lookup"><span data-stu-id="ae84a-111">Requirements</span></span>  
- <span data-ttu-id="ae84a-112">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ae84a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="991e3-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="991e3-111">Requirements</span></span>  
+ <span data-ttu-id="991e3-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="991e3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ae84a-113">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ae84a-113">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="991e3-113">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="991e3-113">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="ae84a-114">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="ae84a-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="991e3-114">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="991e3-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ae84a-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae84a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="991e3-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="991e3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae84a-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae84a-116">See Also</span></span>  
- [<span data-ttu-id="ae84a-117">StrongNameKeyInstall メソッド</span><span class="sxs-lookup"><span data-stu-id="ae84a-117">StrongNameKeyInstall Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)  
- [<span data-ttu-id="ae84a-118">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ae84a-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="991e3-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="991e3-116">See also</span></span>
+- [<span data-ttu-id="991e3-117">StrongNameKeyInstall メソッド</span><span class="sxs-lookup"><span data-stu-id="991e3-117">StrongNameKeyInstall Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [<span data-ttu-id="991e3-118">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="991e3-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

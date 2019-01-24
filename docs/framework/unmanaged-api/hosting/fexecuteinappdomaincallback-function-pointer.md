@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c3cafe3a8912702a093f9df7234112c0057b440
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649545"
 ---
-# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="44372-102">FExecuteInAppDomainCallback 関数ポインター</span><span class="sxs-lookup"><span data-stu-id="44372-102">FExecuteInAppDomainCallback Function Pointer</span></span>
-<span data-ttu-id="44372-103">マネージ コードを実行する共通言語ランタイム (CLR) によって呼び出される関数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="44372-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
+# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="b0ee0-102">FExecuteInAppDomainCallback 関数ポインター</span><span class="sxs-lookup"><span data-stu-id="b0ee0-102">FExecuteInAppDomainCallback Function Pointer</span></span>
+<span data-ttu-id="b0ee0-103">マネージ コードを実行する共通言語ランタイム (CLR) によって呼び出される関数を指します。</span><span class="sxs-lookup"><span data-stu-id="b0ee0-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
   
- <span data-ttu-id="44372-104">この関数ポインターが削除されて、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]です。</span><span class="sxs-lookup"><span data-stu-id="44372-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="b0ee0-104">この関数のポインターが非推奨とされた、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="b0ee0-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44372-105">構文</span><span class="sxs-lookup"><span data-stu-id="44372-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0ee0-105">構文</span><span class="sxs-lookup"><span data-stu-id="b0ee0-105">Syntax</span></span>  
   
 ```  
 typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (  
@@ -36,21 +36,20 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="44372-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="44372-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b0ee0-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b0ee0-106">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="44372-107">[in]実行されるマネージ コードが含まれる非透過の呼び出し元が割り当てたメモリへのポインター。</span><span class="sxs-lookup"><span data-stu-id="44372-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
+ <span data-ttu-id="b0ee0-107">[in]実行されるマネージ コードを含む非透過の呼び出し元が割り当てたメモリへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b0ee0-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
   
- <span data-ttu-id="44372-108">割り当ておよびこのメモリの有効期間は、呼び出し元 (つまり、CLR) によって制御されます。</span><span class="sxs-lookup"><span data-stu-id="44372-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="44372-109">これは、CLR のマネージ ヒープのメモリではありません。</span><span class="sxs-lookup"><span data-stu-id="44372-109">This is not CLR managed-heap memory.</span></span>  
+ <span data-ttu-id="b0ee0-108">割り当てとメモリの有効期間は、呼び出し元の (つまり、CLR) によって制御されます。</span><span class="sxs-lookup"><span data-stu-id="b0ee0-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="b0ee0-109">これは、CLR のマネージ ヒープ メモリではありません。</span><span class="sxs-lookup"><span data-stu-id="b0ee0-109">This is not CLR managed-heap memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44372-110">要件</span><span class="sxs-lookup"><span data-stu-id="44372-110">Requirements</span></span>  
- <span data-ttu-id="44372-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="44372-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0ee0-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="b0ee0-110">Requirements</span></span>  
+ <span data-ttu-id="b0ee0-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0ee0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44372-112">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="44372-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b0ee0-112">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b0ee0-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="44372-113">**ライブラリ:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="44372-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="b0ee0-113">**ライブラリ:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="b0ee0-113">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="44372-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44372-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b0ee0-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0ee0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44372-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="44372-115">See Also</span></span>  
- <span data-ttu-id="44372-116">
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span><span class="sxs-lookup"><span data-stu-id="44372-116">[Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0ee0-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0ee0-115">See also</span></span>
+- [<span data-ttu-id="b0ee0-116">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="b0ee0-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -2,22 +2,22 @@
 title: '&lt;userDefinedType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7c8b8e0403fe108f4e8d25dd1de274acc40c9fcc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1a4f371737e9e801f3b929f4d65ac310d5fe0e28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642949"
 ---
-# <a name="ltuserdefinedtypegt"></a><span data-ttu-id="cc0d0-102">&lt;userDefinedType&gt;</span><span class="sxs-lookup"><span data-stu-id="cc0d0-102">&lt;userDefinedType&gt;</span></span>
-<span data-ttu-id="cc0d0-103">サービス コントラクトに含まれるユーザー定義型 (UDT) を表します。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-103">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
+# <a name="ltuserdefinedtypegt"></a><span data-ttu-id="d0852-102">&lt;userDefinedType&gt;</span><span class="sxs-lookup"><span data-stu-id="d0852-102">&lt;userDefinedType&gt;</span></span>
+<span data-ttu-id="d0852-103">サービス コントラクトに含まれるユーザー定義型 (UDT) を表します。</span><span class="sxs-lookup"><span data-stu-id="d0852-103">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
   
- <span data-ttu-id="cc0d0-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="cc0d0-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="cc0d0-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="cc0d0-105">\<comContracts></span></span>  
-<span data-ttu-id="cc0d0-106">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="cc0d0-106">\<comContract></span></span>  
-<span data-ttu-id="cc0d0-107">\<userDefinedTypes ></span><span class="sxs-lookup"><span data-stu-id="cc0d0-107">\<userDefinedTypes></span></span>  
+ <span data-ttu-id="d0852-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d0852-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d0852-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="d0852-105">\<comContracts></span></span>  
+<span data-ttu-id="d0852-106">\<comContract></span><span class="sxs-lookup"><span data-stu-id="d0852-106">\<comContract></span></span>  
+<span data-ttu-id="d0852-107">\<userDefinedTypes></span><span class="sxs-lookup"><span data-stu-id="d0852-107">\<userDefinedTypes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc0d0-108">構文</span><span class="sxs-lookup"><span data-stu-id="cc0d0-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0852-108">構文</span><span class="sxs-lookup"><span data-stu-id="d0852-108">Syntax</span></span>  
   
 ```xml  
 <comContracts>
@@ -33,33 +33,33 @@ ms.locfileid: "54148735"
 </comContracts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cc0d0-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="cc0d0-109">Attributes and Elements</span></span>  
- <span data-ttu-id="cc0d0-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d0852-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="d0852-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="d0852-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="d0852-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cc0d0-111">属性</span><span class="sxs-lookup"><span data-stu-id="cc0d0-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d0852-111">属性</span><span class="sxs-lookup"><span data-stu-id="d0852-111">Attributes</span></span>  
   
-|<span data-ttu-id="cc0d0-112">属性</span><span class="sxs-lookup"><span data-stu-id="cc0d0-112">Attribute</span></span>|<span data-ttu-id="cc0d0-113">説明</span><span class="sxs-lookup"><span data-stu-id="cc0d0-113">Description</span></span>|  
+|<span data-ttu-id="d0852-112">属性</span><span class="sxs-lookup"><span data-stu-id="d0852-112">Attribute</span></span>|<span data-ttu-id="d0852-113">説明</span><span class="sxs-lookup"><span data-stu-id="d0852-113">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="cc0d0-114">判読可能な型名を提供する文字列を含む省略可能な属性。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-114">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="cc0d0-115">これは、ランタイムでは使用されませんが、リーダーが型を区別するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-115">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
-|`TypeDefID`|<span data-ttu-id="cc0d0-116">登録されているタイプ ライブラリ内の特定の UDT 型を識別する GUID 文字列。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-116">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
-|`TypeLibID`|<span data-ttu-id="cc0d0-117">型を定義する登録されているタイプ ライブラリを識別する GUID 文字列。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-117">A GUID string that identifies the registered type library that defines the type.</span></span>|  
-|`TypeLibVersion`|<span data-ttu-id="cc0d0-118">型を定義するタイプ ライブラリ バージョンを識別する文字列。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-118">A string that identifies the type library version that defines the type.</span></span>|  
+|`name`|<span data-ttu-id="d0852-114">判読可能な型名を提供する文字列を含む省略可能な属性。</span><span class="sxs-lookup"><span data-stu-id="d0852-114">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="d0852-115">これは、ランタイムでは使用されませんが、リーダーが型を区別するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="d0852-115">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
+|`TypeDefID`|<span data-ttu-id="d0852-116">登録されているタイプ ライブラリ内の特定の UDT 型を識別する GUID 文字列。</span><span class="sxs-lookup"><span data-stu-id="d0852-116">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
+|`TypeLibID`|<span data-ttu-id="d0852-117">型を定義する登録されているタイプ ライブラリを識別する GUID 文字列。</span><span class="sxs-lookup"><span data-stu-id="d0852-117">A GUID string that identifies the registered type library that defines the type.</span></span>|  
+|`TypeLibVersion`|<span data-ttu-id="d0852-118">型を定義するタイプ ライブラリ バージョンを識別する文字列。</span><span class="sxs-lookup"><span data-stu-id="d0852-118">A string that identifies the type library version that defines the type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="cc0d0-119">子要素</span><span class="sxs-lookup"><span data-stu-id="cc0d0-119">Child Elements</span></span>  
- <span data-ttu-id="cc0d0-120">なし。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d0852-119">子要素</span><span class="sxs-lookup"><span data-stu-id="d0852-119">Child Elements</span></span>  
+ <span data-ttu-id="d0852-120">なし。</span><span class="sxs-lookup"><span data-stu-id="d0852-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="cc0d0-121">親要素</span><span class="sxs-lookup"><span data-stu-id="cc0d0-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d0852-121">親要素</span><span class="sxs-lookup"><span data-stu-id="d0852-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="cc0d0-122">要素</span><span class="sxs-lookup"><span data-stu-id="cc0d0-122">Element</span></span>|<span data-ttu-id="cc0d0-123">説明</span><span class="sxs-lookup"><span data-stu-id="cc0d0-123">Description</span></span>|  
+|<span data-ttu-id="d0852-122">要素</span><span class="sxs-lookup"><span data-stu-id="d0852-122">Element</span></span>|<span data-ttu-id="d0852-123">説明</span><span class="sxs-lookup"><span data-stu-id="d0852-123">Description</span></span>|  
 |-------------|-----------------|  
-|`userDefinedTypes`|<span data-ttu-id="cc0d0-124">`userDefinedType` 要素のコレクション。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-124">A collection of `userDefinedType` elements.</span></span>|  
+|`userDefinedTypes`|<span data-ttu-id="d0852-124">`userDefinedType` 要素のコレクション。</span><span class="sxs-lookup"><span data-stu-id="d0852-124">A collection of `userDefinedType` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cc0d0-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="cc0d0-125">Remarks</span></span>  
- <span data-ttu-id="cc0d0-126">COM+ 統合ランタイムは、タイプ ライブラリを調べることによってサービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-126">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="cc0d0-127">COM+ コンポーネントに VARIANT を渡すメソッドが含まれている場合、システムでは、渡される実際の型を実行前に判断することはできません。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-127">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="cc0d0-128">したがって、VARIANT としてユーザー定義型 (UDT) を渡そうとしても、シリアル化で認識できる型ではないので失敗します。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-128">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0852-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="d0852-125">Remarks</span></span>  
+ <span data-ttu-id="d0852-126">COM+ 統合ランタイムは、タイプ ライブラリを調べることによってサービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d0852-126">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="d0852-127">COM+ コンポーネントに VARIANT を渡すメソッドが含まれている場合、システムでは、渡される実際の型を実行前に判断することはできません。</span><span class="sxs-lookup"><span data-stu-id="d0852-127">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="d0852-128">したがって、VARIANT としてユーザー定義型 (UDT) を渡そうとしても、シリアル化で認識できる型ではないので失敗します。</span><span class="sxs-lookup"><span data-stu-id="d0852-128">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
   
- <span data-ttu-id="cc0d0-129">この問題を回避するには、UDT を構成ファイルに追加して、適切なサービス コントラクトで既知の型として含まれるようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-129">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="cc0d0-130">このためには、UDT およびコントラクト、つまりそれを使用する元の COM インターフェイスを一意に識別する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-130">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
+ <span data-ttu-id="d0852-129">この問題を回避するには、UDT を構成ファイルに追加して、適切なサービス コントラクトで既知の型として含まれるようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="d0852-129">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="d0852-130">このためには、UDT およびコントラクト、つまりそれを使用する元の COM インターフェイスを一意に識別する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d0852-130">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
   
- <span data-ttu-id="cc0d0-131">この目的で、2 つの特定の UDT を構成ファイルの <`userDefinedTypes`> セクションに追加するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-131">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
+ <span data-ttu-id="d0852-131">この目的で、2 つの特定の UDT を構成ファイルの <`userDefinedTypes`> セクションに追加するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d0852-131">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
   
 ```xml  
 <comContracts>
@@ -88,12 +88,12 @@ ms.locfileid: "54148735"
 </comContracts>
 ```  
   
- <span data-ttu-id="cc0d0-132">サービスを初期化する場合、統合ランタイムは、指定された型を検索し、指定されたコントラクトで既知の型のコレクションにそれらを追加します。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-132">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
+ <span data-ttu-id="d0852-132">サービスを初期化する場合、統合ランタイムは、指定された型を検索し、指定されたコントラクトで既知の型のコレクションにそれらを追加します。</span><span class="sxs-lookup"><span data-stu-id="d0852-132">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc0d0-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="cc0d0-133">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
- <xref:System.ServiceModel.Configuration.ComUdtElement>  
- [<span data-ttu-id="cc0d0-134">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="cc0d0-134">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="cc0d0-135">COM+ アプリケーションとの統合</span><span class="sxs-lookup"><span data-stu-id="cc0d0-135">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="cc0d0-136">方法: COM + サービス設定を構成します。</span><span class="sxs-lookup"><span data-stu-id="cc0d0-136">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a><span data-ttu-id="d0852-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="d0852-133">See also</span></span>
+- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
+- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
+- <xref:System.ServiceModel.Configuration.ComUdtElement>
+- [<span data-ttu-id="d0852-134">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="d0852-134">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [<span data-ttu-id="d0852-135">COM+ アプリケーションとの統合</span><span class="sxs-lookup"><span data-stu-id="d0852-135">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="d0852-136">方法: COM + サービス設定を構成します。</span><span class="sxs-lookup"><span data-stu-id="d0852-136">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

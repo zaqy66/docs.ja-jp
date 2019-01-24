@@ -9,25 +9,25 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671981"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="1999c-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="1999c-102">ScrollViewer</span></span>
-<span data-ttu-id="1999c-103"><xref:System.Windows.Controls.ScrollViewer>コントロールは、コンテンツがスクロール可能水平方向または垂直方向にスクロール可能な領域を作成します。</span><span class="sxs-lookup"><span data-stu-id="1999c-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="ab2cc-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ab2cc-102">ScrollViewer</span></span>
+<span data-ttu-id="ab2cc-103"><xref:System.Windows.Controls.ScrollViewer>コントロールが水平方向または垂直方向でスクロールできるコンテンツのスクロール可能な領域を作成します。</span><span class="sxs-lookup"><span data-stu-id="ab2cc-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1999c-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1999c-104">In This Section</span></span>  
- [<span data-ttu-id="1999c-105">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="1999c-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [<span data-ttu-id="1999c-106">方法トピック</span><span class="sxs-lookup"><span data-stu-id="1999c-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ab2cc-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ab2cc-104">In This Section</span></span>  
+ [<span data-ttu-id="ab2cc-105">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="ab2cc-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
+ [<span data-ttu-id="ab2cc-106">方法トピック</span><span class="sxs-lookup"><span data-stu-id="ab2cc-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="1999c-107">参照</span><span class="sxs-lookup"><span data-stu-id="1999c-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ab2cc-107">参照</span><span class="sxs-lookup"><span data-stu-id="ab2cc-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="1999c-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="1999c-108">See Also</span></span>  
- [<span data-ttu-id="1999c-109">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="1999c-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="1999c-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="1999c-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="ab2cc-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab2cc-108">See also</span></span>
+- [<span data-ttu-id="ab2cc-109">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="ab2cc-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="ab2cc-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="ab2cc-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
