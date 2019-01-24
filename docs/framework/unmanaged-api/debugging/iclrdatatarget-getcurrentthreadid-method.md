@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03ce49466587d3e214c32e2a5cca89cdd7a72038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb1e0aec9ce746c3082ad9cc57b572cbca0fd7e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552265"
 ---
-# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="83c25-102">ICLRDataTarget::GetCurrentThreadID メソッド</span><span class="sxs-lookup"><span data-stu-id="83c25-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="83c25-103">現在のスレッドのオペレーティング システムの識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="83c25-103">Gets the operating system identifier for the current thread.</span></span>  
+# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="c8141-102">ICLRDataTarget::GetCurrentThreadID メソッド</span><span class="sxs-lookup"><span data-stu-id="c8141-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="c8141-103">現在のスレッドのオペレーティング システムの識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="c8141-103">Gets the operating system identifier for the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83c25-104">構文</span><span class="sxs-lookup"><span data-stu-id="83c25-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8141-104">構文</span><span class="sxs-lookup"><span data-stu-id="c8141-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentThreadID (  
@@ -35,21 +35,21 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="83c25-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="83c25-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c8141-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c8141-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="83c25-106">[out]ターゲット プロセスの現在のスレッドのオペレーティング システム識別子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="83c25-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
+ <span data-ttu-id="c8141-106">[out]ターゲット プロセスの現在のスレッドのオペレーティング システムの識別子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="c8141-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="83c25-107">コメント</span><span class="sxs-lookup"><span data-stu-id="83c25-107">Remarks</span></span>  
- <span data-ttu-id="83c25-108">ターゲット プロセスでは、現在のスレッドが存在しない場合、`GetCurrentThreadID`メソッドが失敗する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="83c25-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8141-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="c8141-107">Remarks</span></span>  
+ <span data-ttu-id="c8141-108">ターゲット プロセスでは、現在のスレッドが存在しない場合、`GetCurrentThreadID`メソッドが失敗する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="c8141-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83c25-109">要件</span><span class="sxs-lookup"><span data-stu-id="83c25-109">Requirements</span></span>  
- <span data-ttu-id="83c25-110">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="83c25-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8141-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="c8141-109">Requirements</span></span>  
+ <span data-ttu-id="c8141-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c8141-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83c25-111">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="83c25-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="c8141-111">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="c8141-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="83c25-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83c25-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c8141-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8141-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="83c25-113">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83c25-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c8141-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8141-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83c25-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="83c25-114">See Also</span></span>  
- [<span data-ttu-id="83c25-115">ICLRDataTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="83c25-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c8141-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c8141-114">See also</span></span>
+- [<span data-ttu-id="c8141-115">ICLRDataTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c8141-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
