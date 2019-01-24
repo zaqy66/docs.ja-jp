@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 6b2c041be62a274323411e6faceb86c3fa666869
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 791c77999b246c1a63767a937189fc6cb970e08f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607973"
 ---
 # <a name="message-security-user-name"></a>メッセージ セキュリティ ユーザー名
 このサンプルでは、クライアントのユーザー名認証による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509v3 証明書を使用するサーバー認証が必要です。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows アカウントへのログオンに使用されます。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)します。 このサンプルは、クライアント コンソール プログラム (Client.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (Service.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
