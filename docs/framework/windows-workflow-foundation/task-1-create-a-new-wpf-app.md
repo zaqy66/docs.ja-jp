@@ -1,47 +1,47 @@
 ---
-title: 'タスク 1: 新しい Windows Presentation Foundation アプリケーションの作成'
+title: タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 5576d6f893aa405d454758387334b85a473b0c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679410"
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a><span data-ttu-id="f94bf-102">タスク 1: 新しい Windows Presentation Foundation アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="f94bf-102">Task 1: Create a New Windows Presentation Foundation Application</span></span>
-<span data-ttu-id="f94bf-103">このタスクでは、WPF Application Visual Studio テンプレートを使用して空の Windows Presentation Foundation (WPF) アプリケーションを作成し、適切な参照を追加[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]ワークフロー アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="f94bf-103">In this task, you will create an empty Windows Presentation Foundation (WPF) application by using the WPF Application Visual Studio template and add references to the appropriate [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow assemblies.</span></span>  
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a><span data-ttu-id="31262-102">タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="31262-102">Task 1: Create a New Windows Presentation Foundation Application</span></span>
+<span data-ttu-id="31262-103">このタスクでは、WPF Application Visual Studio テンプレートを使用して空の Windows Presentation Foundation (WPF) アプリケーションを作成し、適切な参照を追加[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]ワークフロー アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="31262-103">In this task, you will create an empty Windows Presentation Foundation (WPF) application by using the WPF Application Visual Studio template and add references to the appropriate [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow assemblies.</span></span>  
   
-### <a name="to-create-the-wpf-application-project"></a><span data-ttu-id="f94bf-104">WPF アプリケーション プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="f94bf-104">To create the WPF Application project</span></span>  
+### <a name="to-create-the-wpf-application-project"></a><span data-ttu-id="31262-104">WPF アプリケーション プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="31262-104">To create the WPF Application project</span></span>  
   
-1.  <span data-ttu-id="f94bf-105">Visual Studio を開き、および、**ファイル** メニューのをポイント**新規**、順にクリック**プロジェクト**です。</span><span class="sxs-lookup"><span data-stu-id="f94bf-105">Open Visual Studio and on the **File** menu, point to **New**, and then click **Project**.</span></span>  
+1.  <span data-ttu-id="31262-105">Visual Studio を起動し、**ファイル**メニューで、**新規**、順にクリックします**プロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="31262-105">Open Visual Studio and on the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-2.  <span data-ttu-id="f94bf-106">**新しいプロジェクト** ダイアログ ボックスで、いずれかを選択**Visual c#** または**Visual Basic**から、**インストールされたテンプレート**の左側にあるウィンドウボックス。</span><span class="sxs-lookup"><span data-stu-id="f94bf-106">In the **New Project** dialog box, select either **Visual C#** or **Visual Basic** from the **Installed Templates** pane on the left side of the box.</span></span> <span data-ttu-id="f94bf-107">任意の言語が表示されない場合は、下にある検索**他の言語**します。</span><span class="sxs-lookup"><span data-stu-id="f94bf-107">If the language of your choice does not appear, look under **Other Languages**.</span></span>  
+2.  <span data-ttu-id="31262-106">**新しいプロジェクト** ダイアログ ボックスで、いずれかを選択**Visual C#** または**Visual Basic**から、**インストールされたテンプレート**左側のウィンドウボックスのあります。</span><span class="sxs-lookup"><span data-stu-id="31262-106">In the **New Project** dialog box, select either **Visual C#** or **Visual Basic** from the **Installed Templates** pane on the left side of the box.</span></span> <span data-ttu-id="31262-107">好みの言語が表示されない場合は、検索**他の言語**します。</span><span class="sxs-lookup"><span data-stu-id="31262-107">If the language of your choice does not appear, look under **Other Languages**.</span></span>  
   
-3.  <span data-ttu-id="f94bf-108">選択**Windows**で、**インストールされたテンプレート**ウィンドウです。</span><span class="sxs-lookup"><span data-stu-id="f94bf-108">Select **Windows** in the **Installed Templates** pane.</span></span>  
+3.  <span data-ttu-id="31262-108">選択**Windows**で、**インストールされたテンプレート**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="31262-108">Select **Windows** in the **Installed Templates** pane.</span></span>  
   
-4.  <span data-ttu-id="f94bf-109">上部のペインにいることを確認 (既定値) **.NET Framework 4**が選択されてドロップダウン リスト ボックスで、 **WPF アプリケーション**です。</span><span class="sxs-lookup"><span data-stu-id="f94bf-109">In the top pane, confirm that (the default value) **.NET Framework 4** has been selected in the drop-down list box, and then select **WPF Application**.</span></span>  
+4.  <span data-ttu-id="31262-109">上部のペインのことを確認します (既定値) **.NET Framework 4**し、ドロップダウン リスト ボックスで、選択したされました**WPF アプリケーション**します。</span><span class="sxs-lookup"><span data-stu-id="31262-109">In the top pane, confirm that (the default value) **.NET Framework 4** has been selected in the drop-down list box, and then select **WPF Application**.</span></span>  
   
-5.  <span data-ttu-id="f94bf-110">プロジェクトの名前を設定**HostingApplication**ウィンドウの下部にあります。</span><span class="sxs-lookup"><span data-stu-id="f94bf-110">Set the name of the project to **HostingApplication** at the bottom of the window.</span></span>  
+5.  <span data-ttu-id="31262-110">プロジェクトの名前を設定**HostingApplication**ウィンドウの下部にあります。</span><span class="sxs-lookup"><span data-stu-id="31262-110">Set the name of the project to **HostingApplication** at the bottom of the window.</span></span>  
   
-6.  <span data-ttu-id="f94bf-111">ソリューション名を設定します**RehostingTheDesigner**です。</span><span class="sxs-lookup"><span data-stu-id="f94bf-111">Set the solution name to **RehostingTheDesigner**.</span></span>  
+6.  <span data-ttu-id="31262-111">ソリューション名を設定**RehostingTheDesigner**します。</span><span class="sxs-lookup"><span data-stu-id="31262-111">Set the solution name to **RehostingTheDesigner**.</span></span>  
   
-7.  <span data-ttu-id="f94bf-112">をクリックして**OK**アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="f94bf-112">Click **OK** to create the application project.</span></span> <span data-ttu-id="f94bf-113">Visual Studio では、アプリケーションの基本的な WPF UI を作成し、適切な XAML と分離コード ファイルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f94bf-113">Visual Studio creates a basic WPF UI for your application and includes the appropriate XAML and code-behind files.</span></span>  
+7.  <span data-ttu-id="31262-112">クリックして**OK**アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="31262-112">Click **OK** to create the application project.</span></span> <span data-ttu-id="31262-113">Visual Studio では、アプリケーションの基本的な WPF UI を作成し、適切な XAML と分離コード ファイルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="31262-113">Visual Studio creates a basic WPF UI for your application and includes the appropriate XAML and code-behind files.</span></span>  
   
-8.  <span data-ttu-id="f94bf-114">参照を追加**WorkflowModel**アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="f94bf-114">Add references to **WorkflowModel** assemblies.</span></span> <span data-ttu-id="f94bf-115">これを行うで**ソリューション エクスプ ローラー**を右クリックし、 **HostingApplication**プロジェクトし、選択**参照の追加**です。</span><span class="sxs-lookup"><span data-stu-id="f94bf-115">To do this, in **Solution Explorer**, right-click the **HostingApplication** project and select **Add Reference**.</span></span>  
+8.  <span data-ttu-id="31262-114">参照を追加**WorkflowModel**アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="31262-114">Add references to **WorkflowModel** assemblies.</span></span> <span data-ttu-id="31262-115">この場合に**ソリューション エクスプ ローラー**を右クリックし、 **HostingApplication**順に選択して**参照の追加**。</span><span class="sxs-lookup"><span data-stu-id="31262-115">To do this, in **Solution Explorer**, right-click the **HostingApplication** project and select **Add Reference**.</span></span>  
   
-9. <span data-ttu-id="f94bf-116">**参照の追加**ダイアログ ボックスで、をクリックして、 **.NET**  タブ、CTRL キーを押しながら、次のアセンブリを選択し、をクリックして**OK**:</span><span class="sxs-lookup"><span data-stu-id="f94bf-116">In the **Add Reference** dialog box, click the **.NET** tab, hold down the CTRL key, select the following assemblies, and then click **OK**:</span></span>  
+9. <span data-ttu-id="31262-116">**参照の追加**ダイアログ ボックスで、をクリックして、 **.NET**  タブ、CTRL キーを押し、次のアセンブリを選択し、順にクリックします**OK**:</span><span class="sxs-lookup"><span data-stu-id="31262-116">In the **Add Reference** dialog box, click the **.NET** tab, hold down the CTRL key, select the following assemblies, and then click **OK**:</span></span>  
   
-    -   <span data-ttu-id="f94bf-117">System.Activities</span><span class="sxs-lookup"><span data-stu-id="f94bf-117">System.Activities</span></span>  
+    -   <span data-ttu-id="31262-117">System.Activities</span><span class="sxs-lookup"><span data-stu-id="31262-117">System.Activities</span></span>  
   
-    -   <span data-ttu-id="f94bf-118">System.Activities.Presentation</span><span class="sxs-lookup"><span data-stu-id="f94bf-118">System.Activities.Presentation</span></span>  
+    -   <span data-ttu-id="31262-118">System.Activities.Presentation</span><span class="sxs-lookup"><span data-stu-id="31262-118">System.Activities.Presentation</span></span>  
   
-    -   <span data-ttu-id="f94bf-119">System.Activities.Core.Presentation</span><span class="sxs-lookup"><span data-stu-id="f94bf-119">System.Activities.Core.Presentation</span></span>  
+    -   <span data-ttu-id="31262-119">System.Activities.Core.Presentation</span><span class="sxs-lookup"><span data-stu-id="31262-119">System.Activities.Core.Presentation</span></span>  
   
-10. <span data-ttu-id="f94bf-120">**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="f94bf-120">Click **OK**.</span></span>  
+10. <span data-ttu-id="31262-120">**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="31262-120">Click **OK**.</span></span>  
   
-11. <span data-ttu-id="f94bf-121">参照してください[タスク 2: ワークフロー デザイナーのホスティング](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)をワークフロー デザイナーのデザイン キャンバスをホストする方法を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f94bf-121">See [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) to learn how to host the workflow designer design canvas.</span></span>  
+11. <span data-ttu-id="31262-121">参照してください[タスク 2。ワークフロー デザイナーのホスティング](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)をワークフロー デザイナーのデザイン キャンバスをホストする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="31262-121">See [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) to learn how to host the workflow designer design canvas.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f94bf-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="f94bf-122">See Also</span></span>  
- [<span data-ttu-id="f94bf-123">ワークフロー デザイナーのホスト変更</span><span class="sxs-lookup"><span data-stu-id="f94bf-123">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="f94bf-124">タスク 2: ワークフロー デザイナーのホスティング</span><span class="sxs-lookup"><span data-stu-id="f94bf-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a><span data-ttu-id="31262-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="31262-122">See also</span></span>
+- [<span data-ttu-id="31262-123">ワークフロー デザイナーのホスト変更</span><span class="sxs-lookup"><span data-stu-id="31262-123">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [<span data-ttu-id="31262-124">タスク 2:ワークフロー デザイナーをホスティングします。</span><span class="sxs-lookup"><span data-stu-id="31262-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

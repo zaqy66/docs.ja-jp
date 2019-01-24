@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 624db77f0db2fe374e16abae64b6bf6ad290baa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c38ce53ca1c02ead03ab9d1ff1e53cda772333f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739720"
 ---
-# <a name="icordebugcode4-interface"></a><span data-ttu-id="91c34-102">ICorDebugCode4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91c34-102">ICorDebugCode4 Interface</span></span>
-<span data-ttu-id="91c34-103">ローカル変数と関数の引数を列挙するデバッガーを有効にするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="91c34-103">Provides a method that enables a debugger to enumerate the local variables and arguments in a function.</span></span>  
+# <a name="icordebugcode4-interface"></a><span data-ttu-id="7acf3-102">ICorDebugCode4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7acf3-102">ICorDebugCode4 Interface</span></span>
+<span data-ttu-id="7acf3-103">ローカル変数と関数の引数を列挙するためにデバッガーをできるようにするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="7acf3-103">Provides a method that enables a debugger to enumerate the local variables and arguments in a function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="91c34-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="91c34-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7acf3-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="7acf3-104">Methods</span></span>  
   
-|<span data-ttu-id="91c34-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="91c34-105">Method</span></span>|<span data-ttu-id="91c34-106">説明</span><span class="sxs-lookup"><span data-stu-id="91c34-106">Description</span></span>|  
+|<span data-ttu-id="7acf3-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="7acf3-105">Method</span></span>|<span data-ttu-id="7acf3-106">説明</span><span class="sxs-lookup"><span data-stu-id="7acf3-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="91c34-107">EnumerateVariableHomes メソッド</span><span class="sxs-lookup"><span data-stu-id="91c34-107">EnumerateVariableHomes Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|<span data-ttu-id="91c34-108">ローカル変数と引数を関数内の列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="91c34-108">Gets an enumerator to the local variables and arguments in a function.</span></span>|  
+|[<span data-ttu-id="7acf3-107">EnumerateVariableHomes メソッド</span><span class="sxs-lookup"><span data-stu-id="7acf3-107">EnumerateVariableHomes Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|<span data-ttu-id="7acf3-108">ローカル変数と引数を関数内の列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="7acf3-108">Gets an enumerator to the local variables and arguments in a function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="91c34-109">コメント</span><span class="sxs-lookup"><span data-stu-id="91c34-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7acf3-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="7acf3-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="91c34-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="91c34-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="7acf3-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="7acf3-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="91c34-111">要件</span><span class="sxs-lookup"><span data-stu-id="91c34-111">Requirements</span></span>  
- <span data-ttu-id="91c34-112">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="91c34-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7acf3-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="7acf3-111">Requirements</span></span>  
+ <span data-ttu-id="7acf3-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7acf3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="91c34-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="91c34-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7acf3-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7acf3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="91c34-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="91c34-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7acf3-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7acf3-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="91c34-115">**.NET framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91c34-115">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="7acf3-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7acf3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91c34-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="91c34-116">See Also</span></span>  
-    
-    
- [<span data-ttu-id="91c34-117">ICorDebugCode3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91c34-117">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- [<span data-ttu-id="91c34-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91c34-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7acf3-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="7acf3-116">See also</span></span>
+
+
+- [<span data-ttu-id="7acf3-117">ICorDebugCode3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7acf3-117">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [<span data-ttu-id="7acf3-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7acf3-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664526"
 ---
-# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="abd66-102">ICorDebugNativeFrame::GetLocalMemoryValue メソッド</span><span class="sxs-lookup"><span data-stu-id="abd66-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
-<span data-ttu-id="abd66-103">引数またはこのネイティブ フレームの指定したメモリ位置に格納されているローカル変数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="abd66-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="03050-102">ICorDebugNativeFrame::GetLocalMemoryValue メソッド</span><span class="sxs-lookup"><span data-stu-id="03050-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
+<span data-ttu-id="03050-103">このネイティブ フレームに指定したメモリ位置に格納されているローカル変数または引数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="03050-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abd66-104">構文</span><span class="sxs-lookup"><span data-stu-id="abd66-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03050-104">構文</span><span class="sxs-lookup"><span data-stu-id="03050-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalMemoryValue (  
@@ -38,27 +38,27 @@ HRESULT GetLocalMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="abd66-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="abd66-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="03050-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="03050-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="abd66-106">[in]A`CORDB_ADDRESS`値を含むメモリの場所を指定する値。</span><span class="sxs-lookup"><span data-stu-id="abd66-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
+ <span data-ttu-id="03050-106">[in]A`CORDB_ADDRESS`値を格納しているメモリの場所を指定する値。</span><span class="sxs-lookup"><span data-stu-id="03050-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="abd66-107">[in]によって参照されているバイナリ メタデータ シグネチャのサイズを指定する整数、`pvSigBlob`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="abd66-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="03050-107">[in]によって参照されているバイナリ メタデータ シグネチャのサイズを指定する整数、`pvSigBlob`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="03050-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="abd66-108">[in]A`PCCOR_SIGNATURE`値の型のバイナリ メタデータ シグネチャを指している値。</span><span class="sxs-lookup"><span data-stu-id="abd66-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="03050-108">[in]A`PCCOR_SIGNATURE`値の型のバイナリ メタデータ シグネチャを示す値。</span><span class="sxs-lookup"><span data-stu-id="03050-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="abd66-109">[out]指定されたメモリ位置に格納されている取得した値を表す"ICorDebugValue"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="abd66-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
+ <span data-ttu-id="03050-109">[out]指定されたメモリ位置に格納されている取得した値を表す"ICorDebugValue"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="03050-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="abd66-110">要件</span><span class="sxs-lookup"><span data-stu-id="abd66-110">Requirements</span></span>  
- <span data-ttu-id="abd66-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="abd66-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03050-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="03050-110">Requirements</span></span>  
+ <span data-ttu-id="03050-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="03050-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abd66-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="abd66-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="03050-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="03050-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="abd66-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abd66-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="03050-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03050-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="abd66-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abd66-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="03050-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03050-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abd66-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="abd66-115">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="03050-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="03050-115">See also</span></span>
+

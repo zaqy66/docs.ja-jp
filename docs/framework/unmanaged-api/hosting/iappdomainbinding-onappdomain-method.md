@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5db040f6db078b211043c547eed823c9b495ac97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8dfd396568424c3a2300ed5d982e766afd5f925f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725494"
 ---
-# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="b47ef-102">IAppDomainBinding::OnAppDomain メソッド</span><span class="sxs-lookup"><span data-stu-id="b47ef-102">IAppDomainBinding::OnAppDomain Method</span></span>
-<span data-ttu-id="b47ef-103">共通言語ランタイム (CLR) にアプリケーション ドメインが作成されているホストに通知によって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="b47ef-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
+# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="59fe3-102">IAppDomainBinding::OnAppDomain メソッド</span><span class="sxs-lookup"><span data-stu-id="59fe3-102">IAppDomainBinding::OnAppDomain Method</span></span>
+<span data-ttu-id="59fe3-103">共通言語ランタイム (CLR) に、ホスト アプリケーション ドメインが作成されたことを通知するによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="59fe3-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b47ef-104">構文</span><span class="sxs-lookup"><span data-stu-id="b47ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59fe3-104">構文</span><span class="sxs-lookup"><span data-stu-id="59fe3-104">Syntax</span></span>  
   
 ```  
 HRESULT OnAppDomain (  
@@ -35,18 +35,18 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b47ef-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b47ef-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="59fe3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="59fe3-105">Parameters</span></span>  
  `pAppdomain`  
- <span data-ttu-id="b47ef-106">[in]ポインター、 [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx)を新しいアプリケーション ドメインを表すインターフェイス オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b47ef-106">[in] A pointer to an [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx) interface object that represents the new application domain.</span></span>  
+ <span data-ttu-id="59fe3-106">[in]ポインター、 [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx)新しいアプリケーション ドメインを表すインターフェイス オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="59fe3-106">[in] A pointer to an [IUnknown](https://msdn.microsoft.com/library/94as6ehy(v=vs.110).aspx) interface object that represents the new application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b47ef-107">要件</span><span class="sxs-lookup"><span data-stu-id="b47ef-107">Requirements</span></span>  
- <span data-ttu-id="b47ef-108">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="b47ef-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="59fe3-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="59fe3-107">Requirements</span></span>  
+ <span data-ttu-id="59fe3-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="59fe3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b47ef-109">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b47ef-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="59fe3-109">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="59fe3-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b47ef-110">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="b47ef-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="59fe3-110">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="59fe3-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b47ef-111">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b47ef-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="59fe3-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59fe3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b47ef-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="b47ef-112">See Also</span></span>  
- [<span data-ttu-id="b47ef-113">IAppDomainBinding インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b47ef-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+## <a name="see-also"></a><span data-ttu-id="59fe3-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="59fe3-112">See also</span></span>
+- [<span data-ttu-id="59fe3-113">IAppDomainBinding インターフェイス</span><span class="sxs-lookup"><span data-stu-id="59fe3-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)

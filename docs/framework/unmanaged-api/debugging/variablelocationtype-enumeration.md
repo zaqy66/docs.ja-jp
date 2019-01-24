@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cc7a299e6be328095c0368acf0a4b767fb74d01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653217"
 ---
-# <a name="variablelocationtype-enumeration"></a><span data-ttu-id="e5158-102">VariableLocationType 列挙型</span><span class="sxs-lookup"><span data-stu-id="e5158-102">VariableLocationType Enumeration</span></span>
-<span data-ttu-id="e5158-103">変数のネイティブの場所の種類を示します。</span><span class="sxs-lookup"><span data-stu-id="e5158-103">Indicates the native location type of a variable.</span></span>  
+# <a name="variablelocationtype-enumeration"></a><span data-ttu-id="36628-102">VariableLocationType 列挙型</span><span class="sxs-lookup"><span data-stu-id="36628-102">VariableLocationType Enumeration</span></span>
+<span data-ttu-id="36628-103">変数のネイティブの場所の種類を示します。</span><span class="sxs-lookup"><span data-stu-id="36628-103">Indicates the native location type of a variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5158-104">構文</span><span class="sxs-lookup"><span data-stu-id="e5158-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36628-104">構文</span><span class="sxs-lookup"><span data-stu-id="36628-104">Syntax</span></span>  
   
 ```  
 typedef enum VariableLocationType  
@@ -37,25 +37,25 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e5158-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e5158-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="36628-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="36628-105">Members</span></span>  
   
-|<span data-ttu-id="e5158-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="e5158-106">Member</span></span>|<span data-ttu-id="e5158-107">説明</span><span class="sxs-lookup"><span data-stu-id="e5158-107">Description</span></span>|  
+|<span data-ttu-id="36628-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="36628-106">Member</span></span>|<span data-ttu-id="36628-107">説明</span><span class="sxs-lookup"><span data-stu-id="36628-107">Description</span></span>|  
 |------------|-----------------|  
-|`VLT_REGISTER`|<span data-ttu-id="e5158-108">変数は、レジスタには。</span><span class="sxs-lookup"><span data-stu-id="e5158-108">The variable is in a register.</span></span>|  
-|`VLT_REGISTER_RELATIVE`|<span data-ttu-id="e5158-109">変数は、レジスタの相対メモリの場所には。</span><span class="sxs-lookup"><span data-stu-id="e5158-109">The variable is in a register-relative memory location.</span></span>|  
-|`VLT_INVALID`|<span data-ttu-id="e5158-110">変数は、登録または登録の相対メモリの場所に格納されません。</span><span class="sxs-lookup"><span data-stu-id="e5158-110">The variable is not stored in a register or a register-relative memory location.</span></span>|  
+|`VLT_REGISTER`|<span data-ttu-id="36628-108">変数はレジスタでは。</span><span class="sxs-lookup"><span data-stu-id="36628-108">The variable is in a register.</span></span>|  
+|`VLT_REGISTER_RELATIVE`|<span data-ttu-id="36628-109">変数は、レジスタの相対メモリの場所には。</span><span class="sxs-lookup"><span data-stu-id="36628-109">The variable is in a register-relative memory location.</span></span>|  
+|`VLT_INVALID`|<span data-ttu-id="36628-110">変数はレジスタやレジスタの相対メモリの場所は保存されません。</span><span class="sxs-lookup"><span data-stu-id="36628-110">The variable is not stored in a register or a register-relative memory location.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e5158-111">コメント</span><span class="sxs-lookup"><span data-stu-id="e5158-111">Remarks</span></span>  
- <span data-ttu-id="e5158-112">メンバー、`VariableLocationType`列挙体は、によって返される、 [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)メソッドです。</span><span class="sxs-lookup"><span data-stu-id="e5158-112">A member of the `VariableLocationType` enumeration is returned by the [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="36628-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="36628-111">Remarks</span></span>  
+ <span data-ttu-id="36628-112">メンバー、`VariableLocationType`列挙体は、によって返される、 [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="36628-112">A member of the `VariableLocationType` enumeration is returned by the [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5158-113">要件</span><span class="sxs-lookup"><span data-stu-id="e5158-113">Requirements</span></span>  
- <span data-ttu-id="e5158-114">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="e5158-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36628-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="36628-113">Requirements</span></span>  
+ <span data-ttu-id="36628-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="36628-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5158-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e5158-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="36628-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="36628-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e5158-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5158-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="36628-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36628-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e5158-117">**.NET framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5158-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="36628-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36628-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5158-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="e5158-118">See Also</span></span>  
- [<span data-ttu-id="e5158-119">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="e5158-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="36628-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="36628-118">See also</span></span>
+- [<span data-ttu-id="36628-119">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="36628-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
