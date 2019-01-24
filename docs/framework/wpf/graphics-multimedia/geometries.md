@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: f595a214e807c2657ef5affd9e52fdf49aa24837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605800"
 ---
-# <a name="geometries"></a><span data-ttu-id="07668-102">ジオメトリ</span><span class="sxs-lookup"><span data-stu-id="07668-102">Geometries</span></span>
-<span data-ttu-id="07668-103"><xref:System.Windows.Media.Geometry> 汎用クラスで、表示するために使用される[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]グラフィックス、ヒット テスト オブジェクト、およびクリッピング領域を定義します。</span><span class="sxs-lookup"><span data-stu-id="07668-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
+# <a name="geometries"></a><span data-ttu-id="ee06d-102">ジオメトリ</span><span class="sxs-lookup"><span data-stu-id="ee06d-102">Geometries</span></span>
+<span data-ttu-id="ee06d-103"><xref:System.Windows.Media.Geometry> 表示するために使用される、汎用的なクラスは、[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]グラフィックス、ヒット テスト オブジェクト、およびクリッピング領域を定義</span><span class="sxs-lookup"><span data-stu-id="ee06d-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="07668-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="07668-104">In This Section</span></span>  
- [<span data-ttu-id="07668-105">パス マークアップ構文</span><span class="sxs-lookup"><span data-stu-id="07668-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [<span data-ttu-id="07668-106">ジオメトリの概要</span><span class="sxs-lookup"><span data-stu-id="07668-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [<span data-ttu-id="07668-107">方法トピック</span><span class="sxs-lookup"><span data-stu-id="07668-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ee06d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ee06d-104">In This Section</span></span>  
+ [<span data-ttu-id="ee06d-105">パス マークアップ構文</span><span class="sxs-lookup"><span data-stu-id="ee06d-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [<span data-ttu-id="ee06d-106">ジオメトリの概要</span><span class="sxs-lookup"><span data-stu-id="ee06d-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="ee06d-107">方法トピック</span><span class="sxs-lookup"><span data-stu-id="ee06d-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="07668-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="07668-108">See Also</span></span>  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="07668-109">2D グラフィックスとイメージング</span><span class="sxs-lookup"><span data-stu-id="07668-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="07668-110">WPF での図形と基本描画の概要</span><span class="sxs-lookup"><span data-stu-id="07668-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="07668-111">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="07668-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="ee06d-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="ee06d-108">See also</span></span>
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="ee06d-109">2D グラフィックスとイメージング</span><span class="sxs-lookup"><span data-stu-id="ee06d-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="ee06d-110">WPF での図形と基本描画の概要</span><span class="sxs-lookup"><span data-stu-id="ee06d-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="ee06d-111">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="ee06d-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

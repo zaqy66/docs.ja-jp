@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c259bc167d2d4fbadf0d4721e3329975cb0f0caf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dcc7770f95c0cb7d416480145a430d781e093f6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599670"
 ---
-# <a name="icorprofilerinfo2getobjectgeneration-method"></a><span data-ttu-id="cb68e-102">ICorProfilerInfo2::GetObjectGeneration メソッド</span><span class="sxs-lookup"><span data-stu-id="cb68e-102">ICorProfilerInfo2::GetObjectGeneration Method</span></span>
-<span data-ttu-id="cb68e-103">指定したオブジェクトを含むヒープのセグメントを取得します。</span><span class="sxs-lookup"><span data-stu-id="cb68e-103">Gets the segment of the heap that contains the specified object.</span></span>  
+# <a name="icorprofilerinfo2getobjectgeneration-method"></a><span data-ttu-id="2ec0b-102">ICorProfilerInfo2::GetObjectGeneration メソッド</span><span class="sxs-lookup"><span data-stu-id="2ec0b-102">ICorProfilerInfo2::GetObjectGeneration Method</span></span>
+<span data-ttu-id="2ec0b-103">指定したオブジェクトが含まれるヒープのセグメントを取得します。</span><span class="sxs-lookup"><span data-stu-id="2ec0b-103">Gets the segment of the heap that contains the specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb68e-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb68e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ec0b-104">構文</span><span class="sxs-lookup"><span data-stu-id="2ec0b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectGeneration(  
@@ -35,25 +35,25 @@ HRESULT GetObjectGeneration(
     [out] COR_PRF_GC_GENERATION_RANGE *range);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cb68e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb68e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2ec0b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2ec0b-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="cb68e-106">[in]オブジェクトの ID。</span><span class="sxs-lookup"><span data-stu-id="cb68e-106">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="2ec0b-106">[in]オブジェクトの ID。</span><span class="sxs-lookup"><span data-stu-id="2ec0b-106">[in] The ID of the object.</span></span>  
   
  `range`  
- <span data-ttu-id="cb68e-107">[out]ポインター、 [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)構造体は、ガベージ コレクションが実行しているジェネレーション内のメモリ範囲 (ブロック) を記述します。</span><span class="sxs-lookup"><span data-stu-id="cb68e-107">[out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection.</span></span> <span data-ttu-id="cb68e-108">この範囲には、指定したオブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cb68e-108">This range contains the specified object.</span></span>  
+ <span data-ttu-id="2ec0b-107">[out]ポインターを[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)構造体は、ガベージ コレクション ジェネレーション内のメモリの範囲 (ブロック) について説明します。</span><span class="sxs-lookup"><span data-stu-id="2ec0b-107">[out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection.</span></span> <span data-ttu-id="2ec0b-108">この範囲には、指定したオブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="2ec0b-108">This range contains the specified object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb68e-109">コメント</span><span class="sxs-lookup"><span data-stu-id="cb68e-109">Remarks</span></span>  
- <span data-ttu-id="cb68e-110">`GetObjectGeneration`ガベージ コレクションが実行されていないこと、任意のプロファイラー コールバックからメソッドを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="cb68e-110">The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress.</span></span> <span data-ttu-id="cb68e-111">つまり、間に発生するものを除く任意のコールバックから呼び出すことがあります[icorprofilercallback 2::garbagecollectionstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)と[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)です。</span><span class="sxs-lookup"><span data-stu-id="cb68e-111">That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ec0b-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="2ec0b-109">Remarks</span></span>  
+ <span data-ttu-id="2ec0b-110">`GetObjectGeneration`メソッドは、ガベージ コレクションが行われていないことの任意のプロファイラー コールバックから呼び出すことがあります。</span><span class="sxs-lookup"><span data-stu-id="2ec0b-110">The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress.</span></span> <span data-ttu-id="2ec0b-111">つまりの間に発生するものを除く任意のコールバックから呼び出すことがあります[icorprofilercallback 2::garbagecollectionstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)と[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="2ec0b-111">That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb68e-112">要件</span><span class="sxs-lookup"><span data-stu-id="cb68e-112">Requirements</span></span>  
- <span data-ttu-id="cb68e-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="cb68e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ec0b-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="2ec0b-112">Requirements</span></span>  
+ <span data-ttu-id="2ec0b-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2ec0b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb68e-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cb68e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2ec0b-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2ec0b-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cb68e-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb68e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ec0b-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ec0b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb68e-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb68e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2ec0b-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ec0b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb68e-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb68e-117">See Also</span></span>  
- [<span data-ttu-id="cb68e-118">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb68e-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="cb68e-119">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb68e-119">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2ec0b-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="2ec0b-117">See also</span></span>
+- [<span data-ttu-id="2ec0b-118">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2ec0b-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="2ec0b-119">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2ec0b-119">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

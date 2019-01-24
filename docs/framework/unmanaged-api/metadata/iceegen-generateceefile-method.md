@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d82952e34195ee813d4cd0217c904a5253859f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 78cbede0522ce7b78f0a6518ba506b69b4b0515e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712967"
 ---
-# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="b190a-102">ICeeGen::GenerateCeeFile メソッド</span><span class="sxs-lookup"><span data-stu-id="b190a-102">ICeeGen::GenerateCeeFile Method</span></span>
-<span data-ttu-id="b190a-103">これに現在読み込まれているコード ベースを含むコード ベースのファイルを生成[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b190a-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
+# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="9a5de-102">ICeeGen::GenerateCeeFile メソッド</span><span class="sxs-lookup"><span data-stu-id="9a5de-102">ICeeGen::GenerateCeeFile Method</span></span>
+<span data-ttu-id="9a5de-103">これに現在読み込まれてコード ベースを含むコード ベースのファイルが生成されます[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="9a5de-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
   
- <span data-ttu-id="b190a-104">このメソッドは、古いは使用できません。</span><span class="sxs-lookup"><span data-stu-id="b190a-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="9a5de-104">このメソッドは廃止され、使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9a5de-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b190a-105">構文</span><span class="sxs-lookup"><span data-stu-id="b190a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a5de-105">構文</span><span class="sxs-lookup"><span data-stu-id="9a5de-105">Syntax</span></span>  
   
 ```  
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b190a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b190a-106">Parameters</span></span>  
- <span data-ttu-id="b190a-107">`GenerateCeeFile` パラメーターはありません。</span><span class="sxs-lookup"><span data-stu-id="b190a-107">`GenerateCeeFile` takes no parameters.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9a5de-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9a5de-106">Parameters</span></span>  
+ <span data-ttu-id="9a5de-107">`GenerateCeeFile` パラメーターはありません。</span><span class="sxs-lookup"><span data-stu-id="9a5de-107">`GenerateCeeFile` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b190a-108">要件</span><span class="sxs-lookup"><span data-stu-id="b190a-108">Requirements</span></span>  
- <span data-ttu-id="b190a-109">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="b190a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a5de-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="9a5de-108">Requirements</span></span>  
+ <span data-ttu-id="9a5de-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9a5de-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b190a-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b190a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9a5de-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9a5de-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b190a-111">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="b190a-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9a5de-111">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="9a5de-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b190a-112">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b190a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9a5de-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a5de-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b190a-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b190a-113">See Also</span></span>  
- [<span data-ttu-id="b190a-114">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b190a-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9a5de-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a5de-113">See also</span></span>
+- [<span data-ttu-id="9a5de-114">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9a5de-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

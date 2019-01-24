@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684116"
 ---
-# <a name="drawings"></a><span data-ttu-id="049f5-102">描画</span><span class="sxs-lookup"><span data-stu-id="049f5-102">Drawings</span></span>
-<span data-ttu-id="049f5-103"><xref:System.Windows.Media.Drawing> オブジェクトは、効率的に図形、画像、またはテキストの描画に使用されます。</span><span class="sxs-lookup"><span data-stu-id="049f5-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="049f5-104">描画するときに図面が使用される、<xref:System.Windows.Media.DrawingBrush>とプログラミングまたは<xref:System.Windows.Media.Visual>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="049f5-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
+# <a name="drawings"></a><span data-ttu-id="e7668-102">描画</span><span class="sxs-lookup"><span data-stu-id="e7668-102">Drawings</span></span>
+<span data-ttu-id="e7668-103"><xref:System.Windows.Media.Drawing> オブジェクトは、図形、画像、またはテキストを効率的に描画するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="e7668-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="e7668-104">描画するときに描画を使用、<xref:System.Windows.Media.DrawingBrush>をプログラミングまたは<xref:System.Windows.Media.Visual>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="e7668-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="049f5-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="049f5-105">In This Section</span></span>  
- [<span data-ttu-id="049f5-106">Drawing オブジェクトの概要</span><span class="sxs-lookup"><span data-stu-id="049f5-106">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [<span data-ttu-id="049f5-107">方法トピック</span><span class="sxs-lookup"><span data-stu-id="049f5-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e7668-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e7668-105">In This Section</span></span>  
+ [<span data-ttu-id="e7668-106">Drawing オブジェクトの概要</span><span class="sxs-lookup"><span data-stu-id="e7668-106">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+  [<span data-ttu-id="e7668-107">方法トピック</span><span class="sxs-lookup"><span data-stu-id="e7668-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="049f5-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="049f5-108">See Also</span></span>  
- <xref:System.Windows.Media.Drawing>  
- [<span data-ttu-id="049f5-109">2D グラフィックスとイメージング</span><span class="sxs-lookup"><span data-stu-id="049f5-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="049f5-110">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="049f5-110">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="049f5-111">WPF での図形と基本描画の概要</span><span class="sxs-lookup"><span data-stu-id="049f5-111">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="049f5-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="049f5-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="e7668-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7668-108">See also</span></span>
+- <xref:System.Windows.Media.Drawing>
+- [<span data-ttu-id="e7668-109">2D グラフィックスとイメージング</span><span class="sxs-lookup"><span data-stu-id="e7668-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="e7668-110">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="e7668-110">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="e7668-111">WPF での図形と基本描画の概要</span><span class="sxs-lookup"><span data-stu-id="e7668-111">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="e7668-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="e7668-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
