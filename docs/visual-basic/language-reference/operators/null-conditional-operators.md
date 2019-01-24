@@ -6,18 +6,18 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: c29362a1e335e18b66821919e266b1ce57774692
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d30d452a7c140a0c56529386b14ef3a3512df490
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722154"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. そして。() null 条件演算子 (Visual Basic)
 
 Null の左側のオペランドの値をテスト (`Nothing`) メンバー アクセスを実行する前に (`?.`) またはインデックス (`?()`); の操作を返します。`Nothing`に左側のオペランドが評価された場合`Nothing`します。 値の型を返すことが通常は、式の null 条件演算子を返すことに注意してください、<xref:System.Nullable%601>します。
 
-これらの演算子を使用して、データ構造を下って場合は特に、null のチェックを処理するには、少ないコードを記述するのに役立ちます。 例えば:
+これらの演算子を使用して、データ構造を下って場合は特に、null のチェックを処理するには、少ないコードを記述するのに役立ちます。 例:
 
 ```vb
 Dim length As Integer? = customers?.Length  ' Nothing if customers is Nothing  
@@ -60,4 +60,4 @@ PropertyChanged?.Invoke(…)
 
 - [演算子 (Visual Basic)](index.md)
 - [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)
-- [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
+- [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)

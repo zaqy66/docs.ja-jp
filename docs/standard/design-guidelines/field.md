@@ -8,12 +8,12 @@ helpviewer_keywords:
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: KrzysztofCwalina
-ms.openlocfilehash: 34c5a163e545b78c188f37b2819962b4c7c56f80
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3ab8fe279605c4795bb3a26557d0241b186b273a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690450"
 ---
 # <a name="field-design"></a>フィールドのデザイン
 カプセル化の原理は、最も重要な概念の 1 つをオブジェクト指向設計にです。 この原則は、データ オブジェクト内に格納されますが、そのオブジェクトのみがアクセスできるがあることを示しています。  
@@ -44,5 +44,5 @@ ms.locfileid: "53144352"
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

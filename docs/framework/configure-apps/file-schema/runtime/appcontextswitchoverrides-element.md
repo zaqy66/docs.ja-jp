@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5498874661f36ee4e96e6d2d58e3076bb8abbcce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc68ba1d87a6dcb638eae5bfa041baeaf0846800
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699936"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
   
  \<configuration>  
- \<ランタイム >  
+ \<runtime>  
 \<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>構文  
@@ -161,7 +161,7 @@ ms.locfileid: "53611491"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.AppContext?displayProperty=nameWithType>  
-- [\<ランタイム > 要素](runtime-element.md)  
+## <a name="see-also"></a>関連項目
+- <xref:System.AppContext?displayProperty=nameWithType>
+- [\<ランタイム > 要素](runtime-element.md)
 - [\<configuration> 要素](../configuration-element.md)

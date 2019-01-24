@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: c195c6892097818f4292f0732c2444644fdcb96a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 499190a711e4092122dbee8c7edfc315daea5432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700264"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>文字列定数の終わりには、二重引用符を指定しなければなりません。
-文字列定数は、最初し、最後は引用符で囲まれます。  
+文字列定数は、先頭し、末尾は引用符にする必要があります。  
   
  **ErrorID:** BC30648  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   文字列リテラルは引用符 (") で終わることを確認してください。 その他のテキスト エディターから値を貼り付ける場合は、貼り付けられた文字が有効な引用符と、「スマート」または「中」の引用符などのような文字のない 1 つを確認してください (「または」) または 2 つの単一引用符 (") です。  
+-   リテラルの文字列で終わる引用符 (") を確認します。 他のテキスト エディターからの値を貼り付けると場合、は、貼り付けられた文字が有効な引用符と、「スマート」または「中」の引用符などのような文字が 1 つないことを確認してください (「または」) または 2 つの単一引用符 (")。  
   
-## <a name="see-also"></a>関連項目  
- [文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>関連項目
+- [文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)

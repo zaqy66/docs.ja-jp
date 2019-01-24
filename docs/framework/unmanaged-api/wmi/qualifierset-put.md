@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694140"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 関数
 名前付き修飾子と値が書き込まれます。 新しい修飾子は、同じ名前の前の値を上書きします。 修飾子が存在しない場合は作成されます。 
@@ -51,7 +51,7 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in]書き込む修飾子の名前。
 
-`pVal` [in]有効なへのポインター`VARIANT`書き込む修飾子を格納しています。 このパラメーターにすることはできません`null`します。
+`pVal` [in]有効なへのポインター`VARIANT`書き込む修飾子を格納しています。 このパラメーターを `null` とすることはできません。
 
 `lFlavor` [in]この修飾子の必要な修飾子のフレーバーを定義する次の定数の 1 つ。 既定値は`WBEM_FLAVOR_OVERRIDABLE`(0)。
 
@@ -60,7 +60,7 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 修飾子は、派生クラスまたはインスタンスでオーバーライドできます。 **これは、既定値です。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | この修飾子は、インスタンスに反映されます。 |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | 修飾子は、派生クラスに反映します。 |
-| ' WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | この修飾子は、派生クラスまたはインスタンスではオーバーライドできません。 |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | この修飾子は、派生クラスまたはインスタンスではオーバーライドできません。 |
 | ' WBEM_FLAVOR_AMENDED | 0x80 | 修飾子がローカライズされます。 |
 
 ## <a name="return-value"></a>戻り値
@@ -79,12 +79,12 @@ HRESULT QualifierSet_Put (
 
 この関数の呼び出しをラップする、 [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put)メソッド。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

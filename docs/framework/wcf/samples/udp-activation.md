@@ -2,15 +2,15 @@
 title: UDP アクティベーション
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715518"
 ---
 # <a name="udp-activation"></a>UDP アクティベーション
-このサンプルがに基づいて、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。 拡張、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows プロセス アクティブ化サービス (WAS) を使用してプロセスのアクティブ化をサポートするためのサンプルです。  
+このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。 拡張、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows プロセス アクティブ化サービス (WAS) を使用してプロセスのアクティブ化をサポートするためのサンプルです。  
   
  サンプルは、次の 3 つの主要素で構成されます。  
   
@@ -103,13 +103,13 @@ ms.locfileid: "46562353"
 ## <a name="sample-usage"></a>サンプルの使用方法  
  コンパイル後、次の 4 つの異なるバイナリが生成されます。  
   
--   Client.exe: クライアント コード。 App.config は、クライアント構成ファイルの Client.exe.config にコンパイルされます。  
+-   Client.exe:クライアント コード。 App.config は、クライアント構成ファイルの Client.exe.config にコンパイルされます。  
   
 -   UDPActivation.dll: 主要なすべての UDP 実装を含むライブラリ。  
   
--   Service.dll: サービス コード。 これは、ServiceModelSamples 仮想アプリケーションの \bin ディレクトリにコピーされます。 このサービス ファイルは Service.svc で、構成ファイルは Web.config です。これらをコンパイルすると、%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples にコピーされます。  
+-   Service.dll:サービスのコードです。 これは、ServiceModelSamples 仮想アプリケーションの \bin ディレクトリにコピーされます。 このサービス ファイルは Service.svc で、構成ファイルは Web.config です。これらをコンパイルすると、%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples にコピーされます。  
   
--   WasNetActivator: UDP アクティベータ プログラム。  
+-   WasNetActivator:UDP アクティベータ プログラム。  
   
 -   必要なすべての要素が正しくインストールされていることを確認します。 サンプルを実行する方法を、次の手順に示します。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "46562353"
   
     -   Windows プロセス アクティブ化サービス (WAS)。  
   
-    -   インターネット インフォメーション サービス (IIS): W3SVC。  
+    -   インターネット インフォメーション サービス (IIS):たとえば、W3SVC。  
   
 2.  次に、アクティベータ WasNetActivator.exe を起動します。 下、**アクティベーション** タブ、唯一のプロトコル**UDP**がドロップダウン リストで選択されています。 をクリックして、**開始**アクティベータを開始するボタンをクリックします。  
   

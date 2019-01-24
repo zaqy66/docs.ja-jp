@@ -1,15 +1,15 @@
 ---
-title: '方法: デリゲート メソッドを呼び出す (Visual Basic)'
+title: '方法: デリゲート メソッド (Visual Basic) を呼び出す'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: c50a32d300aaf52efe0c55cef69d5793a98305ac
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 42d56fca7e1d33c071db2e7e38935aa00caa5b7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676212"
 ---
-# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>方法: デリゲート メソッドを呼び出す (Visual Basic)
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>方法: デリゲート メソッド (Visual Basic) を呼び出す
 この例では、メソッドをデリゲートに関連付け、デリゲートからメソッドを呼び出す方法を示します。  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>デリゲートと一致するプロシージャを作成します。  
@@ -44,7 +44,7 @@ ms.locfileid: "44204607"
   
 ## <a name="see-also"></a>関連項目
 
-- [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
-- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
-- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+- [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)
 - [マルチスレッド アプリケーション](../../../../standard/threading/using-threads-and-threading.md)

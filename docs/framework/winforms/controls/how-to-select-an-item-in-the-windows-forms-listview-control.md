@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム ListView コントロール内の項目を選択する'
+title: '方法: Windows フォーム ListView コントロールで項目を選択します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: 8256eaeddf98c5a0dd80357bcd562e8f66db85b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed3e68fbe77f194ed04d15f99a48657a32a13b50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644717"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>方法 : Windows フォーム ListView コントロール内の項目を選択する
-この例は、プログラムで Windows フォーム内の項目を選択する方法を示します<xref:System.Windows.Forms.ListView>コントロール。 項目をプログラムでを選択すると自動的に変わらないので、フォーカスを<xref:System.Windows.Forms.ListView>コントロール。 このため、通常もするように項目を選択するときに重点を置いた項目を設定します。  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールで項目を選択します。
+この例では、プログラムで Windows フォームで項目を選択<xref:System.Windows.Forms.ListView>コントロール。 プログラムで項目を選択しても、そのにフォーカスが自動的に変更はありません、<xref:System.Windows.Forms.ListView>コントロール。 このためは通常もを設定する項目と項目を選択するときに重点を置いています。  
   
 ## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
@@ -27,10 +27,10 @@ ms.locfileid: "33532822"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   A<xref:System.Windows.Forms.ListView>という名前のコントロール`listView1`には、少なくとも 1 つの項目を格納しています。  
+-   A<xref:System.Windows.Forms.ListView>という名前のコントロール`listView1`を少なくとも 1 つの項目を格納しています。  
   
 -   <xref:System?displayProperty=nameWithType> 名前空間と <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間への参照。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca71819214e614af5a0c269ed77b1cf7f9b7d7ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658677"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [[!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 以降のバージョンでサポート]  
@@ -38,39 +38,39 @@ HRESULT ReadInMemorySymbols(
   
 #### <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]メモリ内ストリームを含むモジュールの識別子。  
+ [in]メモリ内のストリームを含むモジュールの識別子です。  
   
  `symbolsReadOffset`  
- [in]バイトの読み取りを開始位置をメモリ内ストリーム内のオフセット。  
+ [in]バイトの読み取りを開始する位置のメモリ内ストリーム内のオフセット。  
   
  `pSymbolBytes`  
- [out]データのコピー先となるバッファーへのポインター。 バッファーが必要`countSymbolBytes`使用可能な領域。  
+ [out]データのコピー先バッファーへのポインター。 バッファーがあります`countSymbolBytes`使用可能な領域。  
   
  `countSymbolBytes`  
  [in]コピーするバイト数。  
   
  `pCountSymbolBytesRead`  
- [out]メソッドが戻るときに、実際に読み取ったバイト数が含まれています。  
+ [out]メソッドが戻るとき、実際に読み取られたバイト数を格納します。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`、読み取られたバイト数、0 でない場合。  
+ `S_OK`、読み取られたバイト数を 0 以外の場合。  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`を使用して、モジュールが作成された場合<xref:System.Reflection.Emit>です。  
+ `CORPROF_E_MODULE_IS_DYNAMIC`を使用して、モジュールが作成された場合<xref:System.Reflection.Emit>します。  
   
-## <a name="remarks"></a>コメント  
- `ReadInMemorySymbols`メソッドの読み取りを試みます`countSymbolBytes`オフセットで始まるデータ`symbolsReadOffset`メモリ内のストリーム内です。 データがコピー`pSymbolBytes`が予期されて`countSymbolBytes`使用可能な領域。     `pCountSymbolsBytesRead` 実際の少ない可能性がありますが、読み取られたバイト数を含むより`countSymbolBytes`ストリームの末尾に達した場合。  
+## <a name="remarks"></a>Remarks  
+ `ReadInMemorySymbols`メソッドの読み取りを試みます`countSymbolBytes`オフセットから始まるデータの`symbolsReadOffset`メモリ内ストリーム内で。 データをコピー`pSymbolBytes`が想定されています`countSymbolBytes`使用可能な領域。     `pCountSymbolsBytesRead` 実際の少ない可能性がありますが、読み取られたバイト数を含むより`countSymbolBytes`ストリームの末尾に達した場合。  
   
 > [!NOTE]
->  現在の実装は、Reflection.Emit をサポートしていません。 メソッドを返しますのかどうか、モジュールは、Reflection.Emit を使用して作成された、`CORPROF_E_MODULE_IS_DYNAMIC`です。  
+>  現在の実装は、Reflection.Emit をサポートしていません。 かどうか、モジュールは、Reflection.Emit を使用して作成された、メソッドを返します`CORPROF_E_MODULE_IS_DYNAMIC`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerInfo7 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorProfilerInfo7 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

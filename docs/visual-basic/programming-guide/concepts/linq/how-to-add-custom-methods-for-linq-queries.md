@@ -1,15 +1,15 @@
 ---
-title: '方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加'
+title: '方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加します。'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 6fa212ff05547e8edd3964a6e1c9f76c11cdbe08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e45dfc6b516f1e5f5e9f7f667bbbfd5768330ffa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645588"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加します。
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスに拡張メソッドを追加することで、LINQ クエリに使用できるメソッド セットを拡張できます。 たとえば一連の値から単一の値を求めるために、平均値や最大値を求める標準的な演算に加えて、独自の集計メソッドを作成することができます。 また、一連の値を受け取って別の一連の値を返す特定のデータ変換やカスタム フィルターの働きを持ったメソッドを作成することもできます。 このようなメソッドには、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A>、<xref:System.Linq.Enumerable.Reverse%2A> があります。  
   
  <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを拡張すると、列挙可能なコレクションにカスタム メソッドを適用できます。 詳細については、「[拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)」を参照してください。  
@@ -51,7 +51,7 @@ End Module
  この拡張メソッドは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにある他の集計メソッドを呼び出すときと同じように、列挙可能な任意のコレクションに対して呼び出すことができます。  
   
 > [!NOTE]
->  Visual basic でことができますか、またはを使用するメソッドを呼び出すのための標準的なクエリ構文、`Aggregate`または`Group By`句。 詳細については、次を参照してください。 [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[グループ By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)です。  
+>  Visual basic でできますか、またはを使用するメソッドの呼び出しの標準的なクエリ構文、`Aggregate`または`Group By`句。 詳細については、次を参照してください。 [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)します。  
   
  `double` 型の配列に対して `Median` メソッドを使用する方法を次のコード例に示します。  
   
@@ -125,7 +125,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function  
 ```  
   
- これで、任意の型の一連のオブジェクトに対して `Median` メソッドを呼び出すことができます。 型に固有のメソッド オーバーロードがない場合は、デリゲート パラメーターを渡す必要があります。 Visual basic では、この目的のため、ラムダ式を使用できます。 また、使用する場合、`Aggregate`または`Group By`メソッドの呼び出しではなく句は、任意の値またはスコープ内にあるこの句の式を渡すことができます。  
+ これで、任意の型の一連のオブジェクトに対して `Median` メソッドを呼び出すことができます。 型に固有のメソッド オーバーロードがない場合は、デリゲート パラメーターを渡す必要があります。 Visual basic では、この目的のため、ラムダ式を使用できます。 また、使用する場合、`Aggregate`または`Group By`句、メソッドの呼び出しではなく、任意の値またはこの句は、スコープ内の式を渡すことができます。  
   
  次のコード例では、整数の配列と文字列の配列に対して `Median` メソッドを呼び出す方法を示します。 文字列の場合は、配列に格納されている文字列の長さの中央値が計算されます。 この例は、それぞれのケースについて、`Median` メソッドに <xref:System.Func%602> デリゲート パラメーターを渡す方法を示しています。  
   
@@ -197,6 +197,6 @@ Next
 ' e  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

@@ -1,6 +1,6 @@
 ---
 title: VerifyClientKey 関数 (アンマネージ API リファレンス)
-description: VerifyClientKey 関数により、クライアント キーが正しいセキュリティ。
+description: VerifyClientKey 関数により、クライアント キーが適切なセキュリティ。
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94d601125049f0c215b3b03bf8b13d2959872c3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711760"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 関数
-により、クライアント キーは、適切なセキュリティ。  
+クライアント キーに適切なセキュリティが確実に含められます。  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -36,16 +36,16 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は`ERROR_SUCCESS`(0) です。
+関数が成功した場合、戻り値は`ERROR_SUCCESS`(0)。
 
-戻り値で定義されている 0 以外のエラー コードは、関数が失敗した場合、 *WinError.h*です。
+戻り値で定義されたゼロ以外のエラー コードは、関数が失敗した場合、 *WinError.h*します。
 
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.def  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704905"
 ---
 # <a name="structure-statement"></a>Structure ステートメント
 構造体の名前を宣言し、構造体を構成する変数、プロパティ、イベント、およびプロシージャの定義を提供します。  
@@ -57,7 +57,7 @@ End Structure
   
  `Structure` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*構造体は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- 既定で構造[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+ 既定で構造[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
@@ -104,14 +104,14 @@ End Structure
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
- [構造体とクラス](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a>関連項目
+- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+- [構造体とクラス](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

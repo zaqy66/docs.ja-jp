@@ -1,5 +1,5 @@
 ---
-title: '方法 : Web サービスにバインドする'
+title: '方法: Web サービスにバインドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a738d52cfb01fff1cb21d0e6ebb8f1b7b28d57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695768"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>方法 : Web サービスにバインドする
+# <a name="how-to-bind-to-a-web-service"></a>方法: Web サービスにバインドする
 この例では、Web サービス メソッドの呼び出しによって返されるオブジェクトにバインドする方法を示します。  
   
 ## <a name="example"></a>例  
@@ -45,7 +45,7 @@ ms.locfileid: "47397086"
   
  構造体について**getContentResponse**を参照してください[コンテンツ サービス ドキュメント](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)します。  
   
-## <a name="see-also"></a>関連項目  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [XAML でデータをバインディング可能にする](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+## <a name="see-also"></a>関連項目
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [XAML でデータをバインディング可能にする](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

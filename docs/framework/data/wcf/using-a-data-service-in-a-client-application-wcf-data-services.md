@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 092f073a138a09fc25b96fbddde5b73992056981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736995"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>クライアント アプリケーションでのデータ サービスの使用 (WCF Data Services)
 公開するサービスにアクセスすることができます、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードで Web ブラウザーに URI を指定します。 URI はリソースのアドレスを提供し、要求メッセージがこれらのアドレスに送信されてリソースが表す基になるデータのアクセスまたは変更を行います。 ブラウザーは HTTP GET コマンドを発行して、要求されたリソースを [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードとして返します。 詳細については、次を参照してください。 [Web ブラウザーからサービスへのアクセス](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)します。  
@@ -33,16 +33,16 @@ ms.locfileid: "44087784"
   
 -   **HTTP MERGE** - をエンティティのデータを変更するだけのデータ ソースで挿入、削除を実行する非効率[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]新しい HTTP MERGE アクションが導入されています。 要求メッセージのペイロードには、アドレス指定されたエンティティ リソースで変更する必要のあるプロパティが含まれます。 HTTP MERGE は HTTP 仕様で定義されていないので、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 対応のサーバー以外で HTTP MERGE 要求をルーティングするには追加の処理が必要になる場合があります。  
   
- 詳細については、次を参照してください。 [OData: 操作](https://go.microsoft.com/fwlink/?LinkId=185792)します。  
+ 詳細については、次を参照してください[OData:。操作](https://go.microsoft.com/fwlink/?LinkId=185792)します。  
   
 ### <a name="payload-formats"></a>ペイロード形式  
  HTTP PUT、HTTP POST、または HTTP MERGE 要求の場合、要求メッセージのペイロードは、データ サービスに送信するエンティティ データを含んでいます。 ペイロードのコンテンツは、メッセージのデータ形式によって異なります。 そのようなペイロードは、DELETE 以外のすべてのアクションに対する HTTP 応答にも含まれます。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] アクセスして、サービスでのデータを変更するのには、次のペイロード形式をサポートしています。  
   
--   **Atom** -によって定義されている XML ベースのメッセージ エンコーディング[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Atom Publishing Protocol (AtomPub) の Web フィード、ポッド キャスト、wiki、HTTP 経由のデータ交換を有効にして XML ベースのインターネット機能の拡張機能として。 詳細については、次を参照してください。 [OData: Atom 形式](https://go.microsoft.com/fwlink/?LinkId=185794)します。  
+-   **Atom** -によって定義されている XML ベースのメッセージ エンコーディング[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Atom Publishing Protocol (AtomPub) の Web フィード、ポッド キャスト、wiki、HTTP 経由のデータ交換を有効にして XML ベースのインターネット機能の拡張機能として。 詳細については、次を参照してください[OData:。Atom 形式](https://go.microsoft.com/fwlink/?LinkId=185794)します。  
   
--   **JSON** -JavaScript Object Notation (JSON) は、JavaScript プログラミング言語のサブセットに基づく軽量データ交換形式。 詳細については、次を参照してください。 [OData: JSON 形式](https://go.microsoft.com/fwlink/?LinkId=185795)します。  
+-   **JSON** -JavaScript Object Notation (JSON) は、JavaScript プログラミング言語のサブセットに基づく軽量データ交換形式。 詳細については、次を参照してください[OData:。JSON 形式](https://go.microsoft.com/fwlink/?LinkId=185795)します。  
   
- ペイロードのメッセージ形式は、HTTP 要求メッセージのヘッダーで要求されます。 詳細については、次を参照してください。 [OData: 操作](https://go.microsoft.com/fwlink/?LinkID=185792)します。  
+ ペイロードのメッセージ形式は、HTTP 要求メッセージのヘッダーで要求されます。 詳細については、次を参照してください[OData:。操作](https://go.microsoft.com/fwlink/?LinkID=185792)します。  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>クライアント ライブラリを使用したデータのアクセスおよび変更  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 簡単に使用できるようにするクライアント ライブラリが含まれています、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework および Silverlight ベースのクライアント アプリケーションからフィードします。 これらのライブラリは、HTTP メッセージの送受信を簡略化します。 また、メッセージ ペイロードをエンティティ データを表す CLR オブジェクトに変換します。 クライアント ライブラリには、 <xref:System.Data.Services.Client.DataServiceContext> および <xref:System.Data.Services.Client.DataServiceQuery%601>という 2 つのコア クラスがあります。 これらのクラスを使用すると、データ サービスをクエリして、返されるエンティティ データを CLR オブジェクトとして処理できます。 詳細については、次を参照してください。 [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)と[WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)します。  
@@ -51,6 +51,6 @@ ms.locfileid: "44087784"
   
  プログラミング ライブラリを使用するように使用できますが、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]その他のクライアント アプリケーションにフィードします。 詳細については、次を参照してください。、 [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796)します。  
   
-## <a name="see-also"></a>関連項目  
- [データ サービス リソースへのアクセス](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a>関連項目
+- [データ サービス リソースへのアクセス](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

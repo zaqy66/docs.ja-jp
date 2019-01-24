@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: cbc9891170cde4b993a5dc890ed71c07a6f59f9e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743544"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>データ型変換関数 (Visual Basic)
 これらの関数は、インラインでのコンパイル、つまり、変換コード式を評価するコードの一部です。 場合によってパフォーマンスを向上させると、変換を実行するプロシージャの呼び出しではありません。 各関数は、特定のデータ型に式を変換します。  
@@ -127,7 +127,7 @@ CUShort(expression)
 |`CDate`|[Date データ型](../../../visual-basic/language-reference/data-types/date-data-type.md)|任意の有効な日付と時刻の表現。|  
 |`CDbl`|[Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)|-- を 4.94065645841246544E-(負の値)。4.94065645841246544E-324 正の値の 1.79769313486231570 e + 308 ~。|  
 |`CDec`|[Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|数字の 0 の 79,228,162,514,264,337,593,543,950,335、+/-小数点以下の桁数は、番号します。 数値の小数点以下桁数が 28 場合、範囲は、7.9228162514264337593543950335 です。 最小の可能な 0 以外の数値は、(1 e ~ 28) +/-0.0000000000000000000000000001 です。|  
-|`CInt`|[整数データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) を通じて<xref:System.Int32.MaxValue?displayProperty=nameWithType>(2,147, 483,647) です小数部は丸められます。<sup> 。1</sup> <br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数に整数型の変換からのパフォーマンスを最適化、`CInt`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。 |  
+|`CInt`|[Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) を通じて<xref:System.Int32.MaxValue?displayProperty=nameWithType>(2,147, 483,647) です小数部は丸められます。<sup> 。1</sup> <br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数に整数型の変換からのパフォーマンスを最適化、`CInt`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。 |  
 |`CLng`|[Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) を通じて<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9,223,372,036,854,775,807) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数に 64 ビット整数の変換からのパフォーマンスを最適化、`CLng`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
 |`CObj`|[Object 型](../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の有効な式。|  
 |`CSByte`|[SByte データ型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) を通じて<xref:System.SByte.MaxValue?displayProperty=nameWithType>(127) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数を使用する符号付きバイト変換からのパフォーマンスを最適化、`CSByte`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
@@ -285,17 +285,17 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- <xref:Microsoft.VisualBasic.Strings.Format%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [変換関数](../../../visual-basic/language-reference/functions/conversion-functions.md)  
- [Visual Basic における型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Int%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
+- <xref:Microsoft.VisualBasic.Strings.Format%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Str%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [変換関数](../../../visual-basic/language-reference/functions/conversion-functions.md)
+- [Visual Basic における型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

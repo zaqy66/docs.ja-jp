@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 65b5b7f717912ecaee73a5b24e65d22b902a4e44
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 20d90c4554f9718651070456f6d4a14475d88bf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651579"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>authenticationModules の &lt;remove&gt; 要素 (ネットワーク設定)
 アプリケーションから認証モジュールを削除します。  
@@ -72,7 +72,7 @@ ms.locfileid: "50180706"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

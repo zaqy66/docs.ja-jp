@@ -1,17 +1,17 @@
 ---
-title: '方法 : COM+ サービス モデル構成ツールを使用する'
+title: '方法: COM + サービス モデル構成ツールを使用します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: d26e3b127328a3de4df6bd58fb6015bee045f3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736248"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法 : COM+ サービス モデル構成ツールを使用する
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM + サービス モデル構成ツールを使用します。
 適切なホスト モードを選択したら、COM+ サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用して、Web サービスとして公開されるアプリケーション インターフェイスを構成します。  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "33496241"
 >  このレジストリ キーを元に戻すことは重要です。 これは互換性のキーです。 この変更を元に戻さないと、コンピューターで実行している他の .NET アプリケーションで問題が発生する可能性があります。  
   
 > [!WARNING]
->  ComSvcConfig.exe を使用して Windows 8 コンピューターのダイアログで/install が表示されますを示す"お使いの PC にアプリには、次の Windows の機能が必要があります。 .NET Framework 3.5 (.NET 2.0 と .NET 3.0 を含む".NET Framework 3.5 がインストールされていない場合。 このダイアログは無視してもかまいません。 また、OnlyUseLatestCLR レジストリ キーを DWORD 値 0x00000001 に設定することもできます。  
+>  示す/install Windows 8 コンピューターのダイアログが表示されます ComSvcConfig.exe の使用時に"お使いの PC 上のアプリには、次の Windows 機能が必要があります: .NET Framework 3.5 (.NET 2.0 と .NET 3.0 が含まれています".NET Framework 3.5 がインストールされていない場合。 このダイアログは無視してもかまいません。 また、OnlyUseLatestCLR レジストリ キーを DWORD 値 0x00000001 に設定することもできます。  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
   
@@ -109,5 +109,5 @@ ms.locfileid: "33496241"
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [COM+ アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+## <a name="see-also"></a>関連項目
+- [COM+ アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

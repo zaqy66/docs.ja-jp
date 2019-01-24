@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム コントロールのスレッド セーフな呼び出しを行う'
+title: '方法: Windows フォーム コントロールのスレッド セーフな呼び出しを行う'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710470"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>方法 : Windows フォーム コントロールのスレッド セーフな呼び出しを行う
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>方法: Windows フォーム コントロールのスレッド セーフな呼び出しを行う
 
 マルチスレッドを使用して Windows フォーム アプリケーションのパフォーマンスを向上させる場合は、必ずスレッド セーフな方法でコントロールを呼び出してください。
 
@@ -406,7 +406,7 @@ private:
  次のコード例は、3 つのボタンと 1 つのテキスト ボックスを持つフォームで構成される、完全な Windows フォーム アプリケーションです。 最初のボタンは安全でないスレッド間アクセスを示し、2 番目のボタンは <xref:System.Windows.Forms.Control.Invoke%2A>を使用した安全なアクセスを示し、3 番目のボタンは <xref:System.ComponentModel.BackgroundWorker>を使用した安全なアクセスを示します。
 
 > [!NOTE]
-> 例を実行する方法の手順は「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)」を参照してください。 この例では、System.Drawing アセンブリと System.Windows.Forms アセンブリへの参照が必要です。
+> 例を実行する方法の詳細については、次を参照してください。[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)します。 この例では、System.Drawing アセンブリと System.Windows.Forms アセンブリへの参照が必要です。
 
 ```csharp
 using System;
@@ -1051,7 +1051,7 @@ int main()
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [方法: バックグラウンドで操作を実行する](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [方法: バックグラウンド操作を使用するフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [方法: バック グラウンドで操作を実行します。](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [方法: バック グラウンド操作を使用してフォームを実装します。](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Windows フォームとアンマネージ アプリケーション](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

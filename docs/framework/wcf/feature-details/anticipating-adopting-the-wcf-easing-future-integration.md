@@ -2,12 +2,12 @@
 title: Windows Communication Foundation の採用を予測します。将来的な統合を簡略化
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: f4cc450b04fd05d390a1f41f3d14c19f4b23be29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731284"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation の採用を予測します。将来的な統合を簡略化
 現在 ASP.NET を使用して WCF を今後の使用が予想される場合、このトピックは、WCF アプリケーションと共に、新しい ASP.NET Web サービスが動作することを確認するためのガイダンスを示します。  
@@ -43,5 +43,5 @@ public interface IEcho
 ## <a name="security"></a>セキュリティ  
  インターネット インフォメーション サービス (IIS) に用意されている認証オプションは使用しないでください。 WCF クライアントでは、そのサポートしていません。 保護されるように、サービスに必要な場合は、これらのオプションの幅が広く、標準のプロトコルに基づいているため、WCF が提供するオプションを使用します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation の採用を予測します。将来の移行を簡略化](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+## <a name="see-also"></a>関連項目
+- [Windows Communication Foundation の採用を予測します。将来の移行を簡略化](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

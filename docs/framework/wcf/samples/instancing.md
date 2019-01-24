@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae241e2a1f64c4480cea5e81dff1e62816fc31ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745663"
 ---
 # <a name="instancing"></a>"インスタンス化"
 インスタンス化のサンプルでは、インスタンス化動作の設定を示します。この設定は、クライアント要求への応答として作成される、サービス クラスのインスタンスの作成方法を制御します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、実装、`ICalculator`サービス コントラクト。 このサンプルでは、`ICalculatorInstance` から継承される新しいコントラクト `ICalculator` を定義します。 `ICalculatorInstance` によって指定されるコントラクトにより、サービス インスタンスの状態を検査するための 3 つの操作が追加されます。 インスタンス化設定を変更することにより、クライアントを実行して動作の変更を確認できます。  
@@ -22,11 +22,11 @@ ms.locfileid: "50193696"
   
  次のインスタンス化モードを使用できます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall> : 新しいサービス インスタンスがクライアント要求ごとに作成されます。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>:クライアント要求ごとに新しいサービス インスタンスが作成されます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession> : 新しいインスタンスが新しいクライアント セッションごとに作成され、そのセッションの有効期間中保持されます (セッションをサポートするバインディングが必要です)。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>:新しいインスタンスでは、新しいクライアント セッションごとに作成され、(セッションをサポートするバインディングが必要)、そのセッションの有効期間にわたって保持されます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single> : アプリケーションの有効期間中、サービス クラスの単一のインスタンスがすべてのクライアント要求を処理します。  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>:サービス クラスの 1 つのインスタンスは、アプリケーションの有効期間のすべてのクライアント要求を処理します。  
   
  サービス クラスは、`[ServiceBehavior(InstanceContextMode=<setting>)]` 属性を使用してインスタンス化動作を指定します。次のサンプル コードを参照してください。 コメント化されている行を変更すると、各インスタンス モードの動作を確認できます。 インスタンス モードを変更したら、サービスを再ビルドする必要があります。 クライアントでは、インスタンス化に関連する設定は行いません。  
   

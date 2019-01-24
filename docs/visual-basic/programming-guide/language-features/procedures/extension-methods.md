@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731115"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
-拡張メソッドでは、新しい派生型を作成せずに既に定義されているデータ型にカスタム機能を追加する開発者が有効にします。 拡張メソッドを使用すれば、既存の型のインスタンス メソッドの場合と同様に呼び出すことができるメソッドを記述できます。  
+拡張メソッドには、新しい派生型を作成せずに既に定義されているデータ型にカスタム機能を追加する開発者が有効にします。 拡張メソッドを使用すれば、既存の型のインスタンス メソッドの場合と同様に呼び出すことができるメソッドを記述できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  拡張メソッドになるのは、`Sub` プロシージャと `Function` プロシージャだけです。 拡張プロパティ、拡張フィールド、拡張イベントを定義することはできません。 すべての拡張メソッドは、`<Extension()>` 名前空間の拡張属性 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> でマークする必要があります。  
   
  拡張メソッド定義の最初のパラメーターでは、そのメソッドが拡張するデータ型を指定します。 メソッドが実行されると、最初のパラメーターは、そのメソッドを呼び出すデータ型のインスタンスにバインディングされます。  
@@ -174,13 +174,13 @@ End Module
   
  優先順位を適用してもあいまいさが残る場合は、完全修飾名を使用して、呼び出すメソッドを指定できます。 先ほどの例の `Print` メソッドが `StringExtensions` という名前のモジュールで定義されていれば、完全修飾名は `StringExtensions.Print(example)` ではなく `example.Print()` になります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.CompilerServices>  
- <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Module ステートメント](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [省略可能なパラメーター](./optional-parameters.md)  
- [パラメーター配列](./parameter-arrays.md)  
- [属性の概要](../../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.CompilerServices>
+- <xref:System.Runtime.CompilerServices.ExtensionAttribute>
+- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Module ステートメント](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
+- [省略可能なパラメーター](./optional-parameters.md)
+- [パラメーター配列](./parameter-arrays.md)
+- [属性の概要](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

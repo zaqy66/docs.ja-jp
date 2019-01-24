@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: c1aaaca83b8631a87a8987b9676b53161e821117
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 39a3cd059c0fa9aad1ef2c1ae50fa37b95df52d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650445"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By アニメーションの概要
 このトピックでは、From/To/By アニメーションを使って依存関係プロパティをアニメーション化する方法を説明します。 From/To/By アニメーションでは、2 つの値の間の遷移が作成されます。  
@@ -106,7 +106,7 @@ ms.locfileid: "43502517"
 ### <a name="by"></a>By  
  設定した場合だけ、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>アニメーションのプロパティをアニメーション化されているプロパティの基本値または値で指定された値の合計に構成アニメーションの出力から、アニメーション、 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。  
   
- 次の例の設定だけ、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>のプロパティ、<xref:System.Windows.Media.Animation.DoubleAnimation>を 300 にします。 例は、開始値を指定していないため、<xref:System.Windows.Media.Animation.DoubleAnimation>の基本値を使用して、<xref:System.Windows.FrameworkElement.Width%2A>プロパティ、100、開始値として。 終了値が追加することで決定され、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>アニメーションの開始値を 100: 400 の 300 の値。 結果として、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>が 100 から 400 にアニメーション化します。  
+ 次の例の設定だけ、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>のプロパティ、<xref:System.Windows.Media.Animation.DoubleAnimation>を 300 にします。 例は、開始値を指定していないため、<xref:System.Windows.Media.Animation.DoubleAnimation>の基本値を使用して、<xref:System.Windows.FrameworkElement.Width%2A>プロパティ、100、開始値として。 終了値が追加することで決定され、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>アニメーションの開始値、100 の 300 の値。400. 結果として、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>が 100 から 400 にアニメーション化します。  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
@@ -114,7 +114,7 @@ ms.locfileid: "43502517"
 ### <a name="fromby"></a>From/By  
  設定すると、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>と<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>アニメーションのプロパティ で指定されている値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティの合計で指定されている値を<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>と<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。  
   
- 次の例のセット、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>のプロパティ、<xref:System.Windows.Media.Animation.DoubleAnimation>を 50 とその<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティを 300 にします。 終了値が追加することで決定され、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>アニメーションの開始値、50: 350 の 300 の値。 結果として、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>が 50 から 350 にアニメーション化します。  
+ 次の例のセット、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>のプロパティ、<xref:System.Windows.Media.Animation.DoubleAnimation>を 50 とその<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティを 300 にします。 終了値が追加することで決定され、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>アニメーションの開始値、50 の 300 の値。350. 結果として、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>が 50 から 350 にアニメーション化します。  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
@@ -140,12 +140,12 @@ ms.locfileid: "43502517"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、独自のカスタム アニメーションの種類を作成することもできます。 詳細については、次を参照してください。、[カスタム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Animation.Timeline>  
- <xref:System.Windows.Media.Animation.Storyboard>  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [ストーリーボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [パス アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [カスタム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Animation.Timeline>
+- <xref:System.Windows.Media.Animation.Storyboard>
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [ストーリーボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [パス アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [カスタム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)
+- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)
