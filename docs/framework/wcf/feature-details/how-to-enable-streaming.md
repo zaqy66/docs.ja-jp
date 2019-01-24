@@ -1,19 +1,19 @@
 ---
-title: '方法 : ストリーミングを有効にする'
+title: '方法: ストリーミングを有効にします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: b28764c4bad88511096ab09fd71cc2a73c735096
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627656"
 ---
-# <a name="how-to-enable-streaming"></a>方法 : ストリーミングを有効にする
-Windows Communication Foundation (WCF) では、バッファリングまたはストリームのいずれかの転送を使用してメッセージを送信できます。 既定のバッファー転送モードでは、受信側がメッセージを読み取る前に、メッセージの送信が完了している必要があります。 ストリーミング転送モードでは、送信が完了していなくても、受信側でメッセージの処理を開始できます。 ストリーミング モードは、渡される情報が長い場合、または連続的に処理する場合に役立ちます。 ストリーミング モードは、メッセージが大きすぎてすべてをバッファーできない場合にも役立ちます。  
+# <a name="how-to-enable-streaming"></a>方法: ストリーミングを有効にします。
+Windows Communication Foundation (WCF) では、ストリームまたはバッファー内のいずれかの転送を使用してメッセージを送信できます。 既定のバッファー転送モードでは、受信側がメッセージを読み取る前に、メッセージの送信が完了している必要があります。 ストリーミング転送モードでは、送信が完了していなくても、受信側でメッセージの処理を開始できます。 ストリーミング モードは、渡される情報が長い場合、または連続的に処理する場合に役立ちます。 ストリーミング モードは、メッセージが大きすぎてすべてをバッファーできない場合にも役立ちます。  
   
  ストリーミングを有効にするには、`OperationContract` を適切に定義し、トランスポート レベルでストリーミングを有効にします。  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) では、バッファリングまたは�
   
     4.  `StreamedResponse` (応答に対してのみストリーミングを有効にする)。  
   
-     `BasicHttpBinding` は、バインディングの `TransferMode` プロパティを公開し、`NetTcpBinding` と `NetNamedPipeBinding` も公開します。 `TransferMode` プロパティをトランスポート バインド要素に設定し、カスタム バインディングで使用することもできます。  
+     `BasicHttpBinding` は、バインディングの `TransferMode` プロパティを公開し、`NetTcpBinding` と `NetNamedPipeBinding` も公開します。 `TransferMode` プロパティをトランスポート バインド要素に設定し、カスタム バインドで使用することもできます。  
   
      次のサンプルは、コードで `TransferMode` を設定する方法と、構成ファイルを変更して設定する方法を示しています。 どちらのサンプルも、受信可能なメッセージの最大サイズを決定する `maxReceivedMessageSize` プロパティを 64 MB に設定します。 既定の `maxReceivedMessageSize` は 64 KB です。これは、多くの場合ストリーミングを行うには小さすぎます。 アプリケーションでの受信が予想されるメッセージ最大サイズに応じて、このクォータ設定を適切に変更してください。 また、`maxBufferSize` によりバッファーの最大サイズが決定されるので、適切に設定してください。  
   
@@ -74,6 +74,6 @@ Windows Communication Foundation (WCF) では、バッファリングまたは�
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [大規模データとストリーミング](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
- [ストリーム](../../../../docs/framework/wcf/samples/stream.md)
+## <a name="see-also"></a>関連項目
+- [大規模データとストリーミング](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [ストリーム](../../../../docs/framework/wcf/samples/stream.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0d71bef4ad68c2fea63cec413e8bd17b78df1d0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 196aaa35561cba7925bcd005474cccb393494250
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699885"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt;要素
 Windows ID が、現在のスレッドの実行コンテキストのフロー設定に関係なく、非同期ポイント間でフローしないことを指定します。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>構文  
@@ -115,7 +115,7 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<alwaysFlowImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

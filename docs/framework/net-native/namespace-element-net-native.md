@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f89c9edf47edcb5089e094529b8e8108271518d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590576"
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;Namespace&gt; 要素 (.NET ネイティブ)
 指定した名前空間内のすべての型にランタイム リフレクション ポリシーを適用します。  
@@ -19,7 +19,7 @@ ms.locfileid: "33391691"
 ```xml  
 <Namespace Name="namespace_name"   
            Activate="policy_type"   
-           Browse="policy_type" />  
+           Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
            DataContractSerializer="policy_setting"  
@@ -78,12 +78,12 @@ ms.locfileid: "33391691"
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素は、0 または 1 個の [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素を持つことができます。|  
 |`<Namespace>`|親名前空間内のすべての型にリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Activate` 属性、`Browse` 属性、`Dynamic`、および `Serialize` 属性はすべて省略可能です。 いずれも存在しない場合、`<Namespace>` 要素は子要素のコンテナーとしてのみ機能します。 存在する場合は、`<Namespace>` 要素は、指定された名前空間内のすべての型にランタイム リフレクション ポリシーを適用します。  
   
  [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素の子である場合、`<Namespace>` 要素は [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素により定義されたランタイム リフレクション ポリシーをオーバーライドします。  
   
-## <a name="see-also"></a>関連項目  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>関連項目
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f6709cad76ff05c3134c8430b36d5f34019b03ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606583"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
 XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]フレームワークは、いずれかで、カスタムのクラスまたは構造体を定義する機能をサポートしている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]言語、およびしアクセス クラスの XAML マークアップを使用しています。 組み合わせを使用できる[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-XAML 名前空間のプレフィックスにカスタムの型をマップして、通常の種類と同じマークアップ ファイル内でカスタム型を定義します。 このトピックでは、XAML 要素として使用するのには、カスタム クラスが満たす必要がある要件について説明します。  
@@ -79,7 +79,7 @@ XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlashar
   
 -   コレクション オブジェクトであるオブジェクトは、オブジェクト要素構文で指定する必要はありません。 コレクション型を受け取る XAML でプロパティを指定するには、そのコレクションの種類の存在は暗黙的です。  
   
--   マークアップでコレクションのプロパティの子要素は、コレクションのメンバーに処理されます。 通常、コレクションのメンバーにコード アクセスは、リストのディクショナリ/メソッドを通じて実行など`Add`、またはインデクサーを使用します。 XAML 構文ではメソッドまたはインデクサーをサポートしていませんが、(例外: を参照してください。 XAML 2009 は、メソッドをサポートできますが、可能な WPF の使用法を制限する XAML 2009 を使用して[XAML 2009 言語機能](../../../../docs/framework/xaml-services/xaml-2009-language-features.md))。 コレクションは、要素のツリーを構築するための非常に一般的な要件と、宣言型の XAML でこれらのコレクションを設定する手段が必要です。 そのため、コレクション プロパティの子要素は、コレクション プロパティの型の値は、コレクションに追加することによって処理されます。  
+-   マークアップでコレクションのプロパティの子要素は、コレクションのメンバーに処理されます。 通常、コレクションのメンバーにコード アクセスは、リストのディクショナリ/メソッドを通じて実行など`Add`、またはインデクサーを使用します。 XAML 構文ではメソッドまたはインデクサーをサポートしていませんが、(例外。XAML 2009 は、メソッドをサポートできますが、可能な WPF の使用法は XAML 2009 を使用して制限されます。参照してください[XAML 2009 言語機能](../../../../docs/framework/xaml-services/xaml-2009-language-features.md))。 コレクションは、要素のツリーを構築するための非常に一般的な要件と、宣言型の XAML でこれらのコレクションを設定する手段が必要です。 そのため、コレクション プロパティの子要素は、コレクション プロパティの型の値は、コレクションに追加することによって処理されます。  
   
  .NET Framework XAML サービス実装および WPF XAML プロセッサは、コレクション プロパティの構成内容を次の定義を使用します。 プロパティのプロパティの型には、次のいずれかを実装する必要があります。  
   
@@ -112,9 +112,9 @@ XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlashar
 ## <a name="serializing-xaml"></a>XAML のシリアル化  
  場合など、特定のシナリオがコントロールの作成者は、XAML でインスタンス化できる任意のオブジェクト表現が同等の XAML マークアップにシリアル化もできるようにすることもできます。 シリアル化の要件は、このトピックでは説明しません。 参照してください[概要の作成を管理して](../../../../docs/framework/wpf/controls/control-authoring-overview.md)と[要素のツリーおよびシリアル化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [XAML 読み込みと依存関係プロパティ](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+## <a name="see-also"></a>関連項目
+- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [XAML 読み込みと依存関係プロパティ](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

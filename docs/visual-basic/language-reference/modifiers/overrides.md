@@ -13,17 +13,17 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582100"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 プロパティまたはプロシージャが基本クラスから継承された同じ名前のプロパティまたはプロシージャをオーバーライドすることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="rules"></a>ルール  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33602528"
   
 -   **結合された修飾子。** 同じ宣言内で `Overrides` を `Shadows` または `Shared` と共に指定することはできません。 オーバーライドする要素は暗黙的にオーバーライド可能であるため、`Overridable` と `Overrides` を結合することはできません。  
   
--   **署名が一致します。** この宣言のシグネチャと一致する必要があります、*署名*のプロパティまたはプロシージャをオーバーライドします。 つまり、パラメーター リストには、同じ数のパラメーターを、同じ順序、同じデータ型で指定する必要があります。  
+-   **シグネチャの一致。** この宣言のシグネチャと一致する必要があります、*署名*のプロパティまたはプロシージャをオーバーライドします。 つまり、パラメーター リストには、同じ数のパラメーターを、同じ順序、同じデータ型で指定する必要があります。  
   
      オーバーライドする宣言は、シグネチャに加え、次の点でも完全に一致している必要があります。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33602528"
   
     -   ジェネリック プロシージャの型パラメーターごとの制約リスト  
   
--   **シャドウとオーバーライドされます。** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)です。  
+-   **シャドウとオーバーライドします。** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
   
  `Overrides` を使用する場合は、ライブラリ API と C# が連携しやすくなるように、コンパイラが暗黙的に `Overloads` を追加します。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "33602528"
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>関連項目
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)

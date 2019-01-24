@@ -1,15 +1,15 @@
 ---
-title: '方法: カスタム アクティビティ デザイナーを作成する'
+title: '方法: カスタム アクティビティ デザイナーを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 86cd3544e9117cca273b6c8dde8454672f14a36a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 034b8b8be828288f840dbfd902725c4f63c779ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638185"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a>方法: カスタム アクティビティ デザイナーを作成する
+# <a name="how-to-create-a-custom-activity-designer"></a>方法: カスタム アクティビティ デザイナーを作成します。
 
 カスタム アクティビティ デザイナーは、通常、関連付けられたアクティビティを他のアクティビティと組み合わせることができるように実装されます。他のアクティビティのデザイナーは、アクティビティと一緒にデザイン サーフェイスにドロップできます。 この機能は、カスタム アクティビティ デザイナーが、任意のアクティビティを配置できる場所の「ドロップ ゾーン」ともデザイン サーフェイス上の要素の結果のコレクションを管理するための手段を提供することが必要です。 ここでは、そのようなドロップ ゾーンを含むカスタム アクティビティ デザイナーを作成する方法と、デザイナー要素のコレクションを管理するために必要な編集機能を提供するカスタム アクティビティ デザイナーを作成する方法を説明します。
 
