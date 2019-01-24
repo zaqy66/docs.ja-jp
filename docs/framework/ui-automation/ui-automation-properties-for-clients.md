@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2e0c2764f96a2592ad0a4dfe5caa46536373eb80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 81b16f7e4f216d1879c57dfb2dc2bfb1e1191aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683337"
 ---
 # <a name="ui-automation-properties-for-clients"></a>クライアントの UI オートメーション プロパティ
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  ここでは、UI オートメーション クライアント アプリケーションに公開される [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティについて説明します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47193279"
 ## <a name="property-ids"></a>プロパティ ID  
  プロパティ [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] は、 <xref:System.Windows.Automation.AutomationProperty> オブジェクトにカプセル化される一意の定数値です。 UI オートメーション クライアント アプリケーションは、これらの [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] を <xref:System.Windows.Automation.AutomationElement> クラスまたは適切なコントロール パターン クラス ( <xref:System.Windows.Automation.ScrollPattern>など) から取得します。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
   
- 数値<xref:System.Windows.Automation.AutomationIdentifier.Id%2A>の<xref:System.Windows.Automation.AutomationProperty>でのクエリ対象のプロパティを識別するために、プロバイダーが使用、<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType>メソッド。 通常、クライアント アプリケーションで <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>を調べる必要はありません。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> は、デバッグと診断の目的のみに使用されます。  
+ <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> の数値 <xref:System.Windows.Automation.AutomationProperty> は、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> メソッドで照会するプロパティを識別するために、プロバイダーによって使用されます。 通常、クライアント アプリケーションで <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>を調べる必要はありません。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> は、デバッグと診断の目的のみに使用されます。  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>プロパティ条件  
@@ -79,7 +79,7 @@ ms.locfileid: "47193279"
 ## <a name="default-property-values"></a>既定のプロパティ値  
  UI オートメーション プロバイダーがプロパティを実装していない場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] システムは既定値を提供できます。 たとえば、コントロールのプロバイダーが <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>によって識別されたプロパティをサポートしていない場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は空の文字列を返します。 同様に、プロバイダーが <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>によって識別されたプロパティをサポートしていない場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は `false`を返します。  
   
- 使用してこの動作を変更することができます、<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>と<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>メソッドのオーバー ロードします。 2 番目のパラメーターとして `true` を指定した場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は既定値を返さず、代わりに特殊な値 <xref:System.Windows.Automation.AutomationElement.NotSupported>を返します。  
+ この動作は、 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> と <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> のメソッド オーバーロードを使用して変更できます。 2 番目のパラメーターとして `true` を指定した場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は既定値を返さず、代わりに特殊な値 <xref:System.Windows.Automation.AutomationElement.NotSupported>を返します。  
   
  次のコード例は、要素からプロパティを取得することを試みています。プロパティがサポートされていない場合は、代わりにアプリケーション定義の値が使用されます。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "47193279"
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(静的なプロパティ) 入力フォーカスがある <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(静的プロパティ) ルート <xref:System.Windows.Automation.AutomationElement>。|  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>関連項目
+- [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

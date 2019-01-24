@@ -2,12 +2,12 @@
 title: ワークフロー サービスへのトランザクションのフロー
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: f53bfa3c745a0d487a8daf23f399c1420e36c8ec
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4a5cde045c6c676c2efc694c67fd049b6eb611b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708637"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>ワークフロー サービスへのトランザクションのフロー
 ワークフロー サービスとワークフロー クライアントはトランザクションに参加できます。  サービス操作をアンビエント トランザクションの一部にするには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの中に配置します。 <xref:System.ServiceModel.Activities.Send> 内の <xref:System.ServiceModel.Activities.SendReply> または <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティによる呼び出しが行われると、アンビエント トランザクション内でも呼び出しが行われます。 ワークフロー クライアント アプリケーションでは、<xref:System.Activities.Statements.TransactionScope> アクティビティを使用してアンビエント トランザクションを作成し、そのアンビエント トランザクションを使用してサービス操作を呼び出すことができます。 ここでは、トランザクションに参加するワークフロー サービスとワークフロー クライアントを作成する手順について説明します。  
@@ -117,8 +117,8 @@ ms.locfileid: "48036053"
   
     |アクティビティ|[値]|  
     |--------------|-----------|  
-    |1 つ目の WriteLine|"Service: 完了した受信"|  
-    |2 つ目の WriteLine|"Service: Received = " + requestMessage|  
+    |1 つ目の WriteLine|"Service:完了した受信"|  
+    |2 つ目の WriteLine|"Service:受信した ="+ requestMessage|  
   
      ワークフローは次のようになります。  
   
@@ -133,9 +133,9 @@ ms.locfileid: "48036053"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |終了|replyMessage|  
-    |[値]|"Service: Sending reply."|  
+    |[値]|"Service:応答を送信します。"|  
   
-11. <xref:System.Activities.Statements.WriteLine> アクティビティを <xref:System.Activities.Statements.Assign> アクティビティの後にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Service: Begin reply" に設定します。  
+11. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、<xref:System.Activities.Statements.Assign>アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"サービス。応答を開始します。"  
   
      ワークフローは次のようになります。  
   
@@ -145,9 +145,9 @@ ms.locfileid: "48036053"
   
      ![メッセージの設定を返信](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
-13. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`SendReplyToReceive`アクティビティと設定が<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"サービス: 応答を送信します"。  
+13. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`SendReplyToReceive`アクティビティと設定が<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"Service:応答を送信します。"  
   
-14. <xref:System.Activities.Statements.WriteLine> アクティビティをワークフローの末尾にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Service: Workflow ends, press ENTER to exit" に設定します。  
+14. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>アクティビティ、ワークフローとセットの下部にあるその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"Service:ワークフローは終了、ENTER キーを押して終了する。"  
   
      完成したサービス ワークフローは次のようになります。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48036053"
   
 6.  `PrintTransactionInfo` アクティビティを <xref:System.Activities.Statements.Sequence> アクティビティにドラッグ アンド ドロップします。  
   
-7.  ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`PrintTransactionInfo`アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"Client: Beginning Send"。 ワークフローは次のようになります。  
+7.  ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`PrintTransactionInfo`アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント。"送信を開始します。 ワークフローは次のようになります。  
   
      ![アクティビティの追加](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
   
@@ -199,9 +199,9 @@ ms.locfileid: "48036053"
   
      ![ReceiveForSend メッセージの設定を設定](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
   
-12. <xref:System.Activities.Statements.WriteLine> アクティビティを <xref:System.ServiceModel.Activities.Send> アクティビティと <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティの間にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Client: Send complete" に設定します。  
+12. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>の間でアクティビティ、<xref:System.ServiceModel.Activities.Send>と<xref:System.ServiceModel.Activities.ReceiveReply>アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント。送信が完了しました。"  
   
-13. <xref:System.Activities.Statements.WriteLine> アクティビティを <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティの後にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Client side: Reply received = " + replyMessage に設定します。  
+13. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、<xref:System.ServiceModel.Activities.ReceiveReply>アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント側。受信した応答 ="+ replyMessage  
   
 14. `PrintTransactionInfo` アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。  
   
@@ -312,7 +312,7 @@ ms.locfileid: "48036053"
         }  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
-- [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+- [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Windows Communication Foundation のトランザクションの概要](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

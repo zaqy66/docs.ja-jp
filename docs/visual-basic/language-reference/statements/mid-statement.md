@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 47034b3699f4dfee67d36e72d4b22898d469c900
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700300"
 ---
 # <a name="mid-statement"></a>Mid ステートメント
 指定した文字数を置き換える、`String`別の文字列から文字を含む変数。  
@@ -52,7 +52,7 @@ Mid( _
 ## <a name="remarks"></a>Remarks  
  置き換えられた文字の数は、文字数以下では常に`Target`します。  
   
- Visual Basic には、<xref:Microsoft.VisualBasic.Strings.Mid%2A>関数と`Mid`ステートメント。 これらの要素で指定された数、文字列内の文字の両方の動作が、`Mid`関数の中に文字を返します、`Mid`ステートメントには、文字が置き換えられます。 詳細については、「<xref:Microsoft.VisualBasic.Strings.Mid%2A>」を参照してください。  
+ Visual Basic には、<xref:Microsoft.VisualBasic.Strings.Mid%2A>関数と`Mid`ステートメント。 これらの要素で指定された数、文字列内の文字の両方の動作が、`Mid`関数の中に文字を返します、`Mid`ステートメントには、文字が置き換えられます。 詳細については、「 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 」を参照してください。  
   
 > [!NOTE]
 >  `MidB`以前のバージョンの Visual Basic のステートメントには、文字ではなく、(バイト単位) で部分文字列が置き換えられます。 2 バイト文字セット (DBCS) のアプリケーションで文字列に変換するためには、主に使用されます。 Visual Basic のすべての文字列が Unicode では、`MidB`現在サポートされていません。  
@@ -62,14 +62,14 @@ Mid( _
   
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
-## <a name="requirements"></a>要件  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>必要条件  
+ **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **モジュール:** `Strings`  
   
  **アセンブリ:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [Visual Basic の文字列の概要](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- [文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Visual Basic の文字列の概要](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

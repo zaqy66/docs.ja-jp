@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: b4b89047cb1b85c4386f1bd9d2a16a06ec112b73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715583"
 ---
 # <a name="timing-behaviors-overview"></a>タイミング動作の概要
 このトピックでは、アニメーション、およびその他のタイミング動作を説明します。<xref:System.Windows.Media.Animation.Timeline>オブジェクト。  
@@ -42,7 +42,7 @@ ms.locfileid: "43858139"
 |----------|-----------------|----------------|-|-|-|  
 |単純継続時間|タイムラインが順方向の反復を 1 回完了するのに要する時間の長さ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |1 回の繰り返し|タイムラインにする場合とすると、再生にかかる時間の長さ、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>プロパティが true の場合、旧バージョンと 1 回再生します。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|アクティブ期間|タイムラインで指定されたすべての繰り返しを完了するにかかる時間の長さ、<xref:System.Windows.Media.Animation.RepeatBehavior>プロパティ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>、<xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|アクティブ期間|タイムラインで指定されたすべての繰り返しを完了するにかかる時間の長さ、<xref:System.Windows.Media.Animation.RepeatBehavior>プロパティ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>、 <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Duration プロパティ  
@@ -118,13 +118,13 @@ ms.locfileid: "43858139"
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – の時間の進行を親に対する相対的な速度を指定します、<xref:System.Windows.Media.Animation.Timeline>します。 1 より大きい値の処理速度の向上、<xref:System.Windows.Media.Animation.Timeline>とその子<xref:System.Windows.Media.Animation.Timeline>オブジェクトは 0 から 1 までの値遅きます。 いずれかの値が示す<xref:System.Windows.Media.Animation.Timeline>その親と同じ速度で進行します。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>コンテナー タイムラインの設定では、そのすべての子に影響<xref:System.Windows.Media.Animation.Timeline>オブジェクトもします。  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの加速に費やされたします。 例については、次を参照してください。[方法: 加速または減速するアニメーション](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)します。 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの加速に費やされたします。 例については、「[方法: 加速または減速するアニメーション](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)します。 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの減速に費やされたします。 例については、次を参照してください。[方法: 加速または減速するアニメーション](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)します。  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの減速に費やされたします。 例については、「[方法: 加速または減速するアニメーション](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [タイミング イベントの概要](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>関連項目
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [タイミング イベントの概要](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)

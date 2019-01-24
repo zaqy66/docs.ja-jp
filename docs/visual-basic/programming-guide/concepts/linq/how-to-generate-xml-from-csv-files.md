@@ -1,15 +1,15 @@
 ---
-title: '方法: CSV ファイル (Visual Basic) から XML を生成'
+title: '方法: (Visual Basic) の CSV ファイルから XML を生成します。'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 535704cb2cb5a702c524f306e561b1154f4b2e1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5facb31c33c777a5d7ed083dbfda5bd18a67e6a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706681"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>方法: CSV ファイル (Visual Basic) から XML を生成
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>方法: (Visual Basic) の CSV ファイルから XML を生成します。
 この例では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。  
   
 ## <a name="example"></a>例  
@@ -107,5 +107,5 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [射影と変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+- [射影と変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

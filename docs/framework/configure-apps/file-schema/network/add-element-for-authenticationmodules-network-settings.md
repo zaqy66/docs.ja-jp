@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 0d7be1d525ff0f4d1e23155f350155837394297a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae89ded216f3c9dbfe21070ac4a98c58290ef907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641032"
 ---
 # <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>authenticationModules の &lt;add&gt; 要素 (ネットワーク設定)
 アプリケーションに認証モジュールを追加します。  
@@ -81,7 +81,7 @@ ms.locfileid: "50181083"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

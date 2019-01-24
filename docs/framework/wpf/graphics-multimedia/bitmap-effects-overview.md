@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715817"
 ---
 # <a name="bitmap-effects-overview"></a>ビットマップ効果の概要
 ビットマップ効果は、デザイナーを有効にして、視覚効果を適用する開発者が Windows Presentation Foundation (WPF) をコンテンツのレンダリングします。 ビットマップ効果を簡単に適用することを許可するなど、<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>効果またはぼかし効果をイメージやボタン。  
@@ -60,12 +60,12 @@ ms.locfileid: "48261262"
 ## <a name="creating-custom-effects"></a>カスタム効果の作成  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] では、マネージド [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションで使うことができるカスタム効果を作成するためのアンマネージド インターフェイスも提供されています。 カスタム ビットマップ効果の作成に関する参考資料については、「[Unmanaged WPF Bitmap Effect](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)」(アンマネージ WPF ビットマップ効果) ドキュメントをご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Effects.BitmapEffectGroup>  
- <xref:System.Windows.Media.Effects.BitmapEffectInput>  
- <xref:System.Windows.Media.Effects.BitmapEffectCollection>  
- [アンマネージ WPF ビットマップ効果](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)  
- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [セキュリティ](../../../../docs/framework/wpf/security-wpf.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Effects.BitmapEffectGroup>
+- <xref:System.Windows.Media.Effects.BitmapEffectInput>
+- <xref:System.Windows.Media.Effects.BitmapEffectCollection>
+- [アンマネージ WPF ビットマップ効果](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
+- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [セキュリティ](../../../../docs/framework/wpf/security-wpf.md)
+- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)

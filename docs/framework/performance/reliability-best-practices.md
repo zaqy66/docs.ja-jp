@@ -40,25 +40,25 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 280e73ccd3d8a90b2f2b3a485d3f4240b434359b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714855"
 ---
 # <a name="reliability-best-practices"></a>信頼性に関するベスト プラクティス
-以下の信頼性ルールは SQL Server を対象としたものですが、他のホスト ベースのサーバー アプリケーションにも当てはまります。 SQL Server などのサーバーがリソースをリークせず、停止しないことが非常に重要です。  ただし、オブジェクトの状態を変更するすべてのメソッドに対してバックアウト コードを記述することでは、それを実現できません。  目標は、バックアウト コードによりすべての場所ですべてのエラーから復旧する 100% 信頼できるマネージ コードを記述することではありません。  それは、成功する可能性がほとんどない面倒な作業です。  共通言語ランタイム (CLR) では、完全なマネージ コードを作成できるという十分に強力な保証は簡単には得られません。  ASP.NET とは異なり、SQL Server で使用されているプロセスは 1 つだけであり、受け入れられないほど長い時間データベースを停止させない限りリサイクルできません。  
+以下の信頼性ルールは SQL Server を対象としたものですが、他のホスト ベースのサーバー アプリケーションにも当てはまります。 SQL Server などのサーバーがリソースをリークせず、停止しないことが非常に重要です。  ただし、オブジェクトの状態を変更するすべてのメソッドに対してバックアウト コードを記述することでは、それを実現できません。  目標は、バックアウト コードによりすべての場所ですべてのエラーから復旧する 100% 信頼できるマネージド コードを記述することではありません。  それは、成功する可能性がほとんどない面倒な作業です。  共通言語ランタイム (CLR) では、完全なマネージド コードを作成できるという十分に強力な保証は簡単には得られません。  ASP.NET とは異なり、SQL Server で使用されているプロセスは 1 つだけであり、受け入れられないほど長い時間データベースを停止させない限りリサイクルできません。  
   
  このように強力な保証がなく、単一プロセスで実行されている場合の信頼性は、必要なときにスレッドを終了するか、アプリケーション ドメインをリサイクルすること、および予防策を設けてハンドルやメモリなどのオペレーティング システム リソースがリークしないようにすることに基づきます。  このような単純な信頼性の制約であっても、大きな信頼性の要件があります。  
   
 -   オペレーティング システムのリソースがリークしないこと。  
   
--   CLR に対するすべてのフォームにおいてすべてのマネージ ロックを識別すること。  
+-   CLR に対するすべてのフォームにおいてすべてのマネージド ロックを識別すること。  
   
 -   アプリケーション間のドメイン共有状態を壊すことなく、<xref:System.AppDomain> のリサイクルが円滑に機能すること。  
   
- <xref:System.Threading.ThreadAbortException>、<xref:System.StackOverflowException>、<xref:System.OutOfMemoryException> の各例外を処理するマネージ コードを記述することは理論的には可能ですが、アプリケーション全体でそのような堅牢なコードを記述することを開発者に期待するのは無謀です。  そのため、帯域外の例外では実行中のスレッドが終了します。また、終了したスレッドが共有の状態を編集していた場合は (これは、スレッドがロックを保持しているかどうかで判断できます)、<xref:System.AppDomain> がアンロードされます。  共有状態を編集しているメソッドが終了された場合、共有状態の更新に対する信頼性の高いバックアウト コードを記述することはできないため、状態が破損します。  
+ <xref:System.Threading.ThreadAbortException>、<xref:System.StackOverflowException>、<xref:System.OutOfMemoryException> の各例外を処理するマネージド コードを記述することは理論的には可能ですが、アプリケーション全体でそのような堅牢なコードを記述することを開発者に期待するのは無謀です。  そのため、帯域外の例外では実行中のスレッドが終了します。また、終了したスレッドが共有の状態を編集していた場合は (これは、スレッドがロックを保持しているかどうかで判断できます)、<xref:System.AppDomain> がアンロードされます。  共有状態を編集しているメソッドが終了された場合、共有状態の更新に対する信頼性の高いバックアウト コードを記述することはできないため、状態が破損します。  
   
  .NET Framework バージョン 2.0 では、信頼性が必要なホストは SQL Server だけです。  アセンブリが SQL Server で実行される場合は、データベースでの実行時には無効にされる特定の機能がある場合でも、そのアセンブリのすべての部分について信頼性の作業を行う必要があります。  これが必要になるのは、コード分析エンジンはアセンブリ レベルでコードを調べるため、無効にされるコードを区別できないためです。 SQL Server のプログラミングに関するもう 1 つの考慮事項は、SQL Server はすべての処理を 1 つのプロセスで実行し、メモリやオペレーティング システム ハンドルなどのすべてのリソースをクリーンアップするには <xref:System.AppDomain> のリサイクルが使われるということです。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "33397768"
   
  <xref:System.Threading.ThreadAbortException>、<xref:System.StackOverflowException>、<xref:System.OutOfMemoryException> などの非同期例外が、予期しない場所 (すべてのマシン命令) でスローされる可能性があります。  
   
- マネージ スレッドは必ずしも SQL 内の Win32 スレッドではありません。ファイバーである可能性があります。  
+ マネージド スレッドは必ずしも SQL 内の Win32 スレッドではありません。ファイバーである可能性があります。  
   
  プロセス全体またはアプリケーション間のドメイン変更可能な共有状態は、安全に変更することが特に困難であり、可能な限り避ける必要があります。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33397768"
  SQL Server でホストされているライブラリが共有状態を正しく更新しない場合、データベースを再起動しないかぎりコードを復旧できない可能性が高くなります。  さらに、極端なケースでは、これにより SQL Server プロセスが失敗し、データベースが再起動する可能性があります。  データベースが再起動すると、Web サイトが停止したり、会社の運用に影響して、可用性が低下します。  メモリやハンドルなどのオペレーティング システムのリソースがゆっくりリークすると、最終的にサーバーでのハンドルの割り当てが失敗して復旧できなかったり、サーバーのパフォーマンスが徐々に悪化して顧客のアプリケーションの可用性が低下する可能性があります。  これらのシナリオを回避する必要があるのは明らかです。  
   
 ## <a name="best-practice-rules"></a>ベスト プラクティスのルール  
- 概要では、フレームワークの安定性と信頼性を向上させるために、サーバーで実行されるマネージ コードのコード レビューで把握する必要があることに注目しました。 これらのチェックはすべて、一般的によいことであり、サーバーでは絶対に必要なことです。  
+ 概要では、フレームワークの安定性と信頼性を向上させるために、サーバーで実行されるマネージド コードのコード レビューで把握する必要があることに注目しました。 これらのチェックはすべて、一般的によいことであり、サーバーでは絶対に必要なことです。  
   
  SQL Server は、デッド ロックやリソースの制約が発生すると、スレッドを中止するか、<xref:System.AppDomain> を破棄します。  その場合は、制約された実行領域 (CER) 内のバックアウト コードのみが実行を保証されます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33397768"
   
  <xref:System.Runtime.InteropServices.SafeHandle> が適さない特定の状況があります。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドは <xref:System.GC> ファイナライザー スレッドで実行できるので、特定のスレッドで解放する必要があるすべてのハンドルは、<xref:System.Runtime.InteropServices.SafeHandle> にラップされていてはなりません。  
   
- ランタイム呼び出し可能ラッパー (RCW) は、コードを追加せずに CLR でクリーンアップできます。  プラットフォーム呼び出しを使い、COM オブジェクトを `IUnknown*` または <xref:System.IntPtr> として扱うコードの場合は、RCW を使うようにコードを書き直す必要があります。  アンマネージ リリース メソッドがマネージ コードをコールバックする可能性があるため、このシナリオには <xref:System.Runtime.InteropServices.SafeHandle> は適していない場合があります。  
+ ランタイム呼び出し可能ラッパー (RCW) は、コードを追加せずに CLR でクリーンアップできます。  プラットフォーム呼び出しを使い、COM オブジェクトを `IUnknown*` または <xref:System.IntPtr> として扱うコードの場合は、RCW を使うようにコードを書き直す必要があります。  アンマネージド リリース メソッドがマネージド コードをコールバックする可能性があるため、このシナリオには <xref:System.Runtime.InteropServices.SafeHandle> は適していない場合があります。  
   
 #### <a name="code-analysis-rule"></a>コード分析ルール  
  オペレーティング システムのリソースをカプセル化するには、<xref:System.Runtime.InteropServices.SafeHandle> を使います。 <xref:System.Runtime.InteropServices.HandleRef> または <xref:System.IntPtr> 型のフィールドは使わないでください。  
@@ -106,7 +106,7 @@ ms.locfileid: "33397768"
 #### <a name="code-analysis-rule"></a>コード分析ルール  
  `Finalize` の代わりに、<xref:System.Runtime.InteropServices.SafeHandle> を使ってオペレーティング システムのリソースをクリーンアップします。 <xref:System.IntPtr> を使わないでください。リソースをカプセル化するには <xref:System.Runtime.InteropServices.SafeHandle> を使います。 finally 句を実行する必要がある場合は、CER 内に配置します。  
   
-### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>すべてのロックは、既存のマネージ ロック コードを通過する必要がある  
+### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>すべてのロックは、既存のマネージド ロック コードを通過する必要がある  
  CLR は、スレッドの単なる中止ではなく、<xref:System.AppDomain> のティアダウンが必要な場合を知るため、コードがロック状態であることを認識する必要があります。  スレッドの中止は、スレッドで使われているデータが不整合な状態のままになる可能性があるため、危険な場合があります。 したがって、<xref:System.AppDomain> 全体をリサイクルする必要があります。  ロックを識別できないと、デッドロックまたは不適切な結果になる可能性があります。 ロック領域を識別するには、<xref:System.Threading.Thread.BeginCriticalRegion%2A> および <xref:System.Threading.Thread.EndCriticalRegion%2A> メソッドを使います。  これらは <xref:System.Threading.Thread> クラスの静的メソッドであり、現在のスレッドにのみ適用され、あるスレッドのロック カウントを別のスレッドが編集するのを防ぐのに役立ちます。  
   
  これらのメソッドを使う [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)を使うだけでなく、この CLR 通知が組み込まれている <xref:System.Threading.Monitor.Enter%2A> および <xref:System.Threading.Monitor.Exit%2A> を使うこともお勧めします。  
@@ -125,14 +125,14 @@ ms.locfileid: "33397768"
  `catch` の後のクリーンアップ コードは、`finally` ブロック内に配置する必要があります。 dispose の呼び出しは finally ブロック内に置きます。  `catch` ブロックは、スローまたは再スローで終了する必要があります。  例外はありますが (多数の例外のいずれかを取得する可能性があるときにネットワーク接続を確立できるかどうかを検出するコードなど)、通常の状況で複数の例外をキャッチする必要があるコードでは、コードをテストしてそれが成功するかどうかを確認する必要があることを示すようにします。  
   
 ### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>アプリケーション ドメイン間ではプロセス全体で変更可能な共有状態を使わないようにするか、または制約された実行領域を使う  
- 概要で説明したように、アプリケーション ドメイン間でプロセス全体の共有状態を確実な方法で監視するマネージ コードを記述するのは非常に困難な場合があります。  プロセス全体の共有状態は、Win32 コード、CLR 内、またはリモート処理を使うマネージ コードにおいて、アプリケーション ドメイン間で共有される何らかの種類のデータ構造です。  変更可能な共有状態をマネージ コードで正確に記述するのは非常に困難であり、静的な共有は細心の注意を払うことによってのみ実現できる場合があります。  プロセス全体またはコンピューター全体の共有状態がある場合は、それを使わないで済む方法を探すか、制約された実行領域 (CER) を使って共有状態を保護するようにします。  共有状態の識別と修正が行われていないライブラリでは、<xref:System.AppDomain> のクリーンなアンロードを必要とする SQL Server などのホストがクラッシュする可能性があることに注意してください。  
+ 概要で説明したように、アプリケーション ドメイン間でプロセス全体の共有状態を確実な方法で監視するマネージド コードを記述するのは非常に困難な場合があります。  プロセス全体の共有状態は、Win32 コード、CLR 内、またはリモート処理を使うマネージド コードにおいて、アプリケーション ドメイン間で共有される何らかの種類のデータ構造です。  変更可能な共有状態をマネージド コードで正確に記述するのは非常に困難であり、静的な共有は細心の注意を払うことによってのみ実現できる場合があります。  プロセス全体またはコンピューター全体の共有状態がある場合は、それを使わないで済む方法を探すか、制約された実行領域 (CER) を使って共有状態を保護するようにします。  共有状態の識別と修正が行われていないライブラリでは、<xref:System.AppDomain> のクリーンなアンロードを必要とする SQL Server などのホストがクラッシュする可能性があることに注意してください。  
   
  コードが COM オブジェクトを使っている場合は、アプリケーション ドメイン間でその COM オブジェクトを共有しないでください。  
   
 ### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>プロセス全体またはアプリケーション ドメイン間ではロックが機能しない  
  以前は、<xref:System.Threading.Monitor.Enter%2A> および [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)は、グローバルなプロセス ロックの作成に使われていました。  たとえば、これは、非共有アセンブリからの <xref:System.Type> インスタンスなどの <xref:System.AppDomain> のアジャイル クラス、<xref:System.Threading.Thread> オブジェクト、インターン処理された文字列、およびリモート処理を使ってアプリケーション ドメイン間で共有される文字列でのロック時に発生します。  これらのロックはプロセス全体ではなくなりました。  プロセス全体にわたるアプリケーション間ドメイン ロックの存在を識別するには、ロック内のコードが、ディスク上のファイルやデータベースなどの、外部の永続リソースを使っているかどうかを確認します。  
   
- 保護されたコードが外部リソースを使っている場合、そのコードが複数のアプリケーション ドメインで同時に実行することがあるため、<xref:System.AppDomain> 内でロックを取得すると問題が発生する可能性があることに注意してください。  これは、1 つのログ ファイルへの書き込み、またはプロセス全体のソケットへのバインドで、問題になる場合があります。  これらの変更は、名前付きの <xref:System.Threading.Mutex> または <xref:System.Threading.Semaphore> インスタンスを使う以外に、マネージ コードを使ってプロセスのグローバルなロックを取得する簡単な方法はないことを意味します。  2 つのアプリケーション ドメインで同時に実行しないコードを作成するか、<xref:System.Threading.Mutex> または <xref:System.Threading.Semaphore> クラスを使ってください。  既存のコードを変更できない場合は、この同期を実現するために Win32 名前付きミューテックスを使わないでください。なぜなら、ファイバー モードで実行するということは、同じオペレーティング システム スレッドでミューテックスを取得して解放することが保証されないことを意味します。  アンマネージ コードを使ってロックを同期するのではなく、マネージ <xref:System.Threading.Mutex> クラス、または名前付きの <xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent>、または <xref:System.Threading.Semaphore> を使って、CLR が認識する方法でコード ロックを同期する必要があります。  
+ 保護されたコードが外部リソースを使っている場合、そのコードが複数のアプリケーション ドメインで同時に実行することがあるため、<xref:System.AppDomain> 内でロックを取得すると問題が発生する可能性があることに注意してください。  これは、1 つのログ ファイルへの書き込み、またはプロセス全体のソケットへのバインドで、問題になる場合があります。  これらの変更は、名前付きの <xref:System.Threading.Mutex> または <xref:System.Threading.Semaphore> インスタンスを使う以外に、マネージド コードを使ってプロセスのグローバルなロックを取得する簡単な方法はないことを意味します。  2 つのアプリケーション ドメインで同時に実行しないコードを作成するか、<xref:System.Threading.Mutex> または <xref:System.Threading.Semaphore> クラスを使ってください。  既存のコードを変更できない場合は、この同期を実現するために Win32 名前付きミューテックスを使わないでください。なぜなら、ファイバー モードで実行するということは、同じオペレーティング システム スレッドでミューテックスを取得して解放することが保証されないことを意味します。  アンマネージド コードを使ってロックを同期するのではなく、マネージド <xref:System.Threading.Mutex> クラス、または名前付きの <xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent>、または <xref:System.Threading.Semaphore> を使って、CLR が認識する方法でコード ロックを同期する必要があります。  
   
 #### <a name="avoid-locktypeofmytype"></a>lock(typeof(MyType)) を使わない  
  すべてのアプリケーション ドメイン間でコードのただ 1 つのコピーが共有される共有アセンブリのプライベートおよびパブリックの <xref:System.Type> オブジェクトでも、問題が発生します。  共有アセンブリの場合、プロセスごとに <xref:System.Type> のインスタンスが 1 つだけ存在し、これは複数のアプリケーション ドメインがまったく同じ <xref:System.Type> インスタンスを共有することを意味します。  <xref:System.Type> のインスタンスでロックを取得すると、その <xref:System.AppDomain> だけでなく、プロセス全体に影響するロックが取得されます。  ある <xref:System.AppDomain> が <xref:System.Type> オブジェクトでロックを取得した後、そのスレッドが突然中止されると、ロックは解放されません。  その後、このロックにより、他のアプリケーション ドメインでデッドロックが発生する可能性があります。  
@@ -220,7 +220,7 @@ public static MyClass SingletonProperty
  SQL Server の場合、同期またはスレッド化を導入するために使われるすべてのメソッドを、HPA で識別する必要があります。 これには、状態を共有するメソッド、同期されるメソッド、または外部プロセスを管理するメソッドが含まれます。 SQL Server に影響を与える <xref:System.Security.Permissions.HostProtectionResource> の値は、<xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization>、および <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt> です。 ただし、SQL に影響を与えるリソースを使うものだけでなく、いずれかの <xref:System.Security.Permissions.HostProtectionResource> を公開するすべてのメソッドを HPA によって識別する必要があります。  
   
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>アンマネージ コードで無期限にブロックしない  
- マネージ コード内ではなくアンマネージ コード内でブロックすると、CLR がスレッドを中止できないため、サービス拒否攻撃を受ける可能性があります。  ブロックされたスレッドは、少なくとも一部の非常に安全でない操作を実行せずに、CLR が <xref:System.AppDomain> をアンロードするのを妨げます。  Win32 同期プリミティブを使ったブロックは、許容できないものの明白な例です。  ソケットでの `ReadFile` の呼び出しでブロックすることは、可能であれば避ける必要があります。できれば、Win32 API で、これがタイムアウトするような操作のメカニズムを提供する必要があります。  
+ マネージド コード内ではなくアンマネージド コード内でブロックすると、CLR がスレッドを中止できないため、サービス拒否攻撃を受ける可能性があります。  ブロックされたスレッドは、少なくとも一部の非常に安全でない操作を実行せずに、CLR が <xref:System.AppDomain> をアンロードするのを妨げます。  Win32 同期プリミティブを使ったブロックは、許容できないものの明白な例です。  ソケットでの `ReadFile` の呼び出しでブロックすることは、可能であれば避ける必要があります。できれば、Win32 API で、これがタイムアウトするような操作のメカニズムを提供する必要があります。  
   
  ネイティブを呼び出すメソッドでは、合理的な有限のタイムアウトで Win32 呼び出しを使うのが理想的です。  ユーザーがタイムアウトを指定できる場合は、何らかの特定のセキュリティ アクセス許可なしでは、ユーザーが無限のタイムアウトを指定できないようにする必要があります。  ガイドラインとしては、メソッドが 10 秒以上ブロックする場合は、タイムアウトをサポートするバージョンを使うか、CLR のサポートを追加する必要があります。  
   
@@ -233,13 +233,13 @@ public static MyClass SingletonProperty
  COM シングルスレッド アパートメント (STA) を使用するコードを明らかにします。  SQL Server プロセスでは STA は無効になります。  パフォーマンス カウンターやクリップボードなどの `CoInitialize` に依存する機能は、SQL Server 内では無効にする必要があります。  
   
 ### <a name="ensure-finalizers-are-free-of-synchronization-problems"></a>ファイナライザーに同期の問題がないことを確認する  
- .NET Framework の将来のバージョンでは、複数のファイナライザー スレッドが存在する可能性があります。つまり、同じ型の異なるインスタンスのファイナライザーが同時に実行します。  これらは、完全にスレッド セーフである必要はありません。ガベージ コレクターが、ただ 1 つのスレッドで特定のオブジェクト インスタンスのファイナライザーが実行されることを保証します。  ただし、複数の異なるオブジェクト インスタンスで同時に実行するときの競合状態やデッドロックを回避するように、ファイナライザーをコーディングする必要があります。  ログ ファイルへの書き込みなどの外部状態をファイナライザーで使う場合は、スレッド処理の問題に対処する必要があります。  終了処理に依存してスレッド セーフを提供しないでください。 マネージまたはネイティブのスレッド ローカル記憶域を使って、ファイナライザー スレッドに状態を保存しないでください。  
+ .NET Framework の将来のバージョンでは、複数のファイナライザー スレッドが存在する可能性があります。つまり、同じ型の異なるインスタンスのファイナライザーが同時に実行します。  これらは、完全にスレッド セーフである必要はありません。ガベージ コレクターが、ただ 1 つのスレッドで特定のオブジェクト インスタンスのファイナライザーが実行されることを保証します。  ただし、複数の異なるオブジェクト インスタンスで同時に実行するときの競合状態やデッドロックを回避するように、ファイナライザーをコーディングする必要があります。  ログ ファイルへの書き込みなどの外部状態をファイナライザーで使う場合は、スレッド処理の問題に対処する必要があります。  終了処理に依存してスレッド セーフを提供しないでください。 マネージドまたはネイティブのスレッド ローカル記憶域を使って、ファイナライザー スレッドに状態を保存しないでください。  
   
 #### <a name="code-analysis-rule"></a>コード分析ルール  
  ファイナライザーには同期の問題が存在していない必要があります。 静的な変更可能状態をファイナライザーで使用しないでください。  
   
 ### <a name="avoid-unmanaged-memory-if-possible"></a>可能な限りアンマネージ メモリを避ける  
- オペレーティング システム ハンドルと同じように、アンマネージ メモリはリークする可能性があります。  可能であれば、[stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) を使ってスタック上のメモリを使うか、[fixed ステートメント](~/docs/csharp/language-reference/keywords/fixed-statement.md) や byte[] を使う <xref:System.Runtime.InteropServices.GCHandle> などの固定されたマネージ オブジェクトを使うようにします。  最終的には <xref:System.GC> がこれらをクリーンアップします。  ただし、アンマネージ メモリを割り当てる必要がある場合は、<xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスを使ってメモリの割り当てをラップすることを考えます。  
+ オペレーティング システム ハンドルと同じように、アンマネージ メモリはリークする可能性があります。  可能であれば、[stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) を使ってスタック上のメモリを使うか、[fixed ステートメント](~/docs/csharp/language-reference/keywords/fixed-statement.md) や byte[] を使う <xref:System.Runtime.InteropServices.GCHandle> などの固定されたマネージド オブジェクトを使うようにします。  最終的には <xref:System.GC> がこれらをクリーンアップします。  ただし、アンマネージ メモリを割り当てる必要がある場合は、<xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスを使ってメモリの割り当てをラップすることを考えます。  
   
  <xref:System.Runtime.InteropServices.SafeHandle> が適切ではないケースが少なくとも 1 つあることに注意してください。  メモリの割り当てや解放を行う COM メソッド呼び出しでは、1 つの DLL が `CoTaskMemAlloc` を使ってメモリを割り当てた後、別の DLL が `CoTaskMemFree` でそのメモリを解放するのが一般的です。  これらの場所で <xref:System.Runtime.InteropServices.SafeHandle> を使うのは、他の DLL がメモリの有効期間を制御できるようにする代わりに、アンマネージ メモリの有効期間を <xref:System.Runtime.InteropServices.SafeHandle> の有効期間に結び付けようとするため不適切です。  
   
@@ -249,18 +249,18 @@ public static MyClass SingletonProperty
  すべての例外をキャッチするようになっているすべての場所を、スローされると予想される特定の種類の例外だけをキャッチするように変更することを検討してください (文字列書式設定メソッドからの <xref:System.FormatException> など)。  このようにすると、catch ブロックが予期しない例外で実行されることがなくなり、予期しない例外をキャッチすることでコードのバグが非表示にされなくなります。  一般的なルールとして、ライブラリ コードでは例外を処理しないでください (例外をキャッチする必要があるコードが、呼び出しているコード内の設計上の欠陥を示す可能性があります)。  場合によっては、例外をキャッチし、異なる例外の種類をスローすることで、より多くのデータを提供できることがあります。  このような場合は入れ子になった例外を使い、エラーの実際の原因を新しい例外の <xref:System.Exception.InnerException%2A> プロパティに格納します。  
   
 #### <a name="code-analysis-rule"></a>コード分析ルール  
- すべてのオブジェクトまたはすべての例外をキャッチしているマネージ コード内のすべての catch ブロックを確認します。  C# の場合、つまり、両方のフラグを設定する`catch`{}と`catch(Exception)`{}です。  例外の種類を非常に限定的にすることを考えます。または、コードを調べて、予期しない例外の種類をキャッチした場合に不適切に動作しないことを確認します。  
+ すべてのオブジェクトまたはすべての例外をキャッチしているマネージド コード内のすべての catch ブロックを確認します。  C#、つまり、両方のフラグを設定`catch`{}と`catch(Exception)`{}します。  例外の種類を非常に限定的にすることを考えます。または、コードを調べて、予期しない例外の種類をキャッチした場合に不適切に動作しないことを確認します。  
   
-### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>マネージ スレッドが Win32 スレッド (ファイバー) であると想定してはならない  
- マネージ スレッド ローカル記憶域は動作しますが、アンマネージ スレッド ローカル記憶域を使うこと、またはコードが現在のオペレーティング システム スレッドで再び実行されると想定することはできません。  スレッドのロケールなどの設定を変更しないでください。  プラットフォーム呼び出しでは `InitializeCriticalSection` または `CreateMutex` を呼び出さないでください。これらでは、ロックを開始したオペレーティング システム スレッドがロックを終了する必要があります。  ファイバーを使うとこれは該当しないので、Win32 のクリティカル セクションおよびミューテックスを SQL で直接使うことはできません。  マネージ <xref:System.Threading.Mutex> クラスはこれらのスレッドのアフィニティに関する注意事項を処理しないことに注意してください。  
+### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>マネージド スレッドが Win32 スレッド (ファイバー) であると想定してはならない  
+ マネージド スレッド ローカル記憶域は動作しますが、アンマネージド スレッド ローカル記憶域を使うこと、またはコードが現在のオペレーティング システム スレッドで再び実行されると想定することはできません。  スレッドのロケールなどの設定を変更しないでください。  プラットフォーム呼び出しでは `InitializeCriticalSection` または `CreateMutex` を呼び出さないでください。これらでは、ロックを開始したオペレーティング システム スレッドがロックを終了する必要があります。  ファイバーを使うとこれは該当しないので、Win32 のクリティカル セクションおよびミューテックスを SQL で直接使うことはできません。  マネージド <xref:System.Threading.Mutex> クラスはこれらのスレッドのアフィニティに関する注意事項を処理しないことに注意してください。  
   
- マネージ スレッド ローカル記憶域やスレッドの現在の UI カルチャなど、マネージ <xref:System.Threading.Thread> オブジェクトのほとんどの状態は安全に使うことができます。  また、<xref:System.ThreadStaticAttribute> を使うこともできます。これは、既存の静的変数の値を、現在のマネージ スレッドによってのみアクセスできるようにします (これは、CLR でファイバー ローカル記憶域を行うもう 1 つの方法です)。  プログラミング モデルの理由から、SQL で実行しているときは、スレッドの現在のカルチャを変更できません。  
+ マネージド スレッド ローカル記憶域やスレッドの現在の UI カルチャなど、マネージド <xref:System.Threading.Thread> オブジェクトのほとんどの状態は安全に使うことができます。  また、<xref:System.ThreadStaticAttribute> を使うこともできます。これは、既存の静的変数の値を、現在のマネージド スレッドによってのみアクセスできるようにします (これは、CLR でファイバー ローカル記憶域を行うもう 1 つの方法です)。  プログラミング モデルの理由から、SQL で実行しているときは、スレッドの現在のカルチャを変更できません。  
   
 #### <a name="code-analysis-rule"></a>コード分析ルール  
  SQL Server はファイバー モードで実行します。スレッド ローカル記憶域は使わないでください。 `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue.` のプラットフォーム呼び出しを行わないでください。  
   
 ### <a name="let-sql-server-handle-impersonation"></a>SQL Server に偽装を処理させる  
- 偽装はスレッド レベルで動作し、SQL が実行できるのはファイバー モードなので、マネージ コードはユーザーを偽装してはならず、`RevertToSelf` を呼び出してはなりません。  
+ 偽装はスレッド レベルで動作し、SQL が実行できるのはファイバー モードなので、マネージド コードはユーザーを偽装してはならず、`RevertToSelf` を呼び出してはなりません。  
   
 #### <a name="code-analysis-rule"></a>コード分析ルール  
  SQL Server に偽装を処理させるようにします。 `RevertToSelf`、`ImpersonateAnonymousToken`、`DdeImpersonateClient`、`ImpersonateDdeClientWindow`、`ImpersonateLoggedOnUser`、`ImpersonateNamedPipeClient`、`ImpersonateSelf`、`RpcImpersonateClient`、`RpcRevertToSelf`、`RpcRevertToSelfEx`、`SetThreadToken` は使わないでください。  
@@ -278,6 +278,6 @@ public static MyClass SingletonProperty
   
  このようにすると、`try` ブロックを実行する前に finally ブロック内のすべてのコードを準備するよう、Just-In-Time コンパイラに指示されます。 これにより、finally ブロック内のコードがすべてのケースでビルドされて実行されることが保証されます。 CER では空の `try` ブロックを使うことが珍しくありません。 CER を使うと、非同期スレッドの中止およびメモリ不足例外に対して保護されます。 非常に深いコードに対するスタック オーバーフローを追加で処理する CER の形式については、「<xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.ConstrainedExecution>  
- [SQL Server プログラミングとホスト保護属性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.ConstrainedExecution>
+- [SQL Server プログラミングとホスト保護属性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)

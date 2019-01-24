@@ -1,5 +1,5 @@
 ---
-title: '方法 : 線形グラデーションを作成する'
+title: '方法: 線形グラデーションを作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,36 +10,36 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696296"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>方法 : 線形グラデーションを作成する
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 水平方向、垂直方向、および対角線方向の線形グラデーションを提供します。 既定では、線形グラデーションの色を一様に変更します。 ただし、色が一様でない方法で変更されるように、線形グラデーションをカスタマイズできます。  
+# <a name="how-to-create-a-linear-gradient"></a>方法: 線形グラデーションを作成します。
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 水平方向、垂直方向、および対角線方向の線形グラデーションを提供します。 既定では、線形グラデーションの色を均一に変更します。 ただし、色が一様でない方法で変更されるように、線形グラデーションをカスタマイズできます。  
   
- 次の例では、行、楕円、および水平方向の線形グラデーション ブラシを含む四角形を格納します。  
+ 次の例では、線、楕円、および水平方向の線状グラデーション ブラシを四角形を塗りつぶします。  
   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>コンス トラクターは、4 つの引数を受け取ります。 2 つのポイントと 2 つの色。 最初のポイント (0, 10) は最初の色 (赤) に関連付けられ、(200, 10) は、2 番目のポイントが 2 番目の色 (青) と関連付けられています。 想定されるようから描画される線で、(0, 10) に (200, 10) 徐々 に赤から青に変更します。  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>コンス トラクターが 4 つの引数を受け取ります。 2 つのポイントと 2 つの色。 (0, 10) は、最初のポイントは最初の色 (赤) に関連付けられていると、2 番目の点 (200, 10) が 2 番目の色 (青) に関連付けられています。 想像どおりから描画される直線 (0, 10) に (200, 10) が赤から青に徐々 に変化します。  
   
- ポイント (50, 10) と (200, 10) の 10 件が重要ではありません。 2 つの点が同じ 2 つ目の座標にあることが重要なは、それらを結ぶ線は横方向です。 楕円および四角形も段階的に変化を 200 に水平方向の座標が 0 から出ると、青、赤です。  
+ 点 (50, 10) と (200, 10) で 10 件が重要ではありません。 2 つのポイントが同じ 2 つ目の座標にあることが重要なは、それらを結ぶ線が水平方向。 楕円と四角形変更も徐々 に赤から青の水平方向の座標が 0 から 200 にようにできます。  
   
- 次の図は、行、楕円、および四角形を示します。 色のグラデーション繰り返される自体水平方向の座標が 200 を超えるよう注意してください。  
+ 次の図は、線、楕円、四角形を示します。 色のグラデーション繰り返される自体の水平方向座標が 200 を超えるとに注意してください。  
   
  ![線形グラデーション](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
   
 ### <a name="to-use-horizontal-linear-gradients"></a>水平方向の線形グラデーションを使用するには  
   
--   3 番目および 4 番目の引数として、それぞれ赤と不透明な青色の不透明なを渡します。  
+-   3 番目と 4 番目の引数として、それぞれ不透明な赤と不透明青を渡します。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
- 色の要素は前の例では 200 の水平方向の座標に水平方向の座標は 0 から移動すると直線的に変更します。 たとえば、最初の座標が 0 ~ 200 の範囲の中間に位置ポイントは、0 ~ 255 の範囲の中間に位置が青の要素があります。  
+ 色要素は前の例では 0 の水平座標から 200 の水平座標に移動すると直線的に変更します。 たとえば、最初の座標が 0 と 200 の中間点は、0 から 255 までの中間に位置が青要素があります。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] グラデーションの 1 つの辺によって色が異なるため、他の方法を調整できます。 黒から次の表に従って赤に変更するグラデーション ブラシを作成するとします。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 他のグラデーションの 1 つのエッジから色が異なる方法を調整することができます。 黒から次の表に従って赤に変更されるグラデーション ブラシを作成するとします。  
   
 |水平方向の座標|RGB コンポーネント|  
 |---------------------------|--------------------|  
@@ -47,36 +47,36 @@ ms.locfileid: "33522461"
 |40|(128, 0, 0)|  
 |200|(255, 0, 0)|  
   
- 赤の要素が半分の強さで水平方向の座標が 0 からように、200 の 20% のみである場合に注意してください。  
+ 水平座標が 0 から 200 の方法の 20% のみである場合に、赤のコンポーネントが半分の強さではことに注意してください。  
   
- 次の例のセット、<xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A>のプロパティ、<xref:System.Drawing.Drawing2D.LinearGradientBrush>に 3 つの相対強度を 3 つの相対的な位置に関連付けるオブジェクト。 前の表のようには、0.5 の相対強度は、0.2 の相対的な位置に関連付けられます。 コードでは、楕円およびグラデーション ブラシを含む四角形を格納します。  
+ 次の例のセット、<xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A>のプロパティを<xref:System.Drawing.Drawing2D.LinearGradientBrush>に 3 つの相対強度を 3 つの相対位置に関連付けるオブジェクト。 上の表のように 0.5 の相対強度は 0.2 の相対位置に関連付けられています。 コードでは、楕円と四角形をグラデーション ブラシを設定します。  
   
- 次の図は、結果として得られる楕円および四角形を示します。  
+ 次の図は、結果として得られる楕円と四角形を示します。  
   
  ![線形グラデーション](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>線形グラデーションをカスタマイズするには  
   
--   3 番目および 4 番目の引数として、それぞれ不透明な黒と不透明な赤いを渡します。  
+-   3 番目と 4 番目の引数として、それぞれ不透明な黒と不透明な赤を渡します。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
- グラデーション前の例では、水平; されています。色は、水平線のいずれかに沿った移動すると、徐々 に変更します。 垂直グラデーションや対角線のグラデーションを定義することもできます。  
+ 上記の例のグラデーションを水平にされています。つまり、色は、水平線のいずれかに移動すると、段階的に変更します。 垂直方向のグラデーションと対角線方向のグラデーションを定義することもできます。  
   
- 次の例に、ポイント (0, 0) と (200, 100) を渡します、<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>コンス トラクターです。 青に関連付けられている (0, 0) に関連付けられている色の緑 (200, 100)。 (ペンの幅が 10) を使用した直線と楕円は、線形グラデーション ブラシで埋められます。  
+ 次の例に、点 (0, 0) と (200, 100) を渡す、<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>コンス トラクター。 青色の色が関連付けられている (0, 0) と、緑色の色が関連付けられます (200, 100)。 (ペンの幅が 10)、行と楕円は、線状グラデーション ブラシで塗りつぶされます。  
   
- 次の図は、行は、し、省略記号を示します。 楕円の色、徐々 にに沿って移動すると行のメモに並列に渡される行には (0, 0) と (200, 100)。  
+ 次の図は、線、楕円を示します。 楕円内色徐々 にに沿って移動すると行のメモが並列に渡される行には (0, 0) と (200, 100)。  
   
  ![線形グラデーション](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
   
 ### <a name="to-create-diagonal-linear-gradients"></a>対角線方向の線形グラデーションを作成するには  
   
--   3 番目および 4 番目の引数として、それぞれ不透明青と不透明緑を渡します。  
+-   3 番目と 4 番目の引数として、それぞれ不透明青と不透明な緑を渡します。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## <a name="see-also"></a>関連項目  
- [グラデーション ブラシを使用した図形の塗りつぶし](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [グラデーション ブラシを使用した図形の塗りつぶし](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

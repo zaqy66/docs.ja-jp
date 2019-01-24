@@ -7,48 +7,48 @@ helpviewer_keywords:
 - lines, drawing
 - shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-ms.openlocfilehash: 3ad740f7dd15194830959a5493970b4ba54ce142
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3623c2363f39150fd4bb202ba61ebd51df383ca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699923"
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>ライン コントロールとシェイプ コントロールの概要 (Visual Studio)
-Visual Basic Power Packs のライン コントロールとシェイプ コントロールは、フォームとコンテナーの直線と図形を描画するための 3 つのグラフィカル コントロールのセットです。 <xref:Microsoft.VisualBasic.PowerPacks.LineShape>水平、垂直方向、および斜めの線を描画するコントロールを使用します。 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>円、楕円を描画するコントロールを使用し、<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>四角形と正方形を描画するコントロールを使用します。  
+Visual Basic Power Packs のラインと形状のコントロールとは、一連のフォームおよびコンテナーに直線と図形を描画するための 3 つのグラフィカル コントロールです。 <xref:Microsoft.VisualBasic.PowerPacks.LineShape>水平、垂直方向、および斜めの線を描画するコントロールを使用します。 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>円と、楕円を描画するためにコントロールを使用し、<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>四角形と四角形を描画するためにコントロールを使用します。  
   
 ## <a name="line-and-shape-controls"></a>ライン コントロールとシェイプ コントロール  
- ライン コントロールとシェイプ コントロールをカプセル化に含まれているグラフィックス メソッドの多くは、<xref:System.Drawing>名前空間。 これにより、1 つの手順でグラフィックス オブジェクト、ペン、およびブラシを作成することがなく線と形状を描画することができます。 グラデーション塗りつぶしなどの複雑なグラフィックスの手法は、いくつかのプロパティを設定するだけで実現できます。  
+ 行および形状のコントロールに含まれているグラフィックス メソッドの多くをカプセル化する、<xref:System.Drawing>名前空間。 これにより、グラフィック オブジェクト、ペン、およびブラシを作成することがなく、1 つの手順で線や図形を描画できます。 グラデーション塗りつぶしなどの複雑なグラフィック技法は、いくつかのプロパティを設定するだけで実現できます。  
   
- グラフィックス メソッドを使用して直線と図形を描画することも、行および形状のコントロールを使用するいくつかの利点のあります。  
+ グラフィックス メソッドを使用して直線と図形を描画することは、行および形状のコントロールを使用するいくつかの利点があります。  
   
--   グラフィックス メソッドは、実行時にのみ呼び出すことができます。 ライン コントロールとシェイプ コントロールは、デザイン時にフォームに追加できます。 これにより、どのように見えるを参照してください。 に正確に配置するにはまた、実行時にも追加できます。  
+-   グラフィックス メソッドは、実行時にのみ呼び出すことができます。 デザイン時に、行および形状のコントロールをフォームに追加できます。 これにより、外観を確認し、; に正確に配置するには実行時に追加することもできます。  
   
--   ライン コントロールとシェイプ コントロールは、選択可能な実行時にイベントをなどを提供する<xref:Microsoft.VisualBasic.PowerPacks.Shape.Click>と<xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>です。 グラフィックス メソッドの出力が選択できず、イベントを提供しません。  
+-   行および形状のコントロールが選択可能な実行時に、イベントを提供するよう<xref:Microsoft.VisualBasic.PowerPacks.Shape.Click>と<xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>します。 グラフィックス メソッドの出力では、選択可能でないし、イベントを提供しません。  
   
--   ライン コントロールとシェイプ コントロールを提供<xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A>と<xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A>をデザイン時および実行時に、z オーダーを制御する方法です。 グラフィックス メソッドの z オーダーは、実行時に実行順序を変更することでのみ制御できます。  
+-   行および形状のコントロールを提供<xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A>と<xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A>をデザイン時および実行時に、z オーダーを制御できるようにするメソッド。 グラフィックス メソッドの z オーダーは、実行時に実行の順序を変更することでのみ制御できます。  
   
--   ライン コントロールとシェイプ コントロールはウィンドウレス コントロールです。ウィンドウ ハンドルがなく可能ためシステム リソースを使用します。  
+-   行および形状のコントロールは、ウィンドウなしのコントロールウィンドウ ハンドルが表示されていない、システム リソースが使用して、そのためです。  
   
 ### <a name="object-model"></a>オブジェクト モデル  
- ライン コントロールとシェイプ コントロールは、ベースから派生<xref:Microsoft.VisualBasic.PowerPacks.Shape>共有のプロパティ、メソッド、およびイベントを定義するクラス。  
+ 行および形状のコントロールは、ベースから派生<xref:Microsoft.VisualBasic.PowerPacks.Shape>共有のプロパティ、メソッド、およびイベントを定義するクラス。  
   
  次の図は、Line および Shape オブジェクト階層を示します。  
   
  ![Line および Shape オブジェクト階層のダイアグラム](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")  
 Line および Shape オブジェクト階層  
   
- 派生した<xref:Microsoft.VisualBasic.PowerPacks.LineShape>クラスには、プロパティ、メソッド、および行に固有のイベントが含まれています。 派生した<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>クラスの基底クラスは、<xref:Microsoft.VisualBasic.PowerPacks.OvalShape>と<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; プロパティ、メソッド、およびすべての図形に共通のイベントが含まれています。 派生できますも<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>独自に作成する`Shape`コントロール。  
+ 派生した<xref:Microsoft.VisualBasic.PowerPacks.LineShape>クラスには、プロパティ、メソッド、および行に固有のイベントが含まれています。 派生した<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>クラスの基本クラスは、<xref:Microsoft.VisualBasic.PowerPacks.OvalShape>と<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; プロパティ、メソッド、およびすべての図形に共通のイベントが含まれています。 派生することもできます。<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>独自に作成する`Shape`コントロール。  
   
  <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>と<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>クラスは、円、楕円、四角形、および角の丸い四角形を描画するために使用できます。  
   
- 行または形状のコントロールをフォームまたはコンテナーを非表示を追加するときに<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>オブジェクトを作成します。 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>各コンテナー コントロール内の図形のキャンバスの役目です。 各<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>に、対応する<xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection>行および形状のコントロールを反復処理することができます。 ドラッグ アンド ドロップまたは切り取りと貼り付けを使用して、別に 1 つのコンテナーから図形を移動できます。 最後の図形が、コンテナーから削除されたときに、<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>も削除されます。  
+ 行または形状のコントロールをフォームまたはコンテナーを非表示を追加するときに<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>オブジェクトが作成されます。 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>各コンテナー コントロール内の図形をキャンバスとして機能します。 各<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>対応しています<xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection>行および形状のコントロールを反復処理することができます。 切り取りと貼り付けを使用して、またはドラッグ アンド ドロップして、別に 1 つのコンテナーから図形を移動できます。 最後の図形が、コンテナーから削除されると、<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>も削除されます。  
   
 > [!NOTE]
->  すべてのコンテナー コントロールは、行および形状のコントロールをサポートします。 行または形状のコントロールをホストすることはできません、<xref:System.Windows.Forms.TableLayoutPanel>または<xref:System.Windows.Forms.FlowLayoutPanel>です。  
+>  すべてのコンテナー コントロールでは、行および形状のコントロールをサポートします。 行または形状のコントロールをホストすることはできません、<xref:System.Windows.Forms.TableLayoutPanel>または<xref:System.Windows.Forms.FlowLayoutPanel>します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.PowerPacks>  
- [方法: LineShape コントロールを使用して線を描画する](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
- [方法: OvalShape コントロールおよび RectangleShape コントロールを使用して図形を描画する](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
- [方法: 図形間のタブ移動を有効にする](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.PowerPacks>
+- [方法: LineShape コントロールを使用して線を描画します。](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+- [方法: 図形、OvalShape コントロールおよび RectangleShape コントロールを描く](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
+- [方法: 図形間のタブ移動を有効にします。](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701912"
 ---
 # <a name="application-settings-schema"></a>アプリケーション設定のスキーマ
 
@@ -26,8 +26,8 @@ ms.locfileid: "49123339"
 
 | 要素                    | 説明                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | すべてを含む**\<設定 >** アプリケーションに固有のタグ。                         |
-| **\<userSettings >**        | すべてが含まれます**\<設定 >** タグは、現在のユーザーを特定します。                        |
+| **\<applicationSettings>** | すべてを含む**\<設定 >** アプリケーションに固有のタグ。                         |
+| **\<userSettings>**        | すべてが含まれます**\<設定 >** タグは、現在のユーザーを特定します。                        |
 | **\<設定 >**             | 設定を定義します。 いずれかの子 **\<applicationSettings >** または **\<userSettings >** します。 |
 | **\<value>**               | 設定の値を定義します。 子**\<設定 >** します。                                   |
 
@@ -92,5 +92,5 @@ ms.locfileid: "49123339"
 
 ## <a name="see-also"></a>関連項目
 
-[アプリケーション設定の概要](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [アプリケーション設定の概要](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)

@@ -2,12 +2,12 @@
 title: Oracle スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694465"
 ---
 # <a name="oracle-schema-collections"></a>Oracle スキーマ コレクション
 Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ コレクションに加えて次のスキーマ コレクションをサポートしています。  
@@ -107,15 +107,15 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |SECONDARY|String|インデックスが Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトでかどうか (Y&#124;N)。|  
 |BUFFER_POOL|String|インデックス ブロックで使用される既定のバッファー プールの名前。|  
 |USER_STATS|String|統計情報がユーザーによって直接入力されたものかどうかを示します。|  
-|DURATION|String|一時テーブルの存続期間を示します。1) SYS$SESSION: セッションが存続している間、行が保持されます。2) SYS$TRANSACTION: COMMIT 後に行が削除されます。3) 永続テーブルの場合は NULL です。|  
+|DURATION|String|一時テーブルの期間を示します。1) SYS$ セッション: 2) SYS$ トランザクション、セッションの間、行が保持されます。 3) 永続テーブルの場合は Null のコミット後の行が削除されます。|  
 |PCT_DIRECT_ACCESS|Decimal (10 進数型)|索引構成表のセカンダリ インデックスでは、VALID であると推測される行のパーセンテージを示します。|  
 |ITYP_OWNER|String|ドメイン インデックスでは、indextype の所有者を示します。|  
 |ITYP_NAME|String|ドメイン インデックスでは、indextype の名前を示します。|  
 |PARAMETERS|String|ドメイン インデックスでは、パラメーターの文字列を示します。|  
 |GLOBAL_STATS|String|分割されたインデックスでは、統計情報がインデックス全体を分析して収集されたものか (YES)、または基になるインデックスのパーティションおよびサブパーティションから推測されたものであるか (NO) どうかを示します。|  
 |DOMIDX_STATUS|String|ドメイン インデックスのステータスが反映されます。 NULL: 指定されたインデックスはドメイン インデックスではありません。 VALID: インデックスは有効なドメイン インデックスです。 IDXTYP_INVLD: このドメイン インデックスのインデックス型は無効です。|  
-|DOMIDX_OPSTATUS|String|ドメイン インデックス上で実行された操作のステータスが反映されます。NULL: 指定されたインデックスはドメイン インデックスではありません。 VALID: 操作がエラーなく実行されました。 FAILED: エラーによって操作が失敗しました。|  
-|FUNCIDX_STATUS|String|関数ベースのインデックスのステータスを示します。NULL: これは関数ベースのインデックスではありません。ENABLED: 関数ベースのインデックスが有効になっています。DISABLED: 関数ベースのインデックスが無効になっています。|  
+|DOMIDX_OPSTATUS|String|ドメイン インデックスに対して実行された操作の状態を反映しています。NULL: 指定されたインデックスはドメイン インデックスではありません。 VALID: 操作がエラーなく実行されました。 FAILED: エラーによって操作が失敗しました。|  
+|FUNCIDX_STATUS|String|関数ベースのインデックスの状態を示します。NULL: これは関数に基づくインデックス作成、有効: 関数ベースのインデックスを有効にすると、無効になっています: 関数ベースのインデックスが無効になっています。|  
 |JOIN_INDEX|String|結合インデックスかどうかを示します。|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -379,5 +379,5 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |CHAR_LENGTH|Decimal (10 進数型)|文字列データ型の文字数制限。|  
 |CHAR_USED|String|文字列のバイト数制限 (B) または文字数制限 (C) が正式であるかどうかを示します。|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

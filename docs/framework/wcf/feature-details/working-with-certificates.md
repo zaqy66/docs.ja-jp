@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693611"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
  証明書は、証明機関によって発行される必要があります。多くの場合、証明機関はサードパーティの証明書発行者です。 Windows ドメインでは、そのドメインのコンピューターに対して証明書を発行する際に使用できる証明機関が含まれています。  
   
 ## <a name="viewing-certificates"></a>証明書の表示  
- 証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「[方法: MMC スナップインを使用して証明書を参照する](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。  
+ 証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「[方法 :MMC スナップインで証明書を表示](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。  
   
 ## <a name="certificate-stores"></a>証明書ストア  
  証明書はストアに格納されています。 2 つの主要なストアがあり、さらにサブストアに分かれています。 コンピューターの管理者は、MMC スナップイン ツールを使用して、両方の主要なストアを表示できます。 管理者以外のユーザーは、現在のユーザー ストアだけを表示できます。  
@@ -52,12 +52,12 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 -   サービスまたはクライアントがユーザー アカウントで実行されるアプリケーションである場合は、**現在のユーザー** ストアを使用します。  
   
 ### <a name="accessing-stores"></a>ストアへのアクセス  
- ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネット インフォメーション サービス (IIS: Internet Information Services) によってホストされたサービスを作成すると、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アカウントで [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] プロセスが実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、「[方法: 開発中に使用する一時的な証明書を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://go.microsoft.com/fwlink/?LinkId=88914)」を参照してください。  
+ ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネット インフォメーション サービス (IIS: Internet Information Services) によってホストされたサービスを作成すると、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アカウントで [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] プロセスが実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)です。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://go.microsoft.com/fwlink/?LinkId=88914)」を参照してください。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>信頼チェーンと証明機関  
  証明書は、各証明書がその発行元の CA にリンクされる階層構造で作成されます。 このリンクは CA の証明書へのリンクになります。 CA の証明書の元の CA の証明書を発行した CA へのリンク。 ルート CA の証明書に到達するまでこのプロセスが繰り返されます。 ルート CA の証明書は本質的に信頼されています。  
   
- デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 証明書のチェーンを表示するには、MMC スナップインを使用して、証明書をダブルクリックし、**[証明書パス]** タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細については、「[方法 : 署名の検証に使用する証明機関の証明書チェーンを指定する](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)」を参照してください。  
+ デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 証明書のチェーンを表示するには、MMC スナップインを使用して、証明書をダブルクリックし、**[証明書パス]** タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細については、次を参照してください。[方法。署名を確認するために使用する証明機関証明書チェーンを指定](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)します。  
   
 > [!NOTE]
 >  証明書を "信頼されたルート証明機関" 証明書ストアに配置することにより、その証明書の発行者を信頼されたルート証明機関として指定できます。  
@@ -96,7 +96,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
 3.  信頼されたルート証明機関ストアに、ルート証明機関証明書をインポートします。  
   
-4.  詳しい手順については、「[方法: 開発中に使用する一時的な証明書を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。  
+4.  手順については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)です。  
   
 ## <a name="which-certificate-to-use"></a>使用する証明書の選択  
  証明書に関する一般的な質問は、どの証明書を使用するかということとその理由に関するものです。 その答えは、クライアントとサービスのどちらをプログラミングするかによって異なります。 以下に一般的なガイドラインを示します (これらの質問に対する包括的な答えではありません)。  
@@ -170,9 +170,9 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
  WCF の最初のリリースでは、ドメイン ポリシーを参照せずにマッピングが実行されます。 そのため、マッピングが有効になっており、X.509 証明書がドメイン ポリシーを満たしていない場合は、最初のリリースの下で実行しているときには動作していた古いアプリケーションが動作しなくなる可能性があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -2,12 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 601e3fafd9aa876186b7f78dfdcb87a2336ddfcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f7c4e30b72af36de1d3088e4ca8cd98ced734104
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692325"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -35,42 +35,42 @@ class SecurityBindingElement : BindingElement
 ### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  バインディングで使用するアルゴリズムを指定します。  
   
 ### <a name="includetimestamp"></a>IncludeTimestamp  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  各メッセージにタイムスタンプが含まれるかどうかを指定するブール値です。  
   
 ### <a name="keyentropymode"></a>KeyEntropyMode  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  キーの作成に使用されるエントロピのソースです。  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
- データ型 : LocalServiceSecuritySettings  
+ データの種類:LocalServiceSecuritySettings  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  ローカル サービスに対するバインディング固有のセキュリティ プロパティです。  
   
 ### <a name="messagesecurityversion"></a>MessageSecurityVersion  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  メッセージ セキュリティで使用されるバージョンです。  
   
 ### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  このバインディングのセキュリティ ヘッダー内の要素の順序です。  
   
@@ -80,5 +80,5 @@ class SecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>

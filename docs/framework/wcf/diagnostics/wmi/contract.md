@@ -2,12 +2,12 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c602ea2b708fced37c5b309596fe2312be21e741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603561"
 ---
 # <a name="contract"></a>コントラクト
 コントラクト  
@@ -38,63 +38,63 @@ class Contract
 ### <a name="appdomainid"></a>AppDomainId  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  コントラクトをホストする appdomain の appdomain ID。  
   
 ### <a name="behaviors"></a>ビヘイビアー  
- データ型 : Behavior array  
+ データの種類:動作の配列  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  このコントラクトに関連付けられている動作。  
   
 ### <a name="name"></a>名前  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  WSDL でのコントラクトの名前。  
   
 ### <a name="namespace"></a>名前空間  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  WSDL での `portType` 要素の名前空間。  
   
-### <a name="operations"></a>操作  
- データ型 : Operation 配列  
+### <a name="operations"></a>オペレーション  
+ データの種類:配列の操作  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  このコントラクトの操作。  
   
 ### <a name="processid"></a>ProcessId  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  コントラクトをホストするプロセスのプロセス ID。  
   
 ### <a name="ref"></a>ref  
- データ型 : Contract  
+ データの種類:コントラクト  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  コントラクトが双方向コントラクトのときのコールバックの型。  
   
 ### <a name="sessionmode"></a>SessionMode  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  コントラクトでチャネル セッションを使用するために、このコントラクトに関連付けられたバインディングが必要かどうかを示します。  
   
 ### <a name="type"></a>型  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  コントラクトの型。  
   
@@ -104,5 +104,5 @@ class Contract
 |---------|-----------------------------------|  
 |Namespace|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ContractDescription>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Description.ContractDescription>

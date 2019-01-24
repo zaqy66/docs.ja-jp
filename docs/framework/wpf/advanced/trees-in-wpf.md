@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690411"
 ---
 # <a name="trees-in-wpf"></a>WPF のツリー
 多くのテクノロジ要素とコンポーネントは、開発者は直接レンダリングや、アプリケーションの動作に影響を与える、ツリー内のオブジェクト ノード、操作をツリー構造で編成されています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] またプログラム要素間のリレーションシップを定義するのにいくつかのツリー構造のメタファを使用します。 WPF 開発者の大部分できますコードでアプリケーションを作成または XAML で概念的には、オブジェクト ツリーの比喩を考えながら、アプリケーションの部分的な定義が、特定の API を呼び出すかをいくつかの一般的なのではなく、その特定のマークアップを使用する方法XML DOM で使用するなどのオブジェクトのツリー操作 API WPF のツリーの比喩ビューを提供する 2 つのヘルパー クラスが公開<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>します。 用語のビジュアル ツリーと論理ツリーも使用されます、WPF ドキュメントのため、同じようなツリーは特定のキーの WPF 機能の動作を理解するのに役立ちます。 このトピックでは、ビジュアル ツリーと論理ツリーが表す内容を定義し、このようなツリーが、全体的なオブジェクトのツリーの概念に関連する方法について説明しますが導入されています<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>秒。  
@@ -86,9 +86,9 @@ ms.locfileid: "46004485"
   
  ただし、リソースの検索も、直接の論理ツリーを超えて拡張できます。 アプリケーション マークアップでは、アプリケーション レベルのリソース ディクショナリ、静的プロパティまたはキーとして参照されているテーマのサポート、およびシステム値へとリソース検索が続きます。 テーマ自体は、動的リソース参照である場合、テーマの論理ツリーの外部システムの値を参照できます。 リソース ディクショナリとルックアップ ロジックの詳細については、次を参照してください。 [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [オブジェクト ツリーに存在しないオブジェクト要素の初期化](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>関連項目
+- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [オブジェクト ツリーに存在しないオブジェクト要素の初期化](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

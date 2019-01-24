@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 780e67cf54c0bec230d5b052b877cf97a76d3f6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641123"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 演算子 (Visual Basic)
 式は、かどうかを判断します`True`します。  
@@ -37,14 +37,14 @@ ms.locfileid: "43785193"
  変換を定義していない場合`Boolean`または`IsTrue`演算子、コンパイラには、エラーが通知されます。  
   
 > [!NOTE]
->  `IsTrue`演算子は、*オーバー ロードされた*、いるクラスまたは構造体を再定義できますの動作のオペランドがそのクラスまたは構造体の型を持つときにすることを意味します。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)します。  
+>  `IsTrue`演算子は、*オーバー ロードされた*、いるクラスまたは構造体を再定義できますの動作のオペランドがそのクラスまたは構造体の型を持つときにすることを意味します。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコード例の定義を含む構造体のアウトラインを定義する、`IsFalse`と`IsTrue`演算子。  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [方法 : 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [OrElse 演算子](../../../visual-basic/language-reference/operators/orelse-operator.md)
+## <a name="see-also"></a>関連項目
+- [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [方法: 演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [OrElse 演算子](../../../visual-basic/language-reference/operators/orelse-operator.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709430"
 ---
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 Windows Communication Foundation (WCF) のセキュリティは、次の 3 つの主要な機能領域に分割されます。 転送セキュリティ、アクセス制御、および監査します。 転送セキュリティは、整合性、機密性、および認証を実現します。 転送セキュリティは、トランスポート セキュリティ、メッセージ セキュリティ、または `TransportWithMessageCredential` のいずれかによって提供されます。  
@@ -65,8 +65,8 @@ Windows Communication Foundation (WCF) のセキュリティは、次の 3 つ�
 |設定|説明|  
 |-------------|-----------------|  
 |なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
-|Basic|基本認証を指定します。  詳細については、RFC2617, を参照してください"[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313)。"。|  
-|Digest|ダイジェスト認証を指定します。  詳細については、RFC2617, を参照してください"[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313)。"。|  
+|Basic|基本認証を指定します。  詳細については、RFC2617, を参照してください。"[HTTP 認証。基本認証とダイジェスト認証](https://go.microsoft.com/fwlink/?LinkId=88313)"。|  
+|Digest|ダイジェスト認証を指定します。  詳細については、RFC2617, を参照してください。"[HTTP 認証。基本認証とダイジェスト認証](https://go.microsoft.com/fwlink/?LinkId=88313)"。|  
 |Ntlm|Windows ドメインで SSPI ネゴシエーションを使用する Windows 認証を指定します。<br /><br /> SSPI ネゴシエーションの結果、Kerberos プロトコルまたは NTLM (NT LanMan) を使用することになります。|  
 |Windows|Windows ドメインで SSPI を使用する Windows 認証を指定します。 SSPI では、認証サービスとして Kerberos プロトコルまたは NTLM が選択されます。<br /><br /> SSPI は、最初に Kerberos プロトコルの使用を試み、使用できない場合は NTLM を使用します。|  
 |証明書|証明書 (通常は X.509) を使用して、クライアント認証を実行します。|  
@@ -94,8 +94,8 @@ Windows Communication Foundation (WCF) のセキュリティは、次の 3 つ�
   
  また、メッセージ セキュリティ モードでは、初期ネゴシエーションの一環としてサービス資格情報がクライアントと交換されるように転送のセキュリティを実行できます。 ネゴシエーションを有効にするには、<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> プロパティを `true` に設定します。  
   
-## <a name="see-also"></a>関連項目  
- [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: WCF の &lt;activityStateQueries&gt;
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 2dabfdd248006de60b5e84e739f78e03f364dde3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6b21ad3f5487a924309b8bee6b9ac972f23bdc66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701938"
 ---
 # <a name="ltactivitystatequeriesgt-of-wcf"></a>WCF の &lt;activityStateQueries&gt;
 
@@ -20,7 +20,7 @@ ms.locfileid: "54146187"
 \<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
-\<activityStateQueries >  
+\<activityStateQueries>  
 
 ## <a name="syntax"></a>構文  
   
@@ -60,7 +60,7 @@ ms.locfileid: "54146187"
 
 |要素|説明|
 |-------------|-----------------|
-|[\<activityStateQuery >](activitystatequery-of-wcf.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリ。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|
+|[\<activityStateQuery>](activitystatequery-of-wcf.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリ。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|
 
 ### <a name="parent-elements"></a>親要素
 
@@ -70,7 +70,7 @@ ms.locfileid: "54146187"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>    
-- <xref:System.Activities.Tracking.ActivityStateQuery>    
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
+- <xref:System.Activities.Tracking.ActivityStateQuery>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

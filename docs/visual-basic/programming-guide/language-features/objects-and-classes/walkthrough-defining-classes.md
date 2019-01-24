@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640434"
 ---
-# <a name="walkthrough-defining-classes-visual-basic"></a>チュートリアル: クラスの定義 (Visual Basic)
+# <a name="walkthrough-defining-classes-visual-basic"></a>チュートリアル: クラスを定義する (Visual Basic)
 
 このチュートリアルでは、オブジェクトを作成し使用するクラスを定義する方法を示します。 また、プロパティとメソッドを新しいクラスに追加する方法を示しますされ、オブジェクトを初期化する方法を示します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "43403543"
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     フィールドとして宣言する`Private`クラス内でのみ使用できることを意味します。 利用できるフィールドからクラスの外部でなどのアクセス修飾子を使用して`Public`のアクセスを提供します。 詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+     フィールドとして宣言する`Private`クラス内でのみ使用できることを意味します。 利用できるフィールドからクラスの外部でなどのアクセス修飾子を使用して`Public`のアクセスを提供します。 詳細については、[ Visual Basic のアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
 7.  次のコードを追加することで、クラスのプロパティを定義します。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "43403543"
   
 1.  F5 キーを押してアプリケーションを実行します。 テストのプロシージャを呼び出すフォーム上のボタンをクリックします。 元のことを示すメッセージを表示`UserName`"MOORE、BOBBY"は、プロシージャが呼び出されるため、`Capitalize`オブジェクトのメソッド。  
   
-2.  クリックして**OK**メッセージ ボックスを閉じます。 `Button1 Click`の値を変更する手順、`UserName`プロパティの新しい値のことを示すメッセージを表示および`UserName`"Worden、Joe"は。  
+2.  **[OK]** をクリックしてメッセージ ボックスを閉じます。 `Button1 Click`の値を変更する手順、`UserName`プロパティの新しい値のことを示すメッセージを表示および`UserName`"Worden、Joe"は。  
   
 ## <a name="see-also"></a>関連項目
 
-[オブジェクト指向プログラミング (Visual Basic)](../../concepts/object-oriented-programming.md)  
-[クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [オブジェクト指向プログラミング (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

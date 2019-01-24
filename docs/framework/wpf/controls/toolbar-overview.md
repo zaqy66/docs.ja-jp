@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 816ac0d81ddcaa461a842c0f69fe5ed5b21a32d1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 913c7a9f1b5cf891f3e19c4f3126596bad49f79d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695855"
 ---
 # <a name="toolbar-overview"></a>ToolBar の概要
 <xref:System.Windows.Controls.ToolBar> コントロールは、コマンドまたはコントロールの機能に関連する通常のグループのコンテナーです。 A<xref:System.Windows.Controls.ToolBar>通常のコマンドを呼び出すボタンが含まれています。  
@@ -41,8 +41,8 @@ ms.locfileid: "44087999"
   
  [ツール バーのスタイルとテンプレート](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
- [ToolBar のコントロールのスタイルを設定する](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.Primitives.ToolBarPanel>
+- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
+- [ToolBar のコントロールのスタイルを設定する](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)

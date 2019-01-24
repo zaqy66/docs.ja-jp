@@ -2,17 +2,11 @@
 title: アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644252"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)
 アセンブリは、.NET ベースのアプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、実行可能 (.exe) ファイルまたはダイナミック リンク ライブラリ (.dll) ファイルの形を取る、.NET Framework の構成要素です。 それらは、型の実装に関して必要な情報を共通言語ランタイムに提供します。 アセンブリは、機能的な論理的な単位を形成し、連携して動作するように構築された、型とリソースのコレクションと考えることができます。  
   
- アセンブリには、1 つまたは複数のモジュールを含めることができます。 たとえば、大規模なプロジェクトを、複数の開発者が別々のモジュールで作業し、すべてのモジュールをまとめて 1 つのアセンブリを作成するように計画することができます。 モジュールの詳細については、「[方法: マルチファイル アセンブリをビルドする](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md)」を参照してください。  
+ アセンブリには、1 つまたは複数のモジュールを含めることができます。 たとえば、大規模なプロジェクトを、複数の開発者が別々のモジュールで作業し、すべてのモジュールをまとめて 1 つのアセンブリを作成するように計画することができます。 モジュールの詳細については、トピックを参照してください。[方法。マルチファイル アセンブリをビルド](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md)します。  
   
  アセンブリには、次の特徴があります。  
   
@@ -31,7 +25,7 @@ ms.locfileid: "33644252"
   
 -   アセンブリの ID (名前とバージョン)。  
   
--   アセンブリを構成するその他すべてのファイルについて記述するファイル テーブル.exe または .dll ファイルが依存するアセンブリ、ビットマップ、Readme ファイルなどが含まれます。  
+-   アセンブリを構成するその他すべてのファイルについて記述するファイル テーブル。 .exe または .dll ファイルが依存するアセンブリ、ビットマップ、Readme ファイルなどが含まれます。  
   
 -   "*アセンブリ参照リスト*"。これはすべての外部依存関係の一覧であり、アプリケーションが必要とする .dll ファイルやその他のファイルで、他の人物が作成している場合があるファイルです。 アセンブリ参照には、グローバルおよびプライベートの両方のオブジェクトへの参照が含まれます。 グローバル オブジェクトは、System32 ディレクトリのような、他のアプリケーションが使用できるグローバル アセンブリ キャッシュ内に存在します。 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 名前空間は、グローバル アセンブリ キャッシュ内のアセンブリの例です。 プライベート オブジェクトは、アプリケーションがインストールされているディレクトリと同じレベルまたはその下のディレクトリ内に存在する必要があります。  
   
@@ -48,12 +42,12 @@ ms.locfileid: "33644252"
 > [!NOTE]
 >  Visual Studio でアセンブリをビルドするには、**[ビルド]** メニューの **[ビルド]** を選択します。  
   
-## <a name="see-also"></a>関連項目  
- [共通言語ランタイムのアセンブリ](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [フレンド アセンブリ (Visual Basic)](friend-assemblies.md)  
- [方法: アセンブリ共有する他のアプリケーション (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
- [方法: ロードおよびアンロード アセンブリ (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [方法: がかどうか、ファイル アセンブリ (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
- [方法: を作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [チュートリアル: Visual Studio (Visual Basic) でのマネージ アセンブリから型の埋め込み](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+## <a name="see-also"></a>関連項目
+- [共通言語ランタイムのアセンブリ](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [フレンド アセンブリ (Visual Basic)](friend-assemblies.md)
+- [方法: その他のアプリケーション (Visual Basic) とアセンブリを共有します。](how-to-share-an-assembly-with-other-applications.md)
+- [方法: ロードとアンロード アセンブリ (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [方法: ファイルがアセンブリ (Visual Basic) を確認します。](how-to-determine-if-a-file-is-an-assembly.md)
+- [方法: 作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [チュートリアル: Visual Studio (Visual Basic) でマネージ アセンブリから型を埋め込む](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [チュートリアル: Visual Studio (Visual Basic) で Microsoft Office アセンブリから型情報を埋め込む](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

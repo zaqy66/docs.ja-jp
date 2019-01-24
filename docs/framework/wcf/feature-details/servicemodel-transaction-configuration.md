@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee35b6c02637c3013a42303dcd7aa7c813bd183c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693163"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel トランザクションの構成
-Windows Communication Foundation (WCF) サービスのトランザクションを構成するための 3 つの属性の提供: `transactionFlow`、 `transactionProtocol`、および`transactionTimeout`です。  
+Windows Communication Foundation (WCF) サービスのトランザクションを構成するための 3 つの属性を提供します。 `transactionFlow`、 `transactionProtocol`、および`transactionTimeout`します。  
   
 ## <a name="configuring-transactionflow"></a>transactionFlow の構成  
- ほとんどの定義済みバインディングを含む WCF が提供されています、`transactionFlow`と`transactionProtocol`属性、特定のトランザクション フロー プロトコルを使用して特定のエンドポイントに対してトランザクションを受け入れるバインディングを構成することができるようにします。 さらに、`transactionFlow` 要素とその `transactionProtocol` 属性を使用して、ユーザー独自のカスタム バインディングを構築できます。 構成要素の設定の詳細については、次を参照してください。 [\<バインディング >](../../../../docs/framework/misc/binding.md)と[WCF 構成スキーマ](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)です。  
+ ほとんどの定義済みバインディングを含む WCF が提供されています、`transactionFlow`と`transactionProtocol`属性、特定のトランザクション フロー プロトコルを使用して特定のエンドポイントに対してトランザクションを受け入れるバインドを構成することができるようにします。 さらに、`transactionFlow` 要素とその `transactionProtocol` 属性を使用して、ユーザー独自のカスタム バインドを構築できます。 構成要素の設定の詳細については、次を参照してください。 [\<バインド >](../../../../docs/framework/misc/binding.md)と[WCF 構成スキーマ](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)します。  
   
  `transactionFlow` 属性は、バインディングを使用するサービス エンドポイントに対してトランザクション フローを有効にするかどうかを指定します。  
   
@@ -62,6 +62,6 @@ Windows Communication Foundation (WCF) サービスのトランザクション�
   
  使用されるタイムアウト値は常に、この `transactionTimeout` 構成設定と <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> プロパティの小さい方の値になります。  
   
-## <a name="see-also"></a>関連項目  
- [\<binding>](../../../../docs/framework/misc/binding.md)  
- [WCF 構成スキーマ](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+## <a name="see-also"></a>関連項目
+- [\<binding>](../../../../docs/framework/misc/binding.md)
+- [WCF 構成スキーマ](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

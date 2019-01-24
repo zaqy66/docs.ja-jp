@@ -1,15 +1,15 @@
 ---
-title: 共通の属性 (Visual Basic)
+title: 共通属性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690905"
 ---
-# <a name="common-attributes-visual-basic"></a>共通の属性 (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>共通属性 (Visual Basic)
 このトピックでは、Visual Basic プログラムで最もよく使用される属性について説明します。  
   
 -   [グローバル属性](#Global)  
@@ -29,7 +29,7 @@ ms.locfileid: "33644161"
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- グローバル属性は、いずれかの後、ソース コードに表示されます。 最上位`Imports`ステートメントと型、モジュール、または名前空間宣言の前にします。 グローバル属性は複数のソース ファイルに指定できますが、それらのファイルは、1 つのコンパイル パスでコンパイルする必要があります。 Visual Basic プロジェクトで、一般的に (Visual Studio でプロジェクトを作成するときに、ファイルが自動的に作成されます) AssemblyInfo.vb ファイル内にグローバル属性が配置されています。  
+ グローバル属性は、後にソース コードに表示されます。 最上位`Imports`ステートメントと、型、モジュール、または名前空間宣言の前にします。 グローバル属性は複数のソース ファイルに指定できますが、それらのファイルは、1 つのコンパイル パスでコンパイルする必要があります。 Visual Basic プロジェクトでは、グローバル属性は (Visual Studio でプロジェクトを作成するときに、ファイルが自動的に作成されます)、AssemblyInfo.vb ファイルで一般に配置します。  
   
  アセンブリの属性は、アセンブリに関する情報を提供する値です。 これらは次のカテゴリに分けられます。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33644161"
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|アセンブリ マニフェストのわかりやすい既定の別名を定義します。|  
   
 ##  <a name="Obsolete"></a> Obsolete 属性  
- `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 例えば:  
+ `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 例:  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -218,28 +218,28 @@ End Class
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|呼び出し元を含むソース ファイルのフル パスです。 これはコンパイル時のパスです。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|メソッドの呼び出し元であるソース ファイルの行番号。|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)です。|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)します。|`String`|  
   
- 呼び出し元情報属性の詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)です。  
+ 呼び出し元情報属性の詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)します。  
   
 ##  <a name="VB"></a> Visual Basic の属性  
  次の表は、Visual Basic に固有の属性を一覧表示します。  
   
 |属性|目的|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|COM オブジェクトとして、クラスを公開する必要がありますをコンパイラに指示します。|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスできるようにします。|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|入力し、出力ファイルを使用するための構造体で固定長文字列のサイズを指定の関数。|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|入力し、出力ファイルを使用するための構造体で固定長配列のサイズを指定の関数。|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|クラスを COM オブジェクトとして公開する必要がありますをコンパイラに示します。|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスを許可します。|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|入力し、出力ファイルを使用するための構造で固定長文字列のサイズを指定します。 関数。|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|入力し、出力ファイルを使用するための構造で固定長配列のサイズを指定します。 関数。|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- 使用して`COMClassAttribute`Visual Basic から COM コンポーネントを作成するプロセスが簡略化します。 COM オブジェクトは .NET Framework アセンブリからされず`COMClassAttribute`いくつかの Visual Basic から COM オブジェクトを生成する手順に従う必要があります。 マークされたクラスの`COMClassAttribute`コンパイラは、次の手順の多くを自動的に実行します。  
+ 使用`COMClassAttribute`を Visual Basic から COM コンポーネントを作成するプロセスを簡略化します。 COM オブジェクトがされず、.NET Framework アセンブリからは、かなり異なる`COMClassAttribute`さまざまな Visual Basic から COM オブジェクトを生成する手順に従う必要があります。 マークされたクラスの`COMClassAttribute`コンパイラは、次の手順の多くを自動的に実行します。  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- 使用して`HideModuleNameAttribute`モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスできるようにします。  
+ 使用`HideModuleNameAttribute`モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスを許可します。  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- 使用して`VBFixedStringAttribute`固定長文字列を作成する Visual Basic を強制的にします。 既定では、可変長の文字列し、この属性は、ファイルに文字列を格納するときに便利です。 次のコードでは、これを示しています。  
+ 使用`VBFixedStringAttribute`させる、Visual Basic で固定長文字列を作成します。 既定では、可変長の文字列し、この属性は、ファイルに文字列を格納する場合に便利です。 次のコードでは、これを示しています。  
   
 ```vb  
 Structure Worker  
@@ -252,12 +252,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- 使用して`VBFixedArrayAttribute`が固定サイズで配列を宣言します。 Visual Basic の文字列のような配列は、既定では可変長の。 この属性は、シリアル化またはファイルにデータを書き込む場合に便利です。  
+ 使用`VBFixedArrayAttribute`が固定サイズで配列を宣言します。 Visual Basic の文字列のような配列は、既定では可変長の。 この属性は、シリアル化またはファイルにデータを書き込む場合に便利です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)  
- [属性](../../../../standard/attributes/index.md)  
- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [属性](../../../../standard/attributes/index.md)
+- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

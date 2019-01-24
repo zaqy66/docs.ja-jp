@@ -1,5 +1,5 @@
 ---
-title: '方法 : ローカル発行者を設定する'
+title: '方法: ローカル発行者を構成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 5bddab91fed0f8267804cdf8506c9a632c50d174
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3fb4577e6a79bc6b42cb0ef6f24648d1b016214f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713246"
 ---
-# <a name="how-to-configure-a-local-issuer"></a>方法 : ローカル発行者を設定する
+# <a name="how-to-configure-a-local-issuer"></a>方法: ローカル発行者を構成します。
 ここでは、発行済みトークンに対してローカル発行者を使用するようにクライアントを構成する方法を説明します。  
   
  クライアントがフェデレーション サービスと通信する場合、クライアントが自分をフェデレーション サービスに対して認証するときに使用するトークンの発行元となるセキュリティ トークン サービスのアドレスが、サービスによって指定されることがよくあります。 特定の状況で使用するクライアントを構成することがあります、*ローカル発行者*します。  
@@ -74,7 +74,7 @@ ms.locfileid: "48837129"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  特定のバインディングに対して発行者アドレスとバインディングが指定されている場合、ローカル発行者はこのバインディングを使用するエンドポイントには使用されません。 ローカル発行者を常に使用する必要があるクライアントには、このようなバインディングが使用されることがないこと、または発行者アドレスが `null` となるようにクライアントによってバインディングが変更されることが保証されている必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [方法 : フェデレーション サービスで資格情報を設定する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [方法 : フェデレーション クライアントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [方法 : WSFederationHttpBinding を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+## <a name="see-also"></a>関連項目
+- [方法: フェデレーション サービスで資格情報を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [方法: フェデレーション クライアントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [方法: WSFederationHttpBinding を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

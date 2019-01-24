@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717403"
 ---
 # <a name="configuring-services-using-configuration-files"></a>構成ファイルを使用してサービスを構成する方法
 構成ファイルで Windows Communication Foundation (WCF) サービスを構成することで、設計時ではなく配置の時点で、エンドポイントとサービス動作のデータの提供に柔軟性をもたらします。 ここでは使用可能な主要な技術について説明します。  
@@ -262,8 +262,8 @@ ms.locfileid: "54029672"
   
  親動作コレクションに既に存在する動作が子動作コレクションにも含まれている場合、子動作が親をオーバーライドします。 親動作コレクションがある場合は`<serviceMetadata httpGetEnabled="False" />`、子動作コレクションと`<serviceMetadata httpGetEnabled="True" />`子動作は、動作コレクションに親動作をオーバーライドは、httpGetEnabled が"true"になります。  
   
-## <a name="see-also"></a>関連項目  
- [簡略化された構成](../../../docs/framework/wcf/simplified-configuration.md)  
- [Windows Communication Foundation アプリケーションの構成](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<binding>](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+- [簡略化された構成](../../../docs/framework/wcf/simplified-configuration.md)
+- [Windows Communication Foundation アプリケーションの構成](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<binding>](../../../docs/framework/misc/binding.md)

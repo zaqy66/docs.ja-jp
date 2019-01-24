@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707480"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
 接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。  
@@ -80,7 +80,7 @@ ms.locfileid: "43865827"
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|プロバイダーの完全修飾名。 **providerName** 属性にマップされています。|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|接続文字列。 **connectionString** 属性にマップされています。|  
   
-### <a name="example-listing-all-connection-strings"></a>例 : すべての接続文字列を一覧表示する  
+### <a name="example-listing-all-connection-strings"></a>例:すべての接続文字列を一覧表示  
  この例では、`ConnectionStringSettings` コレクションを反復処理しながら、<xref:System.Configuration.ConnectionStringSettings.Name%2A>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>、<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> の各プロパティをコンソール ウィンドウに表示します。  
   
 > [!NOTE]
@@ -89,13 +89,13 @@ ms.locfileid: "43865827"
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>例 : 接続文字列を名前で取得する  
+### <a name="example-retrieving-a-connection-string-by-name"></a>例:名前で接続文字列を取得します。  
  次の例では、接続文字列の名前を指定することによって、接続文字列を構成ファイルから取得する方法を説明します。 このコードでは、指定された入力パラメーターと <xref:System.Configuration.ConnectionStringSettings> の名前とを照合することによって、<xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> オブジェクトを作成します。 一致する名前が見つからなかった場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>例 : 接続文字列をプロバイダー名で取得する  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>例:プロバイダー名による接続文字列の取得  
  次の例では、プロバイダーの不変名を *System.Data.ProviderName* の形式で指定することによって接続文字列を取得する方法を説明します。 このコードでは、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理し、最初に見つかった <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> の接続文字列を返します。 プロバイダー名が見つからなかった場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
@@ -167,12 +167,12 @@ ms.locfileid: "43865827"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NET アプリケーションのセキュリティ保護の詳細については、「[ASP.NET Web サイトのセキュリティ](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)」および ASP.NET デベロッパー センターの「[ASP.NET 2.0 のセキュリティ プラクティス](https://go.microsoft.com/fwlink/?LinkId=59997)」を参照してください。  
+ ASP.NET アプリケーションのセキュリティ保護の詳細については、次を参照してください[NIB:。ASP.NET セキュリティ](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)と[を一目で ASP.NET 2.0 のセキュリティ プラクティス](https://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET デベロッパー センターでします。  
   
-## <a name="see-also"></a>関連項目  
- [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [構成クラスの使用](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [アプリの構成](../../../../docs/framework/configure-apps/index.md)  
- [ASP.NET Web サイト管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [構成クラスの使用](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [アプリの構成](../../../../docs/framework/configure-apps/index.md)
+- [ASP.NET Web サイト管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4bad1d15bc8e2fd40d42581220888f035e515162
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d1dfe5cadf59122994f1a751f985e186c6cf5b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602508"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt;要素
 暗号設定を含みます。  
   
  \<configuration>  
-\<mscorlib >  
+\<mscorlib>  
 \<cryptographySettings >  
   
 ## <a name="syntax"></a>構文  
@@ -41,8 +41,8 @@ ms.locfileid: "50181382"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|表示名へのクラスのマッピングを含みます。|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
+|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|表示名へのクラスのマッピングを含みます。|  
+|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -78,7 +78,7 @@ ms.locfileid: "50181382"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+## <a name="see-also"></a>関連項目
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

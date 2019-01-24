@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698922"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 構造体
 完全な `CONTEXT` 構造の代わりに使用できる単純なコンテキストを提供します。  
@@ -42,20 +42,20 @@ struct StackTrace_SimpleContext
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`StackOffset`|スタック ポインター、または x86 で enter スタック ポインター (ESP) プラットフォームです。|  
-|`FrameOffset`|フレームのオフセット、または x86 で EBP レジスタ プラットフォームです。|  
-|`InstructionOffset`|命令ポインター、または x86 で enter 命令ポインター (EIP) プラットフォームです。|  
+|`StackOffset`|スタック ポインター、または x86 enter スタック ポインター (ESP) プラットフォーム。|  
+|`FrameOffset`|フレームのオフセット、または x86 EBP レジスタのプラットフォームです。|  
+|`InstructionOffset`|命令ポインター、または x86 enter 命令ポインター (EIP) プラットフォーム。|  
   
-## <a name="remarks"></a>コメント  
- スタック トレース関数は、通常、アドレス、フレームのオフセット、およびスタック アドレスのみを返す必要があるため、必要に応じて、使用して、`SimpleContext`ではなく、大きな構造`CONTEXT`構造体。  
+## <a name="remarks"></a>Remarks  
+ 使用できます必要に応じてスタック トレース関数は、通常、アドレス、フレームのオフセット、およびスタック アドレスのみを返す必要があります、ため、`SimpleContext`構造ではなく、大規模な`CONTEXT`構造体。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** SOS_Stacktrace.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

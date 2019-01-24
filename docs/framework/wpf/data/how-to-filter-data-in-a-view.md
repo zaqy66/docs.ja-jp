@@ -1,5 +1,5 @@
 ---
-title: '方法 : ビュー内のデータをフィルター処理する'
+title: '方法: ビュー内のデータをフィルター処理する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: b972da093fc50563c5db93e61aeb8421f9bf20b2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33af517c086f8f89cc06a1de7a2979c5b1624109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689325"
 ---
-# <a name="how-to-filter-data-in-a-view"></a>方法 : ビュー内のデータをフィルター処理する
+# <a name="how-to-filter-data-in-a-view"></a>方法: ビュー内のデータをフィルター処理する
 この例では、ビュー内のデータをフィルター処理する方法を示します。  
   
 ## <a name="example"></a>例  
@@ -47,9 +47,9 @@ ms.locfileid: "44087642"
  [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Data.CollectionView.CanFilter%2A>  
- <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [ビュー内のデータの並べ替え](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Data.CollectionView.CanFilter%2A>
+- <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [ビュー内のデータの並べ替え](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
+- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

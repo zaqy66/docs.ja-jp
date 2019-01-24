@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692757"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader によるデータを取得します。
 使用してデータを取得する、 **DataReader**のインスタンスを作成、**コマンド**オブジェクト、し、作成、 **DataReader**呼び出して**Command.ExecuteReader**データ ソースから行を取得します。 **DataReader**は手続き型のロジックを効率的にデータ ソースからの結果を順番に処理を可能にするデータのバッファリングされていないストリームを提供します。 **DataReader**データがメモリにキャッシュされていないために、大量のデータを取得しているときをお勧めします。
@@ -257,9 +257,9 @@ adapter.Fill(ds);
 > [!NOTE]
 >  回避するために、 **OverflowException**、有効な .NET Framework 型に値を格納する前に、Oracle の NUMBER 型から変換を処理することをお勧め、 <xref:System.Data.DataRow>。 使用することができます、<xref:System.Data.Common.DataAdapter.FillError>イベントかどうかを**OverflowException**が発生しました。 詳細については、<xref:System.Data.Common.DataAdapter.FillError>イベントを参照してください[DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Datareader の操作](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [Datareader の操作](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
+- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

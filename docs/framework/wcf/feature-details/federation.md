@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 205e0052f0ea257d965b0cd088cbe3586321022f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709391"
 ---
 # <a name="federation"></a>フェデレーション
 ここでは、フェデレーション セキュリティの概念について簡単に説明します。 フェデレーション セキュリティ アーキテクチャをデプロイするための Windows Communication Foundation (WCF) のサポートについても説明します。 フェデレーションを示すサンプル アプリケーションを参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48914180"
   
  ![フェデレーション](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
   
- このシナリオでは、A と B の 2 つの組織があります。組織 B には、組織 A の一部のユーザーにとって有用な Web リソース (Web サービス) があります。  
+ このシナリオには、2 つの組織が含まれます。A と B の組織は組織 A 内の一部のユーザーにとって役に立つ Web リソース (Web サービス)。  
   
 > [!NOTE]
 >  ここでは使用条件*リソース*、*サービス*、および*Web サービス*同じ意味で。  
@@ -60,7 +60,7 @@ ms.locfileid: "48914180"
   
  フェデレーション セキュリティ アーキテクチャでは、組織 A のユーザーが、組織 B の Web サービスにアクセスする場合に、組織 B の STS から発行された有効なセキュリティ トークンを提示する必要があることを認識しています。この STS が、特定のサービスへのアクセスを認証および承認します。  
   
- STS B に接続したユーザーは、STS に関連付けられたポリシーから別のレベルの間接指定を受け取ります。 このユーザーは、STS B がセキュリティ トークンを発行する前に、STS A (クライアントの信頼レルム) の有効なセキュリティ トークンを提示しておく必要があります。 これは 2 つの組織間で確立された信頼関係の生じた結果であり、組織 A のユーザーの id を管理する組織 B がないことを意味します。実際には、STS B 通常 null に`issuerAddress`と`issuerMetadataAddress`します。 詳細については、次を参照してください。[方法: ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。 その場合は、クライアントが STS A. を検索するローカル ポリシーを調べますこの構成と呼ばれる*ホーム レルム フェデレーション*STS B は STS A. に関する情報を保持する必要はありませんので、拡張性に優れた  
+ STS B に接続したユーザーは、STS に関連付けられたポリシーから別のレベルの間接指定を受け取ります。 このユーザーは、STS B がセキュリティ トークンを発行する前に、STS A (クライアントの信頼レルム) の有効なセキュリティ トークンを提示しておく必要があります。 これは 2 つの組織間で確立された信頼関係の生じた結果であり、組織 A のユーザーの id を管理する組織 B がないことを意味します。実際には、STS B 通常 null に`issuerAddress`と`issuerMetadataAddress`します。 詳細については、「[方法 :ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。 その場合は、クライアントが STS A. を検索するローカル ポリシーを調べますこの構成と呼ばれる*ホーム レルム フェデレーション*STS B は STS A. に関する情報を保持する必要はありませんので、拡張性に優れた  
   
  ユーザーは、組織 A の STS に接続し、組織 A 内の他のリソースにアクセスする際に通常使用する認証資格情報を提示して、セキュリティ トークンを取得します。これにより、ユーザーが複数の資格情報セットを保持する必要があるという問題や、複数のサービス サイトで同じ資格情報セットを使用するという問題が、ある程度解決されます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48914180"
   
  使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)フェデレーション セキュリティ シナリオ切り離すことができます 2 つの論理的に独立したフェーズに次のセクションで説明します。  
   
-### <a name="phase-1-design-phase"></a>第 1 フェーズ : 設計  
+### <a name="phase-1-design-phase"></a>フェーズ 1:デザイン フェーズ  
  クライアントを使用して、デザイン フェーズ中に、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)をサービス エンドポイントを公開するポリシーを読み取り、サービスの認証と承認の要件を収集します。 次のフェデレーション セキュリティの通信パターンをクライアントで作成するために、適切なプロキシが構築されます。  
   
 -   クライアント信頼レルムにある STS からセキュリティ トークンを取得する。  
@@ -84,7 +84,7 @@ ms.locfileid: "48914180"
   
 -   サービスにトークンを提示してサービスにアクセスする。  
   
-### <a name="phase-2-run-time-phase"></a>第 2 フェーズ : 実行時  
+### <a name="phase-2-run-time-phase"></a>フェーズ 2:実行時フェーズ  
  実行時フェーズでは、クライアントは、WCF クライアント クラスのオブジェクトをインスタンス化し、WCF クライアントを使用して呼び出しを実行します。 WCF の基になるフレームワークは、フェデレーション セキュリティの通信パターンでは、前述の手順を処理し、クライアントでサービスをシームレスに利用できるようにします。  
   
 ## <a name="sample-implementation-using-wcf"></a>WCF を使用した実装のサンプル  
@@ -289,5 +289,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ## <a name="summary"></a>まとめ  
  フェデレーション セキュリティを使用すると、役割を明確に分離できるため、安全で拡張性のあるサービス アーキテクチャを構築できます。 分散アプリケーションの構築と配置のプラットフォーム、としては、WCF は、フェデレーション セキュリティを実装するためのネイティブ サポートを提供します。  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>関連項目
+- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)

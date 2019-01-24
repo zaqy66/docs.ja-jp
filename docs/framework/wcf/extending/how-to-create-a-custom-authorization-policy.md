@@ -1,19 +1,19 @@
 ---
-title: '方法 : カスタム承認ポリシーを作成する'
+title: '方法: カスタム承認ポリシーを作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705905"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>方法 : カスタム承認ポリシーを作成する
-Id モデル インフラストラクチャ Windows Communication Foundation (WCF) では、クレーム ベースの承認モデルをサポートします。 クレームは、トークンから抽出され、状況に応じてカスタム承認ポリシーによって処理されてから、承認決定を行う際に確認できる <xref:System.IdentityModel.Policy.AuthorizationContext> に格納されます。 カスタム ポリシーを使用して、入力トークンからのクレームを、アプリケーションが要求するクレームに変換することができます。 この方法では、WCF でサポートされる、さまざまなトークンの種類から提供されるさまざまなクレームの詳細についてはからアプリケーション層を隔離することができます。 このトピックでは、カスタム承認ポリシーの実装方法と、サービスで使用するポリシーのコレクションにカスタム承認ポリシーを追加する方法について説明します。  
+# <a name="how-to-create-a-custom-authorization-policy"></a>方法: カスタム承認ポリシーを作成します。
+Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) には、クレーム ベースの承認モデルがサポートしています。 クレームは、トークンから抽出され、状況に応じてカスタム承認ポリシーによって処理されてから、承認決定を行う際に確認できる <xref:System.IdentityModel.Policy.AuthorizationContext> に格納されます。 カスタム ポリシーを使用して、入力トークンからのクレームを、アプリケーションが要求するクレームに変換することができます。 この方法では、WCF がサポートする、さまざまなトークンの種類から提供されるさまざまなクレームの詳細からアプリケーション層を隔離することができます。 このトピックでは、カスタム承認ポリシーの実装方法と、サービスで使用するポリシーのコレクションにカスタム承認ポリシーを追加する方法について説明します。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>カスタム承認ポリシーを実装するには  
   
@@ -29,7 +29,7 @@ Id モデル インフラストラクチャ Windows Communication Foundation (WC
   
 1.  このメソッドには、<xref:System.IdentityModel.Policy.EvaluationContext> クラスのインスタンスとオブジェクト参照の 2 つのパラメーターが渡されます。  
   
-2.  カスタム承認ポリシーを追加した場合<xref:System.IdentityModel.Claims.ClaimSet>インスタンスの現在のコンテンツに関係なく、 <xref:System.IdentityModel.Policy.EvaluationContext>、各追加`ClaimSet`を呼び出して、<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>メソッドと戻り値`true`から、<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>メソッドです。 `true` を返すことは、承認インフラストラクチャに対して、承認ポリシーがその処理を完了したため、もう一度呼び出す必要がないことを知らせることになります。  
+2.  カスタム承認ポリシーを追加した場合<xref:System.IdentityModel.Claims.ClaimSet>インスタンスの現在のコンテンツに関係なく、 <xref:System.IdentityModel.Policy.EvaluationContext>、各追加`ClaimSet`呼び出すことによって、<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>メソッドと戻り値`true`から、<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>メソッド。 `true` を返すことは、承認インフラストラクチャに対して、承認ポリシーがその処理を完了したため、もう一度呼び出す必要がないことを知らせることになります。  
   
 3.  カスタム承認ポリシーで `EvaluationContext` 内に特定のクレームが既に存在するときにのみクレーム セットを追加する場合は、`ClaimSet` プロパティから返された <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> インスタンスを調べて、該当するクレームを見つけます。 クレームが見つかった場合は、<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> メソッドを呼び出して新しいクレーム セットを追加します。追加するクレーム セットがない場合は、`true` を返し、承認インフラストラクチャに承認ポリシーがその処理を完了したことを知らせます。 クレームが存在しない場合は `false` を返し、他の承認ポリシーで `EvaluationContext` にさらにクレーム セットを追加する場合は、もう一度承認ポリシーを呼び出す必要があることを知らせます。  
   
@@ -45,8 +45,8 @@ Id モデル インフラストラクチャ Windows Communication Foundation (WC
       <behaviors>  
         <serviceAuthorization serviceAuthorizationManagerType=  
                   "Samples.MyServiceAuthorizationManager" >  
-          <authorizationPolicies>         
-            <add policyType="Samples.MyAuthorizationPolicy"  
+          <authorizationPolicies>  
+            <add policyType="Samples.MyAuthorizationPolicy" />  
           </authorizationPolicies>  
         </serviceAuthorization>  
       </behaviors>  
@@ -75,8 +75,8 @@ Id モデル インフラストラクチャ Windows Communication Foundation (WC
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [方法 : クレームを比較する](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [方法 : サービスで使用するカスタム承認マネージャーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [方法: クレームを比較します。](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [方法: サービスのカスタム承認マネージャーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)

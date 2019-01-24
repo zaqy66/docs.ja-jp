@@ -1,20 +1,20 @@
 ---
-title: '方法: MEX 以外のバインディングを介してメタデータを取得する'
+title: '方法: 非-MEX のバインディングを介してメタデータを取得します。'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689552"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>方法: MEX 以外のバインディングを介してメタデータを取得する
-ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。 このサンプルのコードがに基づいて、[カスタム セキュリティで保護されたメタデータ エンドポイント](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)サンプルです。  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>方法: 非-MEX のバインディングを介してメタデータを取得します。
+ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。 このサンプルでコードがに基づいて、[メタデータ エンドポイントのセキュリティで保護されたカスタム](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)サンプル。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX 以外のバインディングを介してメタデータを取得するには  
   
-1.  MEX エンドポイントで使用されているバインディングを特定します。 Windows Communication Foundation (WCF) サービスのサービスの構成ファイルにアクセスして、MEX のバインディングを指定できます。 この場合、MEX バインディングは、次のサービス構成で定義されています。  
+1.  MEX エンドポイントで使用されているバインディングを特定します。 Windows Communication Foundation (WCF) サービスの場合に、サービスの構成ファイルにアクセスすることで MEX バインディングを指定できます。 この場合、MEX バインディングは、次のサービス構成で定義されています。  
   
     ```xml  
     <services>  
@@ -121,7 +121,7 @@ ms.locfileid: "33488089"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  この時点で、サービス エンドポイントのコレクションが取得されます。 メタデータのインポートの詳細については、次を参照してください。[する方法: サービス エンドポイントにメタデータのインポート](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)です。  
+5.  この時点で、サービス エンドポイントのコレクションが取得されます。 メタデータのインポートに関する詳細については、次を参照してください。[方法。サービス エンドポイントにメタデータをインポート](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)

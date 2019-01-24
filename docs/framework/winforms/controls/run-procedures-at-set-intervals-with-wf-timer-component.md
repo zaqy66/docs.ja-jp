@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する'
+title: '方法: Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: bf0e22eab3b6517521dbe06a73f63af232746df1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d1149e6a0c8fdb04b37af15feabfd965b5cc993
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642270"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>方法 : Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>方法: Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行します。
 ループが完了するまで特定の間隔で実行するプロシージャや、設定した間隔が経過した時点で実行するプロシージャを作成することがあるかもしれません。 <xref:System.Windows.Forms.Timer> コンポーネントにより、このようなプロシージャが可能になります。  
   
  このコンポーネントは、Windows フォームの環境用に設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)」を参照してください。  
@@ -30,7 +30,7 @@ ms.locfileid: "45638455"
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Timer コンポーネントで設定された間隔でプロシージャを実行するには  
   
-1.  <xref:System.Windows.Forms.Timer> をフォームに追加します。 プログラムでこれを実行する方法については、次の例のセクションを参照してください。 Visual Studio では、コンポーネントをフォームに追加することもあります。 参照してください[方法: Windows フォームへのユーザー インターフェイスを持たないコントロールの追加](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))します。  
+1.  <xref:System.Windows.Forms.Timer> をフォームに追加します。 プログラムでこれを実行する方法については、次の例のセクションを参照してください。 Visual Studio では、コンポーネントをフォームに追加することもあります。 参照してください[方法。Windows フォームにユーザー インターフェイスを持たないコントロールを追加](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))します。  
   
 2.  タイマーの <xref:System.Windows.Forms.Timer.Interval%2A> プロパティ (ミリ秒) を設定します。 このプロパティは、プロシージャを再度実行する前に、経過する時間の長さを決定します。  
   
@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Timer>  
- [Timer コンポーネント](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Timer コンポーネントの概要](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Timer>
+- [Timer コンポーネント](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
+- [Timer コンポーネントの概要](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

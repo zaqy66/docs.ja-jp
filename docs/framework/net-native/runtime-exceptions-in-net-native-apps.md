@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696868"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET ネイティブ アプリでのランタイム例外
 デバッグ構成とリリース構成は完全に異なるため、ターゲット プラットフォームでユニバーサル Windows プラットフォーム アプリのリリース ビルドをテストすることは重要です。 既定では、デバッグ構成は .NET Core ランタイムを使用してアプリをコンパイルしますが、リリース構成は .NET ネイティブを使用してアプリをネイティブ コードにコンパイルします。  
   
 > [!IMPORTANT]
->  アプリのリリース バージョンをテストするときに発生する可能性のある [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、および [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) の例外の処理について詳しくは、「[Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md)」(.NET ネイティブの概要) トピックの「手順 4: メタデータの欠落を手動で解決する」、「[Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)」(リフレクションおよび .NET ネイティブ)、「[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
+>  処理する方法については、 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、および[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)する可能性のある例外アプリのリリース バージョンをテストするときに発生しを参照してください"手順 4。メタデータの欠落を手動で解決: で、 [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md)トピックだけでなく[リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)と[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>デバッグ ビルドとリリース ビルド  
  .NET Core ランタイムに対してデバッグ ビルドを実行した場合は、ネイティブ コードにコンパイルされません。 このため、一般にランタイムによって提供されるすべてのサービスをアプリで使用することができます。  
@@ -59,6 +59,6 @@ Additional information: Value does not fall within the expected range.
   
  完全なスタックを取得するには、代わりにデバッグ ビルドを実行します。  
   
-## <a name="see-also"></a>関連項目  
- [.NET ネイティブの Windows ユニバーサル アプリのデバッグ](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)  
- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>関連項目
+- [.NET ネイティブの Windows ユニバーサル アプリのデバッグ](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)

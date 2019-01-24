@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: 03fc8c11b5553c9c3a63bdcb69bf6135050e2c89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681392"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML リテラルの概要 (Visual Basic)
 *XML リテラル*Visual Basic のコードに直接 XML を組み込むことができます。 XML リテラルの構文を表します[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト、およびそれには、XML 1.0 の構文に似ています。 これにより、簡単に、コードは、最終的な XML と同じ構造を持つため、XML 要素やドキュメントをプログラムで作成します。  
   
- Visual Basic XML リテラルをコンパイルする[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 統合し、簡単なオブジェクト モデルを作成すると、XML を操作し、このモデルを提供します。[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]します。 詳細については、「<xref:System.Xml.Linq.XElement>」を参照してください。  
+ Visual Basic XML リテラルをコンパイルする[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 統合し、簡単なオブジェクト モデルを作成すると、XML を操作し、このモデルを提供します。[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]します。 詳細については、「 <xref:System.Xml.Linq.XElement> 」を参照してください。  
   
  XML リテラルでは、Visual Basic の式を埋め込むことができます。 アプリケーションを作成、実行時に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]各リテラルは、埋め込み式の値を組み込むためのオブジェクト。 これにより、XML リテラル内での動的なコンテンツを指定できます。 詳細については、次を参照してください。 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)します。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "43507649"
   
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Linq.XElement>  
- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Xml.Linq.XElement>
+- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)
