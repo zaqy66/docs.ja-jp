@@ -1,15 +1,15 @@
 ---
-title: '方法: 注釈を使用して、LINQ to XML ツリーを XSLT スタイル (Visual Basic) を変換するには'
+title: '方法: 注釈を使用して LINQ to XML ツリーを XSLT スタイル (Visual Basic) を変換するには'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746300"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>方法: 注釈を使用して、LINQ to XML ツリーを XSLT スタイル (Visual Basic) を変換するには
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>方法: 注釈を使用して LINQ to XML ツリーを XSLT スタイル (Visual Basic) を変換するには
 注釈を使用することで、XML ツリーの変換が容易になります。  
   
  XML ドキュメントには、"ドキュメント中心で混合コンテンツを含んでいる" ものがあります。 このようなドキュメントでは、必ずしも要素の子ノードの構造を把握する必要はありません。 たとえば、テキストを含んでいるノードは次のようになります。  
@@ -18,7 +18,7 @@ ms.locfileid: "33650258"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- どのテキスト ノードにも、任意の数の `<b>` と `<i>` が子要素として存在する可能性があります。 その他の状況の数まで、この方法: さまざまな通常の段落、箇条書きの段落、ビットマップなどの子要素を含めることができるページなどです。 テーブルのセルには、テキスト、ドロップダウン リスト、またはビットマップが含まれている場合があります。 ドキュメント中心の XML の主要な特性の 1 つは、特定の要素がどの子要素を持つかがわからない点です。  
+ どのテキスト ノードにも、任意の数の `<b>` と `<i>` が子要素として存在する可能性があります。 このアプローチは、さまざまな他の状況に拡張: など、さまざまな通常の段落、箇条書きの段落、ビットマップなどの子要素を含むことのできるページ。 テーブルのセルには、テキスト、ドロップダウン リスト、またはビットマップが含まれている場合があります。 ドキュメント中心の XML の主要な特性の 1 つは、特定の要素がどの子要素を持つかがわからない点です。  
   
  ツリー内の要素を変換するとき、その要素の子について詳しく理解している必要がない場合は、注釈を使用するこの方法が効果的です。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33650258"
   
 -   注釈として追加される新しい要素に新しい子ノードを含めることで、目的の構造を持つサブツリーを形成できます。  
   
--   特別な規則として、この目的で作成された別の名前空間 (この例では `http://www.microsoft.com/LinqToXmlTransform/2007` という名前空間) に新しい要素の子ノードが含まれている場合、その子ノードは新しいツリーにコピーされません。 代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。  
+-   特別な規則があります。かどうか、新しい要素の子ノードが別の名前空間、この目的で構成される名前空間には (この例では、名前空間は`http://www.microsoft.com/LinqToXmlTransform/2007`)、その子要素は、新しいツリーにコピーされません。 代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。  
   
 -   これは、XSL での変換の仕様にある程度似ています。 一連のノードを選択するクエリは、テンプレートの XPath 式に似ています。 注釈として保存される新しい <xref:System.Xml.Linq.XElement> を作成するコードは、XSL のシーケンス コンストラクターに似ています。また、`ApplyTransforms` 要素は、XSL の `xsl:apply-templates` 要素と機能的に似ています。  
   
@@ -378,5 +378,5 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>関連項目
+- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

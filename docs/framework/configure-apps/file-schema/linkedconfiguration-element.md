@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e5c8449e72414775c40ced2c344e12d5137ac03f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546414"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 要素
 
@@ -26,7 +26,7 @@ ms.locfileid: "47200959"
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
 
 ## <a name="syntax"></a>構文
 
@@ -52,10 +52,10 @@ ms.locfileid: "47200959"
 
 ## <a name="remarks"></a>Remarks
 
-**\<LinkedConfiguration >** 要素は、サービス コンポーネントのアセンブリを簡略化します。 1 つまたは複数のアプリケーションでは、既知の場所に存在する構成ファイルを持つアセンブリを使用する場合、アセンブリを使用するアプリケーションの構成ファイルを使用できます、  **\<linkedConfiguration >** 構成情報を直接含むのではなく、アセンブリの構成ファイルを含める要素。 コンポーネント アセンブリが処理されるときに一般的な構成ファイルの更新、アセンブリを使用するすべてのアプリケーションに最新の構成情報を提供します。
+ **\<LinkedConfiguration >** 要素は、サービス コンポーネントのアセンブリを簡略化します。 1 つまたは複数のアプリケーションでは、既知の場所に存在する構成ファイルを持つアセンブリを使用する場合、アセンブリを使用するアプリケーションの構成ファイルを使用できます、  **\<linkedConfiguration >** 構成情報を直接含むのではなく、アセンブリの構成ファイルを含める要素。 コンポーネント アセンブリが処理されるときに一般的な構成ファイルの更新、アセンブリを使用するすべてのアプリケーションに最新の構成情報を提供します。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** Windows サイド バイ サイドでマニフェストを使用するアプリケーションの要素がサポートされていません。
+>  **\<LinkedConfiguration >** Windows サイド バイ サイドでマニフェストを使用するアプリケーションの要素がサポートされていません。
 
 次の規則は、リンクされた構成ファイルの使用を制御します。
 
@@ -67,7 +67,7 @@ ms.locfileid: "47200959"
 
 - すべてのリンクされた構成ファイルを結合し、1 つのファイルの動作と同様に、 `#include` C と C++ のディレクティブ。
 
-- **\<LinkedConfiguration >** 要素がアプリケーション構成ファイルにのみ使用できます。 以外では無視されます*Machine.config*します。
+-  **\<LinkedConfiguration >** 要素がアプリケーション構成ファイルにのみ使用できます。 以外では無視されます*Machine.config*します。
 
 - 循環参照が検出され、終了します。 つまり場合、  **\<linkedConfiguration >** ループを形成する一連の構成ファイルの要素、ループが検出され、停止します。
 
@@ -85,5 +85,5 @@ ms.locfileid: "47200959"
 
 ## <a name="see-also"></a>関連項目
 
-[**\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [**\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)

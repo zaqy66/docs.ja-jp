@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a9d3f8966f6333487631a0e155c7be49075a6992
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734676"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 関数
 呼び出しで開始された列挙の終了、 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)関数。  
@@ -59,13 +59,13 @@ HRESULT QualifierSet_EndEnumeration (
 
 この呼び出しは、お勧めしますが、必要ありません。 列挙体に関連付けられているリソースを直ちに解放します。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
 **ヘッダー:** WMINet_Utils.idl  
   
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600519"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;要素
 
@@ -43,7 +43,7 @@ ms.locfileid: "53129248"
 
 場合、  **\<supportedRuntime >** 要素が、アプリケーション構成ファイルに存在しない、アプリケーションをビルドするために使用するランタイムのバージョンが使用されます。  
 
-**\<SupportedRuntime >** 1.1 以降、ランタイムのバージョンを使用して構築されたすべてのアプリケーションで要素を使用する必要があります。 ランタイムのバージョン 1.0 をサポートするために構築されたアプリケーションを使用する必要があります、 [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)要素。  
+ **\<SupportedRuntime >** 1.1 以降、ランタイムのバージョンを使用して構築されたすべてのアプリケーションで要素を使用する必要があります。 ランタイムのバージョン 1.0 をサポートするために構築されたアプリケーションを使用する必要があります、 [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)要素。  
   
 > [!NOTE]
 >  使用する場合、 [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)構成ファイルを指定する関数を使用する必要があります、`<requiredRuntime>`ランタイムのすべてのバージョンの要素。 `<supportedRuntime>`を使用する場合、要素は無視されます[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)します。  
@@ -66,7 +66,7 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>"sku id" の値
@@ -77,9 +77,9 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0、Client Profile|".NETFramework,Version=v4.0,Profile=Client"|  
-|4.0、プラットフォームの更新プログラム 1|".NETFramework、バージョン = v4.0.1"|  
+|4.0、プラットフォームの更新プログラム 1|".NETFramework,Version=v4.0.1"|  
 |4.0、Client Profile、更新プログラム 1|".NETFramework、バージョン v4.0.1、プロファイルの = = クライアント"|  
-|4.0、プラットフォームの更新プログラム 2|".NETFramework、バージョン = v4.0.2 以降を予定"|  
+|4.0、プラットフォームの更新プログラム 2|".NETFramework,Version=v4.0.2"|  
 |4.0、Client Profile、更新プログラム 2|".NETFramework、バージョン = v4.0.2 以降を予定プロファイル、クライアントを ="|  
 |4.0、プラットフォームの更新プログラム 3|".NETFramework、バージョン = v4.0.3"|  
 |4.0、Client Profile、更新プログラム 3|".NETFramework、バージョン v4.0.3、プロファイルの = = クライアント"|  
@@ -91,7 +91,7 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 |4.6.2|".NETFramework,Version=v4.6.2"|  
 |4.7|".NETFramework,Version=v4.7"|
 |4.7.1|".NETFramework,Version=v4.7.1"|
-|4.7.2|".NETFramework、バージョン = v4.7.2"|
+|4.7.2|".NETFramework,Version=v4.7.2"|
 
 ## <a name="example"></a>例  
  サポートされているランタイムのバージョンを構成ファイルで指定する例を次に示します。 構成ファイルでは、アプリが .NET Framework 4.7 を対象とすることを示します。  
@@ -110,6 +110,6 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 
 ## <a name="see-also"></a>関連項目
 
- [スタートアップ設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [インプロセスの side-by-side 実行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [スタートアップ設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [インプロセスの side-by-side 実行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

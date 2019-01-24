@@ -1,18 +1,18 @@
 ---
-title: '方法 : マネージド Windows サービスで WCF サービスをホストする'
+title: '方法: マネージ Windows サービスでの WCF サービスをホストします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613827"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>方法 : マネージド Windows サービスで WCF サービスをホストする
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>方法: マネージ Windows サービスでの WCF サービスをホストします。
 
 このトピックでは、Windows サービスによってホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 シナリオは、ホスト オプションがアクティブ化メッセージをセキュリティで保護された環境でインターネット インフォメーション サービス (IIS) の外部でホストされている実行時間の長い WCF サービスでは、マネージ Windows サービスで有効です。 サービスの有効期限は代わりにオペレーティング システムによって制御されます。 このホスト オプションは Windows のすべてのバージョンで使用できます。
 
@@ -20,7 +20,7 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
 
 サービス コードには、サービス コントラクトのサービス実装、Windows サービス クラス、およびインストーラー クラスが含まれています。 サービス実装クラスで、`CalculatorService`は、WCF サービスです。 一方、`CalculatorWindowsService` は Windows サービスです。 Windows サービスとして限定するため、このクラスは `ServiceBase` を継承し、`OnStart` メソッドと `OnStop` メソッドを実装しています。 `OnStart` では、<xref:System.ServiceModel.ServiceHost> 型の `CalculatorService` が作成され、開かれます。 `OnStop` では、このサービスが停止され、破棄されます。 ホストはベース アドレスをサービス ホストに提供する必要もあります。サービス ホストは、アプリケーション設定で構成されます。 インストーラー クラスは <xref:System.Configuration.Install.Installer> を継承します。このクラスを使用すると、Installutil.exe ツールにより、プログラムを Windows サービスとしてインストールできます。
 
-## <a name="construct-the-service-and-provide-the-hosting-code"></a>サービスを構築してホスティング コードを提供する
+## <a name="construct-the-service-and-provide-the-hosting-code"></a> サービスを構築してホスティング コードを提供する
 
 1.  作成する新しい Visual Studio**コンソール アプリ**という名前のプロジェクト**サービス**します。
 
@@ -138,4 +138,4 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
 - [簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)
 - [マネージド アプリケーションのホスト](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)
-- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -2,12 +2,12 @@
 title: チャネル ファクトリとキャッシュ
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: fa333d3ffa0063e226405eb8e715f9ee99f68432
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745340"
 ---
 # <a name="channel-factory-and-caching"></a>チャネル ファクトリとキャッシュ
 WCF クライアント アプリケーションでは、<xref:System.ServiceModel.ChannelFactory%601> クラスを使用して WCF サービスとの通信チャネルを作成します。  <xref:System.ServiceModel.ChannelFactory%601> インスタンスを作成する場合は、次の操作が必要になるため、オーバーヘッドが生じます。  
@@ -111,9 +111,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
  上の例では、`TestClient` のすべてのインスタンスで異なるチャネル ファクトリを使用します。 これは、エンドポイントごとにセキュリティ要件が異なり、キャッシュする意味がない場合に便利です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ClientBase%601>  
- [クライアントを構築する](../../../../docs/framework/wcf/building-clients.md)  
- [クライアント](../../../../docs/framework/wcf/feature-details/clients.md)  
- [WCF クライアントを使用したサービスへのアクセス](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [操作方法：ChannelFactory を使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.ClientBase%601>
+- [クライアントを構築する](../../../../docs/framework/wcf/building-clients.md)
+- [クライアント](../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF クライアントを使用したサービスへのアクセス](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [方法: ChannelFactory を使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

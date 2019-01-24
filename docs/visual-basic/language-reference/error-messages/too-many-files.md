@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID67
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
-ms.openlocfilehash: 8a9d89cc96e5b5875d0286becbf5b20d6895ae34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15e08cedbd58016959f00e1ca817019937775df2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737232"
 ---
 # <a name="too-many-files"></a>ファイルが多すぎます。
-指定された数より多くのファイルが開かれているかよりオペレーティング システムの制限、ルート ディレクトリにファイルが作成されましたが、**ファイル =** CONFIG で設定します。SYS ファイルです。  
+指定された数よりも多くのファイルが開かれているまたは以上のファイルは、オペレーティング システムの制限よりも、ルート ディレクトリに作成されましたが、**ファイル =** の構成で設定します。SYS ファイルです。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
 1.  プログラムが開く、閉じるか、ルート ディレクトリでファイルを保存している場合、は、サブディレクトリを使用するようにプログラムを変更します。  
   
-2.  指定されたファイルの数を増やす、**ファイル =** CONFIG で設定します。SYS ファイルを開き、コンピューターを再起動します。  
+2.  指定されたファイルの数を増やす、**ファイル =** の構成で設定します。SYS ファイルを開き、コンピューターを再起動します。  
   
-## <a name="see-also"></a>関連項目  
- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>関連項目
+- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,18 +1,18 @@
 ---
-title: '方法 : SQL コマンドを直接実行する'
+title: '方法: SQL コマンドを直接実行します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
-ms.openlocfilehash: 90fb0d7027946ce4f38c2ba4930ac3510e2a42b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ca62c0affc282140eb36979baafb8e3f9c89c35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737547"
 ---
-# <a name="how-to-directly-execute-sql-commands"></a>方法 : SQL コマンドを直接実行する
+# <a name="how-to-directly-execute-sql-commands"></a>方法: SQL コマンドを直接実行します。
 <xref:System.Data.Linq.DataContext> 接続を使用すると仮定して、オブジェクトを返さない SQL コマンドを実行するために <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> を使用できます。  
   
 ## <a name="example"></a>例  
@@ -21,6 +21,6 @@ ms.locfileid: "33351873"
  [!code-csharp[DLinqCommunicatingWithDatabase#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#3)]
  [!code-vb[DLinqCommunicatingWithDatabase#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a>関連項目  
- [方法 : SQL クエリを直接実行する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
- [データベースとの通信](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+## <a name="see-also"></a>関連項目
+- [方法: SQL クエリを直接実行します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)
+- [データベースとの通信](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

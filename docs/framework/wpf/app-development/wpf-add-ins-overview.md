@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662739"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 <a name="Introduction"></a> .NET Framework には、開発者がアドイン機能拡張をサポートするアプリケーションの作成に使用できるアドイン モデルが含まれています。 このアドイン モデルを使用することで、アプリケーション機能に統合され、アプリケーション機能を拡張するアドインを作成できます。 シナリオによっては、アプリケーションは、アドインによって提供されるユーザー インターフェイスの表示にも必要です。このトピックでは、WPF がこれらのシナリオ、その利点、および制限事項の背後にあるアーキテクチャを有効にする .NET Framework アドイン モデルを強化する方法を示します。  
@@ -282,10 +282,10 @@ ms.locfileid: "53397034"
 ## <a name="performance-optimization"></a>パフォーマンスの最適化  
  既定では、複数のアプリケーション ドメインを使用している場合の各アプリケーションに必要なさまざまな .NET Framework アセンブリがすべて読み込まれますそのアプリケーションのドメインにします。 その結果、新しいアプリケーション ドメインを作成してその中でアプリケーションを開始するために必要な時間がパフォーマンスに影響します。 ただし、.NET Framework は、既に読み込まれている場合は、アプリケーション ドメイン間でアセンブリを共有するアプリケーションに指示して開始時間を短縮するための手段を提供します。 使用してこれを行う、<xref:System.LoaderOptimizationAttribute>属性には、エントリ ポイント メソッドに適用する必要があります (`Main`)。 この場合、アプリケーション定義を実装するコードのみを使用する必要があります (「[アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)」を参照)。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.LoaderOptimizationAttribute>  
- [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [アプリケーション ドメイン](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework リモート処理の概要](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [オブジェクトをリモート処理可能](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [方法トピック](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.LoaderOptimizationAttribute>
+- [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [アプリケーション ドメイン](../../../../docs/framework/app-domains/application-domains.md)
+- [.NET framework リモート処理の概要](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [オブジェクトをリモート処理可能](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [方法トピック](../../../../docs/framework/wpf/app-development/how-to-topics.md)

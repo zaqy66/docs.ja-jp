@@ -1,15 +1,15 @@
 ---
-title: チュートリアル:SQL 生成
+title: 'チュートリアル: SQL 生成'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733442"
 ---
-# <a name="walkthrough-sql-generation"></a>チュートリアル:SQL 生成
+# <a name="walkthrough-sql-generation"></a>チュートリアル: SQL 生成
 このトピックでの SQL の生成方法を示しています、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)します。 次の Entity SQL クエリでは、サンプル プロバイダーに含まれているモデルを使用します。  
   
 ```  
@@ -199,5 +199,5 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
   
  2 番目のフェーズの最後に、最終的な SQL ステートメントが生成されます。  
   
-## <a name="see-also"></a>関連項目  
- [サンプル プロバイダーでの SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>関連項目
+- [サンプル プロバイダーでの SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

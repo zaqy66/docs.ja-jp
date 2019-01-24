@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム コントロールに属性を適用する'
+title: '方法: Windows フォーム コントロールに属性を適用します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735157"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>方法 : Windows フォーム コントロールに属性を適用する
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>方法: Windows フォーム コントロールに属性を適用します。
 デザイン環境を正しく操作しを実行時に正しく実行するコンポーネントとコントロールを開発するには、クラスとメンバーに属性を正しく適用する必要があります。  
   
 ## <a name="example"></a>例  
@@ -77,9 +77,9 @@ ms.locfileid: "45592965"
   
 -   フォームをホストする、`AttributesDemoControl`への参照が必要です、`AttributesDemoControl`アセンブリをビルドするためにします。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IComparable>  
- <xref:System.Windows.Forms.DataGridView>  
- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Windows フォーム コントロールの属性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- [方法: designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+## <a name="see-also"></a>関連項目
+- <xref:System.IComparable>
+- <xref:System.Windows.Forms.DataGridView>
+- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Windows フォーム コントロールの属性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

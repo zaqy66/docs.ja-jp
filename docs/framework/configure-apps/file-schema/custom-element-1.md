@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 07bc0d9560546f4946d34413697fb0adcf84c58d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 232ad7527e65fd38fa471cccc917752aef766a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628839"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler のカスタム要素
 
-定義されているカスタム構成セクションの設定を定義します。 <section> 要素と使用、<xref:System.Configuration.SingleTagSectionHandler>クラスです。
+定義されているカスタム構成セクションの設定を定義します。 <section> 使用して要素、<xref:System.Configuration.SingleTagSectionHandler>クラス。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;*\<sectionName>*
@@ -30,7 +30,7 @@ ms.locfileid: "32743278"
 
 ## <a name="attributes"></a>属性
 
-属性および属性値は、ユーザー定義を示します。
+属性および属性値は、ユーザー定義です。
 
 ## <a name="parent-element"></a>親要素
 
@@ -42,13 +42,13 @@ ms.locfileid: "32743278"
 
 なし
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**\<SectionName >** 要素は、カスタムの要素によって定義された、 [ **\<セクション >** ](~/docs/framework/configure-apps/file-schema/section-element.md)にタグを付ける、 [ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)要素。 構成システムを返します、<xref:System.Collections.IDictionary>オブジェクトを呼び出すとき<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>です。
+ **\<SectionName >** 要素がによって定義されるカスタム要素、 [ **\<セクション >** ](~/docs/framework/configure-apps/file-schema/section-element.md)にタグを付ける、 [ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)要素。 構成システムから返される、<xref:System.Collections.IDictionary>オブジェクトを呼び出すと<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>します。
 
 ## <a name="example"></a>例
 
-次の例と呼ばれるカスタム要素の宣言 **\<sampleSection >** によって読み取られた設定を格納している、<xref:System.Configuration.SingleTagSectionHandler>クラス。
+次の例と呼ばれるカスタム要素の宣言 **\<sampleSection >** によって読み取られた設定を格納する、<xref:System.Configuration.SingleTagSectionHandler>クラス。
 
 ```xml
 <configuration>
@@ -68,4 +68,4 @@ ms.locfileid: "32743278"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
