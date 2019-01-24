@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 7b5a91091a0902928eb2b72bdf69612f2e3f2f48
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704044"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation サービスのバインディングの構成
 アプリケーションの作成では、アプリケーションの配置後は各種決定事項を管理者に任せる場合がよくあります。 たとえば、どのサービス アドレス (URI (Uniform Resource Identifier)) を使用するかなどの情報は、多くの場合、前もって知る方法がありません。 アドレスをハードコーディングする代わりに、サービスの作成後に管理者が指定する方が便利です。  構成を活用することで、この柔軟性が得られます。  
@@ -161,8 +161,8 @@ ms.locfileid: "54029412"
 </bindings>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [簡略化された構成](../../../docs/framework/wcf/simplified-configuration.md)  
- [システム標準のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)  
- [エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+- [簡略化された構成](../../../docs/framework/wcf/simplified-configuration.md)
+- [システム標準のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)
+- [エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

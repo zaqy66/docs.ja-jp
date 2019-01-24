@@ -2,23 +2,17 @@
 title: コンパイラおよび言語プロバイダー設定のスキーマ
 ms.date: 03/30/2017
 helpviewer_keywords:
-- configuration settings [.NET Framework], compilers
-- compiler configuration elements, schema
-- compiler configuration elements
-- language providers
-- compiler configuration settings, schema
-- configuration schema [.NET Framework], compiler settings
-- language providers, settings schema
-- compiler configuration settings
+  - 'configuration settings [.NET Framework], compilers'
+  - 'compiler configuration elements, schema'
+  - compiler configuration elements
+  - language providers
+  - 'compiler configuration settings, schema'
+  - 'configuration schema [.NET Framework], compiler settings'
+  - 'language providers, settings schema'
+  - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8992c9e47e2b62e90191a67fc7353e138502ebf1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185668"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>コンパイラおよび言語プロバイダー設定のスキーマ
 コンパイラおよび言語プロバイダー設定は、使用可能な言語プロバイダーのコンパイラ構成要素を指定します。 各コンパイラ構成要素は、コード プロバイダーの型名、コンパイラ パラメーター、サポートされる言語名、およびサポートされるファイル拡張子を指定します。  
@@ -58,8 +52,8 @@ ms.locfileid: "50185668"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<compiler> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

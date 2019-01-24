@@ -1,5 +1,5 @@
 ---
-title: 最初のオペランドはバイナリで&#39;場合&#39;式を null 許容にする必要がありますまたは型の参照
+title: 最初のオペランドのバイナリで&#39;場合&#39;式は、null 許容である必要がありますまたは型の参照
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85094ba6d6a44bf2e6cc4fba7946598c286a08a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668274"
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>最初のオペランドはバイナリで&#39;場合&#39;式を null 許容にする必要がありますまたは型の参照
-`If`式が 2 または 3 つの引数を受け取ることができます。 2 つの引数を送信するときに、最初の引数は、参照型または null 許容型にする必要があります。 最初の引数が以外の何もする評価された場合に`Nothing`、その値が返されます。 最初の引数が評価された場合`Nothing`、2 番目の引数が評価され、返されます。  
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>最初のオペランドのバイナリで&#39;場合&#39;式は、null 許容である必要がありますまたは型の参照
+`If`式が 2 つまたは 3 つの引数を受け取ることができます。 2 つの引数を送信すると、最初の引数は、参照型または null 許容型でする必要があります。 最初の引数の評価が何も以外の場合`Nothing`、その値が返されます。 最初の引数が評価された場合`Nothing`、2 番目の引数が評価され、返されます。  
   
- たとえば、次のコードには 2 つ`If`3 つの引数と 2 つの引数の式。 式が計算され、同じ値が返すされます。  
+ たとえば、次のコードには 2 つ`If`で 3 つの引数と 2 つの引数の式。 式を計算し、同じ値を返します。  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -46,14 +46,14 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   最初の引数が null 許容型または参照型であるようにコードを変更することはできない場合、は、3 つの引数に変換することを検討してください`If`式、または、`If...Then...Else`ステートメントです。  
+-   最初の引数が null 許容型または参照型であるようにコードを変更することはできない場合、は、3 つの引数に変換することを検討してください`If`式、または、`If...Then...Else`ステートメント。  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
 Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [If 演算子](../../../visual-basic/language-reference/operators/if-operator.md)  
- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>関連項目
+- [If 演算子](../../../visual-basic/language-reference/operators/if-operator.md)
+- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

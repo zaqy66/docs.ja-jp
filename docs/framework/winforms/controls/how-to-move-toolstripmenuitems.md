@@ -1,5 +1,5 @@
 ---
-title: '方法 : ToolStripMenuItems を移動する'
+title: '方法: ToolStripMenuItems を移動します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], moving
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 69ef2bbaa05155532887897a0aef79a778594169
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 12554ee2225dbb186392b910ddfd7c2f69695e7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660217"
 ---
-# <a name="how-to-move-toolstripmenuitems"></a>方法 : ToolStripMenuItems を移動する
+# <a name="how-to-move-toolstripmenuitems"></a>方法: ToolStripMenuItems を移動します。
 デザイン時に移動できますトップレベル メニュー全体とそのメニュー項目を別の場所、<xref:System.Windows.Forms.MenuStrip>します。 トップレベル メニュー間で個々 のメニュー項目を移動またはメニュー内でのメニュー項目の位置を変更することもできます。  
   
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "43384901"
   
      切り取りメニュー項目が選択されているメニュー項目の後に挿入されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [MenuStrip コントロールの概要](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [MenuStrip コントロールの概要](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

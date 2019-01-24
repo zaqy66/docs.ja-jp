@@ -12,12 +12,12 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646608"
 ---
 # <a name="struct-design"></a>構造体のデザイン
 ほとんどの場合、汎用的な値の型は構造体、c# のキーワードと呼ばれます。 このセクションでは、一般的な構造体のデザインのガイドラインを示します。  
@@ -48,6 +48,6 @@ ms.locfileid: "53153112"
   
 ## <a name="see-also"></a>関連項目
 
-- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)  
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [クラスまたは構造体の選択](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
