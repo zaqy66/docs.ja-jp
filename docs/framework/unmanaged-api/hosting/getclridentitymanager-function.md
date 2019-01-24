@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a0672196ebaea5c91139851b89a7476ff6363b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f40100be3ab05c0c8e8a55d48494569424e88371
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637269"
 ---
-# <a name="getclridentitymanager-function"></a><span data-ttu-id="bc968-102">GetCLRIdentityManager 関数</span><span class="sxs-lookup"><span data-stu-id="bc968-102">GetCLRIdentityManager Function</span></span>
-<span data-ttu-id="bc968-103">共通言語ランタイム (CLR) に必要な id を管理できるようにするインターフェイスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="bc968-103">Gets a pointer to an interface that allows the common language runtime (CLR) to manage identities.</span></span>  
+# <a name="getclridentitymanager-function"></a><span data-ttu-id="a0367-102">GetCLRIdentityManager 関数</span><span class="sxs-lookup"><span data-stu-id="a0367-102">GetCLRIdentityManager Function</span></span>
+<span data-ttu-id="a0367-103">共通言語ランタイム (CLR) ユーザーの管理に使用するインターフェイスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="a0367-103">Gets a pointer to an interface that allows the common language runtime (CLR) to manage identities.</span></span>  
   
- <span data-ttu-id="bc968-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="bc968-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="a0367-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="a0367-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc968-105">構文</span><span class="sxs-lookup"><span data-stu-id="bc968-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0367-105">構文</span><span class="sxs-lookup"><span data-stu-id="a0367-105">Syntax</span></span>  
   
 ```  
 STDAPI GetCLRIdentityManager(  
@@ -37,25 +37,24 @@ STDAPI GetCLRIdentityManager(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bc968-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bc968-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a0367-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a0367-106">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="bc968-107">[in]A `REFIID` (インターフェイス識別子) を指定するどのインターフェイスを取得します。</span><span class="sxs-lookup"><span data-stu-id="bc968-107">[in] A `REFIID` (an interface identifier) that specifies which interface to get.</span></span> <span data-ttu-id="bc968-108">この値は、IID_ICLRAssemblyIdentityManager または IID_ICLRHostBindingPolicyManager のいずれかにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="bc968-108">This value must be either IID_ICLRAssemblyIdentityManager or IID_ICLRHostBindingPolicyManager.</span></span>  
+ <span data-ttu-id="a0367-107">[in]A `REFIID` (インターフェイス識別子) を取得するには、どのインターフェイスを指定します。</span><span class="sxs-lookup"><span data-stu-id="a0367-107">[in] A `REFIID` (an interface identifier) that specifies which interface to get.</span></span> <span data-ttu-id="a0367-108">この値は、IID_ICLRAssemblyIdentityManager または IID_ICLRHostBindingPolicyManager のいずれかである必要があります。</span><span class="sxs-lookup"><span data-stu-id="a0367-108">This value must be either IID_ICLRAssemblyIdentityManager or IID_ICLRHostBindingPolicyManager.</span></span>  
   
  `ppManager`  
- <span data-ttu-id="bc968-109">[out]いずれかのアドレスへのポインター、 [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)または[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="bc968-109">[out] A pointer to the address of either an [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) or an [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) object.</span></span>  
+ <span data-ttu-id="a0367-109">[out]どちらのアドレスへのポインター、 [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)または[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="a0367-109">[out] A pointer to the address of either an [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) or an [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bc968-110">コメント</span><span class="sxs-lookup"><span data-stu-id="bc968-110">Remarks</span></span>  
- <span data-ttu-id="bc968-111">呼び出す、 [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)へのポインターを取得する関数、`GetCLRIdentityManager`関数。</span><span class="sxs-lookup"><span data-stu-id="bc968-111">Call the [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) function to get a pointer to the `GetCLRIdentityManager` function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0367-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="a0367-110">Remarks</span></span>  
+ <span data-ttu-id="a0367-111">呼び出す、 [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)へのポインターを取得する関数、`GetCLRIdentityManager`関数。</span><span class="sxs-lookup"><span data-stu-id="a0367-111">Call the [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) function to get a pointer to the `GetCLRIdentityManager` function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc968-112">要件</span><span class="sxs-lookup"><span data-stu-id="bc968-112">Requirements</span></span>  
- <span data-ttu-id="bc968-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="bc968-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a0367-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="a0367-112">Requirements</span></span>  
+ <span data-ttu-id="a0367-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0367-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc968-114">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bc968-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a0367-114">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a0367-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="bc968-115">**ライブラリ:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="bc968-115">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="a0367-115">**ライブラリ:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="a0367-115">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="bc968-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc968-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a0367-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0367-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc968-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="bc968-117">See Also</span></span>  
- <span data-ttu-id="bc968-118">
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span><span class="sxs-lookup"><span data-stu-id="bc968-118">[Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0367-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="a0367-117">See also</span></span>
+- [<span data-ttu-id="a0367-118">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="a0367-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

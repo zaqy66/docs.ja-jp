@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552243"
 ---
-# <a name="cordebugstepreason-enumeration"></a><span data-ttu-id="76108-102">CorDebugStepReason 列挙型</span><span class="sxs-lookup"><span data-stu-id="76108-102">CorDebugStepReason Enumeration</span></span>
-<span data-ttu-id="76108-103">個々のステップの結果を示します。</span><span class="sxs-lookup"><span data-stu-id="76108-103">Indicates the outcome of an individual step.</span></span>  
+# <a name="cordebugstepreason-enumeration"></a><span data-ttu-id="96726-102">CorDebugStepReason 列挙型</span><span class="sxs-lookup"><span data-stu-id="96726-102">CorDebugStepReason Enumeration</span></span>
+<span data-ttu-id="96726-103">個々のステップの結果を示します。</span><span class="sxs-lookup"><span data-stu-id="96726-103">Indicates the outcome of an individual step.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76108-104">構文</span><span class="sxs-lookup"><span data-stu-id="76108-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96726-104">構文</span><span class="sxs-lookup"><span data-stu-id="96726-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugStepReason {  
@@ -40,27 +40,27 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="76108-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="76108-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="96726-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="96726-105">Members</span></span>  
   
-|<span data-ttu-id="76108-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="76108-106">Member</span></span>|<span data-ttu-id="76108-107">説明</span><span class="sxs-lookup"><span data-stu-id="76108-107">Description</span></span>|  
+|<span data-ttu-id="96726-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="96726-106">Member</span></span>|<span data-ttu-id="96726-107">説明</span><span class="sxs-lookup"><span data-stu-id="96726-107">Description</span></span>|  
 |------------|-----------------|  
-|`STEP_NORMAL`|<span data-ttu-id="76108-108">同じ関数内で、ステップ実行が通常は、完了しました。</span><span class="sxs-lookup"><span data-stu-id="76108-108">Stepping completed normally, within the same function.</span></span>|  
-|`STEP_RETURN`|<span data-ttu-id="76108-109">ステップ実行は継続通常は、関数が返された後。</span><span class="sxs-lookup"><span data-stu-id="76108-109">Stepping continued normally, after the function returned.</span></span>|  
-|`STEP_CALL`|<span data-ttu-id="76108-110">新しく呼び出された関数の先頭には通常、継続のステップします。</span><span class="sxs-lookup"><span data-stu-id="76108-110">Stepping continued normally, at the beginning of a newly called function.</span></span>|  
-|`STEP_EXCEPTION_FILTER`|<span data-ttu-id="76108-111">例外が生成され、例外フィルターにコントロールが渡されました。</span><span class="sxs-lookup"><span data-stu-id="76108-111">An exception was generated and control was passed to an exception filter.</span></span>|  
-|`STEP_EXCEPTION_HANDLER`|<span data-ttu-id="76108-112">例外が発生しました、制御、例外ハンドラーに渡されました。</span><span class="sxs-lookup"><span data-stu-id="76108-112">An exception was generated and control was passed to an exception handler.</span></span>|  
-|`STEP_INTERCEPT`|<span data-ttu-id="76108-113">コントロールは、インターセプターに渡されました。</span><span class="sxs-lookup"><span data-stu-id="76108-113">Control was passed to an interceptor.</span></span>|  
-|`STEP_EXIT`|<span data-ttu-id="76108-114">ステップが完了する前に、スレッドが終了しました。</span><span class="sxs-lookup"><span data-stu-id="76108-114">The thread exited before the step was completed.</span></span>|  
+|`STEP_NORMAL`|<span data-ttu-id="96726-108">ステップ実行は、同じ関数内で通常は、完了。</span><span class="sxs-lookup"><span data-stu-id="96726-108">Stepping completed normally, within the same function.</span></span>|  
+|`STEP_RETURN`|<span data-ttu-id="96726-109">ステップ実行を続行通常、関数が返された後。</span><span class="sxs-lookup"><span data-stu-id="96726-109">Stepping continued normally, after the function returned.</span></span>|  
+|`STEP_CALL`|<span data-ttu-id="96726-110">新しく呼び出された関数の先頭には通常、続きステップ実行します。</span><span class="sxs-lookup"><span data-stu-id="96726-110">Stepping continued normally, at the beginning of a newly called function.</span></span>|  
+|`STEP_EXCEPTION_FILTER`|<span data-ttu-id="96726-111">例外が発生しました、例外フィルターに制御が渡されます。</span><span class="sxs-lookup"><span data-stu-id="96726-111">An exception was generated and control was passed to an exception filter.</span></span>|  
+|`STEP_EXCEPTION_HANDLER`|<span data-ttu-id="96726-112">例外が発生しました、例外ハンドラーに制御が渡されます。</span><span class="sxs-lookup"><span data-stu-id="96726-112">An exception was generated and control was passed to an exception handler.</span></span>|  
+|`STEP_INTERCEPT`|<span data-ttu-id="96726-113">コントロールは、インターセプターに渡されました。</span><span class="sxs-lookup"><span data-stu-id="96726-113">Control was passed to an interceptor.</span></span>|  
+|`STEP_EXIT`|<span data-ttu-id="96726-114">ステップが完了する前に、スレッドが終了しました。</span><span class="sxs-lookup"><span data-stu-id="96726-114">The thread exited before the step was completed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="76108-115">要件</span><span class="sxs-lookup"><span data-stu-id="76108-115">Requirements</span></span>  
- <span data-ttu-id="76108-116">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="76108-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96726-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="96726-115">Requirements</span></span>  
+ <span data-ttu-id="96726-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="96726-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="76108-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="76108-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="96726-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="96726-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="76108-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="76108-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="96726-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96726-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="76108-119">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76108-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="96726-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96726-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76108-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="76108-120">See Also</span></span>  
- [<span data-ttu-id="76108-121">StepComplete メソッド</span><span class="sxs-lookup"><span data-stu-id="76108-121">StepComplete Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [<span data-ttu-id="76108-122">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="76108-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="96726-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="96726-120">See also</span></span>
+- [<span data-ttu-id="96726-121">StepComplete メソッド</span><span class="sxs-lookup"><span data-stu-id="96726-121">StepComplete Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [<span data-ttu-id="96726-122">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="96726-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

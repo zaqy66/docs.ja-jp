@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c64b98f3b5ab0445b076b0d3bacfaa398e26f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c768091f84157ea651c018fa89cdeafcce6c02df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537674"
 ---
-# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="59a78-102">IInstallReferenceItem::GetReference メソッド</span><span class="sxs-lookup"><span data-stu-id="59a78-102">IInstallReferenceItem::GetReference Method</span></span>
-<span data-ttu-id="59a78-103">ポインターを取得、 [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)これによって表される構造体[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="59a78-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object.</span></span>  
+# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="15e0c-102">IInstallReferenceItem::GetReference メソッド</span><span class="sxs-lookup"><span data-stu-id="15e0c-102">IInstallReferenceItem::GetReference Method</span></span>
+<span data-ttu-id="15e0c-103">ポインターを取得、 [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)構造体によって表される[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="15e0c-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59a78-104">構文</span><span class="sxs-lookup"><span data-stu-id="59a78-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15e0c-104">構文</span><span class="sxs-lookup"><span data-stu-id="15e0c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReference (  
@@ -37,23 +37,23 @@ HRESULT GetReference (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="59a78-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="59a78-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="15e0c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="15e0c-105">Parameters</span></span>  
  `ppRefData`  
- <span data-ttu-id="59a78-106">[out]返された`FUSION_INSTALL_REFERENCE`ポインター。</span><span class="sxs-lookup"><span data-stu-id="59a78-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
+ <span data-ttu-id="15e0c-106">[out]返された`FUSION_INSTALL_REFERENCE`ポインター。</span><span class="sxs-lookup"><span data-stu-id="15e0c-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="59a78-107">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="59a78-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="59a78-108">`dwFlags` 0 (ゼロ) にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="59a78-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="15e0c-107">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="15e0c-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="15e0c-108">`dwFlags` 0 (ゼロ) である必要があります。</span><span class="sxs-lookup"><span data-stu-id="15e0c-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="59a78-109">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="59a78-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="59a78-110">`pvReserved` null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="59a78-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="15e0c-109">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="15e0c-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="15e0c-110">`pvReserved` null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="15e0c-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59a78-111">要件</span><span class="sxs-lookup"><span data-stu-id="59a78-111">Requirements</span></span>  
- <span data-ttu-id="59a78-112">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="59a78-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15e0c-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="15e0c-111">Requirements</span></span>  
+ <span data-ttu-id="15e0c-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="15e0c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59a78-113">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="59a78-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="15e0c-113">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="15e0c-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="59a78-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59a78-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="15e0c-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15e0c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59a78-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="59a78-115">See Also</span></span>  
- [<span data-ttu-id="59a78-116">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="59a78-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- [<span data-ttu-id="59a78-117">FUSION_INSTALL_REFERENCE 構造体</span><span class="sxs-lookup"><span data-stu-id="59a78-117">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a><span data-ttu-id="15e0c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="15e0c-115">See also</span></span>
+- [<span data-ttu-id="15e0c-116">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="15e0c-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="15e0c-117">FUSION_INSTALL_REFERENCE 構造体</span><span class="sxs-lookup"><span data-stu-id="15e0c-117">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

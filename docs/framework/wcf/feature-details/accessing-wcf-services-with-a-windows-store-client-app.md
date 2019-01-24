@@ -2,27 +2,27 @@
 title: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613663"
 ---
-# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a><span data-ttu-id="1b281-102">Windows ストア クライアント アプリを使用した WCF サービスへのアクセス</span><span class="sxs-lookup"><span data-stu-id="1b281-102">Accessing WCF Services with a Windows Store Client App</span></span>
-<span data-ttu-id="1b281-103">Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。</span><span class="sxs-lookup"><span data-stu-id="1b281-103">Windows 8 introduces a new type of application called Windows Store applications.</span></span> <span data-ttu-id="1b281-104">これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-104">These applications are designed around a touch screen interface.</span></span> <span data-ttu-id="1b281-105">.NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="1b281-105">.NET Framework 4.5 enables Windows Store applications to call WCF services.</span></span>  
+# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a><span data-ttu-id="dc0ab-102">Windows ストア クライアント アプリを使用した WCF サービスへのアクセス</span><span class="sxs-lookup"><span data-stu-id="dc0ab-102">Accessing WCF Services with a Windows Store Client App</span></span>
+<span data-ttu-id="dc0ab-103">Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-103">Windows 8 introduces a new type of application called Windows Store applications.</span></span> <span data-ttu-id="dc0ab-104">これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-104">These applications are designed around a touch screen interface.</span></span> <span data-ttu-id="dc0ab-105">.NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-105">.NET Framework 4.5 enables Windows Store applications to call WCF services.</span></span>  
   
-## <a name="wcf-support-in-windows-store-applications"></a><span data-ttu-id="1b281-106">Windows ストア アプリケーションでの WCF のサポート</span><span class="sxs-lookup"><span data-stu-id="1b281-106">WCF Support in Windows Store Applications</span></span>  
- <span data-ttu-id="1b281-107">WCF 機能の一部は、Windows ストア アプリケーション内から利用できます。詳細については、以降のセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1b281-107">A subset of WCF functionality is available from within a Windows Store application, see the following sections for more details.</span></span>  
+## <a name="wcf-support-in-windows-store-applications"></a><span data-ttu-id="dc0ab-106">Windows ストア アプリケーションでの WCF のサポート</span><span class="sxs-lookup"><span data-stu-id="dc0ab-106">WCF Support in Windows Store Applications</span></span>  
+ <span data-ttu-id="dc0ab-107">WCF 機能の一部は、Windows ストア アプリケーション内から利用できます。詳細については、以降のセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-107">A subset of WCF functionality is available from within a Windows Store application, see the following sections for more details.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="1b281-108">WCF で公開される API ではなく、WinRT 配信 API を使用してください。</span><span class="sxs-lookup"><span data-stu-id="1b281-108">Use the WinRT syndication APIs instead of those exposed by WCF.</span></span> <span data-ttu-id="1b281-109">詳細については、「 [WinRT 配信 API](https://go.microsoft.com/fwlink/?LinkId=236265)</span><span class="sxs-lookup"><span data-stu-id="1b281-109">For more information see, [WinRT Syndication API](https://go.microsoft.com/fwlink/?LinkId=236265)</span></span>  
+>  <span data-ttu-id="dc0ab-108">WCF で公開される API ではなく、WinRT 配信 API を使用してください。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-108">Use the WinRT syndication APIs instead of those exposed by WCF.</span></span> <span data-ttu-id="dc0ab-109">詳細については、「 [Windows.Web.Syndication 名前空間](https://go.microsoft.com/fwlink/?LinkId=236265)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-109">For more information see, [WinRT Syndication API](https://go.microsoft.com/fwlink/?LinkId=236265)</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="1b281-110">サービス参照の追加を使用して Windows ランタイム コンポーネントへの Web サービス参照を追加することはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="1b281-110">Using Add Service Reference to add a web service reference to a Windows Runtime Component isn’t supported.</span></span>  
+>  <span data-ttu-id="dc0ab-110">サービス参照の追加を使用して Windows ランタイム コンポーネントへの Web サービス参照を追加することはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-110">Using Add Service Reference to add a web service reference to a Windows Runtime Component isn’t supported.</span></span>  
   
-### <a name="supported-bindings"></a><span data-ttu-id="1b281-111">サポートされているバインド</span><span class="sxs-lookup"><span data-stu-id="1b281-111">Supported Bindings</span></span>  
- <span data-ttu-id="1b281-112">Windows ストア アプリケーションでは、以下の WCF バインドがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-112">The following WCF bindings are supported in Windows Store Applications:</span></span>  
+### <a name="supported-bindings"></a><span data-ttu-id="dc0ab-111">サポートされているバインド</span><span class="sxs-lookup"><span data-stu-id="dc0ab-111">Supported Bindings</span></span>  
+ <span data-ttu-id="dc0ab-112">Windows ストア アプリケーションでは、以下の WCF バインドがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-112">The following WCF bindings are supported in Windows Store Applications:</span></span>  
   
 1.  <xref:System.ServiceModel.BasicHttpBinding>  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48266640"
   
 4.  <xref:System.ServiceModel.Channels.CustomBinding>
   
- <span data-ttu-id="1b281-113">Windows ストア アプリケーションでは、以下のバインド要素がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-113">The following binding elements are supported in Windows Store Applications</span></span>  
+ <span data-ttu-id="dc0ab-113">Windows ストア アプリケーションでは、以下のバインド要素がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-113">The following binding elements are supported in Windows Store Applications</span></span>  
   
 1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
@@ -52,19 +52,19 @@ ms.locfileid: "48266640"
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- <span data-ttu-id="1b281-114">テキスト エンコードとバイナリ エンコードの両方がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-114">Both Text and Binary encodings are supported.</span></span> <span data-ttu-id="1b281-115">すべての WCF 転送モードがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-115">All WCF transfer modes are supported.</span></span> <span data-ttu-id="1b281-116">詳細については、「 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1b281-116">For more information see, [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).</span></span>  
+ <span data-ttu-id="dc0ab-114">テキスト エンコードとバイナリ エンコードの両方がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-114">Both Text and Binary encodings are supported.</span></span> <span data-ttu-id="dc0ab-115">すべての WCF 転送モードがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-115">All WCF transfer modes are supported.</span></span> <span data-ttu-id="dc0ab-116">詳細については、「 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-116">For more information see, [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).</span></span>  
   
-### <a name="add-service-reference"></a><span data-ttu-id="1b281-117">サービス参照の追加</span><span class="sxs-lookup"><span data-stu-id="1b281-117">Add Service Reference</span></span>  
- <span data-ttu-id="1b281-118">WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。</span><span class="sxs-lookup"><span data-stu-id="1b281-118">To call a WCF service from a Windows Store application, use the Add Service Reference feature of Visual Studio 2012.</span></span> <span data-ttu-id="1b281-119">Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。</span><span class="sxs-lookup"><span data-stu-id="1b281-119">You will notice a few changes in the functionality of Add Service Reference when done within a Windows Store application.</span></span> <span data-ttu-id="1b281-120">まず、構成ファイルが生成されません。</span><span class="sxs-lookup"><span data-stu-id="1b281-120">First no configuration file is generated.</span></span> <span data-ttu-id="1b281-121">Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b281-121">Windows Store applications do not use configuration files, so they must be configured in code.</span></span> <span data-ttu-id="1b281-122">この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。</span><span class="sxs-lookup"><span data-stu-id="1b281-122">This configuration code can be found in the References.cs file generated by Add Service Reference.</span></span> <span data-ttu-id="1b281-123">このファイルを表示するには、ソリューション エクスプ ローラーで"すべてのファイルを表示 を選択してください。</span><span class="sxs-lookup"><span data-stu-id="1b281-123">To see this file, make sure to select "Show All Files" in the solution explorer.</span></span> <span data-ttu-id="1b281-124">このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。</span><span class="sxs-lookup"><span data-stu-id="1b281-124">The file will be located under the Service References and then Reference.svcmap nodes within the project.</span></span> <span data-ttu-id="1b281-125">Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。</span><span class="sxs-lookup"><span data-stu-id="1b281-125">All operations generated for WCF services within a Windows Store application will be asynchronous using the Task-based asynchronous pattern.</span></span> <span data-ttu-id="1b281-126">詳細については、次を参照してください。[タスクベースの非同期パターン](https://msdn.microsoft.com/magazine/ff959203.aspx)します。</span><span class="sxs-lookup"><span data-stu-id="1b281-126">For more information, see [Task-based Asynchronous Pattern](https://msdn.microsoft.com/magazine/ff959203.aspx).</span></span>  
+### <a name="add-service-reference"></a><span data-ttu-id="dc0ab-117">サービス参照の追加</span><span class="sxs-lookup"><span data-stu-id="dc0ab-117">Add Service Reference</span></span>  
+ <span data-ttu-id="dc0ab-118">WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-118">To call a WCF service from a Windows Store application, use the Add Service Reference feature of Visual Studio 2012.</span></span> <span data-ttu-id="dc0ab-119">Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-119">You will notice a few changes in the functionality of Add Service Reference when done within a Windows Store application.</span></span> <span data-ttu-id="dc0ab-120">まず、構成ファイルが生成されません。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-120">First no configuration file is generated.</span></span> <span data-ttu-id="dc0ab-121">Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-121">Windows Store applications do not use configuration files, so they must be configured in code.</span></span> <span data-ttu-id="dc0ab-122">この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-122">This configuration code can be found in the References.cs file generated by Add Service Reference.</span></span> <span data-ttu-id="dc0ab-123">このファイルを表示するには、ソリューション エクスプ ローラーで"すべてのファイルを表示 を選択してください。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-123">To see this file, make sure to select "Show All Files" in the solution explorer.</span></span> <span data-ttu-id="dc0ab-124">このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-124">The file will be located under the Service References and then Reference.svcmap nodes within the project.</span></span> <span data-ttu-id="dc0ab-125">Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-125">All operations generated for WCF services within a Windows Store application will be asynchronous using the Task-based asynchronous pattern.</span></span> <span data-ttu-id="dc0ab-126">詳細については、「 [タスク ベースの非同期パターン](https://msdn.microsoft.com/magazine/ff959203.aspx)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-126">For more information, see [Task-based Asynchronous Pattern](https://msdn.microsoft.com/magazine/ff959203.aspx).</span></span>  
   
- <span data-ttu-id="1b281-127">構成がコードで生成されるようになったため、サービス参照を更新するたびに、Reference.cs ファイルで行ったすべての変更が上書きされます。</span><span class="sxs-lookup"><span data-stu-id="1b281-127">Because configuration is now generated in code, any changes made in the Reference.cs file would be overwritten every time the service reference is updated.</span></span> <span data-ttu-id="1b281-128">この状況に対処するために、構成コードは部分メソッド内に生成され、これをクライアント プロキシ クラスで実装できます。</span><span class="sxs-lookup"><span data-stu-id="1b281-128">To remedy this situation the configuration code is generated within a partial method, which you can implement in your client proxy class.</span></span> <span data-ttu-id="1b281-129">部分メソッドは次のように宣言されています。</span><span class="sxs-lookup"><span data-stu-id="1b281-129">The partial method is declared as follows:</span></span>  
+ <span data-ttu-id="dc0ab-127">構成がコードで生成されるようになったため、サービス参照を更新するたびに、Reference.cs ファイルで行ったすべての変更が上書きされます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-127">Because configuration is now generated in code, any changes made in the Reference.cs file would be overwritten every time the service reference is updated.</span></span> <span data-ttu-id="dc0ab-128">この状況に対処するために、構成コードは部分メソッド内に生成され、これをクライアント プロキシ クラスで実装できます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-128">To remedy this situation the configuration code is generated within a partial method, which you can implement in your client proxy class.</span></span> <span data-ttu-id="dc0ab-129">部分メソッドは次のように宣言されています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-129">The partial method is declared as follows:</span></span>  
   
 ```csharp  
 static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,  
             System.ServiceModel.Description.ClientCredentials clientCredentials);  
 ```  
   
- <span data-ttu-id="1b281-130">その後、この部分メソッドを実装し、次のように、クライアント プロキシ クラスのバインドまたはエンドポイントを変更できます。</span><span class="sxs-lookup"><span data-stu-id="1b281-130">You can then implement this partial method and change the binding or endpoint in your client proxy class as follows:</span></span>  
+ <span data-ttu-id="dc0ab-130">その後、この部分メソッドを実装し、次のように、クライアント プロキシ クラスのバインドまたはエンドポイントを変更できます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-130">You can then implement this partial method and change the binding or endpoint in your client proxy class as follows:</span></span>  
   
 ```csharp  
 public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfClient.ServiceRefMultiEndpt.IService1>, MetroWcfClient.ServiceRefMultiEndpt.IService1  
@@ -94,21 +94,21 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
     }  
 ```  
   
-### <a name="serialization"></a><span data-ttu-id="1b281-131">シリアル化</span><span class="sxs-lookup"><span data-stu-id="1b281-131">Serialization</span></span>  
- <span data-ttu-id="1b281-132">Windows ストア アプリケーションでは、次のシリアライザーがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-132">The following serializers are supported in Windows Store applications:</span></span>  
+### <a name="serialization"></a><span data-ttu-id="dc0ab-131">シリアル化</span><span class="sxs-lookup"><span data-stu-id="dc0ab-131">Serialization</span></span>  
+ <span data-ttu-id="dc0ab-132">Windows ストア アプリケーションでは、次のシリアライザーがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-132">The following serializers are supported in Windows Store applications:</span></span>  
   
-1.  <span data-ttu-id="1b281-133">DataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="1b281-133">DataContractSerializer</span></span>  
+1.  <span data-ttu-id="dc0ab-133">DataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="dc0ab-133">DataContractSerializer</span></span>  
   
-2.  <span data-ttu-id="1b281-134">DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="1b281-134">DataContractJsonSerializer</span></span>  
+2.  <span data-ttu-id="dc0ab-134">DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="dc0ab-134">DataContractJsonSerializer</span></span>  
   
-3.  <span data-ttu-id="1b281-135">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="1b281-135">XmlSerializer</span></span>  
+3.  <span data-ttu-id="dc0ab-135">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="dc0ab-135">XmlSerializer</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="1b281-136">XmlDictionaryWriter.Write(DateTime) は、DateTime オブジェクトを文字列として出力するようになりました。</span><span class="sxs-lookup"><span data-stu-id="1b281-136">XmlDictionaryWriter.Write(DateTime) now writes the DateTime object as a string.</span></span>  
+>  <span data-ttu-id="dc0ab-136">XmlDictionaryWriter.Write(DateTime) は、DateTime オブジェクトを文字列として出力するようになりました。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-136">XmlDictionaryWriter.Write(DateTime) now writes the DateTime object as a string.</span></span>  
   
-### <a name="security"></a><span data-ttu-id="1b281-137">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="1b281-137">Security</span></span>  
+### <a name="security"></a><span data-ttu-id="dc0ab-137">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="dc0ab-137">Security</span></span>  
 
-<span data-ttu-id="1b281-138">Windows ストア アプリケーションでは、次のセキュリティ モードがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-138">The following security modes are supported in Windows Store applications:</span></span>
+<span data-ttu-id="dc0ab-138">Windows ストア アプリケーションでは、次のセキュリティ モードがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-138">The following security modes are supported in Windows Store applications:</span></span>
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,31 +118,31 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-<span data-ttu-id="1b281-139">Windows ストア アプリケーションでは、次のクライアント資格情報の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-139">The following client credential types are supported in Windows Store applications:</span></span>
+<span data-ttu-id="dc0ab-139">Windows ストア アプリケーションでは、次のクライアント資格情報の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-139">The following client credential types are supported in Windows Store applications:</span></span>
   
-1.  <span data-ttu-id="1b281-140">なし</span><span class="sxs-lookup"><span data-stu-id="1b281-140">None</span></span>  
+1.  <span data-ttu-id="dc0ab-140">なし</span><span class="sxs-lookup"><span data-stu-id="dc0ab-140">None</span></span>  
   
-2.  <span data-ttu-id="1b281-141">Basic</span><span class="sxs-lookup"><span data-stu-id="1b281-141">Basic</span></span>  
+2.  <span data-ttu-id="dc0ab-141">Basic</span><span class="sxs-lookup"><span data-stu-id="dc0ab-141">Basic</span></span>  
   
-3.  <span data-ttu-id="1b281-142">Digest</span><span class="sxs-lookup"><span data-stu-id="1b281-142">Digest</span></span>  
+3.  <span data-ttu-id="dc0ab-142">Digest</span><span class="sxs-lookup"><span data-stu-id="dc0ab-142">Digest</span></span>  
   
-4.  <span data-ttu-id="1b281-143">Negotiate</span><span class="sxs-lookup"><span data-stu-id="1b281-143">Negotiate</span></span>  
+4.  <span data-ttu-id="dc0ab-143">Negotiate</span><span class="sxs-lookup"><span data-stu-id="dc0ab-143">Negotiate</span></span>  
   
-5.  <span data-ttu-id="1b281-144">NTLM</span><span class="sxs-lookup"><span data-stu-id="1b281-144">NTLM</span></span>  
+5.  <span data-ttu-id="dc0ab-144">NTLM</span><span class="sxs-lookup"><span data-stu-id="dc0ab-144">NTLM</span></span>  
   
-6.  <span data-ttu-id="1b281-145">Windows</span><span class="sxs-lookup"><span data-stu-id="1b281-145">Windows</span></span>  
+6.  <span data-ttu-id="dc0ab-145">Windows</span><span class="sxs-lookup"><span data-stu-id="dc0ab-145">Windows</span></span>  
   
-7.  <span data-ttu-id="1b281-146">ユーザー名 (メッセージ セキュリティ)</span><span class="sxs-lookup"><span data-stu-id="1b281-146">Username (Message Security)</span></span>  
+7.  <span data-ttu-id="dc0ab-146">ユーザー名 (メッセージ セキュリティ)</span><span class="sxs-lookup"><span data-stu-id="dc0ab-146">Username (Message Security)</span></span>  
   
-8.  <span data-ttu-id="1b281-147">Windows (トランスポート セキュリティ)</span><span class="sxs-lookup"><span data-stu-id="1b281-147">Windows (Transport Security)</span></span>  
+8.  <span data-ttu-id="dc0ab-147">Windows (トランスポート セキュリティ)</span><span class="sxs-lookup"><span data-stu-id="dc0ab-147">Windows (Transport Security)</span></span>  
   
- <span data-ttu-id="1b281-148">Windows ストア アプリケーションから既定の Windows 資格情報にアクセスして送信するためには、Package.appmanifest ファイル内でこの機能を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b281-148">In order for Windows Store applications to access and send default Windows credentials, you must enable this functionality within the Package.appmanifest file.</span></span> <span data-ttu-id="1b281-149">このファイルを開くと、[機能] タブを選択し、「既定の Windows 資格情報」を選択します。</span><span class="sxs-lookup"><span data-stu-id="1b281-149">Open this file and select the Capabilities tab and select "Default Windows Credentials".</span></span> <span data-ttu-id="1b281-150">これにより、ドメイン資格情報を必要とするイントラネット リソースにアプリケーションが接続できるようになります。</span><span class="sxs-lookup"><span data-stu-id="1b281-150">This allows the application to connect to intranet resources that require domain credentials.</span></span>  
+ <span data-ttu-id="dc0ab-148">Windows ストア アプリケーションから既定の Windows 資格情報にアクセスして送信するためには、Package.appmanifest ファイル内でこの機能を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-148">In order for Windows Store applications to access and send default Windows credentials, you must enable this functionality within the Package.appmanifest file.</span></span> <span data-ttu-id="dc0ab-149">このファイルを開くと、[機能] タブを選択し、「既定の Windows 資格情報」を選択します。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-149">Open this file and select the Capabilities tab and select "Default Windows Credentials".</span></span> <span data-ttu-id="dc0ab-150">これにより、ドメイン資格情報を必要とするイントラネット リソースにアプリケーションが接続できるようになります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-150">This allows the application to connect to intranet resources that require domain credentials.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="1b281-151">Windows ストア アプリケーションをコンピューター間の呼び出しの順序では、「ホーム/社内ネットワーク」と呼ばれる別の機能を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b281-151">In order for Windows Store applications to make cross machine calls you must enable another capability called "Home/Work Networking".</span></span> <span data-ttu-id="1b281-152">この設定は、Package.appmanifest ファイル内の [機能] タブにもあります。[ホーム/社内ネットワーク] チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="1b281-152">This setting is also in the Package.appmanifest file under the Capabilities tab. Select the Home/Work Networking checkbox.</span></span> <span data-ttu-id="1b281-153">これで、アプリケーションは、自宅や職場など、ユーザーが信頼できる場所のネットワークに着信および発信アクセスできるようになります。</span><span class="sxs-lookup"><span data-stu-id="1b281-153">This gives your application inbound and outbound access to the networks of the user’s trusted places like home and work.</span></span> <span data-ttu-id="1b281-154">着信方向の重要なポートは常にブロックされます。</span><span class="sxs-lookup"><span data-stu-id="1b281-154">Inbound critical ports are always blocked.</span></span> <span data-ttu-id="1b281-155">また、インターネット上のサービスにアクセスするには、インターネット (クライアント) の機能も有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b281-155">For accessing services on the internet you must also enable Internet (Client) capability.</span></span>  
+>  <span data-ttu-id="dc0ab-151">Windows ストア アプリケーションをコンピューター間の呼び出しの順序では、「ホーム/社内ネットワーク」と呼ばれる別の機能を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-151">In order for Windows Store applications to make cross machine calls you must enable another capability called "Home/Work Networking".</span></span> <span data-ttu-id="dc0ab-152">この設定は、Package.appmanifest ファイル内の [機能] タブにもあります。[ホーム/社内ネットワーク] チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-152">This setting is also in the Package.appmanifest file under the Capabilities tab. Select the Home/Work Networking checkbox.</span></span> <span data-ttu-id="dc0ab-153">これで、アプリケーションは、自宅や職場など、ユーザーが信頼できる場所のネットワークに着信および発信アクセスできるようになります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-153">This gives your application inbound and outbound access to the networks of the user’s trusted places like home and work.</span></span> <span data-ttu-id="dc0ab-154">着信方向の重要なポートは常にブロックされます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-154">Inbound critical ports are always blocked.</span></span> <span data-ttu-id="dc0ab-155">また、インターネット上のサービスにアクセスするには、インターネット (クライアント) の機能も有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-155">For accessing services on the internet you must also enable Internet (Client) capability.</span></span>  
   
-### <a name="misc"></a><span data-ttu-id="1b281-156">[その他]</span><span class="sxs-lookup"><span data-stu-id="1b281-156">Misc</span></span>  
- <span data-ttu-id="1b281-157">Windows ストア アプリケーションでは、次のクラスの使用がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1b281-157">The use of the following classes is supported for Windows Store Applications:</span></span>  
+### <a name="misc"></a><span data-ttu-id="dc0ab-156">[その他]</span><span class="sxs-lookup"><span data-stu-id="dc0ab-156">Misc</span></span>  
+ <span data-ttu-id="dc0ab-157">Windows ストア アプリケーションでは、次のクラスの使用がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-157">The use of the following classes is supported for Windows Store Applications:</span></span>  
   
 1.  <xref:System.ServiceModel.ChannelFactory>  
   
@@ -150,14 +150,14 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
-### <a name="defining-service-contracts"></a><span data-ttu-id="1b281-158">サービス コントラクトの定義</span><span class="sxs-lookup"><span data-stu-id="1b281-158">Defining Service Contracts</span></span>  
- <span data-ttu-id="1b281-159">非同期サービス操作の定義には、タスク ベースの非同期パターンのみを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="1b281-159">We recommend only defining asynchronous service operations using the task-based async pattern.</span></span> <span data-ttu-id="1b281-160">これにより、サービス操作の呼び出し中も、Windows ストア アプリケーションの応答が維持されます。</span><span class="sxs-lookup"><span data-stu-id="1b281-160">This ensures Windows Store applications remain responsive while calling a service operation.</span></span>  
+### <a name="defining-service-contracts"></a><span data-ttu-id="dc0ab-158">サービス コントラクトの定義</span><span class="sxs-lookup"><span data-stu-id="dc0ab-158">Defining Service Contracts</span></span>  
+ <span data-ttu-id="dc0ab-159">非同期サービス操作の定義には、タスク ベースの非同期パターンのみを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-159">We recommend only defining asynchronous service operations using the task-based async pattern.</span></span> <span data-ttu-id="dc0ab-160">これにより、サービス操作の呼び出し中も、Windows ストア アプリケーションの応答が維持されます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-160">This ensures Windows Store applications remain responsive while calling a service operation.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="1b281-161">同期操作を定義した場合でも例外はスローされませんが、非同期操作のみを定義することを強くお勧めします。</span><span class="sxs-lookup"><span data-stu-id="1b281-161">While no exception will be thrown if you define a synchronous operation, it is strongly recommended to only define asynchronous operations.</span></span>  
+>  <span data-ttu-id="dc0ab-161">同期操作を定義した場合でも例外はスローされませんが、非同期操作のみを定義することを強くお勧めします。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-161">While no exception will be thrown if you define a synchronous operation, it is strongly recommended to only define asynchronous operations.</span></span>  
   
-### <a name="calling-wcf-services-from-windows-store-applications"></a><span data-ttu-id="1b281-162">Windows ストア アプリケーションからの WCF サービスの呼び出し</span><span class="sxs-lookup"><span data-stu-id="1b281-162">Calling WCF Services from Windows Store Applications</span></span>  
- <span data-ttu-id="1b281-163">既に説明したように、すべての構成は、生成されたプロキシ クラスの GetBindingForEndpoint メソッドのコード内で行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b281-163">As mentioned before all configuration must be done in code in the GetBindingForEndpoint method in the generated proxy class.</span></span> <span data-ttu-id="1b281-164">次のコードに示すように、サービス操作の呼び出しは、タスク ベースの非同期メソッドの呼び出しと同じように実行されます。</span><span class="sxs-lookup"><span data-stu-id="1b281-164">Calling a service operation is done the same as calling any task-based asynchronous method as shown in the following code snippet.</span></span>  
+### <a name="calling-wcf-services-from-windows-store-applications"></a><span data-ttu-id="dc0ab-162">Windows ストア アプリケーションからの WCF サービスの呼び出し</span><span class="sxs-lookup"><span data-stu-id="dc0ab-162">Calling WCF Services from Windows Store Applications</span></span>  
+ <span data-ttu-id="dc0ab-163">既に説明したように、すべての構成は、生成されたプロキシ クラスの GetBindingForEndpoint メソッドのコード内で行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-163">As mentioned before all configuration must be done in code in the GetBindingForEndpoint method in the generated proxy class.</span></span> <span data-ttu-id="dc0ab-164">次のコードに示すように、サービス操作の呼び出しは、タスク ベースの非同期メソッドの呼び出しと同じように実行されます。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-164">Calling a service operation is done the same as calling any task-based asynchronous method as shown in the following code snippet.</span></span>  
   
 ```csharp  
 void async SomeMethod()  
@@ -172,12 +172,12 @@ void async SomeMethod()
 }  
 ```  
   
- <span data-ttu-id="1b281-165">非同期呼び出しを行うメソッドでは async キーワード、非同期メソッドの呼び出し時には await キーワードが使用されていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="1b281-165">Notice the use of the async keyword on the method making the asynchronous call and the await keyword when calling the asynchronous method.</span></span>  
+ <span data-ttu-id="dc0ab-165">非同期呼び出しを行うメソッドでは async キーワード、非同期メソッドの呼び出し時には await キーワードが使用されていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="dc0ab-165">Notice the use of the async keyword on the method making the asynchronous call and the await keyword when calling the asynchronous method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b281-166">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b281-166">See Also</span></span>  
- [<span data-ttu-id="1b281-167">Windows ストア アプリ ブログの WCF</span><span class="sxs-lookup"><span data-stu-id="1b281-167">WCF in Windows Store Apps Blog</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
- [<span data-ttu-id="1b281-168">WCF Windows ストア クライアントおよびセキュリティ</span><span class="sxs-lookup"><span data-stu-id="1b281-168">WCF Windows Store Clients and Security</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
- [<span data-ttu-id="1b281-169">Windows ストア アプリとコンピューター間の呼び出し</span><span class="sxs-lookup"><span data-stu-id="1b281-169">Windows Store Apps and Cross Machine Calls</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [<span data-ttu-id="1b281-170">Windows ストア アプリから Azure にデプロイされた WCF サービスの呼び出し</span><span class="sxs-lookup"><span data-stu-id="1b281-170">Calling a WCF Service Deployed in Azure from a Windows Store App</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [<span data-ttu-id="1b281-171">WCF セキュリティのプログラミング</span><span class="sxs-lookup"><span data-stu-id="1b281-171">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [<span data-ttu-id="1b281-172">バインディング</span><span class="sxs-lookup"><span data-stu-id="1b281-172">Bindings</span></span>](../../../../docs/framework/wcf/bindings.md)
+## <a name="see-also"></a><span data-ttu-id="dc0ab-166">関連項目</span><span class="sxs-lookup"><span data-stu-id="dc0ab-166">See also</span></span>
+- [<span data-ttu-id="dc0ab-167">Windows ストア アプリ ブログの WCF</span><span class="sxs-lookup"><span data-stu-id="dc0ab-167">WCF in Windows Store Apps Blog</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [<span data-ttu-id="dc0ab-168">WCF Windows ストア クライアントおよびセキュリティ</span><span class="sxs-lookup"><span data-stu-id="dc0ab-168">WCF Windows Store Clients and Security</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [<span data-ttu-id="dc0ab-169">Windows ストア アプリとコンピューター間の呼び出し</span><span class="sxs-lookup"><span data-stu-id="dc0ab-169">Windows Store Apps and Cross Machine Calls</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [<span data-ttu-id="dc0ab-170">Windows ストア アプリから Azure にデプロイされた WCF サービスの呼び出し</span><span class="sxs-lookup"><span data-stu-id="dc0ab-170">Calling a WCF Service Deployed in Azure from a Windows Store App</span></span>](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [<span data-ttu-id="dc0ab-171">WCF セキュリティのプログラミング</span><span class="sxs-lookup"><span data-stu-id="dc0ab-171">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [<span data-ttu-id="dc0ab-172">バインディング</span><span class="sxs-lookup"><span data-stu-id="dc0ab-172">Bindings</span></span>](../../../../docs/framework/wcf/bindings.md)
