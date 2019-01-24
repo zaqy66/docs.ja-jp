@@ -1,5 +1,5 @@
 ---
-title: '方法 : OvalShape コントロールおよび RectangleShape コントロールを使用して図形を描画する (Visual Studio)'
+title: '方法: OvalShape コントロールおよび RectangleShape コントロール (Visual Studio) を使用して図形を描画します。'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe937236332591f6065e618c49ca5cf2c54b987c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701223"
 ---
-# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>方法 : OvalShape コントロールおよび RectangleShape コントロールを使用して図形を描画する (Visual Studio)
+# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>方法: OvalShape コントロールおよび RectangleShape コントロール (Visual Studio) を使用して図形を描画します。
 デザイン時にも実行時にも、<xref:Microsoft.VisualBasic.PowerPacks.OvalShape> コントロールを使用して、フォームまたはコンテナーに円または楕円を描画できます。 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> コントロールを使用して、フォームまたはコンテナーに正方形、長方形、または角の丸い四角形を描画できます。 デザイン時にも実行時にも、このコントロールを使用して、図形を描画することもできます。  
   
  境界線の幅、色、およびスタイルを変更することによって、図形の外観をカスタマイズできます。 図形の背景は、既定では透明になっていますが、純色、パターン、グラデーション塗りつぶし (ある色から別の色への遷移)、またはイメージが表示されるようにカスタマイズできます。  
   
 ### <a name="to-draw-a-simple-shape-at-design-time"></a>デザイン時に単純な図形を描画するには  
   
-1.  ドラッグ、<xref:Microsoft.VisualBasic.PowerPacks.OvalShape>または<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>から制御、 **Visual Basic PowerPacks**  タブ (をインストールするを参照してください[Visual Basic Power Packs コントロール](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) で、**ツールボックス**。フォームまたはコンテナーのコントロールです。  
+1.  ドラッグ、<xref:Microsoft.VisualBasic.PowerPacks.OvalShape>または<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>コントロールから、 **Visual Basic powerpacks**  タブ (をインストールするを参照してください[Visual Basic Power Packs コントロール](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) で、**ツールボックス**。フォームまたはコンテナー コントロール。  
   
 2.  サイズ変更ハンドルおよび移動ハンドルをドラッグして、図形のサイズと位置を設定します。  
   
-     ことができますものサイズし、位置の図形を変更して、`Size`と`Position`プロパティで、**プロパティ**ウィンドウです。  
+     サイズを変更し、変更することで、図形を配置することもできます、`Size`と`Position`プロパティで、**プロパティ**ウィンドウ。  
   
-     角が丸い四角形を作成するには、選択、`CornerRadius`プロパティに、**プロパティ**ウィンドウが 0 より大きい値に設定します。  
+     角の丸い四角形を作成するには、選択、`CornerRadius`プロパティ、**プロパティ**ウィンドウが 0 より大きい値に設定します。  
   
-3.  **プロパティ**ウィンドウで、必要に応じて追加するプロパティを設定、図形の外観を変更します。  
+3.  **プロパティ**ウィンドウで、必要に応じて追加プロパティの設定、図形の外観を変更します。  
   
 ### <a name="to-draw-a-simple-shape-at-run-time"></a>実行時に単純な図形を描画するには  
   
 1.  **[プロジェクト]** メニューの **[参照の追加]** をクリックします。  
   
-2.  **参照の追加**ダイアログ ボックスで、 **[microsoft.visualbasic.powerpacks.vs]**、順にクリック**OK**です。  
+2.  **参照の追加**ダイアログ ボックスで、 **[microsoft.visualbasic.powerpacks.vs]**、順にクリックします**OK**します。  
   
 3.  **コード エディター**、追加、`Imports`または`using`モジュールの上部にあるステートメント。  
   
@@ -71,9 +71,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-custom-border"></a>飾り枠を持つ円を描画するには  
   
-1.  ドラッグ、`OvalShape`から制御、 **Visual Basic PowerPacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
+1.  ドラッグ、`OvalShape`コントロールから、 **Visual Basic powerpacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
   
-2.  **プロパティ**ウィンドウで、`Size`プロパティ、`Height`と`Width`に同じ値をします。  
+2.  **プロパティ**ウィンドウで、`Size`プロパティを設定`Height`と`Width`を等しい値です。  
   
 3.  `BorderColor` プロパティを任意の色に設定します。  
   
@@ -83,9 +83,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-solid-fill"></a>純色の塗りつぶしを持つ円を描画するには  
   
-1.  ドラッグ、`OvalShape`から制御、 **Visual Basic PowerPacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
+1.  ドラッグ、`OvalShape`コントロールから、 **Visual Basic powerpacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
   
-2.  **プロパティ**ウィンドウで、`Size`プロパティ、`Height`と`Width`に同じ値をします。  
+2.  **プロパティ**ウィンドウで、`Size`プロパティを設定`Height`と`Width`を等しい値です。  
   
 3.  `BackColor` プロパティを任意の色に設定します。  
   
@@ -93,9 +93,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-patterned-fill"></a>塗りつぶしパターンを持つ円を描画するには  
   
-1.  ドラッグ、`OvalShape`から制御、 **Visual Basic PowerPacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
+1.  ドラッグ、`OvalShape`コントロールから、 **Visual Basic powerpacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
   
-2.  **プロパティ**ウィンドウで、`Size`プロパティ、`Height`と`Width`に同じ値をします。  
+2.  **プロパティ**ウィンドウで、`Size`プロパティを設定`Height`と`Width`を等しい値です。  
   
 3.  `BackColor` プロパティを任意の背景色に設定します。  
   
@@ -107,9 +107,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-gradient-fill"></a>グラデーション塗りつぶしを持つ円を描画するには  
   
-1.  ドラッグ、`OvalShape`から制御、 **Visual Basic PowerPacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
+1.  ドラッグ、`OvalShape`コントロールから、 **Visual Basic powerpacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
   
-2.  **プロパティ**ウィンドウで、`Size`プロパティ、`Height`と`Width`に同じ値をします。  
+2.  **プロパティ**ウィンドウで、`Size`プロパティを設定`Height`と`Width`を等しい値です。  
   
 3.  `FillColor` プロパティを任意の開始色に設定します。  
   
@@ -119,18 +119,18 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-is-filled-with-an-image"></a>イメージで塗りつぶされる円を描画するには  
   
-1.  ドラッグ、`OvalShape`から制御、 **Visual Basic PowerPacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
+1.  ドラッグ、`OvalShape`コントロールから、 **Visual Basic powerpacks**  タブで、**ツールボックス**フォームまたはコンテナー コントロールにします。  
   
-2.  **プロパティ**ウィンドウで、`Size`プロパティ、`Height`と`Width`に同じ値をします。  
+2.  **プロパティ**ウィンドウで、`Size`プロパティを設定`Height`と`Width`を等しい値です。  
   
-3.  選択、`BackgroundImage`プロパティをクリックして、**省略記号**(...) ボタンをクリックします。  
+3.  選択、`BackgroundImage`プロパティをクリックして、**省略記号**ボタン ([...])。  
   
-4.  **[リソースの**] ダイアログ ボックスを表示するイメージを選択します。 イメージ リソースが表示されない場合は、クリックして**インポート**イメージの場所を参照します。  
+4.  **リソースの選択** ダイアログ ボックスで、表示するイメージを選択します。 イメージ リソースが表示されない場合は、クリックして**インポート**イメージの場所を参照します。  
   
-5.  をクリックして**OK**イメージを挿入します。  
+5.  クリックして**OK**イメージを挿入します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
- [ライン コントロールとシェイプ コントロールの概要](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- [方法: LineShape コントロールを使用して線を描画する](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>
+- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>
+- [ライン コントロールとシェイプ コントロールの概要](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+- [方法: LineShape コントロールを使用して線を描画します。](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)

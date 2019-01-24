@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679762"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。  
   
- その他の問題はで対処する[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)です。  
+ その他の問題が記載[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。  
   
 ## <a name="cannot-connect"></a>接続できない  
  Q. データベースに接続できません。  
   
- A:  接続文字列が正しいと、SQL Server インスタンスが実行されていることを確認してください。 また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、名前付きパイプ プロトコルを有効にする必要があります。 詳細については、次を参照してください。[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)です。  
+ A:  接続文字列が正しいことと、SQL Server インスタンスが実行されていることを確認してください。 また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、名前付きパイプ プロトコルを有効にする必要があります。 詳細については、次を参照してください。[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)します。  
   
 ## <a name="changes-to-database-lost"></a>データベースの変更内容が失われる  
  Q. データベース内のデータを変更しましたが、アプリケーションを再実行すると、変更が元に戻っています。  
   
  A:  変更結果をデータベースに保存するために、必ず <xref:System.Data.Linq.DataContext.SubmitChanges%2A> を呼び出してください。  
   
-## <a name="database-connection-open-how-long"></a>データベース接続: どれほどの時間開いているか  
+## <a name="database-connection-open-how-long"></a>データベース接続:どのくらいの期間を開きますか。  
  Q. データベース接続が開いている時間は、どれほどですか。  
   
  A:  通常、接続は、クエリ結果を処理するまでは開いた状態を保ちます。 すべての結果を処理するのに時間がかかる可能性がある場合、結果をキャッシュに入れることが可能であれば、クエリに対して <xref:System.Linq.Enumerable.ToList%2A> を適用してください。 通常のシナリオでは、各オブジェクトが一度だけ処理されるため、`DataReader` と [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のどちらの場合もストリーミング モデルがより優れています。  
@@ -50,7 +50,7 @@ ms.locfileid: "33365489"
 ## <a name="unexpected-query-results"></a>予期しないクエリ結果  
  Q. 予期しない結果がクエリから返されます。 どうなっているのか調べる方法はありますか。  
   
- A:  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、生成された SQL コードを調べるためのツールがいくつか用意されています。 このうち、最も重要なものは <xref:System.Data.Linq.DataContext.Log%2A> です。 詳細については、次を参照してください。[デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)です。  
+ A:  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、生成された SQL コードを調べるためのツールがいくつか用意されています。 このうち、最も重要なものは <xref:System.Data.Linq.DataContext.Log%2A> です。 詳細については、次を参照してください。[デバッグ サポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)します。  
   
 ## <a name="unexpected-stored-procedure-results"></a>予期しないストアド プロシージャ結果  
  Q. 戻り値が `MAX()` によって計算されるストアド プロシージャがあります。 このストアド プロシージャを [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] サーフェイスにドラッグすると、戻り値が正しくありません。  
@@ -97,10 +97,10 @@ ms.locfileid: "33365489"
   
  `end`  
   
- 詳細については、次を参照してください。[のカスタマイズの操作によってストアド プロシージャの使用](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)です。  
+ 詳細については、次を参照してください。[カスタマイズ操作ストアド プロシージャによる](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)します。  
   
 ## <a name="serialization-errors"></a>シリアル化のエラー  
- Q. シリアル化しようとすると、次のエラーを取得:"入力 'system.data.linq.changetracker+standardchangetracker' シリアル化可能としてマークされていません"。  
+ Q. シリアル化しようとすると、次のエラーが表示されます。"... の型 'system.data.linq.changetracker+standardchangetracker' シリアル化可能としてマークされていません"。  
   
  A:  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のコード生成では、<xref:System.Runtime.Serialization.DataContractSerializer> のシリアル化がサポートされます。 <xref:System.Xml.Serialization.XmlSerializer> および <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> はサポートされません。 詳細については、「[Serialization](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "33365489"
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>挿入または更新で、データベース生成値を明示的に設定しなくても良いようにする  
  Q. あるデータベース テーブルに `DateCreated` という列があり、その既定値は SQL `Getdate()` です。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用して新しいレコードを挿入しようとすると、値が `NULL` に設定されます。 データベースの既定値が設定されるようにするには、どうしたらいいですか。  
   
- A:  ID 列 (自動インクリメント)、rowguidcol 列 (データベースが生成した GUID)、およびタイムスタンプ列の場合は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が、このような状況に自動的に対処します。 それ以外の場合に手動で設定する<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`と<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>プロパティです。  
+ A:  ID 列 (自動インクリメント)、rowguidcol 列 (データベースが生成した GUID)、およびタイムスタンプ列の場合は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が、このような状況に自動的に対処します。 それ以外の場合は手動で設定する<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`と<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>プロパティ。  
   
 ## <a name="multiple-dataloadoptions"></a>複数の DataLoadOptions  
  Q. 最初の読み込みオプションを上書きせずに、追加の読み込みオプションを指定できますか?  
@@ -160,17 +160,17 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
 2.  部分クラスを追加します。 読み取り専用メンバー用のパラメーターを使ってコンストラクターを作成します。  
   
-3.  既定の <xref:System.Data.Linq.Mapping.UpdateCheck> 値 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) がアプリケーションにとって適切な値かどうかを検討します。  
+3.  既定の <xref:System.Data.Linq.Mapping.UpdateCheck> 値 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) がアプリケーションにとって適切な値かどうかをレビューします。  
   
     > [!CAUTION]
-    >  使用している場合、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio で、変更を上書きする可能性があります。  
+    >  使用する場合、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio で、変更を上書きする可能性があります。  
   
 ## <a name="aptca"></a>APTCA  
  Q. System.Data.Linq は、部分的に信頼されているコードが使用できるようにマークされていますか?  
   
  A:  はい。System.Data.Linq.dll アセンブリは、[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 属性でマークされている <xref:System.Security.AllowPartiallyTrustedCallersAttribute> アセンブリの 1 つです。 このマークがないと、[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] のアセンブリは完全に信頼されたコードによってのみ使用されます。  
   
- プリンシパルのシナリオでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]部分的に許可するには、呼び出し元が有効にするのには信頼されているため、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Web アプリケーションからアクセスするアセンブリを*信頼*構成は、[中] です。  
+ 主なシナリオでは[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]部分的に許可するには、呼び出し元が有効にするには信頼されているため、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]アセンブリに、Web アプリケーションからアクセスできる場所、*信頼*構成が Medium です。  
   
 ## <a name="mapping-data-from-multiple-tables"></a>複数のテーブルからのデータのマッピング  
  Q. エンティティに、複数のテーブルから取得されたデータが含まれています。 どのようにマップできますか?  
@@ -178,7 +178,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  A:  データベース内にビューを作成して、エンティティをそのビューにマップすることができます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、テーブル用と同じ SQL をビュー用に生成します。  
   
 > [!NOTE]
->  このシナリオでのビューの使用には、制限があります。 この手法は、<xref:System.Data.Linq.Table%601> に対して実行される操作が、基になるビューでサポートされるような場合に、最も安全に機能します。 どのような操作が意図されるかは、開発者だけが知っています。 たとえば、ほとんどのアプリケーションは読み取り専用、および他の多くを実行`Create` / `Update` / `Delete`操作のみを使用してビューに対してストアド プロシージャです。  
+>  このシナリオでのビューの使用には、制限があります。 この手法は、<xref:System.Data.Linq.Table%601> に対して実行される操作が、基になるビューでサポートされるような場合に、最も安全に機能します。 どのような操作が意図されるかは、開発者だけが知っています。 たとえば、ほとんどのアプリケーションは読み取り専用と他の多くを実行`Create` / `Update` / `Delete`のみを使用して操作には、ビューに対してプロシージャが格納されています。  
   
 ## <a name="connection-pooling"></a>接続プール  
  Q. <xref:System.Data.Linq.DataContext> プールに役立つコンストラクトはありますか?  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>2 番目の DataContext が更新されない  
  Q. データベース内の値を格納するために、<xref:System.Data.Linq.DataContext> の 1 つのインスタンスを使用しました。 しかし、同じデータベースに対する 2 番目の <xref:System.Data.Linq.DataContext> では、更新された値が反映されません。 2 番目の <xref:System.Data.Linq.DataContext> インスタンスは、キャッシュされた値を返すようです。  
   
- A:  この動作は意図されたものです。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、最初のインスタンスと同じインスタンス/値を返し続けます。 更新の際には、オプティミスティック同時実行が使用されます。 元のデータを使ってデータベースの現在の状態を検査し、実際に未変更であることをアサートします。 変更されている場合は競合が発生するため、アプリケーションでそれを解決する必要があります。 1 つのオプションとして、アプリケーションは、元の状態をデータベースの現在の状態にリセットして、更新を再試行できます。 詳細については、次を参照してください。[する方法: 変更の競合を管理](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)です。  
+ A:  この動作は意図されたものです。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、最初のインスタンスと同じインスタンス/値を返し続けます。 更新の際には、オプティミスティック同時実行が使用されます。 元のデータを使ってデータベースの現在の状態を検査し、実際に未変更であることをアサートします。 変更されている場合は競合が発生するため、アプリケーションでそれを解決する必要があります。 1 つのオプションとして、アプリケーションは、元の状態をデータベースの現在の状態にリセットして、更新を再試行できます。 詳細については、「[方法 :変更の競合を管理](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)します。  
   
  また、<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> を false に設定することもできます。この場合、キャッシュと変更追跡が無効になります。 その後は、クエリを実行するたびに最新の値を取得できます。  
   
@@ -199,7 +199,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A:  読み取り専用モードでは、変更を追跡するコンテキスト機能は無効です。  
   
-## <a name="see-also"></a>関連項目  
- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [LINQ to SQL におけるセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+## <a name="see-also"></a>関連項目
+- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
+- [LINQ to SQL におけるセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

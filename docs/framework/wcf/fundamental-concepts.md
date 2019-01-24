@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664021"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation の基本概念
 このドキュメントでは、Windows Communication Foundation (WCF) のアーキテクチャの概要を説明します。 ここでは、主要概念およびこれらの概念がどのように組み合わされているかについて説明します。 最も単純な WCF サービスとクライアントの作成に関するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)します。 WCF プログラミングについては、次を参照してください。[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。  
@@ -51,7 +51,7 @@ ms.locfileid: "53286560"
  message  
  独立したデータ単位は、本文やヘッダーなどの複数の部分で構成できます。  
   
- service  
+ サービス  
  1 つ以上のエンドポイントを公開する構造体です。各エンドポイントは、1 つ以上のサービス操作を公開します。  
   
  エンドポイント  
@@ -65,7 +65,7 @@ ms.locfileid: "53286560"
  インフラストラクチャ エンドポイント  
  サービス コントラクトに関連しないサービスで必要とされる機能または提供される機能を促進するために、インフラストラクチャによって公開されるエンドポイントです。 たとえば、サービスは、メタデータ情報を提供するインフラストラクチャ エンドポイントを持つ場合があります。  
   
- address  
+ アドレス  
  メッセージを受信する場所を指定します。 アドレスは、URI (Uniform Resource Identifier) として指定されます。 URI のスキーマ部分では、そのアドレスに到達するために使用するトランスポート機構 (HTTP、TCP など) を指定します。 URI の階層部分には一意の場所が含まれ、その形式はトランスポート機構によって異なります。  
   
  エンドポイント アドレスにより、サービスのエンドポイントごとに一意のエンドポイント アドレスを作成できます。また、一定の条件下では、エンドポイント間でアドレスを共有することもできます。 既定以外のポートで HTTPS プロトコルを使用するアドレスの例を次に示します。  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  WCF に実装された一連の Web サービス (WS) 仕様 (WS-Security や WS-ReliableMessaging など) の略称です。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation のアーキテクチャ](../../../docs/framework/wcf/architecture.md)  
- [セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>関連項目
+- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation のアーキテクチャ](../../../docs/framework/wcf/architecture.md)
+- [セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

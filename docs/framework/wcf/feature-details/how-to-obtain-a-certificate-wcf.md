@@ -1,17 +1,17 @@
 ---
-title: '方法 : 証明書 (WCF) を取得する'
+title: '方法: (WCF) 証明書を取得します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 664eb62997123ea248b0b69700b86bf794646d4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cefea47d77fef9a59234584b02b03dca4cd99ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709443"
 ---
-# <a name="how-to-obtain-a-certificate-wcf"></a>方法 : 証明書 (WCF) を取得する
+# <a name="how-to-obtain-a-certificate-wcf"></a>方法: (WCF) 証明書を取得します。
 Windows Communication Foundation (WCF) のいずれかを使用するには、その機能を使用して、X.509 証明書の最初に証明書を取得します。  
   
 ### <a name="to-obtain-an-x509-certificate"></a>X.509 証明書を取得するには  
@@ -27,6 +27,6 @@ Windows Communication Foundation (WCF) のいずれかを使用するには、�
     > [!NOTE]
     >  どの方法を使用する場合でも、X.509 証明書を含む SOAP 要求の受信者は、その X.509 証明書を信頼する必要があります。 つまり、証明書チェーン内の X.509 証明書または発行者は、信頼されたユーザーの証明書ストア内に存在し、また X.509 証明書は信頼されない証明書ストア内には存在しないということを意味します。  
   
-## <a name="see-also"></a>関連項目  
- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [方法 : 開発中に使用する一時的な証明書を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+## <a name="see-also"></a>関連項目
+- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [方法: 開発中に使用するための一時的な証明書を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

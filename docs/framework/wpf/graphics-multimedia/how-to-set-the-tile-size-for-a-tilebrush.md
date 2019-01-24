@@ -1,18 +1,18 @@
 ---
-title: '方法 : TileBrush のタイル サイズを設定する'
+title: '方法: TileBrush のタイル サイズを設定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: e1ba1a25281ffdd1cc00e0bed0efe4f8508780be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4bfc14693f1714206e89ec50128ad62dd239dbee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713565"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>方法 : TileBrush のタイル サイズを設定する
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>方法: TileBrush のタイル サイズを設定する
 この例のタイル サイズを設定する方法を示しています、<xref:System.Windows.Media.TileBrush>します。 既定で、<xref:System.Windows.Media.TileBrush>描画している領域を完全に塗りつぶす 1 つのタイルを生成します。 この動作をオーバーライドするには、設定、<xref:System.Windows.Media.TileBrush.Viewport%2A>と<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>プロパティ。  
   
  <xref:System.Windows.Media.TileBrush.Viewport%2A>プロパティのタイル サイズを指定します、<xref:System.Windows.Media.TileBrush>します。 既定の値で、<xref:System.Windows.Media.TileBrush.Viewport%2A>プロパティは、塗りつぶされる領域のサイズを基準とします。 させる、<xref:System.Windows.Media.TileBrush.Viewport%2A>プロパティを絶対タイル サイズを指定する設定、<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>プロパティを<xref:System.Windows.Media.BrushMappingMode.Absolute>します。  
@@ -38,7 +38,7 @@ ms.locfileid: "43467836"
   
  この例では、<xref:System.Windows.Media.ImageBrush>クラス、<xref:System.Windows.Media.TileBrush.Viewport%2A>と<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>プロパティの他の動作は同じ<xref:System.Windows.Media.TileBrush>オブジェクト、つまりの<xref:System.Windows.Media.DrawingBrush>と<xref:System.Windows.Media.VisualBrush>します。 詳細については<xref:System.Windows.Media.ImageBrush>およびその他、 <xref:System.Windows.Media.TileBrush> 、オブジェクトを参照してください[イメージ、描画、およびビジュアル](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.TileBrush>  
- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush を使用してさまざまなタイル パターンを作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.TileBrush>
+- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [TileBrush を使用してさまざまなタイル パターンを作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

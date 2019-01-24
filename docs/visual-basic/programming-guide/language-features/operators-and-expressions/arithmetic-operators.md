@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: cd66d08eba973a796472fcbd40a6a84edbbb62ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730738"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic における算術演算子
 算術演算子を使用して、多くのリテラル、変数、その他の式、関数とプロパティの呼び出し、および定数によって表される数値の計算に関連する一般的な算術演算を実行します。 算術演算子にも分類は、ビット シフト演算子のオペランドのビットごとのレベルで動作し、ビット パターンを左または右にシフトです。  
@@ -61,7 +61,7 @@ ms.locfileid: "43499264"
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
- キャッチしたときに、<xref:System.DivideByZeroException>例外、それを処理するためのメンバーを使用することができます。 たとえば、<xref:System.Exception.Message%2A>プロパティは、例外のメッセージ テキストを保持します。 詳しくは、「[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
+ キャッチしたときに、<xref:System.DivideByZeroException>例外、それを処理するためのメンバーを使用することができます。 たとえば、<xref:System.Exception.Message%2A>プロパティは、例外のメッセージ テキストを保持します。 詳細については、[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
   
 ## <a name="bit-shift-operations"></a>ビット シフト操作  
  ビット シフト操作では、ビット パターン上で算術シフトを実行します。 パターンは、左側のオペランドで含まれているし、右側のオペランドがパターンをシフトする位置の数を指定します。 右側に、パターンを切り替えることができる、 [>> 演算子](../../../../visual-basic/language-reference/operators/right-shift-operator.md)または左側に、 [<< 演算子](../../../../visual-basic/language-reference/operators/left-shift-operator.md)します。  
@@ -94,10 +94,10 @@ ms.locfileid: "43499264"
   
  設定した場合`Option Strict Off`、ただし、Visual Basic を実行する暗黙的な縮小変換のデータまたは精度の予期しない損失が発生する可能性が。 このため、私たちにを使用することお勧め`Option Strict On`運用環境のコードを記述する場合。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [算術演算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [ビット シフト演算子](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
- [Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Visual Basic の連結演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
- [Visual Basic での論理とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [演算子の効率のよい組み合わせ](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a>関連項目
+- [算術演算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [ビット シフト演算子](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
+- [Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic の連結演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic での論理とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [演算子の効率のよい組み合わせ](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

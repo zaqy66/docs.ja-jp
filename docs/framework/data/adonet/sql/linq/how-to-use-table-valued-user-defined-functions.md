@@ -1,18 +1,18 @@
 ---
-title: '方法 : テーブル値のユーザー定義関数を使用する'
+title: '方法: テーブル値ユーザー定義関数を使用して、'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: e0199bb0a783f54931885053681c48d288012404
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03ed780cfba006f43f957dadf449cb4a369cbc96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661634"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>方法 : テーブル値のユーザー定義関数を使用する
+# <a name="how-to-use-table-valued-user-defined-functions"></a>方法: テーブル値ユーザー定義関数を使用して、
 テーブル値関数は、単一の行セットを返します (複数の結果形状を返すことができるストアド プロシージャとは異なります)。 テーブル値関数の戻り値の型は `Table` であるため、テーブルを使用できる SQL の任意の場所でテーブル値関数を使用できます。 テーブル値関数をテーブルのように扱うこともできます。  
   
 ## <a name="example"></a>例  
@@ -47,5 +47,5 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
  [!code-csharp[DLinqUDFS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#2)]
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [ユーザー定義関数](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a>関連項目
+- [ユーザー定義関数](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

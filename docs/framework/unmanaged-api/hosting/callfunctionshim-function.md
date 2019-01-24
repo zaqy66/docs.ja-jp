@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738931"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 関数
 指定したライブラリ内の関数を、名前とパラメーターを指定して呼び出します。  
@@ -46,29 +46,28 @@ HRESULT CallFunctionShim (
  [in]関数を含むライブラリの名前。  
   
  `szFunctionName`  
- [in]関数の名前です。  
+ [in]関数の名前。  
   
  `lpvArgument1`  
- [in]関数に渡す 1 番目の引数。  
+ [in]関数に渡す最初の引数。  
   
  `lpvArgument2`  
  [in]関数に渡す 2 番目の引数。  
   
  `szVersion`  
- [in]関数が含まれているライブラリのバージョン。  
+ [in]関数を含むライブラリのバージョン。  
   
  `pvReserved`  
  [in]将来使用するために予約されています。 このパラメーターに 0 を渡します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

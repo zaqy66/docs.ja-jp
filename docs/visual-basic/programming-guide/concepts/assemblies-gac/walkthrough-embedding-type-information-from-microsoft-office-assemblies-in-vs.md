@@ -1,15 +1,15 @@
 ---
-title: 'チュートリアル: Visual Studio (Visual Basic) で Microsoft Office アセンブリから型情報の埋め込み'
+title: 'チュートリアル: Visual Studio (Visual Basic) で Microsoft Office アセンブリから型情報を埋め込む'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5b94c190a77f6877c9a3d37f310aa527083a26a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722778"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) で Microsoft Office アセンブリから型情報の埋め込み
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) で Microsoft Office アセンブリから型情報を埋め込む
 COM オブジェクトを参照するアプリケーションに型情報を埋め込むと、プライマリ相互運用機能アセンブリ (PIA: Primary Interop Assembly) を使用する必要がなくなります。 また、埋め込み型情報を使用することで、バージョンに依存しないアプリケーションを作成できます。 つまり、複数のバージョンの COM ライブラリの型を使用するようにプログラムを記述でき、バージョンごとに固有の PIA が不要になります。 この方法は、Microsoft Office ライブラリのオブジェクトを使用するアプリケーション向けの一般的なシナリオです。 型情報を埋め込むと、プログラムの同じビルドで、異なるコンピューター上にある異なるバージョンの Microsoft Office と連携できます。Microsoft Office のバージョンごとにプログラムや PIA を再配置する必要はありません。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -95,7 +95,7 @@ COM オブジェクトを参照するアプリケーションに型情報を埋�
   
 8.  プロジェクトを保存します。  
   
-9. Ctrl キーを押しながら F5 キーを押して、プロジェクトをビルドおよび実行します。 プログラム例で指定した場所 (C:\SampleFolder\SampleWorkbook.xls) に Excel ブックが作成されていることを確認します。  
+9. Ctrl キーを押しながら F5 キーを押して、プロジェクトをビルドおよび実行します。 コード例では指定された場所に Excel ブックが作成されたことを確認します。C:\SampleFolder\SampleWorkbook.xls.  
   
 ##  <a name="BKMK_publishapp"></a> 別のバージョンの Microsoft Office がインストールされているコンピューターにアプリケーションを発行するには  
   
@@ -107,9 +107,9 @@ COM オブジェクトを参照するアプリケーションに型情報を埋�
   
 4.  インストールが完了したら、インストールしたプログラムを実行します。  
   
-5.  プログラム例で指定した場所 (C:\SampleFolder\SampleWorkbook.xls) に Excel ブックが作成されていることを確認します。  
+5.  サンプル コードで指定された場所に Excel ブックが作成されたことを確認します。C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: Visual Studio (Visual Basic) でのマネージ アセンブリから型の埋め込み](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [チュートリアル: Visual Studio (Visual Basic) でマネージ アセンブリから型を埋め込む](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
