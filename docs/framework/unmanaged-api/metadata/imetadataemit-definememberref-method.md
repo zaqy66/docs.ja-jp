@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 881c0b1f755e750efcc74ca61a60bbd97bc5dba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722830"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef メソッド
 現在のスコープ外にあるモジュールのメンバーへの参照を定義し、その参照定義トークンを取得します。  
@@ -41,7 +41,7 @@ HRESULT DefineMemberRef (
   
 #### <a name="parameters"></a>パラメーター  
  `tkImport`  
- [in]メンバーがグローバルでない場合、対象メンバーのクラスまたはインターフェイスのトークンメンバーが、グローバルの場合、`mdModuleRef`その他のファイルのトークン。  
+ [in]メンバーはグローバルです。 ない場合、ターゲット メンバーのクラスまたはインターフェイスのトークンメンバーが、グローバルな場合は、`mdModuleRef`その他のファイルのトークン。  
   
  `szName`  
  [in]対象メンバーの名前。  
@@ -50,20 +50,20 @@ HRESULT DefineMemberRef (
  [in]対象メンバーのシグネチャ。  
   
  `cbSigBlob`  
- [in]内のバイト数`pvSigBlob`です。  
+ [in]内のバイト数`pvSigBlob`します。  
   
  `pmr`  
- [out]`mdMemberRef`トークンが割り当てられます。  
+ [out]`mdMemberRef`に割り当てられたトークン。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

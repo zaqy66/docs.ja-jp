@@ -1,15 +1,15 @@
 ---
-title: '方法 : 信頼されたセッション内のメッセージを変換する'
+title: '方法: 信頼できるセッション内でメッセージを交換'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720055"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>方法 : 信頼されたセッション内のメッセージを変換する
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>方法: 信頼できるセッション内でメッセージを交換
 
 このトピックでは、信頼できるセッションを有効にするために必要な手順について説明します。ここでは、信頼できるセッションを (既定ではなく) オプションでサポートするシステム指定のバインディングを使用します。 命令型コードを使用して、信頼できるセッションを有効にするか、構成ファイルで宣言します。 この手順は、信頼できるセッションを有効にして、メッセージが送信された順序で到着したかを規定するために、クライアントとサービス構成ファイルを使用します。
 
@@ -67,7 +67,7 @@ ms.locfileid: "50195737"
 
 ## <a name="example"></a>例
 
-システム指定のバインディングの中には、信頼できるセッションを既定でサポートするものがあります。 次の設定があります。
+システム指定のバインディングの中には、信頼できるセッションを既定でサポートするものがあります。 不足している機能には次が含まれます。
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -75,8 +75,8 @@ ms.locfileid: "50195737"
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-信頼できるセッションをサポートするカスタム バインドを作成する方法の例は、次を参照してください。[方法: HTTPS でカスタムの信頼できるセッション バインドを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)します。
+信頼できるセッションをサポートするカスタム バインドを作成する方法の例は、次を参照してください。[方法。HTTPS で信頼できるセッションをカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[信頼できるセッション](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [信頼できるセッション](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

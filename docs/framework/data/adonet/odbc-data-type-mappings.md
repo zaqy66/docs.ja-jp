@@ -2,12 +2,12 @@
 title: ODBC データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: ece9397e8c8e8b9d26f8aac2298aa25173ac2d93
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f57ba69a03837805f168cf33a9b8060633a6330f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724227"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC データ型のマッピング
 .NET Framework Data Provider for ODBC ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) のデータ型から推論される <xref:System.Data.Odbc> の型を次の表に示します。 <xref:System.Data.Odbc.OdbcDataReader> の型指定されたアクセサー メソッドも示します。  
@@ -35,6 +35,6 @@ ms.locfileid: "44251535"
 |SQL_WLONGVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_WVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

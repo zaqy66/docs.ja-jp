@@ -1,15 +1,15 @@
 ---
-title: '方法 : WSDL コントラクトと共にサービス モニカーを使用する'
+title: '方法: WSDL コントラクトと共にサービス モニカーを使用します。'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726573"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>方法 : WSDL コントラクトと共にサービス モニカーを使用する
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>方法: WSDL コントラクトと共にサービス モニカーを使用します。
 完全に自己完結型である COM Interop クライアントの構築が必要になる場合があります。 呼び出そうとするサービスで MEX エンドポイントが公開されておらず、WCF クライアントの DLL が COM interop に登録されていないこともあります。 このような場合、サービスを記述した WSDL ファイルを作成し、そのファイルを WCF サービス モニカーに渡すことができます。 ここでは、WCF WSDL モニカーを使用して、WCF の入門サンプルを呼び出す方法を説明します。  
   
 ### <a name="using-the-wsdl-service-moniker"></a>WSDL サービス モニカーの使用  
@@ -56,6 +56,6 @@ ms.locfileid: "48266532"
   
 7.  Visual Basic アプリケーションを実行します。 メッセージ ボックスに、Subtract(145, 76.54) を呼び出した結果が表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [COM アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>関連項目
+- [はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [COM アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

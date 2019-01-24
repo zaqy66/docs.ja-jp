@@ -3,20 +3,20 @@ title: '&lt;customCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 51ca91de5c77727f5f5506118461d19354f12c14
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a3d032279d0b568d7072dbbe020344365c341c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724019"
 ---
 # <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
 カスタム クッキー ハンドラーの型を設定します。 この要素が存在するのみ場合、`mode`の属性、`<cookieHandler>`要素が"Custom"。 カスタム型から派生する必要があります、<xref:System.IdentityModel.Services.CookieHandler>クラス。  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<cookieHandler >  
-\<customCookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
+\<customCookieHandler>  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48836421"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|構成、<xref:System.IdentityModel.Services.CookieHandler>を<xref:System.IdentityModel.Services.SessionAuthenticationModule>読み取りと書き込みの cookie を使用します。|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|構成、<xref:System.IdentityModel.Services.CookieHandler>を<xref:System.IdentityModel.Services.SessionAuthenticationModule>読み取りと書き込みの cookie を使用します。|  
   
 ## <a name="remarks"></a>Remarks  
  設定して、カスタム クッキー ハンドラーを指定する場合、`mode`の属性、`<cookieHandler>`要素"Custom"を含めることによって、カスタム クッキー ハンドラーの種類を指定する必要があります、`<customCookieHandler>`クッキー ハンドラーの型を参照する子要素。 この要素にすることはできないときに指定された、`mode`属性が"Chunked"または"Default"に設定します。 カスタム クッキー ハンドラーはから派生する必要があります、<xref:System.IdentityModel.Services.CookieHandler>クラス。  
@@ -63,5 +63,5 @@ ms.locfileid: "48836421"
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Services.CookieHandler>
+## <a name="see-also"></a>関連項目
+- <xref:System.IdentityModel.Services.CookieHandler>

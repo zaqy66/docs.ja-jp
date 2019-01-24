@@ -1,24 +1,24 @@
 ---
-title: '方法 : WCF アクティブ化コンポーネントをインストールして設定する'
+title: '方法: インストールし、WCF アクティブ化コンポーネントの構成'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726898"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>方法 : WCF アクティブ化コンポーネントをインストールして設定する
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>方法: インストールし、WCF アクティブ化コンポーネントの構成
 このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明に[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP では通信しないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。 以降の各セクションで、この構成に関する手順について概説します。  
   
 -   インストール (またはのインストールの確認)、WCF のアクティブ化コンポーネント。  
   
 -   非 HTTP プロトコルをサポートようにする WAS を構成します。 次の手順では、TCP アクティベーション用に [!INCLUDE[wv](../../../../includes/wv-md.md)] を構成します。  
   
- インストールと構成を参照してください。 後[方法: WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)WAS を使用する非 HTTP エンドポイントを公開する WCF サービスを作成する手順についてはします。  
+ インストールと構成を参照してください。 後[方法。WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)WAS を使用する非 HTTP エンドポイントを公開する WCF サービスを作成する手順についてはします。  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>WCF 非 HTTP アクティブ化コンポーネントをインストールするには  
   
@@ -100,8 +100,8 @@ ms.locfileid: "47088335"
     > [!NOTE]
     >  このコマンドはテキスト 1 行です。  
   
-## <a name="see-also"></a>関連項目  
- [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [MSMQ アクティベーション](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [NamedPipe アクティベーション](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+- [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [MSMQ アクティベーション](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [NamedPipe アクティベーション](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

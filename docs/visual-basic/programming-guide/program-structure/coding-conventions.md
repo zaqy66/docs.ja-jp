@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2b1676ae959c5426af3021bbd340980115c5da6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724883"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic のコーディング規則
 Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。 同じコーディング規則に従うと、次のような利点があります。  
@@ -24,9 +24,9 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 -   コードが Visual Basic の "ベスト プラクティス" に従っていることを確認できます。  
   
-## <a name="naming-conventions"></a>名前付け規則  
+## <a name="naming-conventions"></a>命名規則  
   
--   名前付けのガイドラインについては、次を参照してください。[名前付けのガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピックです。  
+-   名前付けのガイドラインについては、次を参照してください。[の命名ガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピック。  
   
 -   "My" または "my" を変数名の一部として使用しないようにします。 `My` オブジェクトとの混同を招くからです。  
   
@@ -124,7 +124,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
  [!code-vb[VbVbalrGuidelines#15](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_12.vb)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>例外処理を使用する場合の Try...Catch/Using ステートメントの使用  
- `On Error Goto` は使用しないでください。  
+ `On Error Goto`は使用しないでください。  
   
 ### <a name="use-the-isnot-keyword"></a>IsNot キーワードの使用  
  `Not...Is Nothing` の代わりに `IsNot` キーワードを使用します。   
@@ -205,5 +205,5 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#34](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_26.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [安全なコーディングのガイドライン](../../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>関連項目
+- [安全なコーディングのガイドライン](../../../standard/security/secure-coding-guidelines.md)

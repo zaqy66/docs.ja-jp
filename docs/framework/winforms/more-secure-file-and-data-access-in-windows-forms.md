@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: d5a9b08188e346fdea5b155149dee1ef8368c2a0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679319"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows フォームにおけるファイルおよびデータへのより安全なアクセス
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、リソースとデータを保護できるアクセス許可を使用します。 アプリケーションでデータを読み取りまたは書き込みできる場所は、アプリケーションに付与されるアクセス許可に依存します。 部分信頼環境でアプリケーションを実行すると、データにアクセス許可がないか、またはデータにアクセスする方法を変更しなければならない可能性があります。  
@@ -358,10 +358,10 @@ public void Write()
   
  部分信頼の下のレジストリにアクセスすることはできないため、データを格納するその他のメソッドを検索する必要がある場合があります。 アプリケーション設定を保存する場合、レジストリの代わりに分離ストレージを使用します。 また、分離ストレージを使用して、その他のアプリケーション固有のファイルを格納することもできます。 既定では、アプリケーションの発生元のサイトへのアクセスがアプリケーションに付与されているため、サーバーまたは元のサイトに関するグローバルなアプリケーションの情報を格納することもできます。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォームでのより安全な印刷](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Windows フォームのセキュリティに関するその他の考慮事項](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- [Windows フォームのセキュリティの概要](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Windows フォームのセキュリティ](../../../docs/framework/winforms/windows-forms-security.md)  
- [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォームでのより安全な印刷](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+- [Windows フォームのセキュリティに関するその他の考慮事項](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
+- [Windows フォームのセキュリティの概要](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
+- [Windows フォームのセキュリティ](../../../docs/framework/winforms/windows-forms-security.md)
+- [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

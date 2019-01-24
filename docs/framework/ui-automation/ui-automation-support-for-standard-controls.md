@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9c5e4133a3bc1f019ada00299df929c2e3915880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726586"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI オートメーションによる標準コントロールのサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]、および [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]フレームワーク向けに開発されたアプリケーションの標準コントロールに対する [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] サポートについて説明します。  
   
@@ -169,5 +169,5 @@ ms.locfileid: "48037340"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+## <a name="see-also"></a>関連項目
+- [UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: f99735df2512fd4b1477bab9126e18f5afbbfa8c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: c02b6ea0895d8b22ac71d0cb3ea6950861de47df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678760"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML での埋め込み式 (Visual Basic)
 埋め込み式を使用すると、実行時に評価される式が含まれる XML リテラルを作成できます。 埋め込み式の構文は、 `<%=` `expression` `%>`で使用するための構文は同じ[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]します。  
@@ -80,10 +80,10 @@ ms.locfileid: "42932930"
 > [!NOTE]
 >  使用して XML 名前空間プレフィックスを宣言する場合、`xmlns`名前空間の属性、属性値に定数文字列を指定する必要があります。 この点を使用して、`xmlns`属性は使用と同様、 `Imports` XML 名前空間を宣言するステートメント。 埋め込み式を使用して、XML 名前空間の値を指定することはできません。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: beb7d5e6e1f934b89bb7516eb7e9bbbaad696238
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa0457cd44304084355f3882d9fc5c82b29c4827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725469"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF での Win32 コンテンツのホスト
 ## <a name="prerequisites"></a>必須コンポーネント  
- 参照してください[WPF および Win32 の相互運用](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)です。  
+ 参照してください[WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)します。  
   
-## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Windows Presentation Framework (HwndHost) 内の Win32 のチュートリアル  
- 再利用する[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内部コンテンツ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションに、 <xref:System.Windows.Interop.HwndHost>、Hwnd のようになりますコントロールは[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。  同様に<xref:System.Windows.Interop.HwndSource>、<xref:System.Windows.Interop.HwndHost>簡単に使用されます: から派生<xref:System.Windows.Interop.HwndHost>および実装`BuildWindowCore`と`DestroyWindowCore`メソッド、インスタンス化し、<xref:System.Windows.Interop.HwndHost>クラスを派生し、その内部に配置、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
+## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Windows Presentation Framework (HwndHost) 内で Win32 のチュートリアル  
+ 再利用する[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内のコンテンツ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションに、 <xref:System.Windows.Interop.HwndHost>、Hwnd のようになりますが、コントロールは[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。  ような<xref:System.Windows.Interop.HwndSource>、<xref:System.Windows.Interop.HwndHost>が簡単に使用する: から派生<xref:System.Windows.Interop.HwndHost>実装と`BuildWindowCore`と`DestroyWindowCore`メソッドのインスタンスを作成し、<xref:System.Windows.Interop.HwndHost>クラスを派生し、その内部に配置、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
   
- 場合、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ロジックは既に、コントロールとして、パッケージ化されて、`BuildWindowCore`実装がへの呼び出しよりも少し`CreateWindow`です。  たとえば、作成するため、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]の LISTBOX コントロール[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]:  
+ 場合、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ロジックがすでにをコントロールとしてパッケージ化された、`BuildWindowCore`実装はへの呼び出しよりも少し`CreateWindow`します。  たとえば、作成するため、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]の LISTBOX コントロール[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]:  
   
 ```  
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {  
@@ -43,9 +43,9 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }  
 ```  
   
- しますが、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]コードはそれほど自己完結型ではありませんか。 そのため、作成できる場合、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]  ダイアログ ボックスし、その内容より大規模なに埋め込む[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションです。  例は、これには[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]と[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]、これは、異なる言語でまたはコマンドラインで実行することもできます。  
+ しかし、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]コードでは自己完結型ではそれほど大きくありませんか? そのため、作成できる場合、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]  ダイアログ ボックスしより大きなにそのコンテンツを埋め込む[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  これでサンプルを示します[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]と[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]が、これは別の言語でまたはコマンドラインで実行することも、します。  
   
- コンパイルは、単純なダイアログを開始、 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]プロジェクト。  
+ 単純なダイアログ ボックスがコンパイルを開始、 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]プロジェクト。  
   
  次に、大きい方に、ダイアログの導入[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
   
@@ -53,18 +53,18 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
   
 -   コントロールに、ダイアログ ボックスを有効にします。  
   
--   派生クラスを定義する<xref:System.Windows.Interop.HwndHost>で`BuildWindowCore`と`DestroyWindowCore`メソッド  
+-   派生クラスを定義<xref:System.Windows.Interop.HwndHost>で`BuildWindowCore`と`DestroyWindowCore`メソッド  
   
 -   オーバーライド`TranslateAccelerator`ダイアログ キーを処理するメソッド  
   
--   オーバーライド`TabInto`タブ移動をサポートするためにメソッド  
+-   オーバーライド`TabInto`をタブ移動をサポートします。  
   
 -   オーバーライド`OnMnemonic`ニーモニックをサポートするためにメソッド  
   
--   インスタンスを作成、<xref:System.Windows.Interop.HwndHost>サブクラス化し、右下にある配置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素  
+-   インスタンスを作成、<xref:System.Windows.Interop.HwndHost>サブクラス化し、右下に置いてから[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素  
   
 ### <a name="turn-the-dialog-into-a-control"></a>コントロールに、ダイアログ ボックスを有効にします。  
- 子 WS_CHILD と DS_CONTROL スタイルを使用した HWND にダイアログ ボックスを有効にすることができます。  ダイアログ ボックスが定義されているリソース ファイル (.rc) に移動し、ダイアログ ボックスの定義の先頭を探します。  
+ WS_CHILD と DS_CONTROL スタイルを使用して HWND を子にダイアログ ボックスを有効にすることができます。  ダイアログ ボックスが定義されているリソース ファイル (.rc) に移動し、ダイアログ ボックスの定義の先頭を見つけます。  
   
 ```  
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121  
@@ -77,7 +77,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSM
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL  
 ```  
   
- このアクションはない完全にパッケージ化自己完結型のコントロールです。呼び出す必要がある`IsDialogMessage()`ように[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]、特定のメッセージを処理できますが、制御の変更は別の HWND 内のそれらのコントロールを作成する場合の簡単な方法を提供します。  
+ このアクションはいない完全にパッケージ化する自己完結型のコントロールです。呼び出す必要がある`IsDialogMessage()`ように[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]、特定のメッセージを処理することができますが、コントロールの変更はもう 1 つの HWND 内のそれらのコントロールを配置することの簡単な方法を提供します。  
   
 ## <a name="subclass-hwndhost"></a>サブクラス HwndHost  
  次の名前空間をインポートします。  
@@ -115,7 +115,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }  
 ```  
   
- ここで使用して、`CreateDialog`コントロールでは実際にダイアログ ボックスを作成します。  これは内部で呼び出される最初のメソッドの 1 つなので、 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]、いくつかの標準を行う必要があります[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]後で、定義する関数を呼び出して、初期化と呼ばれる`InitializeGlobals()`:  
+ ここで使用して、`CreateDialog`コントロールは、実際にダイアログ ボックスを作成します。  これは内部で呼び出される最初のメソッドのいずれかであるため、 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]、いくつかの標準を実行することも必要があります[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]後で、定義する関数を呼び出すことによって初期化と呼ばれる`InitializeGlobals()`:。  
   
 ```  
 bool initialized = false;  
@@ -133,8 +133,8 @@ bool initialized = false;
         MyRegisterClass(hInstance);  
 ```  
   
-### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a>ダイアログ キーを処理する TranslateAccelerator メソッドをオーバーライドします。  
- このサンプルを実行した場合が表示されたら、ダイアログのコントロールが表示されるが、すべて無視処理は、キーボードの機能 ダイアログ ボックスのダイアログ。  今すぐをオーバーライドする必要があります、`TranslateAccelerator`実装 (からは`IKeyboardInputSink`、インターフェイスを<xref:System.Windows.Interop.HwndHost>を実装)。  このメソッドは、アプリケーションは、WM_KEYDOWN、WM_SYSKEYDOWN が受信すると呼び出されます。  
+### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a>ダイアログ キーを処理するために TranslateAccelerator メソッドをオーバーライドします。  
+ このサンプルを実行した場合が表示されたら、ダイアログ コントロールがすべて無視処理は、キーボードの機能 ダイアログ ボックスのダイアログ。  今すぐをオーバーライドする必要があります、`TranslateAccelerator`実装 (に由来する`IKeyboardInputSink`、インターフェイスを<xref:System.Windows.Interop.HwndHost>実装)。  アプリケーションは、WM_KEYDOWN および WM_SYSKEYDOWN が受信すると、このメソッドが呼び出されます。  
   
 ```  
 #undef TranslateAccelerator  
@@ -187,15 +187,15 @@ bool initialized = false;
         }  
 ```  
   
- これは、いくつかのより詳細な説明が使用することが多くの 2 つのコードです。  最初に、コードを使用して、[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]と[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]マクロ; という名前のマクロは既にことに注意する必要があります`TranslateAccelerator`winuser.h で定義されています。  
+ これは、いくつかのより詳細な説明を使用できるようにするために、多くのコードを 1 つのピースです。  最初に、コードを使用して、[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]と[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]マクロ; という名前のマクロが既に存在するかどうかを注意する必要がある`TranslateAccelerator`winuser.h で定義されています。  
   
 ```  
 #define TranslateAccelerator  TranslateAcceleratorW  
 ```  
   
- 定義するように、`TranslateAccelerator`メソッドおよび not、`TranslateAcceleratorW`メソッドです。  
+ 定義するように、`TranslateAccelerator`メソッドおよび not を`TranslateAcceleratorW`メソッド。  
   
- 同様に、アンマネージ winuser.h MSG とマネージの両方がありますが`Microsoft::Win32::MSG`構造体。  使用して、2 つの間で区別できます、 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] `::`演算子。  
+ 同様に、アンマネージ winuser.h MSG とマネージの両方がありますは`Microsoft::Win32::MSG`構造体。  使用して、2 つを区別することができます、 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] `::`演算子。  
   
 ```  
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,   
@@ -204,7 +204,7 @@ virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
     ::MSG m = ConvertMessage(msg);  
 ```  
   
- メッセージの最大数がある、同じデータの両方がこのサンプルでは、明確な変換ルーチンを定義できるように、アンマネージの定義を使用すると便利です。  
+ 両方メッセージ数が、同じデータがあるが、このサンプルでは、明確な変換ルーチンを定義できるように、アンマネージの定義を使用すると便利です。  
   
 ```  
 ::MSG ConvertMessage(System::Windows::Interop::MSG% msg) {  
@@ -225,7 +225,7 @@ virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
 }  
 ```  
   
- 戻る`TranslateAccelerator`です。  基本的な原則は、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数`IsDialogMessage`をできるだけ多くの作業を行うには、`IsDialogMessage`以外のダイアログ ボックスにアクセスできません。 フォーカスを設定する必要があります過去のダイアログ ボックスの最後のコントロールのタブ移動時に、ダイアログの周囲のユーザー タブを実行すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を呼び出して部分`IKeyboardInputSite::OnNoMoreStops`です。  
+ 戻る`TranslateAccelerator`します。  基本的な原則は、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数`IsDialogMessage`、できるだけ多くの作業を行うが`IsDialogMessage`以外のダイアログ ボックスへのアクセスはありません。 過去のダイアログの最後のコントロールのタブ移動ときに、ダイアログの周囲のユーザー タブを実行すると、フォーカスを設定する必要があります、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呼び出して部分`IKeyboardInputSite::OnNoMoreStops`します。  
   
 ```  
 // Win32's IsDialogMessage() will handle most of the tabbing, but doesn't know   
@@ -247,7 +247,7 @@ if (m.message == WM_KEYDOWN && m.wParam == VK_TAB) {
 }  
 ```  
   
- 最後に、`IsDialogMessage` を呼び出します。  役割の 1 つが、`TranslateAccelerator`メソッドは、指示[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]かキーストロークを処理するかどうか。 入力イベントをトンネリングできます処理されなかった場合や、アプリケーションの残りの手順のバブルします。 キーボード メッセージ処理の特性や入力アーキテクチャでは、性質を公開するここでは、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]です。 残念ながら、`IsDialogMessage`返さない任意の方法で特定のキー入力を処理するかどうか。  さらが呼び出されます`DispatchMessage()`キーストローク処理しないでください。  リバース エンジニア リングする必要がように`IsDialogMessage`、知っているキーを処理するためにのみ呼び出します。  
+ 最後に、`IsDialogMessage` を呼び出します。  役割の 1 つが、`TranslateAccelerator`メソッドは、指示[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]かどうかにキーストロークを処理するかどうか。 入力イベントをトンネル処理しなかった場合や、アプリケーションの残りの部分からバブルです。 キーボード メッセージ処理の特性とでは、入力アーキテクチャの性質を公開するここでは、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]します。 残念ながら、`IsDialogMessage`返さない何らかの方法で特定のキーストロークを処理するかどうか。  呼び出す、さらに悪いこと`DispatchMessage()`キーストロークを処理しないでください。  リバース エンジニア リングする必要がありますように`IsDialogMessage`、しか知らないキーを処理するために呼び出すとします。  
   
 ```  
 // Only call IsDialogMessage for keys it will do something with.  
@@ -271,7 +271,7 @@ if (msg.message == WM_SYSKEYDOWN || msg.message == WM_KEYDOWN) {
 ```  
   
 ### <a name="override-tabinto-method-to-support-tabbing"></a>この問題のメソッドをオーバーライドしてサポートのタブ移動するには  
- 実装している`TranslateAccelerator`、ユーザーがダイアログ ボックス内の周囲タブできますボックスと、大きい値に外 タブ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションです。  ユーザーがダイアログ ボックスにタブことはできません。  オーバーライドすることを解決する`TabInto`:  
+ 実装している`TranslateAccelerator`、ユーザーは、周囲 タブ ダイアログ ボックス内でボックスと、大きい値にそのタブ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  ユーザーがダイアログ ボックスにタブことはできません。  オーバーライドしている問題を解決する`TabInto`:  
   
 ```  
 public:   
@@ -288,10 +288,10 @@ public:
     }  
 ```  
   
- `TraversalRequest`パラメーターするがかどうか タブの操作 タブまたは shift キーを押しタブです。  
+ `TraversalRequest`パラメーターは、タブのアクションは、タブまたは shift キーを押し タブかどうかを示します。  
   
 ### <a name="override-onmnemonic-method-to-support-mnemonics"></a>ニーモニックをサポートするために OnMnemonic メソッドをオーバーライドします。  
- キーボード処理がほぼ完了しましたが、1 つを使用する必要があるものが見つかりません-ニーモニックが機能しません。  ユーザーは、alt キーを押し F を押すと場合、フォーカス doe いないにジャンプ、"名:"ボックスを編集します。 そのため、オーバーライドする、`OnMnemonic`メソッド。  
+ キーボードの処理はほぼ完了が 1 つであることはありません – ニーモニックは機能しません。  フォーカス doe がジャンプしなく-f alt キーを押すと場合、"名:"ボックスを編集します。 そのため、オーバーライドして、`OnMnemonic`メソッド。  
   
 ```  
 virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifiers) override {  
@@ -321,10 +321,10 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 };  
 ```  
   
- なぜ`IsDialogMessage`ここですか?  これまでに通知できるようにする必要があります。 同じ問題がある[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コードもそうでない、キーストロークが処理されるかどうかをコードおよび`IsDialogMessage`を行うことはできません。  2 つ目の問題がある、ため`IsDialogMessage`対象を絞った HWND がダイアログ ボックスの内側にない場合、ニーモニックの処理を拒否します。  
+ なぜ`IsDialogMessage`ここか?  これまでに通知できるようにする必要があります。 同じ問題がある[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コードか、キーストロークが処理されるかどうかをコードと`IsDialogMessage`を行うことはできません。  2 つ目の問題があります、ため`IsDialogMessage` ダイアログ ボックス内でフォーカスがある HWND がない場合、ニーモニックの処理を拒否します。  
   
 ### <a name="instantiate-the-hwndhost-derived-class"></a>インスタンスを作成、HwndHost 派生クラス  
- 最後に、すべてのキーとタブのサポートは、配置では、これで配置できる、 <xref:System.Windows.Interop.HwndHost> 、大きい方に[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションです。  メイン アプリケーションが記述されている場合[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、適切な場所に配置する最も簡単な方法は、空のままにする<xref:System.Windows.Controls.Border>要素を配置する場所、<xref:System.Windows.Interop.HwndHost>です。  ここで、作成、<xref:System.Windows.Controls.Border>という`insertHwndHostHere`:  
+ 最後に、これですべてのキーとタブのサポートができたら、配置できること、<xref:System.Windows.Interop.HwndHost>うち、大きい方に[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  メイン アプリケーションが記述されている場合[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、適切な場所に配置する最も簡単な方法は、空のままにする、<xref:System.Windows.Controls.Border>要素を配置する、<xref:System.Windows.Interop.HwndHost>します。  ここで作成し、<xref:System.Windows.Controls.Border>という`insertHwndHostHere`:  
   
 ```  
 <Window x:Class="WPFApplication1.Window1"  
@@ -341,7 +341,7 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 </Window>  
 ```  
   
- インスタンスを作成するコード シーケンスで適切な場所を探しますにしてから、<xref:System.Windows.Interop.HwndHost>に接続するには<xref:System.Windows.Controls.Border>します。  この例では内に配置することのコンス トラクター、<xref:System.Windows.Window>クラスを派生します。  
+ 残っているはインスタンスを作成するコード シーケンスのことをお勧めを検索し、<xref:System.Windows.Interop.HwndHost>に接続し、<xref:System.Windows.Controls.Border>します。  この例では内に配置することのコンス トラクター、<xref:System.Windows.Window>クラスを派生します。  
   
 ```  
 public partial class Window1 : Window {  
@@ -355,9 +355,9 @@ public partial class Window1 : Window {
 }  
 ```  
   
- 提供します。  
+ 提示されます。  
   
  ![WPF アプリケーションのスクリーン ショット](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
   
-## <a name="see-also"></a>関連項目  
- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+## <a name="see-also"></a>関連項目
+- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

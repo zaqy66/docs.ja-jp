@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728071"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 このページには、組み込みデータ型の操作を実行するときに発生する一般的な問題が一覧表示されます。  
@@ -112,11 +112,11 @@ ms.locfileid: "48850375"
 ### <a name="meaningless-values"></a>意味のない値  
  一般に、`String`値他のデータ型では意味がなく、変換は非常に危険です。 可能な限り`String`の使用をそれらが設計されている文字シーケンスに制限する必要があります。 その他の種類に対応する値に依存するコードを書かないようにしてください。  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

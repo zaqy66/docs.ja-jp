@@ -1,5 +1,5 @@
 ---
-title: '方法 : アプリケーションをローカライズする'
+title: '方法: アプリケーションをローカライズする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725545"
 ---
-# <a name="how-to-localize-an-application"></a>方法 : アプリケーションをローカライズする
+# <a name="how-to-localize-an-application"></a>方法: アプリケーションをローカライズする
 このチュートリアルでは、LocBaml ツールを使用して、ローカライズされたアプリケーションを作成する方法について説明します。  
   
 > [!NOTE]
@@ -46,11 +46,11 @@ ms.locfileid: "48846280"
   
 3.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルに UID を追加します。 UID は、ファイルへの変更を追跡して、翻訳する必要がある項目を識別するために使用されます。 Uid をファイルに追加するには、実行**updateuid**プロジェクト ファイルで。  
   
-     **msbuild t: updateuid helloapp.csproj です**  
+     **msbuild -t:updateuid helloapp.csproj**  
   
      不足していないか、重複する Uid ことを確認するには、実行**checkuid**:  
   
-     **msbuild t: checkuid helloapp.csproj です**  
+     **msbuild -t:checkuid helloapp.csproj**  
   
      実行後**updateuid**ファイルに Uid を含める必要があります。 たとえば、HelloApp の Pane1.xaml ファイルに、以下の内容があるはずです。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48846280"
   
 4.  LocBaml を実行するときに指定できるオプションは、次のとおりです。  
   
-    -   **解析**または **-p:** Parses Baml、リソース、または[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)].csv または .txt ファイルを生成するファイル。  
+    -   **解析**または **-p:** 解析 Baml、リソース、または[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)].csv または .txt ファイルを生成するファイル。  
   
     -   **生成**または **-g:** 翻訳ファイルを使用して、ローカライズされたバイナリ ファイルを生成します。  
   
@@ -99,13 +99,13 @@ ms.locfileid: "48846280"
   
     -   **カルチャ**または **- cul** {*カルチャ*] **:** 出力アセンブリのロケール。  
   
-    -   **翻訳**または **- trans** {*translation.csv*] **:** 翻訳またはローカライズされたファイル。  
+    -   **translation** or **-trans** {*translation.csv*] **:** 翻訳またはローカライズされたファイルです。  
   
     -   **asmpath**または **- asmpath:** {*filedirectory*] **:** 場合、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]コードには、カスタム コントロールが含まれる、指定する必要があります、 **asmpath**カスタム コントロール アセンブリにします。  
   
     -   **nologo:** ロゴまたは著作権情報は表示されません。  
   
-    -   **verbose:** 詳細モードの情報が表示されます。  
+    -   **詳細。** 詳細モードの情報が表示されます。  
   
     > [!NOTE]
     >  入力の場合は、ツールを実行するときは、オプションの一覧を作成する必要があります、 **LocBaml.exe** ENTER キーを押します。  
@@ -169,7 +169,7 @@ ms.locfileid: "48846280"
   
 1.  新しい HelloApp.resources.dll ファイルを生成するには、次の構文を使用します。 カルチャを en-US (/cul:en-US) としてマークします。  
   
-     **LocBaml.exe HelloApp.resources.dll/trans:Hello.csv/out:c 生成/: \/cul:en-米国**  
+     **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
     >  入力ファイル Hello.csv が実行可能ファイル LocBaml.exe と同じディレクトリに存在しない場合は、いずれかのファイルを移動して、両方のファイルが同じディレクトリにあるようにします。  
@@ -209,6 +209,6 @@ ms.locfileid: "48846280"
 ## <a name="whats-next"></a>次の内容  
  これで、LocBaml ツールの使用方法に関する基本的な知識が得られました。  UID を含むファイルを作成できるようになりました。 LocBaml ツールを使用することで、ローカライズ可能なコンテンツを抽出するファイルを解析できます。コンテンツを翻訳すると、翻訳済みのコンテンツをマージする .resources.dll ファイルを生成できます。 このトピックには、可能性のあるすべての詳細情報は含まれていませんが、LocBaml を使用してアプリケーションをローカライズするために必要な知識は得られました。  
   
-## <a name="see-also"></a>関連項目  
- [WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [自動レイアウトの使用の概要](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a>関連項目
+- [WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [自動レイアウトの使用の概要](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

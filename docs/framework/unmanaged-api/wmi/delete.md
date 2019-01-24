@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720575"
 ---
 # <a name="delete-function"></a>関数を削除します。
 CIM クラスの定義から、指定したプロパティとその修飾子のすべてを削除します。
@@ -69,12 +69,12 @@ HRESULT Delete (
 
 この関数の呼び出しをラップする、 [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete)メソッド。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

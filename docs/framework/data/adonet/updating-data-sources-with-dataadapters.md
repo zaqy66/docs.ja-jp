@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: b8e082b98870a59e8fb6f42fa7bedb86c2832d33
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6989204fac64fc18cae547e272f6d52004c3af69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728831"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>DataAdapter によるデータ ソースの更新
 `Update` の <xref:System.Data.Common.DataAdapter> メソッドを呼び出して、変更を <xref:System.Data.DataSet> からデータ ソースに反映します。 `Update` メソッドは、`Fill` メソッドと同様に、引数として `DataSet` のインスタンスおよびオプションの <xref:System.Data.DataTable> オブジェクトまたは `DataTable` 名を受け取ります。 `DataSet` のインスタンスは、行われた変更点を格納する `DataSet` です。`DataTable` は、変更点の取得元のテーブルです。 `DataTable` を指定しなかった場合、`DataTable` 内の最初の `DataSet` が使用されます。  
@@ -368,10 +368,10 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [行の状態とバージョン](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [AcceptChange と RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
- [DataSet の内容のマージ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
- [ID 値および Autonumber 値の取得](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [行の状態とバージョン](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChange と RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [DataSet の内容のマージ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [ID 値および Autonumber 値の取得](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

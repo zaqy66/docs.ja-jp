@@ -2,12 +2,12 @@
 title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c6b3f059f1a1b11825b595346ed47f6a498078f1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721296"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
 このサンプルでは、配信できなかったメッセージの処理方法を示します。 基にして、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -26,11 +26,11 @@ ms.locfileid: "48582607"
 
 -   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティは、クライアントが必要とする配信不能キューの種類を表します。 この列挙体には、次の値があります。
 
--   `None` : クライアントは配信不能キューを必要としません。
+-   `None`:クライアントでは、配信不能キューは必要ありません。
 
--   `System`: システムの配信不能キューを使用して配信不能メッセージを保存します。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
+-   `System`:システム配信不能キューを使用して、配信不能メッセージを格納します。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
 
--   `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティで指定されるカスタムの配信不能キューを使用して配信不能メッセージを保存します。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
+-   `Custom`:カスタム配信不能キューを使用して指定、<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>プロパティは、配信不能メッセージの格納に使用されます。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
 
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティは、配信不能キューとして使用される特定のキューを表します。 このプロパティは [!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。
 
 ## <a name="comments"></a>コメント
- `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインに属していないコンピューターでこのサンプルを実行すると、"User's internal message queuing certificate does not exist" というエラーが表示されます。
+ `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインの一部ではないコンピューターでこのサンプルを実行する場合は、次のエラーが表示されます。「ユーザーの内部メッセージ キュー証明書がありません」。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

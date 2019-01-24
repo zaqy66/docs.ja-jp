@@ -1,15 +1,15 @@
 ---
-title: '方法: 拡張機能 (LINQ) (Visual Basic) でファイルをグループ化'
+title: '方法: ファイルのグループ化拡張機能 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 61b4ebee03511df8bb06b792ecfd700959d0696b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c52debf2e40c6ed6da2d7f3c7dbdb16e1f7396f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728227"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>方法: 拡張機能 (LINQ) (Visual Basic) でファイルをグループ化
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>方法: ファイルのグループ化拡張機能 (LINQ) (Visual Basic)
 この例では、LINQ を使用して、ファイルまたはフォルダーの一覧に対して、高度なグループ化および並べ替えを実行する方法を示します。 また、<xref:System.Linq.Enumerable.Skip%2A> メソッドと <xref:System.Linq.Enumerable.Take%2A> メソッドを使用して、出力をページごとにコンソール ウィンドウに表示する方法も示します。  
   
 ## <a name="example"></a>例  
@@ -96,6 +96,6 @@ End Module
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  .NET Framework version 3.5 以降では、System.Core.dll への参照を対象とするプロジェクトを作成し、 `Imports` System.Linq 名前空間のステートメント。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

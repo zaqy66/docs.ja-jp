@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5eccafd3a7fb75f0458fa50b1c557f4b3ddb7c27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720484"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox に関する「方法」トピック
 このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.RichTextBox>コントロール。  
@@ -24,7 +24,7 @@ ms.locfileid: "43864330"
  [カスタム コンテキスト メニューを RichTextBox に配置する](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
  [方法: RichTextBox のコンテンツの既定のホストを置き換えます](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.TextBox>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.TextBox>
+- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

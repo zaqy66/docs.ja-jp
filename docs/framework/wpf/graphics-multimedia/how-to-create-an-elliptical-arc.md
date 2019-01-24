@@ -1,19 +1,19 @@
 ---
-title: '方法 : 楕円の円弧を作成する'
+title: '方法: 楕円の円弧を作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], elliptical arcs
 - elliptical arcs [WPF], creating
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
-ms.openlocfilehash: 7ca7d06aa25f8dfae648d8c54c8b95cc277ffbf9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4f4461f778e2c86adb3932edf8435ca75b3b5e98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679566"
 ---
-# <a name="how-to-create-an-elliptical-arc"></a>方法 : 楕円の円弧を作成する
+# <a name="how-to-create-an-elliptical-arc"></a>方法: 楕円の円弧を作成する
 この例では、楕円の円弧を描画する方法を示します。楕円の円弧を作成するには、使用、 <xref:System.Windows.Media.PathGeometry>、 <xref:System.Windows.Media.PathFigure>、および<xref:System.Windows.Media.ArcSegment>クラス。  
   
 ## <a name="example"></a>例  
@@ -35,6 +35,6 @@ ms.locfileid: "44087438"
   
  この例は、さらに大きなサンプルの一部です。 サンプル全体については、次を参照してください。、[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)します。  
   
-## <a name="see-also"></a>関連項目  
- [2 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [3 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a>関連項目
+- [2 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
+- [3 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

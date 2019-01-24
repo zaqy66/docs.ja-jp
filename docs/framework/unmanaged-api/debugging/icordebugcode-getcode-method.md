@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728766"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode メソッド
-指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。 .NET Framework version 2.0 では、このメソッドは廃止されました。 使用して[icordebugcode 2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)代わりにします。  
+指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。 このメソッドは、.NET Framework version 2.0 で廃止されました。 使用[icordebugcode 2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,18 +56,18 @@ HRESULT GetCode (
  `pcBufferSize`  
  [out]返されるバイト数。  
   
-## <a name="remarks"></a>コメント  
- 場合は、関数のコードは、複数のチャンクに分割して、ネイティブのオフセットの昇順で連結されます。 命令の境界はチェックされません。  
+## <a name="remarks"></a>Remarks  
+ 関数のコードは、複数のチャンクに分割されていますが場合、は、ネイティブのオフセットの昇順で連結されます。 命令の境界はチェックされません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** 1.1、1.0  
+ **.NET framework のバージョン:** 1.1, 1.0  
   
-## <a name="see-also"></a>関連項目  
- [GetCodeChunks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>関連項目
+- [GetCodeChunks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+

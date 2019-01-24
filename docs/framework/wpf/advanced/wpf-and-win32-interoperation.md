@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 733a4d4ee7296d96a18e8ba4763dfa12e218c028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a242f60324f2342f3dd96edc3ccbd663ecc9807a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680482"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF と Win32 の相互運用性
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] および [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コードを相互運用する方法の概要について説明します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードに多くの投資を行った場合は、そのコードの一部を再利用する方がより効率的である場合があります。  
@@ -27,7 +27,7 @@ ms.locfileid: "43526518"
   
 -   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツで [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ウィンドウをホストします。 この手法では、既存のカスタム [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コントロールを他の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツのコンテキストで使用し、境界を越えてデータを渡すことができます。  
   
- ここでは、これらの各手法について概念的に説明します。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] で [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] をホストする場合のコードを使用した説明については、「[チュートリアル: Win32 での WPF コンテンツのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)」を参照してください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] をホストする場合のコードを使用した説明については、「[チュートリアル: WPF での Win32 コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)」を参照してください。  
+ ここでは、これらの各手法について概念的に説明します。 ホストしているのコード指向の図の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]を参照してください[チュートリアル。Win32 での WPF コンテンツをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)します。 ホストしているのコード指向の図の[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]で[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を参照してください[チュートリアル。WPF での Win32 コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)します。  
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 相互運用プロジェクト  
@@ -87,7 +87,7 @@ ms.locfileid: "43526518"
 > [!NOTE]
 >  個別のアセンブリを生成して参照する場合は、手順 1 の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ クラスの一部またはすべてについて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でコンテンツ クラスの既定の部分クラスを使用して定義できます。 通常は、<xref:System.Windows.Application> オブジェクトを [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] のコンパイルの一部としてアセンブリに含めますが、その <xref:System.Windows.Application> を相互運用の一部として使用することにはなりません。単に、アプリケーションによって参照される [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルの 1 つ以上のルート クラスを使用し、その部分クラスを参照します。 手順の残りの部分は、基本的に前述の手順と同様です。  
 >   
->  これらの各手順のコードを使用した説明については、「[チュートリアル: Win32 での WPF コンテンツのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)」のトピックを参照してください。  
+>  トピックのコードで使用した説明については、これらの各手順[チュートリアル。Win32 での WPF コンテンツをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)します。  
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>WPF での Microsoft Win32 ウィンドウのホスト  
@@ -115,7 +115,7 @@ ms.locfileid: "43526518"
   
  次の手順に従って、マウス入力で動作するアプリケーションを作成します。 <xref:System.Windows.Interop.IKeyboardInputSink> インターフェイスを実装して、ホストされたウィンドウで Tab キーによる移動がサポートされるようにすることができます。  
   
- これらの各手順のコードを使用した説明については、「[チュートリアル: WPF での Win32 コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)」のトピックを参照してください。  
+ トピックのコードで使用した説明については、これらの各手順[チュートリアル。WPF での Win32 コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)します。  
   
 ### <a name="hwnds-inside-wpf"></a>WPF 内の HWND  
  <xref:System.Windows.Interop.HwndHost> は特殊なコントロールであると考えることができます  (技術的には、<xref:System.Windows.Interop.HwndHost>は、<xref:System.Windows.FrameworkElement>派生クラスではない、<xref:System.Windows.Controls.Control>派生クラスでは、相互運用のためのコントロールを考慮することができます)。<xref:System.Windows.Interop.HwndHost> 、基になる抽象化[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ホストされたコンテンツの性質の残りの部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホストされているコンテンツをレンダリングし、入力を処理する必要がありますが、別のコントロールのようなオブジェクトと見なします。 <xref:System.Windows.Interop.HwndHost> 一般に、他のように動作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.FrameworkElement>出力 (描画とグラフィックス) いくつか重要な違いがあるし、どのような基になる Hwnd の制限事項に基づく入力 (マウスとキーボード) をサポートできます。  
@@ -156,9 +156,9 @@ ms.locfileid: "43526518"
   
  インターフェイスは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 領域と [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 領域間の遷移で発生する処理をサポートするだけです。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 領域では、Tab キーによる移動動作は、Tab キーによる移動の [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 実装ロジック (ある場合) によって完全に制御されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Interop.HwndHost>  
- <xref:System.Windows.Interop.HwndSource>  
- <xref:System.Windows.Interop>  
- [チュートリアル: WPF での Win32 コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
- [チュートリアル: Win32 での WPF コンテンツのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Interop.HwndHost>
+- <xref:System.Windows.Interop.HwndSource>
+- <xref:System.Windows.Interop>
+- [チュートリアル: WPF の Win32 コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)
+- [チュートリアル: Win32 での WPF コンテンツのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : クレームを比較する'
+title: '方法: クレームを比較します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 1ef957efcb4cc9330c1c273a1c953afc5b7dd240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720250"
 ---
-# <a name="how-to-compare-claims"></a>方法 : クレームを比較する
-Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) を使用して、承認の確認を実行できます。 この場合、一般的なタスクとして、承認コンテキスト内のクレームが、要求されたアクションの実行や要求されたリソースへのアクセスに必要なクレームと比較されます。 このトピックでは、組み込みとカスタム クレームの型を含め、クレームの比較方法について説明します。 Id モデル インフラストラクチャの詳細については、次を参照してください。[管理クレームと Id モデル承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)です。  
+# <a name="how-to-compare-claims"></a>方法: クレームを比較します。
+Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) を使用して、承認チェックを実行できます。 この場合、一般的なタスクとして、承認コンテキスト内のクレームが、要求されたアクションの実行や要求されたリソースへのアクセスに必要なクレームと比較されます。 このトピックでは、組み込みとカスタム クレームの型を含め、クレームの比較方法について説明します。 Id モデル インフラストラクチャの詳細については、次を参照してください。[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)します。  
   
  クレームの比較では、クレーム間で 3 つの部分 (型、権限、およびリソース) の比較が行われ、等しいかどうかが判断されます。 次の例を参照してください。  
   
@@ -30,9 +30,9 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
  [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
  [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]  
   
- 内の比較コード、<xref:System.IdentityModel.Claims.Claim.Equals%2A>メソッドを返します。`true`と見なし、`example\someone`と同じドメイン ユーザーを識別"someone@example.com"です。  
+ 内の比較コード、<xref:System.IdentityModel.Claims.Claim.Equals%2A>メソッドを返します。`true`と見なし、`example\someone`と同じドメイン ユーザーを識別する"someone@example.com"。  
   
- カスタム クレームの型の比較にも、<xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドを使用できます。 ただし、クレームの <xref:System.IdentityModel.Claims.Claim.Resource%2A> プロパティから返された型がプリミティブ型ではない場合、<xref:System.IdentityModel.Claims.Claim.Equals%2A> が `true` を返すのは、`Resource` プロパティから返された値どうしが等しいと <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドが見なした場合のみです。 これに該当しない場合は、`Resource` プロパティから返されたカスタム型で <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドと <xref:System.Object.GetHashCode%2A> メソッドを上書きし、必要なカスタム処理を実行する必要があります。  
+ カスタム クレームの型の比較にも、<xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドを使用できます。 ただし、クレームの <xref:System.IdentityModel.Claims.Claim.Resource%2A> プロパティから返された型がプリミティブ型ではない場合、<xref:System.IdentityModel.Claims.Claim.Equals%2A> が `true` を返すのは、`Resource` プロパティから返された値どうしが等しいと <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドが見なした場合のみです。 これに該当しない場合は、`Resource` プロパティから返されたカスタム型で <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドと <xref:System.Object.GetHashCode%2A> メソッドをオーバーライドし、必要なカスタム処理を実行する必要があります。  
   
 ### <a name="comparing-built-in-claims"></a>組み込みのクレームの比較  
   
@@ -48,7 +48,7 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  構造体またはクラスをベースとしたリソース型を含むカスタム クレームでは、そのリソース型で <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドを上書きする必要があります。  
+2.  構造体またはクラスをベースとしたリソース型を含むカスタム クレームでは、そのリソース型で <xref:System.IdentityModel.Claims.Claim.Equals%2A> メソッドをオーバーライドする必要があります。  
   
 3.  まず、`obj` パラメーターが `null` であるかどうかを確認し、null である場合は `false` を返します。  
   
@@ -70,6 +70,6 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
  [!code-csharp[c_CustomClaimComparison#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#0)]
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
-## <a name="see-also"></a>関連項目  
- [ID モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [方法 : カスタム クレームを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a>関連項目
+- [ID モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [方法: カスタム クレームを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
