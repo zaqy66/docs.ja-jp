@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcd7dc7c51caa94308760c0086384c8eea184ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 475ae98d2bf7ea5132c9ec4555070f8bb2999cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744012"
 ---
-# <a name="couninitiee-enumeration"></a><span data-ttu-id="aa57c-102">COUNINITIEE 列挙型</span><span class="sxs-lookup"><span data-stu-id="aa57c-102">COUNINITIEE Enumeration</span></span>
-<span data-ttu-id="aa57c-103">によって使用される定数を指定[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)共通言語ランタイムを初期化するときにします。</span><span class="sxs-lookup"><span data-stu-id="aa57c-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="couninitiee-enumeration"></a><span data-ttu-id="b0d59-102">COUNINITIEE 列挙型</span><span class="sxs-lookup"><span data-stu-id="b0d59-102">COUNINITIEE Enumeration</span></span>
+<span data-ttu-id="b0d59-103">使用される定数を指定します[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)共通言語ランタイムを初期化するときにします。</span><span class="sxs-lookup"><span data-stu-id="b0d59-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa57c-104">構文</span><span class="sxs-lookup"><span data-stu-id="aa57c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0d59-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0d59-104">Syntax</span></span>  
   
 ```  
 typedef enum tagCOUNINITEE  
@@ -36,21 +36,21 @@ typedef enum tagCOUNINITEE
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="aa57c-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="aa57c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b0d59-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="b0d59-105">Members</span></span>  
   
-|<span data-ttu-id="aa57c-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="aa57c-106">Member</span></span>|<span data-ttu-id="aa57c-107">説明</span><span class="sxs-lookup"><span data-stu-id="aa57c-107">Description</span></span>|  
+|<span data-ttu-id="b0d59-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="b0d59-106">Member</span></span>|<span data-ttu-id="b0d59-107">説明</span><span class="sxs-lookup"><span data-stu-id="b0d59-107">Description</span></span>|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|<span data-ttu-id="aa57c-108">既定の初期化解除モードを示します。</span><span class="sxs-lookup"><span data-stu-id="aa57c-108">Indicates default uninitialization mode.</span></span>|  
-|`COUNINITEE_DLL`|<span data-ttu-id="aa57c-109">アセンブリをアンロードするための初期化解除モードを示します。</span><span class="sxs-lookup"><span data-stu-id="aa57c-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
+|`COUNINITEE_DEFAULT`|<span data-ttu-id="b0d59-108">既定の初期化解除モードを示します。</span><span class="sxs-lookup"><span data-stu-id="b0d59-108">Indicates default uninitialization mode.</span></span>|  
+|`COUNINITEE_DLL`|<span data-ttu-id="b0d59-109">アセンブリをアンロードするための初期化解除モードを示します。</span><span class="sxs-lookup"><span data-stu-id="b0d59-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="aa57c-110">要件</span><span class="sxs-lookup"><span data-stu-id="aa57c-110">Requirements</span></span>  
- <span data-ttu-id="aa57c-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="aa57c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0d59-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="b0d59-110">Requirements</span></span>  
+ <span data-ttu-id="b0d59-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0d59-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa57c-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="aa57c-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b0d59-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b0d59-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="aa57c-113">**ライブラリ:** MsCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="aa57c-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b0d59-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="b0d59-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="aa57c-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa57c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b0d59-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0d59-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa57c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="aa57c-115">See Also</span></span>  
- [<span data-ttu-id="aa57c-116">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="aa57c-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b0d59-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0d59-115">See also</span></span>
+- [<span data-ttu-id="b0d59-116">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="b0d59-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
