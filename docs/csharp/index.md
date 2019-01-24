@@ -1,19 +1,13 @@
 ---
-title: C# のガイド
-description: 開発の初心者であるか、経験豊富な専門家であるかを問わず、C# のガイドが C# に関する広範な知識を得るのにどのように役立つかを示します。
+title: 'C# のガイド'
+description: '開発の初心者であるか、経験豊富な専門家であるかを問わず、C# のガイドが C# に関する広範な知識を得るのにどのように役立つかを示します。'
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
-- documentation [C#]
-- Help, Visual C# documentation
-- C# language
-- Visual C#
-ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145661"
+  - 'documentation [C#]'
+  - 'Help, Visual C# documentation'
+  - 'C# language'
+  - 'Visual C#'
 ---
 # <a name="c-guide"></a>C# のガイド
 
@@ -66,6 +60,6 @@ C# ガイドにはいくつかのセクションがあります。 順番に読�
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [.NET のガイド](../standard/index.md)  
-* [C# のサンプル](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+- [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [.NET のガイド](../standard/index.md)
+- [C# のサンプル](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

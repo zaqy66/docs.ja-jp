@@ -1,17 +1,11 @@
 ---
-title: ジェネリック - C# プログラミング ガイド
+title: 'ジェネリック - C# プログラミング ガイド'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, generics
-- generics [C#]
+  - 'C# language, generics'
+  - 'generics [C#]'
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 03a5a594db86f5286979dbe22a8841f0e7d4518c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240868"
 ---
 # <a name="generics-c-programming-guide"></a>ジェネリック (C# プログラミング ガイド)
 ジェネリックは、バージョン 2.0 の C# 言語と共通言語ランタイム (CLR) に追加されたものです。 ジェネリックは、.NET Framework に型パラメーターという概念を導入します。型パラメーターを使用すると、クラスやメソッドがクライアント コードで宣言され、インスタンス化されるまで、1 つ以上の型の指定を遅延させるクラスとメソッドを設計できます。 たとえば、ジェネリック型パラメーター T を使用すると、次に示すようにランタイムのキャストやボックス化操作のコストやリスクを負わずに他のクライアント コードで使用できる単一のクラスを記述できます。  
@@ -60,11 +54,11 @@ ms.locfileid: "53240868"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  詳細については、「[C# 言語の仕様](~/_csharplang/spec/types.md#constructed-types)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Collections.Generic>  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [型](../../../csharp/programming-guide/types/index.md)  
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
-- [.NET のジェネリック](../../../standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [型](../../../csharp/programming-guide/types/index.md)
+- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
+- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [.NET のジェネリック](../../../standard/generics/index.md)

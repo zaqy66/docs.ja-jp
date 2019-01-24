@@ -1,21 +1,15 @@
 ---
-title: ステートメント、式、および演算子 - C# プログラミング ガイド
+title: 'ステートメント、式、および演算子 - C# プログラミング ガイド'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- expressions [C#]
-- operators [C#]
-- C# language, statements
-- C# language, operators
-- C# language, expressions
-- statements [C#]
+  - 'expressions [C#]'
+  - 'operators [C#]'
+  - 'C# language, statements'
+  - 'C# language, operators'
+  - 'C# language, expressions'
+  - 'statements [C#]'
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 1bb710637922e8fee09fd9424cddd1170cb495c4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237208"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>ステートメント、式、および演算子 (C# プログラミング ガイド)
 アプリケーションを構成する C# コードは、キーワード、式、演算子から成るステートメントで構成されます。 このセクションには、C# プログラムのこのような基本要素に関する情報が含まれています。  
@@ -45,7 +39,7 @@ ms.locfileid: "53237208"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
