@@ -2,12 +2,12 @@
 title: '&lt;persistenceProvider&gt;'
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: ba02977a7df44931ae195040949e9a8eb0c141b5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8deca5b4bec4808ac9add201db0c936764fddcb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602222"
 ---
 # <a name="ltpersistenceprovidergt"></a>&lt;persistenceProvider&gt;
 使用する永続化プロバイダーの実装の型と、永続化操作に使用するタイムアウトを指定します。  
@@ -47,6 +47,6 @@ ms.locfileid: "54152022"
 ## <a name="remarks"></a>Remarks  
  この要素は、WCF サービスの状態をシリアル化するために使用される永続化プロバイダーを指定します。 HTTP ヘッダーに状態情報を渡す `wsHttpContextBinding` と一緒に使用する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.PersistenceProviderElement>  
- <xref:System.ServiceModel.Persistence.PersistenceProvider>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.PersistenceProviderElement>
+- <xref:System.ServiceModel.Persistence.PersistenceProvider>

@@ -1,5 +1,5 @@
 ---
-title: 出力ファイルを書き込めません&#39; &lt;filename&gt;&#39;:&lt;エラー。&gt;
+title: 出力ファイルに書き込めませんでした&#39; &lt;filename&gt;&#39;:&lt;エラー&gt;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572696"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>出力ファイルを書き込めません&#39; &lt;filename&gt;&#39;:&lt;エラー。&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>出力ファイルに書き込めませんでした&#39; &lt;filename&gt;&#39;:&lt;エラー&gt;
 ファイルの作成で問題が発生しました。  
   
  出力ファイルを書き込み用に開くことができません。 ファイル (または、そのファイルが格納されているフォルダー) は、別のプロセスによって排他的に開かれているか、読み取り専用属性が設定されている可能性があります。  
@@ -45,17 +45,17 @@ ms.locfileid: "33597511"
   
 1.  対象のフォルダーを開きます。  
   
-2.  クリックして、**ビュー**アイコンを選択し、**詳細**です。  
+2.  をクリックして、**ビュー**アイコンを選択し、**詳細**します。  
   
-3.  列ヘッダーを右クリックして選択**属性**ドロップダウン リストからです。  
+3.  列ヘッダーを右クリックして選択**属性**ドロップダウン リストから。  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>ファイルやフォルダーの属性を変更するには  
   
-1.  **ファイル エクスプ ローラー**をファイルまたはフォルダーを右クリックして**プロパティ**です。  
+1.  **ファイル エクスプ ローラー**をファイルまたはフォルダーを右クリックして**プロパティ**します。  
   
-2.  **属性**のセクションで、**全般**タブで、、**読み取り専用**ボックス。  
+2.  **属性**のセクション、**全般**タブで、、**読み取り専用**ボックス。  
   
 3.  **[OK]** を押します。  
   
-## <a name="see-also"></a>関連項目  
- [ご意見](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>関連項目
+- [ご意見](/visualstudio/ide/talk-to-us)

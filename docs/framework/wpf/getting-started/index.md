@@ -6,12 +6,12 @@ helpviewer_keywords:
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-ms.openlocfilehash: f4c4c4a19c1919a27c15c623bcb30a119a560c75
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 413fc8221c2c94aa1060c3754a989143c064eac3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599869"
 ---
 # <a name="getting-started-wpf"></a>概要 (WPF)
 Windows Presentation Foundation (WPF) は、デスクトップ クライアント アプリケーションを作成する UI フレームワークです。 WPF の開発プラットフォームは、アプリケーション モデル、リソース、コントロール、グラフィックス、レイアウト、データ バインディング、ドキュメント、セキュリティなどのさまざまなアプリケーション開発機能の一式をサポートします。 WPF は .NET Framework のサブセットであるため、以前 ASP.NET や Windows フォームを使用して .NET Framework でアプリケーションを構築したことがあれば、プログラミングには馴染みがあるでしょう。 WPF は、Extensible Application Markup Language (XAML) を使用して、アプリケーションのプログラミング用に、宣言型モデルを提供します。 このセクションには、WPF の紹介のトピックと、WPF の使用を開始するトピックがあります。  
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) は、デスクトップ クライアン�
 |WPF の詳細な説明...|[Visual Studio での WPF の概要](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)<br /><br /> [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)<br /><br /> [コントロール](../../../../docs/framework/wpf/controls/index.md)<br /><br /> [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)|  
 |Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF と Windows フォームの相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)|  
   
-## <a name="see-also"></a>関連項目  
- [クラス ライブラリ](../../../../docs/framework/wpf/class-library-wpf.md)  
- [アプリケーションの開発](../../../../docs/framework/wpf/app-development/index.md)  
- [.NET Framework デベロッパー センター](https://www.microsoft.com/net)
+## <a name="see-also"></a>関連項目
+- [クラス ライブラリ](../../../../docs/framework/wpf/class-library-wpf.md)
+- [アプリケーションの開発](../../../../docs/framework/wpf/app-development/index.md)
+- [.NET Framework デベロッパー センター](https://www.microsoft.com/net)

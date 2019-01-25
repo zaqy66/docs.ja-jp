@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576851"
 ---
 # <a name="controls-by-category"></a>カテゴリ別のコントロール
-複数のカテゴリに、Windows Presentation Foundation (WPF) コントロールを論理的にグループ化できます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  
+Windows Presentation Foundation (WPF) コントロールは、いくつかのカテゴリに論理的にグループ化することができます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  
   
 ## <a name="layout"></a>レイアウト  
  レイアウト コントロールを使用して、子要素のサイズ、ディメンション、位置、および配置を制御します。  
@@ -56,7 +56,7 @@ ms.locfileid: "33552000"
 -   <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>ボタン  
- ボタンは、最も基本的なユーザー インターフェイス コントロールの 1 つです。 アプリケーションは、通常のいくつかのタスクを実行、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントに、ユーザーがクリックしたときにします。  
+ ボタンは、最も基本的なユーザー インターフェイス コントロールの 1 つです。 アプリケーションの通常のタスクを実行、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントに、ユーザーがクリックしたときにします。  
   
 -   <xref:System.Windows.Controls.Button>  
   
@@ -177,5 +177,5 @@ ms.locfileid: "33552000"
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>関連項目  
- [コントロール ライブラリ](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>関連項目
+- [コントロール ライブラリ](../../../../docs/framework/wpf/controls/control-library.md)

@@ -2,19 +2,19 @@
 title: スタンドアロン JSON のシリアル化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618423"
 ---
 # <a name="stand-alone-json-serialization"></a>スタンドアロン JSON のシリアル化
 JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで実行される JavaScript コードで使用するために特別に設計されたデータ形式です。 Windows Communication Foundation (WCF) を作成した ASP.NET AJAX サービスで使用される既定のデータ形式になります。  
   
  この形式は、ASP.NET と統合せずに AJAX サービスを作成する場合にも使用できます。この場合、XML が既定のデータ形式になりますが、JSON を選択することもできます。  
   
- JSON をサポートする必要はあっても AJAX サービスを作成する予定はない場合は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用することで、.NET オブジェクトを JSON データに直接シリアル化したり、このようなデータを .NET 型のインスタンスに逆シリアル化したりできます。 これを行う方法については、次を参照してください。[方法: シリアル化と逆シリアル化 JSON データ](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)します。  
+ JSON をサポートする必要はあっても AJAX サービスを作成する予定はない場合は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用することで、.NET オブジェクトを JSON データに直接シリアル化したり、このようなデータを .NET 型のインスタンスに逆シリアル化したりできます。 これを行う方法については、次を参照してください。[方法。および JSON データを逆シリアル化](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)します。  
   
  JSON を使用する場合、一部例外はありますが、<xref:System.Runtime.Serialization.DataContractSerializer> でサポートされているものと同じ .NET 型 がサポートされます。 サポートされている種類の一覧は、次を参照してください。[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)します。 これには、ほとんどのプリミティブ型、ほとんどの配列型とコレクション型、<xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> を使用する複合型などがあります。  
   
@@ -27,7 +27,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
 |<xref:System.Enum>|数値|このトピックの「列挙体と JSON」を参照してください。|  
 |<xref:System.Boolean>|ブール型|--|  
 |<xref:System.String>, <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>、<xref:System.Guid>、<xref:System.Uri>|String|JSON でこれらの型の形式は XML に示すように、同じ (基本的に、ISO 8601 期間形式で TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB"形式の GUID と、自然な文字列形式の URI などの"http://www.example.com")。 正確な情報については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。|  
+|<xref:System.TimeSpan>、 <xref:System.Guid>、 <xref:System.Uri>|String|JSON でこれらの型の形式は XML に示すように、同じ (基本的に、ISO 8601 期間形式で TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB"形式の GUID と、自然な文字列形式の URI などの"http://www.example.com")。 正確な情報については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。|  
 |<xref:System.Xml.XmlQualifiedName>|String|形式は "name:namespace" です (最初のコロンの前が名前です)。 名前または名前空間が存在しない場合があります。 名前空間がない場合、コロンも省略されることがあります。|  
 |<xref:System.Array> 型の <xref:System.Byte>|数値の配列型|各数値は、1 バイトの値を表します。|  
 |<xref:System.DateTime>|DateTime 型または文字列型|このトピックの「日付/時刻と JSON」を参照してください。|  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>JSON の有効なキー名  
  シリアライザーは、無効な XML 名のキー名を XML エンコードします。 たとえば、「123」の名前を持つデータ メンバーでエンコードされた名前がなど"\_x0031\_\_x0032\_\_x0033\_"「123」は無効な XML 要素名であるため (始まり、桁)。 XML 名が有効ではない一部の国際文字セットでも、同様の状況が発生する場合があります。 この JSON の処理での XML の影響の詳細については、次を参照してください。 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
 - [JSON などのデータ転送形式のサポート](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

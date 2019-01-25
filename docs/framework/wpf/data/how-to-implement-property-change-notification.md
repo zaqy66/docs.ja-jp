@@ -1,5 +1,5 @@
 ---
-title: '方法 : プロパティの変更通知を実装する'
+title: '方法: プロパティの変更通知を実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: a9c0fb433e2fa65e28db3b793e038b49f9d6353b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a8ab232019f1266095091cd4e1ce6e7fec63207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587812"
 ---
-# <a name="how-to-implement-property-change-notification"></a>方法 : プロパティの変更通知を実装する
+# <a name="how-to-implement-property-change-notification"></a>方法: プロパティの変更通知を実装する
 （たとえば、ユーザーがフォームを編集したときに自動的にプレビューペインを更新する）バインディングの動的な変更を自動的にバインディングのターゲットとなるプロパティに反映するために、<xref:System.Windows.Data.BindingMode.OneWay>または<xref:System.Windows.Data.BindingMode.TwoWay>のバインディングをサポートするには、適切なプロパティ変更通知を提供しなければなりません。 次の例は、<xref:System.ComponentModel.INotifyPropertyChanged>を実装するクラスの作り方を示します。  
   
 ## <a name="example"></a>例  
@@ -28,7 +28,7 @@ ms.locfileid: "33555991"
   
  `Person`クラスがどのように<xref:System.Windows.Data.BindingMode.TwoWay>バインドをサポートしているか、[ TextBox テキストで、ソースを更新するタイミングを制御する](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)を参照して下さい。  
   
-## <a name="see-also"></a>関連項目  
- [バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- [バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
