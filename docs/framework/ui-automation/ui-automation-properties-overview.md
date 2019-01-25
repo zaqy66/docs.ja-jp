@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 3707196cf833577e65dbd1879f2762ec4336abc2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 8dde6775162adc092ea58795f3c4bf7d2db570cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589845"
 ---
 # <a name="ui-automation-properties-overview"></a>UI オートメーション プロパティの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  UI オートメーション プロバイダーは、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 要素のプロパティを公開します。 これらのプロパティにより、UI オートメーション クライアント アプリケーションは、静的データと動的データを含め、 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]の構成部分 (特にコントロール) に関する情報を探索できます。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47073516"
   
 ### <a name="element-type"></a>要素型  
   
-|プロパティの識別子|プロパティ アクセス|  
+|プロパティの識別子|「プロパティ アクセス」|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>|  
@@ -161,10 +161,10 @@ ms.locfileid: "47073516"
   
  クライアントは、イベントをサブスクライブすることでイベントをリッスンします。 イベントをサブスクライブすることは、イベントを処理できるデリゲート メソッドを作成し、それらのメソッドで処理する特定のイベントと共に、それらのメソッドを [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] に渡すことを意味します。 特にプロパティ変更イベントについては、クライアントが <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>を実装する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [プロパティ条件に基づく UI オートメーション要素の検索](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [UI オートメーション プロバイダーからのイベントの発生](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+## <a name="see-also"></a>関連項目
+- [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [プロパティ条件に基づく UI オートメーション要素の検索](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [UI オートメーション プロバイダーからのイベントの発生](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 5bf1a0e1d4d8f620f83aab50aa50009a0f6a6cf4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4a99f4826a34ff3ab022686b6615f199558d7af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606297"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 多くの場合など、非実行可能ファイルのデータを含むファイルに依存するアプリケーション[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]イメージ、ビデオ、およびオーディオです。 Windows Presentation Foundation (WPF) の構成の識別、およびこれらの種類のアプリケーション データ ファイルと呼ばれる、データ ファイルを使用して特別なサポートを提供します。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  
   
--   **リソース ファイル**: データ ファイルも実行可能ファイルまたはライブラリにコンパイルされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+-   **リソース ファイル**:データ ファイルも実行可能ファイルまたはライブラリにコンパイルされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
--   **コンテンツ ファイル**: スタンドアロン データ ファイルを実行可能ファイルとの明示的な関連付けを持つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+-   **コンテンツ ファイル**:スタンドアロン データ ファイルを実行可能ファイルとの明示的な関連付けを持つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
--   **起点サイト ファイル**: 実行可能ファイルとの関連付けを持たないスタンドアロン データ ファイル[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+-   **起点サイト ファイル**:実行可能ファイルとの関連付けを持たないスタンドアロン データ ファイル[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
  これらの 3 種類のファイルの重要な違いは、リソース ファイルとコンテンツ ファイルはビルド時に認識されるという点です。アセンブリは、これらを明確に認識します。 起点サイト ファイル、ただし、アセンブリがありますそれらの知識、またはパックを使用して暗黙的な知識[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]参照。 後者の場合、参照される起点サイト ファイルが実際に存在する保証はありません。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "43855973"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、リソース ファイルに含まれているファイルとは、[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]プロジェクトとして、`Resource`項目。  
   
 ```xml  
-<Project "xmlns=http://schemas.microsoft.com/developer/msbuild/2003" ... >  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
     <Resource Include="ResourceFile.xaml" />  
@@ -238,5 +238,5 @@ ms.locfileid: "43855973"
 ## <a name="rebuilding-after-changing-build-type"></a>ビルドの種類を変更した後のリビルド  
  アプリケーション データ ファイルのビルドの種類を変更した後は、変更を確実に反映するためにアプリケーション全体をリビルドする必要があります。 アプリケーションのみをビルドしても、変更は適用されません。  
   
-## <a name="see-also"></a>関連項目  
- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+## <a name="see-also"></a>関連項目
+- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

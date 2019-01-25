@@ -1,18 +1,18 @@
 ---
-title: 'クエリ式の構文例: 射影'
+title: クエリ式の構文例:射影
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: cc50b2564d295f1c81feacdeb52008f9f0004adc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c12fdd70b7174d6e6fbae10d5132c9e3e2a7eb87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733377"
 ---
-# <a name="query-expression-syntax-examples-projection"></a>クエリ式の構文例: 射影
+# <a name="query-expression-syntax-examples-projection"></a>クエリ式の構文例:射影
 このトピックの例では、使用する方法を示します、`Select`メソッドと`From … From …`クエリを実行するためのキーワード、 [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)クエリ式構文を使用します。 `From … From …` は、メソッドは、`SelectMany` メソッドのクエリ ベース版に相当します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
@@ -60,5 +60,5 @@ ms.locfileid: "43396630"
  [!code-csharp[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanyfromassignment)]
  [!code-vb[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanyfromassignment)]  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

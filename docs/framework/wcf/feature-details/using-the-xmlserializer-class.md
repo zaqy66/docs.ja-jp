@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732857"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer クラスの使用
 Windows Communication Foundation (WCF) は、2 つの別のシリアル化テクノロジを使用して、クライアントとサービス、シリアル化と呼ばれるプロセス間で送信される XML に、アプリケーションでデータを有効にできます。  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) は、2 つの別のシリアル化テク
  <xref:System.ServiceModel.MessageHeaderArrayAttribute> の使用時は、<xref:System.Xml.Serialization.XmlSerializer> 属性はサポートされません。  
   
 > [!NOTE]
->  ここで、 <xref:System.Xml.Serialization.XmlSerializer> WCF 前にリリースは、次の例外をスローします:"スキーマの最上位レベルで宣言された要素を含めることはできません`maxOccurs`> 1。 `XmlArray` ではなく、`XmlArrayItem` または `XmlElementAttribute` を使うか、Wrapped パラメーター スタイルを使って 'more' のラッパー要素を指定してください。" という例外がスローされます。  
+>  ここで、 <xref:System.Xml.Serialization.XmlSerializer> WCF 前にリリースは、次の例外をスローします。"スキーマの最上位レベルで宣言された要素を含めることはできません`maxOccurs`> 1。 `XmlArray` ではなく、`XmlArrayItem` または `XmlElementAttribute` を使うか、Wrapped パラメーター スタイルを使って 'more' のラッパー要素を指定してください。" という例外がスローされます。  
 >   
 >  この例外が出力された場合は、この状況が当てはまるかどうかを調査します。  
   
@@ -163,7 +163,7 @@ Windows Communication Foundation (WCF) は、2 つの別のシリアル化テク
   
 -   生成されたスキーマが、有効なデータ コントラクト スキーマではない場合があります。 たとえば、スキーマ プロバイダー メソッドによって、データ コントラクト モデルでサポートされていない XML 属性を含むスキーマが生成されることがあります。 この場合、スキーマを `IXmlSerializable` 型としてインポートできます。 このインポート モードが既定で上にないが簡単で有効にできる – など、`/importXmlTypes`コマンド ライン スイッチを[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 詳細に記載されて、[クラスを生成するスキーマをインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)します。 型インスタンスを処理するには、XML を直接操作する必要があります。 `XmlSerializer` の使用方法に関するトピックを参照し、より広い範囲のスキーマをサポートする別のシリアル化技術を使用することを検討することもできます。  
   
--   新しい型を生成する代わりに、プロキシ内の既存の `IXmlSerializable` 型を再利用できます。 この場合、「型を作成するためのスキーマのインポート」で説明する参照型の機能を使用して、再利用する型を示すことができます。 これに対応を使用して、 `/reference` svcutil.exe を再利用する型を含むアセンブリを指定するスイッチします。  
+-   新しい型を生成する代わりに、プロキシ内の既存の `IXmlSerializable` 型を再利用できます。 この場合、「型を作成するためのスキーマのインポート」で説明する参照型の機能を使用して、再利用する型を示すことができます。 これは、Svcutil.exe で `/reference` スイッチを使用して、再利用する型を含むアセンブリを指定することに相当します。  
   
 ### <a name="xmlserializer-legacy-behavior"></a>XmlSerializer の従来の動作  
  .NET Framework 4.0 以前では、XmlSerializer が C# コードをファイルに書き込むことによって、一時的なシリアル化アセンブリが生成されます。 さらに、このファイルがアセンブリとしてコンパイルされます。  この動作では、シリアライザーの起動時間が長くなるなど、望ましくない結果が生じることがあります。 .NET Framework 4.5 では、この動作が変更され、コンパイラを使用せずに、アセンブリが生成されるようになりました。 開発者によっては、生成された C# コードを確認したい場合もあります。 次の構成によって、この従来の動作を使用するように指定できます。  
@@ -205,11 +205,11 @@ Windows Communication Foundation (WCF) は、2 つの別のシリアル化テク
 > [!NOTE]
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>`スイッチは、.NET Framework 4.5 またはそれ以降のバージョンを実行するマシンでのみ機能します。 上記`appSettings`アプローチは、すべての .NET Framework バージョンで動作します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.DataContractFormatAttribute>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [方法 : XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.DataContractFormatAttribute>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.ServiceModel.MessageHeaderArrayAttribute>
+- [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [方法: アプリケーション起動時間の WCF クライアント、XmlSerializer を使用して向上させる](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690892"
 ---
 # <a name="serialization-guidelines"></a>シリアル化のガイドライン
 このドキュメントには、シリアル化できるように API をデザインする際に考慮すべきガイドラインを示します。  
@@ -140,10 +140,10 @@ ms.locfileid: "54058595"
   
 ## <a name="see-also"></a>関連項目
 
-- [データ コントラクトの使用](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
-- [データ コントラクト シリアライザー](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
-- [データ コントラクト シリアライザーでサポートされる型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
-- [バイナリ シリアル化](binary-serialization.md)  
-- [リモート オブジェクト](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
-- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
+- [データ コントラクトの使用](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [データ コントラクト シリアライザー](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [データ コントラクト シリアライザーでサポートされる型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [バイナリ シリアル化](binary-serialization.md)
+- [リモート オブジェクト](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
 - [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)

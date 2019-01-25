@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8c5ab9ac832ebf98584273bb8c4a7de12b3b8085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595280"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成
 関連するカスタム デザイナーを作成することにより、カスタム コントロールのデザイン時エクスペリエンスを拡張できます。  
@@ -583,7 +583,7 @@ private IWindowsFormsEditorService editorService;
   
 6.  右クリックし、`DemoMarqueeControl`ショートカット メニューを選択し、**テストの実行**アニメーションを開始するにはオプションです。 クリックして**テストの停止**アニメーションを停止します。  
   
-7.  開いている**Form1**デザイン ビューで。  
+7.  デザイン ビューで **[Form1]** を開きます。  
   
 8.  2 つ配置<xref:System.Windows.Forms.Button>フォーム上のコントロール。 という名前を付けます`startButton`と`stopButton`、変更して、<xref:System.Windows.Forms.Control.Text%2A>プロパティ値を**開始**と**停止**、それぞれします。  
   
@@ -638,9 +638,9 @@ private void stopButton_Click(object sender, System.EventArgs e)
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>
 - <xref:System.Windows.Forms.Design.DocumentDesigner>
 - <xref:System.ComponentModel.Design.IRootDesigner>
-- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.ComponentModel.Design.DesignerVerb>
 - <xref:System.Drawing.Design.UITypeEditor>
 - <xref:System.ComponentModel.BackgroundWorker>
 - [方法: デザイン時機能を活用した Windows フォーム コントロールを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
-- [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [カスタム デザイナー](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))
