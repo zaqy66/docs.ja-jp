@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 381fdecfb2cb194cd1eb00a5b55db6fb89eeebbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a1df57e82309d42092c38dfcdd8b65ccc2797f9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743284"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint メソッド
-ブレークポイントが発生したときに、デバッガーに通知します。  
+ブレークポイントが発生した場合に、デバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,19 +42,19 @@ HRESULT Breakpoint (
  [in]ブレークポイントを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   
  `pThread`  
- [in]ブレークポイントが含まれているスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ [in]ブレークポイントを含むスレッドを表す ICorDebugThread オブジェクトへのポインター。  
   
  `pBreakpoint`  
  [in]ブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8c82b3ace19d4b1d79fbfd296ce239e6da99ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5aceed6fa662f090dfe360ddca51da1381b12a2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631497"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs メソッド
 キャッシュされた列挙子を取得[!INCLUDE[wrt](../../../../includes/wrt-md.md)]アプリケーション ドメイン内の型、インターフェイスの id に基づいています。  
@@ -42,22 +42,22 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in]必要な種類の数。  
   
  `iidsToResolve`  
- [in]管理対象の形式に対応するインターフェイスの id を格納している配列へのポインター、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を取得する型。  
+ [in]マネージ表現に対応するインターフェイスの識別子を含む配列へのポインター、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を取得する型。  
   
  `ppTypesEnum`  
- [out]マネージの表現をキャッシュの列挙体をできるようにする"ICorDebugTypeEnum"インターフェイス オブジェクトのアドレスへのポインター、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]にインターフェイス識別子に基づいて、型が取得`iidsToResolve`です。  
+ [out]キャッシュの列挙を許可する"ICorDebugTypeEnum"インターフェイス オブジェクトのアドレスへのポインターの表現の管理、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]インターフェイス識別子に基づいて、型が取得`iidsToResolve`します。  
   
-## <a name="remarks"></a>コメント  
- "ICorDebugTypeEnum"コレクション内の対応するエントリがの型を持つメソッドは、特定のインターフェイスの識別子の情報を取得できなかった場合、`ELEMENT_TYPE_END`データ取得に関する問題によるエラーのまたは`ELEMENT_TYPE_VOID`の不明なインターフェイス識別子。  
+## <a name="remarks"></a>Remarks  
+ "ICorDebugTypeEnum"コレクション内の対応するエントリの種類には、メソッドは、特定のインターフェイスの識別子の情報を取得する失敗した場合、`ELEMENT_TYPE_END`のデータの取得に問題に起因するエラーまたは`ELEMENT_TYPE_VOID`不明なインターフェイス識別子。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugAppDomain3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugAppDomain3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

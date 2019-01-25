@@ -2,12 +2,12 @@
 title: XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 86bc1961fb23b0b2f98a2849eaabd4eecd65cd64
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bc3863bbe6fd7c290c25056e2420107ed2d8bff3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732805"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
 **Keyref**要素では、ドキュメント内の要素間のリンクを確立することができます。 これは、リレーショナル データベースの外部キーのリレーションシップと同様です。 スキーマが指定されている場合、 **keyref**要素で、要素の変換のテーブル内の列に対応する外部キー制約にスキーマのマッピング プロセス中に、<xref:System.Data.DataSet>します。 既定で、 **keyref**要素で、リレーションシップも生成されます、 **ParentTable**、 **ChildTable**、 **ParentColumn**、および**ChildColumn**リレーションの指定されたプロパティ。  
@@ -109,7 +109,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## <a name="see-also"></a>関連項目  
- [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

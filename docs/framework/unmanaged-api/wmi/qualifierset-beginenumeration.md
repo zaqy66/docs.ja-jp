@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d20701237501834c611c4e498c39597cf275176
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3577c90af51886868d57796fb5bfae91dedcee16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720120"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration 関数
 オブジェクトの修飾子の列挙子が列挙型の先頭にリセットされます。  
@@ -55,7 +55,7 @@ HRESULT QualifierSet_BeginEnumeration (
 
 |定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags`パラメーターが無効です。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` パラメーターが正しくありません。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 2 番目の呼び出し`QualifierSet_BeginEnumeration`せずに、中間の呼び出しが行われた[ `QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)します。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するのに十分なメモリがあります。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
@@ -71,15 +71,15 @@ HRESULT QualifierSet_BeginEnumeration (
 |定数  |値  |説明  |
 |---------|---------|---------|
 |  | 0 | すべての修飾子の名前を返します。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 現在のプロパティまたはオブジェクトに特定修飾子の名前のみを返します。 <br/> プロパティの: (上書きを含む)、プロパティに特定の修飾子のみを返すし、クラス定義からこれらの修飾子されませんが反映されます。 <br/> インスタンス: インスタンス固有の修飾子名のみが返されます。 <br/> クラス: 派生クラス beiong に特定の修飾子のみを返します。
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 別のオブジェクトから修飾子の名前のみが反映される戻り値。 <br/> プロパティ: からの戻り値修飾子のみが反映されるこのプロパティに、クラス定義と、プロパティ自体から。 <br/> インスタンス: クラス定義からこれらの修飾子の伝達の戻り値。 <br/> クラス: 戻り値の修飾子名のみが親クラスから継承されます。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 現在のプロパティまたはオブジェクトに特定修飾子の名前のみを返します。 <br/> プロパティ。(上書きを含む)、プロパティに固有の修飾子のみとクラス定義から反映された修飾子いないに返されます。 <br/> インスタンス。インスタンス固有の修飾子名のみが返されます。 <br/> クラス。派生クラス beiong 固有の修飾子のみを返します。
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 別のオブジェクトから修飾子の名前のみが反映される戻り値。 <br/> プロパティ。戻り値修飾子のみが反映されるこのプロパティに、クラス定義と、プロパティ自体から。 <br/> インスタンス。クラス定義からこれらの修飾子が反映される戻り値。 <br/> クラス。戻り値の修飾子名のみが親クラスから継承されます。 |
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

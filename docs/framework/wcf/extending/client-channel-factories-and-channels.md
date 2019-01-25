@@ -1,15 +1,15 @@
 ---
-title: 'クライアント : チャネル ファクトリとチャネル'
+title: クライアント:チャネル ファクトリとチャネル
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 3f045f56f7b73c5416e7a21a3afde29d22212d68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720315"
 ---
-# <a name="client-channel-factories-and-channels"></a>クライアント : チャネル ファクトリとチャネル
+# <a name="client-channel-factories-and-channels"></a>クライアント:チャネル ファクトリとチャネル
 ここでは、チャネル ファクトリとチャネルの作成について説明します。  
   
 ## <a name="channel-factories-and-channels"></a>チャネル ファクトリとチャネル  
@@ -30,7 +30,7 @@ ms.locfileid: "50182438"
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> クラスは、<xref:System.ServiceModel.Channels.IChannelListener> を実装しています。 基本状態管理を行います。 
   
- 次の説明がに基づいて、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
+ 次の説明がに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
   
 ### <a name="creating-a-channel-factory"></a>チャネル ファクトリの作成  
  `UdpChannelFactory` は <xref:System.ServiceModel.Channels.ChannelFactoryBase> から派生します。 サンプルでは、<xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> をオーバーライドして、メッセージ エンコーダーのメッセージ バージョンにアクセスできるようにします。 さらに、<xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> をオーバーライドして、ステート マシンの移行時に <xref:System.ServiceModel.Channels.BufferManager> のインスタンスを破棄します。  
@@ -73,5 +73,5 @@ this.socket.SendTo(
 );  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [チャネルの開発](../../../../docs/framework/wcf/extending/developing-channels.md)
+## <a name="see-also"></a>関連項目
+- [チャネルの開発](../../../../docs/framework/wcf/extending/developing-channels.md)

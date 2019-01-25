@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: e286b900d7647bcd5bc99b78164e6820c1417a63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93ec81d94d8133fc5a6d71d7f1b57b2e9a6aad21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659632"
 ---
 # <a name="data-member-order"></a>データ メンバーの順序
 一部のアプリケーションでは、各種のデータ メンバーから送信される、または受信されると予想できるデータの順序 (たとえばシリアル化された XML でデータが表れる順序) がわかると便利です。 この順序を変更する必要が生じることもあります。 ここでは、このような順序を決定する規則について説明します。  
@@ -62,7 +62,7 @@ ms.locfileid: "33489545"
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- [データ コントラクトの等価性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- [データ コントラクトの等価性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

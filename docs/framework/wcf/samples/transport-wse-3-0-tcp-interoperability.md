@@ -1,15 +1,15 @@
 ---
-title: 'トランスポート : WSE 3.0 TCP 相互運用性'
+title: トランスポート:WSE 3.0 TCP 相互運用性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653009"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>トランスポート : WSE 3.0 TCP 相互運用性
+# <a name="transport-wse-30-tcp-interoperability"></a>トランスポート:WSE 3.0 TCP 相互運用性
 WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カスタムの Windows Communication Foundation (WCF) トランスポートとして、TCP 二重セッションを実装する方法を示します。 さらに、チャネル レイヤーの拡張機能を使用して、ネットワーク経由で既存の配置システムと連結する方法も示します。 次の手順では、このカスタム WCF トランスポートを構築する方法を示します。  
   
 1.  まず TCP ソケットを使用して、DIME フレームを使用する <xref:System.ServiceModel.Channels.IDuplexSessionChannel> のクライアント実装とサーバー実装を作成し、メッセージ境界を決定します。  
@@ -23,7 +23,7 @@ WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カス�
 5.  チャネル スタックにカスタム トランスポートを追加するバインド要素を追加します。 詳細については、[バインド要素の追加] を参照してください。  
   
 ## <a name="creating-iduplexsessionchannel"></a>IDuplexSessionChannel の作成  
- WSE 3.0 TCP 相互運用性トランスポートを作成するには、まず、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> 上に <xref:System.Net.Sockets.Socket> の実装を作成します。 `WseTcpDuplexSessionChannel` は、<xref:System.ServiceModel.Channels.ChannelBase> から派生します。 メッセージ送信のロジックは、(1) メッセージをバイトにエンコードし、(2) それらのバイトをフレーム化してネットワーク上に送信するという、2 つの主要部分で構成されます。  
+ WSE 3.0 TCP 相互運用性トランスポートを作成するには、まず、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> 上に <xref:System.Net.Sockets.Socket> の実装を作成します。 `WseTcpDuplexSessionChannel` は、<xref:System.ServiceModel.Channels.ChannelBase> から派生します。 メッセージを送信するロジックは、2 つの主要部分で構成されます。(1) (バイト単位) と (2) それらのバイトをフレーム化し、ネットワーク上での送信に、メッセージをエンコードします。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -94,7 +94,7 @@ WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カス�
 ## <a name="adding-a-binding-element"></a>バインド要素の追加  
  ファクトリおよびチャネルを作成したら、バインディングを使用してそれらを ServiceModel ランタイムに開示する必要があります。 バインディングは、サービス アドレスに関連する通信スタックを表すバインド要素のコレクションです。 スタックの各要素は、バインディング要素によって表されます。  
   
- このサンプルでは、バインディング要素は `WseTcpTransportBindingElement` で、<xref:System.ServiceModel.Channels.TransportBindingElement> から派生しています。 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> がサポートされており、次のメソッドをオーバーライドして、バインディングに関連したファクトリを作成します。  
+ このサンプルでは、バインド要素は `WseTcpTransportBindingElement` で、<xref:System.ServiceModel.Channels.TransportBindingElement> から派生しています。 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> がサポートされており、次のメソッドをオーバーライドして、バインディングに関連したファクトリを作成します。  
   
  `public IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)`  
   

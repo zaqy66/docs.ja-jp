@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-ms.openlocfilehash: bed3a2b19baf28d759ac31ad5e156a769aba5a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4610d361f857d15c0f8ae46d82de102692f9feb2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731947"
 ---
 # <a name="line-is-too-long"></a>行が長すぎます。
 ソース テキストの行には、65535 文字を超えることはできません。  
@@ -21,7 +21,7 @@ ms.locfileid: "33584792"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   65535 文字以内の行の長さを短くしてください。  
+-   65535 文字以下の行の長さを短くしてください。  
   
-## <a name="see-also"></a>関連項目  
- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>関連項目
+- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

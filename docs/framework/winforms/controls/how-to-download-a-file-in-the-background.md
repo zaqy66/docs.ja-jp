@@ -1,5 +1,5 @@
 ---
-title: '方法 : バックグラウンドでファイルをダウンロードする'
+title: '方法: バック グラウンドでファイルをダウンロードします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 2396516a0e6c9aeb9b2d64a0bf6e3974d64a5cc5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2355fd4c54d26b49cc9cbe204f286e2ee67f2691
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712708"
 ---
-# <a name="how-to-download-a-file-in-the-background"></a>方法 : バックグラウンドでファイルをダウンロードする
+# <a name="how-to-download-a-file-in-the-background"></a>方法: バック グラウンドでファイルをダウンロードします。
 ファイルのダウンロードは一般的なタスクであり、時間のかかる可能性があるこの操作を別のスレッドで実行すると便利です。 ごくわずかなコードでこのタスクを実行するには、<xref:System.ComponentModel.BackgroundWorker> コンポーネントを使用します。  
   
 ## <a name="example"></a>例  
@@ -60,12 +60,12 @@ ms.locfileid: "47071399"
   
 -   System.Drawing、System.Windows.Forms、および System.Xml の各アセンブリへの参照。  
   
- Visual Basic または Visual c# のコマンドラインからこの例の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
+ Visual Basic または Visual c# のコマンドラインからこの例の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  参照してください[方法。Visual Studio を使用して、完全な Windows フォームのコードの例をコンパイルして](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))します。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  <xref:System.ComponentModel.BackgroundWorker.DoWork> イベント ハンドラーにより影響を受けている可能性がある <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> プロパティまたはその他のオブジェクトへのアクセスを試みる前に、常に <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> イベント ハンドラーの <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> プロパティを確認してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ComponentModel.BackgroundWorker>  
- [方法: バックグラウンドで操作を実行する](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [方法: バックグラウンド操作を使用するフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ComponentModel.BackgroundWorker>
+- [方法: バック グラウンドで操作を実行します。](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [方法: バック グラウンド操作を使用してフォームを実装します。](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

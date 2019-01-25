@@ -1,5 +1,5 @@
 ---
-title: '方法 : PathGeometry で LineSegment を作成する'
+title: '方法: PathGeometry で LineSegment を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 61425a68d83c8078b8420be01e0e59d3cba6a4e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9aa17a361e8e0ca5b43b2646c38926e0123818c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712130"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>方法 : PathGeometry で LineSegment を作成する
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>方法: PathGeometry で LineSegment を作成する
 この例では、線分を作成する方法を示します。 直線セグメントを作成するには、使用、 <xref:System.Windows.Media.PathGeometry>、 <xref:System.Windows.Media.PathFigure>、および<xref:System.Windows.Media.LineSegment>クラス。  
   
 ## <a name="example"></a>例  
@@ -101,9 +101,9 @@ Dim myPathFigure As New PathFigure()
   
  この例は、より大きなサンプルの一部です。完全なサンプルについては、「[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.PathFigure>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.GeometryDrawing>  
- <xref:System.Windows.Shapes.Path>  
- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.PathFigure>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.GeometryDrawing>
+- <xref:System.Windows.Shapes.Path>
+- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

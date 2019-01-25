@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: 858ceb217ce30708a7d24c62ca18f8f59ba49d4c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0582e40b21a981c5195fed215c2c234847f913f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696959"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>トランスポート セキュリティと匿名クライアント
 この Windows Communication Foundation (WCF) のシナリオでは、トランスポート セキュリティ (HTTPS) を使用して、機密性と整合性を確認します。 サーバーは SSL (Secure Sockets Layer) 証明書で認証される必要があり、クライアントはサーバーの証明書を信頼する必要があります。 クライアントを認証する機構はないため、匿名となります。  
   
  サンプル アプリケーションでは、次を参照してください。 [WS トランスポート セキュリティ](../../../../docs/framework/wcf/samples/ws-transport-security.md)します。 トランスポート セキュリティの詳細については、次を参照してください。[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)します。  
   
- サービスで証明書の使用に関する詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)と[方法: SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。  
+ サービスで証明書の使用に関する詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)と[方法。SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。  
   
  ![トランスポート セキュリティを使用すると匿名クライアント](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   
@@ -25,7 +25,7 @@ ms.locfileid: "50183068"
 |--------------------|-----------------|  
 |セキュリティ モード|Transport|  
 |相互運用性|既存の Web サービスとクライアントを使用する|  
-|認証 (サーバー)<br /><br /> 認証 (クライアント)|はい<br /><br /> アプリケーション レベル (WCF はサポートされません)|  
+|認証 (サーバー)<br /><br /> 認証 (クライアント)|[はい]<br /><br /> アプリケーション レベル (WCF はサポートされません)|  
 |整合性|はい|  
 |機密性|はい|  
 |Transport|HTTPS|  
@@ -114,8 +114,8 @@ ms.locfileid: "50183068"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [WS トランスポート セキュリティ](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
- [トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [WS トランスポート セキュリティ](../../../../docs/framework/wcf/samples/ws-transport-security.md)
+- [トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

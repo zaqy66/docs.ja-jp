@@ -2,12 +2,12 @@
 title: SQL Server での安全な動的 SQL の作成
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 446a9f6a49b376f04d1c82d45463d567d89116d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745611"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server での安全な動的 SQL の作成
 SQL インジェクションとは、悪意のあるユーザーによって、有効な入力データの代わりに Transact-SQL ステートメントが入力されることをいいます。 この入力データが検証されずにサーバーに直接渡され、挿入されたコードがアプリケーションでそのまま実行された場合、その攻撃によってデータが破損または破壊される可能性があります。  
@@ -35,7 +35,7 @@ SQL インジェクションとは、悪意のあるユーザーによって、�
   
 -   多層環境では、信頼済みゾーンに入ることを許可する前にすべてのデータを検証する必要があります。  
   
--   フィールド内の文字列からファイル名を作成できる場合、AUX、CLOCK$、COM1 ～ COM8、CON、CONFIG$、LPT1 ～ LPT8、NUL、PRN の各文字列をフィールドに入力できないようにします。  
+-   ファイル名を構築するためのフィールドで、次の文字列は受け入れません。AUX、CLOCK$、COM1 ~ COM8、CON、CONFIG$、LPT1 ~ LPT8、NUL、PRN します。  
   
 -   <xref:System.Data.SqlClient.SqlParameter> オブジェクトにストアド プロシージャとコマンドを組み合わせ、型チェックと長さ検証を実行します。  
   
@@ -66,11 +66,11 @@ SQL インジェクションとは、悪意のあるユーザーによって、�
 |--------------|-----------------|  
 |「[ストアド プロシージャ](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)」と「[SQL インジェクション](/sql/relational-databases/security/sql-injection)」 (SQL Server オンライン ブック)|ストアド プロシージャの作成方法と SQL インジェクションのしくみについて説明します。|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [SQL Server での借用を使用したアクセス許可のカスタマイズ](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
+- [SQL Server での借用を使用したアクセス許可のカスタマイズ](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640447"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 オペレーティング システムが含まれている、基になるプラットフォームのセキュリティ機能も活用のさまざまなセキュリティ サービスを提供しますが、Windows Presentation Foundation (WPF)、 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]します。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
@@ -128,7 +128,7 @@ ms.locfileid: "49121403"
   
 -   **信頼されないサイト**。 ユーザーから信頼しないと特定されたアプリケーション。 (非信頼)。  
   
- これらのゾーンごとに、[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] は、それぞれが関連付けられている信頼レベルと一致するアクセス許可を含む定義済みの権限セットを提供します。 次の設定があります。  
+ これらのゾーンごとに、[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] は、それぞれが関連付けられている信頼レベルと一致するアクセス許可を含む定義済みの権限セットを提供します。 不足している機能には次が含まれます。  
   
 -   **FullTrust**。 起動するアプリケーションの**マイ コンピューター**ゾーン。 可能性のあるすべてのアクセス許可が付与されます。  
   
@@ -208,12 +208,12 @@ ms.locfileid: "49121403"
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] は、継続的なセキュリティへの取り組みの一環として、[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] のセキュリティ機能を強化しています。  
   
-## <a name="see-also"></a>関連項目  
- [Windows XP sp2 環境内における Microsoft Internet Explorer 6 のセキュリティをについてください。](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [保護モードの Internet Explorer での作業と理解](https://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Windows Vista セキュリティ ガイド](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)  
- [セキュリティ](../../../docs/framework/wpf/security-wpf.md)  
- [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF のセキュリティ方針 - セキュリティ エンジニアリング](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>関連項目
+- [Windows XP sp2 環境内における Microsoft Internet Explorer 6 のセキュリティをについてください。](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
+- [保護モードの Internet Explorer での作業と理解](https://msdn.microsoft.com/library/bb250462.aspx)
+- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
+- [Windows Vista セキュリティ ガイド](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
+- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)
+- [セキュリティ](../../../docs/framework/wpf/security-wpf.md)
+- [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF のセキュリティ方針 - セキュリティ エンジニアリング](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

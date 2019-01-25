@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows 資格情報でサービスをセキュリティで保護する'
+title: '方法: Windows 資格情報でサービスをセキュリティで保護します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: c47539e0c614992efd74296171034b8091ba3f15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657559"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>方法 : Windows 資格情報でサービスをセキュリティで保護する
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>方法: Windows 資格情報でサービスをセキュリティで保護します。
 このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される、Windows Communication Foundation (WCF) サービスのトランスポート セキュリティを有効にする方法を示します。 このシナリオの詳細については、次を参照してください。[トランスポート セキュリティと Windows 認証](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)します。 サンプル アプリケーションでは、次を参照してください。、 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。  
   
  このトピックでは、定義済みのコントラクト インターフェイスと実装が既に存在するものとして、それに機能を追加していきます。 既存のサービスとクライアントを変更することもできます。  
@@ -74,7 +74,7 @@ ms.locfileid: "50183322"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>コードによってクライアントでバインディングを使用するには  
   
-1.  SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードを生成します。 詳細については、次を参照してください。[方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。 生成されたプロキシ コードが継承、<xref:System.ServiceModel.ClientBase%601>クラスで、必要なコンス トラクター、メソッド、および WCF サービスと通信するプロパティのすべてのクライアントがあることを確認します。 この例では、生成されたコードに、`CalculatorClient` インターフェイスを実装した `ICalculator` クラスが追加されるので、サービス コードとの互換が可能になります。  
+1.  SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードを生成します。 詳細については、「[方法 :クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。 生成されたプロキシ コードが継承、<xref:System.ServiceModel.ClientBase%601>クラスで、必要なコンス トラクター、メソッド、および WCF サービスと通信するプロパティのすべてのクライアントがあることを確認します。 この例では、生成されたコードに、`CalculatorClient` インターフェイスを実装した `ICalculator` クラスが追加されるので、サービス コードとの互換が可能になります。  
   
 2.  この手順のコードは、クライアント プログラムの `Main` メソッドの先頭に挿入します。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "50183322"
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>構成によってクライアントでバインディングを使用するには  
   
-1.  SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードと構成ファイルを生成します。 詳細については、次を参照してください。[方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。  
+1.  SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードと構成ファイルを生成します。 詳細については、「[方法 :クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。  
   
 2.  置換、 [\<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)前のセクションの構成コードで生成された構成ファイルのセクション。  
   
@@ -147,9 +147,9 @@ ms.locfileid: "50183322"
  [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.WSHttpBinding>  
- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)  
- [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.WSHttpBinding>
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
+- [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)

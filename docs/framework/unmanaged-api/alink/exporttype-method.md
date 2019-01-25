@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 958b56266b0d2dcc317204c39a1df56baabd83e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ce6478f0331c590a2384a4e7e9b5621c050715d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623639"
 ---
 # <a name="exporttype-method"></a>ExportType メソッド
-型がエクスポート可能なことを指定します。  
+型がエクスポート可能であるを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +53,7 @@ HRESULT ExportType(
  エクスポート可能にする完全修飾型名。  
   
  `dwFlags`  
- `ComType` フラグのように`tdPublic`または`tdNested`です。 このパラメーターを渡すことがあります[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)です。  
+ `ComType` フラグなど`tdPublic`または`tdNested`します。 このパラメーターに渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。  
@@ -61,10 +61,10 @@ HRESULT ExportType(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

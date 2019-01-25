@@ -2,18 +2,18 @@
 title: 型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7abbe5dfed005a10955a385cadf12725a9450512
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743531"
 ---
 # <a name="type-definitions-entity-sql"></a>型定義 (Entity SQL)
 型定義は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline 関数の宣言ステートメントで使用されます。  
   
-## <a name="remarks"></a>コメント  
- インライン関数の宣言ステートメントから成る、[関数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)キーワードの後に (かっこ内のパラメーター定義リスト続けて関数名 (たとえば、"MyAvg") を表す識別子例では、"dues Collection(Decimal)") です。  
+## <a name="remarks"></a>Remarks  
+ インライン関数の宣言ステートメントから成る、[関数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)キーワードの後に (かっこで囲まれたパラメーター定義リストが続く関数名 (例:"MyAvg") を表す識別子例:"dues します。  
   
  パラメーター定義リストは、0 個以上のパラメーター定義で構成されます。 各パラメーター定義は、識別子 (関数のパラメーターの名前。例 : "dues") とそれに続く型定義 (例 : "Collection(Decimal)") で構成されます。  
   
@@ -86,6 +86,6 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>関連項目
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

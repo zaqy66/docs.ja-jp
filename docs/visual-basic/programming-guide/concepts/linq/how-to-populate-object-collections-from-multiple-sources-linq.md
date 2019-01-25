@@ -1,24 +1,24 @@
 ---
-title: '方法: 複数のソース (LINQ) (Visual Basic) からオブジェクトのコレクションへの追加'
+title: '方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションを設定します。'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638822"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>方法: 複数のソース (LINQ) (Visual Basic) からオブジェクトのコレクションへの追加
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションを設定します。
 
 この例では、さまざまなソースから一連の新しい型にデータをマージする方法を示します。
 
 > [!NOTE]
-> データベースに残っているデータをファイル システムでメモリ内データまたはデータへの参加しないでください。 このようなドメイン間結合を行うと、データベース クエリと他の種類のソースとで結合操作の定義方法に違いがあることが原因で、結果が未定義になる可能性があります。 また、データベース内に大量のデータが存在すると、こうした操作によってメモリ不足例外が発生するおそれがあります。 データベースのデータをメモリ内データに結合するには、まずデータベース クエリで `ToList` または `ToArray` を呼び出してから、返されたコレクションで結合を実行します。
+> メモリ内データやファイル システム内のデータを、データベース内にあるデータに結合しようとしないでください。 このようなドメイン間結合を行うと、データベース クエリと他の種類のソースとで結合操作の定義方法に違いがあることが原因で、結果が未定義になる可能性があります。 また、データベース内に大量のデータが存在すると、こうした操作によってメモリ不足例外が発生するおそれがあります。 データベースのデータをメモリ内データに結合するには、まずデータベース クエリで `ToList` または `ToArray` を呼び出してから、返されたコレクションで結合を実行します。
 
 ## <a name="to-create-the-data-file"></a>データ ファイルを作成するには
 
-- 説明に従って、プロジェクトのフォルダーに、names.csv および scores.csv ファイルをコピー[する方法: Join コンテンツから複数の異なるファイル (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)です。
+- 説明に従って、names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピー[方法。異種ファイル (LINQ) (Visual Basic) からコンテンツを結合する](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)します。
 
 ## <a name="example"></a>例
 
@@ -100,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)句、オブジェクト初期化子を使ってそれぞれの新しいインスタンスを作成する`Student`2 つのソースからデータを使用してオブジェクト。
+[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)句では、オブジェクト初期化子はそれぞれの新しいインスタンスを作成するために使用`Student`2 つのソースからデータを使用してオブジェクト。
 
-クエリの結果を格納することも、匿名型は名前付きの型よりも簡単にできます。 クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。 次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。
+クエリの結果を格納する必要がない場合は、名前付きの型よりも匿名型の方が便利です。 クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。 次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -130,12 +130,12 @@ Next
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-作成し、次のオプションのいずれかを対象とするプロジェクトをコンパイルします。
+次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。
 
-- .NET framework バージョン 3.5 System.Core.dll への参照。
-- .NET framework 4.0 またはそれ以降のバージョン。
-- .NET core バージョン 1.0 以降。
+- System.Core.dll の参照を含む .NET Framework バージョン 3.5。
+- .NET Framework バージョン 4.0 以降
+- .NET Core バージョン 1.0 以降。
 
 ## <a name="see-also"></a>関連項目
 
-[LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4302a73f9f077c2e1bf4f66c2b80ab025ae4a62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157cc9f5f520f376c0c055ab49b116bc7961f421
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641071"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache インターフェイス
-Fusion テクノロジで使用するためのグローバル アセンブリ キャッシュを表します。  
+Fusion のテクノロジで使用するためのグローバル アセンブリ キャッシュを表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CreateAssemblyCacheItem メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|新しいへの参照を取得[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)です。|  
-|[CreateAssemblyScavenger メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Fusion テクノロジでは、内部使用に予約されています。|  
+|[CreateAssemblyCacheItem メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|新しいへの参照を取得します。 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)します。|  
+|[CreateAssemblyScavenger メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Fusion のテクノロジでは、内部使用のため予約されています。|  
 |[InstallAssembly メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|指定したアセンブリをグローバル アセンブリ キャッシュにインストールします。|  
 |[QueryAssemblyInfo メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|指定したアセンブリについて、要求されたデータを取得します。|  
 |[UninstallAssembly メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>関連項目
+- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)

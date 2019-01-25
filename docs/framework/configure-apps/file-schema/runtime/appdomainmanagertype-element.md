@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e7f37fd652ce98e24d2e2e99edcd3d59a0e597b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b5ce973abc92080ec24fe909948f03f58eb05dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679085"
 ---
 # <a name="ltappdomainmanagertypegt-element"></a>&lt;appDomainManagerType&gt;要素
 既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーの役割を果たす種類を指定します。  
   
  \<configuration>  
-\<ランタイム >  
-\<appDomainManagerType >  
+\<runtime>  
+\<appDomainManagerType>  
   
 ## <a name="syntax"></a>構文  
   
@@ -73,10 +73,10 @@ ms.locfileid: "53610432"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
-- [\<appDomainManagerAssembly > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
+- [\<appDomainManagerAssembly > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [SetAppDomainManagerType メソッド](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

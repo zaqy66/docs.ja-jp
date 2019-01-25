@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651605"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  
@@ -129,8 +129,8 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>アプリケーション ロールに代わる方法  
  アプリケーション ロールに代わるセキュリティ メカニズムの使用をお勧めします。 詳細については、次を参照してください。 [SQL Server でのアプリケーション ロールの作成](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)です。  
   
-## <a name="see-also"></a>関連項目  
- [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

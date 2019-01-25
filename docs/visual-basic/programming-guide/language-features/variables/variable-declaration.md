@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718794"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic での変数宣言
 名前と特性を指定する変数を宣言するとします。 変数の宣言ステートメントは、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。 その場所や内容は、変数の特性を決定します。  
@@ -73,17 +73,17 @@ Dim l, m As Long, x, y As Single
 ## <a name="characteristics-of-declared-variables"></a>宣言された変数の特性  
  *有効期間*変数は、一定期間その中に、使用可能です。 一般に、変数は、(手順やクラスで) 宣言された要素が存在し続けます限り存在します。 変数がそのコンテナー要素の有効期間よりも長く必要がない場合は、宣言で特別な処理は必要はありません。 変数をそのコンテナー要素よりも長い場合は、含めることができます、`Static`または`Shared`キーワードでその`Dim`ステートメント。 詳細については、次を参照してください。 [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)します。  
   
- *スコープ*変数がその名前を修飾せずに参照できるすべてのコードのセット。 変数のスコープは、宣言されている場所によって決まります。 特定のリージョン内にあるコードでは、その名前を修飾することがなく、そのリージョンで定義されている変数を使用できます。 詳細については、次を参照してください。 [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)します。  
+ *スコープ*変数がその名前を修飾せずに参照できるすべてのコードのセット。 変数のスコープは、宣言されている場所によって決まります。 特定のリージョン内にあるコードでは、その名前を修飾することがなく、そのリージョンで定義されている変数を使用できます。 詳細については、「 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
   
  変数の*アクセス レベル*は、それへのアクセス許可があるコードの範囲です。 これは、`Dim`ステートメントで使用するアクセス修飾子([Public](../../../../visual-basic/language-reference/modifiers/public.md)または[Private](../../../../visual-basic/language-reference/modifiers/private.md)など)によって決まります。 詳細については、[ Visual Basic のアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [方法 : 新しい変数を作成する](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [方法 : 変数に値を格納する、および変数から値を取得する](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a>関連項目
+- [方法: 新しい変数を作成します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [方法: および、変数からのデータを移動します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

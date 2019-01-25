@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650484"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>演算子の結果のデータ型 (Visual Basic)
 Visual Basic では、オペランドのデータ型に基づく操作の結果のデータ型を決定します。 場合によっては、データ型のいずれかのオペランドよりも広い範囲をこれがあります。  
@@ -86,7 +86,7 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |単項 `+`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|単項 `–`|Short|SByte|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
+|単項 `–`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
   
 ### <a name="-and--operators"></a><\< >> 演算子  
  次の表は、2 つのビット シフト演算子の結果のデータ型を示します`<<`と`>>`します。 各ビット シフト演算子は、Visual Basic は、左側のオペランド (シフトするビット パターン) の単項演算子として扱います。  
@@ -104,10 +104,10 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
-|`SByte`|SByte|SByte|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
+|`Boolean`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
+|`SByte`|SByte|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
+|`Short`|Short|Short|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
 |`UShort`|整数型|整数型|UShort|整数型|UShort|整数型|UInteger|Long|ULong|  
 |`Integer`|整数型|整数型|整数型|整数型|整数型|整数型|Long|Long|Decimal (10 進数型)|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -120,10 +120,10 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|整数|整数型|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|整数|整数型|Long|Long|Long|  
+|`Boolean`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|整数|整数型|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|整数型|整数型|Long|Long|Long|  
 |`UShort`|整数型|整数型|UShort|整数型|UShort|整数型|UInteger|Long|ULong|  
 |`Integer`|整数型|整数型|整数型|整数型|整数型|整数型|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -156,10 +156,10 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|ブール型|SByte|Short|Short|整数|整数型|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|整数|整数型|Long|Long|Long|  
+|`Boolean`|ブール型|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|整数|整数型|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|整数型|整数型|Long|Long|Long|  
 |`UShort`|整数型|整数型|UShort|整数型|UShort|整数型|UInteger|Long|ULong|  
 |`Integer`|整数型|整数型|整数型|整数型|整数型|整数型|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -175,14 +175,14 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
   
  `Like`のパターンに一致するのみの演算子が定義されている`String`オペランド。 Visual Basic が、必要に応じて各オペランドを変換しようとしています。`String`操作の前にします。 結果のデータ型は常に`Boolean`します。  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [演算子](../../../visual-basic/language-reference/operators/index.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>関連項目
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [演算子](../../../visual-basic/language-reference/operators/index.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)

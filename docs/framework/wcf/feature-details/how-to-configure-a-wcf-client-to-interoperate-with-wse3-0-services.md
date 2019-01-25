@@ -1,18 +1,18 @@
 ---
-title: '方法 : WCF クライアントと WSE3.0 サービスを相互運用するために構成する'
+title: '方法: WSE3.0 サービスと相互運用する WCF クライアントを構成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 5cbe982049d1df6e2c714ca0b63de0db7577452e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 52793b6d077f1da33d2d675be3284ce134beb2d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730959"
 ---
-# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法 : WCF クライアントと WSE3.0 サービスを相互運用するために構成する
+# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法: WSE3.0 サービスと相互運用する WCF クライアントを構成します。
 Windows Communication Foundation (WCF) クライアントと Microsoft .NET (WSE) サービスの Web サービス拡張 3.0 とネットワーク レベル互換性は、Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF クライアントが構成されている場合。  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>WSE 3.0 Web サービスと相互運用するように WCF クライアントを構成するには  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) クライアントと Microsoft .NET (WSE
   
      WSE Web サービス、WCF クライアント クラスが作成されます。  
   
-     WCF クライアントを作成する方法については、次を参照してください。、[方法: クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。  
+     WCF クライアントを作成する方法については、次を参照してください。、[方法。クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。  
   
 2.  WSE 3.0 Web サービスと通信できるバインディングを表すクラスを作成します。  
   
@@ -62,6 +62,6 @@ Windows Communication Foundation (WCF) クライアントと Microsoft .NET (WSE
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.Binding>  
- [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Channels.Binding>
+- [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

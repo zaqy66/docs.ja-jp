@@ -1,15 +1,15 @@
 ---
-title: '方法 : 一方向コントラクトと要求/応答コントラクトを使用して WCF サービスにアクセスする'
+title: '方法: 一方向の WCF サービスへのアクセスと要求/応答コントラクト'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639176"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>方法 : 一方向コントラクトと要求/応答コントラクトを使用して WCF サービスにアクセスする
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>方法: 一方向の WCF サービスへのアクセスと要求/応答コントラクト
 次の手順では、一方向コントラクトと要求/応答コントラクトを定義する Windows Communication Foundation (WCF) サービスにアクセスして、双方向通信パターンを使用しない方法について説明します。  
   
 ### <a name="to-define-the-service"></a>サービスを定義するには  
@@ -109,7 +109,7 @@ ms.locfileid: "33494323"
   
 ### <a name="to-access-the-service"></a>サービスにアクセスするには  
   
-1.  実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)メタデータ交換エンドポイントのアドレスを使用して、次のコマンドラインを使用して、サービスのクライアント クラスを作成する: `Svcutil http://localhost:8000/Service` 、 [ServiceModelメタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)の次のサンプル コードに示すように、インターフェイスとクラスのセットを生成します。  
+1.  実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)メタデータ交換エンドポイントのアドレスを使用して、次のコマンドラインを使用して、サービスのクライアント クラスを作成します。`Svcutil http://localhost:8000/Service` [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)の次のサンプル コードに示すように、インターフェイスとクラスのセットを生成します。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>関連項目
+- [一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)

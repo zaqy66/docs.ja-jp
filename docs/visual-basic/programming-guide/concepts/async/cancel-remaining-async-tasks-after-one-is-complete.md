@@ -2,12 +2,12 @@
 title: 1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 2f784449f6a70bccb386cc268e7c33cefe8f9a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0edcc969caaeae46240f048e76fbe153041873e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645809"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドを <xref:System.Threading.CancellationToken> と共に使用すると、1 つのタスクが完了したときに残りのすべてのタスクを取り消しできます。 `WhenAny` メソッドは、タスクのコレクションである引数を受け取ります。 このメソッドは、すべてのタスクを開始し、単一のタスクを返します。 単一のタスクは、コレクションのいずれかのタスクが完了すると完了します。  
@@ -18,13 +18,13 @@ ms.locfileid: "50191208"
 >  この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。  
   
 ## <a name="downloading-the-example"></a>例をダウンロードする  
- 完全な Windows Presentation Foundation (WPF) プロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。ダウンロード後、次の手順に従います。  
+ 完全な Windows Presentation Foundation (WPF) プロジェクトをダウンロードする[「Async Sample:アプリケーションの調整を細かく](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)し次の手順に従います。  
   
 1.  ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
   
 2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  **プロジェクトを開く** ダイアログ ボックスでは、圧縮を解除するには、サンプル コードを保持するフォルダーを開き、AsyncFineTuningVB のソリューション (.sln) ファイルを開きます。  
+3.  **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningVB 用のソリューション (.sln) ファイルを開きます。  
   
 4.  **ソリューション エクスプローラー**で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "50191208"
   
 6.  プログラムを複数回実行し、最初に終了するダウンロードが異なることを確認します。  
   
- プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルを確認できます。  
+ プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルをレビューできます。  
   
 ## <a name="building-the-example"></a>例のビルド  
  このトピックの例で開発されたプロジェクトに追加[非同期タスクまたはタスクの一覧のキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)タスクのリストを取り消します。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
@@ -107,7 +107,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
   
  <xref:System.Net.Http> の参照を追加する必要があることに注意してください。  
   
- このプロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。  
+ プロジェクトをダウンロードする[「Async Sample:アプリケーションを詰める](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)します。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -234,7 +234,7 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
-- [非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
-- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
-- [非同期のサンプル: アプリケーションの微調整](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>
+- [非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

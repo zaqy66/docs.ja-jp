@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル : ツールボックスへのカスタム コンポーネントの自動設定'
+title: 'チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730270"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>チュートリアル : ツールボックスへのカスタム コンポーネントの自動設定
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力
 自動的に表示されます、コンポーネントは現在開いているソリューション内のプロジェクトで定義されている場合、**ツールボックス**操作は必要とします。 手動で設定することができます、**ツールボックス**を使用して、カスタム コンポーネントで、[選択ツールボックス項目 ダイアログ ボックス (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)が、**ツールボックス**を考慮に入れたソリューションの内の項目の次のすべての特性を持つ出力をビルドします。  
   
 -   実装<xref:System.ComponentModel.IComponent>;  
@@ -47,9 +47,9 @@ ms.locfileid: "44041562"
   
 1.  という名前の Windows ベースのアプリケーション プロジェクトを作成する`ToolboxExample`(**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
-2.  新しいコンポーネントをプロジェクトに追加します。 呼び出す`DemoComponent`します。  
+2.  新しいコンポーネントをプロジェクトに追加します。 このプロジェクトに `DemoComponent`という名前を付けます。  
   
-     詳細については、次を参照してください。 [NIB: 方法: 新しいプロジェクト項目の追加](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)します。  
+     詳細については、次を参照してください。 [NIB: 方法。新しいプロジェクト項目の追加](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)します。  
   
 3.  プロジェクトをビルドします。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "44041562"
   
 1.  ソリューションからプロジェクトをアンロードします。  
   
-     プロジェクトのアンロードの詳細については、次を参照してください。 [NIB: 方法:: アンロードと再読み込みプロジェクト](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b)します。 保存するメッセージが表示されたら、選択**はい**します。  
+     プロジェクトのアンロードの詳細については、次を参照してください。 [NIB: 方法。アンロードし、プロジェクトの再読み込み](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b)します。 保存するメッセージが表示されたら、選択**はい**します。  
   
 2.  新しい追加**Windows アプリケーション**プロジェクトがソリューションにします。 フォームを開いて、**デザイナー**します。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "44041562"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルで説明する、**ツールボックス**プロジェクトのコンポーネントを考慮に入れたが、**ツールボックス**コントロールになります。 追加と管理プロジェクトをソリューションから削除して、独自のカスタム コントロールを試します。  
   
-## <a name="see-also"></a>関連項目  
- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [方法: [ツールボックス] タブの操作](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [[ツールボックス アイテムの選択] ダイアログ ボックス (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
- [Windows フォームへのコントロールの追加](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [方法: [ツールボックス] タブを操作します。](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
+- [[ツールボックス アイテムの選択] ダイアログ ボックス (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Windows フォームへのコントロールの追加](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

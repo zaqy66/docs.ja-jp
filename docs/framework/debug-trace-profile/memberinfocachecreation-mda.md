@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 028ff1048813ccbc845d5ad3e7f522b492348f87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651033"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 `memberInfoCacheCreation` マネージド デバッグ アシスタント (MDA) は、<xref:System.Reflection.MemberInfo> キャッシュが作成されるとアクティブになります。 これは、リソースに大きな負荷のかかるリフレクション機能をプログラムが使っていることを明確に示すものです。  
@@ -64,6 +64,6 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Reflection.MemberInfo>  
- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Reflection.MemberInfo>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

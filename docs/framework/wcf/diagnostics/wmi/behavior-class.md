@@ -2,12 +2,12 @@
 title: 動作クラス
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: bf7d7f4ae4340cd8aee9a200015255820ac140f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5d988ae32684bb3ef7ba3dc2ee8c1d749126bcc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743570"
 ---
 # <a name="behavior-class"></a>動作クラス
 ## <a name="syntax"></a>構文  
@@ -28,7 +28,7 @@ class Behavior
 ### <a name="type"></a>型  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  動作の種類です。  
   
@@ -38,5 +38,5 @@ class Behavior
 |---------|-----------------------------------|  
 |Namespace|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>

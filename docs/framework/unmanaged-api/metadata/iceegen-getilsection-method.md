@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6025b5914d4e96d10d83fc47a6baea7aa09605d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e75f46d73e068c6bdaac6ae01740ecf589c97d42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635911"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection メソッド
-指定されたハンドルによって参照される基本の中間言語コードのセクションを取得します。  
+指定したハンドルによって参照される基本の中間言語コードのセクションを取得します。  
   
- このメソッドは、古いは使用できません。  
+ このメソッドは廃止され、使用する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,14 +41,14 @@ HRESULT GetIlSection (
  `section`  
  [in]取得するセクションへのハンドル。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

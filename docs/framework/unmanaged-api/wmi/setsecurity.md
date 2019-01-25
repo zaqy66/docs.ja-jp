@@ -1,6 +1,6 @@
 ---
 title: SetSecurity 関数 (アンマネージ API リファレンス)
-description: SetSecurity 関数では、現在のスレッドの偽装トークンを取得します。
+description: SetSecurity 関数は、現在のスレッドの偽装トークンを取得します。
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721140"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 関数
-現在のスレッドに関連付けられている権限借用トークンを取得します。   
+現在のスレッドに関連付けられている偽装トークンが取得されます。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,23 +39,23 @@ HRESULT SetSecurity (
 
 ## <a name="parameters"></a>パラメーター
 
-`pNeedToReset` [out]ポインターを含む、関数から制御が戻るとき、`boolean`を呼び出してトークンをリセットするかどうかを示す、 [ResetSecurity](resetsecurity.md)関数。  
+`pNeedToReset` [out]関数から制御が戻るときにへのポインターを格納する`boolean`を呼び出してトークンをリセットするかどうかを示す、 [ResetSecurity](resetsecurity.md)関数。  
 
 `token`  
-[out]関数から制御が戻るときに、現在のスレッドに関連付けられている権限借用トークンのハンドルへのポインターが含まれています。 その値を指定できます`null`かどうかは、現在のスレッドに関連付けられているトークンはありません。 
+[out]関数から制御が戻るときは、現在のスレッドに関連付けられている権限借用トークンのハンドルへのポインターを格納します。 その値を指定できます`null`かどうかは、現在のスレッドに関連付けられているトークンはありません。 
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は`S_OK`(0) です。
+関数が成功した場合、戻り値は`S_OK`(0)。
 
-関数が失敗した場合、戻り値がゼロ以外のエラー コードです。 拡張エラー情報を取得する呼び出し、 [GetErrorInfo](geterrorinfo.md)関数。
+関数が失敗した場合、戻り値が 0 以外のエラー コードにします。 拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

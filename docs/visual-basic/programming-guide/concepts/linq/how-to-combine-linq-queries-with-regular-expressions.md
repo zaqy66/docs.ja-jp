@@ -1,15 +1,15 @@
 ---
-title: '方法: LINQ クエリと正規表現を組み合わせる (Visual Basic)'
+title: '方法: LINQ クエリは、正規表現を使用 (Visual Basic) とを組み合わせる'
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 8e58e2c65ad8ea0e3d3a8f454b894e556b349428
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d82b562211a9dd7fa035fe878bcdee769b8a85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652476"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>方法: LINQ クエリと正規表現を組み合わせる (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>方法: LINQ クエリは、正規表現を使用 (Visual Basic) とを組み合わせる
 この例では、<xref:System.Text.RegularExpressions.Regex> クラスを使用して正規表現を作成し、テキスト文字列内の複雑な一致を取得する方法を示します。 LINQ クエリを使用すると、正規表現で検索する必要のあるファイルだけをフィルターで抽出したり、結果の形式を指定したりするのが簡単になります。  
   
 ## <a name="example"></a>例  
@@ -84,6 +84,6 @@ End Class
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>関連項目
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

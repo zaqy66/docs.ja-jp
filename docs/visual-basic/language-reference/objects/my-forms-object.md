@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712626"
 ---
 # <a name="myforms-object"></a>My.Forms オブジェクト
 プロパティは、現在のプロジェクトで宣言されている各 Windows フォームのインスタンスへのアクセスを提供します。  
@@ -52,7 +52,7 @@ ms.locfileid: "48582659"
   
  このコードは、Windows アプリケーション プロジェクトでのみ動作します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 ### <a name="availability-by-project-type"></a>プロジェクトの種類ごとの可用性  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48582659"
 |Windows サービス|いいえ|  
 |Web サイト|いいえ|  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [オブジェクト](../../../visual-basic/language-reference/objects/index.md)  
- [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [アプリケーション フォームへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [オブジェクト](../../../visual-basic/language-reference/objects/index.md)
+- [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [アプリケーション フォームへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

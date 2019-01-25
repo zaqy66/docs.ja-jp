@@ -3,12 +3,12 @@ title: 閉じるを使用し、WCF クライアントのリソースを解放す
 description: Dispose は失敗し、ネットワークが失敗したときに例外をスローすることができます。 動作が望ましくない可能性があります。 代わりに、閉じるを使用し、ネットワークが失敗したときに、クライアントのリソースを解放する中止します。
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736430"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>終了、中止のネットワーク接続が削除されるときに安全に、リソースを解放
 このサンプルを使用して、`Close`と`Abort`型指定されたクライアントを使用する場合は、リソースをクリーンアップする方法。 `using`ステートメントでは、ネットワーク接続が堅牢なときに例外が発生します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 この例では、クライアントはコンソール アプリケーション (.exe) であり、サービスはインターネット インフォメーション サービス (IIS) によってホストされます。  

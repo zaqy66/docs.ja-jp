@@ -1,21 +1,21 @@
 ---
-title: '&lt;BackupList&gt;'
+title: '&lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1a6a7ac42b379dd8fb2ba80cf6a3a38998c26a59
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627984"
 ---
-# <a name="ltbackuplistgt"></a>&lt;BackupList&gt;
+# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
 プライマリ エンドポイントに接続できない場合に使用するルーティング サービスが希望されるエンドポイントのセットを列挙したバックアップ リストを定義するための構成セクションを表します。 リストの最初のエンドポイントがダウンしていると、ルーティング サービスは自動的にリスト内で次にあるエンドポイントにフェールオーバーします。  これにより、クライアント アプリケーションに複雑なパターンの処理方法やサービスの配置場所を示すことなく、アプリケーションの信頼性を高めることができます。  
   
  \<system.serviceModel>  
 \<ルーティング >  
 \<backupLists >  
-\<backupList >  
+\<backupList>  
   
 ## <a name="syntax"></a>構文  
   
@@ -73,5 +73,5 @@ ms.locfileid: "54146551"
 </backupLists>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 270267fa961e2d9420364bc11992be9eff03866b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94e9c510f7f3c183bf6cbde31e2ead04cc66bfb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744116"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このセクションでは、カスタム コントロールのサーバー側 UI オートメーション プロバイダーを実装する方法について説明します。  
   
@@ -171,12 +171,12 @@ ms.locfileid: "48837391"
   
  これを実現するため、Rebar のフラグメント ルート プロバイダーは、バンドを表す子のセットを公開します。 各バンドには、プロパティとパターンを公開するプロバイダーが 1 つあります。 その <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>の実装で、バンド プロバイダーはコントロール HWND の既定のウィンドウ プロバイダーを返します。これを取得するには、コントロールのウィンドウ ハンドルを渡して <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>を呼び出します。 最後に、Rebar のフラグメント ルート プロバイダーは <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> インターフェイスを実装し、その <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> の実装で、指定した HWND に含まれるコントロールの適切なバンド プロバイダーを返します。  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [サーバー側 UI オートメーション プロバイダーの公開](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [UI オートメーション プロバイダーからのイベントの発生](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [単純なプロバイダーのサンプル](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [フラグメント プロバイダーのサンプル](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a>関連項目
+- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [サーバー側 UI オートメーション プロバイダーの公開](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [UI オートメーション プロバイダーからのイベントの発生](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [単純なプロバイダーのサンプル](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)
+- [フラグメント プロバイダーのサンプル](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : クライアントの資格情報の種類を指定する'
+title: '方法: クライアント資格情報の種類を指定します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 5e1ff85d8a0bd45c87786f98c2cafe06472052b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643379"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>方法 : クライアントの資格情報の種類を指定する
-セキュリティ モード (トランスポートまたはメッセージ) を設定してから、クライアント資格情報の種類を指定することができます。 このプロパティでは、クライアントが認証時にサービスに提供する必要のある資格情報の種類を指定します。 セキュリティ モード (クライアントの資格情報の種類を設定する前に必要な手順) の設定の詳細については、次を参照してください。[する方法: セキュリティ モードを設定](../../../docs/framework/wcf/how-to-set-the-security-mode.md)です。  
+# <a name="how-to-specify-the-client-credential-type"></a>方法: クライアント資格情報の種類を指定します。
+セキュリティ モード (トランスポートまたはメッセージ) を設定してから、クライアント資格情報の種類を指定することができます。 このプロパティでは、クライアントが認証時にサービスに提供する必要のある資格情報の種類を指定します。 セキュリティ モード (クライアントの資格情報の種類を設定する前に必要な手順) を設定する方法についての詳細については、次を参照してください。[方法。セキュリティ モードを設定](../../../docs/framework/wcf/how-to-set-the-security-mode.md)します。  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>コードでクライアント資格情報の種類を設定するには  
   
@@ -33,11 +33,11 @@ ms.locfileid: "33499338"
   
 1.  追加、 [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素を構成ファイル。  
   
-2.  子要素として追加して、 [\<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)要素。  
+2.  子要素として追加する[\<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)要素。  
   
 3.  適切なバインドを追加します。 この例では、 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素。  
   
-4.  追加、 [\<バインディング >](../../../docs/framework/misc/binding.md)要素、`name`属性を適切な値にします。 この例では、"SecureBinding" という名前を使用します。  
+4.  追加、 [\<バインド >](../../../docs/framework/misc/binding.md)要素、`name`属性に適切な値。 この例では、"SecureBinding" という名前を使用します。  
   
 5.  `<security>` バインドを追加します。 `mode` 属性を適切な値に設定します。 この例では、`"Message"` に設定します。  
   
@@ -57,6 +57,6 @@ ms.locfileid: "33499338"
     </system.serviceModel>  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)  
- [方法: セキュリティ モードを設定する](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+## <a name="see-also"></a>関連項目
+- [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
+- [方法: セキュリティ モードを設定します。](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
