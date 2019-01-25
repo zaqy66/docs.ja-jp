@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665904"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF での図形と基本描画の概要
 このトピックを使用して描画する方法の概要を示します<xref:System.Windows.Shapes.Shape>オブジェクト。 A<xref:System.Windows.Shapes.Shape>の種類は、<xref:System.Windows.UIElement>画面に図形を描画することができます。 UI 要素であるため<xref:System.Windows.Shapes.Shape>オブジェクトは内で使用できる<xref:System.Windows.Controls.Panel>要素とほとんどのコントロール。  
@@ -29,11 +29,11 @@ ms.locfileid: "49086805"
 ## <a name="shape-objects"></a>図形オブジェクト  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すぐに使用できるさまざまな<xref:System.Windows.Shapes.Shape>オブジェクト。  すべての図形オブジェクトの継承、<xref:System.Windows.Shapes.Shape>クラス。 使用可能な図形オブジェクトには、 <xref:System.Windows.Shapes.Ellipse>、 <xref:System.Windows.Shapes.Line>、 <xref:System.Windows.Shapes.Path>、 <xref:System.Windows.Shapes.Polygon>、 <xref:System.Windows.Shapes.Polyline>、および<xref:System.Windows.Shapes.Rectangle>します。 <xref:System.Windows.Shapes.Shape> オブジェクトは、次の一般的なプロパティを共有します。  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: 図形のアウトラインを描画する方法について説明します。  
+-   <xref:System.Windows.Shapes.Shape.Stroke%2A>:図形のアウトラインを描画する方法について説明します。  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: 図形のアウトラインの太さについて説明します。  
+-   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>:図形のアウトラインの太さについて説明します。  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: 図形の内部を描画する方法について説明します。  
+-   <xref:System.Windows.Shapes.Shape.Fill%2A>:図形の内部を描画する方法について説明します。  
   
 -   デバイス非依存ピクセル単位で計測される座標と頂点を指定するデータ プロパティ。  
   
@@ -155,13 +155,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  プロパティには、次のいずれかの値を指定します。  
   
--   <xref:System.Windows.Media.Stretch.None><xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは引き伸ばされません。  
+-   <xref:System.Windows.Media.Stretch.None>:<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは引き伸ばされません。  
   
--   <xref:System.Windows.Media.Stretch.Fill><xref:System.Windows.Shapes.Shape>レイアウト空間を入力するオブジェクトのコンテンツは引き伸ばされます。  縦横比は維持されません。  
+-   <xref:System.Windows.Media.Stretch.Fill>:<xref:System.Windows.Shapes.Shape>レイアウト空間を入力するオブジェクトのコンテンツは引き伸ばされます。  縦横比は維持されません。  
   
--   <xref:System.Windows.Media.Stretch.Uniform><xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは元の縦横比を維持しながら、レイアウト空間を入力する可能な限り引き伸ばされます。  
+-   <xref:System.Windows.Media.Stretch.Uniform>:<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは元の縦横比を維持しながら、レイアウト空間を入力する可能な限り引き伸ばされます。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill><xref:System.Windows.Shapes.Shape>オブジェクトの内容は、元の縦横比を維持しながら、レイアウト空間を完全に埋めるに引き伸ばされます。  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>:<xref:System.Windows.Shapes.Shape>オブジェクトの内容は、元の縦横比を維持しながら、レイアウト空間を完全に埋めるに引き伸ばされます。  
   
  なお、ときに、<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツを引き伸ばす、<xref:System.Windows.Shapes.Shape>拡大した後はオブジェクトのアウトラインを描画します。  
   
@@ -214,9 +214,9 @@ myPolygon.StrokeThickness = 2;
   
  前の例では、単一の変換を各図形オブジェクトに適用しました。 図形 (またはその他の UI 要素) には、複数の変換を適用するには、使用、<xref:System.Windows.Media.TransformGroup>します。  
   
-## <a name="see-also"></a>関連項目  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>関連項目
+- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

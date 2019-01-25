@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 850a97240e0a6450b4dec759a8786e0df5bffac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a88acf59043613bb216ffe84dfb1593bd6ebea00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651891"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn メソッド
-指定した列と、指定されたテーブルの行のセルに含まれる値へのポインターを取得します。  
+指定した列と指定されたテーブル内の行のセルに含まれる値にポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +43,16 @@ HRESULT GetColumn (
  [in]テーブルのインデックス。  
   
  `ixCol`  
- [in]テーブル内の列のインデックス。  
+ [in]テーブルの列のインデックス。  
   
  `rid`  
- [in]テーブル内の行のインデックス。  
+ [in]テーブルの行のインデックス。  
   
  `pVal`  
  [out]セルの値へのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
@@ -60,6 +60,6 @@ HRESULT GetColumn (
   
  **.NET framework のバージョン** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

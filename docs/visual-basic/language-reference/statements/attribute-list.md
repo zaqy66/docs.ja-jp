@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672111"
 ---
 # <a name="attribute-list-visual-basic"></a>属性リスト (Visual Basic)
 宣言されたプログラミング要素に適用される属性を指定します。 複数の属性を指定するときは、コンマで区切ります。 1 つの属性の構文を次に示します。  
@@ -53,8 +53,8 @@ ms.locfileid: "37936930"
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> 属性付きの手順がアンマネージ ダイナミック リンク ライブラリ (DLL) のエントリ ポイントを表すことを示します。 属性は、位置指定引数として DLL 名と変数の初期化子とその他の情報を提供します。  
   
-## <a name="see-also"></a>関連項目  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>関連項目
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

@@ -2,12 +2,12 @@
 title: 部分信頼のベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: fca975ff4216384b970535273511eb07cd6ded68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640109"
 ---
 # <a name="partial-trust-best-practices"></a>部分信頼のベスト プラクティス
 このトピックでは、部分信頼環境で Windows Communication Foundation (WCF) を実行する場合のベスト プラクティスについて説明します。  
@@ -45,26 +45,26 @@ ms.locfileid: "33497270"
 -   <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装するインスタンス メソッドは、`public` とする必要があります。  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>部分信頼の呼び出し元から呼び出せる完全信頼のプラットフォーム コードで WCF を使用する  
- WCF 部分信頼セキュリティ モデルでは、WCF のパブリック メソッドまたはプロパティの呼び出し元が、ホスト アプリケーションのコード アクセス セキュリティ (CAS) のコンテキストで実行されていることを前提としています。 WCF もその 1 つだけのアプリケーションのセキュリティ コンテキストはあるものと各<xref:System.AppDomain>でこのコンテキストが確立されると<xref:System.AppDomain>作成時の信頼されたホスト (への呼び出しなどによって<xref:System.AppDomain.CreateDomain%2A>または ASP.NET アプリケーション マネージャーによって)。  
+ WCF の部分信頼セキュリティ モデルでは、WCF のパブリック メソッドまたはプロパティの呼び出し元が、ホスト アプリケーションのコード アクセス セキュリティ (CAS) のコンテキストで実行されていることを前提としています。 WCF もその 1 つだけのアプリケーションのセキュリティ コンテキストはあるものと各<xref:System.AppDomain>でこのコンテキストが確立されていることと<xref:System.AppDomain>、信頼されるホストの作成時 (などへの呼び出しで<xref:System.AppDomain.CreateDomain%2A>または ASP.NET アプリケーション マネージャーによって)。  
   
- このセキュリティ モデルは、信頼性が "中" の ASP.NET アプリケーションで実行されているユーザー コードなど、追加の CAS アクセス許可をアサートできないユーザー記述のアプリケーションに適用されます。 ただし、完全に信頼されたプラットフォーム コード (グローバル アセンブリ キャッシュにインストールされてを部分信頼コードからの呼び出しを許可するサード パーティ アセンブリなど) 必要があるときの注意明示的に部分信頼アプリケーションに代わって WCF への呼び出しアプリケーション レベルのセキュリティの脆弱性を行わずに済みます。  
+ このセキュリティ モデルは、信頼性が "中" の ASP.NET アプリケーションで実行されているユーザー コードなど、追加の CAS アクセス許可をアサートできないユーザー記述のアプリケーションに適用されます。 ただし、完全信頼のプラットフォーム コード (部分信頼コードから呼び出しを受け付けるグローバル アセンブリ キャッシュにインストールされているサード パーティ アセンブリなど) する必要があります注意を明示的に部分的に信頼されたアプリケーションの代わりに WCF を呼び出すときにアプリケーション レベルのセキュリティの脆弱性を導入しないようにします。  
   
- 完全信頼コードでは、現在のスレッドの CAS 権限のセットを変更することを避ける必要があります (を呼び出して<xref:System.Security.PermissionSet.Assert%2A>、 <xref:System.Security.PermissionSet.PermitOnly%2A>、または<xref:System.Security.PermissionSet.Deny%2A>) 部分信頼コードに代わって WCF Api を呼び出す前にします。 アプリケーション レベルのセキュリティ コンテキストに依存しないスレッド固有のアクセス許可コンテキストのアサート、拒否、または作成により、予期しない動作が発生することがあります。 アプリケーションによっては、この動作がアプリケーション レベルのセキュリティの脆弱性となることがあります。  
+ 完全に信頼されたコードは、現在のスレッドの CAS アクセス許可セットを変更することを避ける必要があります (呼び出して<xref:System.Security.PermissionSet.Assert%2A>、 <xref:System.Security.PermissionSet.PermitOnly%2A>、または<xref:System.Security.PermissionSet.Deny%2A>) 部分信頼コードに代わって WCF Api を呼び出す前にします。 アプリケーション レベルのセキュリティ コンテキストに依存しないスレッド固有のアクセス許可コンテキストのアサート、拒否、または作成により、予期しない動作が発生することがあります。 アプリケーションによっては、この動作がアプリケーション レベルのセキュリティの脆弱性となることがあります。  
   
- 発生する可能性が次のような状況を処理するスレッド固有のアクセス許可コンテキストを使用して WCF への呼び出しを準備する必要がありますコード:  
+ 発生する可能性が次のような状況を処理するためにスレッド固有のアクセス許可コンテキストを使用して WCF への呼び出しを準備する必要がありますコード:  
   
 -   スレッド固有のセキュリティ コンテキストを処理の期間全体にわたっては保持できない場合があり、このときセキュリティの例外が発生する可能性があります。  
   
--   内部の WCF コードだけではなく、任意のユーザーが指定したコールバックは、呼び出しを開始すると最初の 1 つ以上の別のセキュリティ コンテキストで実行可能性があります。 次のようなコンテキストが含まれます。  
+-   WCF の内部のコードだけではなく、任意のユーザー指定のコールバックは、呼び出しを開始すると最初の 1 つの異なるセキュリティ コンテキストで実行できます。 次のようなコンテキストが含まれます。  
   
     -   アプリケーションのアクセス許可コンテキスト。  
   
-    -   他のユーザー スレッドが現在実行中の有効期間中に WCF への呼び出しを使用して以前作成したスレッド固有のアクセス許可コンテキスト<xref:System.AppDomain>です。  
+    -   その他のユーザー スレッドが現在実行中の有効期間中に WCF への呼び出しを使用して以前作成した任意のスレッド固有のアクセス許可コンテキスト<xref:System.AppDomain>します。  
   
- WCF は、WCF のパブリック Api を呼び出す前に完全に信頼されたコンポーネントでこのようなアクセス許可がアサートされる場合を除き、部分信頼コードが完全信頼アクセス許可を取得できないことを保証します。 ただし、完全信頼をアサートした効果が特定のスレッド、操作、またはユーザー操作として隔離されることは保証されません。  
+ WCF により、WCF のパブリック Api を呼び出す前に完全に信頼されたコンポーネントでこのようなアクセス許可がアサートされる場合を除き、部分信頼コードに完全信頼アクセス許可を取得できません。 ただし、完全信頼をアサートした効果が特定のスレッド、操作、またはユーザー操作として隔離されることは保証されません。  
   
  <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.PermitOnly%2A>、または <xref:System.Security.PermissionSet.Deny%2A> を呼び出すことにより、スレッド固有のアクセス許可コンテキストを作成しないことをお勧めします。 代わりに、<xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.Deny%2A>、または <xref:System.Security.PermissionSet.PermitOnly%2A> が不要となるように、アプリケーション自体に特権を付与するか、特権を拒否します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.IXmlSerializable>
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.IXmlSerializable>

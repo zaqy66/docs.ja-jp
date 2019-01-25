@@ -2,12 +2,12 @@
 title: 情報の漏えい
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588246"
 ---
 # <a name="information-disclosure"></a>情報の漏えい
 情報が漏えいすると、攻撃者はシステムに関する重要情報を入手できます。 そのため、どのような情報を公開しているか、また、その情報が悪意のあるユーザーによって使用される可能性があるかどうかに常に気を配る必要があります。 考えられる情報漏えい攻撃とその軽減策を以下に示します。  
@@ -56,10 +56,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  ドメインを指定していても、エンドポイント ID 機能を使用して無効なサービス プリンシパル名を指定した場合は、NTLM が使用されます。 エンドポイント id を指定する方法の詳細については、次を参照してください。[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [改変](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [リプレイ攻撃](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>関連項目
+- [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [改変](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [リプレイ攻撃](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

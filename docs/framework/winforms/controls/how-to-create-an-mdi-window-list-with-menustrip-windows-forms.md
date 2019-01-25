@@ -1,5 +1,5 @@
 ---
-title: '方法 : MenuStrip を使用して MDI ウィンドウの一覧を作成する (Windows フォーム)'
+title: '方法: MenuStrip (Windows フォーム) を MDI ウィンドウ リストを作成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: c87ffadaef2842f10d40f6fd84eb1c70c6dfe37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00f35fe872fc5702595108646e2605ed419823f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585311"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>方法 : MenuStrip を使用して MDI ウィンドウの一覧を作成する (Windows フォーム)
-マルチ ドキュメント インターフェイス (MDI) を使用して、同じ時およびコピーに複数のドキュメントを開くし、他の 1 つのドキュメントのコンテンツを貼り付けることができますアプリケーションを作成します。  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>方法: MenuStrip (Windows フォーム) を MDI ウィンドウ リストを作成します。
+マルチ ドキュメント インターフェイス (MDI) を使用して、同じ時およびコピーにいくつかのドキュメントを開くし、他の 1 つのドキュメントのコンテンツを貼り付けることができますアプリケーションを作成します。  
   
- この手順では、親のウィンドウ メニュー上のすべてのアクティブな子フォームの一覧を作成する方法を示します。  
+ この手順では、親のウィンドウ メニューで、すべてのアクティブな子フォームのリストを作成する方法を示します。  
   
-### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>MenuStrip を MDI ウィンドウ リストを作成するには  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>MenuStrip を MDI ウィンドウ リストの作成  
   
 1.  フォームを作成し、その <xref:System.Windows.Forms.Form.IsMdiContainer%2A> プロパティを `true` に設定します。  
   
 2.  フォームに <xref:System.Windows.Forms.MenuStrip> を追加します。  
   
-3.  2 つのトップレベルのメニュー項目を追加、<xref:System.Windows.Forms.MenuStrip>設定とその<xref:System.Windows.Forms.Control.Text%2A>プロパティ`&File`と`&Window`です。  
+3.  2 つのトップレベルのメニュー項目を追加、<xref:System.Windows.Forms.MenuStrip>設定とその<xref:System.Windows.Forms.Control.Text%2A>プロパティを`&File`と`&Window`します。  
   
 4.  サブメニュー項目を `&File` メニュー項目に追加し、その <xref:System.Windows.Forms.ToolStripItem.Text%2A> プロパティを「`&Open`」に設定します。  
   
-5.  設定、<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>のプロパティ、<xref:System.Windows.Forms.MenuStrip>を`&Window`<xref:System.Windows.Forms.ToolStripMenuItem>です。  
+5.  設定、<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>のプロパティ、<xref:System.Windows.Forms.MenuStrip>を`&Window`<xref:System.Windows.Forms.ToolStripMenuItem>します。  
   
-6.  プロジェクトにフォームを追加し、目的のコントロールを追加し、別など<xref:System.Windows.Forms.MenuStrip>です。  
+6.  プロジェクトにフォームを追加し、別などの必要なコントロールを追加<xref:System.Windows.Forms.MenuStrip>します。  
   
 7.  <xref:System.Windows.Forms.ToolStripMenuItem> の `&New` の <xref:System.Windows.Forms.Control.Click> イベントにイベント ハンドラーを作成します。  
   
-8.  イベント ハンドラー内で作成しの新しいインスタンスを表示するには、次のようなコードを挿入`Form2`の MDI 子フォームとして`Form1`です。  
+8.  イベント ハンドラー内で作成の新しいインスタンスを表示するには、次のようなコードを挿入`Form2`の MDI 子フォームとして`Form1`します。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -81,7 +81,7 @@ ms.locfileid: "33530824"
   
 -   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目  
- [方法: MDI 親フォームを作成する](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [方法: MDI 子フォームを作成する](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [MenuStrip コントロール](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- [方法: MDI 親フォームを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [MenuStrip コントロール](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: f4f62a9ac97c6dbd8d2426f8bfd17afa66c4001a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d91b7a3c57db38fde3cf371773e8d64834a8f72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715271"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>匿名型メンバーの名前は、引数なしの簡易名または修飾名からのみ推論できます
-複雑な式からは、匿名型メンバーの名前を推論することはできません。  
+複雑な式から匿名型メンバーの名前を推論することはできません。  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,7 +23,7 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- 匿名型元となることができます、メンバー名と型を推論できませんソースの詳細については、次を参照してください。[する方法: 匿名型の宣言におけるプロパティ名の推論と型](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)です。  
+ ソースから匿名型ができ、メンバーの名前と型を推論することはできませんの詳細については、次を参照してください。[方法。匿名型の宣言におけるプロパティ名と型を推論](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)します。  
   
  **エラー ID:** BC36556  
   
@@ -35,6 +35,6 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [方法 : 匿名型の宣言におけるプロパティ名と型を推論する](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+## <a name="see-also"></a>関連項目
+- [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [方法: 匿名型の宣言におけるプロパティ名と型を推論します。](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

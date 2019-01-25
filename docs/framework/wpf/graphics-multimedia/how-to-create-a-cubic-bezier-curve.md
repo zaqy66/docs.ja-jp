@@ -1,5 +1,5 @@
 ---
-title: '方法 : 3 次ベジエ曲線を作成する'
+title: '方法: 3 次ベジエ曲線を作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - curves [WPF], cubic Bezier
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-ms.openlocfilehash: 2dd9dfa7f15ce00261c87f316079c25a7aa52532
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2850e505214da4736d05160bf5d5d051404b21a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606544"
 ---
-# <a name="how-to-create-a-cubic-bezier-curve"></a>方法 : 3 次ベジエ曲線を作成する
+# <a name="how-to-create-a-cubic-bezier-curve"></a>方法: 3 次ベジエ曲線を作成する
 この例では、3 次ベジエ曲線を作成する方法を示します。 3 次ベジエ曲線を作成するには、使用、 <xref:System.Windows.Media.PathGeometry>、 <xref:System.Windows.Media.PathFigure>、および<xref:System.Windows.Media.BezierSegment>クラス。  結果のジオメトリを表示するには使用、<xref:System.Windows.Shapes.Path>要素と共に使用または、<xref:System.Windows.Media.GeometryDrawing>または<xref:System.Windows.Media.DrawingContext>します。 次の例についてから 3 次ベジエ曲線を描画 (10, 100) に (300, 100)。 曲線がの制御点 (100, 0) と (200、200)。  
   
 ## <a name="example"></a>例  
@@ -32,8 +32,8 @@ ms.locfileid: "47231074"
   
  この例は、より大きなサンプルの一部です。完全なサンプルについては、「[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [楕円の円弧を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [PathGeometry で LineSegment を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [3 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [2 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
+## <a name="see-also"></a>関連項目
+- [楕円の円弧を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)
+- [PathGeometry で LineSegment を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)
+- [3 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+- [2 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)

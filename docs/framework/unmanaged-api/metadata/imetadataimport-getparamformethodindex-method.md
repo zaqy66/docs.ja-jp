@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740113"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex メソッド
 指定した MethodDef トークンによって表されるメソッドの指定されたパラメーターを表すトークンを取得します。  
@@ -42,20 +42,20 @@ HRESULT GetParamForMethodIndex (
  [in]パラメーターのトークンを返すメソッドを表すトークンです。  
   
  `ulParamSeq`  
- [in]要求されたパラメーターが発生する、パラメーター リスト内の序数位置。 パラメーターは、ゼロの位置が、メソッドの戻り値を持つ、1 から始まる番号が付けられます。  
+ [in]要求されたパラメーターが発生したパラメーター リスト内の序数位置。 パラメーターは、メソッドの戻り値の位置は 0 で、1 から始まる番号が付けられます。  
   
  `ppd`  
  [out]要求されたパラメーターを表す ParamDef トークンへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

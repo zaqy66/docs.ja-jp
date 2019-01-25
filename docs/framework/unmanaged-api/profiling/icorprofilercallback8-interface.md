@@ -10,17 +10,17 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b92120cc5948efca696d922448da215601f9e6b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3bdf79582619777a22c80caac5b4e90d603f3a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675016"
 ---
 # <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8 インターフェイス
-[.NET Framework 4.7 以降のバージョンでサポート]  
+[.NET Framework 4.7 以降のバージョンでサポートされます]  
 
- サブクラス[ICorProfilerCallback7](icorprofilercallback7-interface.md)動的メソッドの JIT コンパイルが開始して完了したことをプロファイラーに通知する、共通言語ランタイムによって使用されるコールバック メソッドを提供します。 
+ サブクラス[ICorProfilerCallback7](icorprofilercallback7-interface.md)動的メソッドの JIT コンパイルが開始して完了したことをプロファイラーに通知する、共通言語ランタイムで使用されるコールバック メソッドを提供します。 
   
 ## <a name="methods"></a>メソッド  
   
@@ -29,13 +29,13 @@ ms.locfileid: "33455284"
 |[DynamicMethodJITCompilationStarted メソッド](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|動的メソッドの JIT コンパイルが開始されたことをプロファイラーに通知します。|  
 |[DynamicMethodJITCompilationFinished メソッド](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|動的メソッドの JIT コンパイルが完了したことをプロファイラーに通知します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
-**.NET framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>関連項目  
-[プロファイリングのインターフェイス](profiling-interfaces.md)   
-[ICorProfilerCallback9 インターフェイス](icorprofilercallback9-interface.md)
+## <a name="see-also"></a>関連項目
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [ICorProfilerCallback9 インターフェイス](icorprofilercallback9-interface.md)

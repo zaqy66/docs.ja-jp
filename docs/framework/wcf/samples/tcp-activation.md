@@ -2,12 +2,12 @@
 title: TCP アクティベーション
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5e7f441873ec4d3ad087d1ff28510d92d87db9b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677830"
 ---
 # <a name="tcp-activation"></a>TCP アクティベーション
 このサンプルでは、net.tcp プロトコルで通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS) を使用してサービスをホストする方法について示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
@@ -205,5 +205,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  このコマンドは、全体で 1 行のテキストになるように入力する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>関連項目
+- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)
