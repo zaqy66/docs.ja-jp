@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: abdfdd4393609bb7821cfc44c0e46574d8724cfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730063"
 ---
-# <a name="typenamefactory-coclass"></a><span data-ttu-id="73e54-102">TypeNameFactory コクラス</span><span class="sxs-lookup"><span data-stu-id="73e54-102">TypeNameFactory Coclass</span></span>
-<span data-ttu-id="73e54-103">型名の解体を管理するためのインターフェイスを提供します。</span><span class="sxs-lookup"><span data-stu-id="73e54-103">Provides an interface for managing the deconstruction of a type name.</span></span>  
+# <a name="typenamefactory-coclass"></a><span data-ttu-id="46098-102">TypeNameFactory コクラス</span><span class="sxs-lookup"><span data-stu-id="46098-102">TypeNameFactory Coclass</span></span>
+<span data-ttu-id="46098-103">型名の分解を管理するためのインターフェイスを提供します。</span><span class="sxs-lookup"><span data-stu-id="46098-103">Provides an interface for managing the deconstruction of a type name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73e54-104">構文</span><span class="sxs-lookup"><span data-stu-id="73e54-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46098-104">構文</span><span class="sxs-lookup"><span data-stu-id="46098-104">Syntax</span></span>  
   
 ```  
 coclass TypeNameFactory {  
@@ -34,20 +34,20 @@ coclass TypeNameFactory {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="73e54-105">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="73e54-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="46098-105">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="46098-105">Interfaces</span></span>  
   
-|<span data-ttu-id="73e54-106">Interface</span><span class="sxs-lookup"><span data-stu-id="73e54-106">Interface</span></span>|<span data-ttu-id="73e54-107">説明</span><span class="sxs-lookup"><span data-stu-id="73e54-107">Description</span></span>|  
+|<span data-ttu-id="46098-106">Interface</span><span class="sxs-lookup"><span data-stu-id="46098-106">Interface</span></span>|<span data-ttu-id="46098-107">説明</span><span class="sxs-lookup"><span data-stu-id="46098-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="73e54-108">ITypeNameFactory インターフェイス</span><span class="sxs-lookup"><span data-stu-id="73e54-108">ITypeNameFactory Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|<span data-ttu-id="73e54-109">このインターフェイスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="73e54-109">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>|  
+|[<span data-ttu-id="46098-108">ITypeNameFactory インターフェイス</span><span class="sxs-lookup"><span data-stu-id="46098-108">ITypeNameFactory Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|<span data-ttu-id="46098-109">このインターフェイスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="46098-109">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="73e54-110">要件</span><span class="sxs-lookup"><span data-stu-id="73e54-110">Requirements</span></span>  
- <span data-ttu-id="73e54-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="73e54-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46098-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="46098-110">Requirements</span></span>  
+ <span data-ttu-id="46098-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="46098-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73e54-112">**ヘッダー:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="73e54-112">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="46098-112">**ヘッダー:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="46098-112">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="73e54-113">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="73e54-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="46098-113">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="46098-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="73e54-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73e54-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="46098-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46098-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73e54-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="73e54-115">See Also</span></span>  
- [<span data-ttu-id="73e54-116">ホスト コクラス</span><span class="sxs-lookup"><span data-stu-id="73e54-116">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="46098-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="46098-115">See also</span></span>
+- [<span data-ttu-id="46098-116">ホスト コクラス</span><span class="sxs-lookup"><span data-stu-id="46098-116">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

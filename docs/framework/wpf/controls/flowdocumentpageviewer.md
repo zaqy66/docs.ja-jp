@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653763"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="d74e4-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="d74e4-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="d74e4-103"><xref:System.Windows.Controls.FlowDocumentPageViewer>コントロールを使用して、表示<xref:System.Windows.Documents.FlowDocument>ページごとのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="d74e4-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="d74e4-104">比較して、 <xref:System.Windows.Controls.FlowDocumentScrollViewer>、どの表示<xref:System.Windows.Documents.FlowDocument>スクロール ビューアーのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="d74e4-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="8c108-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="8c108-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="8c108-103"><xref:System.Windows.Controls.FlowDocumentPageViewer>コントロールを使用する表示<xref:System.Windows.Documents.FlowDocument>ページごとのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="8c108-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="8c108-104">これと対照的、 <xref:System.Windows.Controls.FlowDocumentScrollViewer>、どの表示<xref:System.Windows.Documents.FlowDocument>スクロール ビューアーのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="8c108-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d74e4-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="d74e4-105">See Also</span></span>  
- <xref:System.Windows.Documents.FlowDocument>  
- [<span data-ttu-id="d74e4-106">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="d74e4-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="d74e4-107">方法トピック</span><span class="sxs-lookup"><span data-stu-id="d74e4-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [<span data-ttu-id="d74e4-108">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="d74e4-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="8c108-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="8c108-105">See also</span></span>
+- <xref:System.Windows.Documents.FlowDocument>
+- [<span data-ttu-id="8c108-106">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="8c108-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [<span data-ttu-id="8c108-107">方法トピック</span><span class="sxs-lookup"><span data-stu-id="8c108-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="8c108-108">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="8c108-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

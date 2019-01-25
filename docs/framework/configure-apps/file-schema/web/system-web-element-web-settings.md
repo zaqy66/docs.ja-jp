@@ -10,49 +10,49 @@ helpviewer_keywords:
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 39d305d429490380c76e15bdcdde434f0d75457b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6bb0e832f1fdc845c4150442547b55400f0aea89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645952"
 ---
-# <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="cbc51-102">&lt;system.web&gt;要素 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="cbc51-102">&lt;system.web&gt; Element (Web Settings)</span></span>
-<span data-ttu-id="cbc51-103">ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方法についてを説明します。</span><span class="sxs-lookup"><span data-stu-id="cbc51-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  
+# <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="24fe6-102">&lt;system.web&gt;要素 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="24fe6-102">&lt;system.web&gt; Element (Web Settings)</span></span>
+<span data-ttu-id="24fe6-103">ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方法についてを説明します。</span><span class="sxs-lookup"><span data-stu-id="24fe6-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  
   
- <span data-ttu-id="cbc51-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cbc51-104">\<configuration></span></span>  
-<span data-ttu-id="cbc51-105">\<system.web > 要素 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="cbc51-105">\<system.web> Element (Web Settings)</span></span>  
+ <span data-ttu-id="24fe6-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="24fe6-104">\<configuration></span></span>  
+<span data-ttu-id="24fe6-105">\<system.web > 要素 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="24fe6-105">\<system.web> Element (Web Settings)</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cbc51-106">構文</span><span class="sxs-lookup"><span data-stu-id="cbc51-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24fe6-106">構文</span><span class="sxs-lookup"><span data-stu-id="24fe6-106">Syntax</span></span>  
   
 ```xml  
 <system.web>  
 </system.web>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cbc51-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="cbc51-107">Attributes and Elements</span></span>  
- <span data-ttu-id="cbc51-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="cbc51-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="24fe6-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="24fe6-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="24fe6-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="24fe6-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cbc51-109">属性</span><span class="sxs-lookup"><span data-stu-id="cbc51-109">Attributes</span></span>  
- <span data-ttu-id="cbc51-110">なし。</span><span class="sxs-lookup"><span data-stu-id="cbc51-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="24fe6-109">属性</span><span class="sxs-lookup"><span data-stu-id="24fe6-109">Attributes</span></span>  
+ <span data-ttu-id="24fe6-110">なし。</span><span class="sxs-lookup"><span data-stu-id="24fe6-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="cbc51-111">子要素</span><span class="sxs-lookup"><span data-stu-id="cbc51-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="24fe6-111">子要素</span><span class="sxs-lookup"><span data-stu-id="24fe6-111">Child Elements</span></span>  
   
-|<span data-ttu-id="cbc51-112">要素</span><span class="sxs-lookup"><span data-stu-id="cbc51-112">Element</span></span>|<span data-ttu-id="cbc51-113">説明</span><span class="sxs-lookup"><span data-stu-id="cbc51-113">Description</span></span>|  
+|<span data-ttu-id="24fe6-112">要素</span><span class="sxs-lookup"><span data-stu-id="24fe6-112">Element</span></span>|<span data-ttu-id="24fe6-113">説明</span><span class="sxs-lookup"><span data-stu-id="24fe6-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cbc51-114">\<applicationPool></span><span class="sxs-lookup"><span data-stu-id="cbc51-114">\<applicationPool></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|<span data-ttu-id="cbc51-115">Aspnet.config ファイルには、IIS アプリケーション プールの構成設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="cbc51-115">Specifies configuration settings for IIS application pools in an aspnet.config file.</span></span>|  
+|[<span data-ttu-id="24fe6-114">\<applicationPool></span><span class="sxs-lookup"><span data-stu-id="24fe6-114">\<applicationPool></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|<span data-ttu-id="24fe6-115">Aspnet.config ファイルには、IIS アプリケーション プールの構成設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="24fe6-115">Specifies configuration settings for IIS application pools in an aspnet.config file.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="cbc51-116">親要素</span><span class="sxs-lookup"><span data-stu-id="cbc51-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="24fe6-116">親要素</span><span class="sxs-lookup"><span data-stu-id="24fe6-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="cbc51-117">要素</span><span class="sxs-lookup"><span data-stu-id="cbc51-117">Element</span></span>|<span data-ttu-id="cbc51-118">説明</span><span class="sxs-lookup"><span data-stu-id="cbc51-118">Description</span></span>|  
+|<span data-ttu-id="24fe6-117">要素</span><span class="sxs-lookup"><span data-stu-id="24fe6-117">Element</span></span>|<span data-ttu-id="24fe6-118">説明</span><span class="sxs-lookup"><span data-stu-id="24fe6-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cbc51-119">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cbc51-119">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="cbc51-120">共通言語ランタイムおよび [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="cbc51-120">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
+|[<span data-ttu-id="24fe6-119">\<configuration></span><span class="sxs-lookup"><span data-stu-id="24fe6-119">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="24fe6-120">共通言語ランタイムおよび [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="24fe6-120">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cbc51-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="cbc51-121">Remarks</span></span>  
- <span data-ttu-id="cbc51-122">`system.web`要素とその子`applicationPool`に要素が追加された、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]の[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="cbc51-122">The `system.web` element and its child `applicationPool` element were added to the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] as of [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="cbc51-123">実行すると[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]も以降のバージョンの統合モードでは、この要素を組み合わせて、ASP.NET スレッドを管理する方法と、ASP.NET が IIS アプリケーション プールでホストされている場合に要求をキューにする方法を構成できます。</span><span class="sxs-lookup"><span data-stu-id="cbc51-123">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Integrated mode, this element combination lets you configure how ASP.NET manages threads and how it queues requests when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="cbc51-124">実行する場合[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン、クラシックまたは ISAPI のモードでこれらの設定は無視されます。</span><span class="sxs-lookup"><span data-stu-id="cbc51-124">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Classic or ISAPI mode, these settings are ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="24fe6-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="24fe6-121">Remarks</span></span>  
+ <span data-ttu-id="24fe6-122">`system.web`要素とその子`applicationPool`に要素が追加された、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]の[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="24fe6-122">The `system.web` element and its child `applicationPool` element were added to the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] as of [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="24fe6-123">実行すると[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]も以降のバージョンの統合モードでは、この要素を組み合わせて、ASP.NET スレッドを管理する方法と、ASP.NET が IIS アプリケーション プールでホストされている場合に要求をキューにする方法を構成できます。</span><span class="sxs-lookup"><span data-stu-id="24fe6-123">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Integrated mode, this element combination lets you configure how ASP.NET manages threads and how it queues requests when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="24fe6-124">実行する場合[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン、クラシックまたは ISAPI のモードでこれらの設定は無視されます。</span><span class="sxs-lookup"><span data-stu-id="24fe6-124">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Classic or ISAPI mode, these settings are ignored.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cbc51-125">例</span><span class="sxs-lookup"><span data-stu-id="cbc51-125">Example</span></span>  
- <span data-ttu-id="cbc51-126">次の例では、ASP.NET が IIS アプリケーション プールでホストされている場合は、aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="cbc51-126">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="cbc51-127">この例では統合で IIS が実行されているモードと、アプリケーションを使用している、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]以降のバージョン。</span><span class="sxs-lookup"><span data-stu-id="cbc51-127">The example assumes that IIS is running in Integrated mode and that the application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span> <span data-ttu-id="cbc51-128">バージョンでこの動作は発生しません、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]よりも前、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="cbc51-128">This behavior does not occur in versions of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] earlier than the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="cbc51-129">値の例では、既定値です。</span><span class="sxs-lookup"><span data-stu-id="cbc51-129">The values in the example are the default values.</span></span>  
+## <a name="example"></a><span data-ttu-id="24fe6-125">例</span><span class="sxs-lookup"><span data-stu-id="24fe6-125">Example</span></span>  
+ <span data-ttu-id="24fe6-126">次の例では、ASP.NET が IIS アプリケーション プールでホストされている場合は、aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="24fe6-126">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="24fe6-127">この例では統合で IIS が実行されているモードと、アプリケーションを使用している、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]以降のバージョン。</span><span class="sxs-lookup"><span data-stu-id="24fe6-127">The example assumes that IIS is running in Integrated mode and that the application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span> <span data-ttu-id="24fe6-128">バージョンでこの動作は発生しません、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]よりも前、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="24fe6-128">This behavior does not occur in versions of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] earlier than the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="24fe6-129">値の例では、既定値です。</span><span class="sxs-lookup"><span data-stu-id="24fe6-129">The values in the example are the default values.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,14 +65,14 @@ ms.locfileid: "47202690"
 </configuration>  
 ```  
   
-## <a name="element-information"></a><span data-ttu-id="cbc51-130">要素情報</span><span class="sxs-lookup"><span data-stu-id="cbc51-130">Element Information</span></span>  
+## <a name="element-information"></a><span data-ttu-id="24fe6-130">要素情報</span><span class="sxs-lookup"><span data-stu-id="24fe6-130">Element Information</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="cbc51-131">名前空間</span><span class="sxs-lookup"><span data-stu-id="cbc51-131">Namespace</span></span>||  
-|<span data-ttu-id="cbc51-132">スキーマ名</span><span class="sxs-lookup"><span data-stu-id="cbc51-132">Schema Name</span></span>||  
-|<span data-ttu-id="cbc51-133">検証ファイル</span><span class="sxs-lookup"><span data-stu-id="cbc51-133">Validation File</span></span>||  
-|<span data-ttu-id="cbc51-134">空にすることができます。</span><span class="sxs-lookup"><span data-stu-id="cbc51-134">Can be Empty</span></span>||  
+|<span data-ttu-id="24fe6-131">名前空間</span><span class="sxs-lookup"><span data-stu-id="24fe6-131">Namespace</span></span>||  
+|<span data-ttu-id="24fe6-132">スキーマ名</span><span class="sxs-lookup"><span data-stu-id="24fe6-132">Schema Name</span></span>||  
+|<span data-ttu-id="24fe6-133">検証ファイル</span><span class="sxs-lookup"><span data-stu-id="24fe6-133">Validation File</span></span>||  
+|<span data-ttu-id="24fe6-134">空にすることができます。</span><span class="sxs-lookup"><span data-stu-id="24fe6-134">Can be Empty</span></span>||  
   
-## <a name="see-also"></a><span data-ttu-id="cbc51-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbc51-135">See Also</span></span>  
- [<span data-ttu-id="cbc51-136">\<applicationPool> 要素 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="cbc51-136">\<applicationPool> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+## <a name="see-also"></a><span data-ttu-id="24fe6-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="24fe6-135">See also</span></span>
+- [<span data-ttu-id="24fe6-136">\<applicationPool> 要素 (Web 設定)</span><span class="sxs-lookup"><span data-stu-id="24fe6-136">\<applicationPool> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

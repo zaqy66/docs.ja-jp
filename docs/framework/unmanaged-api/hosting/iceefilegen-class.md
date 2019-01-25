@@ -16,22 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576435"
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="97166-102">ICeeFileGen クラス</span><span class="sxs-lookup"><span data-stu-id="97166-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="97166-103">ネイティブ ポータブル実行可能 (PE) ファイルを作成するための機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="97166-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="97166-104">インターフェイスは、実行可能ファイル、コンパイルされた出力を生成するコンパイラで通常使用がされます。</span><span class="sxs-lookup"><span data-stu-id="97166-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="93ac9-102">ICeeFileGen クラス</span><span class="sxs-lookup"><span data-stu-id="93ac9-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="93ac9-103">ネイティブ ポータブル実行可能 (PE) ファイルを作成するための機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="93ac9-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="93ac9-104">インターフェイスは、実行可能ファイルのコンパイル済み出力を生成するコンパイラで通常使用されます。</span><span class="sxs-lookup"><span data-stu-id="93ac9-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="97166-105">`ICeeFileGen` .NET Framework インフラストラクチャをサポートし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="97166-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+>  <span data-ttu-id="93ac9-105">`ICeeFileGen` .NET Framework インフラストラクチャをサポートし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="93ac9-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="97166-106">このインターフェイスは廃止されており、将来のリリースで削除される予定です。</span><span class="sxs-lookup"><span data-stu-id="97166-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="93ac9-106">このインターフェイスは非推奨とされましたを将来のリリースで削除されます。</span><span class="sxs-lookup"><span data-stu-id="93ac9-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97166-107">構文</span><span class="sxs-lookup"><span data-stu-id="97166-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93ac9-107">構文</span><span class="sxs-lookup"><span data-stu-id="93ac9-107">Syntax</span></span>  
   
 ```  
 class ICeeFileGen {  
@@ -236,12 +236,12 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="97166-108">要件</span><span class="sxs-lookup"><span data-stu-id="97166-108">Requirements</span></span>  
- <span data-ttu-id="97166-109">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="97166-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93ac9-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="93ac9-108">Requirements</span></span>  
+ <span data-ttu-id="93ac9-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="93ac9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97166-110">**ヘッダー:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="97166-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="93ac9-110">**ヘッダー:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="93ac9-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="97166-111">**.NET framework のバージョン:** 1.0</span><span class="sxs-lookup"><span data-stu-id="97166-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="93ac9-111">**.NET framework のバージョン:** 1</span><span class="sxs-lookup"><span data-stu-id="93ac9-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97166-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="97166-112">See Also</span></span>  
- [<span data-ttu-id="97166-113">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="97166-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="93ac9-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="93ac9-112">See also</span></span>
+- [<span data-ttu-id="93ac9-113">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93ac9-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

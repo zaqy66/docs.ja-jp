@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b9b8a728932caa085bba1665dc97faf02be8fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597529"
 ---
-# <a name="corruntimehost-coclass"></a><span data-ttu-id="84f27-102">CorRuntimeHost コクラス</span><span class="sxs-lookup"><span data-stu-id="84f27-102">CorRuntimeHost Coclass</span></span>
-<span data-ttu-id="84f27-103">共通言語ランタイムで実行されているアプリケーションを管理するためのインターフェイスを提供します。</span><span class="sxs-lookup"><span data-stu-id="84f27-103">Provides interfaces for managing applications that are being executed by the common language runtime.</span></span>  
+# <a name="corruntimehost-coclass"></a><span data-ttu-id="be65d-102">CorRuntimeHost コクラス</span><span class="sxs-lookup"><span data-stu-id="be65d-102">CorRuntimeHost Coclass</span></span>
+<span data-ttu-id="be65d-103">共通言語ランタイムで実行されているアプリケーションを管理するためのインターフェイスを提供します。</span><span class="sxs-lookup"><span data-stu-id="be65d-103">Provides interfaces for managing applications that are being executed by the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84f27-104">構文</span><span class="sxs-lookup"><span data-stu-id="84f27-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be65d-104">構文</span><span class="sxs-lookup"><span data-stu-id="be65d-104">Syntax</span></span>  
   
 ```  
 coclass CorRuntimeHost {  
@@ -38,24 +38,24 @@ coclass CorRuntimeHost {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="84f27-105">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84f27-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="be65d-105">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be65d-105">Interfaces</span></span>  
   
-|<span data-ttu-id="84f27-106">Interface</span><span class="sxs-lookup"><span data-stu-id="84f27-106">Interface</span></span>|<span data-ttu-id="84f27-107">説明</span><span class="sxs-lookup"><span data-stu-id="84f27-107">Description</span></span>|  
+|<span data-ttu-id="be65d-106">Interface</span><span class="sxs-lookup"><span data-stu-id="be65d-106">Interface</span></span>|<span data-ttu-id="be65d-107">説明</span><span class="sxs-lookup"><span data-stu-id="be65d-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="84f27-108">ICorConfiguration インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84f27-108">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|<span data-ttu-id="84f27-109">共通言語ランタイム (CLR) を構成するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="84f27-109">Provides methods for configuring the common language runtime (CLR).</span></span>|  
-|[<span data-ttu-id="84f27-110">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84f27-110">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|<span data-ttu-id="84f27-111">ホストが起動し、作成して既定のドメインにアクセスして、プロセスで実行されているすべてのドメインを列挙するアプリケーション ドメインを構成する共通言語ランタイムを明示的に停止できるようにするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="84f27-111">Provides methods that enable the host to start and stop the common language runtime explicitly, to create and configure application domains, to access the default domain, and to enumerate all domains running in the process.</span></span>|  
-|[<span data-ttu-id="84f27-112">IDebuggerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84f27-112">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|<span data-ttu-id="84f27-113">デバッグ サービスの状態に関する情報を取得するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="84f27-113">Provides methods for obtaining information about the state of the debugging services.</span></span>|  
-|[<span data-ttu-id="84f27-114">IGCHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84f27-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|<span data-ttu-id="84f27-115">ガベージ コレクション システムに関する情報を取得して、ガベージ コレクションの一部の側面を制御するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="84f27-115">Provides methods for obtaining information about the garbage collection system and for controlling some aspects of garbage collection.</span></span>|  
-|<span data-ttu-id="84f27-116">"IValidator"</span><span class="sxs-lookup"><span data-stu-id="84f27-116">"IValidator"</span></span>|<span data-ttu-id="84f27-117">ポータブル実行可能イメージの検証と検証エラーの詳細なレポート作成のメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="84f27-117">Provides methods for validation of portable executable images and detailed reporting of validation errors.</span></span>|  
+|[<span data-ttu-id="be65d-108">ICorConfiguration インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be65d-108">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|<span data-ttu-id="be65d-109">共通言語ランタイム (CLR) を構成するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="be65d-109">Provides methods for configuring the common language runtime (CLR).</span></span>|  
+|[<span data-ttu-id="be65d-110">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be65d-110">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|<span data-ttu-id="be65d-111">ホストが起動し、作成して既定のドメインにアクセスして、プロセスで実行されているすべてのドメインを列挙するために、アプリケーション ドメインを構成する共通言語ランタイムを明示的に停止できるようにするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="be65d-111">Provides methods that enable the host to start and stop the common language runtime explicitly, to create and configure application domains, to access the default domain, and to enumerate all domains running in the process.</span></span>|  
+|[<span data-ttu-id="be65d-112">IDebuggerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be65d-112">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|<span data-ttu-id="be65d-113">デバッグ サービスの状態に関する情報を取得するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="be65d-113">Provides methods for obtaining information about the state of the debugging services.</span></span>|  
+|[<span data-ttu-id="be65d-114">IGCHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be65d-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|<span data-ttu-id="be65d-115">ガベージ コレクション システムに関する情報を取得するため、ガベージ コレクションの一部の側面を制御するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="be65d-115">Provides methods for obtaining information about the garbage collection system and for controlling some aspects of garbage collection.</span></span>|  
+|<span data-ttu-id="be65d-116">"IValidator"</span><span class="sxs-lookup"><span data-stu-id="be65d-116">"IValidator"</span></span>|<span data-ttu-id="be65d-117">ポータブル実行可能イメージの検証と検証エラーの詳細なレポートのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="be65d-117">Provides methods for validation of portable executable images and detailed reporting of validation errors.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="84f27-118">要件</span><span class="sxs-lookup"><span data-stu-id="84f27-118">Requirements</span></span>  
- <span data-ttu-id="84f27-119">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="84f27-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be65d-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="be65d-118">Requirements</span></span>  
+ <span data-ttu-id="be65d-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="be65d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84f27-120">**ヘッダー:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="84f27-120">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="be65d-120">**ヘッダー:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="be65d-120">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="84f27-121">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="84f27-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="be65d-121">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="be65d-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="84f27-122">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84f27-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="be65d-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be65d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84f27-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="84f27-123">See Also</span></span>  
- [<span data-ttu-id="84f27-124">ホスト コクラス</span><span class="sxs-lookup"><span data-stu-id="84f27-124">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="be65d-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="be65d-123">See also</span></span>
+- [<span data-ttu-id="be65d-124">ホスト コクラス</span><span class="sxs-lookup"><span data-stu-id="be65d-124">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : イメージをトリミングおよびスケーリングする'
+title: '方法: トリミングおよびスケール イメージ'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: d5acda50a1aa0f0cae6e77a748b011908fcc8c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f6d721edc4f889c2da8ece63f262c7fb55192bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707701"
 ---
-# <a name="how-to-crop-and-scale-images"></a><span data-ttu-id="4f33c-102">方法 : イメージをトリミングおよびスケーリングする</span><span class="sxs-lookup"><span data-stu-id="4f33c-102">How to: Crop and Scale Images</span></span>
-<span data-ttu-id="4f33c-103"><xref:System.Drawing.Graphics>クラスには、いくつか用意されて<xref:System.Drawing.Graphics.DrawImage%2A>トリミングおよびスケール イメージに使用できる元とコピー先の四角形のパラメーターを持つこれらのいくつかの方法です。</span><span class="sxs-lookup"><span data-stu-id="4f33c-103">The <xref:System.Drawing.Graphics> class provides several <xref:System.Drawing.Graphics.DrawImage%2A> methods, some of which have source and destination rectangle parameters that you can use to crop and scale images.</span></span>  
+# <a name="how-to-crop-and-scale-images"></a><span data-ttu-id="1e294-102">方法: トリミングおよびスケール イメージ</span><span class="sxs-lookup"><span data-stu-id="1e294-102">How to: Crop and Scale Images</span></span>
+<span data-ttu-id="1e294-103"><xref:System.Drawing.Graphics>クラスには、いくつか用意されて<xref:System.Drawing.Graphics.DrawImage%2A>イメージのトリミングおよびスケールに使用できる元とコピー先の四角形のパラメーターを持つうちいくつかの方法です。</span><span class="sxs-lookup"><span data-stu-id="1e294-103">The <xref:System.Drawing.Graphics> class provides several <xref:System.Drawing.Graphics.DrawImage%2A> methods, some of which have source and destination rectangle parameters that you can use to crop and scale images.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4f33c-104">例</span><span class="sxs-lookup"><span data-stu-id="4f33c-104">Example</span></span>  
- <span data-ttu-id="4f33c-105">次の例の構築、 <xref:System.Drawing.Image> Apple.gif ディスク ファイルからのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="4f33c-105">The following example constructs an <xref:System.Drawing.Image> object from the disk file Apple.gif.</span></span> <span data-ttu-id="4f33c-106">コードは、元のサイズでリンゴのイメージ全体を描画します。</span><span class="sxs-lookup"><span data-stu-id="4f33c-106">The code draws the entire apple image in its original size.</span></span> <span data-ttu-id="4f33c-107">コードを呼び出し、<xref:System.Drawing.Graphics.DrawImage%2A>のメソッド、<xref:System.Drawing.Graphics>が元の apple イメージよりも大きい先の四角形の apple のイメージの部分を描画するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="4f33c-107">The code then calls the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object to draw a portion of the apple image in a destination rectangle that is larger than the original apple image.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e294-104">例</span><span class="sxs-lookup"><span data-stu-id="1e294-104">Example</span></span>  
+ <span data-ttu-id="1e294-105">次の例では、構築、 <xref:System.Drawing.Image> Apple.gif ディスク ファイルからのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="1e294-105">The following example constructs an <xref:System.Drawing.Image> object from the disk file Apple.gif.</span></span> <span data-ttu-id="1e294-106">コードでは、元のサイズでリンゴのイメージ全体を描画します。</span><span class="sxs-lookup"><span data-stu-id="1e294-106">The code draws the entire apple image in its original size.</span></span> <span data-ttu-id="1e294-107">コードを呼び出して、<xref:System.Drawing.Graphics.DrawImage%2A>のメソッドを<xref:System.Drawing.Graphics>が元の apple イメージよりも大きい先の四角形で apple のイメージの一部を描画するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="1e294-107">The code then calls the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object to draw a portion of the apple image in a destination rectangle that is larger than the original apple image.</span></span>  
   
- <span data-ttu-id="4f33c-108"><xref:System.Drawing.Graphics.DrawImage%2A>メソッドが指定された、3 番目、4 番目に、元の四角形、5 番目と 6 番目の引数を確認して描画する apple のどの部分を決定します。</span><span class="sxs-lookup"><span data-stu-id="4f33c-108">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines which portion of the apple to draw by looking at the source rectangle, which is specified by the third, fourth, fifth, and sixth arguments.</span></span> <span data-ttu-id="4f33c-109">この場合、幅の 75% を高さの 75%、apple がトリミングされます。</span><span class="sxs-lookup"><span data-stu-id="4f33c-109">In this case, the apple is cropped to 75 percent of its width and 75 percent of its height.</span></span>  
+ <span data-ttu-id="1e294-108"><xref:System.Drawing.Graphics.DrawImage%2A>メソッドは、5 番目と 6 番目の引数にこの 4 番目に、3 で指定されたソースの四角形を調べることで描画するために apple のどの部分を決定します。</span><span class="sxs-lookup"><span data-stu-id="1e294-108">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines which portion of the apple to draw by looking at the source rectangle, which is specified by the third, fourth, fifth, and sixth arguments.</span></span> <span data-ttu-id="1e294-109">この場合は、apple は、幅の 75% の高さの 75% をトリミングされます。</span><span class="sxs-lookup"><span data-stu-id="1e294-109">In this case, the apple is cropped to 75 percent of its width and 75 percent of its height.</span></span>  
   
- <span data-ttu-id="4f33c-110"><xref:System.Drawing.Graphics.DrawImage%2A>メソッドを調べ、トリミング apple を描画する場所を先の四角形を確認して、トリミングされた apple 大きさ、これは 2 番目の引数を指定します。</span><span class="sxs-lookup"><span data-stu-id="4f33c-110">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines where to draw the cropped apple and how big to make the cropped apple by looking at the destination rectangle, which is specified by the second argument.</span></span> <span data-ttu-id="4f33c-111">この例では、先の四角形は、30% の幅と、元の画像を縦長の 30% です。</span><span class="sxs-lookup"><span data-stu-id="4f33c-111">In this case, the destination rectangle is 30 percent wider and 30 percent taller than the original image.</span></span>  
+ <span data-ttu-id="1e294-110"><xref:System.Drawing.Graphics.DrawImage%2A>トリミング apple を描画する場所とする先の四角形を調べることで、トリミングされた apple 大きさ、これは、メソッドが決定します 2 番目の引数で指定します。</span><span class="sxs-lookup"><span data-stu-id="1e294-110">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines where to draw the cropped apple and how big to make the cropped apple by looking at the destination rectangle, which is specified by the second argument.</span></span> <span data-ttu-id="1e294-111">この場合は、先の四角形は、30% の幅と高さのある、元のイメージよりも 30% です。</span><span class="sxs-lookup"><span data-stu-id="1e294-111">In this case, the destination rectangle is 30 percent wider and 30 percent taller than the original image.</span></span>  
   
- <span data-ttu-id="4f33c-112">次の図元の apple および、スケーリング apple をトリミングします。</span><span class="sxs-lookup"><span data-stu-id="4f33c-112">The following illustration shows the original apple and the scaled, cropped apple.</span></span>  
+ <span data-ttu-id="1e294-112">次の図は apple をトリミングし、スケーリング、元の apple 示します。</span><span class="sxs-lookup"><span data-stu-id="1e294-112">The following illustration shows the original apple and the scaled, cropped apple.</span></span>  
   
- <span data-ttu-id="4f33c-113">![トリミング & スケール](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span><span class="sxs-lookup"><span data-stu-id="4f33c-113">![Crop & Scale](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span></span>  
+ <span data-ttu-id="1e294-113">![トリミング & スケール](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span><span class="sxs-lookup"><span data-stu-id="1e294-113">![Crop & Scale](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4f33c-114">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="4f33c-114">Compiling the Code</span></span>  
- <span data-ttu-id="4f33c-115">前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。</span><span class="sxs-lookup"><span data-stu-id="4f33c-115">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="4f33c-116">必ず置き換えて`Apple.gif`イメージのファイル名と、システムで有効なパスを使用します。</span><span class="sxs-lookup"><span data-stu-id="4f33c-116">Make sure to replace `Apple.gif` with an image file name and path that are valid on your system.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1e294-114">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="1e294-114">Compiling the Code</span></span>  
+ <span data-ttu-id="1e294-115">前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。</span><span class="sxs-lookup"><span data-stu-id="1e294-115">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="1e294-116">置き換えてください`Apple.gif`イメージ ファイル名と、システムで有効なパス。</span><span class="sxs-lookup"><span data-stu-id="1e294-116">Make sure to replace `Apple.gif` with an image file name and path that are valid on your system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f33c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="4f33c-117">See Also</span></span>  
- [<span data-ttu-id="4f33c-118">イメージ、ビットマップ、メタファイル</span><span class="sxs-lookup"><span data-stu-id="4f33c-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [<span data-ttu-id="4f33c-119">イメージ、ビットマップ、アイコン、およびメタファイルの操作</span><span class="sxs-lookup"><span data-stu-id="4f33c-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="1e294-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e294-117">See also</span></span>
+- [<span data-ttu-id="1e294-118">イメージ、ビットマップ、メタファイル</span><span class="sxs-lookup"><span data-stu-id="1e294-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [<span data-ttu-id="1e294-119">イメージ、ビットマップ、アイコン、およびメタファイルの操作</span><span class="sxs-lookup"><span data-stu-id="1e294-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
