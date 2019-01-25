@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127135"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415937"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する 
 
@@ -33,7 +33,7 @@ eShopOnContainers 参照アプリケーションに使用されているフォ�
 
 トランザクションの整合性とは、ビジネス アクションの最後の時点で集約が一貫した状態になり、なおかつ最新状態になることを保証することです。 たとえば、eShopOnContainers 注文マイクロサービス ドメイン モデルの注文集約は、図 7-11 のように構成されています。
 
-![OrderAggregate フォルダーの詳細な表示: Address.cs は値オブジェクト、IOrderRepository はリポジトリ インターフェイス、Order.cs は集約ルート、OrderItem.cs は子エンティティ、OrderStatus.cs は列挙クラス。](./media/image12.png)
+![OrderAggregate フォルダーの詳細な表示:Address.cs は値オブジェクト、IOrderRepository はリポジトリ インターフェイス、Order.cs は集約ルート、OrderItem.cs は子エンティティ、OrderStatus.cs は列挙クラス。](./media/image12.png)
 
 **図 7-11**。 Visual Studio ソリューションにおける注文集約
 
@@ -152,7 +152,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 Entity Framework Core 1.1 以降を使用する場合、DDD エンティティをより優れた方法で表すことができます。プロパティに加えて、[フィールドへのマッピング](https://docs.microsoft.com/ef/core/modeling/backing-field)が行えるためです。 これは、子エンティティや値オブジェクトのコレクションを保護する場合に役立ちます。 この機能拡張によって、プロパティではなく簡単なプライベート フィールドを使用できます。また、パブリック メソッドでフィールド コレクションへの更新を実装し、AsReadOnly メソッドを使用して読み取り専用アクセスを提供できます。
 
-DDD では、エンティティのメソッド (またはコンストラクター) だけをとおしてエンティティを更新して、不変条件とデータの整合性を制御し、こうしてプロパティが get アクセサーによってのみ定義されることが望まれます。 プロパティは、プライベート フィールドによってサポートされます。 プライベート メンバーには、クラス内からのみアクセスできます。 ただし、1 つ例外があり、EF Core ではこれらのフィールドも設定する必要があります (適切な値でオブジェクトが返せるようにするため)。
+DDD では、エンティティのメソッド (またはコンストラクター) だけをとおしてエンティティを更新して、不変条件とデータの整合性を制御し、こうしてプロパティが get アクセサーによってのみ定義されることが望まれます。 プロパティは、プライベート フィールドによってサポートされます。 プライベート メンバーには、クラス内からのみアクセスできます。 ただし、1 つ例外があり、EF Core ではこれらのフィールドも設定する必要があります (適切な値でオブジェクトを返せるようにするため)。
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>get アクセサーのみでプロパティをデータベース テーブル内のフィールドにマッピングする
 
@@ -171,8 +171,8 @@ EF Core 1.1 以降の機能で列をフィールドにマップすれば、プ�
 - **Vaughn Vernon。DDD および Entity Framework による集約のモデル化。** これは、Entity Framework Core では*ない*ことにご注意ください。 \
   [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
-- **Julie Lerman。ドメイン駆動設計のコーディング: データを重視する開発者のためのヒント** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman。ドメイン駆動設計のコーディング:データを重視する開発者のためのヒント** \
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
 
 - **Udi Dahan。完全にカプセル化されたドメイン モデルを作成する方法** \
   [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d6ad3bc1b8f1795bfa3d83fbb83cb07120758f11
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249100"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415521"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -90,7 +90,7 @@ mscoree.h をホストする API (下記参照) とは異なり、CoreCLRHost.h 
 
 ### <a name="step-5---run-managed-code"></a>手順 5 - マネージド コードを実行する
 
-ランタイムが起動すると、ホストではマネージド コードを呼び出せるようになります。 これにはさまざまな方法があります。 このチュートリアルにリンクされているサンプル コードでは、`coreclr_create_delegate` 関数を使用して静的マネージド メソッドのデリゲートが作成されます。 この API は、アセンブリ名、名前空間で修飾された型名、メソッド名を入力として取得し、メソッドの呼び出しに使用できるデリゲートを返します。
+ランタイムが起動すると、ホストではマネージド コードを呼び出せるようになります。 これにはさまざまな方法があります。 このチュートリアルにリンクされているサンプル コードでは、`coreclr_create_delegate` 関数を使用して静的マネージド メソッドのデリゲートが作成されます。 この API は、[アセンブリ名](../../framework/app-domains/assembly-names.md)、名前空間で修飾された型名、メソッド名を入力として取得し、メソッドの呼び出しに使用できるデリゲートを返します。
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -184,7 +184,7 @@ AppDomain が稼働したら、ホストはマネージド コードを実行で
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-別の選択肢としては、`ExecuteAssembly` がホストのニーズを満たさない場合、`CreateDelegate` を利用し、静的マネージド メソッドの関数ポインターを作成します。 その場合、ホストにそれが呼び出すメソッドのシグネチャを通知する必要があります (関数ポインターの種類を作成する目的で)。ただし、アセンブリのエントリ ポイント以外のコードを呼び出す柔軟性が許可されます。
+別の選択肢としては、`ExecuteAssembly` がホストのニーズを満たさない場合、`CreateDelegate` を利用し、静的マネージド メソッドの関数ポインターを作成します。 その場合、ホストにそれが呼び出すメソッドのシグネチャを通知する必要があります (関数ポインターの種類を作成する目的で)。ただし、アセンブリのエントリ ポイント以外のコードを呼び出す柔軟性が許可されます。 2 番目のパラメーターに指定されたアセンブリ名は、読み込むライブラリの[フル マネージド アセンブリ名](../../framework/app-domains/assembly-names.md)です。
 
 ```C++
 void *pfnDelegate = NULL;

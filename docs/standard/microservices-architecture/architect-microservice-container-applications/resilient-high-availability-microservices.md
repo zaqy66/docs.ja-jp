@@ -4,12 +4,12 @@ description: マイクロサービスの高可用性を実現するには、一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745330"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362237"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -29,12 +29,12 @@ ms.locfileid: "52745330"
 
 正常性は診断とは異なります。 正常性は、適切なアクションを実行するためにマイクロサービスが現在の状態を報告することです。 可用性を維持するためのアップグレードと展開の操作は、この良い例です。 プロセスのクラッシュやコンピューターの再起動のために、サービスが現在異常でも、サービスは引き続き動作している場合があります。 最も望まないことは、アップグレードの実行によってこれを悪化させることです。 最良のアプローチは、最初に調査を行うか、マイクロサービスが回復できるように時間を与えることです。 マイクロサービスからの正常性イベントは、情報に基づいた意思決定を行い、実質的に自己修復サービスを作成するのに役立ちます。
 
-このガイドの [ASP.NET Core サービス セクションでの正常性チェックの実装](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services)では、新しい ASP.NET HealthChecks ライブラリをマイクロサービスで使用し、適切なアクションを実行するために状態を監視サービスに報告する方法について説明しています。
+このガイドの [ASP.NET Core サービス セクションでの正常性チェックの実装](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services)では、新しい ASP.NET HealthChecks ライブラリをマイクロサービスで使用し、適切なアクションを実行するために状態を監視サービスに報告する方法について説明しています。
 
 Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使用することもできます。これは、[GitHub](https://github.com/Xabaril/BeatPulse) で、および [NuGet パッケージ](https://www.nuget.org/packages/BeatPulse/)として入手できます。 このライブラリでも正常性チェックが行われますが、チェックが 2 種類あります。
 
-- **稼動**: マイクロサービスが稼動しているかどうか。つまり要求を受け入れ、応答できるかどうかがチェックされます。 
-- **準備**: マイクロサービスの依存関係 (データベース、キュー サービスなど) 自体が準備できていて、マイクロサービスが求められた操作を実行できるかどうかがチェックされます。 
+- **稼動**:マイクロサービスが稼動しているかどうか。つまり要求を受け入れ、応答できるかどうかがチェックされます。 
+- **準備**:マイクロサービスの依存関係 (データベース、キュー サービスなど) 自体が準備できていて、マイクロサービスが求められた操作を実行できるかどうかがチェックされます。 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>診断とログのイベント ストリームを使用する
 
@@ -58,7 +58,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **Twelve-Factor App.XI.ログ: イベント ストリームとしてログを処理する** \
+- **Twelve-Factor App.XI.ログ:イベント ストリームとしてログを処理する** \
   [*https://12factor.net/logs*](https://12factor.net/logs)
 
 - **Microsoft 診断 EventFlow ライブラリ** GitHub リポジトリ。 \
@@ -70,7 +70,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 - **Windows コンピューターを Azure の Log Analytics サービスに接続する** \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- **意味を表すログ: セマンティック ログ アプリケーション ブロックを使用する** \
+- **意味を表すログ:セマンティック ログ アプリケーション ブロックを使用する** \
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - **Splunk** 公式サイト。 \

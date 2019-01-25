@@ -2,12 +2,12 @@
 title: 'チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004326"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415716"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)
 厳密な名前を持つマネージド アセンブリから型情報を埋め込むと、アプリケーション内で型を疎結合して、バージョンに依存しないプログラムを実現できます。 つまり、各バージョン用の再コンパイルを必要とすることなく、マネージド ライブラリの複数のバージョンから型を使用するプログラムを記述できます。  
@@ -136,7 +136,7 @@ ms.locfileid: "46004326"
                 p_UserInput = Console.ReadLine();  
             }  
         }  
-    )  
+    }  
     ```  
   
 9. プロジェクトを保存します。  
@@ -232,7 +232,7 @@ ms.locfileid: "46004326"
   
 6.  ファイル エクスプローラーで、出力パスのフォルダー (たとえば、C:\TypeEquivalenceSample) を開きます。 TypeEquivalenceClient.exe をダブルクリックして、プログラムを実行します。 プログラムでは、再コンパイルを行わなくても、新バージョンの TypeEquivalenceRuntime アセンブリが反映されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [/link (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156670"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415547"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>.NET Core 3.0 (Preview 1) の新機能
 
@@ -30,15 +30,12 @@ ms.locfileid: "53156670"
 
 ## <a name="default-executables"></a>既定の実行可能ファイル
 
-.NET Core の既定で実行可能ファイルがビルドされるようになります。 これは、グローバルにインストールされているバージョンの .NET Core を使用するアプリケーションの新機能です。 これまでは、[自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)のみが実行可能ファイルを持っていました。
+.NET Core では、既定で[フレームワーク依存の実行可能ファイル](../deploying/index.md#framework-dependent-executables-fde)が作成されるようになります。 これは、グローバルにインストールされているバージョンの .NET Core を使用するアプリケーションの新機能です。 これまでは、[自己完結型のデプロイ](../deploying/index.md#self-contained-deployments-scd)でのみ実行可能ファイルが生成されました。
 
 `dotnet build` または `dotnet publish` の実行中に、使用している SDK の環境およびプラットフォームと一致する実行可能ファイルが作成されます。 これらの実行可能ファイルでは、次のような他のネイティブ実行可能ファイルと同じことを期待できます。
 
 * 実行可能ファイルはダブルクリックすることができます。
 * Windows では `myapp.exe`、Linux と macOS では`./myapp` など、コマンド プロンプトからアプリケーションを直接起動できます。
-
-> [!NOTE]
-> 他のランタイム環境では、`dotnet publish -r` または `dotnet build -r` 引数を使用して特定のランタイムを指定することはサポートされていません。
 
 ## <a name="build-copies-dependencies"></a>ビルドによる依存関係のコピー
 
@@ -175,8 +172,8 @@ Windows フォーム ダイアログが WPF コントロールをホストして
 
 この新しい API には、次のコンポーネントが含まれています。
 
-* Preview 1: JSON リーダー (シーケンシャル アクセス)
-* 次の予定: JSON ライター、DOM (ランダム アクセス)、poco シリアライザー、poco デシリアライザー
+* Preview 1:JSON リーダー (シーケンシャル アクセス)
+* 次の予定:JSON ライター、DOM (ランダム アクセス)、poco シリアライザー、poco デシリアライザー
 
 出発点として使用できる `Utf8JsonReader` の基本的なリーダー ループを次に示します。
 
@@ -274,7 +271,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 > [!NOTE]
 > [C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) のみが `await foreach` の構文をサポートしています。
 
-## <a name="type-sequencereader"></a>型: SequenceReader
+## <a name="type-sequencereader"></a>型:SequenceReader
 
 .NET Core 3.0 には、`ReadOnlySequence<T>` のリーダーとして使用できる `System.Buffers.SequenceReader` が追加されました。 これにより、バッキング バッファーを複数回通過できる `System.IO.Pipelines` データの簡単、高パフォーマンスな、低割り当ての解析が可能になります。 
 
@@ -307,7 +304,7 @@ public static void ReadLines(ReadOnlySequence<byte> sequence)
 }
 ```
 
-## <a name="type-metadataloadcontext"></a>型: MetadataLoadContext
+## <a name="type-metadataloadcontext"></a>型:MetadataLoadContext
 
 呼び出し元のアプリケーション ドメインに影響を与えることなく、アセンブリ メタデータを読み取ることができる `MetadataLoadContext` 型が追加されました。 現在の運用環境とは異なるアーキテクチャおよびプラットフォーム向けに構築されたアセンブリなど、アセンブリはデータとして読み込まれます。 `MetadataLoadContext` は <xref:System.Reflection.Assembly.ReflectionOnlyLoad*> と重複しています。これは .NET Framework でのみ使用できます。
 

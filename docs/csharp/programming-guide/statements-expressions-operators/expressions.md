@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239291"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362315"
 ---
 # <a name="expressions-c-programming-guide"></a>式 (C# プログラミング ガイド)
 *式*とは、1 つの値、オブジェクト、メソッド、または名前空間に評価できる、1 つ以上のオペランドと 0 個以上の演算子のシーケンスです。 式には、リテラル値、メソッドの呼び出し、演算子とそのオペランド、または*簡易名*を含めることができます。 単純な名前には、変数、型メンバー、メソッド パラメーター、名前空間、または型の名前を指定できます。  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>式の値  
- ステートメントやメソッド パラメーターなど、式が使用されるコンテキストの大部分では、式はなんらかの値に評価されることが期待されます。 たとえば、x と y が整数である場合、式 `x + y` は数値に評価されます。 式 `new MyClass()` は、`MyClass` オブジェクトの新しいインスタンスへの参照に評価されます。 式 `myClass.ToString()` は、メソッドの戻り値の型である文字列に評価されます。 ただし、名前空間名については、分類上は式として扱われますが、値には評価されないため、式の最終結果になることはありません。 名前空間名は、メソッド パラメーターに渡すことはできません。また、新しい式で使用したり、変数に割り当てたりすることもできません。 名前空間名は、より大きい式の部分式としてのみ使用できます。 同じことが、型 (<xref:System.Type?displayProperty=nameWithType> オブジェクトとは異なります)、メソッド グループ名 (特定のメソッドとは異なります)、およびイベント アクセサーである [add](../../../csharp/language-reference/keywords/add.md) と [remove](../../../csharp/language-reference/keywords/remove.md) にも当てはまります。  
+ ステートメントやメソッド パラメーターなど、式が使用されるコンテキストの大部分では、式はなんらかの値に評価されることが期待されます。 たとえば、x と y が整数である場合、式 `x + y` は数値に評価されます。 式 `new MyClass()` は、`MyClass` クラスの新しいインスタンスへの参照に評価されます。 式 `myClass.ToString()` は、メソッドの戻り値の型である文字列に評価されます。 ただし、名前空間名については、分類上は式として扱われますが、値には評価されないため、式の最終結果になることはありません。 名前空間名は、メソッド パラメーターに渡すことはできません。また、新しい式で使用したり、変数に割り当てたりすることもできません。 名前空間名は、より大きい式の部分式としてのみ使用できます。 同じことが、型 (<xref:System.Type?displayProperty=nameWithType> オブジェクトとは異なります)、メソッド グループ名 (特定のメソッドとは異なります)、およびイベント アクセサーである [add](../../../csharp/language-reference/keywords/add.md) と [remove](../../../csharp/language-reference/keywords/remove.md) にも当てはまります。  
   
  すべての値には、型が関連付けられています。 たとえば、x と y が両方とも型 `int` の変数である場合、式 `x + y` の値も `int` として型指定されます。 異なる型の変数に値が割り当てられた場合や、x と y の型が異なる場合は、型変換の規則が適用されます。 このような変換の動作方法の詳細については、「[キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)」を参照してください。  
   
@@ -73,7 +73,7 @@ C# は*式形式のメンバー*をサポートしています。式形式のメ
 ## <a name="remarks"></a>コメント  
  変数、オブジェクト プロパティ、またはオブジェクトのインデクサー アクセスが式から識別されると、その項目の値が式の値として使用されます。 C# の式は、式が最終的に必要な型に評価される限り、値やオブジェクトが必要とされる任意の位置に配置できます。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  

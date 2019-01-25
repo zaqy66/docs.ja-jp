@@ -3,21 +3,21 @@ title: カスタム HTTP 呼び出しの指数バックオフを含む再試行�
 description: 考えられる HTTP 障害シナリオを処理するため、ゼロからカスタム HTTP 呼び出しの指数バックオフを含む再試行を実装する方法について説明します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145099"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362250"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>カスタム HTTP 呼び出しの指数バックオフを含む再試行について
 
 回復力のあるマイクロサービスを作成するには、考えられる HTTP 障害シナリオに対処する必要があります。 これらの障害に対処する 1 つの方法として (ただし推奨されません)、指数バックオフを含む再試行の実装を作成します。
 
-**重要な注意事項:** このセクションでは、HTTP 呼び出しの再試行を実装するカスタム コードを作成する方法を示します。 ただし、これをユーザーが独自に行うことは推奨されていませんが、.NET Core 2.1 以降で使用可能なより強力で信頼性が高いながらもよりシンプルなメカニズム (Polly での `HttpClientFactory` など) を使用することが推奨されています。 これらの推奨アプローチについては、以降のセクションで説明します。 
+**重要な注意事項:** このセクションでは、HTTP 呼び出しの再試行を実装するカスタム コードを作成する方法を示します。 ただし、これをユーザーが独自に行うことは推奨されていませんが、.NET Core 2.1 以降で使用可能なより強力で信頼性が高いながらもよりシンプルなメカニズム (Polly での `HttpClientFactory` など) を使用することが推奨されています。 これらの推奨アプローチについては、以降のセクションで説明します。
 
-最初の考察として、[RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) にあるような指数バックオフ用のユーティリティ クラスを使用した独自のコードに加えて、次に示すようなコード (この [GitHub リポジトリ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)でも提供されています) を実装することも可能です。
+最初の考察として、[RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) にあるような指数バックオフ用のユーティリティ クラスを使用した独自のコードに加えて、次に示すようなコードを実装することも可能です。
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-このコードは概念の実証用にのみ使用してください。 次のセクションでは、HttpClientFactory を使用して、よりシンプルでありながらより高度なアプローチを使用する方法について説明します。
-HttpClientFactory は、Polly のような回復性が実証されているライブラリを持つ、.NET Core 2.1 以降で使用できます。 
+このコードは概念の実証用にのみ使用してください。 次のセクションでは、HttpClientFactory を使用して、よりシンプルでありながらより高度なアプローチを使用する方法について説明します。 HttpClientFactory は、Polly のような回復性が実証されているライブラリを持つ、.NET Core 2.1 以降で使用できます。
 
 >[!div class="step-by-step"]
 >[前へ](implement-resilient-entity-framework-core-sql-connections.md)

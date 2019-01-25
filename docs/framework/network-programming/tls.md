@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194138"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415898"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -56,7 +56,7 @@ WCF は、.NET Framework 4.7 での既定値として TLS 1.0、1.1、1.2 をサ
 
 ASP.NET アプリケーションの場合、意図したバージョンの .NET Framework を使っていることを確認するには、_web.config_ の `<system.web><httpRuntime targetFramework>` 要素を調べます。
 
-Windows フォームおよび他のアプリケーションについては、「[方法: .NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」をご覧ください。
+Windows フォームやその他のアプリケーションの場合は、「[方法:.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
 
 以下のセクションで説明するようにして、特定のバージョンの TLS や SSL を使っていないことを確認します。
 
@@ -150,7 +150,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-`Switch.System.Net.DontEnableSchUseStrongCrypto` の値を `false` に設定すると、アプリは強力な暗号を使うようになります。 `DontEnableSchUseStrongCrypto` を `false` にすると、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-schusestrongcrypto-flag)」をご覧ください。 値 `true` は、アプリの強力な暗号を無効にします。
+`Switch.System.Net.DontEnableSchUseStrongCrypto` の値を `false` に設定すると、アプリは強力な暗号を使うようになります。 `DontEnableSchUseStrongCrypto` を `false` にすると、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-sch_use_strong_crypto-flag)」をご覧ください。 値 `true` は、アプリの強力な暗号を無効にします。
 
 アプリの対象が .NET Framework 4.6 以降のバージョンの場合、このスイッチの既定値は `false` です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.6 であっても、以前のバージョンが対象になっている場合は、このスイッチの既定値は `true` です。 その場合は、`false` に明示的に設定する必要があります。
 
@@ -174,7 +174,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 .NET Framework 4.7.1 以降のバージョンを対象とするアプリケーションでは、この値の既定値は `false` です。 .NET Framework 4.7 以前のバージョンを対象とするアプリケーションでは、この値の既定値は `true` です。
 
-TLS プロトコルについて詳しくは、「[軽減策: TLS プロトコル](../migration-guide/mitigation-tls-protocols.md)」をご覧ください。 `AppContext` スイッチについて詳しくは、「[`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)」をご覧ください。
+TLS プロトコルの詳細については、「[Mitigation:TLS Protocols (軽減策: TLS プロトコル)](../migration-guide/mitigation-tls-protocols.md)」をご覧ください。 `AppContext` スイッチについて詳しくは、「[`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)」をご覧ください。
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Windows レジストリによるセキュリティの構成
 
@@ -191,7 +191,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` レジストリ キーの値は DWORD 型です。 値を 1 に設定すると、アプリは強力な暗号を使うようになります。 強力な暗号では、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 値 0 は、強力な暗号を無効にします。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-schusestrongcrypto-flag)」をご覧ください。
+`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` レジストリ キーの値は DWORD 型です。 値を 1 に設定すると、アプリは強力な暗号を使うようになります。 強力な暗号では、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 値 0 は、強力な暗号を無効にします。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-sch_use_strong_crypto-flag)」をご覧ください。
 
 アプリの対象が .NET Framework 4.6 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.6 であっても、対象が以前のバージョンの場合は、このキーの既定値は 0 です。 その場合は、値を 1 に明示的に設定する必要があります。
 
@@ -205,7 +205,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 アプリの対象が .NET Framework 4.7 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.7 以降のバージョンであっても、以前のバージョンが対象になっている場合は、このキーの既定値は 0 になります。 その場合は、値を 1 に明示的に設定する必要があります。
 
-詳しくは、「[Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)」をご覧ください。
+詳細については、「[Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)」をご覧ください。
 
 .NET Framework 3.5.1 の場合について詳しくは、「[Support for TLS System Default Versions included in .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)」(Windows 7 SP1 および Server 2008 R2 SP1 の .NET Framework 3.5.1 に含まれる TLS システムの既定バージョンのサポート) をご覧ください。
 
@@ -258,7 +258,7 @@ Windows Registry Editor Version 5.00
 参照:
 
 - [.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)
-- [方法: インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [方法: インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 ## <a name="support-for-tls-12"></a>TLS 1.2 のサポート
 

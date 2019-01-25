@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2017 の .NET Core を使用したクラス ライブラリのテスト
+title: Visual Studio 2017 での .NET Core を使用した .NET Standard クラス ライブラリのテスト
 description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
 author: BillWagner
 ms.author: wiwagn
@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170796"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362692"
 ---
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 の .NET Core を使用したクラス ライブラリのテスト
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 での .NET Core を使用した .NET Standard ライブラリのテスト
 
-「[Visual Studio 2017 での C# と .NET Core を使用したクラス ライブラリの構築](library-with-visual-studio.md)」または「[Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築](vb-library-with-visual-studio.md)」では、<xref:System.String> クラスに拡張メソッドを追加する簡単なクラス ライブラリを作成しました。 ここでは、それが期待どおり動作するかを確認する単体テストを作成しましょう。 この単体テスト プロジェクトは、前のトピックで作成したソリューションに追加します。
+「[Visual Studio 2017 の C# と .NET Core を使用して .NET Standard クラス ライブラリを構築する](library-with-visual-studio.md)」または「[Visual Studio 2017 で Visual Basic と .NET Core SDK を使用してクラス ライブラリを構築する](vb-library-with-visual-studio.md)」では、<xref:System.String> クラスに拡張メソッドを追加する簡単なクラス ライブラリを作成しました。 ここでは、それが期待どおり動作するかを確認する単体テストを作成しましょう。 この単体テスト プロジェクトは、前の記事で作成したソリューションに追加します。
 
 ## <a name="creating-a-unit-test-project"></a>単体テスト プロジェクトの作成
 

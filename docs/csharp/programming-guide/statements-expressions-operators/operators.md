@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ec3cafec49ae2e05c67d177ad1ea1fdd9b73bca
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239002"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362497"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
+
 C# では、 *演算子* は式またはステートメントの中で 1 つ以上の *オペランド* に適用されるプログラム要素です。 インクリメント演算子 (`++`) や `new`など、1 つのオペランドを受け取る演算子を *単項* 演算子と言います。 算術演算子 (`+`、`-`、`*`、`/`) など、2 つのオペランドを受け取る演算子を *二項* 演算子と言います。 条件演算子 (`?:`) は、3 つのオペランドを受け取る、C# でただ 1 つの三項演算子です。  
   
  次の C# ステートメントには、1 つの単項演算子と 1 つのオペランドがあります。 インクリメント演算子 `++`は、オペランド `y`の値を変更します。  
@@ -25,7 +26,8 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
   
  [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>演算子、評価、演算子の優先順位  
+## <a name="operators-evaluation-and-operator-precedence"></a>演算子、評価、演算子の優先順位
+
  オペランドは、任意の長さのコードで構成される有効な式で、任意の数の副次式を含むことができます。 複数の演算子を含む式の場合、演算子が適用される順序は *演算子の優先順位*、 *結合規則*、およびかっこによって決定されます。  
   
  各演算子には優先順位が定義されています。 優先順位のレベルが異なる複数の演算子を含む式の場合、演算子の優先順位によって演算子が評価される順序が決定されます。 たとえば、次のステートメントでは `n1`に 3 が代入されます。  
@@ -127,7 +129,8 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |x op= y|複合代入。 サポートされる演算子: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名関数 (ラムダ式)|  
   
-## <a name="associativity"></a>結合規則  
+## <a name="associativity"></a>結合規則
+
  1 つの式に同じ優先順位の演算子が複数個含まれている場合、それらの演算子は結合規則に基づいて評価されます。 結合規則が左から右の演算子は、左から右に評価されます。 たとえば、 `x * y / z` は `(x * y) / z`と評価されます。 結合規則が右から左の演算子は、右から左に評価されます。 たとえば、代入演算子は結合規則が右から左です。 そうでない場合、次のコードはエラーになります。  
   
 ```csharp  
@@ -154,7 +157,8 @@ a = (b = c);
 |`a = b - c + d`|a、b、c、-、d、+、=|  
 |`a += b -= c`|a、b、c、-=、+=|  
   
-## <a name="adding-parentheses"></a>かっこの追加  
+## <a name="adding-parentheses"></a>かっこの追加
+
  かっこを使用すると、演算子の優先順位と結合規則によって定められた順序を変更できます。 たとえば、 `2 + 3 * 2` は通常、8 と評価されます。乗算演算子の方が加法演算子よりも優先順位が高いからです。 しかし、この式を `(2 + 3) * 2`と記述すると、加算の方が乗算よりも先に評価され、結果は 10 になります。 次の例では、かっこを使用した式での評価の順序について示します。 前の例では、演算子が適用される前にオペランドが評価されていました。  
   
 |ステートメント|評価の順序|  
@@ -163,13 +167,15 @@ a = (b = c);
 |`a = b - (c + d)`|a、b、c、d、+、-、=|  
 |`a = (b + c) * (d - e)`|a、b、c、+、d、e、-、*、=|  
   
-## <a name="operator-overloading"></a>演算子のオーバーロード  
+## <a name="operator-overloading"></a>演算子のオーバーロード
+
  カスタム クラスやカスタム構造体では、演算子の動作を変更できます。 このプロセスは *演算子のオーバーロード*と呼ばれます。 詳細については、[オーバーロード可能な演算子](../../../csharp/language-reference/keywords/operator.md)に関する記事および [operator](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) キーワードに関する記事を参照してください。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連項目
+
  詳細については、「[演算子のキーワード](../../../csharp/language-reference/keywords/operator-keywords.md)」および「[C# 演算子](../../../csharp/language-reference/operators/index.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
 - [ステートメント、式、および演算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

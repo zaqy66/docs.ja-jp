@@ -2,12 +2,12 @@
 title: '方法: 署名のないフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211802"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362146"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>方法: 署名のないフレンド アセンブリを作成する (C#)
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
@@ -16,7 +16,7 @@ ms.locfileid: "44211802"
   
 1.  コマンド プロンプトを開きます。  
   
-2.  次のコードを含む、`friend_signed_A.` という名前の C# ファイルを作成します。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_signed_B を宣言します。  
+2.  次のコードを含む、`friend_unsigned_A.` という名前の C# ファイルを作成します。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_unsigned_B を宣言します。  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,7 +46,7 @@ ms.locfileid: "44211802"
     }  
     ```  
   
-3.  次のコマンドを使用して friend_signed_A をコンパイルして署名します。  
+3.  次のコマンドを使用して friend_unsigned_A をコンパイルして署名します。  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
@@ -75,7 +75,7 @@ ms.locfileid: "44211802"
     }  
     ```  
   
-5.  次のコマンドを使用して friend_signed_B をコンパイルします。  
+5.  次のコマンドを使用して friend_unsigned_B をコンパイルします。  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,14 +83,14 @@ ms.locfileid: "44211802"
   
      コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 `/out` コンパイラ オプションを使用して、出力アセンブリ (.exe または .dll) の名前を明示的に指定する必要があります。 詳しくは、「[/out (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)」をご覧ください。  
   
-6.  friend_signed_B.exe ファイルを実行します。  
+6.  friend_unsigned_B.exe ファイルを実行します。  
   
-     プログラムによって 2 つの文字列 "Class1.Test" と "Class2.Test" が出力されます。  
+     このプログラムで 2 つの文字列が出力されます。"Class1.Test" と "Class2.Test" です。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `internal` 型とメンバーの参照可能範囲を制御することです。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
 - [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  

@@ -1,16 +1,16 @@
 ---
-title: Visual Studio 2017 で C# Hello World アプリケーション .NET Core を構築する
+title: Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築
 description: Visual Studio 2017 で C# を使用した、単純な .NET Core コンソール アプリケーションを構築する方法について説明します。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168924"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362801"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 で .NET Core を使用して C# Hello World アプリケーションを構築する
 
@@ -76,9 +76,9 @@ ms.locfileid: "53168924"
 
 アプリケーションが作成され、実行されました。 本格的なアプリケーションを開発するには、さらにいくつか追加の手順を行い、アプリケーションをリリース可能な状態にします。
 
-- アプリケーションのデバッグ方法の詳細については、「[Visual Studio 2017 で C# Hello World アプリケーションをデバッグする](debugging-with-visual-studio.md)」を参照してください。
+- アプリケーションのデバッグについては、[Visual Studio 2017 を使用した .NET Core Hello World アプリケーションのデバッグ](debugging-with-visual-studio.md)に関するページを参照してください。
 
-- アプリケーションの再頒布可能バージョンの開発と発行については、「[Visual Studio 2017 を使用した C# Hello World アプリケーションの発行](publishing-with-visual-studio.md)」を参照してください。
+- アプリケーションの再頒布可能バージョンの開発と発行については、「[Publish your .NET Core Hello World application with Visual Studio 2017 (Visual Studio 2017 を使用した .NET Core Hello World アプリケーションの発行)](publishing-with-visual-studio.md)」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 

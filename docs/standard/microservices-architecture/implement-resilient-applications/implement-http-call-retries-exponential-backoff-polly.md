@@ -3,13 +3,13 @@ title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を�
 description: HTTP エラーを Polly と HttpClientFactory で処理する方法について説明します
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143988"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362757"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
@@ -38,7 +38,7 @@ services.AddHttpClient<IBasketService, BasketService>()
 
 **AddPolicyHandler()** メソッドは、使用する `HttpClient` オブジェクトにポリシーを追加します。 この場合、指数バックオフを含む HTTP 再試行に対して Polly のポリシーが追加されます。
 
-手法のモジュール性を高める目的で、次のコードのように、ConfigureServices() メソッド内の個別メソッドに HTTP 再試行ポリシーを定義できます。
+手法のモジュール性を高めるために、次のコードで示すように、`Startup.cs` ファイル内の個別メソッドに HTTP 再試行ポリシーを定義できます。
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -55,7 +55,7 @@ Polly では、再試行回数を指定した再試行ポリシー、指数バ�
 
 つまり、6 回試すとき、再試行間の秒数が指数関数的に後退します (最初は 2 秒)。
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>再試行ポリシーにジッタ方式を追加する
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>再試行ポリシーにジッタ方式を追加する
 
 通常の再試行ポリシーは、コンカレンシーやスケーラビリティが高い場合や、高競合状態下でシステムに影響を及ぼすことがあります。 部分的な停止の場合に多くのクライアントから来る同様の再試行のピークを乗り越えるための賢い回避策は、ジッタ方式を再試行アルゴリズムまたはポリシーに追加することです。 これにより、急増するバックオフにランダム性を加えることで、エンドツーエンド システム全体のパフォーマンスを向上できます。 こうすれば、問題が発生した際のスパイクを分散できます。 平易な Polly ポリシーを使用する場合、ジッタを実装するコードは次の例のようになります。
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **再試行パターン**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- **再試行パターン**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly と HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly と HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (.NET の復元および一時的な障害処理ライブラリ)**
+- **Polly (.NET の復元および一時的な障害処理ライブラリ)**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker.ジッタ: ランダム性を使って状況を改善する**
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker.ジッタ:ランダム性を使って状況を改善する**\
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[前へ](explore-custom-http-call-retries-exponential-backoff.md)

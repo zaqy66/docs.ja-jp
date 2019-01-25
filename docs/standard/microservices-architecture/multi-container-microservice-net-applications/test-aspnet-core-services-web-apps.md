@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0f4b9a8461b4d14cd5b468a50af1783a340392e2
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148029"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362159"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -110,7 +110,7 @@ public class PrimeWebDefaultRequestShould
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
 -   **dotnet テストを使用した .NET Core での単体テスト** <br/>
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**。 公式サイト。 <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -146,7 +146,7 @@ Compose アプリケーションが起動し実行されると、Visual Studio �
 
 図 6-25 に示すように、マイクロサービスごとの単体および統合テストは各マイクロサービスの test フォルダーに含まれており、アプリケーションのロード テストはソリューション フォルダーの test フォルダーの下に含まれています。
 
-![eShopOnContainers のテストの構造: 各サービスには単体および機能テストが含まれる "test" フォルダーがあります。 ソリューションの "test" フォルダーの下には、アプリケーション全体の機能テストとロード テストが含まれています。](./media/image42.png)
+![eShopOnContainers のテストの構造各サービスには単体および機能テストが含まれる "test" フォルダーがあります。 ソリューションの "test" フォルダーの下には、アプリケーション全体の機能テストとロード テストが含まれています。](./media/image42.png)
 
 **図 6-25**。 eShopOnContainers のテスト フォルダーの構造
 

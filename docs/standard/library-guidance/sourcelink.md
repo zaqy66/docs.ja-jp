@@ -3,13 +3,13 @@ title: SourceLink と .NET ライブラリ
 description: SourceLink を使用して .NET ライブラリのデバッグ機能を改善するためのベスト プラクティス推奨事項。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128929"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333539"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ SourceLink の使用方法は、[dotnet/sourceLink](https://github.com/dotnet/so
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> では、デバッガーに対してコードのステップ インではなくステップ実行が指示されます。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> では、デバッガー変数ウィンドウにメンバーを表示するかどうかが制御されます。
 
-**✔️ 検討** NuGet パッケージにシンボル ファイル (`*.pdb`) を含める。
+**✔️ 検討** シンボル ファイルを発行する (`*.pdb`)。
 
-> 通常、[シンボル パッケージ](./nuget.md#symbol-packages)でシンボル ファイルを発行します。 現在、シンボル パッケージの主要なパブリック ホストは、SDK 形式のプロジェクトによって作成されたポータブル シンボル ファイル (`*.pdb`) をサポートしておらず、シンボル パッケージは便利ではありません。
+> シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](dependencies.md)

@@ -4,12 +4,12 @@ description: Kubernetes アプリケーション ライフサイクルを開発�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152729"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307436"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -17,7 +17,7 @@ ms.locfileid: "53152729"
 
 図 4-23 は、複数のマイクロサービス (コンテナー) で構成されるアプリケーションのクラスターへの展開を示しています。
 
-![クラスター内での Docker アプリケーションの構成: サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。ホストでは多くのコンテナーが処理されます。](./media/image23.png)
+![クラスター内での Docker アプリケーションの構成:サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。ホストでは多くのコンテナーが処理されます。](./media/image23.png)
 
 **図 4-23**.  コンテナーのクラスター
 
@@ -87,7 +87,7 @@ ACS には、コンテナー化されたアプリケーションを実行する�
 
 Azure Kubernetes Service によって、一般的な Docker クラスタリング オープンソース ツールとテクノロジの構成が Azure 専用に最適化されます。 コンテナーとアプリケーションの構成の両方に移植性を提供するオープン ソリューションが得られます。 サイズ、ホストの数、オーケストレーター ツールを選択すると、他のことはすべて AKS によって処理されます。
 
-![Kubernetes クラスター構造: DNS、スケジューラ、プロキシなどを処理するマスター ノードが 1 つと、コンテナーをホストするワーカー ノードが複数あります。](media/image36.png)
+![Kubernetes クラスター構造:DNS、スケジューラ、プロキシなどを処理するマスター ノードが 1 つと、コンテナーをホストするワーカー ノードが複数あります。](media/image36.png)
 
 **図 4-24** Kubernetes クラスターの簡略化された構造とトポロジ
 

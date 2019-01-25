@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202908"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415534"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 
@@ -47,7 +47,7 @@ SOH の場合、GC で残ったオブジェクトは次の世代に昇格され�
 
 図 1 に示したシナリオでは、GC は世代 0 の GC で `Obj1` と `Obj3` が終了した後に世代 1 を形成し、世代 1 の GC で `Obj2` と `Obj5` が終了した後に世代 2 を形成しています。 この図と次の図は単に例を示すためのものであることに注意してください。ヒープで何が起こっているかをわかりやすくするために、図にはごくわずかなオブジェクトしか含まれていません。 実際には、通常、GC にはより多くのオブジェクトが含まれます。
 
-![図 1: 世代 0 の GC と世代 1 の GC](media/loh/loh-figure-1.jpg)  
+![図 1: 世代 0 の GC および世代 1 の GC](media/loh/loh-figure-1.jpg)  
 図 1: 世代 0 および世代 1 の GC。
 
 図 2 では、`Obj1` と `Obj2` を終了させた世代 2 の GC の後、GC は、`Obj1` と `Obj2` が占有していたメモリから隣接する空き領域を形成し、`Obj4` に対する割り当て要求を満たすためにその空き領域を使用しています。 最後のオブジェクト `Obj3` からセグメントの末尾までの領域は、割り当て要求を満たすために使用することもできます。
@@ -61,8 +61,8 @@ SOH の場合、GC で残ったオブジェクトは次の世代に昇格され�
 
 LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメントを解放できるのはその GC 中のみとなります。 図 3 に示したシナリオでは、ガベージ コレクターは 1 つのセグメント (セグメント 2) を解放して OS に戻し、残りのセグメントでより多くの領域をデコミットしています。 大きなオブジェクトの割り当て要求を満たすために、セグメント末尾のデコミットされた領域を使用する必要がある場合は、メモリを再度コミットします  (コミット/デコミットの詳細については、[VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) に関するドキュメントを参照してください)。
 
-![図 3: 世代 2 の GC 後の LOH](media/loh/loh-figure-3.jpg)  
-図 3: 世代 2 の GC 後の LOH
+![図 3:世代 2 の GC の後の LOH](media/loh/loh-figure-3.jpg)  
+図 3:世代 2 の GC 後の LOH
 
 ## <a name="when-is-a-large-object-collected"></a>大きなオブジェクトが収集されるタイミング
 
@@ -144,7 +144,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 ### <a name="net-clr-memory-performance-counters"></a>.NET CLR メモリ パフォーマンス カウンター
 
-これらのパフォーマンス カウンターは、通常、パフォーマンスの問題について調べる最初の手順として有効です (ただし、[ETW イベント](#etw)を使用することをお勧めします)。 パフォーマンス モニターを構成するには、図 4 に示すように、必要なカウンターを追加します。 LOH に関連するものは次のとおりです。
+これらのパフォーマンス カウンターは、通常、パフォーマンスの問題について調べる最初の手順として有効です (ただし、[ETW イベント](#etw-events)を使用することをお勧めします)。 パフォーマンス モニターを構成するには、図 4 に示すように、必要なカウンターを追加します。 LOH に関連するものは次のとおりです。
 
 - **Gen 2 Collections**
 
@@ -184,8 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 結果は次のようになります。
 
-![図 5: PerfView を使用する ETW イベントの確認](media/loh/perfview.png)  
-図 5: PerfView を使用した場合に表示される ETW イベント
+![図 5:PerfView を使用した ETW イベントの確認](media/loh/perfview.png)  
+図 5:PerfView を使用して表示された ETW イベント
 
 ご覧のとおり、すべての GC は世代 2 の GC であり、AllocLarge によってすべてトリガーされます。これは、大きなオブジェクトの割り当てにより、この GC がトリガーされたことを意味します。 **LOH Survival Rate %** 列に 1% と示されているため、これらの割り当ては一時的なものであることがわかります。
 
@@ -197,8 +197,8 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 この場合、AllocationTick イベントが収集されます。このイベントは、約 100 K 相当の割り当てごとに発生します。 つまり、イベントは、大きなオブジェクトが割り当てられるたびに発生します。 次に、大きなオブジェクトを割り当てた呼び出し履歴を示す、GC ヒープ割り当てビューのいずれかを確認できます。
 
-![図 6: GC ヒープ割り当てビュー](media/loh/perfview2.png)  
-図 6: GC ヒープ割り当てビュー
+![図 6:GC ヒープ割り当てビュー](media/loh/perfview2.png)  
+図 6:GC ヒープ割り当てビュー
 
 ご覧のとおり、これは、`Main` メソッドから大きなオブジェクトを割り当てるだけの非常に簡単なテストです。
 

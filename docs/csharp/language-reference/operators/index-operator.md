@@ -1,7 +1,7 @@
 ---
 title: '[] 演算子 - C# リファレンス'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244002"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333396"
 ---
 # <a name="-operator-c-reference"></a>[] 演算子 (C# リファレンス)
-角かっこ (`[]`) は、配列、インデクサー、属性に使用されます。 また、ポインターと共に使用することもできます。  
-  
-## <a name="remarks"></a>コメント  
- 配列型は、型の後に `[]` が続きます。  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- 配列の要素にアクセスするには、次のように、目的の要素のインデックスを角かっこで囲みます。  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- 配列のインデックスが範囲外の場合は、例外がスローされます。  
-  
- 配列インデックス演算子をオーバーロードすることはできませんが、1 つ以上のパラメーターを取るインデクサーを型によって定義できます。 インデクサーのパラメーターは配列のインデックスと同じように角かっこで囲みますが、整数でなければならない配列のインデックスとは異なり、インデクサーのパラメーターは任意の型として宣言することができます。  
-  
- たとえば、.NET Framework では、任意の型のキーと値を関連付ける `Hashtable` 型を定義しています。  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- 角かっこは、[属性](../../../csharp/programming-guide/concepts/attributes/index.md)を指定するためにも使用されます。  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- 角かっこを使用して、ポインターにインデックスを作成することができます。  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- 境界のチェックは行われません。  
-  
-## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
-- [配列](../../../csharp/programming-guide/arrays/index.md)  
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed ステートメント](../../../csharp/language-reference/keywords/fixed-statement.md)
+通常、角かっこ `[]` は、配列、インデクサー、またはポインター要素へのアクセスに使用されます。
+
+ポインター要素へのアクセスの詳細については、「[ポインターを使用して配列要素にアクセスする方法](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)」を参照してください。
+
+角かっこは、[属性](../../programming-guide/concepts/attributes/index.md)を指定するためにも使用されます。
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a>配列へのアクセス
+
+次の例は、配列要素へのアクセス方法を示しています。
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+配列インデックスが配列の対応するディメンションの範囲に含まれない場合、<xref:System.IndexOutOfRangeException> がスローされます。
+
+前述の例が示すように、配列型の宣言と配列インスタンスのインスタンス化にも角かっこを使用します。
+
+配列の詳細については、「[配列](../../programming-guide/arrays/index.md)」を参照してください。
+
+## <a name="indexer-access"></a>インデクサーへのアクセス
+
+次の例では、インデクサーへのアクセスを示すために .NET <xref:System.Collections.Generic.Dictionary%602> 型を使用します。
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+インデクサーを使用すると、配列のインデックス作成と同様の方法でユーザー定義型のインスタンスのインデックスを作成することができます。 整数である必要がある配列インデックスとは異なり、任意の型を持つインデクサー引数を宣言できます。
+
+インデクサーの詳細については、「[インデクサー](../../programming-guide/indexers/index.md)」を参照してください。
+
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
+
+要素へのアクセス `[]` はオーバーロード可能な演算子とは見なされていません。 ユーザー定義型を使用したインデックス作成をサポートするには、[インデクサー](../../programming-guide/indexers/index.md)を使用してください。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の「[要素へのアクセス](~/_csharplang/spec/expressions.md#element-access)」と「[ポインターの要素へのアクセス](~/_csharplang/spec/unsafe-code.md#pointer-element-access)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# 演算子](index.md)
+- [配列](../../programming-guide/arrays/index.md)
+- [インデクサー](../../programming-guide/indexers/index.md)
+- [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [属性](../../programming-guide/concepts/attributes/index.md)
