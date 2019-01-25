@@ -1,7 +1,7 @@
 ---
 title: '[] 演算子 - C# リファレンス'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244002"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333396"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="cb723-102">[] 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="cb723-102">[] Operator (C# Reference)</span></span>
-<span data-ttu-id="cb723-103">角かっこ (`[]`) は、配列、インデクサー、属性に使用されます。</span><span class="sxs-lookup"><span data-stu-id="cb723-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="cb723-104">また、ポインターと共に使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="cb723-104">They can also be used with pointers.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="cb723-105">コメント</span><span class="sxs-lookup"><span data-stu-id="cb723-105">Remarks</span></span>  
- <span data-ttu-id="cb723-106">配列型は、型の後に `[]` が続きます。</span><span class="sxs-lookup"><span data-stu-id="cb723-106">An array type is a type followed by `[]`:</span></span>  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- <span data-ttu-id="cb723-107">配列の要素にアクセスするには、次のように、目的の要素のインデックスを角かっこで囲みます。</span><span class="sxs-lookup"><span data-stu-id="cb723-107">To access an element of an array, the index of the desired element is enclosed in brackets:</span></span>  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- <span data-ttu-id="cb723-108">配列のインデックスが範囲外の場合は、例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="cb723-108">An exception is thrown if an array index is out of range.</span></span>  
-  
- <span data-ttu-id="cb723-109">配列インデックス演算子をオーバーロードすることはできませんが、1 つ以上のパラメーターを取るインデクサーを型によって定義できます。</span><span class="sxs-lookup"><span data-stu-id="cb723-109">The array indexing operator cannot be overloaded; however, types can define indexers that take one or more parameters.</span></span> <span data-ttu-id="cb723-110">インデクサーのパラメーターは配列のインデックスと同じように角かっこで囲みますが、整数でなければならない配列のインデックスとは異なり、インデクサーのパラメーターは任意の型として宣言することができます。</span><span class="sxs-lookup"><span data-stu-id="cb723-110">Indexer parameters are enclosed in square brackets, just like array indexes, but indexer parameters can be declared to be of any type, unlike array indexes, which must be integral.</span></span>  
-  
- <span data-ttu-id="cb723-111">たとえば、.NET Framework では、任意の型のキーと値を関連付ける `Hashtable` 型を定義しています。</span><span class="sxs-lookup"><span data-stu-id="cb723-111">For example, the .NET Framework defines a `Hashtable` type that associates keys and values of arbitrary type:</span></span>  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- <span data-ttu-id="cb723-112">角かっこは、[属性](../../../csharp/programming-guide/concepts/attributes/index.md)を指定するためにも使用されます。</span><span class="sxs-lookup"><span data-stu-id="cb723-112">Square brackets are also used to specify [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md):</span></span>  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- <span data-ttu-id="cb723-113">角かっこを使用して、ポインターにインデックスを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="cb723-113">You can use square brackets to index off a pointer:</span></span>  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- <span data-ttu-id="cb723-114">境界のチェックは行われません。</span><span class="sxs-lookup"><span data-stu-id="cb723-114">No bounds checking is performed.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="cb723-115">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="cb723-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="cb723-116">参照</span><span class="sxs-lookup"><span data-stu-id="cb723-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="0cefc-102">[] 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="0cefc-102">[] operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="cb723-117">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="cb723-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="cb723-118">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="cb723-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="cb723-119">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="cb723-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="cb723-120">配列</span><span class="sxs-lookup"><span data-stu-id="cb723-120">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="cb723-121">インデクサー</span><span class="sxs-lookup"><span data-stu-id="cb723-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
-- [<span data-ttu-id="cb723-122">unsafe</span><span class="sxs-lookup"><span data-stu-id="cb723-122">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="cb723-123">fixed ステートメント</span><span class="sxs-lookup"><span data-stu-id="cb723-123">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
+<span data-ttu-id="0cefc-103">通常、角かっこ `[]` は、配列、インデクサー、またはポインター要素へのアクセスに使用されます。</span><span class="sxs-lookup"><span data-stu-id="0cefc-103">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
+
+<span data-ttu-id="0cefc-104">ポインター要素へのアクセスの詳細については、「[ポインターを使用して配列要素にアクセスする方法](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0cefc-104">For more information about pointer element access, see [How to: access an array element with a pointer](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span></span>
+
+<span data-ttu-id="0cefc-105">角かっこは、[属性](../../programming-guide/concepts/attributes/index.md)を指定するためにも使用されます。</span><span class="sxs-lookup"><span data-stu-id="0cefc-105">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a><span data-ttu-id="0cefc-106">配列へのアクセス</span><span class="sxs-lookup"><span data-stu-id="0cefc-106">Array access</span></span>
+
+<span data-ttu-id="0cefc-107">次の例は、配列要素へのアクセス方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="0cefc-107">The following example demonstrates how to access array elements:</span></span>
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+<span data-ttu-id="0cefc-108">配列インデックスが配列の対応するディメンションの範囲に含まれない場合、<xref:System.IndexOutOfRangeException> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="0cefc-108">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
+
+<span data-ttu-id="0cefc-109">前述の例が示すように、配列型の宣言と配列インスタンスのインスタンス化にも角かっこを使用します。</span><span class="sxs-lookup"><span data-stu-id="0cefc-109">As the preceding example shows, you also use square brackets in declaration of an array type and instantiation of array instances.</span></span>
+
+<span data-ttu-id="0cefc-110">配列の詳細については、「[配列](../../programming-guide/arrays/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0cefc-110">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
+
+## <a name="indexer-access"></a><span data-ttu-id="0cefc-111">インデクサーへのアクセス</span><span class="sxs-lookup"><span data-stu-id="0cefc-111">Indexer access</span></span>
+
+<span data-ttu-id="0cefc-112">次の例では、インデクサーへのアクセスを示すために .NET <xref:System.Collections.Generic.Dictionary%602> 型を使用します。</span><span class="sxs-lookup"><span data-stu-id="0cefc-112">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+<span data-ttu-id="0cefc-113">インデクサーを使用すると、配列のインデックス作成と同様の方法でユーザー定義型のインスタンスのインデックスを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="0cefc-113">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="0cefc-114">整数である必要がある配列インデックスとは異なり、任意の型を持つインデクサー引数を宣言できます。</span><span class="sxs-lookup"><span data-stu-id="0cefc-114">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
+
+<span data-ttu-id="0cefc-115">インデクサーの詳細については、「[インデクサー](../../programming-guide/indexers/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0cefc-115">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="0cefc-116">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="0cefc-116">Operator overloadability</span></span>
+
+<span data-ttu-id="0cefc-117">要素へのアクセス `[]` はオーバーロード可能な演算子とは見なされていません。</span><span class="sxs-lookup"><span data-stu-id="0cefc-117">Element access `[]` is not considered an overloadable operator.</span></span> <span data-ttu-id="0cefc-118">ユーザー定義型を使用したインデックス作成をサポートするには、[インデクサー](../../programming-guide/indexers/index.md)を使用してください。</span><span class="sxs-lookup"><span data-stu-id="0cefc-118">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="0cefc-119">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="0cefc-119">C# language specification</span></span>
+
+<span data-ttu-id="0cefc-120">詳細については、「[C# 言語仕様](../language-specification/index.md)」の「[要素へのアクセス](~/_csharplang/spec/expressions.md#element-access)」と「[ポインターの要素へのアクセス](~/_csharplang/spec/unsafe-code.md#pointer-element-access)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0cefc-120">For more information, see the [Element access](~/_csharplang/spec/expressions.md#element-access) and [Pointer element access](~/_csharplang/spec/unsafe-code.md#pointer-element-access) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="0cefc-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="0cefc-121">See also</span></span>
+
+- [<span data-ttu-id="0cefc-122">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="0cefc-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="0cefc-123">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="0cefc-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="0cefc-124">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="0cefc-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="0cefc-125">配列</span><span class="sxs-lookup"><span data-stu-id="0cefc-125">Arrays</span></span>](../../programming-guide/arrays/index.md)
+- [<span data-ttu-id="0cefc-126">インデクサー</span><span class="sxs-lookup"><span data-stu-id="0cefc-126">Indexers</span></span>](../../programming-guide/indexers/index.md)
+- [<span data-ttu-id="0cefc-127">ポインター型</span><span class="sxs-lookup"><span data-stu-id="0cefc-127">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="0cefc-128">属性</span><span class="sxs-lookup"><span data-stu-id="0cefc-128">Attributes</span></span>](../../programming-guide/concepts/attributes/index.md)

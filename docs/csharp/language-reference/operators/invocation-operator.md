@@ -1,7 +1,7 @@
 ---
 title: () 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,38 +9,51 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236456"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362783"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="df71a-102">() 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="df71a-102">() Operator (C# Reference)</span></span>
-<span data-ttu-id="df71a-103">かっこは式内での演算の順序を指定することに加え、以下のタスクを実行するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="df71a-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>  
-  
-1.  <span data-ttu-id="df71a-104">キャストまたは型変換を指定する。</span><span class="sxs-lookup"><span data-stu-id="df71a-104">Specify casts, or type conversions.</span></span>  
-  
-     [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
-  
-2.  <span data-ttu-id="df71a-105">メソッドまたはデリゲートを呼び出す。</span><span class="sxs-lookup"><span data-stu-id="df71a-105">Invoke methods or delegates.</span></span>  
-  
-     [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
-  
-## <a name="remarks"></a><span data-ttu-id="df71a-106">コメント</span><span class="sxs-lookup"><span data-stu-id="df71a-106">Remarks</span></span>  
- <span data-ttu-id="df71a-107">キャストによってある型から別の型への変換演算子が明示的に呼び出されます。その変換演算子が定義されていない場合、キャストは失敗します。</span><span class="sxs-lookup"><span data-stu-id="df71a-107">A cast explicitly invokes the conversion operator from one type to another; the cast fails if no such conversion operator is defined.</span></span> <span data-ttu-id="df71a-108">変換演算子を定義するには、「[explicit](../../../csharp/language-reference/keywords/explicit.md)」および「[implicit](../../../csharp/language-reference/keywords/implicit.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="df71a-108">To define a conversion operator, see [explicit](../../../csharp/language-reference/keywords/explicit.md) and [implicit](../../../csharp/language-reference/keywords/implicit.md).</span></span>  
-  
- <span data-ttu-id="df71a-109">`()` 演算子はオーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="df71a-109">The `()` operator cannot be overloaded.</span></span>  
-  
- <span data-ttu-id="df71a-110">詳細については、「[キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="df71a-110">For more information, see [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span></span>  
-  
- <span data-ttu-id="df71a-111">メソッド呼び出しの詳細については、「[メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="df71a-111">For more information about method invocation, see [Methods](../../../csharp/programming-guide/classes-and-structs/methods.md).</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="df71a-112">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="df71a-112">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="df71a-113">参照</span><span class="sxs-lookup"><span data-stu-id="df71a-113">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="076d2-102">() 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="076d2-102">() operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="df71a-114">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="df71a-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="df71a-115">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="df71a-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="df71a-116">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="df71a-116">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="076d2-103">通常、かっこ (`()`) は、メソッドまたはデリゲートの呼び出し、またはキャスト式内で使用されます。</span><span class="sxs-lookup"><span data-stu-id="076d2-103">Parentheses, `()`, are typically used for method or delegate invocation or in cast expressions.</span></span>
+
+<span data-ttu-id="076d2-104">式に含まれる演算を評価する順序を指定する場合にもかっこを使用します。</span><span class="sxs-lookup"><span data-stu-id="076d2-104">You also use parentheses to specify the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="076d2-105">詳細については、「[演算子](../../programming-guide/statements-expressions-operators/operators.md)」記事の「[かっこの追加](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-105">For more information, see the [Adding parentheses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) section of the [Operators](../../programming-guide/statements-expressions-operators/operators.md) article.</span></span> <span data-ttu-id="076d2-106">優先順位順に並べられた演算子の一覧については、「[C# 演算子](index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-106">For the list of operators ordered by precedence level, see [C# operators](index.md).</span></span>
+
+## <a name="method-invocation"></a><span data-ttu-id="076d2-107">メソッドの呼び出し</span><span class="sxs-lookup"><span data-stu-id="076d2-107">Method invocation</span></span>
+
+<span data-ttu-id="076d2-108">メソッド (引数を指定した場合と指定しない場合) とデリゲートを呼び出す方法の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="076d2-108">The following example demonstrates how to invoke a method, with or without arguments, and a delegate:</span></span>
+
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+
+<span data-ttu-id="076d2-109">かっこは、[`new`](../keywords/new-operator.md) 演算子を使用して[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)を呼び出すときにも使用します。</span><span class="sxs-lookup"><span data-stu-id="076d2-109">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with a [`new`](../keywords/new-operator.md) operator.</span></span>
+
+<span data-ttu-id="076d2-110">メソッドの詳細については、「[メソッド](../../programming-guide/classes-and-structs/methods.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-110">For more information about methods, see [Methods](../../programming-guide/classes-and-structs/methods.md).</span></span> <span data-ttu-id="076d2-111">デリゲートの詳細については、「[デリゲート](../../programming-guide/delegates/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-111">For more information about delegates, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+
+## <a name="cast-expression"></a><span data-ttu-id="076d2-112">キャスト式</span><span class="sxs-lookup"><span data-stu-id="076d2-112">Cast expression</span></span>
+
+<span data-ttu-id="076d2-113">`(T)E` という形式のキャスト式で、変換演算子が呼び出され、式 `E` の値が型 `T` に変換されます。</span><span class="sxs-lookup"><span data-stu-id="076d2-113">A cast expression of the form `(T)E` invokes a conversion operator to convert the value of expression `E` to type `T`.</span></span> <span data-ttu-id="076d2-114">型 `E` から型 `T` への明示的な変換が存在しない場合は、コンパイル時エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="076d2-114">If no explicit conversion exists from the type of `E` to type `T`, a compile-time error occurs.</span></span> <span data-ttu-id="076d2-115">変換演算子を定義する方法については、[明示的なキーワード](../keywords/explicit.md)と[暗黙的なキーワード](../keywords/implicit.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-115">For information about how to define a conversion operator, see the [explicit](../keywords/explicit.md) and [implicit](../keywords/implicit.md) keyword articles.</span></span>
+
+<span data-ttu-id="076d2-116">数値間の型変換の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="076d2-116">The following example demonstrates type conversion between numeric types:</span></span>
+
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+
+<span data-ttu-id="076d2-117">数値型間の事前に定義された明示的な変換については、「[明示的な数値変換の一覧表](../keywords/explicit-numeric-conversions-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-117">For more information about predefined explicit conversions between numeric types, see [Explicit numeric conversions table](../keywords/explicit-numeric-conversions-table.md).</span></span>
+
+<span data-ttu-id="076d2-118">詳細については、「[キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)」と「[変換演算子](../../programming-guide/statements-expressions-operators/conversion-operators.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-118">For more information, see [Casting and type conversions](../../programming-guide/types/casting-and-type-conversions.md) and [Conversion operators](../../programming-guide/statements-expressions-operators/conversion-operators.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="076d2-119">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="076d2-119">Operator overloadability</span></span>
+
+<span data-ttu-id="076d2-120">`()` 演算子はオーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="076d2-120">The operator `()` cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="076d2-121">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="076d2-121">C# language specification</span></span>
+
+<span data-ttu-id="076d2-122">詳細については、「[C# 言語仕様](../language-specification/index.md)」の「[Invocation 式](~/_csharplang/spec/expressions.md#invocation-expressions)」セクションと「[キャスト式](~/_csharplang/spec/expressions.md#cast-expressions)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="076d2-122">For more information, see the [Invocation expressions](~/_csharplang/spec/expressions.md#invocation-expressions) and [Cast expressions](~/_csharplang/spec/expressions.md#cast-expressions) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="076d2-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="076d2-123">See also</span></span>
+
+- [<span data-ttu-id="076d2-124">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="076d2-124">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="076d2-125">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="076d2-125">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="076d2-126">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="076d2-126">C# Operators</span></span>](index.md)
