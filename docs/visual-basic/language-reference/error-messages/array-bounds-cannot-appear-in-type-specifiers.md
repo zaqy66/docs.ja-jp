@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-ms.openlocfilehash: 45787db51de562f2266c587fd2bb15ef29ebefbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31aea5a98233c8f262a77ba5c99eea389bc33ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715440"
 ---
-# <a name="array-bounds-cannot-appear-in-type-specifiers"></a><span data-ttu-id="9891e-102">配列の上下限を、型指定子に記述できません。</span><span class="sxs-lookup"><span data-stu-id="9891e-102">Array bounds cannot appear in type specifiers</span></span>
-<span data-ttu-id="9891e-103">配列サイズは、データ型の指定子の一部として宣言することはできません。</span><span class="sxs-lookup"><span data-stu-id="9891e-103">Array sizes cannot be declared as part of a data type specifier.</span></span>  
+# <a name="array-bounds-cannot-appear-in-type-specifiers"></a><span data-ttu-id="0b6fb-102">配列の上下限を、型指定子に記述できません。</span><span class="sxs-lookup"><span data-stu-id="0b6fb-102">Array bounds cannot appear in type specifiers</span></span>
+<span data-ttu-id="0b6fb-103">配列のサイズは、データ型の指定子の一部として宣言することはできません。</span><span class="sxs-lookup"><span data-stu-id="0b6fb-103">Array sizes cannot be declared as part of a data type specifier.</span></span>  
   
- <span data-ttu-id="9891e-104">**エラー ID:** BC30638</span><span class="sxs-lookup"><span data-stu-id="9891e-104">**Error ID:** BC30638</span></span>  
+ <span data-ttu-id="0b6fb-104">**エラー ID:** BC30638</span><span class="sxs-lookup"><span data-stu-id="0b6fb-104">**Error ID:** BC30638</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9891e-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="9891e-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0b6fb-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="0b6fb-105">To correct this error</span></span>  
   
--   <span data-ttu-id="9891e-106">次の例で示すように、型の後に、配列のサイズをかける代わりに変数名のすぐ後の配列のサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="9891e-106">Specify the size of the array immediately following the variable name instead of placing the array size after the type, as shown in the following example.</span></span>  
+-   <span data-ttu-id="0b6fb-106">次の例に示すように、型の後に、配列のサイズを配置することではなく変数名のすぐ後の配列のサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="0b6fb-106">Specify the size of the array immediately following the variable name instead of placing the array size after the type, as shown in the following example.</span></span>  
   
     ```  
     Dim Array(8) As Integer   
     ```  
   
--   <span data-ttu-id="9891e-107">配列を定義し、次の例で示すように必要な数の要素を初期化します。</span><span class="sxs-lookup"><span data-stu-id="9891e-107">Define an array and initialize it with the desired number of elements, as shown in the following example.</span></span>  
+-   <span data-ttu-id="0b6fb-107">配列を定義し、次の例に示すように、必要な数の要素を初期化します。</span><span class="sxs-lookup"><span data-stu-id="0b6fb-107">Define an array and initialize it with the desired number of elements, as shown in the following example.</span></span>  
   
     ```  
     Dim Array2() As Integer = New Integer(8) {}  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9891e-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="9891e-108">See Also</span></span>  
- [<span data-ttu-id="9891e-109">配列</span><span class="sxs-lookup"><span data-stu-id="9891e-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="0b6fb-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b6fb-108">See also</span></span>
+- [<span data-ttu-id="0b6fb-109">配列</span><span class="sxs-lookup"><span data-stu-id="0b6fb-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

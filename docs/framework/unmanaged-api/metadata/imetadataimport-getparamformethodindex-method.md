@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740113"
 ---
-# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="f9eb4-102">IMetaDataImport::GetParamForMethodIndex メソッド</span><span class="sxs-lookup"><span data-stu-id="f9eb4-102">IMetaDataImport::GetParamForMethodIndex Method</span></span>
-<span data-ttu-id="f9eb4-103">指定した MethodDef トークンによって表されるメソッドの指定されたパラメーターを表すトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="f9eb4-103">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
+# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="c7544-102">IMetaDataImport::GetParamForMethodIndex メソッド</span><span class="sxs-lookup"><span data-stu-id="c7544-102">IMetaDataImport::GetParamForMethodIndex Method</span></span>
+<span data-ttu-id="c7544-103">指定した MethodDef トークンによって表されるメソッドの指定されたパラメーターを表すトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="c7544-103">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9eb4-104">構文</span><span class="sxs-lookup"><span data-stu-id="f9eb4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7544-104">構文</span><span class="sxs-lookup"><span data-stu-id="c7544-104">Syntax</span></span>  
   
 ```  
 HRESULT GetParamForMethodIndex (  
@@ -37,25 +37,25 @@ HRESULT GetParamForMethodIndex (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f9eb4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f9eb4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c7544-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c7544-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="f9eb4-106">[in]パラメーターのトークンを返すメソッドを表すトークンです。</span><span class="sxs-lookup"><span data-stu-id="f9eb4-106">[in] A token that represents the method to return the parameter token for.</span></span>  
+ <span data-ttu-id="c7544-106">[in]パラメーターのトークンを返すメソッドを表すトークンです。</span><span class="sxs-lookup"><span data-stu-id="c7544-106">[in] A token that represents the method to return the parameter token for.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="f9eb4-107">[in]要求されたパラメーターが発生する、パラメーター リスト内の序数位置。</span><span class="sxs-lookup"><span data-stu-id="f9eb4-107">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="f9eb4-108">パラメーターは、ゼロの位置が、メソッドの戻り値を持つ、1 から始まる番号が付けられます。</span><span class="sxs-lookup"><span data-stu-id="f9eb4-108">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
+ <span data-ttu-id="c7544-107">[in]要求されたパラメーターが発生したパラメーター リスト内の序数位置。</span><span class="sxs-lookup"><span data-stu-id="c7544-107">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="c7544-108">パラメーターは、メソッドの戻り値の位置は 0 で、1 から始まる番号が付けられます。</span><span class="sxs-lookup"><span data-stu-id="c7544-108">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
   
  `ppd`  
- <span data-ttu-id="f9eb4-109">[out]要求されたパラメーターを表す ParamDef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f9eb4-109">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
+ <span data-ttu-id="c7544-109">[out]要求されたパラメーターを表す ParamDef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="c7544-109">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9eb4-110">要件</span><span class="sxs-lookup"><span data-stu-id="f9eb4-110">Requirements</span></span>  
- <span data-ttu-id="f9eb4-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="f9eb4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7544-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="c7544-110">Requirements</span></span>  
+ <span data-ttu-id="c7544-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c7544-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f9eb4-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f9eb4-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c7544-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c7544-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f9eb4-113">**ライブラリ:** MsCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="f9eb4-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c7544-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c7544-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f9eb4-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9eb4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c7544-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7544-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9eb4-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="f9eb4-115">See Also</span></span>  
- [<span data-ttu-id="f9eb4-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f9eb4-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="f9eb4-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f9eb4-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c7544-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="c7544-115">See also</span></span>
+- [<span data-ttu-id="c7544-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c7544-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c7544-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c7544-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

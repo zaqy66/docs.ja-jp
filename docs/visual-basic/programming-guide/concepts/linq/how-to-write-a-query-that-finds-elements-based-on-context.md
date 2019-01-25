@@ -1,21 +1,21 @@
 ---
-title: '方法: クエリを記述する (Visual Basic) のコンテキストに基づいて要素を検索します。'
+title: '方法: (Visual Basic) のコンテキストに基づいて要素を検索するクエリを記述します。'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: a16f591fc08e8822059bae2ee07d96af575059bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4921652b5b9c59f767e0477e26987edaf4655897
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708143"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a><span data-ttu-id="9dfca-102">方法: クエリを記述する (Visual Basic) のコンテキストに基づいて要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="9dfca-102">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>
-<span data-ttu-id="9dfca-103">コンテキストに基づいて要素を選択するクエリの記述が必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="9dfca-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="9dfca-104">つまり、前の兄弟要素や次の兄弟要素に基づいてフィルターしたり、</span><span class="sxs-lookup"><span data-stu-id="9dfca-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="9dfca-105">子要素や祖先要素に基づいてフィルターすることが必要になる場合が考えられます。</span><span class="sxs-lookup"><span data-stu-id="9dfca-105">You might want to filter based on child or ancestor elements.</span></span>  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a><span data-ttu-id="ab858-102">方法: (Visual Basic) のコンテキストに基づいて要素を検索するクエリを記述します。</span><span class="sxs-lookup"><span data-stu-id="ab858-102">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>
+<span data-ttu-id="ab858-103">コンテキストに基づいて要素を選択するクエリの記述が必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="ab858-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="ab858-104">つまり、前の兄弟要素や次の兄弟要素に基づいてフィルターしたり、</span><span class="sxs-lookup"><span data-stu-id="ab858-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="ab858-105">子要素や祖先要素に基づいてフィルターすることが必要になる場合が考えられます。</span><span class="sxs-lookup"><span data-stu-id="ab858-105">You might want to filter based on child or ancestor elements.</span></span>  
   
- <span data-ttu-id="9dfca-106">これを実現するには、クエリを記述し、そのクエリの結果を `where` 句で使用します。</span><span class="sxs-lookup"><span data-stu-id="9dfca-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="9dfca-107">最初に NULL に対してテストし、次に値をテストする必要がある場合は、`let` 句でクエリを実行し、次にその結果を `where` 句で使用する方が便利です。</span><span class="sxs-lookup"><span data-stu-id="9dfca-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
+ <span data-ttu-id="ab858-106">これを実現するには、クエリを記述し、そのクエリの結果を `where` 句で使用します。</span><span class="sxs-lookup"><span data-stu-id="ab858-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="ab858-107">最初に NULL に対してテストし、次に値をテストする必要がある場合は、`let` 句でクエリを実行し、次にその結果を `where` 句で使用する方が便利です。</span><span class="sxs-lookup"><span data-stu-id="ab858-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9dfca-108">例</span><span class="sxs-lookup"><span data-stu-id="9dfca-108">Example</span></span>  
- <span data-ttu-id="9dfca-109">次の例では、`p` 要素の直前の `ul` 要素をすべて選択します。</span><span class="sxs-lookup"><span data-stu-id="9dfca-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab858-108">例</span><span class="sxs-lookup"><span data-stu-id="ab858-108">Example</span></span>  
+ <span data-ttu-id="ab858-109">次の例では、`p` 要素の直前の `ul` 要素をすべて選択します。</span><span class="sxs-lookup"><span data-stu-id="ab858-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
   
 ```vb  
 Dim doc As XElement = _  
@@ -49,7 +49,7 @@ For Each e As XElement In items
 Next  
 ```  
   
- <span data-ttu-id="9dfca-110">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="9dfca-110">This code produces the following output:</span></span>  
+ <span data-ttu-id="ab858-110">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="ab858-110">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -57,8 +57,8 @@ id = 3
 id = 6  
 ```  
   
-## <a name="example"></a><span data-ttu-id="9dfca-111">例</span><span class="sxs-lookup"><span data-stu-id="9dfca-111">Example</span></span>  
- <span data-ttu-id="9dfca-112">次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。</span><span class="sxs-lookup"><span data-stu-id="9dfca-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9dfca-113">詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の操作](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)です。</span><span class="sxs-lookup"><span data-stu-id="9dfca-113">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="ab858-111">例</span><span class="sxs-lookup"><span data-stu-id="ab858-111">Example</span></span>  
+ <span data-ttu-id="ab858-112">次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。</span><span class="sxs-lookup"><span data-stu-id="ab858-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="ab858-113">詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。</span><span class="sxs-lookup"><span data-stu-id="ab858-113">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -98,7 +98,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="9dfca-114">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="9dfca-114">This code produces the following output:</span></span>  
+ <span data-ttu-id="ab858-114">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="ab858-114">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -106,9 +106,9 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9dfca-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="9dfca-115">See Also</span></span>  
- <xref:System.Xml.Linq.XElement.Parse%2A>  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
- [<span data-ttu-id="9dfca-116">基本的なクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9dfca-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ab858-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab858-115">See also</span></span>
+- <xref:System.Xml.Linq.XElement.Parse%2A>
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>
+- [<span data-ttu-id="ab858-116">基本的なクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab858-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
