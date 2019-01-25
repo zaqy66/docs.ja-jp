@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550b39445dfe4d97e712e9a4c73aa0f497b3fce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f03b25f7206df2bde3e1cc0b58efb57a40c1a7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685426"
 ---
-# <a name="icordebugmda-interface"></a><span data-ttu-id="c4e2b-102">ICorDebugMDA インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c4e2b-102">ICorDebugMDA Interface</span></span>
-<span data-ttu-id="c4e2b-103">マネージ デバッグ アシスタント (MDA) メッセージを表します。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-103">Represents a managed debugging assistant (MDA) message.</span></span>  
+# <a name="icordebugmda-interface"></a><span data-ttu-id="e1eb8-102">ICorDebugMDA インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e1eb8-102">ICorDebugMDA Interface</span></span>
+<span data-ttu-id="e1eb8-103">マネージド デバッグ アシスタント (MDA) メッセージを表します。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-103">Represents a managed debugging assistant (MDA) message.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c4e2b-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="c4e2b-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e1eb8-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="e1eb8-104">Methods</span></span>  
   
-|<span data-ttu-id="c4e2b-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="c4e2b-105">Method</span></span>|<span data-ttu-id="c4e2b-106">説明</span><span class="sxs-lookup"><span data-stu-id="c4e2b-106">Description</span></span>|  
+|<span data-ttu-id="e1eb8-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="e1eb8-105">Method</span></span>|<span data-ttu-id="e1eb8-106">説明</span><span class="sxs-lookup"><span data-stu-id="e1eb8-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c4e2b-107">GetDescription メソッド</span><span class="sxs-lookup"><span data-stu-id="c4e2b-107">GetDescription Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|<span data-ttu-id="c4e2b-108">この MDA の説明を含む文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-108">Gets a string containing a description of this MDA.</span></span>|  
-|[<span data-ttu-id="c4e2b-109">GetFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="c4e2b-109">GetFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|<span data-ttu-id="c4e2b-110">この MDA に関連付けられているフラグを取得します。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-110">Gets the flags associated with this MDA.</span></span>|  
-|[<span data-ttu-id="c4e2b-111">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="c4e2b-111">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|<span data-ttu-id="c4e2b-112">この MDA の名前を含む文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-112">Gets a string containing the name of this MDA.</span></span>|  
-|[<span data-ttu-id="c4e2b-113">GetOSThreadId メソッド</span><span class="sxs-lookup"><span data-stu-id="c4e2b-113">GetOSThreadId Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|<span data-ttu-id="c4e2b-114">この MDA を実行して基になるオペレーティング システムのスレッド識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-114">Gets the operating system thread identifier upon which this MDA is executing.</span></span>|  
-|[<span data-ttu-id="c4e2b-115">GetXML メソッド</span><span class="sxs-lookup"><span data-stu-id="c4e2b-115">GetXML Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|<span data-ttu-id="c4e2b-116">この MDA に関連付けられている満杯になった XML ストリームを取得します。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-116">Gets the full XML stream associated with this MDA.</span></span>|  
+|[<span data-ttu-id="e1eb8-107">GetDescription メソッド</span><span class="sxs-lookup"><span data-stu-id="e1eb8-107">GetDescription Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|<span data-ttu-id="e1eb8-108">この MDA の説明を含む文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-108">Gets a string containing a description of this MDA.</span></span>|  
+|[<span data-ttu-id="e1eb8-109">GetFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="e1eb8-109">GetFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|<span data-ttu-id="e1eb8-110">この MDA に関連付けられているフラグを取得します。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-110">Gets the flags associated with this MDA.</span></span>|  
+|[<span data-ttu-id="e1eb8-111">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="e1eb8-111">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|<span data-ttu-id="e1eb8-112">この MDA の名前を含む文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-112">Gets a string containing the name of this MDA.</span></span>|  
+|[<span data-ttu-id="e1eb8-113">GetOSThreadId メソッド</span><span class="sxs-lookup"><span data-stu-id="e1eb8-113">GetOSThreadId Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|<span data-ttu-id="e1eb8-114">この MDA を実行するオペレーティング システムのスレッド識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-114">Gets the operating system thread identifier upon which this MDA is executing.</span></span>|  
+|[<span data-ttu-id="e1eb8-115">GetXML メソッド</span><span class="sxs-lookup"><span data-stu-id="e1eb8-115">GetXML Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|<span data-ttu-id="e1eb8-116">この MDA に関連付けられている完全な XML ストリームを取得します。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-116">Gets the full XML stream associated with this MDA.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c4e2b-117">コメント</span><span class="sxs-lookup"><span data-stu-id="c4e2b-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1eb8-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="e1eb8-117">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c4e2b-118">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="e1eb8-118">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4e2b-119">要件</span><span class="sxs-lookup"><span data-stu-id="c4e2b-119">Requirements</span></span>  
- <span data-ttu-id="c4e2b-120">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="c4e2b-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1eb8-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="e1eb8-119">Requirements</span></span>  
+ <span data-ttu-id="e1eb8-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e1eb8-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4e2b-121">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4e2b-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e1eb8-121">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e1eb8-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c4e2b-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4e2b-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e1eb8-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1eb8-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c4e2b-123">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4e2b-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e1eb8-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1eb8-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4e2b-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="c4e2b-124">See Also</span></span>  
- [<span data-ttu-id="c4e2b-125">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c4e2b-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="c4e2b-126">マネージ デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="c4e2b-126">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="e1eb8-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="e1eb8-124">See also</span></span>
+- [<span data-ttu-id="e1eb8-125">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e1eb8-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e1eb8-126">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="e1eb8-126">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

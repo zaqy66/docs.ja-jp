@@ -2,23 +2,23 @@
 title: "'ReDim' Preserve オペランドを Nothing に指定することはできません"
 ms.date: 07/20/2015
 ms.assetid: b857f313-3fc2-4262-a577-88df1718b811
-ms.openlocfilehash: 15ebf86a41911ccb636d7e0a74c0fb1bf71e6a24
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 84ba0ff6a36765df1c775f82b8b3b93dba23763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53768181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631465"
 ---
-# <a name="redim-preserve-operand-cannot-be-nothing"></a><span data-ttu-id="f5ea0-102">'ReDim' Preserve オペランドを Nothing に指定することはできません</span><span class="sxs-lookup"><span data-stu-id="f5ea0-102">'ReDim' Preserve operand cannot be Nothing</span></span>
-<span data-ttu-id="f5ea0-103">`ReDim` ステートメントが `Preserve` キーワードを使用して、最後のディメンションではない配列のディメンションを変更しようとしましたが、そのオペランドに対して正しい値を指定していません。</span><span class="sxs-lookup"><span data-stu-id="f5ea0-103">A `ReDim` statement attempts to use the `Preserve` keyword to change a dimension of an array that is not the last dimension, but does not supply a valid value for its operand.</span></span>  
+# <a name="redim-preserve-operand-cannot-be-nothing"></a><span data-ttu-id="16203-102">'ReDim' Preserve オペランドを Nothing に指定することはできません</span><span class="sxs-lookup"><span data-stu-id="16203-102">'ReDim' Preserve operand cannot be Nothing</span></span>
+<span data-ttu-id="16203-103">`ReDim` ステートメントが `Preserve` キーワードを使用して、最後のディメンションではない配列のディメンションを変更しようとしましたが、そのオペランドに対して正しい値を指定していません。</span><span class="sxs-lookup"><span data-stu-id="16203-103">A `ReDim` statement attempts to use the `Preserve` keyword to change a dimension of an array that is not the last dimension, but does not supply a valid value for its operand.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f5ea0-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="f5ea0-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="16203-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="16203-104">To correct this error</span></span>  
   
--   <span data-ttu-id="f5ea0-105">`Preserve` オペランドを正しい値に変更します。</span><span class="sxs-lookup"><span data-stu-id="f5ea0-105">Change the `Preserve` operand to a valid value.</span></span>  
+-   <span data-ttu-id="16203-105">`Preserve` オペランドを正しい値に変更します。</span><span class="sxs-lookup"><span data-stu-id="16203-105">Change the `Preserve` operand to a valid value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5ea0-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="f5ea0-106">See Also</span></span>  
- [<span data-ttu-id="f5ea0-107">Visual Basic における配列</span><span class="sxs-lookup"><span data-stu-id="f5ea0-107">Arrays in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/index.md)  
- [<span data-ttu-id="f5ea0-108">Visual Basic で配列の次元</span><span class="sxs-lookup"><span data-stu-id="f5ea0-108">Array dimensions in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)  
- [<span data-ttu-id="f5ea0-109">ReDim ステートメント</span><span class="sxs-lookup"><span data-stu-id="f5ea0-109">ReDim Statement</span></span>](../../visual-basic/language-reference/statements/redim-statement.md)  
- [<span data-ttu-id="f5ea0-110">Dim ステートメント</span><span class="sxs-lookup"><span data-stu-id="f5ea0-110">Dim Statement</span></span>](../../visual-basic/language-reference/statements/dim-statement.md)  
- [<span data-ttu-id="f5ea0-111">保存 - 削除</span><span class="sxs-lookup"><span data-stu-id="f5ea0-111">Preserve - delete</span></span>](https://msdn.microsoft.com/library/91badeab-b4e0-48b6-92c9-9f0c8f995d81)
+## <a name="see-also"></a><span data-ttu-id="16203-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="16203-106">See also</span></span>
+- [<span data-ttu-id="16203-107">Visual Basic における配列</span><span class="sxs-lookup"><span data-stu-id="16203-107">Arrays in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="16203-108">Visual Basic で配列の次元</span><span class="sxs-lookup"><span data-stu-id="16203-108">Array dimensions in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)
+- [<span data-ttu-id="16203-109">ReDim ステートメント</span><span class="sxs-lookup"><span data-stu-id="16203-109">ReDim Statement</span></span>](../../visual-basic/language-reference/statements/redim-statement.md)
+- [<span data-ttu-id="16203-110">Dim ステートメント</span><span class="sxs-lookup"><span data-stu-id="16203-110">Dim Statement</span></span>](../../visual-basic/language-reference/statements/dim-statement.md)
+- [<span data-ttu-id="16203-111">保存 - 削除</span><span class="sxs-lookup"><span data-stu-id="16203-111">Preserve - delete</span></span>](https://msdn.microsoft.com/library/91badeab-b4e0-48b6-92c9-9f0c8f995d81)

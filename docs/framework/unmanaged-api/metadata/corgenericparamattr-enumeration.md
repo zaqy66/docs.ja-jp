@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557362"
 ---
-# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="9f0ca-102">CorGenericParamAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="9f0ca-102">CorGenericParamAttr Enumeration</span></span>
-<span data-ttu-id="9f0ca-103">記述する値が含まれています、<xref:System.Type>呼び出しで使用される、ジェネリック型のパラメーター [imetadataemit 2::definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)です。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
+# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="50be8-102">CorGenericParamAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="50be8-102">CorGenericParamAttr Enumeration</span></span>
+<span data-ttu-id="50be8-103">記述する値が含まれています、<xref:System.Type>の呼び出しで使用される、ジェネリック型パラメーター [imetadataemit 2::definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="50be8-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f0ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="9f0ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50be8-104">構文</span><span class="sxs-lookup"><span data-stu-id="50be8-104">Syntax</span></span>  
   
 ```  
 typedef enum CorGenericParamAttr {  
@@ -45,26 +45,26 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9f0ca-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="9f0ca-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="50be8-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="50be8-105">Members</span></span>  
   
-|<span data-ttu-id="9f0ca-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="9f0ca-106">Member</span></span>|<span data-ttu-id="9f0ca-107">説明</span><span class="sxs-lookup"><span data-stu-id="9f0ca-107">Description</span></span>|  
+|<span data-ttu-id="50be8-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="50be8-106">Member</span></span>|<span data-ttu-id="50be8-107">説明</span><span class="sxs-lookup"><span data-stu-id="50be8-107">Description</span></span>|  
 |------------|-----------------|  
-|`gpVarianceMask`|<span data-ttu-id="9f0ca-108">パラメーターの分散は、インターフェイスやデリゲートのジェネリック パラメーターにのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
-|`gpNonVariant`|<span data-ttu-id="9f0ca-109">差異のないことを示します。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-109">Indicates the absence of variance.</span></span>|  
-|`gpCovariant`|<span data-ttu-id="9f0ca-110">共分散を示します。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-110">Indicates covariance.</span></span>|  
-|`gpContravariant`|<span data-ttu-id="9f0ca-111">反変性を示します。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-111">Indicates contravariance.</span></span>|  
-|`gpSpecialConstraintMask`|<span data-ttu-id="9f0ca-112">いずれかに特殊な制約を適用できます<xref:System.Type>パラメーター。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
-|`gpNoSpecialConstraint`|<span data-ttu-id="9f0ca-113">制約が適用されないことを示す、<xref:System.Type>パラメーター。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
-|`gpReferenceTypeConstraint`|<span data-ttu-id="9f0ca-114">示します、<xref:System.Type>パラメーターは参照型である必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
-|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="9f0ca-115">示します、<xref:System.Type>パラメーターが null 値を指定できません値の型にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
-|`gpDefaultConstructorConstraint`|<span data-ttu-id="9f0ca-116">示します、<xref:System.Type>パラメーターがパラメーターを受け取らない既定パブリック コンス トラクターを持つ必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
+|`gpVarianceMask`|<span data-ttu-id="50be8-108">パラメーターの分散は、インターフェイスおよびデリゲートのジェネリック パラメーターにのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="50be8-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
+|`gpNonVariant`|<span data-ttu-id="50be8-109">差異がないことを示します。</span><span class="sxs-lookup"><span data-stu-id="50be8-109">Indicates the absence of variance.</span></span>|  
+|`gpCovariant`|<span data-ttu-id="50be8-110">共変性を示します。</span><span class="sxs-lookup"><span data-stu-id="50be8-110">Indicates covariance.</span></span>|  
+|`gpContravariant`|<span data-ttu-id="50be8-111">反変性を示します。</span><span class="sxs-lookup"><span data-stu-id="50be8-111">Indicates contravariance.</span></span>|  
+|`gpSpecialConstraintMask`|<span data-ttu-id="50be8-112">特殊な制約は、いずれかに適用できる<xref:System.Type>パラメーター。</span><span class="sxs-lookup"><span data-stu-id="50be8-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
+|`gpNoSpecialConstraint`|<span data-ttu-id="50be8-113">制約が適用されないことを示します、<xref:System.Type>パラメーター。</span><span class="sxs-lookup"><span data-stu-id="50be8-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
+|`gpReferenceTypeConstraint`|<span data-ttu-id="50be8-114">示します、<xref:System.Type>パラメーターは参照型である必要があります。</span><span class="sxs-lookup"><span data-stu-id="50be8-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
+|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="50be8-115">示します、<xref:System.Type>パラメーターは null 値にすることはできません、値の型である必要があります。</span><span class="sxs-lookup"><span data-stu-id="50be8-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
+|`gpDefaultConstructorConstraint`|<span data-ttu-id="50be8-116">示します、<xref:System.Type>パラメーターの既定のコンス トラクター パラメーターをとらない必要があります。</span><span class="sxs-lookup"><span data-stu-id="50be8-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9f0ca-117">要件</span><span class="sxs-lookup"><span data-stu-id="9f0ca-117">Requirements</span></span>  
- <span data-ttu-id="9f0ca-118">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="9f0ca-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50be8-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="50be8-117">Requirements</span></span>  
+ <span data-ttu-id="50be8-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="50be8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9f0ca-119">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="9f0ca-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="50be8-119">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="50be8-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="9f0ca-120">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f0ca-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="50be8-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50be8-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f0ca-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f0ca-121">See Also</span></span>  
- [<span data-ttu-id="9f0ca-122">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="9f0ca-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="50be8-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="50be8-121">See also</span></span>
+- [<span data-ttu-id="50be8-122">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="50be8-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

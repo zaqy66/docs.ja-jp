@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 761e3b22014bdd628ffc6763615a285a16a86309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 281284ca432efc86964a2e3e37fa89d1506aa350
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698675"
 ---
-# <a name="ihostiocompletionmanagercloseiocompletionport-method"></a><span data-ttu-id="f6f0f-102">IHostIoCompletionManager::CloseIoCompletionPort メソッド</span><span class="sxs-lookup"><span data-stu-id="f6f0f-102">IHostIoCompletionManager::CloseIoCompletionPort Method</span></span>
-<span data-ttu-id="f6f0f-103">ホストが事前に呼び出したを通じて開かれたポートを閉じることを要求[CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)です。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-103">Requests that the host close a port that was opened through an earlier call to [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span></span>  
+# <a name="ihostiocompletionmanagercloseiocompletionport-method"></a><span data-ttu-id="3b6ca-102">IHostIoCompletionManager::CloseIoCompletionPort メソッド</span><span class="sxs-lookup"><span data-stu-id="3b6ca-102">IHostIoCompletionManager::CloseIoCompletionPort Method</span></span>
+<span data-ttu-id="3b6ca-103">ホストが事前に呼び出したが開かれたポートを閉じることを要求[CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-103">Requests that the host close a port that was opened through an earlier call to [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6f0f-104">構文</span><span class="sxs-lookup"><span data-stu-id="f6f0f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b6ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="3b6ca-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseIoCompletionPort (  
@@ -35,34 +35,34 @@ HRESULT CloseIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f6f0f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f6f0f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3b6ca-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3b6ca-105">Parameters</span></span>  
  `hPort`  
- <span data-ttu-id="f6f0f-106">[in]ポートを閉じるのハンドル。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-106">[in] The handle of the port to close.</span></span>  
+ <span data-ttu-id="3b6ca-106">[in]ポートを閉じるのハンドル。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-106">[in] The handle of the port to close.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f6f0f-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="f6f0f-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3b6ca-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="3b6ca-107">Return Value</span></span>  
   
-|<span data-ttu-id="f6f0f-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f6f0f-108">HRESULT</span></span>|<span data-ttu-id="f6f0f-109">説明</span><span class="sxs-lookup"><span data-stu-id="f6f0f-109">Description</span></span>|  
+|<span data-ttu-id="3b6ca-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3b6ca-108">HRESULT</span></span>|<span data-ttu-id="3b6ca-109">説明</span><span class="sxs-lookup"><span data-stu-id="3b6ca-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f6f0f-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f6f0f-110">S_OK</span></span>|<span data-ttu-id="f6f0f-111">`CloseIoCompletionPort` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-111">`CloseIoCompletionPort` returned successfully.</span></span>|  
-|<span data-ttu-id="f6f0f-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f6f0f-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f6f0f-113">共通言語ランタイム (CLR) が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="f6f0f-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f6f0f-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f6f0f-115">呼び出しがタイムアウトしました。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-115">The call timed out.</span></span>|  
-|<span data-ttu-id="f6f0f-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f6f0f-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f6f0f-117">呼び出し元は、ロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="f6f0f-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f6f0f-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f6f0f-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="f6f0f-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f6f0f-120">E_FAIL</span></span>|<span data-ttu-id="f6f0f-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f6f0f-122">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f6f0f-123">メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="f6f0f-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="f6f0f-124">E_INVALIDARG</span></span>|<span data-ttu-id="f6f0f-125">無効なポート ハンドルが渡されました。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-125">An invalid port handle was passed.</span></span>|  
+|<span data-ttu-id="3b6ca-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="3b6ca-110">S_OK</span></span>|<span data-ttu-id="3b6ca-111">`CloseIoCompletionPort` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-111">`CloseIoCompletionPort` returned successfully.</span></span>|  
+|<span data-ttu-id="3b6ca-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3b6ca-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3b6ca-113">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3b6ca-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3b6ca-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3b6ca-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-115">The call timed out.</span></span>|  
+|<span data-ttu-id="3b6ca-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3b6ca-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3b6ca-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3b6ca-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3b6ca-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3b6ca-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3b6ca-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3b6ca-120">E_FAIL</span></span>|<span data-ttu-id="3b6ca-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3b6ca-122">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3b6ca-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3b6ca-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="3b6ca-124">E_INVALIDARG</span></span>|<span data-ttu-id="3b6ca-125">無効なポート ハンドルが渡されました。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-125">An invalid port handle was passed.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f6f0f-126">コメント</span><span class="sxs-lookup"><span data-stu-id="f6f0f-126">Remarks</span></span>  
- <span data-ttu-id="f6f0f-127">`hPort` 以前の呼び出しによって作成されたポートへのハンドルをする必要があります`CreateIoCompletionPort`です。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-127">`hPort` must be a handle to a port that was created by an earlier call to `CreateIoCompletionPort`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b6ca-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="3b6ca-126">Remarks</span></span>  
+ <span data-ttu-id="3b6ca-127">`hPort` 以前の呼び出しによって作成されたポートを識別するハンドルである必要があります`CreateIoCompletionPort`します。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-127">`hPort` must be a handle to a port that was created by an earlier call to `CreateIoCompletionPort`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f6f0f-128">要件</span><span class="sxs-lookup"><span data-stu-id="f6f0f-128">Requirements</span></span>  
- <span data-ttu-id="f6f0f-129">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b6ca-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="3b6ca-128">Requirements</span></span>  
+ <span data-ttu-id="3b6ca-129">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3b6ca-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f6f0f-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f6f0f-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3b6ca-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3b6ca-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f6f0f-131">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="f6f0f-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3b6ca-131">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="3b6ca-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f6f0f-132">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6f0f-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3b6ca-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b6ca-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6f0f-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6f0f-133">See Also</span></span>  
- [<span data-ttu-id="f6f0f-134">ICLRIoCompletionManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f6f0f-134">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- [<span data-ttu-id="f6f0f-135">IHostIoCompletionManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f6f0f-135">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3b6ca-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="3b6ca-133">See also</span></span>
+- [<span data-ttu-id="3b6ca-134">ICLRIoCompletionManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3b6ca-134">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="3b6ca-135">IHostIoCompletionManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3b6ca-135">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

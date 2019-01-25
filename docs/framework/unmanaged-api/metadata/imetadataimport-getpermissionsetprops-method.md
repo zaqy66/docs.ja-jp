@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be9b2fa3037dc00bce52d9ff89291d1c02cffc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bdee4df6964097f1c333a8fe96756a8898f7c1cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598933"
 ---
-# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="3a7a7-102">IMetaDataImport::GetPermissionSetProps メソッド</span><span class="sxs-lookup"><span data-stu-id="3a7a7-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
-<span data-ttu-id="3a7a7-103">関連付けられているメタデータを取得、<xref:System.Security.PermissionSet?displayProperty=nameWithType>指定したアクセス許可のトークンによって表されます。</span><span class="sxs-lookup"><span data-stu-id="3a7a7-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
+# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="d4d91-102">IMetaDataImport::GetPermissionSetProps メソッド</span><span class="sxs-lookup"><span data-stu-id="d4d91-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
+<span data-ttu-id="d4d91-103">関連付けられているメタデータを取得、<xref:System.Security.PermissionSet?displayProperty=nameWithType>指定した権限のトークンによって表されます。</span><span class="sxs-lookup"><span data-stu-id="d4d91-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a7a7-104">構文</span><span class="sxs-lookup"><span data-stu-id="3a7a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4d91-104">構文</span><span class="sxs-lookup"><span data-stu-id="d4d91-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPermissionSetProps (  
@@ -38,29 +38,29 @@ HRESULT GetPermissionSetProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3a7a7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3a7a7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d4d91-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d4d91-105">Parameters</span></span>  
  `pm`  
- <span data-ttu-id="3a7a7-106">[in]メタデータ プロパティを取得する設定のアクセス許可を表す権限メタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="3a7a7-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
+ <span data-ttu-id="d4d91-106">[in]アクセス許可セットのメタデータ プロパティの取得を表すアクセス許可のメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="d4d91-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
   
  `pdwAction`  
- <span data-ttu-id="3a7a7-107">[out]権限セットへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3a7a7-107">[out] A pointer to the permission set.</span></span>  
+ <span data-ttu-id="d4d91-107">[out]権限セットへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d4d91-107">[out] A pointer to the permission set.</span></span>  
   
  `ppvPermission`  
- <span data-ttu-id="3a7a7-108">[out]アクセス許可セットのバイナリ メタデータ シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3a7a7-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
+ <span data-ttu-id="d4d91-108">[out]アクセス許可セットのバイナリ メタデータ シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d4d91-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
   
  `pcbPermission`  
- <span data-ttu-id="3a7a7-109">[out]バイト サイズ`ppvPermission`です。</span><span class="sxs-lookup"><span data-stu-id="3a7a7-109">[out] The size in bytes of `ppvPermission`.</span></span>  
+ <span data-ttu-id="d4d91-109">[out]バイト サイズ`ppvPermission`します。</span><span class="sxs-lookup"><span data-stu-id="d4d91-109">[out] The size in bytes of `ppvPermission`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a7a7-110">要件</span><span class="sxs-lookup"><span data-stu-id="3a7a7-110">Requirements</span></span>  
- <span data-ttu-id="3a7a7-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="3a7a7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4d91-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="d4d91-110">Requirements</span></span>  
+ <span data-ttu-id="d4d91-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d4d91-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a7a7-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3a7a7-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d4d91-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d4d91-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3a7a7-113">**ライブラリ:** MsCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="3a7a7-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d4d91-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="d4d91-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3a7a7-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a7a7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d4d91-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4d91-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a7a7-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="3a7a7-115">See Also</span></span>  
- <xref:System.Security.PermissionSet>  
- [<span data-ttu-id="3a7a7-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3a7a7-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="3a7a7-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3a7a7-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d4d91-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="d4d91-115">See also</span></span>
+- <xref:System.Security.PermissionSet>
+- [<span data-ttu-id="d4d91-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d4d91-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="d4d91-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d4d91-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
