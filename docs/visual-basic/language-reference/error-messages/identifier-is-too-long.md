@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30033
 ms.assetid: 3d07f6d0-9a2f-49ca-94e8-1e354932e855
-ms.openlocfilehash: 2d1a934fa970c54430b1ea0ff3b1a7f7290a1eb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c3933a5ad0be2b909bee633ac3be3d47adf39f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686141"
 ---
-# <a name="identifier-is-too-long"></a><span data-ttu-id="6d5db-102">識別子が長すぎます。</span><span class="sxs-lookup"><span data-stu-id="6d5db-102">Identifier is too long</span></span>
-<span data-ttu-id="6d5db-103">名前、またはすべてのプログラミング要素の識別子は、1023 文字に制限されます。</span><span class="sxs-lookup"><span data-stu-id="6d5db-103">The name, or identifier, of every programming element is limited to 1023 characters.</span></span> <span data-ttu-id="6d5db-104">さらに、完全修飾名が 1023 文字を超えることはできません。</span><span class="sxs-lookup"><span data-stu-id="6d5db-104">In addition, a fully qualified name cannot exceed 1023 characters.</span></span> <span data-ttu-id="6d5db-105">つまり、全体の識別子の文字列 (`<namespace>.<...>.<namespace>.<class>.<element>`) 1023 を上回る文字で、メンバー アクセス演算子を含むことはできません (`.`) 文字です。</span><span class="sxs-lookup"><span data-stu-id="6d5db-105">This means that the entire identifier string (`<namespace>.<...>.<namespace>.<class>.<element>`) cannot be more than 1023 characters long, including the member-access operator (`.`) characters.</span></span>  
+# <a name="identifier-is-too-long"></a><span data-ttu-id="1bba4-102">識別子が長すぎます。</span><span class="sxs-lookup"><span data-stu-id="1bba4-102">Identifier is too long</span></span>
+<span data-ttu-id="1bba4-103">名前または識別子、プログラミングのすべての要素の 1023 文字に制限されます。</span><span class="sxs-lookup"><span data-stu-id="1bba4-103">The name, or identifier, of every programming element is limited to 1023 characters.</span></span> <span data-ttu-id="1bba4-104">さらに、完全修飾名は 1023 文字を超えることはできません。</span><span class="sxs-lookup"><span data-stu-id="1bba4-104">In addition, a fully qualified name cannot exceed 1023 characters.</span></span> <span data-ttu-id="1bba4-105">つまり、全体の識別子の文字列 (`<namespace>.<...>.<namespace>.<class>.<element>`) メンバー アクセス演算子を含めてが 1023 文字にすることはできません (`.`) 文字。</span><span class="sxs-lookup"><span data-stu-id="1bba4-105">This means that the entire identifier string (`<namespace>.<...>.<namespace>.<class>.<element>`) cannot be more than 1023 characters long, including the member-access operator (`.`) characters.</span></span>  
   
- <span data-ttu-id="6d5db-106">**エラー ID:** BC30033</span><span class="sxs-lookup"><span data-stu-id="6d5db-106">**Error ID:** BC30033</span></span>  
+ <span data-ttu-id="1bba4-106">**エラー ID:** BC30033</span><span class="sxs-lookup"><span data-stu-id="1bba4-106">**Error ID:** BC30033</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6d5db-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="6d5db-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1bba4-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="1bba4-107">To correct this error</span></span>  
   
--   <span data-ttu-id="6d5db-108">識別子の長さを短くします。</span><span class="sxs-lookup"><span data-stu-id="6d5db-108">Reduce the length of the identifier.</span></span>  
+-   <span data-ttu-id="1bba4-108">識別子の長さを短くします。</span><span class="sxs-lookup"><span data-stu-id="1bba4-108">Reduce the length of the identifier.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d5db-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="6d5db-109">See Also</span></span>  
- [<span data-ttu-id="6d5db-110">Declared Element Names</span><span class="sxs-lookup"><span data-stu-id="6d5db-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a><span data-ttu-id="1bba4-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="1bba4-109">See also</span></span>
+- [<span data-ttu-id="1bba4-110">Declared Element Names</span><span class="sxs-lookup"><span data-stu-id="1bba4-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

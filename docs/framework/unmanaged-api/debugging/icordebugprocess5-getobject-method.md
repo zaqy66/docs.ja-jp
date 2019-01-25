@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fa6a8c4989b6bc7027a585f098e0aedf17fee01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9588a22feb27d2bd40af2b003179638ef6f34e83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660867"
 ---
-# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="ef3de-102">ICorDebugProcess5::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="ef3de-102">ICorDebugProcess5::GetObject Method</span></span>
-<span data-ttu-id="ef3de-103">オブジェクトのアドレスを"ICorDebugObjectValue"オブジェクトに変換します。</span><span class="sxs-lookup"><span data-stu-id="ef3de-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
+# <a name="icordebugprocess5getobject-method"></a><span data-ttu-id="ab9e4-102">ICorDebugProcess5::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="ab9e4-102">ICorDebugProcess5::GetObject Method</span></span>
+<span data-ttu-id="ab9e4-103">オブジェクトのアドレスを"ICorDebugObjectValue"オブジェクトに変換します。</span><span class="sxs-lookup"><span data-stu-id="ab9e4-103">Converts an object address to an "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef3de-104">構文</span><span class="sxs-lookup"><span data-stu-id="ef3de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab9e4-104">構文</span><span class="sxs-lookup"><span data-stu-id="ab9e4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject(  
@@ -36,25 +36,25 @@ HRESULT GetObject(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ef3de-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ef3de-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ab9e4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ab9e4-105">Parameters</span></span>  
  `addr`  
- <span data-ttu-id="ef3de-106">[in]オブジェクトのアドレス。</span><span class="sxs-lookup"><span data-stu-id="ef3de-106">[in] The object address.</span></span>  
+ <span data-ttu-id="ab9e4-106">[in]オブジェクトのアドレス。</span><span class="sxs-lookup"><span data-stu-id="ab9e4-106">[in] The object address.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="ef3de-107">[out]"ICorDebugObjectValue"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ef3de-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
+ <span data-ttu-id="ab9e4-107">[out]"ICorDebugObjectValue"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ab9e4-107">[out] A pointer to the address of an  "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ef3de-108">コメント</span><span class="sxs-lookup"><span data-stu-id="ef3de-108">Remarks</span></span>  
- <span data-ttu-id="ef3de-109">場合`addr`が有効なマネージ オブジェクトを指していません、`GetObject`メソッドを返します。`E_FAIL`です。</span><span class="sxs-lookup"><span data-stu-id="ef3de-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab9e4-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="ab9e4-108">Remarks</span></span>  
+ <span data-ttu-id="ab9e4-109">場合`addr`が有効なマネージ オブジェクトを指していない、`GetObject`メソッドを返します。`E_FAIL`します。</span><span class="sxs-lookup"><span data-stu-id="ab9e4-109">If `addr` does not point to a valid managed object, the `GetObject` method returns `E_FAIL`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef3de-110">要件</span><span class="sxs-lookup"><span data-stu-id="ef3de-110">Requirements</span></span>  
- <span data-ttu-id="ef3de-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="ef3de-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab9e4-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="ab9e4-110">Requirements</span></span>  
+ <span data-ttu-id="ab9e4-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ab9e4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ef3de-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ef3de-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ab9e4-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab9e4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ef3de-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ef3de-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab9e4-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab9e4-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ef3de-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef3de-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="ab9e4-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab9e4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef3de-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef3de-115">See Also</span></span>  
- [<span data-ttu-id="ef3de-116">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ef3de-116">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [<span data-ttu-id="ef3de-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ef3de-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ab9e4-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab9e4-115">See also</span></span>
+- [<span data-ttu-id="ab9e4-116">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab9e4-116">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="ab9e4-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab9e4-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
