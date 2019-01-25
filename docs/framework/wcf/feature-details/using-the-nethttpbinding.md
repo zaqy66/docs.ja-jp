@@ -2,12 +2,12 @@
 title: NetHttpBinding の使用
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658729"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding の使用
 <xref:System.ServiceModel.NetHttpBinding> は、HTTP や WebSocket のサービスを使用するために設計されたバインドで、既定ではバイナリ エンコードを使用します。 <xref:System.ServiceModel.NetHttpBinding> は、要求-応答コントラクトと二重のコントラクトのどちらで使用されているかを検出し、一致するように動作を変更します。要求-応答コントラクトには HTTP、二重のコントラクトには Websocket を使用します。 この動作は、<xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定を使用してオーバーライドできます。  
@@ -45,7 +45,7 @@ ms.locfileid: "46696743"
         </binding>  
       </netHttpBinding>  
     </bindings>  
-    <!- ... -->   
+    ...
   </system.serviceModel>  
 ```  
   
@@ -58,8 +58,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [サービスのバインディングの構成](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>関連項目
+- [サービスのバインディングの構成](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)

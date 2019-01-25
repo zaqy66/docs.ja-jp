@@ -2,12 +2,12 @@
 title: '&lt;backupList&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 4a8eb3df9be6b6b5bfe43aee330f3174ddca66ab
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2cc7cce62082317bb86218d68bd2881b74649771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670187"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;backupList&gt; の &lt;add&gt;
 バックアップ エンドポイント要素を定義する構成要素を表します。  
@@ -15,7 +15,7 @@ ms.locfileid: "54151476"
  \<system.serviceModel>  
 \<ルーティング >  
 \<backupLists >  
-\<backupList >  
+\<backupList>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -51,5 +51,5 @@ ms.locfileid: "54151476"
 |-------------|-----------------|  
 |[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|プライマリ エンドポイントに接続できない場合に使用するルーティング サービスが希望されるエンドポイントの一覧が含まれています。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType> 
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

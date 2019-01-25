@@ -1,5 +1,5 @@
 ---
-title: '方法 : LINQ を使用してクエリ結果をフィルター処理する (Visual Basic)'
+title: '方法: LINQ (Visual Basic) を使用してクエリ結果をフィルター処理します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: f9854650b1f89a2330cfa81910187e3fb01c54b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0260e53be421d36cdc8d351d30d7f8a4ac4fa84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684172"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>方法 : LINQ を使用してクエリ結果をフィルター処理する (Visual Basic)
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してクエリ結果をフィルター処理します。
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
   
  次の例は、SQL Server データベースに対してクエリを実行し、特定の値で結果をフィルター処理を使用して新しいアプリケーションを作成する方法を示します、`Where`句。 詳細については、次を参照してください。 [Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)します。  
@@ -77,8 +77,8 @@ ms.locfileid: "43519649"
   
      [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [クエリ](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>関連項目
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

@@ -1,19 +1,19 @@
 ---
-title: '方法 : 四角形を描画する'
+title: '方法: 四角形を描画する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], rectangles
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 5f65bd11976817fe3f4d3e5d016f820a249769c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674678"
 ---
-# <a name="how-to-draw-a-rectangle"></a>方法 : 四角形を描画する
+# <a name="how-to-draw-a-rectangle"></a>方法: 四角形を描画する
 この例を使用して四角形を描画する方法を示しています、<xref:System.Windows.Shapes.Rectangle>要素。  
   
  四角形を描画するために作成、<xref:System.Windows.Shapes.Rectangle>要素を指定し、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>します。 四角形の内部を描画するには、次のように設定します。 その<xref:System.Windows.Shapes.Shape.Fill%2A>します。 四角形にアウトラインを与えるを使用してその<xref:System.Windows.Shapes.Shape.Stroke%2A>と<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>プロパティ。  
@@ -29,8 +29,8 @@ ms.locfileid: "43506155"
   
  この例より大きなサンプルの一部です。サンプル全体については、次を参照してください。 [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Rectangle>  
- [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [テーブルの概要](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Shapes.Rectangle>
+- [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [テーブルの概要](../../../../docs/framework/wpf/advanced/table-overview.md)

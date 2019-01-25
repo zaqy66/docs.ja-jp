@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74f564a483d80fd6312cf015802750d48e73ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e08a486089a5697b9b3bb4b52c69fda3b661a6ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654747"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 列挙型
 ガベージ コレクターがワークステーションまたはサーバーのどちらで実行されているかを示します。  
@@ -41,19 +41,19 @@ typedef enum CorDebugGCType {
   
 |メンバー名|説明|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|ガベージ コレクターは、ワークステーション上で実行されています。|  
+|`CorDebugWorkstationGC`|ガベージ コレクターは、ワークステーションで実行されています。|  
 |`CorDebugServerGC`|ガベージ コレクターは、サーバーで実行します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

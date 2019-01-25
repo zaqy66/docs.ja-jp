@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583405"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 Windows Communication Foundation (WCF) サンプルのほとんどがインターネット インフォメーション サービス (IIS) でホストされているし、共通の仮想ディレクトリから実行します。 この 1 回限りのセットアップ手順は、ディスクにフォルダーを作成しますという名前の iis 仮想ディレクトリも追加**ServiceModelSamples**します。
@@ -40,11 +40,11 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
   
 5.  に従って、[ファイアウォール手順](../../../../docs/framework/wcf/samples/firewall-instructions.md)サンプルで使用されるポートを有効にするためです。  
   
-6.  次の既定のディレクトリの確認: \<InstallDrive >:**\WF_WCF_Samples**します。 サンプルが既にインストールされている場合は、これが既定のディレクトリです。  
+6.  次の既定のディレクトリを確認します。\<InstallDrive >:**\WF_WCF_Samples**します。 サンプルが既にインストールされている場合は、これが既定のディレクトリです。  
   
 7.  サンプルがインストールされていない場合はそれらのサンプルのダウンロード場所からインストール[Visual c#](https://go.microsoft.com/fwlink/?LinkId=190939)または[Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)します。  
   
-8.  サンプルのインストール後に移動: \<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**  
+8.  サンプルをインストールした後を参照してください。\<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. 実行、 **Setupvroot.bat**バッチ ファイル。 次の手順が実行されます。  
   

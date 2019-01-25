@@ -2,12 +2,12 @@
 title: '&lt;スコープ&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 7afab700c2d9eb91ffe57bfefaf5864782a0af5f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1235b483f63ab71405803c16f2d3c9926b15cfad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642988"
 ---
 # <a name="ltscopesgt"></a>&lt;スコープ&gt;
 クエリの実行中に、サービス エンドポイントのフィルター処理に使用できるカスタム スコープ URI を指定する構成要素のコレクションを含んでいます。  
@@ -16,8 +16,8 @@ ms.locfileid: "54145329"
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<endpointDiscovery >  
-\<スコープ >  
+\<endpointDiscovery>  
+\<scopes>  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54145329"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<endpointDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|エンドポイントのさまざまな探索設定を指定します (探索可能性、スコープ、メタデータに対するカスタム拡張など)。|  
+|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|エンドポイントのさまざまな探索設定を指定します (探索可能性、スコープ、メタデータに対するカスタム拡張など)。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

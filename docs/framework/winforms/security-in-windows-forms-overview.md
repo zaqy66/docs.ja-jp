@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a19e6d2ed39c21301b3409cdeb55a569f0d2eff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703381"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のリリース以前、ユーザーのコンピューターで実行されているすべてのコードは、リソースにアクセスするために、そのコンピューターのユーザーが持っていたのと同じ権限またはアクセス許可を持っていました。 たとえば、ユーザーにファイル システムへのアクセスが許可されている場合は、コードにファイル システムへのアクセスが許可され、ユーザーにデータベースへのアクセスが許可されている場合は、コードにデータベースへのアクセスが許可されていました。 これらの権限やアクセス許可は、ユーザーがローカル コンピューターに明示的にインストールした実行可能ファイルのコードに対しては受け入れることができますが、インターネットやローカル イントラネットからの悪意のある可能性があるコードに対しては受け入れることができません。 このコードは、アクセス許可がないユーザーのコンピューター リソースにアクセスすべきではありません。  
@@ -75,17 +75,17 @@ ms.locfileid: "48839132"
   
  どのテクノロジを選択するかは、配置環境に応じて異なります。 詳細については、「[ClickOnce 配置ストラテジの選択](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)」を参照してください。  
   
- 既定では、 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 、Visual Studio を使用してデプロイされたアプリケーションまたは[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツール (Mage.exe および MageUI.exe) が完全信頼を持つクライアント コンピューターで実行するように構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 Visual Studio でこれを行う、または[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツールの MageUI.exe の配置を構成するときにします。 MageUI.exe を使用する方法の詳細については、「チュートリアル : コマンドラインから ClickOnce アプリケーションを配置する」を参照してください。  「[方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))」または「[方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))」も参照してください。  
+ 既定では、 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 、Visual Studio を使用してデプロイされたアプリケーションまたは[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツール (Mage.exe および MageUI.exe) が完全信頼を持つクライアント コンピューターで実行するように構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 Visual Studio でこれを行う、または[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツールの MageUI.exe の配置を構成するときにします。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))します。  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] とアクセス許可の昇格のセキュリティ面の詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。 信頼されたアプリケーションの配置の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。  
   
 ### <a name="testing-the-application"></a>アプリケーションのテスト  
- Visual Studio を使用して、Windows フォーム アプリケーションをデプロイする場合は、部分信頼または制限されたアクセス許可のセット、開発環境からでのデバッグを有効にできます。  「[方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))」または「[方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))」を参照してください。  
+ Visual Studio を使用して、Windows フォーム アプリケーションをデプロイする場合は、部分信頼または制限されたアクセス許可のセット、開発環境からでのデバッグを有効にできます。  参照してください[方法。制限されたアクセス許可の ClickOnce アプリケーションをデバッグ](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))または[方法。アクセス許可が制限された ClickOnce アプリケーションをデバッグする](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォームのセキュリティ](../../../docs/framework/winforms/windows-forms-security.md)  
- [コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)  
- [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)  
- [信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)  
- [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>関連項目
+- [Windows フォームのセキュリティ](../../../docs/framework/winforms/windows-forms-security.md)
+- [コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)
+- [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
+- [信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

@@ -2,12 +2,12 @@
 title: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659096"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>コマンド ツリーからの SQL の生成: ベスト プラクティス
 出力クエリ コマンド ツリーは、SQL で表現できるクエリに厳密に従って作成されます。 ただし、出力コマンド ツリーから SQL を生成する際にプロバイダーの作成者が直面する、一般的な問題がいくつかあります。 このトピックでは、これらの問題について説明します。 これらの問題への対処方法については、次のトピックでサンプル プロバイダーを介して紹介します。  
@@ -130,13 +130,13 @@ ON b.y = d.z
  また、結合のフラット化の際にも、関与するテーブル (またはサブクエリ) の別名が競合することがあります。この場合にも名前の変更が必要です。  
   
 ## <a name="avoid-select-"></a>SELECT * の回避  
- ベース テーブルから選択する際には `SELECT *` を使用しないでください。 ストレージ モデルで、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーションは、データベース テーブルに含まれる列のサブセットのみを含めることがあります。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。  
+ ベース テーブルから選択する際には `SELECT *` を使用しないでください。 ストレージ モデル、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーションは、データベース テーブルに含まれる列のサブセットのみを含めることがあります。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。  
   
 ## <a name="reuse-of-expressions"></a>式の再利用  
  式は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって渡されたクエリ コマンド ツリーで再利用できます。 各式は、クエリ コマンド ツリーで 1 回しか使用できないわけではありません。  
   
 ## <a name="mapping-primitive-types"></a>プリミティブ型のマッピング  
- 概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 また、多くの操作で、BLOB の種類と同様に使用できない型へのマッピングをしないでください (たとえば、 `ntext` SQL Server で)。  
+ 概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 BLOB の種類と同様に、多くの操作を使用できない型へのマッピングを回避することも、(たとえば、 `ntext` SQL server)。  
   
-## <a name="see-also"></a>関連項目  
- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>関連項目
+- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

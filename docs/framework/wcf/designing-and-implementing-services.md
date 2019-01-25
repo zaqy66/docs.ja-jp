@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 673712912b674c48dee094859364df9b22c51c82
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716053"
 ---
 # <a name="designing-and-implementing-services"></a>サービスの設計と実装
 このセクションでは、定義および WCF コントラクトを実装する方法を示します。 サービス コントラクトとは、エンドポイントが外部と何をやりとりするかを指定するものです。 より具体的には、要求/応答、一方向、双方向というような、基本的なメッセージ交換パターン (MEP) として編成された一連のメッセージに関する記述です。 サービス コントラクトが一連のメッセージ交換に論理的に関連付けられていれば、サービスの操作は単一のメッセージ交換になります。 たとえば、`Hello` という操作は、必ず 1 つのメッセージを受け取らなければならず (呼び出し元があいさつを通知できるようにするため) 、これに対してメッセージを返したり、返さなかったりします (その操作がマナーを守っているかどうかによる)。  
@@ -66,6 +66,6 @@ ms.locfileid: "43877295"
   
  この追加要件の処理は、設計、実装、構成、および Windows Communication Foundation (WCF) サービスのアプリケーションをホストしているときに覚えておく必要があります。 たとえば、コントラクトでセッションをサポートする必要があることが指定されている場合があります。 その場合、コントラクトの要件をサポートするようにバインディングを構成する必要があります。そうしないと、サービス実装は機能しなくなります。 また、サービスで統合 Windows 認証が必要であり、インターネット インフォメーション サービス (IIS) でホストされる場合、サービスが存在する Web アプリケーションでは、統合 Windows 認証を有効にし、匿名サポートを無効にする必要があります。 機能と別のサービス ホスト アプリケーションの種類の影響の詳細については、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [サービス コントラクトの設計](../../../docs/framework/wcf/designing-service-contracts.md)  
- [サービス コントラクトの実装](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>関連項目
+- [サービス コントラクトの設計](../../../docs/framework/wcf/designing-service-contracts.md)
+- [サービス コントラクトの実装](../../../docs/framework/wcf/implementing-service-contracts.md)

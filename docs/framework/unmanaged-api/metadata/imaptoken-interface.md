@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 661aeff56955f729a5728f00f563bb2bef971a9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 579f925498f6ded83c5e90137d04020e610599b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716714"
 ---
 # <a name="imaptoken-interface"></a>IMapToken インターフェイス
 アセンブリ間のマッピング機能を提供します。  
@@ -33,16 +33,16 @@ ms.locfileid: "33444393"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Map メソッド](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|メタデータ署名を使用して 2 つのアセンブリ間の関係をマップします。|  
+|[Map メソッド](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|メタデータ署名を使用して 2 つのアセンブリ間のリレーションシップをマップします。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

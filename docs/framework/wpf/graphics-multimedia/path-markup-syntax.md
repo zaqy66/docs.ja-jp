@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671266"
 ---
 # <a name="path-markup-syntax"></a>パス マークアップ構文
 パスは、後ほど[図形と基本描画の WPF の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)と[ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)、ただし、このトピックで詳しく説明パスを指定するのに使用できる、強力で複雑なミニ言語ジオメトリを使用してよりコンパクト[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
@@ -40,7 +40,7 @@ ms.locfileid: "45591933"
 ### <a name="a-note-about-white-space"></a>空白についてのメモ  
  簡潔にするために、この後のセクションで示す構文には 1 つの空白が使用されていますが、1 つの空白を使用できるところでは、常に複数の空白スペースも許容されます。  
   
- 2 つの数値がコンマまたは空白で区切って指定する必要はありません実際にが、このことができる場合にのみ実行結果の文字列があいまいです。 たとえば、`2..3`が実際には 2 つの数値:「2」にします。 と ".3" ) です。 同様に、 `2-3` 「2」と「-3」です。 どちらの場合も、コマンドの前後に空白は必要ありません。  
+ 2 つの数値がコンマまたは空白で区切って指定する必要はありません実際にが、このことができる場合にのみ実行結果の文字列があいまいです。 たとえば、`2..3`が実際には 2 つの数値。"2." と ".3" ) です。 同様に、 `2-3` 「2」と「-3」です。 どちらの場合も、コマンドの前後に空白は必要ありません。  
   
 ### <a name="syntax"></a>構文  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性の使用法の構文を<xref:System.Windows.Media.StreamGeometry>は省略可能なので構成されます<xref:System.Windows.Media.FillRule>値と 1 つ以上の説明図します。  
@@ -224,11 +224,11 @@ ms.locfileid: "45591933"
   
  指数表記を使用することもできます。 たとえば、`+1.e17`有効な値です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

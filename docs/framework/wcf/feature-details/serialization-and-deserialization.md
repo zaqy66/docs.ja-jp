@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: be2cf6c550ab8778a42f33fa2cb1b109abeea5e9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707574"
 ---
 # <a name="serialization-and-deserialization"></a>シリアル化と逆シリアル化
 Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 <xref:System.Runtime.Serialization.DataContractSerializer> は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトと XML を双方向で変換します。 ここでは、シリアライザーのしくみについて説明します。  
@@ -79,7 +79,7 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
 ### <a name="round-trips"></a>ラウンド トリップ  
  *ラウンド トリップ* は、1 つの操作でオブジェクトの逆シリアル化と再シリアル化が行われるときに発生します。 したがって、XML からオブジェクト インスタンスを経由し、再び XML ストリームに戻るラウンド トリップが発生します。  
   
- `DataContractSerializer` の一部のコンストラクター オーバーロードには、 `ignoreExtensionDataObject` パラメーターが含まれており、既定で `false` に設定されています。 この既定のモードでは、データ コントラクトが <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装していれば、データ コントラクトの新しいバージョンから以前のバージョンを経由し、新しいバージョンに戻るラウンド トリップで、データを失うことなく送信できます。 たとえば、`Person` データ コントラクトのバージョン 1 に、`Name` および `PhoneNumber` の各データ メンバーが含まれており、バージョン 2 で `Nickname` メンバーを追加したとします。 `IExtensibleDataObject` を実装している場合、バージョン 2 からバージョン 1 に情報を送信すると、 `Nickname` データが格納され、データを再度シリアル化したときに再出力されます。したがって、ラウンド トリップでデータが失われることはありません。 詳細については、次を参照してください。[上位互換性のあるデータ コントラクト](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)と[データ コントラクトのバージョン管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)します。  
+ `DataContractSerializer` の一部のコンストラクター オーバーロードには、 `ignoreExtensionDataObject` パラメーターが含まれており、既定で `false` に設定されています。 この既定のモードでは、データ コントラクトが <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装していれば、データ コントラクトの新しいバージョンから以前のバージョンを経由し、新しいバージョンに戻るラウンド トリップで、データを失うことなく送信できます。 たとえば、 `Person` データ コントラクトのバージョン 1 に、 `Name` および `PhoneNumber` の各データ メンバーが含まれており、バージョン 2 で `Nickname` メンバーを追加したとします。 `IExtensibleDataObject` を実装している場合、バージョン 2 からバージョン 1 に情報を送信すると、 `Nickname` データが格納され、データを再度シリアル化したときに再出力されます。したがって、ラウンド トリップでデータが失われることはありません。 詳細については、次を参照してください。[上位互換性のあるデータ コントラクト](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)と[データ コントラクトのバージョン管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)します。  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>ラウンド トリップでのセキュリティとスキーマ検証の問題  
  ラウンド トリップは、セキュリティに影響する場合があります。 たとえば、大量の無関係のデータを逆シリアル化し格納した場合、セキュリティ リスクが生じる可能性があります。 特に、デジタル署名を伴う場合は、検証方法のないこのようなデータの再出力について、セキュリティの問題が発生することがあります。 たとえば、前のシナリオでは、バージョン 1 エンドポイントが、悪質なデータを含む `Nickname` 値に署名する可能性があります。 また、スキーマ検証の問題が発生することもあります。エンドポイントでは、余分な値を出力せずに、記述されたコントラクトに厳密に従ったデータを常に出力することが必要な場合があります。 前の例では、バージョン 1 エンドポイントのコントラクトで `Name` と `PhoneNumber`だけを出力するよう指定されているときに、スキーマ検証を使用すると、余分な `Nickname` 値の出力によって検証が失敗します。  
@@ -203,7 +203,7 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
 >  段階的なシリアル化を使用すると、スキーマが無効な XML が生成されることがあります。  
   
 ## <a name="deserialization"></a>逆シリアル化  
- 次の情報は <xref:System.Runtime.Serialization.XmlObjectSerializer> を継承するすべてのクラス (<xref:System.Runtime.Serialization.DataContractSerializer> クラスおよび <xref:System.Runtime.Serialization.NetDataContractSerializer> クラスを含む) に適用されます。  
+ 次の情報は <xref:System.Runtime.Serialization.XmlObjectSerializer>を継承するすべてのクラス ( <xref:System.Runtime.Serialization.DataContractSerializer> クラスおよび <xref:System.Runtime.Serialization.NetDataContractSerializer> クラスを含む) に適用されます。  
   
  オブジェクトを逆シリアル化する最も簡単な方法は、 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> メソッド オーバーロードのいずれかを呼び出すことです。 3 つのオーバーロードがあり、それぞれ <xref:System.Xml.XmlDictionaryReader>、 `XmlReader`、および `Stream`を使用した読み取りに対応しています。 `Stream` オーバーロードは、クォータによって保護されていないテキスト形式の <xref:System.Xml.XmlDictionaryReader> を作成するため、信頼されたデータを読み取る場合にのみ使用します。  
   
@@ -223,7 +223,7 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  単純なものの 1 つを使用する場合`ReadObject`オーバー ロード、デシリアライザーがラッパー要素の名前空間と既定の名前を探します (前のセクションでは、"を指定する、既定ルート名および Namespace"を参照してください)、不明なが見つかった場合は例外をスロー要素。 前の例では、 `<Person>` ラッパー要素が必要とされます。 予想どおりの名前が付けられた要素にリーダーが配置されているかどうかを確認するために、 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> メソッドが呼び出されます。  
   
- ラッパー要素のこの名前チェックを無効にする方法があります。`ReadObject` メソッドの一部のオーバーロードは、ブール型パラメーター `verifyObjectName` を取得します。このパラメーターは、既定で `true` に設定されています。 このパラメーターを `false`に設定すると、ラッパー要素の名前と名前空間が無視されます。 これは、前述の段階的なシリアル化機構を使用して書き込まれた XML を読み取る際に役立ちます。  
+ ラッパー要素のこの名前チェックを無効にする方法があります。 `ReadObject` メソッドの一部のオーバーロードは、ブール型パラメーター `verifyObjectName`を取得します。このパラメーターは、既定で `true` に設定されています。 このパラメーターを `false`に設定すると、ラッパー要素の名前と名前空間が無視されます。 これは、前述の段階的なシリアル化機構を使用して書き込まれた XML を読み取る際に役立ちます。  
   
 ## <a name="using-the-netdatacontractserializer"></a>NetDataContractSerializer の使用  
  `DataContractSerializer` と <xref:System.Runtime.Serialization.NetDataContractSerializer> の大きな違いは、 `DataContractSerializer` は、データ コントラクト名を使用するのに対し、 `NetDataContractSerializer` は、シリアル化された XML に [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] アセンブリと型の完全名を出力するという点です。 これは、シリアル化エンドポイントと逆シリアル化エンドポイント間で、まったく同じ型を共有する必要があることを意味します。 逆シリアル化する正確な型が常にわかっているため、 `NetDataContractSerializer` では既知の型機構は必要ないということです。  
@@ -260,9 +260,9 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  また、 `NetDataContractSerializer` は、オブジェクト グラフの各ノードについて、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型とアセンブリの完全名を出力しません。 この情報を出力するのは、情報が不明確な場合だけです。 つまり、ポリモーフィックである場合に、ルート オブジェクト レベルで出力します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.NetDataContractSerializer>  
- <xref:System.Runtime.Serialization.XmlObjectSerializer>  
- [バイナリ シリアル化](../../../../docs/standard/serialization/binary-serialization.md)  
- [データ コントラクト シリアライザーでサポートされる型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.NetDataContractSerializer>
+- <xref:System.Runtime.Serialization.XmlObjectSerializer>
+- [バイナリ シリアル化](../../../../docs/standard/serialization/binary-serialization.md)
+- [データ コントラクト シリアライザーでサポートされる型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

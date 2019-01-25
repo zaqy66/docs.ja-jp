@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603838"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF グラフィックス レンダリングの概要
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のビジュアル層の概要について説明します。 ロールに焦点を当てます、<xref:System.Windows.Media.Visual>でのサポートを表示するためのクラス、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]モデル。  
@@ -25,15 +25,15 @@ ms.locfileid: "44260131"
   
  <xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。 などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。 <xref:System.Windows.Media.Visual>オブジェクトのサポートを提供します。  
   
--   出力表示: ビジュアルの、シリアル化された永続的な描画内容をレンダリングします。  
+-   出力が表示されます。ビジュアルの描画コンテンツをシリアル化、永続化、レンダリングされます。  
   
--   変換: は、ビジュアルに変換を実行します。  
+-   変換:ビジュアルで変換を実行します。  
   
--   クリッピング: ビジュアルのクリッピング領域をサポートします。  
+-   クリッピング:ビジュアルのクリッピング領域をサポートを提供します。  
   
--   ヒット テスト: 座標またはジオメトリがビジュアルの境界内に含まれているかどうかを判断します。  
+-   ヒット テストします。座標またはジオメトリがビジュアルの境界内に含まれているかどうかを決定します。  
   
--   境界ボックスの計算: ビジュアルの四角形領域を決定します。  
+-   境界ボックス計算。ビジュアルの外接する四角形を決定します。  
   
  ただし、<xref:System.Windows.Media.Visual>オブジェクトが非表示の機能のサポートをなど含まれません。  
   
@@ -159,7 +159,7 @@ DrawingGroup の操作の順序
 ビジュアル ツリー描画順序のダイアグラム  
   
 ### <a name="root-visual"></a>ルート ビジュアル  
- **ルート ビジュアル**は、ビジュアル ツリー階層内の最上位の要素です。 ルート ビジュアルの基底クラスでは、ほとんどのアプリケーションではいずれかの<xref:System.Windows.Window>または<xref:System.Windows.Navigation.NavigationWindow>します。 ただし、ビジュアル オブジェクトを Win32 アプリケーションでホストする場合は、Win32 ウィンドウにホストする最上位のビジュアルがルート ビジュアルになります。 詳しくは、「[チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)」をご覧ください。  
+ **ルート ビジュアル**は、ビジュアル ツリー階層内の最上位の要素です。 ルート ビジュアルの基底クラスでは、ほとんどのアプリケーションではいずれかの<xref:System.Windows.Window>または<xref:System.Windows.Navigation.NavigationWindow>します。 ただし、ビジュアル オブジェクトを Win32 アプリケーションでホストする場合は、Win32 ウィンドウにホストする最上位のビジュアルがルート ビジュアルになります。 詳しくは、「[チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトをホストしている](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)します。  
   
 ### <a name="relationship-to-the-logical-tree"></a>論理ツリーとの関係  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の論理ツリーは、実行時のアプリケーションの要素を表します。 このツリーを直接操作することはありませんが、アプリケーションのこのビューは、プロパティの継承やイベントのルーティングを理解する上で役立ちます。 ビジュアル ツリーとは異なり、論理ツリーは、非ビジュアルのデータ オブジェクトなど<xref:System.Windows.Documents.ListItem>します。 多くの場合、論理ツリーはアプリケーションのマークアップ定義にほぼ一致します。 次のコードは、<xref:System.Windows.Controls.DockPanel>マークアップで定義された要素。  
@@ -257,12 +257,12 @@ WPF レンダリング シーケンスのダイアグラム
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [ビジュアル層でのヒット テスト](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [DrawingVisual オブジェクトの使用](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [チュートリアル : Win32 アプリケーションでのビジュアル オブジェクトのホスト](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [WPF アプリケーションのパフォーマンスの最適化](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [ビジュアル層でのヒット テスト](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [DrawingVisual オブジェクトの使用](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [WPF アプリケーションのパフォーマンスの最適化](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

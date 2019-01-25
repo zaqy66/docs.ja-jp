@@ -2,20 +2,20 @@
 title: '&lt;filters&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: fe9ce8bc2a0efb9e20800189cd9f948d5e6a2232
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 43898485ea5730e958cbc4e9968d25c0e7f0d951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709456"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt; の &lt;add&gt;
 ログに記録するメッセージの種類を指定する XPath フィルター。  
   
  \<system.ServiceModel >  
 \<診断 >  
-\<messageLogging >  
-\<フィルター >  
+\<messageLogging>  
+\<filters>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -42,7 +42,7 @@ ms.locfileid: "54150748"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|ログに記録されるメッセージの種類を制御する XPath フィルターのコレクションを格納します。|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|ログに記録されるメッセージの種類を制御する XPath フィルターのコレクションを格納します。|  
   
 ## <a name="remarks"></a>Remarks  
  フィルターは、`logMessagesAtTransportLevel` を `true` に設定することによって指定されるトランスポート層でのみ適用されます。 サービス レベルおよび形式が正しくないメッセージ ログ記録は、フィルターの影響を受けません。  
@@ -70,14 +70,14 @@ ms.locfileid: "54150748"
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>  
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>  
- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>  
- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
+- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
+- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
+- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
