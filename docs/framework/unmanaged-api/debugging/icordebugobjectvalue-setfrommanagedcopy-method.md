@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a2905caa011df4f0699445bafb8523c6b7e9eb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04eff6ba8b284a26b9b3ee55c7f323aef52f1208
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612607"
 ---
 # <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a>ICorDebugObjectValue::SetFromManagedCopy メソッド
 `SetFromManagedCopy` は互換性のために残されています。 このメソッドを呼び出さないでください。  
@@ -35,9 +35,9 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
-## <a name="see-also"></a>関連項目  
-    
- 
+## <a name="see-also"></a>関連項目
+
+

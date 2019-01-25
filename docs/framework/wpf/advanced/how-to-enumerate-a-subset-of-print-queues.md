@@ -1,5 +1,5 @@
 ---
-title: '方法 : 印刷キューのサブセットを列挙する'
+title: '方法: 印刷キューのサブセットを列挙する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbd9e7332a5e021e1cf9fba75f6d21ae01582b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558567"
 ---
-# <a name="how-to-enumerate-a-subset-of-print-queues"></a>方法 : 印刷キューのサブセットを列挙する
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a>方法: 印刷キューのサブセットを列挙する
 プリンターの全社的なセットを管理する情報技術 (IT) プロフェッショナルが直面する一般的な状況では、特定の特性を持つプリンターの一覧を生成します。 この機能によって提供されます、<xref:System.Printing.PrintServer.GetPrintQueues%2A>のメソッド、<xref:System.Printing.PrintServer>オブジェクトと<xref:System.Printing.EnumeratedPrintQueueTypes>列挙体。  
   
 ## <a name="example"></a>例  
@@ -34,13 +34,13 @@ ms.locfileid: "43786943"
   
  で、この例を拡張する可能性があります、`foreach`ループの各印刷キューをステップ実行をさらに実行するスクリーン処理します。 たとえば、する可能性があります画面がループの呼び出しによって、両面印刷をサポートしていないプリンターを各印刷キューの<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>メソッドと二重化の有無、返される値をテストします。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.LocalPrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)
+## <a name="see-also"></a>関連項目
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.LocalPrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

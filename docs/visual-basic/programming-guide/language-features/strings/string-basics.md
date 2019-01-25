@@ -6,18 +6,18 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552385"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic における文字列の基本
 `String` データ型は、一連の文字を表します (各文字は `Char` データ型のインスタンスを表しています)。 このトピックでは、Visual Basic における文字列の基本的な概念について説明します。  
   
 ## <a name="string-variables"></a>文字列変数  
- 文字列のインスタンスには、一連の文字を表すリテラル値を代入できます。 例えば:  
+ 文字列のインスタンスには、一連の文字を表すリテラル値を代入できます。 例:  
   
  [!code-vb[VbVbalrStrings#63](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_1.vb)]  
   
@@ -50,11 +50,11 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>文字列内の文字  
- 文字列は、一連の `Char` 値であると考えることができます。また、配列の場合と同様に、`String` 型には文字列に対してさまざまな操作を行うことができる、組み込み関数があります。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のすべての配列のように、これらは 0 ベース配列です。 文字列内の特定の文字は、`Chars` プロパティを通じて参照できます。このプロパティでは、文字列内で文字が現れる位置を使用して、文字にアクセスできます。 例えば:  
+ 文字列は、一連の `Char` 値であると考えることができます。また、配列の場合と同様に、`String` 型には文字列に対してさまざまな操作を行うことができる、組み込み関数があります。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のすべての配列のように、これらは 0 ベース配列です。 文字列内の特定の文字は、`Chars` プロパティを通じて参照できます。このプロパティでは、文字列内で文字が現れる位置を使用して、文字にアクセスできます。 例:  
   
  [!code-vb[VbVbalrStrings#67](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_5.vb)]  
   
- 上の例で、文字列の `Chars` プロパティは、文字列内の 4 番目の文字 (つまり `D`) を返し、`myChar` に代入します。 `Length` プロパティを通じて、特定の文字列の長さを取得することもできます。 文字列に対して複数の配列型の操作を実行する必要がある場合は、文字列の `ToCharArray` 関数を使用して、文字列を `Char` インスタンスの配列に変換することができます。 例えば:  
+ 上の例で、文字列の `Chars` プロパティは、文字列内の 4 番目の文字 (つまり `D`) を返し、`myChar` に代入します。 `Length` プロパティを通じて、特定の文字列の長さを取得することもできます。 文字列に対して複数の配列型の操作を実行する必要がある場合は、文字列の `ToCharArray` 関数を使用して、文字列を `Char` インスタンスの配列に変換することができます。 例:  
   
  [!code-vb[VbVbalrStrings#68](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_6.vb)]  
   
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  他の組み込みのデータ型とは異なり、`String` は参照型です。 参照型の変数が関数またはサブルーチンへの引数として渡されると、文字列の実際の値ではなく、データが格納されているメモリ アドレスへの参照が渡されます。 そのため、前の例では変数の名前は変わりませんが、新しい値を保持している、`String` クラスの新しい別のインスタンスを指すようになります。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [基本的な文字列操作](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>関連項目
+- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [基本的な文字列操作](../../../../standard/base-types/basic-string-operations.md)

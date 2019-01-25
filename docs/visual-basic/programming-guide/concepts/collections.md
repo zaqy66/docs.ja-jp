@@ -2,12 +2,12 @@
 title: コレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698766"
 ---
 # <a name="collections-visual-basic"></a>コレクション (Visual Basic)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iterators  
+##  <a name="iterators"></a>反復子  
  *反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つのコレクションの各要素を返します。  
   
  使用して、反復子を呼び出す、[ごとにしています.[次へ]](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント。 `For Each` ループの各イテレーションは、反復子を呼び出します。 `Yield` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。  
@@ -572,13 +572,13 @@ End Function
   
 ## <a name="see-also"></a>関連項目
 
-- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [プログラミングの概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
-- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [コレクションとデータ構造体](../../../standard/collections/index.md)  
-- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)  
-- [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [プログラミングの概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [コレクションとデータ構造体](../../../standard/collections/index.md)
+- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)
+- [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)

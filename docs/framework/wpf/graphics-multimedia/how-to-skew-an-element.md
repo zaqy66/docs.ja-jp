@@ -1,19 +1,19 @@
 ---
-title: '方法 : 要素を傾斜させる'
+title: '方法: 要素を傾斜させる'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - skewing elements [WPF]
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: f828e4d4e59fa5ed31f81f3e83570a25add19e01
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ba5f3645156459a711d88b7330b221a5d083e7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611333"
 ---
-# <a name="how-to-skew-an-element"></a>方法 : 要素を傾斜させる
+# <a name="how-to-skew-an-element"></a>方法: 要素を傾斜させる
 この例は、使用する方法を示します、<xref:System.Windows.Media.SkewTransform>要素を傾斜します。 傾斜 (スキューと呼ばれることもあります) は、一様でない方法で座標空間を拡大する変換です。 一般的な用途の 1 つ、<xref:System.Windows.Media.SkewTransform>をシミュレートするため、[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]で深さ[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]オブジェクト。  
   
  使用して、<xref:System.Windows.Media.SkewTransform.CenterX%2A>と<xref:System.Windows.Media.SkewTransform.CenterY%2A>のポイントの中心を指定するプロパティ、<xref:System.Windows.Media.SkewTransform>します。  
@@ -42,8 +42,8 @@ ms.locfileid: "43877081"
   
  完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.SkewTransform>  
- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.SkewTransform>
+- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

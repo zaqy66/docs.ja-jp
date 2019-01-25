@@ -1,5 +1,5 @@
 ---
-title: '方法: 配列を並べ替える (Visual Basic)'
+title: '方法: Visual Basic で配列を並べ替える'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: a067c40e1dd0e881516cbc7769cb9afb879d1b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b04bfbedf9d7266d1b2e190fa85b8a64cf6efbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558437"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>方法: 配列を並べ替える (Visual Basic)
-この例の配列を宣言する`String`という名前のオブジェクト`zooAnimals`、設定、および、アルファベット順に並べ替えます。  
+# <a name="how-to-sort-an-array-in-visual-basic"></a>方法: Visual Basic で配列を並べ替える
+この例の配列を宣言する`String`という名前のオブジェクト`zooAnimals`、それを設定し、アルファベット順に並べ替えられます。  
   
 ## <a name="example"></a>例  
   
@@ -41,11 +41,11 @@ End Sub
   
 -   配列が多次元 (<xref:System.RankException>クラス)  
   
--   配列の 1 つまたは複数の要素を実装していない、<xref:System.IComparable>インターフェイス (<xref:System.InvalidOperationException>クラス)  
+-   配列の 1 つまたは複数の要素を実装しない、<xref:System.IComparable>インターフェイス (<xref:System.InvalidOperationException>クラス)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [配列のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
- [コレクション](../../concepts/collections.md)  
- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Array.Sort%2A?displayProperty=nameWithType>
+- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [配列のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [コレクション](../../concepts/collections.md)
+- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

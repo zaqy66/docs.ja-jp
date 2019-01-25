@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: d4483d11903d61135585a2b6c2c33eff48300151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616015"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>アセンブリ バインディング リダイレクトのセキュリティ アクセス許可
 アプリケーション構成ファイルで明示的にアセンブリ バインディングをリダイレクトするには、セキュリティ アクセス許可が必要です。 これは、.NET Framework アセンブリおよびサードパーティ製アセンブリに適用されます。 許可を設定して、<xref:System.Security.Permissions.SecurityPermissionFlag>にフラグ、<xref:System.Security.Permissions.SecurityPermission>します。 マネージ アセンブリは、既定でアクセス許可を持っていません。  
@@ -32,7 +32,7 @@ ms.locfileid: "47088662"
   
  管理者は、これらのセキュリティ設定をサポートしたり、特定のコンピューターで特定のシナリオの制限を変更できます。 変更するためのツールはありません、 **BindingRedirects**フラグ設定から既定では、管理者はユーザーのコンピューターに Security.config ファイルを編集する必要があります手動でします。  
   
-## <a name="see-also"></a>関連項目  
- [発行者ポリシー ファイルとサイド バイ サイドで実行](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
- [方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [side-by-side 実行](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a>関連項目
+- [発行者ポリシー ファイルとサイド バイ サイドで実行](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+- [方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [side-by-side 実行](../../../docs/framework/deployment/side-by-side-execution.md)

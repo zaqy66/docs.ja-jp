@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: f6c7f28cee03c2d5ac258cf1e2c8956225334f7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612022"
 ---
 # <a name="string-functions-visual-basic"></a>文字列関数 (Visual Basic)
 Visual Basic で文字列の検索と操作のために用意されている関数の一覧を次の表に示します。  
@@ -46,7 +46,7 @@ Visual Basic で文字列の検索と操作のために用意されている関�
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|指定された文字列から、先頭または末尾の空白を除いたコピーを格納する文字列を返します。|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|指定された文字列を大文字に変換して文字列型または char 型の値を返します。|  
   
- 使用することができます、 [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)文字列の大文字と小文字のテキストを使用して比較するかどうかを設定するステートメントの並べ替え順序は、システムのロケールによって決まります (`Text`) または文字 (の内部バイナリ表現で`Binary`). 既定のテキスト比較方法は `Binary` です。  
+ 使用することができます、 [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)文字列の大文字のテキストを使用して比較するかどうかを設定するステートメントの並べ替え順序は、システムのロケールによって決まります (`Text`) または文字 (の内部バイナリ表現`Binary`). 既定のテキスト比較方法は `Binary` です。  
   
 ## <a name="example"></a>例  
  `UCase` 関数を使って文字列を大文字に変換して返す例を次に示します。  
@@ -81,7 +81,7 @@ Visual Basic で文字列の検索と操作のために用意されている関�
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)  
- [文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a>関連項目
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+- [文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

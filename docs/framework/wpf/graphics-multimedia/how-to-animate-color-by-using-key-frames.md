@@ -1,5 +1,5 @@
 ---
-title: '方法 : キー フレームを使用して色をアニメーション化する'
+title: '方法: キー フレームを使用して色をアニメーション化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: cb09a54df3d99e05e89ec0f3d9f17b0e9fe78647
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d7dbe70f25b4712d1384a751a02053fb7f287ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645094"
 ---
-# <a name="how-to-animate-color-by-using-key-frames"></a>方法 : キー フレームを使用して色をアニメーション化する
+# <a name="how-to-animate-color-by-using-key-frames"></a>方法: キー フレームを使用して色をアニメーション化する
 この例は、アニメーション化する方法を示しています、<xref:System.Windows.Media.SolidColorBrush.Color%2A>の<xref:System.Windows.Media.SolidColorBrush>キー フレームを使用しています。  
   
 ## <a name="example"></a>例  
@@ -34,9 +34,9 @@ ms.locfileid: "43501179"
   
  サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.SolidColorBrush.Color%2A>  
- <xref:System.Windows.Media.SolidColorBrush>  
- <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>  
- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [キー フレームに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.SolidColorBrush.Color%2A>
+- <xref:System.Windows.Media.SolidColorBrush>
+- <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>
+- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [キー フレームに関する「方法」トピック](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: e90eeb787fd2141459dfa67f36fda94036cec94f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b0dbd38e02c2e200796fa4508efc203685026155
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596671"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>メッセージ セキュリティと匿名クライアント
 次のシナリオでは、クライアントと Windows Communication Foundation (WCF) メッセージ セキュリティで保護されたサービスを説明します。 設計目標は、トランスポート セキュリティではなくメッセージ セキュリティを使用することです。これによって将来、多様なクレームに基づくモデルをサポートできます。 承認に多様なクレームの使用に関する詳細については、次を参照してください。[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)します。  
@@ -131,9 +131,9 @@ ms.locfileid: "50193878"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [分散アプリケーションのセキュリティ](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [メッセージ セキュリティ匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [分散アプリケーションのセキュリティ](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
+- [メッセージ セキュリティ匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
+- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

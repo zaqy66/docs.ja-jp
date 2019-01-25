@@ -2,12 +2,12 @@
 title: サンプル データベースのダウンロード (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: a98dd4e3d2ff113d3a5374d97fe30cec9524c095
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573335"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>サンプル データベースのダウンロード (LINQ to DataSet)
 サンプルおよびチュートリアルで、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ドキュメントは、AdventureWorks サンプル データベースを使用します。 この製品は、Microsoft のダウンロード サイトから無償でダウンロードできます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] のドキュメントで取り上げられているサンプルおよびチュートリアルでは、データ ストアとして SQL Server が使用されています。 SQL Server の代わりに、無償で提供されている SQL Server Express Edition をデータ ストアとして使用することもできます。  
@@ -73,5 +73,5 @@ ms.locfileid: "53125562"
   
 3.  Web サイトに記載されているインストールの指示に従います。  
   
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+## <a name="see-also"></a>関連項目
+- [はじめに](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

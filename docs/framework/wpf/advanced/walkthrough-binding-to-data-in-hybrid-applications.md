@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : ハイブリッド アプリケーションでのデータへのバインディング'
+title: 'チュートリアル: ハイブリッド アプリケーションでのデータへのバインド'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724344"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>チュートリアル : ハイブリッド アプリケーションでのデータへのバインディング
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>チュートリアル: ハイブリッド アプリケーションでのデータへのバインド
 使用しているかどうかをコントロールにデータ ソースのバインドは、基になるデータへのアクセス権を持つユーザーに提供するために不可欠な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 このチュートリアルでは、両方を含むハイブリッド アプリケーションでデータ バインディングを使用するどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
   
  このチュートリアルでは、以下のタスクを行います。  
@@ -122,7 +122,7 @@ ms.locfileid: "48584215"
   
 1.  **データ**メニューの **新しいデータ ソースの追加**します。  
   
-2.  **データ ソース構成ウィザード**データセットを使用して、Northwind データベースへの接続を作成します。 詳細については、次を参照してください。[方法: データをデータベースに接続する](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)します。  
+2.  **データ ソース構成ウィザード**データセットを使用して、Northwind データベースへの接続を作成します。 詳細については、「[方法 :データをデータベースに接続する](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)します。  
   
 3.  によってメッセージが表示されたら、**データ ソース構成ウィザード**、接続文字列として保存`NorthwindConnectionString`します。  
   
@@ -173,10 +173,10 @@ ms.locfileid: "48584215"
   
 10. F5 キーを押してアプリケーションをビルドし、実行します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [ハイブリッド アプリケーションのサンプルでのデータ バインディング](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [ハイブリッド アプリケーションのサンプルでのデータ バインディング](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

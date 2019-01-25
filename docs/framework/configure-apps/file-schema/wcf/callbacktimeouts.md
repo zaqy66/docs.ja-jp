@@ -2,12 +2,12 @@
 title: '&lt;callbackTimeouts&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: 85e7b1f0d009e27cbacd9f69b381e4f05984bf56
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 01932fe2b7b7e699311e2c65ec8adaf0aef82dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557904"
 ---
 # <a name="ltcallbacktimeoutsgt"></a>&lt;callbackTimeouts&gt;
 双方向コールバック コントラクト シナリオでトランザクションをサーバーからクライアントに転送する際のタイムアウト値を指定します。  
@@ -16,7 +16,7 @@ ms.locfileid: "54149112"
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<callbackTimeOuts >  
+\<callbackTimeOuts>  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,5 +45,5 @@ ms.locfileid: "54149112"
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.CallbackTimeoutsElement>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.CallbackTimeoutsElement>

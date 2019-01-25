@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: WPF コンテンツへのスタイルの適用'
+title: 'チュートリアル: WPF コンテンツのスタイル設定'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 45009f865589d040b0076fe0b115863d475ec488
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725403"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>チュートリアル: WPF コンテンツへのスタイルの適用
+# <a name="walkthrough-styling-wpf-content"></a>チュートリアル: WPF コンテンツのスタイル設定
 このチュートリアルでは、Windows フォームでホストされている Windows Presentation Foundation (WPF) コントロールにスタイルを適用する方法について説明します。
 
  このチュートリアルでは次のタスクを行います。
@@ -47,9 +47,9 @@ ms.locfileid: "48845555"
   
 #### <a name="to-create-wpf-control-types"></a>WPF コントロール型を作成するには  
   
-1.  新しい WPF <xref:System.Windows.Controls.UserControl> プロジェクトをソリューションに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、次を参照してください。[チュートリアル: 新しい WPF コンテンツの作成には、デザイン時に Windows フォーム](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
+1.  新しい WPF <xref:System.Windows.Controls.UserControl> プロジェクトをソリューションに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、「[チュートリアル:デザイン時に Windows フォームで新しい WPF コンテンツを作成する](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
   
-2.  デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、次を参照してください。[方法: 選択し、デザイン サーフェイス上の要素の移動](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)します。  
+2.  デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :選択し、デザイン サーフェイス上の要素の移動](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)します。  
   
 3.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティ`200`します。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "48845555"
   
 5.  [OK] ボタンと [Cancel] ボタンをクリックして、違いを確認します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: ジェネリック クラスを使用する (Visual Basic)'
+title: '方法: ジェネリック クラス (Visual Basic) を使用します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type parameters [Visual Basic], defining
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 108532e5b765fa918fa894199ef710a9f52db4e4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cd2e48ad9ee5e6266fff676cf109cdf6b0136f32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573908"
 ---
-# <a name="how-to-use-a-generic-class-visual-basic"></a>方法: ジェネリック クラスを使用する (Visual Basic)
+# <a name="how-to-use-a-generic-class-visual-basic"></a>方法: ジェネリック クラス (Visual Basic) を使用します。
 *型パラメーター* を受け取るクラスは、 *ジェネリック クラス*と呼ばれます。 ジェネリック クラスを使用している場合は、このパラメーターのそれぞれに *型引数* を入力することで、ジェネリック クラスから *構築済みクラス* を生成することができます。 これで、構築済みクラス型の変数を宣言し、構築済みクラスのインスタンスを作成して、その変数に割り当てることができます。  
   
  クラスに加えて、ジェネリックの構造体、インターフェイス、プロシージャ、デリゲートを定義して利用することもできます。  
@@ -47,10 +47,10 @@ ms.locfileid: "46003712"
   
 ## <a name="see-also"></a>関連項目
 
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
-- [言語への非依存性、および言語非依存コンポーネント](../../../../standard/language-independence-and-language-independent-components.md)  
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
-- [方法 : 複数のデータ型に同一の機能を提供できるクラスを定義する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [言語への非依存性、および言語非依存コンポーネント](../../../../standard/language-independence-and-language-independent-components.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [方法: 複数のデータ型に同一の機能を提供できるクラスを定義する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [反復子](../../../../visual-basic/programming-guide/concepts/iterators.md)

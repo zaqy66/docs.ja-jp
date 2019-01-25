@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699806"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports ステートメント (.NET 名前空間および型)
 有効では、名前空間の修飾せずに参照する名前を入力します。  
@@ -38,7 +38,7 @@ Imports [ aliasname = ] namespace.element
   
 |用語|定義|  
 |---|---|  
-|`aliasname`|任意。 *インポート エイリアス*または名前が使用されるコードを参照できます`namespace`完全に修飾文字列の代わりにします。 参照してください[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。|  
+|`aliasname`|任意。 *インポート エイリアス*または名前が使用されるコードを参照できます`namespace`完全に修飾文字列の代わりにします。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`namespace`|必須。 インポートされる名前空間の完全修飾名。 名前空間の文字列はネストできますを任意のレベル。|  
 |`element`|任意。 名前空間で宣言されたプログラミング要素の名前。 任意のコンテナー要素を指定できます。|  
   
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  なお、`Imports`ステートメントは行いません他のプロジェクトおよびアセンブリからの要素をプロジェクトに使用できます。 インポートしても、参照設定の代わりにはなりません。 既にプロジェクトに使用できる名前を修飾する必要性を削除するだけです。 詳細については、「を格納している要素のインポート」を参照してください[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)します。  
   
 > [!NOTE]
->  暗黙の型を定義する`Imports`ステートメントを使用して、[参照設定 ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)します。 詳細については、次を参照してください。[方法: 追加またはインポート済み名前空間 (Visual Basic) を削除する](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)します。  
+>  暗黙の型を定義する`Imports`ステートメントを使用して、[参照設定 ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)します。 詳細については、「[方法 :追加またはインポートされた名前空間 (Visual Basic) を削除する](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)します。  
   
 ## <a name="import-aliases"></a>インポート エイリアス  
  *インポート エイリアス*名前空間または型のエイリアスを定義します。 インポート エイリアスは、1 つまたは複数の名前空間で宣言されているのと同じ名前の項目を使用する必要がある場合に便利です。 詳細と例では、「an 要素名を修飾する」を参照してください[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)します。  
@@ -98,9 +98,9 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>関連項目
+- [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

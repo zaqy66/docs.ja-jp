@@ -2,12 +2,12 @@
 title: Windows Workflow の概要
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: af5ccd47dd7b3ff35dd283f8fe659ebef912d441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665163"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow の概要
 ワークフローは、一連の要素の単位と呼ばれる*アクティビティ*実際のプロセスを記述するモデルとして保存されています。 ワークフローでは、短期間だけ行われる業務や長期間にわたって行われる業務の各部分の実行順序と、それらの間の依存関係を表すことができます。 このような業務はモデルの最初から最後まで通して行われます。アクティビティには、人間によって実行されるものと、システム機能によって実行されるものがあります。  
@@ -41,5 +41,5 @@ ms.locfileid: "47195450"
   
 -   <xref:System.Activities.CodeActivity> 抽象クラスから派生するカスタム アクティビティ。 <xref:System.Activities.CodeActivity> は、<xref:System.Activities.CodeActivityContext> メソッドのパラメーターとして使用可能な <xref:System.Activities.CodeActivity.Execute%2A> を使用して、ランタイム機能 (追跡やプロパティなど) にアクセスできます。 これらのランタイム機能の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフロー実行プロパティ](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [BizTalk Server 2006 または WF?適切なワークフロー ツール、プロジェクトの選択](https://go.microsoft.com/fwlink/?LinkId=154901)
+## <a name="see-also"></a>関連項目
+- [BizTalk Server 2006 または WF?適切なワークフロー ツール、プロジェクトの選択](https://go.microsoft.com/fwlink/?LinkId=154901)

@@ -1,29 +1,29 @@
 ---
-title: '方法 : クライアントの資格情報の値を指定する'
+title: '方法: クライアント資格情報の値を指定します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 9625400b855492ead12a5a2f1fa74f10164f6cdd
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617188"
 ---
-# <a name="how-to-specify-client-credential-values"></a>方法 : クライアントの資格情報の値を指定する
-クライアントの認証方法、サービスに Windows Communication Foundation (WCF) を使用して、サービスを指定できます。 たとえば、証明書を使用してクライアントを認証するように指定できます。  
+# <a name="how-to-specify-client-credential-values"></a>方法: クライアント資格情報の値を指定します。
+サービスにクライアントを認証する方法を Windows Communication Foundation (WCF) を使用して、サービスを指定できます。 たとえば、証明書を使用してクライアントを認証するように指定できます。  
   
 ### <a name="to-determine-the-client-credential-type"></a>クライアント資格情報の種類を特定するには  
   
-1.  サービスのメタデータ エンドポイントからメタデータを取得します。 一般的に、メタデータは、選択したプログラミング言語 (既定は Visual C#) のクライアント コードおよび XML 構成ファイルという 2 つのファイルで構成されています。 メタデータは、クライアント コードおよびクライアント構成を返す Svcutil.exe ツールを使用して取得できます。 詳細については、次を参照してください。[メタデータを取得する](../../../docs/framework/wcf/feature-details/retrieving-metadata.md)と[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)です。  
+1.  サービスのメタデータ エンドポイントからメタデータを取得します。 一般的に、メタデータは、選択したプログラミング言語 (既定は Visual C#) のクライアント コードおよび XML 構成ファイルという 2 つのファイルで構成されています。 メタデータは、クライアント コードおよびクライアント構成を返す Svcutil.exe ツールを使用して取得できます。 詳細については、次を参照してください。[メタデータを取得する](../../../docs/framework/wcf/feature-details/retrieving-metadata.md)と[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   
 2.  XML 構成ファイルを開きます。 Svcutil.exe ツールを使用する場合、ファイルの既定の名前は、Output.config です。  
   
-3.  検索、 **\<セキュリティ >** を持つ要素、**モード**属性 (**< セキュリティ モード =** `MessageOrTransport` **>** 場所`MessageOrTransport`セキュリティ モードのいずれかに設定されています。  
+3.  検索、 **\<セキュリティ >** を持つ要素、**モード**属性 (**< セキュリティ モード =** `MessageOrTransport` **>** 場所`MessageOrTransport`セキュリティ モードのいずれかに設定されます。  
   
-4.  mode 値に一致する子要素を見つけます。 モードが に設定されている場合など、**メッセージ**、検索、 **\<メッセージ >** 要素に含まれている、 **\<セキュリティ >** 要素。  
+4.  mode 値に一致する子要素を見つけます。 例では、モードに設定されている場合、**メッセージ**、検索、 **\<メッセージ >** 要素に含まれている、 **\<セキュリティ >** 要素。  
   
 5.  割り当てられた値に注意してください、 **clientCredentialType**属性。 実際の値は、使用されているモード (トランスポートまたはメッセージ) に依存します。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "33806650"
 </security>  
 ```  
   
-## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>例: クライアント資格情報としての証明書による TCP トランスポート モード  
- この例では、セキュリティ モードを "Transport (トランスポート)" モードに設定し、クライアント資格情報の値を X.509 証明書に設定します。 次の手順では、クライアントでクライアント資格情報の値をコードと構成を使用して設定する方法を示します。 これを使用している前提としています。、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)をサービスからメタデータ (コードと構成) を返します。 詳細については、次を参照してください。[する方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)です。  
+## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>例:クライアント資格情報として証明書による TCP トランスポート モード  
+ この例では、セキュリティ モードを "Transport (トランスポート)" モードに設定し、クライアント資格情報の値を X.509 証明書に設定します。 次の手順では、クライアントでクライアント資格情報の値をコードと構成を使用して設定する方法を示します。 これを使用している前提としています。、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)をサービスからメタデータ (コードと構成) を返します。 詳細については、「[方法 :クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>クライアントでクライアント資格情報の値をコードによって指定するには  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33806650"
     </behaviors>  
     ```  
   
-5.  クライアントを構成するときは、次のコードに示すように、`behaviorConfiguration` 要素の `<endpoint>` 属性を設定して動作を指定します。 エンドポイント要素の子である、 [\<クライアント >](../../../docs/framework/configure-apps/file-schema/wcf/client.md)要素。 また、`bindingConfiguration` 属性をクライアントのバインディングに設定することにより、バインディング構成の名前を指定します。 生成された構成ファイルを使用している場合は、バインディングの名前は自動的に生成されます。 この例では、名前は `"tcpBindingWithCredential"` です。  
+5.  クライアントを構成するときは、次のコードに示すように、`behaviorConfiguration` 要素の `<endpoint>` 属性を設定して動作を指定します。 エンドポイント要素の子である、 [\<クライアント >](../../../docs/framework/configure-apps/file-schema/wcf/client.md)要素。 また、`bindingConfiguration` 属性をクライアントのバインディングに設定することにより、バインド構成の名前を指定します。 生成された構成ファイルを使用している場合は、バインディングの名前は自動的に生成されます。 この例では、名前は `"tcpBindingWithCredential"` です。  
   
     ```xml  
     <client>  
@@ -91,21 +91,21 @@ ms.locfileid: "33806650"
     </client>  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
- [WCF セキュリティのプログラミング](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [資格情報の種類の選択](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [証明書の使用](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
- [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
+- [WCF セキュリティのプログラミング](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [資格情報の種類の選択](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [証明書の使用](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
+- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
+- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [\<clientCertificate>](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
+- [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
