@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c04d5f779306a67e389f768cefdf633f3d72f0ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5ead45c6747cd69a76585c81b1ff6a4801cbb34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631994"
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a><span data-ttu-id="88d42-102">ICorDebugModuleBreakpoint Interface1</span><span class="sxs-lookup"><span data-stu-id="88d42-102">ICorDebugModuleBreakpoint Interface1</span></span>
-<span data-ttu-id="88d42-103">特定のモジュールへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="88d42-103">Provides access to specific modules.</span></span> <span data-ttu-id="88d42-104">このインターフェイスは、ICorDebugBreakpoint インターフェイスのサブクラスです。</span><span class="sxs-lookup"><span data-stu-id="88d42-104">This interface is a subclass of the ICorDebugBreakpoint interface.</span></span>  
+# <a name="icordebugmodulebreakpoint-interface1"></a><span data-ttu-id="3a50d-102">ICorDebugModuleBreakpoint Interface1</span><span class="sxs-lookup"><span data-stu-id="3a50d-102">ICorDebugModuleBreakpoint Interface1</span></span>
+<span data-ttu-id="3a50d-103">特定のモジュールへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="3a50d-103">Provides access to specific modules.</span></span> <span data-ttu-id="3a50d-104">このインターフェイスは、ICorDebugBreakpoint インターフェイスのサブクラスです。</span><span class="sxs-lookup"><span data-stu-id="3a50d-104">This interface is a subclass of the ICorDebugBreakpoint interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="88d42-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="88d42-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3a50d-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="3a50d-105">Methods</span></span>  
   
-|<span data-ttu-id="88d42-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="88d42-106">Method</span></span>|<span data-ttu-id="88d42-107">説明</span><span class="sxs-lookup"><span data-stu-id="88d42-107">Description</span></span>|  
+|<span data-ttu-id="3a50d-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="3a50d-106">Method</span></span>|<span data-ttu-id="3a50d-107">説明</span><span class="sxs-lookup"><span data-stu-id="3a50d-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="88d42-108">GetModule メソッド</span><span class="sxs-lookup"><span data-stu-id="88d42-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|<span data-ttu-id="88d42-109">このブレークポイントが設定されているモジュールを参照する ICorDebugModule へのインターフェイス ポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="88d42-109">Gets an interface pointer to an ICorDebugModule that references the module where this breakpoint is set.</span></span>|  
+|[<span data-ttu-id="3a50d-108">GetModule メソッド</span><span class="sxs-lookup"><span data-stu-id="3a50d-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|<span data-ttu-id="3a50d-109">このブレークポイントが設定されているモジュールを参照する、ICorDebugModule にインターフェイス ポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="3a50d-109">Gets an interface pointer to an ICorDebugModule that references the module where this breakpoint is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="88d42-110">コメント</span><span class="sxs-lookup"><span data-stu-id="88d42-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3a50d-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="3a50d-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="88d42-111">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="88d42-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="3a50d-111">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="3a50d-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="88d42-112">要件</span><span class="sxs-lookup"><span data-stu-id="88d42-112">Requirements</span></span>  
- <span data-ttu-id="88d42-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="88d42-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a50d-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="3a50d-112">Requirements</span></span>  
+ <span data-ttu-id="3a50d-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3a50d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="88d42-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="88d42-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3a50d-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a50d-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="88d42-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="88d42-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3a50d-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a50d-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="88d42-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88d42-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3a50d-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a50d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88d42-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="88d42-117">See Also</span></span>  
- [<span data-ttu-id="88d42-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="88d42-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="3a50d-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="3a50d-117">See also</span></span>
+- [<span data-ttu-id="3a50d-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3a50d-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

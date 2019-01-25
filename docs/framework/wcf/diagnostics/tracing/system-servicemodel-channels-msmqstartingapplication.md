@@ -2,20 +2,20 @@
 title: System.ServiceModel.Channels.MsmqStartingApplication
 ms.date: 03/30/2017
 ms.assetid: 76e1af87-f5f2-4974-acfa-868b56cfa450
-ms.openlocfilehash: d17869efdcc69fdd394b8b814997f465c9b7572a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60e6d020501b7da29a76280cf52b7927dd89d0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33477358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656402"
 ---
-# <a name="systemservicemodelchannelsmsmqstartingapplication"></a><span data-ttu-id="2bb19-102">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="2bb19-102">System.ServiceModel.Channels.MsmqStartingApplication</span></span>
-<span data-ttu-id="2bb19-103">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="2bb19-103">System.ServiceModel.Channels.MsmqStartingApplication</span></span>  
+# <a name="systemservicemodelchannelsmsmqstartingapplication"></a><span data-ttu-id="1a665-102">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="1a665-102">System.ServiceModel.Channels.MsmqStartingApplication</span></span>
+<span data-ttu-id="1a665-103">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="1a665-103">System.ServiceModel.Channels.MsmqStartingApplication</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2bb19-104">説明</span><span class="sxs-lookup"><span data-stu-id="2bb19-104">Description</span></span>  
- <span data-ttu-id="2bb19-105">MSMQ アクティベーション サービスによってアプリケーションが起動されました。</span><span class="sxs-lookup"><span data-stu-id="2bb19-105">MSMQ activation service started application.</span></span>  
+## <a name="description"></a><span data-ttu-id="1a665-104">説明</span><span class="sxs-lookup"><span data-stu-id="1a665-104">Description</span></span>  
+ <span data-ttu-id="1a665-105">MSMQ アクティベーション サービスによってアプリケーションが起動されました。</span><span class="sxs-lookup"><span data-stu-id="1a665-105">MSMQ activation service started application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bb19-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="2bb19-106">See Also</span></span>  
- [<span data-ttu-id="2bb19-107">トレース</span><span class="sxs-lookup"><span data-stu-id="2bb19-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2bb19-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="2bb19-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2bb19-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="2bb19-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1a665-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="1a665-106">See also</span></span>
+- [<span data-ttu-id="1a665-107">トレース</span><span class="sxs-lookup"><span data-stu-id="1a665-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="1a665-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="1a665-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="1a665-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="1a665-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
