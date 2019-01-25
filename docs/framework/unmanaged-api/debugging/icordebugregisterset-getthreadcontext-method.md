@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 632d3912bae28da22e701078bb47d2d8dbfd3644
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 668b3849af9be24e019dc472a0b80067f0e1e0c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612737"
 ---
-# <a name="icordebugregistersetgetthreadcontext-method"></a><span data-ttu-id="48cce-102">ICorDebugRegisterSet::GetThreadContext メソッド</span><span class="sxs-lookup"><span data-stu-id="48cce-102">ICorDebugRegisterSet::GetThreadContext Method</span></span>
-<span data-ttu-id="48cce-103">現在のスレッドのコンテキストを取得します。</span><span class="sxs-lookup"><span data-stu-id="48cce-103">Gets the context of the current thread.</span></span>  
+# <a name="icordebugregistersetgetthreadcontext-method"></a><span data-ttu-id="86204-102">ICorDebugRegisterSet::GetThreadContext メソッド</span><span class="sxs-lookup"><span data-stu-id="86204-102">ICorDebugRegisterSet::GetThreadContext Method</span></span>
+<span data-ttu-id="86204-103">現在のスレッドのコンテキストを取得します。</span><span class="sxs-lookup"><span data-stu-id="86204-103">Gets the context of the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48cce-104">構文</span><span class="sxs-lookup"><span data-stu-id="48cce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86204-104">構文</span><span class="sxs-lookup"><span data-stu-id="86204-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext(  
@@ -37,27 +37,27 @@ HRESULT GetThreadContext(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="48cce-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="48cce-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="86204-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="86204-105">Parameters</span></span>  
  `contextSize`  
- <span data-ttu-id="48cce-106">[in]サイズをバイト単位での`context`配列。</span><span class="sxs-lookup"><span data-stu-id="48cce-106">[in] The size, in bytes, of the `context` array.</span></span>  
+ <span data-ttu-id="86204-106">[in]サイズ (バイト単位) の`context`配列。</span><span class="sxs-lookup"><span data-stu-id="86204-106">[in] The size, in bytes, of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="48cce-107">[入力、出力].Win32 を構成するバイトの配列`CONTEXT`現在のプラットフォームの構造体。</span><span class="sxs-lookup"><span data-stu-id="48cce-107">[in, out] An array of bytes that compose the Win32 `CONTEXT` structure for the current platform.</span></span>  
+ <span data-ttu-id="86204-107">[入力、出力]Win32 を構成するバイトの配列`CONTEXT`現在のプラットフォームの構造体。</span><span class="sxs-lookup"><span data-stu-id="86204-107">[in, out] An array of bytes that compose the Win32 `CONTEXT` structure for the current platform.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="48cce-108">コメント</span><span class="sxs-lookup"><span data-stu-id="48cce-108">Remarks</span></span>  
- <span data-ttu-id="48cce-109">デバッガーは、Win32 ではなくこの関数を呼び出す必要があります`GetThreadContext`関数、スレッドのコンテキストに一時的に変更がされている「乗っ取ら」状態になるためです。</span><span class="sxs-lookup"><span data-stu-id="48cce-109">The debugger should call this function instead of the Win32 `GetThreadContext` function, because the thread may be in a "hijacked" state where its context has been temporarily changed.</span></span> <span data-ttu-id="48cce-110">返されるデータは、Win32`CONTEXT`現在のプラットフォームの構造体。</span><span class="sxs-lookup"><span data-stu-id="48cce-110">The data returned is a Win32 `CONTEXT` structure for the current platform.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="86204-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="86204-108">Remarks</span></span>  
+ <span data-ttu-id="86204-109">デバッガーは、Win32 ではなく、この関数を呼び出す必要があります`GetThreadContext`関数は、スレッドのコンテキストに一時的に変更がされている「ハイジャック」の状態になるためです。</span><span class="sxs-lookup"><span data-stu-id="86204-109">The debugger should call this function instead of the Win32 `GetThreadContext` function, because the thread may be in a "hijacked" state where its context has been temporarily changed.</span></span> <span data-ttu-id="86204-110">返されるデータは、Win32`CONTEXT`現在のプラットフォームの構造体。</span><span class="sxs-lookup"><span data-stu-id="86204-110">The data returned is a Win32 `CONTEXT` structure for the current platform.</span></span>  
   
- <span data-ttu-id="48cce-111">使用してレジスタが有効な非リーフ フレームのクライアントを確認する必要があります[icordebugregisterset::getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)です。</span><span class="sxs-lookup"><span data-stu-id="48cce-111">For non-leaf frames, clients should check which registers are valid by using [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span></span>  
+ <span data-ttu-id="86204-111">使用してレジスタが有効なリーフ以外のフレームのクライアントを確認する必要があります[icordebugregisterset::getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="86204-111">For non-leaf frames, clients should check which registers are valid by using [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48cce-112">要件</span><span class="sxs-lookup"><span data-stu-id="48cce-112">Requirements</span></span>  
- <span data-ttu-id="48cce-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="48cce-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86204-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="86204-112">Requirements</span></span>  
+ <span data-ttu-id="86204-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="86204-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48cce-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="48cce-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="86204-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="86204-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="48cce-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="48cce-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="86204-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="86204-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="48cce-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48cce-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="86204-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86204-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48cce-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="48cce-117">See Also</span></span>  
- [<span data-ttu-id="48cce-118">ICorDebugRegisterSet インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48cce-118">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [<span data-ttu-id="48cce-119">ICorDebugRegisterSet2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48cce-119">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="86204-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="86204-117">See also</span></span>
+- [<span data-ttu-id="86204-118">ICorDebugRegisterSet インターフェイス</span><span class="sxs-lookup"><span data-stu-id="86204-118">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="86204-119">ICorDebugRegisterSet2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="86204-119">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
