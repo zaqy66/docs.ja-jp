@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a7f3a13d05b8a3c4554810655bbda670efb2b3fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f33fb559bb4bf47beebc836a093f4b784559609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674817"
 ---
 # <a name="accessibility-best-practices"></a>ユーザー補助のベスト プラクティス
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  コントロールやアプリケーションで以下のベスト プラクティスを実行すると、 [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] デバイスを使用するユーザーのアクセシビリティ が向上します。 これらのベスト プラクティスの多くは [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に適した設計を中心としています。 各ベスト プラクティスには、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] コントロールまたはアプリケーションの実装の情報が含まれています。 多くの場合、これらのベスト プラクティスに対応する作業は既に [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールに含まれています。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "50191078"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>デバイスに依存しない呼び出しで標準の入力 API を使用する  
  デバイスに依存しない呼び出しは、キーボードとマウスの機能が同等であることを保証する一方、 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] に関する必要な情報を [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に提供します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Automation.Peers>  
- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [キーボード ユーザー インターフェイス設計のガイドライン](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Automation.Peers>
+- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)
+- [キーボード ユーザー インターフェイス設計のガイドライン](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

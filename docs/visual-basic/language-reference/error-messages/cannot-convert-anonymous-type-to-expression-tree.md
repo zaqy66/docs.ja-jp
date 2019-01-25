@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: 2f97a0de74428ce42a088644580a78bf8fd99945
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646946"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>型のプロパティは別のプロパティを初期化するために使用されるため、匿名型を式のツリーに変換することはできません。
 コンパイラでは、匿名型の別のプロパティを初期化するために、匿名型の 1 つのプロパティを使用する場合、匿名の式ツリーへの変換は受け入れられません。 たとえば、次のコードで`Prop1`が初期化リストで宣言されの初期値として使用し、`Prop2`します。  
@@ -48,6 +48,6 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-[匿名型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-[式ツリー (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)  
-[方法: 式ツリーを使用して動的クエリ (Visual Basic) を作成するには](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)  
+- [匿名型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [式ツリー (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)
+- [方法: 式ツリーを使用して動的クエリ (Visual Basic) を作成するには](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)

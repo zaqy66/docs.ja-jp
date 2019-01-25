@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728362"
 ---
 # <a name="white-space-processing-in-xaml"></a>空白 XAML での処理
 XAML の言語規則の状態によってその有意の空白を処理する必要があります、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装。 ここでは、それらの XAML 言語規則について説明します。 定義されている追加の空白文字の処理が文書化も、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML プロセッサとシリアル化のための XAML ライターの実装。  
@@ -53,7 +53,7 @@ XAML の言語規則の状態によってその有意の空白を処理する必
 ## <a name="preserving-white-space"></a>空白を維持  
  ソース内の空白を保持するためのいくつかの方法はあります[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]によって影響を受けない最終的なプレゼンテーションの[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサの空白文字の正規化します。  
   
- **xml:space ="preserve"**: 空白の保持する必要がある要素のレベルでは、この属性を指定します。 この場合、要素を視覚的にわかりやすい入れ子として "美しく表示する" ためにコード編集アプリケーションによって追加されたスペースも含めて、すべての空白が保持されます。 ただし、これらのスペースが表示されるかどうかは、スペースを含んでいる要素のコンテンツ モデルによって決まります。 指定しないように`xml:space="preserve"`ルート レベルのほとんどのオブジェクト モデルの場合は白考えないため、領域の属性を設定する方法に関係なく、重要な。 グローバルに `xml:space` を設定すると、一部の実装で XAML 処理 (特にシリアル化) のパフォーマンスに影響することがあります。 具体的には、文字列内の空白を表示するか、空白の意味を持つコレクションの要素のレベルでのみ、属性を設定することをお勧めすることをお勧めします。  
+ **xml:space="preserve"**:空白の維持が必要な場合、要素のレベルでは、この属性を指定します。 この場合、要素を視覚的にわかりやすい入れ子として "美しく表示する" ためにコード編集アプリケーションによって追加されたスペースも含めて、すべての空白が保持されます。 ただし、これらのスペースが表示されるかどうかは、スペースを含んでいる要素のコンテンツ モデルによって決まります。 指定しないように`xml:space="preserve"`ルート レベルのほとんどのオブジェクト モデルの場合は白考えないため、領域の属性を設定する方法に関係なく、重要な。 グローバルに `xml:space` を設定すると、一部の実装で XAML 処理 (特にシリアル化) のパフォーマンスに影響することがあります。 具体的には、文字列内の空白を表示するか、空白の意味を持つコレクションの要素のレベルでのみ、属性を設定することをお勧めすることをお勧めします。  
   
  **エンティティおよび改行しないスペース**: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] では、テキスト オブジェクト モデル内に任意の [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] エンティティを配置できます。 改行しないスペースなど、専用のエンティティを使用することができます ((& a)\#160; utf-8 エンコード)。 また、改行しないスペース文字をサポートするリッチ テキスト コントロールを使用することもできます。 インデントなどのレイアウト特性をシミュレートするためにエンティティを使用する場合には、エンティティの実行時出力が、一般的なレイアウト システムにおけるインデントの生成機能を使用した場合よりも多くの要因 (パネルや余白の適切な使用など) に基づいて変化するため、注意が必要です。 たとえば、エンティティはフォントにマッピングされ、ユーザーのフォント選択に応じてサイズが変わる可能性があります。  
   
@@ -74,7 +74,7 @@ XAML の言語規則の状態によってその有意の空白を処理する必
   
  また、フロー ドキュメント モデルで改行を意味する特定のインライン要素では、空白が有意なコレクションであっても、余分なスペースが生じるは意図的にする必要があります。 など、<xref:System.Windows.Documents.LineBreak>要素と同じ目的には、 \<BR/> にタグを付ける[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]、マークアップでは、読みやすくするため、通常、<xref:System.Windows.Documents.LineBreak>は改行を入れてで後続のテキストから区切られます。 その改行は、正規化されて後続の行の先頭のスペースになってはなりません。 クラス定義は、その動作を有効にする、<xref:System.Windows.Documents.LineBreak>要素が適用される、 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>、によって解釈されるし、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]空白文字を囲むことを意味するプロセッサ<xref:System.Windows.Documents.LineBreak>は常に切り捨てられます。  
   
-## <a name="see-also"></a>関連項目  
- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XML 文字エンティティと XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [xml:space の XAML での処理](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a>関連項目
+- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XML 文字エンティティと XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [xml:space の XAML での処理](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

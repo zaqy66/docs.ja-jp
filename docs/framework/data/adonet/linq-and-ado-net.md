@@ -2,12 +2,12 @@
 title: LINQ と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 13532401a56c6ab2c77a2df575d5b3dde573df2d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714816"
 ---
 # <a name="linq-and-adonet"></a>LINQ と ADO.NET
 今日では、多くのビジネス開発者が 2 つ (以上) のプログラミング言語を使用する必要があります。 高級言語 (Visual c# または Visual Basic) などのビジネス ロジックやプレゼンテーション層とデータベースと対話するクエリ言語 (など[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 開発者は実質的に複数の言語に精通していることが要求され、開発環境における言語の不整合が生じる原因にもなっています。 たとえば、データ アクセス API を使用してデータベースを照会するアプリケーションでは、クエリは文字列リテラルとして引用符で囲んで指定する必要があります。 コンパイラはこのクエリ文字列を認識できないため、エラー (無効な構文、参照されている列または行が実際に存在するかどうかなど) のチェック機構が働きません。 クエリ パラメーターの型チェックや `IntelliSense` のサポートもありません。  
@@ -20,7 +20,7 @@ ms.locfileid: "43485691"
   
  次の図は、ADO.NET LINQ テクノロジが、高級プログラミング言語および LINQ 対応のデータ ソースとどのように関係しているかを簡単に表したものです。  
   
- ![LINQ to ADO.NET の概要](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
+ ![LINQ to ADO.NET overview](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
  LINQ の詳細については、次を参照してください。[言語統合クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)します。
   
@@ -41,8 +41,8 @@ ms.locfileid: "43485691"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
-- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
-- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)
+- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)
 - [ADO.NET の概要](ado-net-overview.md)

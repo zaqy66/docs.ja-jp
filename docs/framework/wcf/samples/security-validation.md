@@ -2,12 +2,12 @@
 title: セキュリティ検証
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699767"
 ---
 # <a name="security-validation"></a>セキュリティ検証
 このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインド要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
@@ -77,7 +77,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  動作をすべてのサービスに追加する場合、Machine.config ファイルの変更を行う前に、このファイルのバックアップを推奨するメッセージが表示されます。  
   
- ここで、このサンプルの client\bin ディレクトリに用意されたクライアントを実行します。 例外が、次のメッセージで発生します:"要求されたサービス 'http://localhost/servicemodelsamples/service.svc' アクティブにできませんでした"。 これは予期される例外です。エンドポイント検証の動作により、エンドポイントがセキュリティで保護されていないと見なされ、サービスが開始されないためです。 さらにこの動作によって、エンドポイントがセキュリティ保護されていないという内部例外がスローされ、システム イベント ビューアで "WebHost" カテゴリの "System.ServiceModel 4.0.0.0" ソースの下にメッセージが書き込まれます。 さらにこのサンプルでは、サービスのトレースを有効にできます。 これによって、サービス トレース ビューア ツールを使用してサービス トレースの結果を開き、エンドポイント検証の動作からスローされた例外を表示することができます。  
+ ここで、このサンプルの client\bin ディレクトリに用意されたクライアントを実行します。 例外は、次のメッセージで発生します。"要求されたサービス 'http://localhost/servicemodelsamples/service.svc' アクティブにできませんでした"。 これは予期される例外です。エンドポイント検証の動作により、エンドポイントがセキュリティで保護されていないと見なされ、サービスが開始されないためです。 さらにこの動作によって、エンドポイントがセキュリティ保護されていないという内部例外がスローされ、システム イベント ビューアで "WebHost" カテゴリの "System.ServiceModel 4.0.0.0" ソースの下にメッセージが書き込まれます。 さらにこのサンプルでは、サービスのトレースを有効にできます。 これによって、サービス トレース ビューア ツールを使用してサービス トレースの結果を開き、エンドポイント検証の動作からスローされた例外を表示することができます。  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>エンドポイント検証エラーの例外メッセージをイベント ビューアーで表示するには  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

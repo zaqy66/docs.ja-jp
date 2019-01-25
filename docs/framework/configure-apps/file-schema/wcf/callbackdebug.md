@@ -2,12 +2,12 @@
 title: '&lt;callbackDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 5bd2356c3bb798e948341cb3c4ba504ac886ed44
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1aa292a3fe06af9cf1dbc53ebf5bbdf9841be8d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687376"
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
 Windows Communication Foundation (WCF) コールバック オブジェクトのサービス デバッグを指定します。  
@@ -16,7 +16,7 @@ Windows Communication Foundation (WCF) コールバック オブジェクトの�
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<callbackDebug >  
+\<callbackDebug>  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,6 +45,6 @@ Windows Communication Foundation (WCF) コールバック オブジェクトの�
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.CallbackDebugElement>  
- <xref:System.ServiceModel.Description.CallbackDebugBehavior>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.CallbackDebugElement>
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>

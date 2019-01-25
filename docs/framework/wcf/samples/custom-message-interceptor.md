@@ -2,12 +2,12 @@
 title: カスタム メッセージ インターセプター
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3b24535c67c1d16da63ec3b282d456e65ff8dd95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733273"
 ---
 # <a name="custom-message-interceptor"></a>カスタム メッセージ インターセプター
 このサンプルでは、チャネル拡張モデルの使用方法を示します。 特に、チャネル ファクトリとチャネル リスナーを作成するカスタム バインド要素を実装して、ランタイム スタックの特定のポイントですべての送受信メッセージを中断する方法を示します。 また、このサンプルには、こうしたカスタム ファクトリの使用方法を示すクライアントとサーバーも含まれます。  
@@ -52,7 +52,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>バインド要素の追加  
- このサンプルでは、`InterceptingBindingElement` というカスタム バインディング要素を定義します。 `InterceptingBindingElement` `ChannelMessageInterceptor` 、入力としてこれを使用して`ChannelMessageInterceptor`通過するメッセージを操作します。 公開する必要があるクラスはこれだけです。 ファクトリ、リスナ、およびチャネルはすべて、ランタイム パブリック インターフェイスの内部実装として設定できます。  
+ このサンプルでは、`InterceptingBindingElement` というカスタム バインド要素を定義します。 `InterceptingBindingElement` `ChannelMessageInterceptor` 、入力としてこれを使用して`ChannelMessageInterceptor`通過するメッセージを操作します。 公開する必要があるクラスはこれだけです。 ファクトリ、リスナ、およびチャネルはすべて、ランタイム パブリック インターフェイスの内部実装として設定できます。  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
@@ -68,7 +68,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="adding-policy"></a>ポリシーの追加  
  ポリシー システムと統合するには、`InterceptingBindingElement` に IPolicyExportExtension を実装し、ポリシーの生成に参加する必要があることを通知します。 生成されたクライアント上でポリシーのインポートをサポートするには、`InterceptingBindingElementImporter` の派生クラスを登録し、`CreateMessageInterceptor`() をオーバーライドして、ポリシーが有効なそれらの `ChannelMessageInterceptor` クラスを生成します。  
   
-## <a name="example-droppable-message-inspector"></a>例: 破棄可能なメッセージ インスペクタ  
+## <a name="example-droppable-message-inspector"></a>例:破棄可能なメッセージ インスペクター  
  このサンプルには、メッセージを破棄する `ChannelMessageInspector` の実装例が含まれています。  
   
 ```  

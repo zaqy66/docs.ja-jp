@@ -2,12 +2,12 @@
 title: WCF サービスと ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: c4d747787529ce6755a25cbd791886cf1999b699
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58b5a09f63b6efb3c48fb3836da63c24650c5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712286"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET
 このトピックでは、ホスト Windows Communication Foundation (WCF) サービスのサイド ASP.NET と ASP.NET 互換モードでホストすることについて説明します。  
@@ -29,13 +29,13 @@ ms.locfileid: "43401438"
   
     -   HttpContext:<xref:System.Web.HttpContext.Current%2A>は常に`null`WCF サービス内からアクセスする場合。 使用<!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>-->`RequestContext`代わりにします。  
   
-    -   ファイル ベースの承認: アクセス制御リスト (ACL) のサービス要求が承認されているかどうかを決定する際に、サービスの .svc ファイルに適用される WCF のセキュリティ モデルは許可されません。  
+    -   ファイル ベースの承認:WCF のセキュリティ モデルは、サービス要求が承認されているかどうかを決定する際に、サービスの .svc ファイルに適用されるアクセス制御リスト (ACL) にはできません。  
   
-    -   構成ベースの URL 承認: 同様に、WCF のセキュリティ モデルに準拠していないのは、System.Web の指定された、URL ベースの承認規則\<authorization > 構成要素。 サービスは、ASP で保護された URL 空間に存在する場合、WCF 要求のこれらの設定は無視されます。NET の URL 承認規則。  
+    -   構成ベースの URL 承認:同様に、WCF のセキュリティ モデルが System.Web ので指定された、URL ベースの承認規則に従っていない\<authorization > 構成要素。 サービスは、ASP で保護された URL 空間に存在する場合、WCF 要求のこれらの設定は無視されます。NET の URL 承認規則。  
   
-    -   HttpModule の拡張機能: WCF ホスティング インフラストラクチャは、WCF をインターセプト要求、<xref:System.Web.HttpApplication.PostAuthenticateRequest>イベントが発生し、処理は ASP.NET HTTP パイプラインに返されません。 パイプラインの後の段階で要求をインターセプトに設計されたモジュールは、WCF 要求を途中受信できません。  
+    -   HttpModule の拡張機能:WCF のホスティング インフラストラクチャは、WCF をインターセプト要求、<xref:System.Web.HttpApplication.PostAuthenticateRequest>イベントが発生し、処理は ASP.NET HTTP パイプラインに返されません。 パイプラインの後の段階で要求をインターセプトに設計されたモジュールは、WCF 要求を途中受信できません。  
   
-    -   ASP.NET の偽装: 既定では、WCF に対する要求は常に実行、IIS のプロセス id、System.Web を使用した偽装を有効にする ASP.NET が設定されている場合でも\<identity impersonate ="true"/> 構成オプション。  
+    -   ASP.NET impersonation:既定では、WCF に対する要求は常に実行、IIS のプロセス id、System.Web を使用した偽装を有効にする ASP.NET が設定されている場合でも\<identity impersonate ="true"/> 構成オプション。  
   
  これらの制限は、IIS アプリケーションでホストされる WCF サービスにのみ適用されます。 WCF の存在によっては、ASP.NET コンテンツの動作は影響はありません。  
   
@@ -56,15 +56,15 @@ ms.locfileid: "43401438"
   
  WCF ホスティング インフラストラクチャは、WCF メッセージを途中受信し、HTTP パイプラインにルーティングする、既定のサイド バイ サイド構成とは異なり ASP.NET 互換モードで実行されている WCF サービスは、ASP.NET の HTTP 要求のライフ サイクルに完全に参加します。 互換モードでの WCF サービスはにより HTTP パイプラインを使用して、<xref:System.Web.IHttpHandler>実装、ASPX ページや ASMX Web サービスの処理方法の要求に似ています。 結果として、WCF の動作と同じ ASMX に関して、次の ASP.NET 機能。  
   
--   <xref:System.Web.HttpContext>: ASP.NET 互換モードで実行されている WCF サービスがアクセスできる<xref:System.Web.HttpContext.Current%2A>および関連付けられた状態。  
+-   <xref:System.Web.HttpContext>:ASP.NET 互換モードで実行されている WCF サービスがアクセスできる<xref:System.Web.HttpContext.Current%2A>および関連付けられた状態。  
   
--   ファイル ベースの承認: ASP.NET 互換モードで実行されている WCF サービスは、サービスの .svc ファイルをファイル システム アクセス制御リスト (Acl) をアタッチすることによりセキュリティで保護できます。  
+-   ファイル ベースの承認:ASP.NET 互換モードで実行されている WCF サービスは、サービスの .svc ファイルをファイル システム アクセス制御リスト (Acl) をアタッチすることによりセキュリティで保護できます。  
   
--   URL 承認の設定: ASP します。NET の URL 承認規則は、WCF サービスが ASP.NET 互換モードで実行されている場合、WCF 要求に対して適用されます。  
+-   URL 承認の設定:ASP します。NET の URL 承認規則は、WCF サービスが ASP.NET 互換モードで実行されている場合、WCF 要求に対して適用されます。  
   
--   <xref:System.Web.HttpModuleCollection> 機能拡張: ASP.NET 互換モードで実行されているため、WCF サービスは ASP.NET の HTTP 要求のライフ サイクルの完全に参加、HTTP パイプラインで構成されている任意の HTTP モジュールは、サービスの呼び出しの前後に、WCF 要求で動作するようです。  
+-   <xref:System.Web.HttpModuleCollection> 拡張機能:ASP.NET 互換モードで実行されている WCF サービスが ASP.NET の HTTP 要求のライフ サイクルの完全に参加するため HTTP パイプラインで構成されている任意の HTTP モジュールがサービス呼び出しの前後に、WCF 要求で動作するようにします。  
   
--   ASP.NET の偽装: ASP.NET の現在の id を使用して実行する WCF サービスの権限借用スレッドで、アプリケーションの ASP.NET の偽装が有効になっている場合に IIS のプロセス id が異なる可能性があります。 ASP.NET の偽装と WCF の偽装の両方が特定のサービス操作の有効になっているが場合、サービスの実装は WCF から取得した id を使用して最終的に実行されます。  
+-   ASP.NET Impersonation:ASP.NET の現在の id を使用して実行する WCF サービスの権限借用スレッドで、アプリケーションの ASP.NET の偽装が有効になっている場合に IIS のプロセス id が異なる可能性があります。 ASP.NET の偽装と WCF の偽装の両方が特定のサービス操作の有効になっているが場合、サービスの実装は WCF から取得した id を使用して最終的に実行されます。  
   
  WCF の ASP.NET 互換モードは、次の構成 (アプリケーションの Web.config ファイルにあります) をアプリケーション レベルで有効です。  
   
@@ -100,6 +100,6 @@ ms.locfileid: "43401438"
   
  WCF サービスの ASP.NET 互換モードを有効にする方法の詳細については、次を参照してください。<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode>と[ASP.NET 互換性](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)サンプル。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

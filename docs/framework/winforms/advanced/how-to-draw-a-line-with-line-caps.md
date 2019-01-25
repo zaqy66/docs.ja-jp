@@ -1,5 +1,5 @@
 ---
-title: '方法 : ライン キャップを使用した直線を描画する'
+title: '方法: ライン キャップを持つ行を描画します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: be492f2317d4677776cc9f89f546c935d271019b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0d4d92d7201c4ac09eadd11d8f2e38a3c80c287
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713138"
 ---
-# <a name="how-to-draw-a-line-with-line-caps"></a>方法 : ライン キャップを使用した直線を描画する
-ライン キャップと呼ばれるいくつかの図形のいずれかでは、開始または行の末尾を描画できます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] いくつかの線端、ラウンド、正方形、ひし形の矢印などをサポートしています。  
+# <a name="how-to-draw-a-line-with-line-caps"></a>方法: ライン キャップを持つ行を描画します。
+ライン キャップと呼ばれるいくつかの図形のいずれかでは、先頭または末尾の行を描画できます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] round、正方形、ひし形、および矢印などのいくつかのライン キャップをサポートしています。  
   
 ## <a name="example"></a>例  
- ライン キャップ (start cap) の行、行 (end cap) の末尾または破線の破線 (dash cap) の開始を指定することができます。  
+ ライン キャップ (start cap) の行、行 (end cap) の末尾または破線 (ダッシュ cap) のダッシュの開始を指定することができます。  
   
- 次の例では、一方の端にある矢印ともう一方の端、ラウンド線端直線を描画します。 図は、結果として得られる行を示しています。  
+ 次の例では、線を一端にある矢印、もう一方の end ラウンド線端を描画します。 図は、その結果、行を示しています。  
   
  ![ペン](../../../../docs/framework/winforms/advanced/media/pens4.gif "pens4")  
   
@@ -32,10 +32,10 @@ ms.locfileid: "33523222"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   Windows フォームを作成し、処理、フォームの<xref:System.Windows.Forms.Control.Paint>イベント。 コード例を貼り付け、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラーを渡す`e`として<xref:System.Windows.Forms.PaintEventArgs>です。  
+-   Windows フォームを作成し、フォームの処理<xref:System.Windows.Forms.Control.Paint>イベント。 例のコードを<xref:System.Windows.Forms.Control.Paint>イベント ハンドラーを渡す`e`として<xref:System.Windows.Forms.PaintEventArgs>します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>  
- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [ペンを使用した直線と図形の描画](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
+- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [ペンを使用した直線と図形の描画](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

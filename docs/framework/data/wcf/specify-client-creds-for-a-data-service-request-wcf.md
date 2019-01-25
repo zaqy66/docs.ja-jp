@@ -1,5 +1,5 @@
 ---
-title: '方法: データ サービス要求のクライアント資格情報を指定する (WCF Data Services)'
+title: '方法: データ サービス クライアントの資格情報要求 (WCF Data Services) を指定します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: d0fbf01de05a02c03782af9e392a79b6dd3e8bee
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 786d4deaa1b2e4dfacab6c89c7d3d5e734bd3ffd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718131"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>方法: データ サービス要求のクライアント資格情報を指定する (WCF Data Services)
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>方法: データ サービス クライアントの資格情報要求 (WCF Data Services) を指定します。
 既定では、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] サービスに要求を送信する際、クライアント ライブラリから資格情報は提供されません。 ただし、<xref:System.Net.NetworkCredential> の <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> プロパティに <xref:System.Data.Services.Client.DataServiceContext> を設定することで、データ サービスへの要求を認証するために資格情報を送信するように指定できます。 詳細については、「 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)」を参照してください。 このトピックの例では、データ サービスのデータを要求する際に [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアントで使用する資格情報を明示的に提供する方法を示します。  
   
  このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスを作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。 使用することも、 [Northwind サンプル データ サービス](https://go.microsoft.com/fwlink/?LinkId=187426)で公開されている、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web サイト。 このサンプル データ サービスは読み取り専用と変更を保存しようとしてエラーが返されます。 サンプル データ サービスでは、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web サイトは、匿名認証を許可します。  
@@ -52,6 +52,6 @@ ms.locfileid: "43402522"
   
  詳細については、「 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [WCF Data Services のセキュリティ保護](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>関連項目
+- [WCF Data Services のセキュリティ保護](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

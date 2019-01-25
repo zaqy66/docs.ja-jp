@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2b590e7402bf29ffeb5bd14fc383edae41a04e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 057ee7a323a8a725ebf82ee9dbaea61a43c061ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674610"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate メソッド
 終了、`ICorDebug`オブジェクト。  
@@ -36,17 +36,17 @@ ms.locfileid: "33404000"
 HRESULT Terminate ();  
 ```  
   
-## <a name="remarks"></a>コメント  
- `Terminate` 呼び出す必要がある場合に、`ICorDebug`オブジェクトが不要です。  
+## <a name="remarks"></a>Remarks  
+ `Terminate` ときに呼び出す必要があります、`ICorDebug`オブジェクトが不要です。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

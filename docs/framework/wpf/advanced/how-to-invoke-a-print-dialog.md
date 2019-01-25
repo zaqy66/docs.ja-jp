@@ -1,5 +1,5 @@
 ---
-title: '方法 : 印刷ダイアログ ボックスを呼び出す'
+title: '方法: 印刷ダイアログ ボックスを呼び出す'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 271652fe9e98f9a381da5655bd313e12f8ee917d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 92a4cd6e29e37478981aad32286c181a412a6bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735832"
 ---
-# <a name="how-to-invoke-a-print-dialog"></a>方法 : 印刷ダイアログ ボックスを呼び出す
+# <a name="how-to-invoke-a-print-dialog"></a>方法: 印刷ダイアログ ボックスを呼び出す
 アプリケーションから印刷する機能を提供することが単に作成して開くと、<xref:System.Windows.Controls.PrintDialog>オブジェクト。  
   
 ## <a name="example"></a>例  
@@ -31,8 +31,8 @@ ms.locfileid: "45988310"
   
  使用する厳密に言えば、<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>ダイアログを開くことがなくメソッド。 その意味で、コントロールを非表示の印刷コンポーネントとして使用できます。 パフォーマンス上の理由から、いずれかを使用する方がよい場合がなりますが、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドまたはその、多数の<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>します。 詳細については、これは、次を参照してください。 [XPS ファイルをプログラムによって印刷](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)とします。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.PrintDialog>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.PrintDialog>
+- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

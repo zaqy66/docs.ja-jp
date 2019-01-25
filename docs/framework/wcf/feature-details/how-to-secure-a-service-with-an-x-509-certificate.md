@@ -1,18 +1,18 @@
 ---
-title: '方法 : X.509 証明書を使用してサービスをセキュリティで保護する'
+title: '方法: X.509 証明書でサービスをセキュリティで保護します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686492"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>方法 : X.509 証明書を使用してサービスをセキュリティで保護する
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>方法: X.509 証明書でサービスをセキュリティで保護します。
 X.509 証明書でサービスをセキュリティで保護するには、ほとんどのバインドでは、Windows Communication Foundation (WCF) を使用する基本的な手法です。 ここでは、X.509 証明書を使用して自己ホスト サービスを構成する手順を示します。  
   
  サーバーの認証に使用できる有効な証明書があることが前提条件になります。 この証明書は、信頼された証明機関によってサーバーに対して発行される必要があります。 証明書が無効な場合、サービスの使用を試みるすべてのクライアントがサービスを信頼しなくなるため、接続が作成されません。 証明書の使用に関する詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
@@ -82,5 +82,5 @@ X.509 証明書でサービスをセキュリティで保護するには、ほ�
   
 -   <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>関連項目  
- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>関連項目
+- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

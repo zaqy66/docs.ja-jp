@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692416"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>ビジュアル層でのヒット テスト
 ここでは、ビジュアル層で提供されるヒット テスト機能の概要について説明します。 ヒット テストのサポートでは、ジオメトリまたはポイント値の表示内容内かどうかを確認できます。、 <xref:System.Windows.Media.Visual>、複数のオブジェクトを選択する四角形を描くなどのユーザー インターフェイスの動作を実装することができます。  
@@ -24,13 +24,13 @@ ms.locfileid: "45988583"
 ## <a name="hit-testing-scenarios"></a>ヒット テストのシナリオ  
  <xref:System.Windows.UIElement>クラスには、<xref:System.Windows.UIElement.InputHitTest%2A>メソッドで、指定した座標値を使用して、要素に対してヒット テストすることができます。 多くの場合、<xref:System.Windows.UIElement.InputHitTest%2A>メソッドは、要素のテスト ヒットを実装するのに必要な機能を提供します。 ただし、ビジュアル層でのヒット テストを実装する必要があるシナリオもいくつか存在します。  
   
--   非に対するヒット テスト<xref:System.Windows.UIElement>オブジェクト: ヒット テスト以外を行う場合に適用されます<xref:System.Windows.UIElement>などのオブジェクト<xref:System.Windows.Media.DrawingVisual>やグラフィックス オブジェクト。  
+-   非に対するヒット テスト<xref:System.Windows.UIElement>オブジェクト。ヒット テスト以外を行う場合に適用されます<xref:System.Windows.UIElement>などのオブジェクト<xref:System.Windows.Media.DrawingVisual>やグラフィックス オブジェクト。  
   
--   ジオメトリを使用したヒット テスト: ポイントの座標値ではなくジオメトリ オブジェクトを使用してヒット テストを行う必要がある場合に適用されます。  
+-   ヒット テスト ジオメトリを使用します。これは、点の座標の値ではなく、ジオメトリ オブジェクトを使用してヒット テストする必要がある場合は適用されます。  
   
--   複数のオブジェクトに対するヒット テスト: 重なっているオブジェクトなどの複数のオブジェクトに対してヒット テストを行う必要がある場合に適用されます。 最初のビジュアルだけでなく、ジオメトリまたはポイントと交差するすべてのビジュアルの結果を取得できます。  
+-   複数のオブジェクトに対してテストをヒットするには。これは、重なっているオブジェクトなど、複数のオブジェクトに対してヒット テストする必要があるときに適用されます。 最初のビジュアルだけでなく、ジオメトリまたはポイントと交差するすべてのビジュアルの結果を取得できます。  
   
--   無視<xref:System.Windows.UIElement>ヒット テスト ポリシー: これは、無視する必要がある場合は適用されます、<xref:System.Windows.UIElement>ヒット テスト ポリシーで、要素が無効になっているかどうか、または非表示としてこのような要因を考慮します。  
+-   無視<xref:System.Windows.UIElement>ヒット テスト ポリシー。これは、無視する必要がある場合は適用されます、<xref:System.Windows.UIElement>ヒット テスト ポリシーで、要素が無効になっているかどうか、または非表示としてこのような要因を考慮します。  
   
 > [!NOTE]
 >  ビジュアル層でのテスト ヒットを示すコード サンプル全体については、「[DrawingVisuals を使用したヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159994)」と「[Win32 相互運用によるヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159995)」を参照してください。  
@@ -138,13 +138,13 @@ ms.locfileid: "45988583"
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [DrawingVisuals のサンプルを使用してヒット テスト](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [Win32 の相互運用サンプルによるヒット テスト](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [ビジュアル内のジオメトリのヒット テストを実行する](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Win32 ホスト コンテナーを使用してヒット テストを実行する](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [DrawingVisuals のサンプルを使用してヒット テスト](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [Win32 の相互運用サンプルによるヒット テスト](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [ビジュアル内のジオメトリのヒット テストを実行する](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [Win32 ホスト コンテナーを使用してヒット テストを実行する](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

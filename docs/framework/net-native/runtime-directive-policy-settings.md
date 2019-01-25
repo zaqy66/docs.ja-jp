@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642569"
 ---
 # <a name="runtime-directive-policy-settings"></a>ランタイム ディレクティブ ポリシーの設定
 > [!NOTE]
@@ -127,6 +127,6 @@ ms.locfileid: "46000989"
 |`Required PublicAndInternal`|パブリックおよび内部の型またはメンバーのポリシーを有効にして、パブリックおよび内部の型とメンバーのメタデータが常に使用可能であるようにします。 この設定は、ツール チェーンが必要であると判断した場合にのみ、パブリックおよび内部の型とメンバーのメタデータを使用可能にする `PublicAndInternal` とは異なります。|✓||  
 |`Required All`|使用されているかどうかに関係なく、すべての型とメンバーを保持し、そのポリシーを有効にするために、ツール チェーンを要求します。|✓||  
   
-## <a name="see-also"></a>関連項目  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>関連項目
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)

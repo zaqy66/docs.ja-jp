@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664084"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンス
 Microsoft SQL Server Express Edition (SQL Server Express) でサポートされる機能に、ユーザー インスタンスがあります。ユーザー インスタンスは、.NET Framework Data Provider for SQL Server (`SqlClient`) を使用している場合にしか利用できません。 ユーザー インスタンスは、親インスタンスによって生成される SQL Server Express データベース エンジンの独立したインスタンスです。 ユーザー インスタンスを使用すると、ローカル コンピューターの管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続できます。 それぞれのインスタンスは、1 ユーザーあたり 1 インスタンスの原則に基づいて、個々のユーザーのセキュリティ コンテキストで実行されます。  
@@ -150,8 +150,8 @@ private static void OpenSqlConnection()
   
 -   Windows 認証を使用した ASP.NET 専用ホスティング。 イントラネット上で、単一の SQL Server Express インスタンスをホストできます。 アプリケーションは、権限の借用ではなく、ASPNET Windows アカウントを使ってこのインスタンスに接続することになります。 サードパーティ製品を使ったホスティングや共有ホスティングのシナリオでユーザー インスタンスを使用することは避けてください。すべてのアプリケーションで同じユーザー インスタンスが使用され、アプリケーションを互いに分離することができなくなります。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [データ ソースへの接続](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [データ ソースへの接続](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

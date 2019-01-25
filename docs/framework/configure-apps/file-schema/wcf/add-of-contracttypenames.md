@@ -2,18 +2,18 @@
 title: '&lt;contractTypeNames&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 79972eaea6918b3fe923c963b6a219fd8f972516
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cf9a1ae28b53b841ac5d8d85d31e1548e36369ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735728"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt; の &lt;add&gt;
 検索対象サービスのコントラクト名と、サービスを検索するときに一般的に使用される条件を指定する構成要素。 複数のコントラクト名が指定されると、すべてのコントラクトに一致するサービス エンドポイントのみが適用されます。 Windows Communication Foundation (WCF) エンドポイントがのみサポートしている 1 つのコントラクトに注意してください。  
   
  \<system.ServiceModel >  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,9 +58,9 @@ ms.locfileid: "54145615"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|コントラクトの型名のコレクション。|  
+|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|コントラクトの型名のコレクション。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.FindCriteria>  
- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>  
- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Discovery.FindCriteria>
+- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>

@@ -2,12 +2,12 @@
 title: メッセージ配布の制限
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686765"
 ---
 # <a name="limiting-message-distribution"></a>メッセージ配布の制限
 ピア チャネルは仕様上はブロードキャスト メッシュです。 その基本的な大量転送モデルでは、メッシュの任意のメンバーが送信した各メッセージをそのメッシュの他のメンバー全員に配布します。 これは、1 人のメンバーが生成した各メッセージが他のメンバー全員に関係していて、役立つものであるような状況 (チャット ルームなど) に最適です。 ただし、多くのアプリケーションではメッセージの配布を制限する必要が生じることがあります。 たとえば、新しいメンバーがメッシュに参加し、メッシュを経由して送信された最新のメッセージを取得しようとする場合、この要求をメッシュのメンバー全員に転送する必要はありません。 要求は近くの近隣ノードに制限できます。また、ローカルで生成されたメッセージをフィルターで除外することもできます。メッセージはメッシュの個別のノードに送信することもできます。 このトピックでは、ホップ数、メッセージ伝達フィルター、ローカル フィルター、または直接接続を使用し、メッシュを経由してメッセージを転送する方法について説明し、1 つの方法を選択するための一般的なガイドラインを示します。  
@@ -46,23 +46,23 @@ ms.locfileid: "43738647"
   
 -   **誰が**  
   
-    -   *個々 のノード*: ローカル フィルターまたは直接接続します。  
+    -   *個々 のノード*:ローカル フィルターまたは直接接続します。  
   
-    -   *特定の近傍内の近隣ノード*: PeerHopCount します。  
+    -   *特定の近傍内の近隣ノード*:PeerHopCount します。  
   
-    -   *メッシュの複雑なサブセット*: MessagePropagationFilter します。  
+    -   *メッシュの複雑なサブセット*:MessagePropagationFilter します。  
   
 -   **どのくらいの頻度**  
   
-    -   *頻度の高い*: 直接接続、PeerHopCount、MessagePropagationFilter します。  
+    -   *頻度の高い*:直接接続 PeerHopCount、MessagePropagationFilter をします。  
   
-    -   *時折*: ローカル フィルター。  
+    -   *時折*:ローカル フィルター。  
   
 -   **帯域幅の使用**  
   
-    -   *高*: 直接接続、小さい MessagePropagationFilter またはローカル フィルターを使用することをお勧めします。  
+    -   *高*:直接接続、小さい MessagePropagationFilter またはローカル フィルターを使用することをお勧めします。  
   
-    -   *低*: 通常は不要、直接接続します。  
+    -   *低*:直接接続は、通常は不要です。  
   
-## <a name="see-also"></a>関連項目  
- [ピア チャネル アプリケーションの構築](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>関連項目
+- [ピア チャネル アプリケーションの構築](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
