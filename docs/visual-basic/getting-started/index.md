@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a7e6c084c84fec1af05a38664bcfbcabc99061ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534343"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入門
 このセクションでは、Visual Basic によるアプリケーション開発を開始するための情報を提供します。  
@@ -33,31 +33,22 @@ Visual Basic .NET の各バージョンの新機能を一覧表示します。
 一般的な問題を解決するのに役立つ Web サイトおよびニュースグループの一覧を示します。  
 
 ## <a name="see-also"></a>関連項目
- [Visual Basic の取得](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
- Visual Basic のサポートを含む Visual Studio のバージョン (無料版など) のダウンロード リンクを提供します。  
+- [Visual Basic の取得](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs): Visual Basic のサポートを含む Visual Studio のバージョン (無料版など) のダウンロード リンクを提供します。  
 
- [超初心者向けの Visual Basic の基本](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
- Visual Basic プログラミングの基礎について説明する Microsoft Virtual Academy コース。
+- [Visual Basic の基礎: 入門者向け](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) Visual Basic プログラミングの基礎について説明する Microsoft Virtual Academy コースです。
 
- [オブジェクト指向プログラミング](../programming-guide/concepts/object-oriented-programming.md)  
- オブジェクト指向プログラミングの概要、独自のオブジェクトの作成方法、およびオブジェクトを使用してコーディングを簡潔にする方法を説明するページへのリンクを示します。  
-  
- [サンプル](../../visual-basic/sample-applications.md)  
- Visual Basic によるサンプル コードへのリンクを示します。  
-  
- [チュートリアル](../../visual-basic/walkthroughs.md)  
- Visual Basic 言語のさまざまな面を説明するヘルプ ページの一覧を示します。  
-  
- [ご意見](/visualstudio/ide/talk-to-us)  
- サポートの利用方法、およびフィードバックの送付方法について説明します。  
-  
- [Visual Studio](/visualstudio/)  
- Visual Studio のドキュメントへのリンクを示します。  
-  
- [C#](../../csharp/index.md) Visual C# を使用したアプリケーション開発についてのドキュメントへのリンクを示します。  
-  
- [Visual C++](/cpp/)  
- Visual C++ のドキュメントへのリンクを示します。  
-  
- [Office および SharePoint 開発](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)  
- Microsoft Office と Visual Studio をビジネス アプリケーションの一部として使用する方法について説明します。
+- [オブジェクト指向プログラミング](../programming-guide/concepts/object-oriented-programming.md): オブジェクト指向プログラミングの概要、独自のオブジェクトの作成方法、およびオブジェクトを使用してコーディングを簡潔にする方法を説明するページへのリンクを示します。  
+
+- [サンプル](../../visual-basic/sample-applications.md): Visual Basic によるサンプル コードへのリンクを示します。  
+
+- [チュートリアル](../../visual-basic/walkthroughs.md): Visual Basic 言語のさまざまな面を説明するヘルプ ページの一覧を示します。  
+
+- [ご意見](/visualstudio/ide/talk-to-us): サポートの利用方法、およびフィードバックの送付方法について説明します。  
+
+- [Visual Studio](/visualstudio/): Visual Studio のドキュメントへのリンクを示します。  
+
+- [C#](../../csharp/index.md) Visual C# を使用したアプリケーション開発についてのドキュメントへのリンクを示します。  
+
+- [Visual C++](/cpp/): Visual C++ のドキュメントへのリンクを示します。  
+
+- [Office および SharePoint 開発](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio): Microsoft Office と Visual Studio をビジネス アプリケーションの一部として使用する方法について説明します。

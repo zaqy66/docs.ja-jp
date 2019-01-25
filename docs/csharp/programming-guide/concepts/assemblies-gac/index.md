@@ -2,17 +2,17 @@
 title: アセンブリとグローバル アセンブリ キャッシュ (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25ae3a25b825a0594d7cc9479c58e967375e61b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577047"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>アセンブリとグローバル アセンブリ キャッシュ (C#)
 アセンブリは、.NET ベースのアプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、実行可能 (.exe) ファイルまたはダイナミック リンク ライブラリ (.dll) ファイルの形を取る、.NET Framework の構成要素です。 それらは、型の実装に関して必要な情報を共通言語ランタイムに提供します。 アセンブリは、機能的な論理的な単位を形成し、連携して動作するように構築された、型とリソースのコレクションと考えることができます。  
   
- アセンブリには、1 つまたは複数のモジュールを含めることができます。 たとえば、大規模なプロジェクトを、複数の開発者が別々のモジュールで作業し、すべてのモジュールをまとめて 1 つのアセンブリを作成するように計画することができます。 モジュールの詳細については、「[方法: マルチファイル アセンブリをビルドする](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)」を参照してください。  
+ アセンブリには、1 つまたは複数のモジュールを含めることができます。 たとえば、大規模なプロジェクトを、複数の開発者が別々のモジュールで作業し、すべてのモジュールをまとめて 1 つのアセンブリを作成するように計画することができます。 モジュールの詳細については、「[方法: マルチファイル アセンブリをビルドする](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)」をご覧ください。  
   
  アセンブリには、次の特徴があります。  
   
@@ -50,14 +50,14 @@ ms.locfileid: "44042297"
 > [!NOTE]
 >  Visual Studio でアセンブリをビルドするには、**[ビルド]** メニューの **[ビルド]** を選択します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
-- [共通言語ランタイムのアセンブリ](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [フレンド アセンブリ (C#)](friend-assemblies.md)  
-- [方法 : アセンブリを他のアプリケーションと共有する (C#)](how-to-share-an-assembly-with-other-applications.md)  
-- [方法: アセンブリを読み込み、アンロードする (C#)](how-to-load-and-unload-assemblies.md)  
-- [方法: ファイルがアセンブリであるかどうかを確認する (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
-- [方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [共通言語ランタイムのアセンブリ](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [フレンド アセンブリ (C#)](friend-assemblies.md)
+- [方法: アセンブリを他のアプリケーションと共有する (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [方法: アセンブリを読み込み、アンロードする (C#)](how-to-load-and-unload-assemblies.md)
+- [方法: ファイルがアセンブリであるかどうかを確認する (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

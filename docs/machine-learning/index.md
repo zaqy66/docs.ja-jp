@@ -1,14 +1,14 @@
 ---
 title: ML.NET コンテンツ ガイド
 description: ML.NET を使用してカスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明します。
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550462"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET コンテンツ ガイド
 
@@ -28,6 +28,8 @@ ML.NET について学習するには、[ML.NET とは何か](what-is-mldotnet.m
 ## <a name="tutorials"></a>チュートリアル
 
 [バイナリ分類モデルを使ったセンチメント分析](tutorials/sentiment-analysis.md)に関するページでは、センチメントが正であるか負であるかを判断するアプリの構築方法を示します。
+
+[多クラス分類モデルを使った GitHub の問題の分類](tutorials/github-issue-classification.md)に関するページでは、GitHub の問題に対する区分のラベルを判断するアプリを構築する方法を示します。
 
 [回帰モデルを使ったタクシー運賃の予測](tutorials/taxi-fare.md)に関するページでは、履歴データの多数の要因を使って回答を決定する、予測的なアプリの構築方法を示します。
 

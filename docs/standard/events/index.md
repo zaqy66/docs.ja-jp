@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679933"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 .NET Framework でのイベントは、デリゲート モデルに基づいています。 デリゲート モデルはオブザーバー デザイン パターンに従って、サブスクライバーがプロバイダーに登録して通知を受信できるようにします。 イベントの送信元がイベント発生の通知をプッシュしたら、イベント レシーバーはその通知を受信して、通知に対する応答を定義します。 ここでは、デリゲート モデルの主要コンポーネント、アプリケーションでイベントを利用する方法、およびコードでイベントを実装する方法について説明します。  
@@ -76,23 +76,23 @@ ms.locfileid: "53127928"
 ## <a name="raising-multiple-events"></a>複数のイベントの発生  
  クラスで複数のイベントを発生させる場合、コンパイラでは、イベント デリゲートのインスタンスごとに 1 つのフィールドが生成されます。 イベントの数が多い場合は、デリゲート 1 つあたり 1 フィールドというストレージ コストが許容されない可能性があります。 このような状況に備えて、.NET Framework には、イベント デリゲートを格納するために任意に選択した別のデータ構造と一緒に使用できる、イベント プロパティが用意されています。  
   
- イベント プロパティは、イベント アクセサーを伴うイベント宣言によって構成されます。 イベント アクセサーは、ストレージ データ構造におけるイベント デリゲート インスタンスの追加または削除を定義するメソッドです。 イベント プロパティを使用すると、イベント プロパティは各イベント デリゲートを呼び出す前に取得する必要があるので、イベント フィールドよりも低速です。 つまり、メモリを取るか、速度を取るかの比較検討になります。 クラスで、発生頻度の低いイベントを数多く定義する場合は、イベント プロパティを実装することをお勧めします。 詳細については、「[方法 : イベント プロパティを使用して複数のイベントを処理する](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)」を参照してください。  
+ イベント プロパティは、イベント アクセサーを伴うイベント宣言によって構成されます。 イベント アクセサーは、ストレージ データ構造におけるイベント デリゲート インスタンスの追加または削除を定義するメソッドです。 イベント プロパティを使用すると、イベント プロパティは各イベント デリゲートを呼び出す前に取得する必要があるので、イベント フィールドよりも低速です。 つまり、メモリを取るか、速度を取るかの比較検討になります。 クラスで、発生頻度の低いイベントを数多く定義する場合は、イベント プロパティを実装することをお勧めします。 詳細については、「[方法 :イベント プロパティを使用して複数のイベントを処理する](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)」をご覧ください。  
   
 ## <a name="related-topics"></a>関連トピック  
   
 |Title|説明|  
 |-----------|-----------------|  
-|[方法 : イベントを発生させる/処理する](../../../docs/standard/events/how-to-raise-and-consume-events.md)|イベントの発生例と実装例が含まれます。|  
-|[方法 : イベント プロパティを使用して複数のイベントを処理する](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|イベント プロパティを使用して複数のイベントを処理する方法を示します。|  
+|[方法: イベントを発生させる/処理する](../../../docs/standard/events/how-to-raise-and-consume-events.md)|イベントの発生例と実装例が含まれます。|  
+|[方法: イベント プロパティを使用して複数のイベントを処理する](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|イベント プロパティを使用して複数のイベントを処理する方法を示します。|  
 |[オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)|サブスクライバーがプロバイダーに登録して、通知を受信できるようにするデザイン パターンについて説明します。|  
-|[方法 : Web フォーム アプリケーションでイベントを利用する](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web フォーム コントロールによって発生したイベントを処理する方法を示します。|  
+|[方法: Web フォーム アプリケーションでイベントを利用する](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web フォーム コントロールによって発生したイベントを処理する方法を示します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [イベントとルーティング イベントの概要 (UWP アプリ)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [イベント (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [イベントとルーティング イベントの概要 (UWP アプリ)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [イベント (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [イベント (C# プログラミング ガイド)](../../csharp/programming-guide/events/index.md)

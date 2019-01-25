@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: cf684d2ec7ae7282b1ab68817357773f0f96c9ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1b1a3d2e61507a497349deeb857e4333356f66a5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245653"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857802"
 ---
 # <a name="arrays-c-programming-guide"></a>配列 (C# プログラミング ガイド)
 
@@ -21,7 +21,7 @@ ms.locfileid: "53245653"
   
  次の例では、1 次元配列、多次元配列、およびジャグ配列を作成しています。  
   
- [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideArrays#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#1)]  
   
 ## <a name="array-overview"></a>配列の概要
 
@@ -53,7 +53,7 @@ ms.locfileid: "53245653"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [コレクション](../../../csharp/programming-guide/concepts/collections.md)
