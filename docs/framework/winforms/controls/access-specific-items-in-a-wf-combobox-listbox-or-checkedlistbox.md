@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールの特定の項目にアクセスする'
+title: '方法: 特定のアクセス フォーム ComboBox、ListBox、または CheckedListBox コントロールの項目を Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 731527f2d6adb206fa4d8bc4bc2e488c61b86200
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6478c24550f9f32ea75899521f7aa610ef12955
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656701"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="a833f-102">方法 : Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールの特定の項目にアクセスする</span><span class="sxs-lookup"><span data-stu-id="a833f-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="a833f-103">Windows フォームのコンボ ボックス、リスト ボックスで、またはチェックされたリスト ボックス内の特定のアイテムへのアクセスは、重要なタスクです。</span><span class="sxs-lookup"><span data-stu-id="a833f-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="a833f-104">所定の位置に、一覧にあるプログラムで確認することができます。</span><span class="sxs-lookup"><span data-stu-id="a833f-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="80bc2-102">方法: 特定のアクセス フォーム ComboBox、ListBox、または CheckedListBox コントロールの項目を Windows</span><span class="sxs-lookup"><span data-stu-id="80bc2-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="80bc2-103">Windows フォームのコンボ ボックス、リスト ボックスで、またはチェックされたリスト ボックス内の特定の項目へのアクセスは、重要なタスクです。</span><span class="sxs-lookup"><span data-stu-id="80bc2-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="80bc2-104">一覧は、所定の位置にある項目をプログラムで判定できます。</span><span class="sxs-lookup"><span data-stu-id="80bc2-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="a833f-105">特定の項目にアクセスするには</span><span class="sxs-lookup"><span data-stu-id="a833f-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="80bc2-105">特定のアイテムにアクセスするには</span><span class="sxs-lookup"><span data-stu-id="80bc2-105">To access a specific item</span></span>  
   
-1.  <span data-ttu-id="a833f-106">クエリ、`Items`の特定の項目のインデックスを使用してコレクション。</span><span class="sxs-lookup"><span data-stu-id="a833f-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1.  <span data-ttu-id="80bc2-106">クエリ、`Items`特定の項目のインデックスを使用してコレクション。</span><span class="sxs-lookup"><span data-stu-id="80bc2-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,8 +51,8 @@ ms.locfileid: "33523570"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a833f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="a833f-107">See Also</span></span>  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [<span data-ttu-id="a833f-108">オプションのリストを表示するための Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="a833f-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a><span data-ttu-id="80bc2-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="80bc2-107">See also</span></span>
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [<span data-ttu-id="80bc2-108">オプションのリストを表示するための Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="80bc2-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
