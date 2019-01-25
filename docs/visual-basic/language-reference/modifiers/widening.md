@@ -10,34 +10,34 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 2323aa38c81ce4e027f256d0e29c069f7ec77c00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b9d1ec15c6c2000fb0842abe25848f853cdf986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703710"
 ---
-# <a name="widening-visual-basic"></a><span data-ttu-id="9158f-102">Widening (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9158f-102">Widening (Visual Basic)</span></span>
-<span data-ttu-id="9158f-103">示します変換演算子 (`CType`) クラスまたは構造体を元のクラスまたは構造体のすべての可能な値を保持できる型に変換します。</span><span class="sxs-lookup"><span data-stu-id="9158f-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.</span></span>  
+# <a name="widening-visual-basic"></a><span data-ttu-id="412e5-102">Widening (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="412e5-102">Widening (Visual Basic)</span></span>
+<span data-ttu-id="412e5-103">示します変換演算子 (`CType`) クラスまたは構造体を元のクラスまたは構造体のすべての値を保持できる型に変換します。</span><span class="sxs-lookup"><span data-stu-id="412e5-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.</span></span>  
   
-## <a name="converting-with-the-widening-keyword"></a><span data-ttu-id="9158f-104">拡大のキーワードを使用して変換します。</span><span class="sxs-lookup"><span data-stu-id="9158f-104">Converting with the Widening Keyword</span></span>  
- <span data-ttu-id="9158f-105">変換のプロシージャを指定する必要があります`Public Shared`に加えて`Widening`です。</span><span class="sxs-lookup"><span data-stu-id="9158f-105">The conversion procedure must specify `Public Shared` in addition to `Widening`.</span></span>  
+## <a name="converting-with-the-widening-keyword"></a><span data-ttu-id="412e5-104">拡大のキーワードを使用して変換します。</span><span class="sxs-lookup"><span data-stu-id="412e5-104">Converting with the Widening Keyword</span></span>  
+ <span data-ttu-id="412e5-105">変換の手順を指定する必要があります`Public Shared`に加えて`Widening`します。</span><span class="sxs-lookup"><span data-stu-id="412e5-105">The conversion procedure must specify `Public Shared` in addition to `Widening`.</span></span>  
   
- <span data-ttu-id="9158f-106">拡大変換は実行時に常に成功して、データの損失が発生することはありません。</span><span class="sxs-lookup"><span data-stu-id="9158f-106">Widening conversions always succeed at run time and never incur data loss.</span></span> <span data-ttu-id="9158f-107">例としては、`Single`に`Double`、`Char`に`String`、およびその基本型を派生型です。</span><span class="sxs-lookup"><span data-stu-id="9158f-107">Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type.</span></span> <span data-ttu-id="9158f-108">この最後の変換は、派生型は、基本型のすべてのメンバーが含まれており、したがって、基本データ型のインスタンスに拡大変換がします。</span><span class="sxs-lookup"><span data-stu-id="9158f-108">This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.</span></span>  
+ <span data-ttu-id="412e5-106">拡大変換では、実行時に常に成功して、データの損失が発生することはありません。</span><span class="sxs-lookup"><span data-stu-id="412e5-106">Widening conversions always succeed at run time and never incur data loss.</span></span> <span data-ttu-id="412e5-107">例としては、`Single`に`Double`、`Char`に`String`、およびその基本型に派生型。</span><span class="sxs-lookup"><span data-stu-id="412e5-107">Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type.</span></span> <span data-ttu-id="412e5-108">派生型が基本型のすべてのメンバーを含まれており、基本データ型のインスタンスであるため、この最後の変換が拡大します。</span><span class="sxs-lookup"><span data-stu-id="412e5-108">This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.</span></span>  
   
- <span data-ttu-id="9158f-109">コンシューマー コードが使用する必要はありません`CType`拡大変換、たとえ`Option Strict`は`On`します。</span><span class="sxs-lookup"><span data-stu-id="9158f-109">The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.</span></span>  
+ <span data-ttu-id="412e5-109">使用側コードが使用する必要はありません`CType`拡大変換では、たとえ`Option Strict`は`On`。</span><span class="sxs-lookup"><span data-stu-id="412e5-109">The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.</span></span>  
   
- <span data-ttu-id="9158f-110">`Widening`キーワードは、このコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="9158f-110">The `Widening` keyword can be used in this context:</span></span>  
+ <span data-ttu-id="412e5-110">`Widening`キーワードは、このコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="412e5-110">The `Widening` keyword can be used in this context:</span></span>  
   
- [<span data-ttu-id="9158f-111">Operator ステートメント</span><span class="sxs-lookup"><span data-stu-id="9158f-111">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="412e5-111">Operator ステートメント</span><span class="sxs-lookup"><span data-stu-id="412e5-111">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- <span data-ttu-id="9158f-112">たとえば拡大変換と縮小変換演算子の定義を参照してください[する方法: 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)です。</span><span class="sxs-lookup"><span data-stu-id="9158f-112">For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span></span>  
+ <span data-ttu-id="412e5-112">たとえばの拡大と縮小変換の演算子の定義を参照してください[方法。変換演算子を定義](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。</span><span class="sxs-lookup"><span data-stu-id="412e5-112">For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9158f-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="9158f-113">See Also</span></span>  
- [<span data-ttu-id="9158f-114">Operator ステートメント</span><span class="sxs-lookup"><span data-stu-id="9158f-114">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [<span data-ttu-id="9158f-115">Narrowing</span><span class="sxs-lookup"><span data-stu-id="9158f-115">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [<span data-ttu-id="9158f-116">拡大変換と縮小変換</span><span class="sxs-lookup"><span data-stu-id="9158f-116">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [<span data-ttu-id="9158f-117">方法 : 演算子を定義する</span><span class="sxs-lookup"><span data-stu-id="9158f-117">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [<span data-ttu-id="9158f-118">CType 関数</span><span class="sxs-lookup"><span data-stu-id="9158f-118">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)  
- [<span data-ttu-id="9158f-119">Option Strict ステートメント</span><span class="sxs-lookup"><span data-stu-id="9158f-119">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [<span data-ttu-id="9158f-120">方法 : 変換演算子を定義する</span><span class="sxs-lookup"><span data-stu-id="9158f-120">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a><span data-ttu-id="412e5-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="412e5-113">See also</span></span>
+- [<span data-ttu-id="412e5-114">Operator ステートメント</span><span class="sxs-lookup"><span data-stu-id="412e5-114">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [<span data-ttu-id="412e5-115">Narrowing</span><span class="sxs-lookup"><span data-stu-id="412e5-115">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [<span data-ttu-id="412e5-116">拡大変換と縮小変換</span><span class="sxs-lookup"><span data-stu-id="412e5-116">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="412e5-117">方法: 演算子を定義します。</span><span class="sxs-lookup"><span data-stu-id="412e5-117">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [<span data-ttu-id="412e5-118">CType 関数</span><span class="sxs-lookup"><span data-stu-id="412e5-118">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [<span data-ttu-id="412e5-119">Option Strict ステートメント</span><span class="sxs-lookup"><span data-stu-id="412e5-119">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="412e5-120">方法: 変換演算子を定義します。</span><span class="sxs-lookup"><span data-stu-id="412e5-120">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

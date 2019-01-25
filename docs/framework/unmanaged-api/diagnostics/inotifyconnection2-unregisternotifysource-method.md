@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4b4f90f918c872f3227ac22f4cccadcbf3194a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e5380ed63a362b73b0684ef07b638117751ca80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712013"
 ---
-# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="a1d82-102">INotifyConnection2::UnregisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="a1d82-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
-<span data-ttu-id="a1d82-103">接続から、指定された通知のソース オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="a1d82-103">Removes a specified notification source object from the connection.</span></span>  
+# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="c2bfb-102">INotifyConnection2::UnregisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="c2bfb-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
+<span data-ttu-id="c2bfb-103">接続から、指定された通知のソース オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="c2bfb-103">Removes a specified notification source object from the connection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1d82-104">構文</span><span class="sxs-lookup"><span data-stu-id="a1d82-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2bfb-104">構文</span><span class="sxs-lookup"><span data-stu-id="c2bfb-104">Syntax</span></span>  
   
 ```  
 HRESULT UnregisterNotifySource  
@@ -36,18 +36,18 @@ HRESULT UnregisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a1d82-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a1d82-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c2bfb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c2bfb-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="a1d82-106">[in]登録解除する通知オブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="a1d82-106">[in] Notification object to be unregistered.</span></span>  
+ <span data-ttu-id="c2bfb-106">[in]通知登録を解除するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="c2bfb-106">[in] Notification object to be unregistered.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a1d82-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a1d82-107">Return Value</span></span>  
- <span data-ttu-id="a1d82-108">メソッドが成功した場合は S_OK です。</span><span class="sxs-lookup"><span data-stu-id="a1d82-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c2bfb-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="c2bfb-107">Return Value</span></span>  
+ <span data-ttu-id="c2bfb-108">メソッドが成功した場合は s_ok を返します。</span><span class="sxs-lookup"><span data-stu-id="c2bfb-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a1d82-109">要件</span><span class="sxs-lookup"><span data-stu-id="a1d82-109">Requirements</span></span>  
- <span data-ttu-id="a1d82-110">**ヘッダー:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="a1d82-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c2bfb-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="c2bfb-109">Requirements</span></span>  
+ <span data-ttu-id="c2bfb-110">**ヘッダー:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="c2bfb-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1d82-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="a1d82-111">See Also</span></span>  
- [<span data-ttu-id="a1d82-112">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a1d82-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [<span data-ttu-id="a1d82-113">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a1d82-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [<span data-ttu-id="a1d82-114">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a1d82-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [<span data-ttu-id="a1d82-115">RegisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="a1d82-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+## <a name="see-also"></a><span data-ttu-id="c2bfb-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c2bfb-111">See also</span></span>
+- [<span data-ttu-id="c2bfb-112">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c2bfb-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="c2bfb-113">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c2bfb-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="c2bfb-114">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c2bfb-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="c2bfb-115">RegisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="c2bfb-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

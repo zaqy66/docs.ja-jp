@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53a47cf67edb36b06c92be83cb23c2e1dd1e75cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a2bba44af50607772f2a52203a47e21d8699f78b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716153"
 ---
-# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="a31b4-102">ISymUnmanagedMethod::GetNamespace メソッド</span><span class="sxs-lookup"><span data-stu-id="a31b4-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
-<span data-ttu-id="a31b4-103">このメソッドが定義されている外側の名前空間を取得します。</span><span class="sxs-lookup"><span data-stu-id="a31b4-103">Gets the namespace within which this method is defined.</span></span>  
+# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="26abc-102">ISymUnmanagedMethod::GetNamespace メソッド</span><span class="sxs-lookup"><span data-stu-id="26abc-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
+<span data-ttu-id="26abc-103">このメソッドを定義する名前空間を取得します。</span><span class="sxs-lookup"><span data-stu-id="26abc-103">Gets the namespace within which this method is defined.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a31b4-104">構文</span><span class="sxs-lookup"><span data-stu-id="a31b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="26abc-104">構文</span><span class="sxs-lookup"><span data-stu-id="26abc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespace(  
    [out] ISymUnmanagedNamespace  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a31b4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a31b4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="26abc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="26abc-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="a31b4-106">[out]設定されているポインターに返された[ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="a31b4-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
+ <span data-ttu-id="26abc-106">[out]設定されているポインターに返された[ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="26abc-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a31b4-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a31b4-107">Return Value</span></span>  
- <span data-ttu-id="a31b4-108">メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="a31b4-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="26abc-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="26abc-107">Return Value</span></span>  
+ <span data-ttu-id="26abc-108">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="26abc-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a31b4-109">要件</span><span class="sxs-lookup"><span data-stu-id="a31b4-109">Requirements</span></span>  
- <span data-ttu-id="a31b4-110">**ヘッダー:** CorSym.idl、CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a31b4-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="26abc-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="26abc-109">Requirements</span></span>  
+ <span data-ttu-id="26abc-110">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="26abc-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a31b4-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="a31b4-111">See Also</span></span>  
- [<span data-ttu-id="a31b4-112">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a31b4-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="26abc-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="26abc-111">See also</span></span>
+- [<span data-ttu-id="26abc-112">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="26abc-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

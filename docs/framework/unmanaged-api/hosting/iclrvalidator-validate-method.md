@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2ad9ef473a498804e5b3ac0469b5b68697c49f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ccd6dbe63f02fa7e28c6aec1be815f1f1967a90a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718729"
 ---
-# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="72e20-102">ICLRValidator::Validate メソッド</span><span class="sxs-lookup"><span data-stu-id="72e20-102">ICLRValidator::Validate Method</span></span>
-<span data-ttu-id="72e20-103">ポータブル実行可能 (PE) または Microsoft intermediate language (MSIL) で指定されたファイルを検証します。</span><span class="sxs-lookup"><span data-stu-id="72e20-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
+# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="3f76c-102">ICLRValidator::Validate メソッド</span><span class="sxs-lookup"><span data-stu-id="3f76c-102">ICLRValidator::Validate Method</span></span>
+<span data-ttu-id="3f76c-103">ポータブル実行可能 (PE) または Microsoft intermediate language (MSIL) で指定されたファイルを検証します。</span><span class="sxs-lookup"><span data-stu-id="3f76c-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72e20-104">構文</span><span class="sxs-lookup"><span data-stu-id="72e20-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f76c-104">構文</span><span class="sxs-lookup"><span data-stu-id="3f76c-104">Syntax</span></span>  
   
 ```  
 HRESULT Validate (  
@@ -42,50 +42,50 @@ HRESULT Validate (
 );      
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="72e20-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="72e20-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3f76c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3f76c-105">Parameters</span></span>  
  `veh`  
- <span data-ttu-id="72e20-106">[in]ポインター、`IVEHandler`妥当性確認エラーを処理するインスタンス。</span><span class="sxs-lookup"><span data-stu-id="72e20-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
+ <span data-ttu-id="3f76c-106">[in]ポインター、`IVEHandler`検証エラーを処理するインスタンス。</span><span class="sxs-lookup"><span data-stu-id="3f76c-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
   
  `ulAppDomainId`  
- <span data-ttu-id="72e20-107">[in]現在の識別子<xref:System.AppDomain>です。</span><span class="sxs-lookup"><span data-stu-id="72e20-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="3f76c-107">[in]現在の識別子<xref:System.AppDomain>します。</span><span class="sxs-lookup"><span data-stu-id="3f76c-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
   
  `ulFlags`  
- <span data-ttu-id="72e20-108">[in]組み合わせた[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)を実行する検証の種類を示す値。</span><span class="sxs-lookup"><span data-stu-id="72e20-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
+ <span data-ttu-id="3f76c-108">[in]組み合わせた[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)を実行する検証の種類を示す値。</span><span class="sxs-lookup"><span data-stu-id="3f76c-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
   
  `ulMaxError`  
- <span data-ttu-id="72e20-109">[in]検証を終了する前に許可されるエラーの最大数。</span><span class="sxs-lookup"><span data-stu-id="72e20-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
+ <span data-ttu-id="3f76c-109">[in]検証を終了する前に許可されるエラーの最大数。</span><span class="sxs-lookup"><span data-stu-id="3f76c-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
   
  `token`  
- <span data-ttu-id="72e20-110">[in]使用しません。</span><span class="sxs-lookup"><span data-stu-id="72e20-110">[in] Unused.</span></span>  
+ <span data-ttu-id="3f76c-110">[in]使用されていません。</span><span class="sxs-lookup"><span data-stu-id="3f76c-110">[in] Unused.</span></span>  
   
  `fileName`  
- <span data-ttu-id="72e20-111">[in]検証に使用するファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="72e20-111">[in] The name of the file to be validated.</span></span>  
+ <span data-ttu-id="3f76c-111">[in]検証するファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="3f76c-111">[in] The name of the file to be validated.</span></span>  
   
  `pe`  
- <span data-ttu-id="72e20-112">[in]ファイル バッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="72e20-112">[in] A pointer to the file buffer.</span></span>  
+ <span data-ttu-id="3f76c-112">[in]ファイル バッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3f76c-112">[in] A pointer to the file buffer.</span></span>  
   
  `ulSize`  
- <span data-ttu-id="72e20-113">[in]検証に使用するファイルのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="72e20-113">[in] The size, in bytes, of the file to be validated.</span></span>  
+ <span data-ttu-id="3f76c-113">[in]検証するファイルのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="3f76c-113">[in] The size, in bytes, of the file to be validated.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="72e20-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="72e20-114">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f76c-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="3f76c-114">Return Value</span></span>  
   
-|<span data-ttu-id="72e20-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="72e20-115">HRESULT</span></span>|<span data-ttu-id="72e20-116">説明</span><span class="sxs-lookup"><span data-stu-id="72e20-116">Description</span></span>|  
+|<span data-ttu-id="3f76c-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3f76c-115">HRESULT</span></span>|<span data-ttu-id="3f76c-116">説明</span><span class="sxs-lookup"><span data-stu-id="3f76c-116">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="72e20-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="72e20-117">S_OK</span></span>|<span data-ttu-id="72e20-118">`Validate` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="72e20-118">`Validate` returned successfully.</span></span>|  
-|<span data-ttu-id="72e20-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="72e20-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="72e20-120">共通言語ランタイム (CLR) が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。</span><span class="sxs-lookup"><span data-stu-id="72e20-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="72e20-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="72e20-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="72e20-122">呼び出しがタイムアウトしました。</span><span class="sxs-lookup"><span data-stu-id="72e20-122">The call timed out.</span></span>|  
-|<span data-ttu-id="72e20-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="72e20-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="72e20-124">呼び出し元は、ロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="72e20-124">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="72e20-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="72e20-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="72e20-126">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="72e20-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="72e20-127">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="72e20-127">E_FAIL</span></span>|<span data-ttu-id="72e20-128">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="72e20-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="72e20-129">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="72e20-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="72e20-130">メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。</span><span class="sxs-lookup"><span data-stu-id="72e20-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3f76c-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="3f76c-117">S_OK</span></span>|<span data-ttu-id="3f76c-118">`Validate` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="3f76c-118">`Validate` returned successfully.</span></span>|  
+|<span data-ttu-id="3f76c-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3f76c-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3f76c-120">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="3f76c-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3f76c-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3f76c-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3f76c-122">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="3f76c-122">The call timed out.</span></span>|  
+|<span data-ttu-id="3f76c-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3f76c-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3f76c-124">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="3f76c-124">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3f76c-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3f76c-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3f76c-126">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="3f76c-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3f76c-127">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3f76c-127">E_FAIL</span></span>|<span data-ttu-id="3f76c-128">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="3f76c-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3f76c-129">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="3f76c-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3f76c-130">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="3f76c-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="72e20-131">要件</span><span class="sxs-lookup"><span data-stu-id="72e20-131">Requirements</span></span>  
- <span data-ttu-id="72e20-132">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="72e20-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f76c-131">必要条件</span><span class="sxs-lookup"><span data-stu-id="3f76c-131">Requirements</span></span>  
+ <span data-ttu-id="3f76c-132">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f76c-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="72e20-133">**ヘッダー:** IValidator.idl、IValidator.h</span><span class="sxs-lookup"><span data-stu-id="72e20-133">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="3f76c-133">**ヘッダー:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="3f76c-133">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="72e20-134">**ライブラリ:** MSCorEE.dll にリソースとして含まれています。</span><span class="sxs-lookup"><span data-stu-id="72e20-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3f76c-134">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="3f76c-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="72e20-135">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72e20-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3f76c-135">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f76c-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="72e20-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="72e20-136">See Also</span></span>  
- [<span data-ttu-id="72e20-137">ICLRValidator インターフェイス</span><span class="sxs-lookup"><span data-stu-id="72e20-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3f76c-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f76c-136">See also</span></span>
+- [<span data-ttu-id="3f76c-137">ICLRValidator インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3f76c-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

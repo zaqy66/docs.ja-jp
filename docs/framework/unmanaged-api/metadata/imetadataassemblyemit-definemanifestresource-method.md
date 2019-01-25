@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48d688b64bbe9330a176ef073e96865b719ff2c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145659e8761b8c7804faf25e47a280a9d4f874b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679033"
 ---
-# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="2c08a-102">IMetaDataAssemblyEmit::DefineManifestResource メソッド</span><span class="sxs-lookup"><span data-stu-id="2c08a-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
-<span data-ttu-id="2c08a-103">指定したマニフェスト リソースのメタデータを含む `ManifestResource` 構造体を作成し、関連付けられたメタデータ トークンを返します。</span><span class="sxs-lookup"><span data-stu-id="2c08a-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="0009a-102">IMetaDataAssemblyEmit::DefineManifestResource メソッド</span><span class="sxs-lookup"><span data-stu-id="0009a-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
+<span data-ttu-id="0009a-103">指定したマニフェスト リソースのメタデータを含む `ManifestResource` 構造体を作成し、関連付けられたメタデータ トークンを返します。</span><span class="sxs-lookup"><span data-stu-id="0009a-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c08a-104">構文</span><span class="sxs-lookup"><span data-stu-id="2c08a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0009a-104">構文</span><span class="sxs-lookup"><span data-stu-id="0009a-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineManifestResource (  
@@ -39,33 +39,33 @@ HRESULT DefineManifestResource (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2c08a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2c08a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0009a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0009a-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="2c08a-106">[in]リソースの名前。</span><span class="sxs-lookup"><span data-stu-id="2c08a-106">[in] The name of the resource.</span></span>  
+ <span data-ttu-id="0009a-106">[in]リソースの名前。</span><span class="sxs-lookup"><span data-stu-id="0009a-106">[in] The name of the resource.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="2c08a-107">[in]型のメタデータ トークン`mdtFile`または`mdtAssemblyRef`リソース プロバイダーにマップします。</span><span class="sxs-lookup"><span data-stu-id="2c08a-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="2c08a-108">NULL 値のメタデータが埋め込まれているファイルが、リソース プロバイダーであることを示します。</span><span class="sxs-lookup"><span data-stu-id="2c08a-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
+ <span data-ttu-id="0009a-107">[in]型のメタデータ トークン`mdtFile`または`mdtAssemblyRef`リソース プロバイダーにマップされます。</span><span class="sxs-lookup"><span data-stu-id="0009a-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="0009a-108">NULL 値は、メタデータが埋め込まれているファイルがリソース プロバイダーであることを示します。</span><span class="sxs-lookup"><span data-stu-id="0009a-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="2c08a-109">[in]ファイル内のリソースの先頭までのオフセット。</span><span class="sxs-lookup"><span data-stu-id="2c08a-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="2c08a-110">スタンドアロン ファイル内のリソースのこの常に 0 になります。</span><span class="sxs-lookup"><span data-stu-id="2c08a-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="2c08a-111">PE (ポータブル実行可能) ファイルには、リソースが埋め込まれている場合はリソース cor.h ヘッダー ファイルで指定された位置から開始する BLOB のオフセットです。</span><span class="sxs-lookup"><span data-stu-id="2c08a-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
+ <span data-ttu-id="0009a-109">[in]リソース ファイル内の先頭までのオフセット。</span><span class="sxs-lookup"><span data-stu-id="0009a-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="0009a-110">スタンドアロン ファイル内のリソース、0 はこれが常にします。</span><span class="sxs-lookup"><span data-stu-id="0009a-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="0009a-111">PE (移植可能な実行可能ファイル) ファイルには、リソースが埋め込まれている場合は cor.h ヘッダー ファイルで指定された場所から始まる、BLOB リソースのオフセットです。</span><span class="sxs-lookup"><span data-stu-id="0009a-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="2c08a-112">[in]リソース定義のプロパティ設定を指定するフラグ値のビットごとの組み合わせ。</span><span class="sxs-lookup"><span data-stu-id="2c08a-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
+ <span data-ttu-id="0009a-112">[in]リソース定義のプロパティの設定を指定するフラグ値のビットごとの組み合わせ。</span><span class="sxs-lookup"><span data-stu-id="0009a-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
   
  `pmdmr`  
- <span data-ttu-id="2c08a-113">[out]返されるメタデータ トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2c08a-113">[out] A pointer to the returned metadata token.</span></span>  
+ <span data-ttu-id="0009a-113">[out]返されるメタデータ トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="0009a-113">[out] A pointer to the returned metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2c08a-114">コメント</span><span class="sxs-lookup"><span data-stu-id="2c08a-114">Remarks</span></span>  
- <span data-ttu-id="2c08a-115">1 つ`ManifestResource`の各アセンブリのファイルで実装されている各リソースのメタデータ構造体を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2c08a-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0009a-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="0009a-114">Remarks</span></span>  
+ <span data-ttu-id="0009a-115">1 つ`ManifestResource`の各アセンブリのファイルに実装されている各リソースのメタデータ構造を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0009a-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2c08a-116">要件</span><span class="sxs-lookup"><span data-stu-id="2c08a-116">Requirements</span></span>  
- <span data-ttu-id="2c08a-117">**Platform:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="2c08a-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0009a-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="0009a-116">Requirements</span></span>  
+ <span data-ttu-id="0009a-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0009a-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2c08a-118">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2c08a-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0009a-118">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0009a-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2c08a-119">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="2c08a-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0009a-119">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="0009a-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2c08a-120">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c08a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0009a-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0009a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c08a-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="2c08a-121">See Also</span></span>  
- [<span data-ttu-id="2c08a-122">IMetaDataAssemblyEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2c08a-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0009a-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="0009a-121">See also</span></span>
+- [<span data-ttu-id="0009a-122">IMetaDataAssemblyEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0009a-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

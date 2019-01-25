@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: a1f69e0960e2882e3f31b5c79eaf0aab7a1e0e82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689304"
 ---
-# <a name="printdialog"></a><span data-ttu-id="1bfbd-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="1bfbd-102">PrintDialog</span></span>
-<span data-ttu-id="1bfbd-103"><xref:System.Windows.Controls.PrintDialog>コントロールを使用すると、自動的に構成される標準の印刷ダイアログ ボックスのインスタンスを作成、<xref:System.Printing.PrintTicket>と<xref:System.Printing.PrintQueue>に従ってユーザー入力します。</span><span class="sxs-lookup"><span data-stu-id="1bfbd-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
+# <a name="printdialog"></a><span data-ttu-id="16941-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="16941-102">PrintDialog</span></span>
+<span data-ttu-id="16941-103"><xref:System.Windows.Controls.PrintDialog>コントロールを使用すると、自動的に構成する標準の印刷 ダイアログ ボックスをインスタンス化、<xref:System.Printing.PrintTicket>と<xref:System.Printing.PrintQueue>ユーザー入力に従ってします。</span><span class="sxs-lookup"><span data-stu-id="16941-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="1bfbd-104">参照</span><span class="sxs-lookup"><span data-stu-id="1bfbd-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="16941-104">参照</span><span class="sxs-lookup"><span data-stu-id="16941-104">Reference</span></span>  
  <xref:System.Windows.Controls.PrintDialog>  
   
  <xref:System.Printing.PrintTicket>  
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a><span data-ttu-id="1bfbd-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="1bfbd-105">See Also</span></span>  
- [<span data-ttu-id="1bfbd-106">印刷の概要</span><span class="sxs-lookup"><span data-stu-id="1bfbd-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [<span data-ttu-id="1bfbd-107">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="1bfbd-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="16941-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="16941-105">See also</span></span>
+- [<span data-ttu-id="16941-106">印刷の概要</span><span class="sxs-lookup"><span data-stu-id="16941-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [<span data-ttu-id="16941-107">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="16941-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

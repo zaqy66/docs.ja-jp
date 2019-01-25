@@ -1,5 +1,5 @@
 ---
-title: '&#39;拡張機能&#39;属性にのみ適用できます&#39;モジュール&#39;、 &#39;Sub&#39;、または&#39;関数&#39;宣言'
+title: '&#39;拡張機能&#39;にのみ適用できる属性&#39;モジュール&#39;、 &#39;Sub&#39;、または&#39;関数&#39;宣言'
 ms.date: 07/20/2015
 f1_keywords:
 - bc36550
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: d7f8829cb879d612711ac6bcc6bf4aa065fbe323
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fabd602f31a362fe33954253d565e86a065e0a83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718235"
 ---
-# <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a><span data-ttu-id="65dce-102">&#39;拡張機能&#39;属性にのみ適用できます&#39;モジュール&#39;、 &#39;Sub&#39;、または&#39;関数&#39;宣言</span><span class="sxs-lookup"><span data-stu-id="65dce-102">&#39;Extension&#39; attribute can be applied only to &#39;Module&#39;, &#39;Sub&#39;, or &#39;Function&#39; declarations</span></span>
-<span data-ttu-id="65dce-103">Visual Basic でのデータ型を拡張する唯一の方法では、標準的なモジュールの中に拡張メソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="65dce-103">The only way to extend a data type in Visual Basic is to define an extension method inside a standard module.</span></span> <span data-ttu-id="65dce-104">拡張メソッドを指定できます、`Sub`プロシージャまたは`Function`プロシージャです。</span><span class="sxs-lookup"><span data-stu-id="65dce-104">The extension method can be a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="65dce-105">すべての拡張メソッドは、拡張属性と共に設定されなければなりません`<Extension()>`から、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>名前空間。</span><span class="sxs-lookup"><span data-stu-id="65dce-105">All extension methods must be marked with the extension attribute, `<Extension()>`, from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="65dce-106">必要に応じて、拡張メソッドを含むモジュールの場合は、同じ方法でマークされている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="65dce-106">Optionally, a module that contains an extension method may be marked in the same way.</span></span> <span data-ttu-id="65dce-107">拡張属性の他の使用が有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="65dce-107">No other use of the extension attribute is valid.</span></span>  
+# <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a><span data-ttu-id="68079-102">&#39;拡張機能&#39;にのみ適用できる属性&#39;モジュール&#39;、 &#39;Sub&#39;、または&#39;関数&#39;宣言</span><span class="sxs-lookup"><span data-stu-id="68079-102">&#39;Extension&#39; attribute can be applied only to &#39;Module&#39;, &#39;Sub&#39;, or &#39;Function&#39; declarations</span></span>
+<span data-ttu-id="68079-103">Visual Basic でのデータ型を拡張する唯一の方法では、標準のモジュール内で拡張メソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="68079-103">The only way to extend a data type in Visual Basic is to define an extension method inside a standard module.</span></span> <span data-ttu-id="68079-104">拡張メソッドになる、`Sub`プロシージャまたは`Function`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="68079-104">The extension method can be a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="68079-105">すべての拡張メソッドは、拡張機能の属性でマークする必要があります`<Extension()>`から、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>名前空間。</span><span class="sxs-lookup"><span data-stu-id="68079-105">All extension methods must be marked with the extension attribute, `<Extension()>`, from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="68079-106">必要に応じて、拡張メソッドを含むモジュールの場合は、同じ方法でマークされている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="68079-106">Optionally, a module that contains an extension method may be marked in the same way.</span></span> <span data-ttu-id="68079-107">拡張属性の他の使用が有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="68079-107">No other use of the extension attribute is valid.</span></span>  
   
- <span data-ttu-id="65dce-108">**エラー ID:** BC36550</span><span class="sxs-lookup"><span data-stu-id="65dce-108">**Error ID:** BC36550</span></span>  
+ <span data-ttu-id="68079-108">**エラー ID:** BC36550</span><span class="sxs-lookup"><span data-stu-id="68079-108">**Error ID:** BC36550</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="65dce-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="65dce-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="68079-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="68079-109">To correct this error</span></span>  
   
--   <span data-ttu-id="65dce-110">拡張属性を削除します。</span><span class="sxs-lookup"><span data-stu-id="65dce-110">Remove the extension attribute.</span></span>  
+-   <span data-ttu-id="68079-110">拡張属性を削除します。</span><span class="sxs-lookup"><span data-stu-id="68079-110">Remove the extension attribute.</span></span>  
   
--   <span data-ttu-id="65dce-111">それを囲むモジュールで定義されている、メソッドとして、拡張機能を設計し直します。</span><span class="sxs-lookup"><span data-stu-id="65dce-111">Redesign your extension as a method, defined in an enclosing module.</span></span>  
+-   <span data-ttu-id="68079-111">外側のモジュールで定義されている、方法として、拡張機能を再設計します。</span><span class="sxs-lookup"><span data-stu-id="68079-111">Redesign your extension as a method, defined in an enclosing module.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="65dce-112">例</span><span class="sxs-lookup"><span data-stu-id="65dce-112">Example</span></span>  
- <span data-ttu-id="65dce-113">次の例では定義、`Print`のメソッド、`String`データ型。</span><span class="sxs-lookup"><span data-stu-id="65dce-113">The following example defines a `Print` method for the `String` data type.</span></span>  
+## <a name="example"></a><span data-ttu-id="68079-112">例</span><span class="sxs-lookup"><span data-stu-id="68079-112">Example</span></span>  
+ <span data-ttu-id="68079-113">次の例では、定義、`Print`のメソッド、`String`データ型。</span><span class="sxs-lookup"><span data-stu-id="68079-113">The following example defines a `Print` method for the `String` data type.</span></span>  
   
 ```  
 Imports StringUtility  
@@ -42,7 +42,7 @@ Namespace StringUtility
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="65dce-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="65dce-114">See Also</span></span>  
- [<span data-ttu-id="65dce-115">属性の概要</span><span class="sxs-lookup"><span data-stu-id="65dce-115">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [<span data-ttu-id="65dce-116">拡張メソッド</span><span class="sxs-lookup"><span data-stu-id="65dce-116">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
- [<span data-ttu-id="65dce-117">Module ステートメント</span><span class="sxs-lookup"><span data-stu-id="65dce-117">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
+## <a name="see-also"></a><span data-ttu-id="68079-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="68079-114">See also</span></span>
+- [<span data-ttu-id="68079-115">属性の概要</span><span class="sxs-lookup"><span data-stu-id="68079-115">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="68079-116">拡張メソッド</span><span class="sxs-lookup"><span data-stu-id="68079-116">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [<span data-ttu-id="68079-117">Module ステートメント</span><span class="sxs-lookup"><span data-stu-id="68079-117">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)

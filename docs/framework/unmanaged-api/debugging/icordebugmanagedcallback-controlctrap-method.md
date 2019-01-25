@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9758de5c2801f2c55b7eca149569016ec5b9243
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603899"
 ---
-# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="f6f8b-102">ICorDebugManagedCallback::ControlCTrap メソッド</span><span class="sxs-lookup"><span data-stu-id="f6f8b-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
-<span data-ttu-id="f6f8b-103">CTRL + C が、デバッグ対象プロセスにトラップされることをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="f6f8b-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
+# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="1b05a-102">ICorDebugManagedCallback::ControlCTrap メソッド</span><span class="sxs-lookup"><span data-stu-id="1b05a-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
+<span data-ttu-id="1b05a-103">CTRL + C が、デバッグ対象プロセスでトラップされたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="1b05a-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6f8b-104">構文</span><span class="sxs-lookup"><span data-stu-id="f6f8b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b05a-104">構文</span><span class="sxs-lookup"><span data-stu-id="1b05a-104">Syntax</span></span>  
   
 ```  
 HRESULT ControlCTrap (  
@@ -35,28 +35,28 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f6f8b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f6f8b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1b05a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1b05a-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="f6f8b-106">[in]CTRL + C をトラップするプロセスを表す ICorDebugProcess オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f6f8b-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
+ <span data-ttu-id="1b05a-106">[in]CTRL + C をトラップするプロセスを表す ICorDebugProcess オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="1b05a-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f6f8b-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="f6f8b-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1b05a-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="1b05a-107">Return Value</span></span>  
   
-|<span data-ttu-id="f6f8b-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f6f8b-108">HRESULT</span></span>|<span data-ttu-id="f6f8b-109">説明</span><span class="sxs-lookup"><span data-stu-id="f6f8b-109">Description</span></span>|  
+|<span data-ttu-id="1b05a-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1b05a-108">HRESULT</span></span>|<span data-ttu-id="1b05a-109">説明</span><span class="sxs-lookup"><span data-stu-id="1b05a-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f6f8b-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f6f8b-110">S_OK</span></span>|<span data-ttu-id="f6f8b-111">デバッガーでは、ctrl キーを押しながら C トラップを処理します。</span><span class="sxs-lookup"><span data-stu-id="f6f8b-111">The debugger will handle the CTRL+C trap.</span></span>|  
-|<span data-ttu-id="f6f8b-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="f6f8b-112">S_FALSE</span></span>|<span data-ttu-id="f6f8b-113">デバッガーでは、ctrl キーを押しながら C トラップは処理されません。</span><span class="sxs-lookup"><span data-stu-id="f6f8b-113">The debugger will not handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="1b05a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="1b05a-110">S_OK</span></span>|<span data-ttu-id="1b05a-111">デバッガーでは、CTRL + C トラップを処理します。</span><span class="sxs-lookup"><span data-stu-id="1b05a-111">The debugger will handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="1b05a-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="1b05a-112">S_FALSE</span></span>|<span data-ttu-id="1b05a-113">デバッガーでは、CTRL + C トラップは処理されません。</span><span class="sxs-lookup"><span data-stu-id="1b05a-113">The debugger will not handle the CTRL+C trap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f6f8b-114">コメント</span><span class="sxs-lookup"><span data-stu-id="f6f8b-114">Remarks</span></span>  
- <span data-ttu-id="f6f8b-115">プロセス内のすべてのアプリケーション ドメインがこのコールバックを停止します。</span><span class="sxs-lookup"><span data-stu-id="f6f8b-115">All application domains within the process are stopped for this callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b05a-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="1b05a-114">Remarks</span></span>  
+ <span data-ttu-id="1b05a-115">このコールバックは、プロセス内のすべてのアプリケーション ドメインが停止しました。</span><span class="sxs-lookup"><span data-stu-id="1b05a-115">All application domains within the process are stopped for this callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f6f8b-116">要件</span><span class="sxs-lookup"><span data-stu-id="f6f8b-116">Requirements</span></span>  
- <span data-ttu-id="f6f8b-117">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="f6f8b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b05a-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="1b05a-116">Requirements</span></span>  
+ <span data-ttu-id="1b05a-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1b05a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f6f8b-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6f8b-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1b05a-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1b05a-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f6f8b-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6f8b-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1b05a-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b05a-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f6f8b-120">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6f8b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1b05a-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b05a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6f8b-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6f8b-121">See Also</span></span>  
- [<span data-ttu-id="f6f8b-122">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f6f8b-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1b05a-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b05a-121">See also</span></span>
+- [<span data-ttu-id="1b05a-122">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1b05a-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

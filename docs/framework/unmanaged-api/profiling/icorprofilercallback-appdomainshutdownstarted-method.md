@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705496"
 ---
-# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="54e6e-102">ICorProfilerCallback::AppDomainShutdownStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="54e6e-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
-<span data-ttu-id="54e6e-103">プロセスから、アプリケーション ドメインがアンロードされることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="54e6e-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
+# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="0f927-102">ICorProfilerCallback::AppDomainShutdownStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="0f927-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
+<span data-ttu-id="0f927-103">プロセスから、アプリケーション ドメインがアンロードされることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="0f927-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54e6e-104">構文</span><span class="sxs-lookup"><span data-stu-id="54e6e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f927-104">構文</span><span class="sxs-lookup"><span data-stu-id="0f927-104">Syntax</span></span>  
   
 ```  
 HRESULT AppDomainShutdownStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="54e6e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="54e6e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0f927-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0f927-105">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="54e6e-106">[in]アプリケーションのアセンブリが格納されているドメインを識別します。</span><span class="sxs-lookup"><span data-stu-id="54e6e-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
+ <span data-ttu-id="0f927-106">[in]アプリケーションのアセンブリが格納されているドメインを識別します。</span><span class="sxs-lookup"><span data-stu-id="0f927-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="54e6e-107">コメント</span><span class="sxs-lookup"><span data-stu-id="54e6e-107">Remarks</span></span>  
- <span data-ttu-id="54e6e-108">値`appDomainId`後に、情報の要求に対して無効です、`AppDomainShutdownStarted`メソッドを返します。-これは、プロファイラーの最後のチャンスをこのアプリケーション ドメインに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="54e6e-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0f927-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="0f927-107">Remarks</span></span>  
+ <span data-ttu-id="0f927-108">値`appDomainId`は後の情報の要求は無効です、`AppDomainShutdownStarted`メソッドを返します。-これは、このアプリケーション ドメインに関する情報を取得するプロファイラーの最後のチャンスです。</span><span class="sxs-lookup"><span data-stu-id="0f927-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54e6e-109">要件</span><span class="sxs-lookup"><span data-stu-id="54e6e-109">Requirements</span></span>  
- <span data-ttu-id="54e6e-110">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="54e6e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f927-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="0f927-109">Requirements</span></span>  
+ <span data-ttu-id="0f927-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0f927-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54e6e-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="54e6e-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0f927-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0f927-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="54e6e-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54e6e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0f927-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f927-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54e6e-113">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54e6e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0f927-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f927-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54e6e-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="54e6e-114">See Also</span></span>  
- [<span data-ttu-id="54e6e-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54e6e-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0f927-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="0f927-114">See also</span></span>
+- [<span data-ttu-id="0f927-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0f927-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
