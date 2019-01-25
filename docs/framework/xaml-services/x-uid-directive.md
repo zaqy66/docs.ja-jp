@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745416"
 ---
 # <a name="xuid-directive"></a>x:Uid ディレクティブ
 マークアップ要素の一意の識別子を提供します。 多くのシナリオでは、この一意の識別子は XAML のローカライズ プロセスとツールによって使用されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "43528389"
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
  ロールの詳細については`x:Uid`WPF のローカライズ プロセスおよび XAML の BAML 形式では、「 [WPF のグローバリゼーション](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)または <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
- <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [WPF のグローバリゼーション](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+- <xref:Microsoft.Build.Tasks.Windows.UidManager>
+- [WPF のグローバリゼーション](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

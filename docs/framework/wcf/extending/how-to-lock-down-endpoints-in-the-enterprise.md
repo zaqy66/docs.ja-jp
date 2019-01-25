@@ -1,15 +1,15 @@
 ---
-title: '方法 : 企業内のエンドポイントをロックダウンする'
+title: '方法: 企業内のエンドポイントをロックダウンします。'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663080"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法 : 企業内のエンドポイントをロックダウンする
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法: 企業内のエンドポイントをロックダウンします。
 大規模な企業では、多くの場合、企業のセキュリティ ポリシーに準拠してアプリケーションを開発する必要があります。 次のトピックでは、開発し、コンピューターにインストールされているすべての Windows Communication Foundation (WCF) クライアント アプリケーションの検証に使用できるクライアント エンドポイント検証コントロールをインストールする方法について説明します。  
   
  このエンドポイントの動作がクライアントに追加されるために、検証コントロールがクライアント検証コントロールはここでは、 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config ファイルのセクション。 WCF では、クライアント アプリケーションに対してのみ、共通のエンドポイント動作を読み込みし、サービス アプリケーションだけで一般的なサービスの動作を読み込みます。 サービス アプリケーション用のこの同じ検証コントロールをインストールするには、検証コントロールがサービス動作であることが必要です。 詳細については、次を参照してください。、 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)セクション。  
@@ -63,6 +63,6 @@ ms.locfileid: "50197432"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  また、構成ファイルの要素を暗号化する必要がある場合もあります。 詳細については、「参照」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [DPAPI を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [RSA を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>関連項目
+- [DPAPI を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [RSA を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94955)

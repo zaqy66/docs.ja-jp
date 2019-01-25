@@ -1,5 +1,5 @@
 ---
-title: '方法 : アクセス キーおよびテキスト折り返し機能を持つコントロールを作成する'
+title: '方法: アクセス キーおよびテキスト折り返し機能を持つコントロールを作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: bc170334496ca4c2a2028b9c493385674d235ca6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 12410e2abd1031f7ac42bdaab4b8e09a6b8b6006
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745610"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649584"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>方法 : アクセス キーおよびテキスト折り返し機能を持つコントロールを作成する
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>方法: アクセス キーおよびテキスト折り返し機能を持つコントロールを作成する
 この例では、アクセス キーがありテキスト折り返しをサポートするコントロールを作成する方法を説明します。 この例では、<xref:System.Windows.Controls.Label>これらの概念を説明するコントロール。  
   
 ## <a name="example"></a>例  
@@ -36,5 +36,5 @@ ms.locfileid: "43745610"
   
  [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## <a name="see-also"></a>関連項目  
- [方法: ラベルのターゲット プロパティを設定する](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a>関連項目
+- [方法: ラベルのターゲット プロパティを設定します。](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

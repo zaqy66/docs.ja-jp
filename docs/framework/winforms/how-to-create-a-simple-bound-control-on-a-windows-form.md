@@ -1,18 +1,18 @@
 ---
-title: '方法 : Windows フォームに単純バインド コントロールを作成する'
+title: '方法: Windows フォームに単純バインド コントロールを作成します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643573"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法 : Windows フォームに単純バインド コントロールを作成する
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインド コントロールを作成します。
 *単純バインディング*コントロールでデータセット テーブルの列の値などの 1 つのデータ要素を表示することができます。 できます単純にバインドするコントロールの任意のプロパティのデータ値にします。  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ ms.locfileid: "46321354"
     > [!NOTE]
     >  単純バインド コントロールでは、1 つのデータ要素のみを表示するためには、Windows フォームに単純バインド コントロールにナビゲーション ロジックを含める非常に一般的です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Binding>  
- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Binding>
+- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

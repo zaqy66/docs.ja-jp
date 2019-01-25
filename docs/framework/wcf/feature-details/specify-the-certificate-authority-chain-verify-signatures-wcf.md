@@ -1,18 +1,18 @@
 ---
-title: '方法 : 署名の検証に使用する証明機関の証明書チェーンを指定する (WCF)'
+title: '方法: 署名 (WCF) を確認するために使用する証明機関証明書チェーンを指定します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648785"
 ---
-# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>方法 : 署名の検証に使用する証明機関の証明書チェーンを指定する (WCF)
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>方法: 署名 (WCF) を確認するために使用する証明機関証明書チェーンを指定します。
 Windows Communication Foundation (WCF) では、X.509 証明書を使用して署名された SOAP メッセージを受信したときに既定ではことを確認、X.509 証明書が信頼された証明機関によって発行されたことです。 これは、証明書ストアを検索し、その証明機関の証明書が信頼された証明書として指定されているかどうかを確認することによって行われます。 WCF この判断を行うためには、適切な証明書ストアに証明機関の証明書チェーンをインストールする必要があります。  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>証明機関証明書チェーンをインストールするには  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) では、X.509 証明書を使用して�
   
          Microsoft 管理コンソール (MMC: Microsoft Management Console) で、証明書スナップインを開きます。 選択から X.509 証明書を取得する証明書ストアにその WCF が構成されている、**信頼されたルート****証明機関**フォルダー。 下、**信頼されたルート証明機関**フォルダーを右クリックし、**証明書**フォルダーを指す**すべてのタスク**、順にクリックします**インポート**. 手順 a. でエクスポートしたファイルを指定します。  
   
-         詳細については、MMC で証明書スナップインを使用して、次を参照してください。[方法: MMC スナップインを使用して証明書](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。  
+         詳細については、MMC で証明書スナップインを使用して、次を参照してください。[方法。MMC スナップインで証明書を表示](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>関連項目
+- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

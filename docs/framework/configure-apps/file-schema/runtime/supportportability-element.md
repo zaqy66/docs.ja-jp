@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d6852d14eec234b787ca0e852c333391a7b329
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4f1ceae32445fb350f6fcc98f3a1eec044fa7885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655505"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt;要素
 .NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。  
@@ -78,6 +78,6 @@ ms.locfileid: "53614286"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [/appconfig (c# コンパイラ オプション)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
+## <a name="see-also"></a>関連項目
+- [/appconfig (c# コンパイラ オプション)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [.NET framework アセンブリ統合の概要](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641149"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>複数のプラットフォームを対象とするライブラリのアプリケーション リソース
 .NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)プロジェクトの種類が、クラス ライブラリのリソースを複数のプラットフォームからアクセスできることを確認します。 このプロジェクトの種類では、Visual Studio 2012 で使用できる、.NET Framework クラス ライブラリの移植可能なサブセットを対象とします。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] を使用すると、デスクトップ アプリケーション、Silverlight アプリケーション、Windows Phone アプリケーション、および [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからライブラリにアクセスできます。
@@ -52,7 +52,7 @@ ms.locfileid: "48580090"
  ローカライズされたリソースが [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] プロジェクトに含まれている場合は、デスクトップ アプリケーション内のライブラリの場合と同様に、ハブ アンド スポーク モデルを使用してこれらを配置します。 メイン リソース ファイルおよびローカライズされたリソース ファイルを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで使用するには、参照をメイン アセンブリに追加します。 コンパイル時に、Visual Studio はメイン リソース ファイルとローカライズされているリソース ファイルからリソースを個別の .resw ファイルに抽出します。 次に、実行時に [!INCLUDE[wrt](../../../includes/wrt-md.md)] によってアクセスされる単一の PRI ファイルに .resw ファイルをコンパイルします。
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>例: ローカライズされていない [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>例:ローカライズされていません。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  以下の単純なローカライズされていない [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] の例では、リソースを使用して列名を格納し、表形式データ用に予約する文字数を決定します。 この例では LibResources.resx という名前のファイルを使用して、次の表に示す文字列リソースを格納します。
 
 |リソース名|リソースの値|
@@ -81,7 +81,7 @@ ms.locfileid: "48580090"
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>例: ローカライズされている [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>例:ローカライズされました。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  以下のローカライズされている [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] の例には、フランス語 (フランス) と英語 (米国) のカルチャのリソースが含まれています。 英語 (米国) カルチャは、アプリの既定のカルチャです。テーブルにそのリソースが示すように、[前のセクション](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)します。 フランス語 (フランス) のカルチャのリソース ファイルは LibResources.fr-FR.resx という名前で、以下の表に示す文字列リソースで構成されています。 `UILibrary` クラスのソース コードは前のセクションに示すものと同じです。
 
 |リソース名|リソースの値|
@@ -106,6 +106,6 @@ ms.locfileid: "48580090"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Resources.ResourceManager>  
-- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
 - [リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

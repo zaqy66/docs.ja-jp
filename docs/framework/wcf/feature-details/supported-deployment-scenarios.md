@@ -2,12 +2,12 @@
 title: サポートされている配置シナリオ
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 605521cb91945812db178db3a82883b4d13bc636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614485"
 ---
 # <a name="supported-deployment-scenarios"></a>サポートされている配置シナリオ
 部分的に信頼されたアプリケーションで使用するためにサポートされる Windows Communication Foundation (WCF) 機能のサブセットは、WCF を使用するが、一部のシナリオの要件を満たすために設計されています。 WCF がインターネット規模の要件を満たしているサード パーティ製のアプリケーションを実行しているホスティング プロバイダーの共有、サーバー上で、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]中程度の信頼アクセス許可がセキュリティ上の理由を設定します。 クライアントでは、WCF の部分信頼サポートはなどの展開テクノロジの要件を満たすために設計[ClickOnce 配置](https://go.microsoft.com/fwlink/?LinkId=83712)または[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]の XAML ブラウザー アプリケーションのテクノロジは、シームレスかつ安全に許可します。信頼されていないサイトからのデスクトップ アプリケーションの展開。  
@@ -32,15 +32,15 @@ ms.locfileid: "44183380"
   
  ワークフロー サービスは完全信頼のアクセス許可を必要とし、部分的に信頼されたアプリケーションでは使用できません。  
   
- 詳細については、次を参照してください。[方法: ASP.NET 2.0 の使用中程度の信頼](https://go.microsoft.com/fwlink/?LinkId=84603)します。  
+ 詳細については、「[方法 :ASP.NET 2.0 で中程度の信頼を使用して、](https://go.microsoft.com/fwlink/?LinkId=84603)します。  
   
 ## <a name="partial-trust-on-the-client"></a>クライアントでの部分信頼  
- 信頼されていないインターネット サイトからコードをダウンロードして実行する場合、ある程度のセキュリティ対策が必要です。 両方[ClickOnce 配置](https://go.microsoft.com/fwlink/?LinkId=83712)と[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]の XAML ブラウザー アプリケーション (XBAP) テクノロジの作成を使用して、部分信頼の信頼されていないコードに制限されたアクセス許可 (インターネット ゾーン) を付与します。  
+ 信頼されていないインターネット サイトからコードをダウンロードして実行する場合、ある程度のセキュリティ対策が必要です。 [ClickOnce 展開](https://go.microsoft.com/fwlink/?LinkId=83712) と [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]の XBAP テクノロジでは共に、部分信頼を利用して信頼できないコードに制限付きのアクセス許可 (インターネット ゾーン) を与えます。  
   
  WCF は、いずれかで展開された部分的に信頼されたアプリケーション内からリモート サーバーとの通信に使用できます[ClickOnce 配置](https://go.microsoft.com/fwlink/?LinkId=83712)または XBAP します。 インターネット ゾーン アクセス許可のセットが含まれる<xref:System.Net.WebPermission>で説明されている、サポートされている WCF バインドのいずれかを使用して、配信元サーバーとの通信にこれらのアプリケーションの元のホスト用できる[Partial Trust Feature Compatibility](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="see-also"></a>関連項目  
- [コード アクセス セキュリティ](https://go.microsoft.com/fwlink/?LinkId=83717)  
- [Windows Presentation Foundation ブラウザーによってホストされるアプリケーションの概要](https://go.microsoft.com/fwlink/?LinkId=98397)  
- [部分信頼](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [ASP.Net の中程度の信頼](https://go.microsoft.com/fwlink/?LinkId=69328)
+## <a name="see-also"></a>関連項目
+- [コード アクセス セキュリティ](https://go.microsoft.com/fwlink/?LinkId=83717)
+- [Windows Presentation Foundation ブラウザーによってホストされるアプリケーションの概要](https://go.microsoft.com/fwlink/?LinkId=98397)
+- [部分信頼](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [ASP.NET の中程度の信頼](https://go.microsoft.com/fwlink/?LinkId=69328)

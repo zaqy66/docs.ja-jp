@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 365bea0bdd32fa1b408ba0bfdf100cc443b5d419
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ae455aeba353cfa66a1253b580e15b280caec8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584101"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule メソッド
 このメソッドは実装されていません。 呼び出された場合、E_NOTIMPL を返します。  
@@ -44,13 +44,13 @@ HRESULT FindAssemblyModule(
   
 #### <a name="parameters"></a>パラメーター  
  `szAppBase`  
- [in]使用しません。  
+ [in]使用されません。  
   
  `szPrivateBin`  
- [in]使用しません。  
+ [in]使用されません。  
   
  `szGlobalBin`  
- [in]使用しません。  
+ [in]使用されません。  
   
  `szAssemblyName`  
  [in]モジュールの名前。  
@@ -62,20 +62,20 @@ HRESULT FindAssemblyModule(
  [out]アセンブリの簡易名。  
   
  `cchName`  
- [in]サイズをバイト単位での`szName`します。  
+ [in]サイズ (バイト単位) の`szName`します。  
   
  `pcName`  
- [out]実際に返される文字数`szName`です。  
+ [out]実際に返される文字数`szName`します。  
   
-## <a name="requirements"></a>要件  
- **Platform:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>関連項目
+- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

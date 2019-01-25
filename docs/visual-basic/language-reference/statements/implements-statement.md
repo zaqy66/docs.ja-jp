@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681067"
 ---
 # <a name="implements-statement"></a>Implements ステートメント
 1 つ以上のインターフェイス、またはインターフェイス メンバーの場合、クラスで実装する必要がありますまたはが表示される構造体の定義を指定します。  
@@ -55,7 +55,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>関連項目  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>関連項目
+- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

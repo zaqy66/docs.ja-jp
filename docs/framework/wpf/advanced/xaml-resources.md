@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718664"
 ---
 # <a name="xaml-resources"></a>XAML リソース
 リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)します。  
@@ -153,12 +153,12 @@ ms.locfileid: "53126404"
   
  <xref:System.Windows.DataTemplate> 暗黙のキーがあります。 暗黙のキーを<xref:System.Windows.DataTemplate>は、<xref:System.Windows.DataTemplate.DataType%2A>プロパティの値。 <xref:System.Windows.DataTemplate.DataType%2A> 明示的に使用するのではなく、型の名前として指定することも[{X:type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 詳細については、次を参照してください。[データ テンプレートの概要](../../../../docs/framework/wpf/data/data-templating-overview.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.ResourceDictionary>  
- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [リソースを定義および参照する](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x:Type マークアップ拡張機能](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [StaticResource のマークアップ拡張機能](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [DynamicResource マークアップ拡張](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.ResourceDictionary>
+- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [リソースを定義および参照する](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
+- [アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)
+- [x:Type マークアップ拡張機能](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [StaticResource のマークアップ拡張機能](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [DynamicResource マークアップ拡張](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

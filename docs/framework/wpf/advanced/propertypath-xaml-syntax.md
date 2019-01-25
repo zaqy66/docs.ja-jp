@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648757"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath の XAML 構文
 <xref:System.Windows.PropertyPath>オブジェクトがサポートする、複雑なインライン[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]構文を使用するさまざまなプロパティを設定するため、<xref:System.Windows.PropertyPath>型を値として。 このトピックの「ドキュメント、<xref:System.Windows.PropertyPath>バインディングとアニメーション構文に適用される構文です。  
@@ -196,7 +196,7 @@ or
   
  一般に、<xref:System.Windows.PropertyPath>バインディングでの使用と最も単純なアニメーションと複雑なアニメーションでの使用の 2 つの異なるコンス トラクターを使用するように設計されています。 使用して、<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>オブジェクトが文字列の使用状況をバインドするための署名。 使用して、<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>ワンステップ アニメーション パスでオブジェクトが署名、<xref:System.Windows.DependencyProperty>します。 使用して、<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>複雑なアニメーションの署名。 後者のコンストラクターでは、先頭のパラメーター用のトークン文字列と、トークン文字列内の位置に設定されるオブジェクトの配列を使用して、プロパティ パスのリレーションシップを定義します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.PropertyPath>  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [ストーリーボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.PropertyPath>
+- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [ストーリーボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

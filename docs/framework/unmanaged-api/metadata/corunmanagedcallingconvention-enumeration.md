@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b249d26335a66b55d0643f3e75bfd90554f731e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555558"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention 列挙型
 アンマネージ コードの呼び出し規約を指定します。  
@@ -49,23 +49,23 @@ typedef enum CorUnmanagedCallingConvention {
 |メンバー|説明|  
 |------------|-----------------|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C 言語の呼び出し規則。|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|標準的な呼び出し規則。|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This"呼び出し規則。|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|「高速」の呼び出し規約です。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|標準呼び出し規則。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This"呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|「高速」の呼び出し規約。|  
 |`IMAGE_CEE_CS_CALLCONV_C`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|使用しません。|  
   
-## <a name="remarks"></a>コメント  
- CLR は、.NET Framework version 1.0 での「素早い」の呼び出し規約をサポートしていません。  
+## <a name="remarks"></a>Remarks  
+ CLR は、.NET Framework version 1.0 での「高速」の呼び出し規約をサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

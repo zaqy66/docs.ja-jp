@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f15c3bc097bc034db41c95cd168104b8435aaf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567023"
 ---
 # <a name="security-transparent-code-level-2"></a>透過的セキュリティ コード、レベル 2
 <a name="top"></a>
@@ -48,7 +48,7 @@ ms.locfileid: "33394141"
   
 -   [オーバーライドのパターン](#override)  
   
--   [継承規則](#inheritance)  
+-   [継承ルール](#inheritance)  
   
 -   [追加情報と規則](#additional)  
   
@@ -66,20 +66,20 @@ ms.locfileid: "33394141"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- アセンブリに注釈を付けない場合は、既定で、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の規則が使用されます。 ただし、推奨されるベスト プラクティスは、使用するは、<xref:System.Security.SecurityRulesAttribute>属性の既定値の代わりにします。  
+ アセンブリに注釈を付けない場合は、既定で、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の規則が使用されます。 ただし、推奨されるベスト プラクティスは、使用する、<xref:System.Security.SecurityRulesAttribute>によっては、既定の属性の代わりにします。  
   
 ### <a name="assembly-wide-annotation"></a>アセンブリ全体の注釈  
  アセンブリ レベルでの属性の使用には、次の規則が適用されます。  
   
--   属性なし: 属性を指定しない場合は、ランタイムによってすべてのコードがセキュリティ クリティカルとして解釈されます。ただし、セキュリティ クリティカルであると継承規則に違反する場合 (たとえば、透過的な仮想メソッドまたはインターフェイス メソッドをオーバーライドまたは実装する場合) は除きます。 そのような場合、メソッドはセーフ クリティカルになります。 属性を指定しない場合、透過性規則は共通言語ランタイムによって自動的に判断されます。  
+-   属性のない:ランタイムがセキュリティ クリティカルで、継承ルールに違反がセキュリティ クリティカルを除くすべてのコードを解釈する任意の属性を指定しない場合 (オーバーライドまたは透過的なを実装するときなど、仮想またはインターフェイスのメソッド)。 そのような場合、メソッドはセーフ クリティカルになります。 属性を指定しない場合、透過性規則は共通言語ランタイムによって自動的に判断されます。  
   
--   `SecurityTransparent`: すべてのコードが透過的になります。アセンブリ全体で特権の必要な操作や安全でない操作は実行されません。  
+-   `SecurityTransparent`:すべてのコードは透過的です。アセンブリ全体は何も行いません特権または安全でないです。  
   
--   `SecurityCritical`: このアセンブリ内の型によって導入されるすべてのコードはクリティカルになり、その他のすべてのコードは透過的になります。 このシナリオは属性を指定しない場合に似ていますが、共通言語ランタイムによって透過性規則が自動的に判断されることはありません。 たとえば、仮想メソッドまたは抽象メソッドをオーバーライドしたり、インターフェイス メソッドを実装したりする場合、既定では、そのメソッドは透過的になります。 そのメソッドには `SecurityCritical` または `SecuritySafeCritical` の注釈を明示的に付ける必要があります。そうしないと、読み込み時に <xref:System.TypeLoadException> がスローされます。 この規則は、基底クラスと派生クラスの両方が同じアセンブリ内にある場合にも適用されます。  
+-   `SecurityCritical`:このアセンブリ内の型によって導入されるすべてのコードはクリティカルになり、その他のすべてのコードは透過的になります。 このシナリオは属性を指定しない場合に似ていますが、共通言語ランタイムによって透過性規則が自動的に判断されることはありません。 たとえば、仮想メソッドまたは抽象メソッドをオーバーライドしたり、インターフェイス メソッドを実装したりする場合、既定では、そのメソッドは透過的になります。 そのメソッドには `SecurityCritical` または `SecuritySafeCritical` の注釈を明示的に付ける必要があります。そうしないと、読み込み時に <xref:System.TypeLoadException> がスローされます。 この規則は、基底クラスと派生クラスの両方が同じアセンブリ内にある場合にも適用されます。  
   
--   `AllowPartiallyTrustedCallers` (レベル 2 のみ): すべてのコードが既定で透過的になります。 ただし、個々の型やメンバーに他の属性を設定することもできます。  
+-   `AllowPartiallyTrustedCallers` (レベル 2 のみ):すべてのコードは既定で透過的になります。 ただし、個々の型やメンバーに他の属性を設定することもできます。  
   
- 次の表は、レベル 2 とレベル 1 のアセンブリ レベルの動作を比較します。  
+ 次の表では、レベル 2 とレベル 1 のアセンブリ レベルの動作を比較します。  
   
 |Assembly 属性|レベル 2|レベル 1|  
 |------------------------|-------------|-------------|  
@@ -92,12 +92,12 @@ ms.locfileid: "33394141"
 ### <a name="type-and-member-annotation"></a>型およびメンバーの注釈  
  型に適用されるセキュリティ属性は、その型によって導入されるメンバーにも適用されます。 ただし、基底クラスまたはインターフェイスの実装の仮想オーバーライドや抽象オーバーライドには適用されません。 型およびメンバーのレベルでの属性の使用には、次の規則が適用されます。  
   
--   `SecurityCritical`: 型またはメンバーはクリティカルで、完全に信頼されているコードからのみ呼び出すことができます。 セキュリティ クリティカルな型で導入されるメソッドはクリティカルです。  
+-   `SecurityCritical`:型またはメンバーが重要と完全に信頼されたコードからのみ呼び出すことができます。 セキュリティ クリティカルな型で導入されるメソッドはクリティカルです。  
   
     > [!IMPORTANT]
     >  基底クラスまたはインターフェイスで導入されてセキュリティ クリティカルなクラスでオーバーライドまたは実装される仮想メソッドおよび抽象メソッドは、既定では透過的です。 これらのメソッドは、`SecuritySafeCritical` または `SecurityCritical` のいずれかとして指定する必要があります。  
   
--   `SecuritySafeCritical`: 型またはメンバーはセーフ クリティカルです。 ただし、型またはメンバーは透過的な (部分的に信頼された) コードから呼び出すことができ、機能的に他のクリティカル コードと同等になります。 コードはセキュリティ監査を受ける必要があります。  
+-   `SecuritySafeCritical`:型またはメンバーは、セーフ クリティカルです。 ただし、型またはメンバーは透過的な (部分的に信頼された) コードから呼び出すことができ、機能的に他のクリティカル コードと同等になります。 コードはセキュリティ監査を受ける必要があります。  
   
  [ページのトップへ](#top)  
   
@@ -121,9 +121,9 @@ ms.locfileid: "33394141"
   
  `Transparent` < `SafeCritical` < `Critical`  
   
--   型の規則: 左から右に向かってアクセス制限がより厳しくなります。 派生型は、基本型と少なくとも同じ程度に制限する必要があります。  
+-   型の規則:左から右にしようとして、アクセスが厳しくなります。 派生型は、基本型と少なくとも同じ程度に制限する必要があります。  
   
--   メソッドの規則。基底メソッドのアクセシビリティを派生メソッドで変更することはできません。 既定の動作では、注釈のない派生メソッドはすべて `Transparent` になります。 クリティカルな型の派生型では、オーバーライドしたメソッドに `SecurityCritical` の注釈が明示的に付けられていない場合に、例外がスローされます。  
+-   メソッドの規則:派生メソッドでは、基本メソッドのアクセシビリティを変更できません。 既定の動作では、注釈のない派生メソッドはすべて `Transparent` になります。 クリティカルな型の派生型では、オーバーライドしたメソッドに `SecurityCritical` の注釈が明示的に付けられていない場合に、例外がスローされます。  
   
  次の表に、使用できる型の継承パターンを示します。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "33394141"
  <xref:System.Reflection> 名前空間に追加された <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>、および <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> の各プロパティを使用すると、型、メソッド、またはフィールドが `SecurityCritical`、`SecuritySafeCritical`、または `SecurityTransparent` のどれであるかを判断できます。 属性の存在を確認する代わりに、リフレクションを使用して透過性を判断するには、これらのプロパティを使用します。 透過性の規則は複雑なので、属性のチェックでは不十分なことがあります。  
   
 > [!NOTE]
->  A`SafeCritical`メソッドを返します。`true`両方の<xref:System.Type.IsSecurityCritical%2A>と<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>ので、`SafeCritical`が実際にクリティカルである (クリティカル コードと同じ機能を備えているが、透過的なコードから呼び出すことができます)。  
+>  A`SafeCritical`メソッドを返します。`true`両方の<xref:System.Type.IsSecurityCritical%2A>と<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>ため、 `SafeCritical` (クリティカル コードと同じ機能を備えているが、transparent コードから呼び出せる) に本当に重要です。  
   
  動的メソッドは、関連付けられているモジュールの透過性を継承します。型の透過性は継承しません (型に関連付けられている場合)。  
   
@@ -189,8 +189,8 @@ ms.locfileid: "33394141"
   
  `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`  
   
- <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> プロパティは既定では `false` であるため、検証をスキップするにはこのプロパティを `true` に設定する必要があります。 これをするのは、最適化のためだけにしてください。 使用して、アセンブリの透過的なコードが検証可能なことを確認、`transparent`オプション、 [PEVerify ツール](../../../docs/framework/tools/peverify-exe-peverify-tool.md)です。  
+ <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> プロパティは既定では `false` であるため、検証をスキップするにはこのプロパティを `true` に設定する必要があります。 これをするのは、最適化のためだけにしてください。 使用して、アセンブリの透過的なコードが検証可能なことを確認してください、`transparent`オプション、 [PEVerify ツール](../../../docs/framework/tools/peverify-exe-peverify-tool.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ透過的なコード、レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [セキュリティの変更](../../../docs/framework/security/security-changes.md)
+## <a name="see-also"></a>関連項目
+- [透過的セキュリティ コード、レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [セキュリティの変更](../../../docs/framework/security/security-changes.md)

@@ -2,15 +2,15 @@
 title: CLR メソッドと正規関数とのマッピング
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 31e6bfaf86ffb6721491a8d6681d713075a628f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551580"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR メソッドと正規関数とのマッピング
-Entity Framework は、文字列操作、数学関数などの多くのデータベース システム間で共通の機能を実装する正規関数のセットを提供します。 この関数により、開発者は広範なデータベース システムをターゲットとして指定することができます。 LINQ to Entities などのクエリ テクノロジから呼び出されると、これらの正規関数は使用されているプロバイダーに対応した正しい格納関数に変換されます。 これにより、関数の呼び出しをデータ ソース間で共通の形式で表すことができ、データ ソース間に一貫した方法でクエリを利用できます。 オペランドが数値型である場合は、ビット単位の AND、OR、NOT、および XOR 演算子も正規関数にマップされます。 ブール型のオペランドの場合、ビット単位の AND、OR、NOT、および XOR 演算子は、それぞれのオペランドの論理 AND、OR、NOT、および XOR 演算を計算します。 詳細については、次を参照してください。[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)です。  
+Entity Framework は、文字列操作、数学関数などの多くのデータベース システム間で共通の機能を実装する正規関数のセットを提供します。 この関数により、開発者は広範なデータベース システムをターゲットとして指定することができます。 LINQ to Entities などのクエリ テクノロジから呼び出されると、これらの正規関数は使用されているプロバイダーに対応した正しい格納関数に変換されます。 これにより、関数の呼び出しをデータ ソース間で共通の形式で表すことができ、データ ソース間に一貫した方法でクエリを利用できます。 オペランドが数値型である場合は、ビット単位の AND、OR、NOT、および XOR 演算子も正規関数にマップされます。 ブール型のオペランドの場合、ビット単位の AND、OR、NOT、および XOR 演算子は、それぞれのオペランドの論理 AND、OR、NOT、および XOR 演算を計算します。 詳細については、次を参照してください。[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)します。  
   
  LINQ シナリオの場合、Entity Framework に対するクエリでは、正規関数による、基になるデータ ソース上のメソッドへの特定の CLR メソッドのマッピングも行われます。 正規関数に明示的にマップされない LINQ to Entities クエリで任意のメソッドの呼び出しが実行されると、ランタイムの <xref:System.NotSupportedException> 例外がスローされます。  
   
@@ -40,16 +40,16 @@ Entity Framework は、文字列操作、数学関数などの多くのデータ
 |System.String メソッド (インスタンス)|正規関数|メモ|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|`value` が定数ではない場合、IndexOf(`this`, `value`) &gt; 0 にマップされます。|  
-|Boolean EndsWith(String `value`)|`this` 同様に`'` % `value`'|`value` が定数ではない場合、Right(`this`, length(`value`)) = `value` にマップされます。|  
+|Boolean EndsWith(String `value`)|`this` ような`'` % `value`'|`value` が定数ではない場合、Right(`this`, length(`value`)) = `value` にマップされます。|  
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|`value` が定数ではない場合、IndexOf(`this`, `value`) = 1 にマップされます。|  
 |長さ|Length(`this`)||  
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||  
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||  
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (部分文字列 (`this`、1、 `startIndex`)、部分文字列 (`this`、 `startIndex`  +  `count` +1、長さ (`this`)-(`startIndex` + `count`)))|`startIndex` が 0 以上の整数である場合、サポートされるのは Remove(`count`, `count`) だけです。|  
-システムです。文字列の置換 (文字列`oldValue`、文字列`newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat(Substring(`this`, 1, `startIndex`) , Substring(`this`, `startIndex` + `count` +1, Length(`this`) - (`startIndex` + `count`)))|`startIndex` が 0 以上の整数である場合、サポートされるのは Remove(`count`, `count`) だけです。|  
+システム。文字列の置換 (文字列`oldValue`、文字列`newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|部分文字列 (`this`、 `startIndex` +1 `length`)||  
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|部分文字列 (`this`、 `startIndex` +1、 `length`)||  
 |System.String ToLower()|ToLower(`this`)||  
 |System.String ToUpper()|ToUpper(`this`)||  
 |System.String Trim()|Trim(`this`)||  
@@ -74,7 +74,7 @@ Entity Framework は、文字列操作、数学関数などの多くのデータ
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
-icrosoft です。VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
+備えています。VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
 |Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
 |Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
 |Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  
@@ -196,5 +196,5 @@ icrosoft です。VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |------------|------------------------|  
 |Guid.NewGuid()|NewGuid()|  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>関連項目
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

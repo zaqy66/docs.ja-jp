@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646371"
 ---
 # <a name="3-d-transformations-overview"></a>3-D 変換の概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] グラフィックス システムで 3-D モデルに変換を適用する方法について説明します。 変換を使うと、モデルを定義する基本の値を変更することなく、モデルの位置、サイズ、向きを変更できます。  
@@ -67,7 +67,7 @@ ScaleVector の例
   
  [!code-xaml[animation3dgallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
- 注: [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の 3-D は右手座標系であり、正の回転角度を指定するとモデルは軸を中心に反時計方向に回転します。  
+ 注:[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3-D は右手座標系の軸を中心に反時計回りに回転回転の角度の正の値が得られることを意味するです。  
   
  軸角度の回転は、値が指定されていない場合、回転は原点を想定しています、 <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterX%2A>、 <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterY%2A>、および<xref:System.Windows.Media.Media3D.RotateTransform3D.CenterZ%2A>RotateTransform3D のプロパティ。 拡大縮小と同様に、回転でもモデルの座標空間全体が変換されることを憶えておくと役に立ちます。 モデルが原点を中心として作成されていない場合、または前に平行移動されている場合は、その場での回転ではなく、原点を中心とする "ピボット" になる可能性があります。  
   
@@ -105,7 +105,7 @@ ScaleVector の例
   
  カメラもモデルなので、カメラのプロパティを変換することもできます。  カメラの位置または平面距離を変換することにより (実際には、シーン全体の投影を変換して) シーンの外観を変更できますが、この方法で得られる効果の多くは、シーン内のモデルの場所や位置に適用される変換ほど大きな "視覚的意味" を見ている人に与えられない場合があることに注意してください。  
   
-## <a name="see-also"></a>関連項目  
- [3-D グラフィックスの概要](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>関連項目
+- [3-D グラフィックスの概要](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)
