@@ -2,12 +2,12 @@
 title: '&lt;scopes&gt; の &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705574"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;scopes&gt; の &lt;add&gt;
 クエリの実行中に、サービス エンドポイントのフィルター処理に使用できるカスタム スコープ URI を追加します。  
@@ -16,8 +16,8 @@ ms.locfileid: "54146239"
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<endpointDiscovery >  
-\<スコープ >  
+\<endpointDiscovery>  
+\<scopes>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -52,7 +52,7 @@ ms.locfileid: "54146239"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<スコープ >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|クエリの実行中に、サービス エンドポイントのフィルター処理に使用できるカスタム スコープ URI を指定する構成要素のコレクションを含んでいます。|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|クエリの実行中に、サービス エンドポイントのフィルター処理に使用できるカスタム スコープ URI を指定する構成要素のコレクションを含んでいます。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

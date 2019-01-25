@@ -1,5 +1,5 @@
 ---
-title: 'bypasslist の <add> 要素 (ネットワーク設定)'
+title: bypasslist の &lt;add&gt; 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680781"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>bypasslist の <add> 要素 (ネットワーク設定)
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>bypasslist の &lt;add&gt; 要素 (ネットワーク設定)
 プロキシ バイ パスの一覧には、IP アドレスまたは DNS 名を追加します。  
   
  \<configuration>  
@@ -80,6 +80,6 @@ ms.locfileid: "50235727"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

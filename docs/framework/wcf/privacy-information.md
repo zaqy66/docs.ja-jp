@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683969"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 マイクロソフトは、エンド ユーザーのプライバシー保護に力を入れています。 Windows Communication Foundation (WCF)、バージョン 3.0 を使用してアプリケーションをビルドすると、アプリケーションに、エンドユーザーのプライバシーに関する影響を与える可能性があります。 たとえば、アプリケーションが明示的にユーザーの連絡先情報を収集することがあります。つまり、アプリケーションがインターネットを経由して Web サイトに情報を要求したり、情報を送信したりすることがあります。 マイクロソフトの技術をアプリケーションに組み込んでいる場合、その技術にプライバシーに影響を与える可能性がある独自の動作が存在することがあります。 WCF 送信しませんすべての情報を Microsoft、アプリケーションからまたはエンドユーザーが選択する場合を除き。  
@@ -95,7 +95,7 @@ ms.locfileid: "49086675"
 ### <a name="tracing"></a>トレース  
  WCF インフラストラクチャの診断機能は、トランスポートとサービス モデル レイヤーでは、アクティビティとこれらのメッセージに関連付けられたイベントを通過するメッセージを記録します。 この機能は既定で無効になっています。 アプリケーションの構成ファイルを使用して有効になっているし、トレース動作は、実行時に、WCF WMI プロバイダーを使用して変更できます。 有効にすると、トレース インフラストラクチャは、メッセージ、アクティビティ、および処理イベントを含んだ診断トレースを構成済みリスナーに出力します。 出力の形式と場所は、管理者が選択するリスナー構成によって決まりますが、通常は XML 形式のファイルです。 管理者は、トレース ファイルでアクセス制御リスト (ACL) を設定する必要があります。 特に、Windows アクティベーション システム (WAS) でホストするとき、管理者は、ファイルがパブリック仮想ルート ディレクトリから提供されていないことを確認する必要があります (提供されることを望まない場合)。  
   
- トレースには、メッセージ ログとサービス モデル診断トレースの 2 種類があります。この 2 種類のトレースについて次のセクションで説明します。 この 2 つのトレースは、それぞれ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> と <xref:System.ServiceModel> というトレース ソースから構成されます。 このログ トレース ソースは両方とも、アプリケーションにローカルなデータを取り込みます。  
+ 2 つの種類のトレースがあります。メッセージ ログと診断のサービス モデルはトレース、次のセクションで説明します。 この 2 つのトレースは、それぞれ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> と <xref:System.ServiceModel> というトレース ソースから構成されます。 このログ トレース ソースは両方とも、アプリケーションにローカルなデータを取り込みます。  
   
 ### <a name="message-logging"></a>メッセージ ログ  
  メッセージ ログのトレース ソース (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) によって管理者は、システムを通過するメッセージをログに記録できます。 ユーザーは構成によって、メッセージ全体またはメッセージ ヘッダーだけをログに記録するかどうか、トランスポート レイヤーまたはサービス モデル レイヤーでログに記録するかどうか、および形式が正しくないメッセージをログに記録するかどうかを設定できます。 また、ユーザーは、フィルター処理を設定して、ログに記録するメッセージを制限できます。  
@@ -163,7 +163,7 @@ ms.locfileid: "49086675"
   
  >  
   
- \<条件の NotBefore"[dateTime]"NotOnOrAfter を = ="[dateTime]">  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
  \<AudienceRestrictionCondition>  
   
@@ -183,7 +183,7 @@ ms.locfileid: "49086675"
   
  \<アドバイス >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
  \<アサーション > [アサーション]\</Assertion > *  
   
@@ -213,7 +213,7 @@ ms.locfileid: "49086675"
   
  \<SubjectConfirmation >  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData > でしょうか。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49086675"
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</属性 > +  
+ \</Attribute>+  
   
  \</AttributeStatement>*  
   
@@ -289,7 +289,7 @@ ms.locfileid: "49086675"
   
  \<証拠 >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
  \<アサーション > [アサーション]\</Assertion > +  
   
@@ -401,6 +401,6 @@ ms.locfileid: "49086675"
   
  Web サービス記述言語 (WSDL) には、ポートの定義が入ります。 各ポートには、エンドポイント アドレス、およびアプリケーションが使用するサービスを表すバインディングがあります。 WSDL の公開は、構成を使用して無効にできます。 コンピューターに保持される情報はありません。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>関連項目
+- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)

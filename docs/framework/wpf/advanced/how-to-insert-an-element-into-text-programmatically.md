@@ -1,5 +1,5 @@
 ---
-title: '方法 : プログラムでテキストに要素を挿入する'
+title: '方法: プログラムでテキストに要素を挿入する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - TextPointer objects [WPF]
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-ms.openlocfilehash: 8eaf0c6a1e3ad3c64800f8611aba555110aa4c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 460524a88427ef5fa822461a7bb985426fefea53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693189"
 ---
-# <a name="how-to-insert-an-element-into-text-programmatically"></a>方法 : プログラムでテキストに要素を挿入する
-次の例は、2 つを使用する方法を示しています。<xref:System.Windows.Documents.TextPointer>を適用するテキスト内での範囲を指定するオブジェクト、<xref:System.Windows.Documents.Span>する要素。  
+# <a name="how-to-insert-an-element-into-text-programmatically"></a>方法: プログラムでテキストに要素を挿入する
+次の例は、2 つを使用する方法を示しています。<xref:System.Windows.Documents.TextPointer>を適用するテキスト内の範囲を指定するオブジェクト、<xref:System.Windows.Documents.Span>する要素。  
   
 ## <a name="example"></a>例  
  [!code-csharp[FlowMiscSnippets_procedural_snip#InsertInlineIntoTextExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_procedural_snip/CSharp/InsertInlineIntoTextExample.cs#insertinlineintotextexamplewholepage)]
@@ -28,5 +29,5 @@ ms.lasthandoff: 05/04/2018
   
  ![テキストの範囲に適用される Span 要素](../../../../docs/framework/wpf/advanced/media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
-## <a name="see-also"></a>関連項目  
- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>関連項目
+- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

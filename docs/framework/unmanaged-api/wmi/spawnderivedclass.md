@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715554"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 関数
 指定したオブジェクトから新たに派生するクラス オブジェクトが作成されます。    
@@ -47,7 +47,7 @@ HRESULT SpawnDerivedClass (
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `lFlags`  
-[in]予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
 
 `ppNewClass`  
 [out]新しいクラス定義のオブジェクトへのポインターを受け取ります。 新しいオブジェクトでないエラーが発生する場合、返されると`ppNewClass`は左未変更の状態します。 その値にすることはできません`null`します。
@@ -73,12 +73,12 @@ HRESULT SpawnDerivedClass (
 
 返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。 この動作を上書きすることはできません。 サブクラス (派生クラス) を作成できる他の方法はありません。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

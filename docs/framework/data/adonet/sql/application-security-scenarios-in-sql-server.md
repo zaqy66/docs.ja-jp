@@ -2,12 +2,12 @@
 title: SQL Server におけるアプリケーション セキュリティのシナリオ
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 42afe27c11eadff935e162128b3d5f18c1cba8a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687454"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server におけるアプリケーション セキュリティのシナリオ
 安全な SQL Server クライアント アプリケーションを作成するにあたって、絶対に正しいという唯一の方法はありません。 アプリケーションの要件、配置環境、およびユーザー数は、アプリケーションごとに異なります。 配置した当初は十分なセキュリティが確保されたアプリケーションも、時間の経過と共に安全性が低下してゆくことが考えられます。 将来発生する脅威を正確に予測することは不可能です。  
@@ -56,8 +56,8 @@ ms.locfileid: "45994044"
  [SQL Server での複数データベースにまたがるアクセスの有効化](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  セキュリティを損なうことなく複数データベースにまたがるアクセスを有効にする方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

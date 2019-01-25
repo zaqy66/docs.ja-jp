@@ -2,12 +2,12 @@
 title: 実行時における DynamicActivity を使用したアクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733208"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>実行時における DynamicActivity を使用したアクティビティの作成
 <xref:System.Activities.DynamicActivity> は、パブリック コンストラクターを持つ、具体的なシール クラスです。 <xref:System.Activities.DynamicActivity> は、実行時にアクティビティ DOM を使用してアクティビティの機能を構築するために使用できます。  
@@ -74,7 +74,7 @@ ms.locfileid: "48583875"
   
 2.  選択**ファイル**、**新しい**、**プロジェクト**します。 選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。 選択**ワークフロー コンソール アプリケーション**で、**テンプレート**ウィンドウ。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
   
-3.  HelloActivity プロジェクトの Workflow1.xaml を開きます。 をクリックして、**引数**デザイナーの下部にあるオプション。 `In` 型の `TextToWrite` という新しい `String` 引数を作成します。  
+3.  HelloActivity プロジェクトの Workflow1.xaml を開きます。 をクリックして、**引数**デザイナーの下部にあるオプション。 `String` 型の `TextToWrite` という新しい `In` 引数を作成します。  
   
 4.  ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**デザイナー画面には、ツールボックスのセクション。 値を割り当てる`TextToWrite`を**テキスト**アクティビティのプロパティ。  
   

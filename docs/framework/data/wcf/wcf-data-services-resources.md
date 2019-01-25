@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658157"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services リソース
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の概要に関するトピックは次のとおりです。 これらのトピックの多くには、詳細情報が記載された関連トピックへのリンクも含まれています。  
@@ -47,17 +47,17 @@ ms.locfileid: "44177061"
  [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=91903)  
  データ操作に関する情報やリソースが一度に見つかる場所。  
   
- [データ プラットフォーム操作方法でしょうか。ビデオ: WCF Data Services シリーズ](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [データ プラットフォーム操作方法でしょうか。ビデオ:WCF Data Services シリーズ](https://go.microsoft.com/fwlink/?LinkId=124600)  
  データ サービスのビルドおよびアクセス方法について説明するビデオ スクリーン キャストのセットが提供されています。  
   
- [概要: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [概要:WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の利点に関する概要が記載されたホワイト ペーパー。  
   
  [Microsoft WCF Data Services の使用](https://go.microsoft.com/fwlink/?LinkID=131075)  
  追加情報およびクライアント アプリケーションのデータ サービスの作成とデータ サービスへのアクセスの例が記載されたホワイト ペーパー。  
   
- [The Entity-relationship Model: Toward a Unified View データの](https://go.microsoft.com/fwlink/?LinkId=91909)Peter Pin-shan Chen、Massachusetts Institute of Technology  
+ [The Entity-relationship Model:Toward a Unified View データの](https://go.microsoft.com/fwlink/?LinkId=91909)Peter Pin-shan Chen、Massachusetts Institute of Technology  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] によって実装されるエンティティ リレーショナル モデルの基礎について説明します。 コンピューター分野で最もよく引用される 1976 年に書かれた論文。  
   
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>関連項目
+- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

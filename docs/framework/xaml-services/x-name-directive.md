@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696465"
 ---
 # <a name="xname-directive"></a>x:Name ディレクティブ
 XAML 名前スコープ内の XAML で定義された要素を一意に識別します。 XAML 名前スコープとその一意性モデルは、フレームワーク Api を提供または実行時に、XAML で作成されたオブジェクト グラフへのアクセスの動作を実装するときに、インスタンス化されたオブジェクトに適用できます。  
@@ -66,7 +66,7 @@ XAML 名前スコープ内の XAML で定義された要素を一意に識別し
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
  Silverlight 用の `x:Name` に関しては、別途ドキュメントが用意されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [WPF のツリー](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
+- [WPF のツリー](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

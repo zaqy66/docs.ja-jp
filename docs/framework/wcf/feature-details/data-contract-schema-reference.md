@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662583"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
 ここでは、XML シリアル化用の共通言語ランタイム (CLR) 型を表すために <xref:System.Runtime.Serialization.DataContractSerializer> が使用する XML スキーマ (XSD) のサブセットについて説明します。  
@@ -56,13 +56,13 @@ ms.locfileid: "54030530"
 |--------------|------------|  
 |`include`|サポートされています。 `DataContractSerializer` では xs:include と xs:import がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
 |`redefine`|禁止。 セキュリティ上の理由により、 `xs:redefine` では、 `DataContractSerializer` の使用が禁止されています。 `x:redefine` では、 `schemaLocation` を後続させる必要があります。 状況によっては、DataContract を使用する Svcutil.exe では、 `schemaLocation`の使用が制限されます。|  
-|`import`|サポートされています。 `DataContractSerializer` では、 `xs:include` と `xs:import`がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、`include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。`include` されたスキーマ ドキュメントは無視されます。|  
+|`import`|サポートされています。 `DataContractSerializer` では、 `xs:include` と `xs:import`がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
 |`simpleType`|サポートされています。 `xs:simpleType` のセクションを参照してください。|  
 |`complexType`|サポートされます。データ コントラクトにマッピングされます。 `xs:complexType` のセクションを参照してください。|  
-|`group`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema` の子として無視され、`complexType` やその他のサポートされている構文内から参照できません。|  
+|`group`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
 |`attributeGroup`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
 |`element`|サポートされています。 グローバル要素宣言 (GED) を参照してください。|  
-|`attribute`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema` の子として無視され、`complexType` やその他のサポートされている構文内から参照できません。|  
+|`attribute`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
 |`notation`|無視されます。|  
   
 ## <a name="complex-types--xscomplextype"></a>複合型 – \<xs:complexType >  
@@ -208,7 +208,7 @@ ms.locfileid: "54030530"
   
 -   そのような名前を持つデータ コントラクトが既に存在する場合は、"1"、"2"、"3" などの番号が付加されて一意の名前になります。  
   
-## <a name="simple-types---xssimpletype"></a>単純型 - \<xs:simpleType >  
+## <a name="simple-types---xssimpletype"></a>Simple Types - \<xs:simpleType>  
   
 ### <a name="xssimpletype-attributes"></a>\<xs:simpleType >: 属性  
   
@@ -218,7 +218,7 @@ ms.locfileid: "54030530"
 |`id`|無視されます。|  
 |`name`|サポートされます。データ コントラクト名にマッピングされます。|  
   
-### <a name="xssimpletype-contents"></a>\<xs:simpleType >: コンテンツ  
+### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
   
 |目次|Schema|  
 |--------------|------------|  
@@ -338,7 +338,7 @@ public enum MyEnum
 |`itemType`|禁止。|  
 |`id`|無視されます。|  
   
-### <a name="xslist-contents"></a>\<xs:list >: コンテンツ  
+### <a name="xslist-contents"></a>\<xs:list>: contents  
   
 |目次|Schema|  
 |--------------|------------|  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

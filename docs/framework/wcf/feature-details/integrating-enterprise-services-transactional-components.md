@@ -2,12 +2,12 @@
 title: エンタープライズ サービスのトランザクション コンポーネントの統合
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 1fd338e57dab16a02cd31de6b45d4c5291591043
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 865756506f34fecb1848675205715acfb261ba2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686505"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>エンタープライズ サービスのトランザクション コンポーネントの統合
 Windows Communication Foundation (WCF) は、Enterprise Services と統合するための自動メカニズムを提供します (を参照してください[COM + アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能に基づいているため、<xref:System.Transactions>インフラストラクチャ、WCF を使用した Enterprise Services を統合するためのプロセスは間の相互運用性を指定するのと同じですが<xref:System.Transactions>と」の説明に従って、エンタープライズ サービス[Enterprise Services および COM + トランザクションとの相互運用性](https://go.microsoft.com/fwlink/?LinkId=94949)します。  
@@ -59,7 +59,7 @@ public class CustomerService : ICustomerServiceContract
 }  
 ```  
   
- 操作の現在のトランザクションと、エンタープライズ サービスのトランザクション コンポーネント呼び出しとの間の同期が不要な場合は、<xref:System.Transactions.EnterpriseServicesInteropOption.None> インスタンスのインスタンス化時に <xref:System.Transactions.TransactionScope> オプションを使用する必要があります。  
+ 操作の現在のトランザクションと、エンタープライズ サービスのトランザクション コンポーネント呼び出しとの間の同期が不要な場合は、<xref:System.Transactions.TransactionScope> インスタンスのインスタンス化時に <xref:System.Transactions.EnterpriseServicesInteropOption.None> オプションを使用する必要があります。  
   
 ## <a name="integrating-enterprise-services-with-a-client"></a>エンタープライズ サービスとクライアントの統合  
  <xref:System.Transactions.TransactionScope> を設定した <xref:System.Transactions.EnterpriseServicesInteropOption.Full> インスタンスを使用するクライアント コードを次のコードに示します。 このシナリオでは、トランザクション フローをサポートするサービス操作の呼び出しが、エンタープライズ サービス コンポーネントへの呼び出しと同じトランザクションのスコープ内で発生します。  
@@ -92,6 +92,6 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [COM+ アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [COM アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a>関連項目
+- [COM+ アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [COM アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

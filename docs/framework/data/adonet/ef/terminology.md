@@ -2,12 +2,12 @@
 title: Entity Framework の用語
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 4c0497f3c8069dc7d77bc742b1a7848716a5f4d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b46a695f5984ec23f4a5ef28bd871d6d651c6ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684568"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework の用語
 このトピックで頻繁に参照用語の定義[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ドキュメント。 追加情報を確認できる関連トピックへのリンクも示しています。  
@@ -22,9 +22,9 @@ ms.locfileid: "43857376"
 |ComplexType|キー プロパティを持たないエンティティ型の非スカラー プロパティを表すデータ型の仕様。<br /><br /> 詳細については、次を参照してください。 [ComplexType 要素 (CSDL)](https://msdn.microsoft.com/library/f1c2f311-9889-4b87-abd8-a94f322052e3)と[複合型](../../../../../docs/framework/data/adonet/complex-type.md)します。|  
 |概念モデル|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] のアプリケーションのドメインにおけるエンティティ型、複合型、アソシエーション、エンティティ コンテナー、エンティティ セット、およびアソシエーション セットの抽象的な仕様。 概念モデルは、CSDL で .csdl ファイルに定義されます。<br /><br /> 詳細については、次を参照してください。[モデリング ファイルとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)します。|  
 |.csdl ファイル|CSDL で表現された概念モデルを含む XML ファイル。|  
-|概念スキーマ定義言語 (CSDL)|概念モデルのエンティティ型、関連付け、エンティティ コンテナー、エンティティ セット、および関連付けセットを定義するための XML ベースの言語。<br /><br /> 詳細については、次を参照してください。 [CSDL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)します。|  
+|概念スキーマ定義言語 (CSDL)|概念モデルのエンティティ型、関連付け、エンティティ コンテナー、エンティティ セット、および関連付けセットを定義するための XML ベースの言語。<br /><br /> 詳細については、「 [CSDL Specification](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)」を参照してください。|  
 |コンテナー|エンティティ セットとアソシエーション セットの論理的なグループ。<br /><br /> 詳細については、次を参照してください。 [EntityContainer 要素 (CSDL)](https://msdn.microsoft.com/library/06d03ecb-3b7a-4e7f-95d5-b95307d47a27)と[エンティティ コンテナー](../../../../../docs/framework/data/adonet/entity-container.md)します。|  
-|同時実行|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 既定では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は、オプティミスティック同時実行制御モデルを実装しています。|  
+|コンカレンシー|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 既定では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は、オプティミスティック同時実行制御モデルを実装しています。|  
 |方向|一部のアソシエーションの非対称の性質を表します。 方向は、スキーマの `FromRole` 要素または `ToRole` 要素の `NavigationProperty` 属性と `ReferentialConstraint` 属性で指定されます。<br /><br /> 詳細については、次を参照してください。 [NavigationProperty 要素 (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)と[ナビゲーション プロパティ](../../../../../docs/framework/data/adonet/navigation-property.md)します。|  
 |一括読み込み|関連オブジェクトの特定のセットを、クエリで明示的に要求されたオブジェクトと共に読み込むプロセス。|  
 |.edmx ファイル|概念モデル (CSDL)、ストレージ モデル (SSDL)、および概念モデルとストレージ モデルの間のマッピング (MSL) を含む XML ファイル。 .edmx ファイルは、[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ツールによって作成されます。 詳細については、次を参照してください。 [.edmx ファイルの概要](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)します。|  
@@ -50,7 +50,7 @@ ms.locfileid: "43857376"
 |マッピング仕様言語 (MSL)|概念モデルで定義された項目をストレージ モデルの項目に対応付ける XML ベースの言語。<br /><br /> 詳細については、次を参照してください。 [MSL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)します。|  
 |変更関数|データ ソースでデータを挿入、更新、および削除するために使用されるストアド プロシージャ。 この関数は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で生成されるコマンドの代わりに使用されます。 変更関数は、ストレージ モデルの `Function` 要素で定義されます。 [ModificationFunctionMapping](https://msdn.microsoft.com/library/b44b5b13-9937-448b-ba36-7a0cfefea782)要素が挿入、更新、および概念モデルで定義されているエンティティに対する操作を削除するには、この変更関数をマップします。|  
 |多重度|アソシエーションによって定義されているリレーションシップの両側に存在できるエンティティの数。 カーディナリティとも呼ばれます。<br /><br /> 詳細については、次を参照してください。 [End 要素 (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c)と[アソシエーション end](../../../../../docs/framework/data/adonet/association-end.md)します。|  
-|Multiple-Entity-Sets-per-Type|1 つのエンティティ型を複数のエンティティ セットで定義できる機能。<br /><br /> 詳細については、次を参照してください。 [EntitySet 要素 (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)と[方法: モデルの種類ごとに複数のエンティティ セットを定義](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)します。|  
+|Multiple-Entity-Sets-per-Type|1 つのエンティティ型を複数のエンティティ セットで定義できる機能。<br /><br /> 詳細については、次を参照してください。 [EntitySet 要素 (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)と[方法。型ごとに複数のエンティティ セットでモデルを定義](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)します。|  
 |ナビゲーション プロパティ|アソシエーションによって定義されている別のエンティティ型とのリレーションシップを表すエンティティ型のプロパティ。 ナビゲーション プロパティは、アソシエーションのもう一方の End での複数要素の接続性に応じて、関連オブジェクトを <xref:System.Data.Objects.DataClasses.EntityCollection%601> または <xref:System.Data.Objects.DataClasses.EntityReference%601> として返すために使用されます。<br /><br /> 詳細については、次を参照してください。 [NavigationProperty 要素 (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)と[ナビゲーション プロパティ](../../../../../docs/framework/data/adonet/navigation-property.md)します。|  
 |クエリ パス|オブジェクト クエリの実行時に返す関連オブジェクトを指定するパスの文字列表記。 クエリ パスは、<xref:System.Data.Objects.ObjectQuery%601.Include%2A> に対して <xref:System.Data.Objects.ObjectQuery%601> メソッドを呼び出すことによって定義されます。<br /><br /> 詳細については、次を参照してください。[関連オブジェクトの読み込み](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)します。|  
 |オブジェクト コンテキスト|概念モデルで定義したエンティティ コンテナーを表します。 基になるデータ ソースへの接続を含み、変更の追跡や ID 解決などのサービスを提供します。 オブジェクト コンテキストは、<xref:System.Data.Objects.ObjectContext> クラスまたは `DbContext` クラスのインスタンスで表されます。<br /><br /> `DbContext` 一部である、 [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)します。 Entity Framework 5.0 は .NET Framework の一部ではありませんが、.NET Framework 4.5 で構成されます。 Entity Framework 5.0 は、 [' Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)パッケージ。 詳細については、次を参照してください。 [Entity Framework リリースおよびバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)します。|  
@@ -67,16 +67,16 @@ ms.locfileid: "43857376"
 |ロール|リレーションシップのセマンティクスを明確にするためにアソシエーションの両方の `End` に付けられた名前。<br /><br /> 詳細については、次を参照してください。 [End 要素 (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c)と[アソシエーション end](../../../../../docs/framework/data/adonet/association-end.md)します。|  
 |スカラー プロパティ|ストレージ モデルの単一のフィールドにマップされるエンティティのプロパティ。|  
 |自己追跡エンティティ|スカラー プロパティ、複合プロパティ、およびナビゲーション プロパティの変更を報告できる、テキスト テンプレート変換ツールキット (T4) から構築されるエンティティ。|  
-|単純型|概念モデルでプロパティを定義するために使用されるプリミティブ型。<br /><br /> 詳細については、次を参照してください。[概念モデルの型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)と[Entity Data Model: プリミティブ データ型](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)します。|  
-|分割されたエンティティ|ストレージ モデルの 2 つの別個の型にマップされる 1 つのエンティティ型。<br /><br /> 詳細については、次を参照してください。[方法: 2 つのテーブルにマップされた単一のエンティティでモデルを定義する](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed)します。|  
+|単純型|概念モデルでプロパティを定義するために使用されるプリミティブ型。<br /><br /> 詳細については、次を参照してください[概念モデルの型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)と[Entity Data Model:。プリミティブ データ型](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)します。|  
+|分割されたエンティティ|ストレージ モデルの 2 つの別個の型にマップされる 1 つのエンティティ型。<br /><br /> 詳細については、「[方法 :2 つのテーブルにマップされている 1 つのエンティティでモデルを定義](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed)します。|  
 |ストレージ モデル|リレーショナル データベースなど、サポートされているデータ ソースのデータの論理モデルの定義。 ストレージ モデルは、SSDL で .ssdl ファイルに定義されます。<br /><br /> 詳細については、次を参照してください。[モデリング ファイルとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)と[SSDL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)します。|  
 |.ssdl ファイル|SSDL で表現されたストレージ モデルを含む XML ファイル。|  
 |ストア スキーマ定義言語 (SSDL)|一般的にデータベース スキーマに対応するストレージ モデルのエンティティ型、アソシエーション、エンティティ コンテナー、エンティティ セット、およびアソシエーション セットの定義に使用される XML ベースの言語。<br /><br /> 詳細については、次を参照してください。 [SSDL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)します。|  
 |table-per-hierarchy|あらゆる型の属性を 1 つのテーブル内の階層構造に含める、データベースにおける型階層のモデリング手法。|  
 |table-per-type|一対一リレーションシップを持った複数のテーブルを使用して各種の型をモデリングする、データベースにおける型階層のモデリング手法。|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [はじめに](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Entity Framework のリソース](../../../../../docs/framework/data/adonet/ef/resources.md)
+## <a name="see-also"></a>関連項目
+- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [はじめに](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Entity Framework のリソース](../../../../../docs/framework/data/adonet/ef/resources.md)

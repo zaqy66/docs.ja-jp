@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2b2a5301defabde44c4f5a98e57bd302fe390d53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671877"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;要素
 リモート ソースから読み込まれたアセンブリに対して、.NET Framework 4 以降の完全な信頼を付与するかどうかを指定します。
@@ -21,7 +21,7 @@ ms.locfileid: "53611400"
 >  場合は、Visual Studio プロジェクトのエラー一覧またはビルド エラーのエラー メッセージのため、このトピックにダイレクトされたを参照してください。[方法。Visual Studio で Web からアセンブリを使用して](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)します。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>構文  
@@ -117,8 +117,8 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 ## <a name="see-also"></a>関連項目
 
-- [CAS ポリシーの暗黙的な複数の使用: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-- [方法: サンド ボックスで部分信頼コードを実行します。](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [CAS ポリシーの暗黙的な複数の使用: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [方法: サンド ボックスで部分信頼コードを実行します。](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

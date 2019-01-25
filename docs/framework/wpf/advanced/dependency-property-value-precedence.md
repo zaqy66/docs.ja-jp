@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711276"
 ---
 # <a name="dependency-property-value-precedence"></a>依存関係プロパティ値の優先順位
 <a name="introduction"></a>このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの動作が依存関係プロパティの値に与える影響と、システムのさまざまな部分がプロパティの有効な値に適用する優先順位について説明します。  
@@ -126,9 +126,9 @@ ms.locfileid: "46696796"
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue と値の優先順位  
  <xref:System.Windows.DependencyObject.ClearValue%2A>メソッドが任意のローカルで適用された要素が設定されている依存関係プロパティ値をクリアする便利な手段を提供します。 ただし、呼び出す<xref:System.Windows.DependencyObject.ClearValue%2A>プロパティの登録中にメタデータで確立されると、既定値は、新しい有効な値である保証はありません。 値の優先順位に関係する他のすべての要因はアクティブなままです。 ローカルで設定された値が優先順位のシーケンスから削除されるだけです。 呼び出す場合など、<xref:System.Windows.DependencyObject.ClearValue%2A>テーマのスタイルによってもそのプロパティを設定し、テーマの値がメタデータに基づく既定ではなく、新しい値として適用されるプロパティ。 依存関係プロパティ メタデータ、その後のクエリを実行して選択肢の既定値が既定値をローカルで使用できることを取得するには、プロセス外のすべてのプロパティ値の参加者を受け取り、登録されているメタデータの既定値を設定する場合は、呼び出しにプロパティを設定<xref:System.Windows.DependencyObject.SetValue%2A>します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [依存関係プロパティのコールバックと検証](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [依存関係プロパティのコールバックと検証](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

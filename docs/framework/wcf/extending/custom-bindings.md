@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9257a16b1f15290a8b997e8d12d5570349d88dde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720550"
 ---
 # <a name="custom-bindings"></a>カスタム バインディング
 システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用できます。 すべてのバインディングは、バインド要素の順序付き集合から作成されます。 カスタム バインドは、一連のシステム指定のバインド要素から作成したり、ユーザー定義のカスタム バインド要素を含めたりできます。 カスタム バインド要素を使用すると、たとえば、新しいトランスポートまたはエンコーダーをサービス エンドポイントで使用できるようになります。 実施例については、次を参照してください。[カスタム バインドのサンプル](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)します。 詳細については、次を参照してください。 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。  
@@ -67,15 +67,15 @@ ms.locfileid: "47192811"
 |トランザクション|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|いいえ|  
 |信頼性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Ｘ|  
 |セキュリティ|<xref:System.ServiceModel.Channels.SecurityBindingElement>|いいえ|  
-|エンコード|テキスト、バイナリ、MTOM (Message Transmission Optimization Mechanism)、カスタム|はい|  
-|Transport|TCP、HTTP、HTTPS、名前付きパイプ (IPC)、ピアツーピア (P2P)、メッセージ キュー (MSMQ)、カスタム|はい|  
+|エンコード|テキスト、バイナリ、MTOM (Message Transmission Optimization Mechanism)、カスタム|[はい]|  
+|Transport|TCP、HTTP、HTTPS、名前付きパイプ (IPC)、ピアツーピア (P2P)、メッセージ キュー (MSMQ)、カスタム|[はい]|  
   
  さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。  
   
-## <a name="see-also"></a>関連項目  
- [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [方法 : システム指定のバインディングをカスタマイズする](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [カスタム バインド](../../../../docs/framework/wcf/samples/custom-binding.md)
+## <a name="see-also"></a>関連項目
+- [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [方法: システム指定のバインディングをカスタマイズします。](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [カスタム バインド](../../../../docs/framework/wcf/samples/custom-binding.md)

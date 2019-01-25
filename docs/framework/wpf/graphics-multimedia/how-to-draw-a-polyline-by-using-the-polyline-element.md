@@ -1,5 +1,5 @@
 ---
-title: '方法 : ポリライン要素を使用してポリラインを描画する'
+title: '方法: ポリライン要素を使用してポリラインを描画する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - connected lines [WPF]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: d065d3cead1ed9746a9615ce2bb6d3ec4cbd614d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c4aab17958180710c392491a27cc22fa006f8c5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688975"
 ---
-# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>方法 : ポリライン要素を使用してポリラインを描画する
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>方法: ポリライン要素を使用してポリラインを描画する
 この例を使用して一連の接続線、多角形を描画する方法を示しています、<xref:System.Windows.Shapes.Polyline>要素。  
   
  ポリラインを描画するために作成、<xref:System.Windows.Shapes.Polyline>要素と使用してその<xref:System.Windows.Shapes.Polyline.Points%2A>図形の頂点を指定するプロパティ。 最後に、使用して、<xref:System.Windows.Shapes.Shape.Stroke%2A>と<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>線なしの行が表示されないため、ポリラインを記述するプロパティが説明します。  
@@ -34,9 +34,9 @@ ms.locfileid: "43855431"
   
  この例より大きなサンプルの一部です。サンプル全体については、次を参照してください。 [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Polyline>  
- <xref:System.Windows.Shapes.Polygon>  
- <xref:System.Windows.Shapes.Shape>  
- [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Shapes.Polyline>
+- <xref:System.Windows.Shapes.Polygon>
+- <xref:System.Windows.Shapes.Shape>
+- [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)

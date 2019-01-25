@@ -3,12 +3,12 @@ title: WSFederation 認証モジュールの概要
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: bff3875b5f2f3ac187796d89fcd6da31ba911362
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703667"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 認証モジュールの概要
 Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-FAM) を通じて ASP.NET アプリケーションでのフェデレーション認証をサポートします。 このトピックは、フェデレーション認証の動作とその使用方法の理解に役立ちます。  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
   
  WS-FAM を構成して、未認証の要求のリダイレクト先に対して STS を指定します。 WIF では次の 2 つの方法でユーザーを認証できます。  
   
-1.  受動リダイレクト: 未認証ユーザーが保護されたリソースにアクセスしようとした場合、ログイン ページを必要とすることなく STS にリダイレクトできます。これは適切な方法です。 STS はユーザーの ID を検証し、そのユーザーの適切なクレームを含むセキュリティ トークンを発行します。 このオプションでは WS-FAM を HTTP モジュールのパイプラインに追加する必要があります。 Identity and Access Tool for Visual Studio 2012 を使用することで、WS-FAM を使用して STS でフェデレーションを実行するようアプリケーションの構成ファイルを変更できます。 詳細については、「[Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)」を参照してください。  
+1.  受動リダイレクト:保護されたリソースにアクセスしようとしているユーザーが認証されていないと、単にログイン ページを必要とせず、STS にリダイレクトする、この適切なアプローチです。 STS はユーザーの ID を検証し、そのユーザーの適切なクレームを含むセキュリティ トークンを発行します。 このオプションでは WS-FAM を HTTP モジュールのパイプラインに追加する必要があります。 Identity and Access Tool for Visual Studio 2012 を使用することで、WS-FAM を使用して STS でフェデレーションを実行するようアプリケーションの構成ファイルを変更できます。 詳細については、「[Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)」を参照してください。  
   
 2.  RP アプリケーションのサインイン ページ用の分離コードから <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> メソッドまたは <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> メソッドを呼び出すことができます。  
   
@@ -139,7 +139,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

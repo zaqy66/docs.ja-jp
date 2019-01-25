@@ -2,12 +2,12 @@
 title: LINQ Querying2 のデータ ソースを有効にします。
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 6d2601e807a00ce2a6f8c342a565f5542ffc8f5b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676498"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 
@@ -29,7 +29,7 @@ ms.locfileid: "48582828"
  インメモリ データの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にする方法は 2 つあります。 データ型が <xref:System.Collections.Generic.IEnumerable%601> を実装する型の場合、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects を使用してデータをクエリすることができます。 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装して型の列挙体を有効にしても意味がない場合は、その型の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準クエリ演算子メソッドを定義するか、または型を拡張する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準クエリ演算子メソッドを作成することができます。 標準クエリ演算子のカスタム実装は、結果を返すために遅延実行を使用する必要があります。
 
 ### <a name="remote-data"></a>リモート データ
- リモート データ ソースの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にするための最善の選択肢は、<xref:System.Linq.IQueryable%601> インターフェイスを実装することです。 しかしこれは、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などのプロバイダーをデータ ソースに対して拡張することとは別です。 既存を拡張するためにプロバイダー モデル[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]テクノロジなど[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]を他の種類のデータ ソースは Visual Studio 2008 で使用できます。
+ リモート データ ソースの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にするための最善の選択肢は、<xref:System.Linq.IQueryable%601> インターフェイスを実装することです。 しかしこれは、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などのプロバイダーをデータ ソースに対して拡張することとは別です。 Visual Studio 2008 では、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などの既存の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] テクノロジを別の型のデータ ソースに拡張するためにプロバイダー モデルを使用することができません。
 
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ プロバイダー
  <xref:System.Linq.IQueryable%601> を実装する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーの複雑度にはかなりのばらつきがあります。 このセクションでは、さまざまなレベルの複雑度について説明します。

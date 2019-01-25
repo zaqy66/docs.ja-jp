@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 847ec4d861136b46383ce7d3801764f3d962049e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff026ddd9f9dc7c1556c55b285958dad7139e8eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699312"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
-ネイティブ関数ポインターに対するデリゲートを作成するときに、無効な関数ポインターが渡されると、`invalidFunctionPointerInDelegate` マネージ デバッグ アシスタント (MDA) がアクティブ化されます。  
+ネイティブ関数ポインターに対するデリゲートを作成するときに、無効な関数ポインターが渡されると、`invalidFunctionPointerInDelegate` マネージド デバッグ アシスタント (MDA) がアクティブ化されます。  
   
 ## <a name="symptoms"></a>症状  
  関数ポインターでデリゲートを使用すると、アクセス違反または予期しないメモリの破損が発生します。  
@@ -48,7 +48,7 @@ ms.locfileid: "33390875"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

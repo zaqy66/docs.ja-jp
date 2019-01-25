@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: df4aa7f3bf046ec871333f665ab77fa460c4095c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660425"
 ---
 # <a name="animation-tips-and-tricks"></a>アニメーションのヒントとテクニック
 アニメーションを扱うときに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ヒントがいくつか、およびアニメーションを実行できるテクニックはパフォーマンスを向上させ、不満を解消します。  
@@ -105,7 +105,7 @@ ms.locfileid: "48842773"
   
  アニメーションを削除する別の方法もあります。 属するアニメーションを削除する、次の手法を使用できます、<xref:System.Windows.Media.Animation.Storyboard>します。  
   
--   削除する、<xref:System.Windows.Media.Animation.Storyboard>イベント トリガーで開始したを参照してください[方法: ストーリー ボードを削除](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))します。  
+-   削除する、<xref:System.Windows.Media.Animation.Storyboard>イベント トリガーで開始したを参照してください[方法。ストーリー ボードを削除](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))します。  
   
 -   コードを使用して、削除する、<xref:System.Windows.Media.Animation.Storyboard>を参照してください、<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>メソッド。  
   
@@ -128,5 +128,5 @@ ms.locfileid: "48842773"
   
  クロック オブジェクトの詳細については、次を参照してください。[アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>関連項目
+- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

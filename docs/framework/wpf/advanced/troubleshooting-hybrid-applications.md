@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e8b8d6f59525720def413b2d19f048d3cff329c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710119"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>ハイブリッド アプリケーションのトラブルシューティング
 <a name="introduction"></a> このトピックでは、両方を使用するハイブリッド アプリケーションを作成するときに発生する可能性がある一般的な問題を示します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]テクノロジ。  
@@ -88,7 +88,7 @@ ms.locfileid: "45972755"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>視覚スタイルを有効にする  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 上の visual スタイルを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]制御を有効にしない場合があります。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>用のテンプレートでメソッドが呼び出された、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション。 使用する場合、既定では、このメソッドが呼び出されませんが[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]取得するは、プロジェクトを作成する[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]Comctl32.dll のバージョン 6.0 が使用可能な場合は、コントロールのビジュアルをスタイル設定します。 呼び出す必要があります、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド ハンドルは、スレッドで作成する前にします。 詳細については、次を参照してください。[方法: ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)します。  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 上の visual スタイルを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]制御を有効にしない場合があります。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>用のテンプレートでメソッドが呼び出された、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション。 使用する場合、既定では、このメソッドが呼び出されませんが[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]取得するは、プロジェクトを作成する[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]Comctl32.dll のバージョン 6.0 が使用可能な場合は、コントロールのビジュアルをスタイル設定します。 呼び出す必要があります、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド ハンドルは、スレッドで作成する前にします。 詳細については、「[方法 :ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)します。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>ライセンスされたコントロール  
@@ -114,13 +114,13 @@ ms.locfileid: "45972755"
 ## <a name="elementhost-and-ime"></a>ElementHost と IME  
  ホストされている WPF コントロール、<xref:System.Windows.Forms.Integration.ElementHost>はサポートされていません、<xref:System.Windows.Forms.Control.ImeMode%2A>プロパティ。 変更<xref:System.Windows.Forms.Control.ImeMode%2A>によってホストされるコントロールは無視されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [WPF デザイナーでの相互運用性](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Windows フォームと WPF の相互運用性入力アーキテクチャ](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [方法: ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [WindowsFormsHost 要素のレイアウトに関する考慮事項](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Windows フォームと WPF プロパティの割り当て](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Windows フォーム デザイナーでのデザイン時エラー](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [WPF デザイナーでの相互運用性](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)
+- [Windows フォームと WPF の相互運用性入力アーキテクチャ](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
+- [方法: ハイブリッド アプリケーションで視覚スタイルを有効にします。](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost 要素のレイアウトに関する考慮事項](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Windows フォームと WPF プロパティの割り当て](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Windows フォーム デザイナーでのデザイン時エラー](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

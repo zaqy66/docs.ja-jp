@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 5735b5104884a702a649a029116be7446424ec67
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603845"
 ---
 # <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>メンバーの型&#39; &lt;membername&gt; &#39; CLS 準拠ではありません
 このメンバーが指定されたデータ型の一部、 [Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS)。 これはないため、エラー、コンポーネント内で、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]と Visual Basic は、このデータ型をサポートします。 ただし、厳密に CLS 準拠コードで記述された別のコンポーネントでは、このデータ型がサポートしない可能性があります。 このようなコンポーネントはできないコンポーネントを正常にやり取りすることがあります。  
@@ -27,7 +27,7 @@ ms.locfileid: "43480997"
   
 -   [UShort データ型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- 既定では、このメッセージは警告です。 警告を非表示または警告をエラーとして扱う方法の詳細については、次を参照してください。 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)します。  
+ 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   
  **エラー ID:** BC40025  
   
@@ -41,6 +41,6 @@ ms.locfileid: "43480997"
   
 -   オートメーション オブジェクトや COM オブジェクトとやり取りする場合は、一部の型のデータ幅が [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] とは異なることに注意してください。 たとえば、他の多くの環境では `uint` は 16 ビットです。 このようなコンポーネントに 16 ビットの引数を渡す場合の宣言として`UShort`の代わりに`UInteger`管理対象の Visual Basic コードです。  
   
-## <a name="see-also"></a>関連項目  
- [リフレクション](../../../framework/reflection-and-codedom/reflection.md)  
- 
+## <a name="see-also"></a>関連項目
+- [リフレクション](../../../framework/reflection-and-codedom/reflection.md)
+

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-ms.openlocfilehash: e40373dd05e59325cdb6c2272d5749f3828b0755
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9356ca85003987eabf4f62a25acad45d73e144fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627240"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip コントロールの概要
 <xref:System.Windows.Forms.StatusStrip> コントロールには、<xref:System.Windows.Forms.Form> に表示されているオブジェクト、そのオブジェクトのコンポーネント、またはそのオブジェクトのアプリケーション内での操作に関連するコンテキストについての情報を表示します。 通常、<xref:System.Windows.Forms.StatusStrip> コントロールは <xref:System.Windows.Forms.ToolStripStatusLabel> オブジェクトで構成され、それら各オブジェクトに、テキスト、アイコン、またはその両方が表示されます。 <xref:System.Windows.Forms.StatusStrip> には、<xref:System.Windows.Forms.ToolStripDropDownButton>、<xref:System.Windows.Forms.ToolStripSplitButton>、および <xref:System.Windows.Forms.ToolStripProgressBar> の各コントロールを組み込むこともできます。  
@@ -41,7 +41,7 @@ ms.locfileid: "43864564"
 |<xref:System.Windows.Forms.ToolStripSplitButton>|標準のボタンとドロップダウン メニューという 2 つの部分から成るコントロールを表します。|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|処理の完了状態を表示します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.StatusStrip>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.StatusStrip>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>

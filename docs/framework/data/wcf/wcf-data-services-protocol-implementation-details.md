@@ -2,12 +2,12 @@
 title: WCF Data Services プロトコル実装の詳細
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 1d68e278fbac0137d1a5b2dca2daedba2294a7ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728753"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Data Services プロトコル実装の詳細
 ## <a name="odata-protocol-implementation-details"></a>OData プロトコル実装の詳細  
@@ -22,6 +22,6 @@ ms.locfileid: "47195681"
 ### <a name="default-sorting-behavior"></a>既定の並べ替え動作  
  データ サービスに送信されるクエリ要求に、`$top` または `$skip` システム クエリ オプションが含まれ、`$orderby` システム クエリ オプションが含まれていない場合、返されるフィードはキー プロパティで昇順に並べ替えられます。 これは、結果を正しくページングするには並べ替えが必要であるためです。 そのために、データ サービスがクエリに並べ替え式を追加します。 この動作は、データ サービスでサーバー ドリブン ページングが有効になっている場合にも発生します。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。返されるフィードの順序を制御するには、含める必要がある`$orderby`でクエリの URI。  
   
-## <a name="see-also"></a>関連項目  
- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>関連項目
+- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

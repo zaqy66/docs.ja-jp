@@ -1,5 +1,5 @@
 ---
-title: '方法 : キー コンテナーに非対称キーを格納する'
+title: '方法: キー コンテナーに非対称キーを保存します。'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42a42ee0fe5029dfe8340701595ba9dfab9a026d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680406"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>方法 : キー コンテナーに非対称キーを格納する
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>方法: キー コンテナーに非対称キーを保存します。
 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーの詳細については、「[コンピューター レベルおよびユーザー レベルの RSA キー コンテナーについて](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)」を参照してください。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>非対称キーを作成し、キー コンテナーに格納するには  
@@ -225,7 +225,7 @@ Key deleted.
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [データの暗号化](../../../docs/standard/security/encrypting-data.md)  
-- [データの復号化](../../../docs/standard/security/decrypting-data.md)  
+- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [データの暗号化](../../../docs/standard/security/encrypting-data.md)
+- [データの復号化](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

@@ -1,19 +1,19 @@
 ---
-title: '&lt;AnnouncementEndpoint&gt;'
+title: '&lt;announcementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: fe278da539af59a32edf5a626461dbec0ba3887d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8e180d53260ccf3364ab3c8d7b076f78917526d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729880"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 この構成要素は、固定アナウンス コントラクトが設定されている標準エンドポイントを定義します。 サービスは、サービスが開いたとき、または閉じたときにオンラインおよびオフラインのアナウンス メッセージを送信することによって、その可用性をアナウンスすることもできます。 Windows Communication Foundation (WCF) サービスでアナウンス エンドポイントを指定します、 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)要素と、AnnouncementClient お知らせの実行を使用します。 しようとするその他のサービスからのアナウンスをリッスンするようにクライアントが、WCF サービスとして機能する実際にはクライアントのアナウンス エンドポイントを構成する必要があるため、 [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)セクション。  
   
 \<system.ServiceModel >  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54151645"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。|  
   
 ## <a name="example"></a>例  
  http およびピア ネットワーク経由でアナウンス メッセージをリッスンするクライアントの例を次に示します。  
@@ -78,5 +78,5 @@ ms.locfileid: "54151645"
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

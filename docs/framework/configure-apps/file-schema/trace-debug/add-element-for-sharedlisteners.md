@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b8de4fd8a130f93b2ed3e14701c442a65c9ffcd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712471"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;追加&gt;要素&lt;リスナー&gt;
 `sharedListeners` コレクションにリスナーを追加します。 `sharedListeners` リスナーのコレクションは、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)を参照できます。  既定でリスナーに、`sharedListeners`でコレクションが配置されていない、`Listeners`コレクション。 名前で追加する必要があります、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)します。 リスナーを取得することはできません、`sharedListeners`実行時にコード内のコレクション。  
   
  \<configuration>  
-&nbsp;&nbsp;\<system.diagnostics >  
+&nbsp;&nbsp;\<system.diagnostics>  
 &nbsp;&nbsp;&nbsp;&nbsp;\<上の sharedListeners > 要素  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<追加 >  
   
@@ -110,8 +110,8 @@ ms.locfileid: "53151164"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4183d974dd39caf0ca8a14ff98ab5652c0375906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691412"
 ---
 # <a name="collection-initializers-visual-basic"></a>コレクション初期化子 (Visual Basic)
 *コレクション初期化子*とは、コレクションを作成して一連の初期値を設定できる、短い構文です。 コレクション初期化子は、コレクションを既知の値のセットから作成する場合に便利です。値のセットの例として、メニュー オプションやカテゴリのリスト、数値の初期セット、曜日や月の名前の静的文字列のリスト、検証に使用する州のリストなどの地理的な場所が挙げられます。  
@@ -54,7 +54,7 @@ ms.locfileid: "45991624"
   
  [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]  
   
- `Customer` オブジェクトのコンストラクターと一致するパラメーターを持つ `Add` メソッドがコレクションにある場合、次のセクションで説明するように、コレクション初期化子内に `Add` メソッドのパラメーター値を入れ子にすることができます。 コレクションにこのような `Add` メソッドがない場合、それを拡張メソッドとして作成できます。 コレクションの拡張メソッドとして `Add` メソッドを作成する方法の例については、「[方法: コレクション初期化子で使用される拡張メソッドを作成または追加する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)」を参照してください。 コレクション初期化子で使用できるカスタム コレクションを作成する方法の例については、「[方法: コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)」を参照してください。  
+ `Customer` オブジェクトのコンストラクターと一致するパラメーターを持つ `Add` メソッドがコレクションにある場合、次のセクションで説明するように、コレクション初期化子内に `Add` メソッドのパラメーター値を入れ子にすることができます。 コレクションにこのような `Add` メソッドがない場合、それを拡張メソッドとして作成できます。 作成する方法の例については、 `Add` 、コレクションの拡張メソッドとしてメソッドを参照してください[方法。作成、コレクション初期化子によって使用される拡張メソッドを追加](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)します。 コレクション初期化子で使用できるカスタム コレクションを作成する方法の例は、次を参照してください。[方法。コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)します。  
   
 ## <a name="nesting-collection-initializers"></a>コレクション初期化子を入れ子にする  
  作成するコレクションの `Add` メソッドで固有のオーバーロードを指定するため、コレクション初期化子内の値を入れ子にすることができます。 `Add` メソッドに渡す値は、配列リテラルまたはコレクション初期化子の場合と同じように、コンマで区切り、中かっこ (`{}`) で囲む必要があります。  
@@ -73,18 +73,18 @@ ms.locfileid: "45991624"
   
 |タイトル|説明|  
 |---|---|  
-|[方法: コレクション初期化子で使用される拡張メソッドを作成または追加する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|コレクション初期化子の値をコレクションに入力するために使用できる `Add` と呼ばれる拡張メソッドを作成する方法を示します。|  
-|[方法: コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable` を実装するコレクション クラスに `Add` メソッドを含めてコレクション初期化子を使用できるようにする方法を説明します。|  
+|[方法: 作成、コレクション初期化子によって使用される拡張メソッドを追加](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|コレクション初期化子の値をコレクションに入力するために使用できる `Add` と呼ばれる拡張メソッドを作成する方法を示します。|  
+|[方法: コレクション初期化子を使用してコレクションを作成します。](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable` を実装するコレクション クラスに `Add` メソッドを含めてコレクション初期化子を使用できるようにする方法を説明します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [コレクション](../../../../visual-basic/programming-guide/concepts/collections.md)  
-- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
-- [オブジェクト初期化子 : 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
-- [自動実装プロパティ](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [方法: Visual Basic で配列変数を初期化する](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [方法: 項目のリストを作成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [コレクション](../../../../visual-basic/programming-guide/concepts/collections.md)
+- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [オブジェクト初期化子:名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [自動実装プロパティ](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [方法: Visual Basic で配列変数を初期化します。](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [方法: 項目の一覧を作成します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

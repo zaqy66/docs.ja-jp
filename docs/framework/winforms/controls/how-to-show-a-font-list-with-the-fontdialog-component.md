@@ -1,5 +1,5 @@
 ---
-title: '方法 : FontDialog コンポーネントを使用してフォントの一覧を表示する'
+title: '方法: FontDialog コンポーネントでのフォントの一覧を表示します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fe291df1648da5002ce3173a68208bbad659705d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a9a4bca42117233c4b01a4aeb6cffcb79119d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726404"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>方法 : FontDialog コンポーネントを使用してフォントの一覧を表示する
-[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)コンポーネントにより、ユーザーを幅やサイズなど、表示属性を変更できるだけでなく、フォントを選択します。  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>方法: FontDialog コンポーネントでのフォントの一覧を表示します。
+[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)コンポーネントを重みとサイズなど、表示属性を変更できるだけでなく、フォントを選択してユーザーを使用できます。  
   
- ダイアログ ボックスで選択されているフォントが返されます、<xref:System.Windows.Forms.FontDialog.Font%2A>プロパティです。 したがって、ユーザーが選択されているフォントの利用はプロパティの読み取りと同じくらい簡単です。  
+ ダイアログ ボックスで選択されているフォントが返されます、<xref:System.Windows.Forms.FontDialog.Font%2A>プロパティ。 したがって、ユーザーが選択されているフォントの利用は、プロパティの読み取りと同じくらい簡単です。  
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>FontDialog コンポーネントを使用するフォント プロパティを選択するには  
   
-1.  ダイアログ ボックスを使用して、表示、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッドです。  
+1.  使用して、ダイアログ ボックスを表示、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。  
   
-2.  使用して、<xref:System.Windows.Forms.DialogResult>プロパティ ダイアログ ボックスの終了方法を確認します。  
+2.  使用して、 <xref:System.Windows.Forms.DialogResult>  ダイアログ ボックスが閉じられた方法を決定するプロパティ。  
   
-3.  使用して、<xref:System.Windows.Forms.FontDialog.Font%2A>プロパティを目的のフォントを設定します。  
+3.  使用して、<xref:System.Windows.Forms.FontDialog.Font%2A>目的のフォントを設定するプロパティ。  
   
-     次の例で、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント ハンドラーが表示されます、<xref:System.Windows.Forms.FontDialog>コンポーネントです。 ときに、フォントを選択し、ユーザーが **[ok]**、<xref:System.Windows.Forms.FontDialog.Font%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>がフォームにコントロールが選択されているフォントに設定します。 この例では、フォームに、<xref:System.Windows.Forms.Button>コントロール、<xref:System.Windows.Forms.TextBox>コントロール、および<xref:System.Windows.Forms.FontDialog>コンポーネントです。  
+     次の例で、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント ハンドラーが表示されます、<xref:System.Windows.Forms.FontDialog>コンポーネント。 フォントが選択されると、ユーザーの場合にクリックする **[ok]**、<xref:System.Windows.Forms.FontDialog.Font%2A>のプロパティを<xref:System.Windows.Forms.TextBox>フォーム上にあるコントロールを選択したフォントを設定します。 この例では、フォームに、<xref:System.Windows.Forms.Button>コントロール、<xref:System.Windows.Forms.TextBox>コントロール、および<xref:System.Windows.Forms.FontDialog>コンポーネント。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -66,7 +66,7 @@ ms.locfileid: "33536499"
        }  
     ```  
   
-     (Visual c# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターに次のコードを追加します。  
+     (Visual c# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -76,6 +76,6 @@ ms.locfileid: "33536499"
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.FontDialog>  
- [FontDialog コンポーネント](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.FontDialog>
+- [FontDialog コンポーネント](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

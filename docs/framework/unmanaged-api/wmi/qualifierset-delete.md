@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 860295a3d10acd67f5fb7665a7213dc90e4a4829
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713168"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 関数
 名前によって指定した修飾子が削除されます。  
@@ -55,7 +55,7 @@ HRESULT QualifierSet_Delete (
 
 |定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName`パラメーターが無効です。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` パラメーターが正しくありません。 |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | この修飾子を削除することはできません。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定した修飾子が見つかりませんでした。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
@@ -67,12 +67,12 @@ HRESULT QualifierSet_Delete (
 
 修飾子の伝達の規則により、特定の修飾子可能性があります別のオブジェクトから継承されだけでは、現在のクラスまたはインスタンスでオーバーライドされます。 ここで、`QualifierSet_Delete`メソッドは、元の継承された値に、修飾子をリセットします。 関数は、この場合、状態コードを返します`WBEM_S_RESET_TO_DEFAULT`します。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

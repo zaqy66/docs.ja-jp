@@ -1,20 +1,20 @@
 ---
-title: '方法 : WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する'
+title: '方法: サービスを受け入れる任意のデータを作成、WCF REST プログラミング モデルを使用します。'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666999"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>方法 : WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する
-開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作の形式でのデータがサポートされていません byWCF を返す必要がある場合です。 このトピックでは、WCF REST プログラミング モデルを使用して、任意のデータを受信するサービスを作成するについて説明します。  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>方法: サービスを受け入れる任意のデータを作成、WCF REST プログラミング モデルを使用します。
+開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作をする必要があります形式でデータがサポートされていません byWCF を返す場合に、ケースです。 このトピックでは、WCF REST プログラミング モデルを使用して、任意のデータを受信するサービスを作成するについて説明します。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
   
-1.  サービス コントラクトを定義します。 任意のデータを受信する操作には、<xref:System.IO.Stream> 型のパラメーターが必要です。 さらに、このパラメーターは要求の本文に渡される唯一のパラメーターでなければなりません。 この例で説明されている操作では、filename パラメーターも使用できます。 このパラメーターは要求の URL に格納されて渡されます。 <xref:System.UriTemplate> で <xref:System.ServiceModel.Web.WebInvokeAttribute> を指定すると、パラメーターが URL に格納されて渡されるように指定できます。 この場合は、URI は、呼び出しに使用では、このメソッドは、「UploadFile/一部のファイル名」で終了します。 URI テンプレートの"{filename}"部分では、操作を呼び出すために使用する URI 内で操作の filename パラメーターが渡されることを指定します。  
+1.  サービス コントラクトを定義します。 任意のデータを受信する操作には、<xref:System.IO.Stream> 型のパラメーターが必要です。 さらに、このパラメーターは要求の本文に渡される唯一のパラメーターでなければなりません。 この例で説明されている操作では、filename パラメーターも使用できます。 このパラメーターは要求の URL に格納されて渡されます。 <xref:System.UriTemplate> で <xref:System.ServiceModel.Web.WebInvokeAttribute> を指定すると、パラメーターが URL に格納されて渡されるように指定できます。 この場合は、URI は、呼び出しに使用では、このメソッドは、「UploadFile/一部のファイル名」で終了します。 URI テンプレートの"{filename}"部分は、操作の呼び出しに使用される URI 内で操作の filename パラメーターが渡されることを指定します。  
   
     ```csharp  
      [ServiceContract]  
@@ -193,7 +193,7 @@ namespace ReceiveRawData
   
 -   コードのコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll を参照します。  
   
-## <a name="see-also"></a>関連項目  
- [UriTemplate と UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>関連項目
+- [UriTemplate と UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

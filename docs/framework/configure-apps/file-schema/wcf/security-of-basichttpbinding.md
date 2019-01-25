@@ -2,12 +2,12 @@
 title: '&lt;basicHttpBinding&gt; の &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 870694eae832dd603e511d0b6817c07b08c50614
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9e6a0e864dcb83a529a5ac457e2fcffe0435376f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701171"
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; の &lt;security&gt;
 セキュリティ機能を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)します。  
@@ -65,14 +65,14 @@ ms.locfileid: "54150267"
 ## <a name="remarks"></a>Remarks  
  既定では、SOAP メッセージはセキュリティで保護されず、クライアントは認証されません。 この要素を使用すると、`basicHttpBinding` 要素に追加のセキュリティ設定を構成できます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

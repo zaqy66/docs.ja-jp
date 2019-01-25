@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690047"
 ---
 # <a name="xclass-directive"></a>x:Class ディレクティブ
 マークアップと分離コードの間の部分クラスを結合する XAML マークアップのコンパイルを構成します。 内の別のコード ファイルでコードの部分クラスが定義されている、[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]言語は、通常、マークアップの部分クラスは、XAML のコンパイル時にコードを生成して作成します。  
@@ -60,8 +60,8 @@ ms.locfileid: "43856193"
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
  Silverlight 用の `x:Class` に関しては、別途ドキュメントが用意されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
   
-## <a name="see-also"></a>関連項目  
- [x:Subclass ディレクティブ](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [WPF における XAML とカスタム クラス](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [x:ClassModifier ディレクティブ](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [WPF から System.Xaml に移行した型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>関連項目
+- [x:Subclass ディレクティブ](../../../docs/framework/xaml-services/x-subclass-directive.md)
+- [WPF における XAML とカスタム クラス](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:ClassModifier ディレクティブ](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [WPF から System.Xaml に移行した型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

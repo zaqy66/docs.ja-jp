@@ -3,12 +3,12 @@ title: WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移�
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696189"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン
 ## <a name="applies-to"></a>対象  
@@ -94,7 +94,7 @@ ms.locfileid: "48582516"
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio ツールの変更  
  WIF 3.5 SDK では、スタンドアロンのフェデレーション ユーティリティである FedUtil.exe (FedUtil) が用意されており、これを使用して WIF 対応アプリケーションでの ID 管理をセキュリティ トークン サービス (STS) に外部委託できました。 このツールにより、WIF の設定がアプリケーション構成ファイルに追加され、アプリケーションは 1 つ以上の STS からセキュリティ トークンを取得できました。また **[STS サービス参照の追加]** ボタンによって Visual Studio に表示されました。 FedUtil は WIF 4.5 には付属していません。 代わりに、WIF 4.5 は Identity and Access Tool for Visual Studio 2012 という名前の新しい Visual Studio の拡張ツールをサポートします。これを使用することで、ID 管理を STS に外部委託するために必要な WIF の設定を備えたアプリケーションの構成ファイルを変更できます。 また Identity and Access Tool は、WIF 対応アプリケーションのテストに使用できる Local STS と呼ばれる STS を実装しています。 多くの場合、この機能により、開発中のソリューションをテストするのに WIF 3.5 で頻繁に必要とされたカスタム STS をビルドする必要がなくなりました。 したがって、STS のテンプレートは、Visual Studio 2012 でサポートされなくなりました。ただし、STS の開発をサポートするクラスは WIF 4.5 でも使用できます。  
   
- Visual Studio の Extensions and Updates Manager から Identity and Access Tool をインストールするか、または Code Gallery の「[Identity and Access Tool for Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=245849)」 (Visual Studio 2012 の ID およびアクセス ツール) ページからダウンロードできます。 Visual Studio ツールの変更を次のリストにまとめます。  
+ 拡張機能と Visual Studio Updates Manager から Identity and Access Tool をインストールすることができます。 または Code Gallery 上の次のページからダウンロードすることができます。[Identity and Access Tool for Visual Studio 2012 コード ギャラリー](https://go.microsoft.com/fwlink/?LinkID=245849)します。 Visual Studio ツールの変更を次のリストにまとめます。  
   
 -   [STS サービス参照の追加] 機能は削除されています。 その代わりとなるのが Identity and Access Tool です。  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  WIF 3.5 および WIF 4.5 では多くのクラスが同じ名前を持つため、WIF 3.5 と WIF 4.5 の両方を使用している場合は、完全修飾クラス名、または WIF 3.5 および WIF 4.5 でクラスを区別するための名前空間エイリアスを必ず使用してください。  
   
-## <a name="see-also"></a>関連項目  
- [WIF 構成スキーマ](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [WIF 3.5 と WIF 4.5 間での名前空間マッピング](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Windows Identity Foundation 4.5 の新機能](../../../docs/framework/security/whats-new-in-wif.md)  
- [Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>関連項目
+- [WIF 構成スキーマ](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [WIF 3.5 と WIF 4.5 間での名前空間マッピング](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Windows Identity Foundation 4.5 の新機能](../../../docs/framework/security/whats-new-in-wif.md)
+- [Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

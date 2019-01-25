@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 21b63ab0b4546dc2f4d46c40b02c55fb639320f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7f38d0c0ff42e75067b06835e7e6613f8fa4adcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660652"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 カスタム バインドのメッセージを転送するためにチャネルで使用できる TCP トランスポートを定義します。  
@@ -79,14 +79,14 @@ ms.locfileid: "54151177"
   
  `tcpTransport` 要素は、TCP トランスポート プロトコルを実装するカスタム バインディングを作成する場合の開始点となります。 このトランスポートは、WCF 間の通信用に最適化されています。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.TcpTransportElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.ServiceModel.Configuration.TcpTransportElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 8767ef0fb484d43ffad4888affebb9d6bb74cc3a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1de8afcd7167406f10c4d541e95a0fa68be16611
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658953"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>マネージド HTML DOM (Document Object Model) の非公開メンバーへのアクセス
 マネージ HTML ドキュメント オブジェクト モデル (DOM) と呼ばれるクラスが含まれています<xref:System.Windows.Forms.HtmlElement>プロパティ、メソッド、およびすべての HTML 要素が共通のイベントを公開します。 場合によっては、ただし、必要があります、マネージ インターフェイスを直接公開しないメンバーにアクセスします。 このトピックでは、非公開メンバーにアクセスするための 2 つの方法を調べて[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]と Web ページ内で定義されている VBScript 関数。  
@@ -71,5 +71,5 @@ ms.locfileid: "44086804"
   
  使用して HTML ページで定義する、スクリプト関数を呼び出すことができます、<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>メソッド。 この返される結果に変換するキャストを使用するには、スクリプト メソッドは HTML 要素を返す場合、<xref:System.Windows.Forms.HtmlElement>します。 詳細とコード例では、次を参照してください。<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>します。  
   
-## <a name="see-also"></a>関連項目  
- [マネージド HTML DOM (Document Object Model) の使用](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>関連項目
+- [マネージド HTML DOM (Document Object Model) の使用](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

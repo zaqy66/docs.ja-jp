@@ -2,24 +2,24 @@
 title: バリアント ジェネリック インターフェイス (Visual Basic) の作成
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6afddf018b4608418f82fa851d018f2c3e1d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663259"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>バリアント ジェネリック インターフェイス (Visual Basic) の作成
 インターフェイスのジェネリック型パラメーターは、共変または反変として宣言できます。 "*共変性*" により、インターフェイス メソッドの戻り値の型の派生を、ジェネリック型パラメーターで定義されている型よりも強くすることができます。 "*反変性*" により、インターフェイス メソッドの引数の型の派生を、ジェネリック パラメーターで指定されている型よりも弱くすることができます。 共変または反変のジェネリック型パラメーターを持つジェネリック インターフェイスは、"*バリアント*" と呼ばれます。  
   
 > [!NOTE]
->  .NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、分散のサポートが導入されています。 .NET Framework のバリアントのインターフェイスの一覧で、次を参照してください。[ジェネリック インターフェイス (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)です。  
+>  .NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、分散のサポートが導入されています。 .NET Framework のバリアント インターフェイスの一覧で、次を参照してください。[ジェネリック インターフェイス (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)します。  
   
 ## <a name="declaring-variant-generic-interfaces"></a>バリアント ジェネリック インターフェイスの宣言  
  バリアント ジェネリック インターフェイスは、ジェネリック型パラメーターの `in` キーワードと `out` キーワードを使用して宣言できます。  
   
 > [!IMPORTANT]
->  `ByRef` Visual Basic でのパラメーターは、バリアント型にすることはできません。 また、値の型も変性をサポートしていません。  
+>  `ByRef` Visual Basic でのパラメーターは、バリアントにすることはできません。 また、値の型も変性をサポートしていません。  
   
  ジェネリック型パラメーターを共変として宣言するには、`out` キーワードを使用します。 共変の型は、次の条件を満たす必要があります。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33643888"
     End Interface  
     ```  
   
-     この規則には例外が 1 つあります。 反変の汎用デリゲートをメソッド パラメーターとして使用する場合は、型をデリゲートのジェネリック型パラメーターとして使用できます。 次の例では、型 `R` によって示します。 詳細については、次を参照してください。[デリゲート (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)と[Func および Action 汎用デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)です。  
+     この規則には例外が 1 つあります。 反変の汎用デリゲートをメソッド パラメーターとして使用する場合は、型をデリゲートのジェネリック型パラメーターとして使用できます。 次の例では、型 `R` によって示します。 詳細については、次を参照してください。[デリゲート (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)と[Func および Action 汎用デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)します。  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -73,7 +73,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- Visual basic では、デリゲート型を指定せずバリアント インターフェイスのイベントを宣言できません。 また、バリアント インターフェイスは、クラス、列挙型、または構造体、入れ子ことはできませんが、インターフェイスが入れ子にしたことができます。 これを次のコードに示します。  
+ Visual basic では、デリゲート型を指定せずバリアント インターフェイスのイベントを宣言できません。 また、クラス、列挙型、または構造体、バリアント インターフェイスを入れ子にできませんが、インターフェイスを入れ子にできます。 これを次のコードに示します。  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -145,7 +145,7 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- `Invariant(Of T)`インターフェイス、ジェネリック型パラメーター`T`バリアントではない一方で`IExtCovariant (Of Out T)`型パラメーターが共変で両方のインターフェイスは、同じインターフェイスを拡張します。 これと同じ規則が、反変のジェネリック型パラメーターにも当てはまります。  
+ `Invariant(Of T)`インターフェイス、ジェネリック型パラメーター`T`バリアントでは一方で`IExtCovariant (Of Out T)`型パラメーターが、同じインターフェイスを拡張する両方のインターフェイスが共変です。 これと同じ規則が、反変のジェネリック型パラメーターにも当てはまります。  
   
  拡張インターフェイスのジェネリック型パラメーター `T` が不変であれば、ジェネリック型パラメーター `T` が共変のインターフェイスと反変のインターフェイスの両方を拡張する 1 つのインターフェイスを作成できます。 これを次のコード例に示します。  
   
@@ -225,6 +225,6 @@ End Sub
   
  この例では、`pets.GetEnumerator` メソッドで `Cat` と `Dog` がどのように選択されるかが明らかではありません。 そのため、コードで問題が発生する可能性があります。  
   
-## <a name="see-also"></a>関連項目  
- [ジェネリック インターフェイスの分散 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>関連項目
+- [ジェネリック インターフェイスの分散 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

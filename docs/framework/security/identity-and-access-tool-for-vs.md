@@ -3,12 +3,12 @@ title: Identity and Access Tool for Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 1177048d8124c955220605e52dde539b84510cba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678552"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Identity and Access Tool for Visual Studio 2012
 このトピックでは、新しい Identity and Access Tool for Visual Studio 11 について説明します。 このツールは、次の URL からダウンロードできます: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849)またはから直接、拡張機能マネージャーで直接"id"を検索して、Visual Studio 11。  
@@ -25,7 +25,7 @@ ms.locfileid: "48584163"
   
 -   Active Directory フェデレーション サービス (AD FS) 2.0 (または、他の WS-Federation プロバイダー) を使用して、1 つの画面でフェデレーションを確立できます。  
   
--   ツールでは Microsoft Azure のアクセス制御サービス (ACS) の機能を使用できます。この機能には、使用するすべての ID プロバイダー (Facebook、Google、Live ID、Yahoo! などの OpenID プロバイダー、および WS-Federation プロバイダー) のチェック ボックスが用意されています。 ID プロバイダーのチェック ボックスをオンにして、[OK] をクリックし、F5 キーを押すと、アプリケーションと ACS の両方が自動的に構成され、テスト アプリケーションが ACS 対応になります。  
+-   ツールを使用するすべての id プロバイダーの簡単なチェック ボックスの一覧を Windows Azure の Access Control Service (ACS) 機能を活用します。Facebook、Google、Live ID、yahoo!、OpenID プロバイダー、および任意の Ws-federation プロバイダー。 ID プロバイダーのチェック ボックスをオンにして、[OK] をクリックし、F5 キーを押すと、アプリケーションと ACS の両方が自動的に構成され、テスト アプリケーションが ACS 対応になります。  
   
-## <a name="see-also"></a>関連項目  
- [WIF の機能](../../../docs/framework/security/wif-features.md)
+## <a name="see-also"></a>関連項目
+- [WIF の機能](../../../docs/framework/security/wif-features.md)

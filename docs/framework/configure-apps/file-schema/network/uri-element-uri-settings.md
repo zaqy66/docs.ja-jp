@@ -2,12 +2,12 @@
 title: '&lt;Uri&gt;要素 (Uri 設定)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 2ca5592bd0a66ded25c7da8f0b42367af990aa7a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 48769298246dd71e040aac1c682e0fddfb5de89b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655544"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;要素 (Uri 設定)
 .NET Framework での uniform resource identifier (Uri) を使用して表現された web アドレスの処理方法を指定する設定が含まれています。  
@@ -67,5 +67,5 @@ ms.locfileid: "50192188"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 86ded7351d435b3a7077f0354d8a923b33a3f2b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f48f9486c5d29fc0b70e4487a12a1c499235cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732649"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework クライアント アプリケーションの作成 (WCF Data Services クイック スタート)
 
@@ -23,7 +23,7 @@ ms.locfileid: "44216504"
 
 1.  **ソリューション エクスプ ローラー**は、ソリューションを右クリックし、[**追加**、] をクリックし、**新しいプロジェクト**します。
 
-2.  左側のウィンドウで次のように選択します**インストール済み**> [**Visual c#** または**Visual Basic**] > **Windows デスクトップ**、を選び、 **。WPF アプリ**テンプレート。
+2.  左側のウィンドウで次のように選択します。**インストール済み**> [**Visual C#** または**Visual Basic**] > **Windows デスクトップ**、し、を選択します。**WPF アプリ**テンプレート。
 
 3.  入力`NorthwindClient`プロジェクト名、およびクリックの**OK**。
 

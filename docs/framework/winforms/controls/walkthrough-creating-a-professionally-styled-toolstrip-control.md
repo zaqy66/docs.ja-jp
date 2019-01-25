@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : プロフェッショナル スタイルの ToolStrip コントロールの作成'
+title: 'チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 6435f33489be1355313e43a046b0e3169e1eaea3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714894"
 ---
-# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>チュートリアル : プロフェッショナル スタイルの ToolStrip コントロールの作成
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成
 アプリケーションを与えることができます<xref:System.Windows.Forms.ToolStrip>から派生した独自のクラスを記述することで、プロフェッショナルな外観と動作を制御、<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型。  
   
  このチュートリアルを使用する方法について説明<xref:System.Windows.Forms.ToolStrip>に似た複合コントロールを作成するコントロール、**ナビゲーション ウィンドウ**Microsoft® Outlook® で提供されます。 このチュートリアルで、次のタスクを示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "43861974"
   
  完了したら、Microsoft Office® XP のコントロールのプロフェッショナルな外観のカスタム クライアントを再利用可能なコントロールがあります。  
   
- このトピックの「単一のリストとしてコードをコピーするに、を参照してください。[方法: プロフェッショナル スタイルの ToolStrip コントロールの作成](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)です。  
+ このトピックの「単一のリストとしてコードをコピーするに、を参照してください。[方法。プロフェッショナル スタイルの ToolStrip コントロールを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "43861974"
   
 2.  **ソリューション エクスプ ローラー**、選択した言語に応じて"UserControl1.cs"または「[usercontrol1.vb]」をという名前のソース ファイルを削除することによって、プロジェクトの既定のコントロールを削除します。  
   
-     詳細については、次を参照してください。 [NIB: 方法: 削除、削除、および除外項目](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)します。  
+     詳細については、次を参照してください。 [NIB: 方法。削除、削除、および項目を除外](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)します。  
   
 3.  新しい追加<xref:System.Windows.Forms.UserControl>項目を**StackViewLibrary**プロジェクト。 新しいソース ファイルの基本の名前を付けます`StackView`します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "43861974"
   
 1.  Windows フォーム デザイナーで、選択、`StackView`コントロール。  
   
-2.  **プロパティ**ウィンドウで、をクリックして**イベント**します。  
+2.  **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
   
 3.  Load イベントをダブルクリックして、`StackView_Load`イベント ハンドラー。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "43861974"
   
 5.  Windows フォーム デザイナーで、選択、`mailStackButton`コントロール。  
   
-6.  **プロパティ**ウィンドウで、をクリックして**イベント**します。  
+6.  **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
   
 7.  クリック イベントをダブルクリックします。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "43861974"
   
 8.  名前の変更、`mailStackButton_Click`イベント ハンドラーを`stackButton_Click`します。  
   
-     詳細については、次を参照してください。[方法: 識別子 (Visual Basic) の名前を変更](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)します。  
+     詳細については、「[方法 :識別子 (Visual Basic) の名前を変更](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)します。  
   
 9. 次のコードを挿入、`stackButton_Click`イベント ハンドラー。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "43861974"
 12. 手順 10 および 11 for、`contactsStackButton`と`tasksStackButton`コントロール。  
   
 ## <a name="defining-icons"></a>アイコンの定義  
- 各`StackView`ボタンに関連付けられているアイコンがあります。 便宜上、各アイコンは、Base64 でエンコードされた文字列としての前に逆シリアル化する、<xref:System.Drawing.Bitmap>これから作成されます。 運用環境でリソースとしてビットマップ データを格納して、Windows フォーム デザイナーで、アイコンが表示されます。 詳細については、次を参照してください。[方法: Windows フォームの背景画像の追加](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)します。  
+ 各`StackView`ボタンに関連付けられているアイコンがあります。 便宜上、各アイコンは、Base64 でエンコードされた文字列としての前に逆シリアル化する、<xref:System.Drawing.Bitmap>これから作成されます。 運用環境でリソースとしてビットマップ データを格納して、Windows フォーム デザイナーで、アイコンが表示されます。 詳細については、「[方法 :Windows フォームに背景画像の追加](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)します。  
   
 #### <a name="to-define-icons"></a>アイコンを定義する  
   
@@ -167,7 +167,7 @@ ms.locfileid: "43861974"
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="testing-the-stackview-control"></a>StackView コントロールのテスト  
- `StackView`コントロールから派生、<xref:System.Windows.Forms.UserControl>クラス。 そのため、コントロールをテストできます、 **UserControl Test Container**します。 詳細については、「[方法: UserControl の実行時の動作をテストする](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)」を参照してください。  
+ `StackView`コントロールから派生、<xref:System.Windows.Forms.UserControl>クラス。 そのため、コントロールをテストできます、 **UserControl Test Container**します。 詳細については、「[方法 :UserControl の実行時の動作をテスト](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)します。  
   
 #### <a name="to-test-the-stackview-control"></a>StackView コントロールをテストするには  
   
@@ -180,13 +180,13 @@ ms.locfileid: "43861974"
   
 -   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)します。  
   
--   自動的に設定された標準メニューには、フォームを作成します。 詳細については、次を参照してください。[チュートリアル: 標準メニュー項目をフォームに提供する](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)します。  
+-   自動的に設定された標準メニューには、フォームを作成します。 詳細については、「[チュートリアル:フォームに標準メニュー項目を用意する](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)します。  
   
--   ドッキングのマルチ ドキュメント インターフェイス (MDI) フォームを作成する<xref:System.Windows.Forms.ToolStrip>コントロール。 詳細については、次を参照してください。[方法: メニューのマージと ToolStrip コントロールを MDI フォームを作成](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)です。  
+-   ドッキングのマルチ ドキュメント インターフェイス (MDI) フォームを作成する<xref:System.Windows.Forms.ToolStrip>コントロール。 詳細については、「[方法 :メニューのマージと ToolStrip コントロールを MDI フォームを作成](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [ToolStrip コントロール](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [方法: フォームに標準メニュー項目を追加する](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [ToolStrip コントロール](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [方法: フォームに標準メニュー項目を提供します。](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

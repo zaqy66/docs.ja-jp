@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691828"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 列挙型
 命令ポインター (IP) の値が得られた方法の詳細を提供します。  
@@ -43,24 +43,24 @@ typedef enum CorDebugMappingResult {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|ネイティブ コードは、プロローグでは ip アドレスの値が 0 であるためです。|  
-|`MAPPING_EPILOG`|Ip アドレスの値は、メソッドの最後の命令のアドレスは、エピローグ内のネイティブ コード。|  
-|`MAPPING_NO_INFO`|マッピング情報がない、メソッドを使用できるため、IP の値は 0 です。|  
-|`MAPPING_UNMAPPED_ADDRESS`|メソッドのマッピング情報が、現在のアドレスを Microsoft intermediate language (MSIL) コードにマップすることはできません。 Ip アドレスの値は 0 です。|  
-|`MAPPING_EXACT`|メソッドは、MSIL コードに完全にマップまたはフレームが解釈されているので、ip アドレスの値は正確です。|  
-|`MAPPING_APPROXIMATE`|メソッドが正常にマップされましたが、ip アドレスの値は、概数である可能性があります。|  
+|`MAPPING_PROLOG`|Ip アドレスの値は 0 は、プロローグでネイティブ コードです。|  
+|`MAPPING_EPILOG`|Ip アドレスの値は、メソッドの最後の命令のアドレスは、エピローグでネイティブ コード。|  
+|`MAPPING_NO_INFO`|マッピング情報がない、メソッドの使用可能なため、IP の値は 0 です。|  
+|`MAPPING_UNMAPPED_ADDRESS`|メソッドのマッピング情報が、現在のアドレスは、Microsoft intermediate language (MSIL) コードにマップできません。 Ip アドレスの値は 0 です。|  
+|`MAPPING_EXACT`|メソッドの MSIL コードに正確にマップまたはフレームが解釈されているので、ip アドレスの値は正確です。|  
+|`MAPPING_APPROXIMATE`|メソッドが正常にマップされましたが、ip アドレスの値は概数である可能性があります。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用することができます、 [icordebugilframe::getip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)命令ポインターの値を取得します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
