@@ -1,5 +1,5 @@
 ---
-title: '方法 : ポップアップのカスタム位置を指定する'
+title: '方法: ポップアップのカスタム位置を指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: e6e81a6e0819ba3eb39a1c568e6872414e671544
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b61ab6ab02d65d0549941b0055f7aef480d7d644
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726794"
 ---
-# <a name="how-to-specify-a-custom-popup-position"></a>方法 : ポップアップのカスタム位置を指定する
+# <a name="how-to-specify-a-custom-popup-position"></a>方法: ポップアップのカスタム位置を指定する
 この例のカスタム位置を指定する方法を示しています、<xref:System.Windows.Controls.Primitives.Popup>タイミングを制御、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティに設定されて<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>します。  
   
 ## <a name="example"></a>例  
@@ -32,7 +32,7 @@ ms.locfileid: "48261304"
   
  サンプル全体については、次を参照してください。[ポップアップの配置のサンプル](https://go.microsoft.com/fwlink/?LinkID=160032)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.Primitives.Popup>  
- [ポップアップの概要](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.Primitives.Popup>
+- [ポップアップの概要](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

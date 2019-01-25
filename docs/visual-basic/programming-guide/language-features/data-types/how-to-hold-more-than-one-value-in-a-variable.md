@@ -1,5 +1,5 @@
 ---
-title: '方法: 変数内で複数の値を保持する (Visual Basic)'
+title: '方法: 変数 (Visual Basic) では、複数の値を保持します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671500"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数内で複数の値を保持する (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) では、複数の値を保持します。
 として宣言する場合、変数が 1 つ以上の値を保持する*複合データ型*します。  
   
  [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)構造体、配列、およびクラスが含まれます。 複合データ型の変数には、基本データ型とその他の複合型の組み合わせを保持できます。 構造体とクラスは、コードだけではなく、データを保持できます。  
@@ -41,11 +41,11 @@ ms.locfileid: "43517964"
   
 5.  に従って、`As`キーワードは、適切な複合データ型の名前に置き換えます。  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>関連項目
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

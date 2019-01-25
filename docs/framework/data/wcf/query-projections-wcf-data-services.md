@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cd39355fec310bc33a3d02524a4d4cc060dba6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646082"
 ---
 # <a name="query-projections-wcf-data-services"></a>クエリ射影 (WCF Data Services)
-プロジェクションのメカニズムを提供する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]応答で返されるエンティティの特定のプロパティのみ指定することで、クエリによって返されるフィード内のデータの量を削減します。 詳細については、次を参照してください。 [OData: Select システム クエリ オプション ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)します。  
+プロジェクションのメカニズムを提供する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]応答で返されるエンティティの特定のプロパティのみ指定することで、クエリによって返されるフィード内のデータの量を削減します。 詳細については、次を参照してください[OData:。選択システム クエリ オプション ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)します。  
   
  このトピックでは、クエリ射影を定義する方法、エンティティ型、エンティティ型以外の要件、射影された結果に対する更新、射影された型の作成について説明すると共に、射影に関する注意事項をリストします。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "43526689"
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
 
-- エンティティの種類: サポートされています
+- エンティティの種類:サポート状況
 
-- 非エンティティの種類: サポートされています
+- 非エンティティの種類:サポート状況
 
 **コンス トラクターを使用して新しい射影インスタンスを作成します。**
 
@@ -76,9 +76,9 @@ ms.locfileid: "43526689"
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
 
-- エンティティの種類: A<xref:System.NotSupportedException>が発生します。
+- エンティティの種類:<xref:System.NotSupportedException> 発生
 
-- 非エンティティの種類: サポートされています
+- 非エンティティの種類:サポート状況
 
 **プロジェクションを使用して、プロパティ値を変換するには**
 
@@ -87,9 +87,9 @@ ms.locfileid: "43526689"
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
    
-- エンティティの種類: エンティティ型の混乱や可能性のある別のエンティティに属するデータ ソース内のデータを上書きする可能性があるので、この変換はサポートされていません。 <xref:System.NotSupportedException> 発生
+- エンティティの種類:この変換は、エンティティ型では混乱の原因となり、別のエンティティに属するデータ ソース内のデータを上書きする可能性があるため、サポートされません。 <xref:System.NotSupportedException> 発生
 
-- 非エンティティの種類: サポートされています  
+- 非エンティティの種類:サポート状況  
   
 <a name="considerations"></a>   
 ## <a name="projection-considerations"></a>射影時の注意事項  
@@ -107,7 +107,7 @@ ms.locfileid: "43526689"
   
 -   クライアント上のクエリ射影クエリは、要求 URI の `$select` クエリ オプションを使用するように変換されます。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クエリ オプションをサポートしない `$select` の以前のバージョンに対して、射影のあるクエリを実行すると、エラーが返されます。 これは、データ サービスの  <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> の <xref:System.Data.Services.DataServiceBehavior> が <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> という値に設定されている場合にも発生します。 詳細については、次を参照してください。[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)します。  
   
- 詳細については、次を参照してください。[方法: プロジェクトのクエリ結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)します。  
+ 詳細については、「[方法 :クエリ結果を射影](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [データ サービスに対するクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>関連項目
+- [データ サービスに対するクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

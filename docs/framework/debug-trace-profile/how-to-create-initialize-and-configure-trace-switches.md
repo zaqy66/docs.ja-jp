@@ -1,5 +1,5 @@
 ---
-title: '方法 : トレース スイッチを作成、初期化、および構成する'
+title: '方法: 作成、初期化、およびトレース スイッチを構成します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739616"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>方法 : トレース スイッチを作成、初期化、および構成する
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>方法: 作成、初期化、およびトレース スイッチを構成します。
 トレース スイッチを使用すると、トレース出力を有効/無効にしたり、トレースの出力をフィルター処理したりできます。  
   
 <a name="create"></a>   
@@ -75,11 +75,11 @@ ms.locfileid: "33392932"
   
 2.  プロジェクトに構成ファイル (app.config または Web.config) が含まれない場合は、**[プロジェクト]** メニューから **[新しい項目の追加]** を選択します。  
   
-    -   **Visual Basic:** **[新しい項目の追加]** ダイアログ ボックスで **[アプリケーション構成ファイル]** を選択します。  
+    -   **Visual Basic:****新しい項目の追加** ダイアログ ボックスで、選択**アプリケーション構成ファイル**します。  
   
          アプリケーション構成ファイルが作成され、開かれます。 これは、XML ドキュメントであり、ルート要素は `<configuration>.` です。  
   
-    -   **Visual C# :** **[新しい項目の追加]** ダイアログ ボックスで **[XML ファイル]** を選択します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
+    -   **Visual C#:****新しい項目の追加** ダイアログ ボックスで、選択**XML ファイル**します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
   
         ```xml  
         <configuration>  
@@ -125,8 +125,8 @@ ms.locfileid: "33392932"
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [方法 : アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [トレースおよびデバッグ設定のスキーマ](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [トレースおよびデバッグ設定のスキーマ](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

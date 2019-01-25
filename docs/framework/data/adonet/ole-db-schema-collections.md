@@ -2,12 +2,12 @@
 title: OLE DB スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658456"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB スキーマ コレクション
 ここでは、Microsoft SQL Server、Oracle、および Microsoft Jet 用の各 OLE DB プロバイダーでのスキーマ コレクションのサポートについて説明します。  
@@ -411,5 +411,5 @@ ms.locfileid: "43514490"
 |FILTER_CONDITION|String|  
 |INTEGRATED|ブール型|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

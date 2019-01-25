@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660724"
 ---
 # <a name="recursive-procedures-visual-basic"></a>再帰プロシージャ (Visual Basic)
 A*再帰*手順は、自分自身を呼び出します。 通常、これは Visual Basic コードを記述する最も効果的な方法ではありません。  
@@ -37,15 +37,15 @@ A*再帰*手順は、自分自身を呼び出します。 通常、これは Vis
   
  **テスト**します。 再帰プロシージャを記述する場合はいくつかの制限の条件を満たしているかどうかを確認する非常に慎重にテストする必要があります。 再帰の呼び出しが多すぎるため、メモリ不足が実行できないということを確認する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.StackOverflowException>  
- [手順](./index.md)  
- [Sub プロシージャ](./sub-procedures.md)  
- [Function プロシージャ](./function-procedures.md)  
- [Property プロシージャ](./property-procedures.md)  
- [演算子プロシージャ](./operator-procedures.md)  
- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [プロシージャのオーバーロード](./procedure-overloading.md)  
- [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)  
- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [例外のトラブルシューティング : System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>関連項目
+- <xref:System.StackOverflowException>
+- [プロシージャ](./index.md)
+- [Sub プロシージャ](./sub-procedures.md)
+- [Function プロシージャ](./function-procedures.md)
+- [Property プロシージャ](./property-procedures.md)
+- [演算子プロシージャ](./operator-procedures.md)
+- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
+- [プロシージャのオーバーロード](./procedure-overloading.md)
+- [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)
+- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [例外のトラブルシューティング。System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

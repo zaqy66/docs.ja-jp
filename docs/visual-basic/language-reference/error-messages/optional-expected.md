@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 52e4288255a246f78730b33beb55f6d2d83ff214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46bd84e2bcf5c5bea11a5c9d8b6e9254c49e3021
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642478"
 ---
 # <a name="39optional39-expected"></a>&#39;省略可能な&#39;が必要です
-プロシージャの宣言で省略可能な引数には、必須の引数が続きます。 各引数は次のオプションの引数も省略可能な場合があります。  
+プロシージャ宣言の省略可能な引数には、必須の引数が続きます。 次のオプションの引数すべての引数も省略可能な場合があります。  
   
  **エラー ID:** BC30202  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  引数が必要になるとしている場合は、引数リストの最初の省略可能な引数の前に移動します。  
+1.  引数が必要にする場合は、引数リストで最初の省略可能な引数の前に移動します。  
   
-2.  引数は省略可能としている場合を使用して、`Optional`キーワード。  
+2.  使用して、引数を省略可能にする場合は、`Optional`キーワード。  
   
-## <a name="see-also"></a>関連項目  
- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+## <a name="see-also"></a>関連項目
+- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

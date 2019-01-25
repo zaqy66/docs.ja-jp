@@ -10,34 +10,34 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 2323aa38c81ce4e027f256d0e29c069f7ec77c00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b9d1ec15c6c2000fb0842abe25848f853cdf986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703710"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-示します変換演算子 (`CType`) クラスまたは構造体を元のクラスまたは構造体のすべての可能な値を保持できる型に変換します。  
+示します変換演算子 (`CType`) クラスまたは構造体を元のクラスまたは構造体のすべての値を保持できる型に変換します。  
   
 ## <a name="converting-with-the-widening-keyword"></a>拡大のキーワードを使用して変換します。  
- 変換のプロシージャを指定する必要があります`Public Shared`に加えて`Widening`です。  
+ 変換の手順を指定する必要があります`Public Shared`に加えて`Widening`します。  
   
- 拡大変換は実行時に常に成功して、データの損失が発生することはありません。 例としては、`Single`に`Double`、`Char`に`String`、およびその基本型を派生型です。 この最後の変換は、派生型は、基本型のすべてのメンバーが含まれており、したがって、基本データ型のインスタンスに拡大変換がします。  
+ 拡大変換では、実行時に常に成功して、データの損失が発生することはありません。 例としては、`Single`に`Double`、`Char`に`String`、およびその基本型に派生型。 派生型が基本型のすべてのメンバーを含まれており、基本データ型のインスタンスであるため、この最後の変換が拡大します。  
   
- コンシューマー コードが使用する必要はありません`CType`拡大変換、たとえ`Option Strict`は`On`します。  
+ 使用側コードが使用する必要はありません`CType`拡大変換では、たとえ`Option Strict`は`On`。  
   
  `Widening`キーワードは、このコンテキストで使用できます。  
   
  [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- たとえば拡大変換と縮小変換演算子の定義を参照してください[する方法: 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)です。  
+ たとえばの拡大と縮小変換の演算子の定義を参照してください[方法。変換演算子を定義](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [方法 : 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)  
- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [方法 : 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>関連項目
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [方法: 演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [方法: 変換演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

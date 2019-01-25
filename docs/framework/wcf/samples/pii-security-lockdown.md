@@ -2,12 +2,12 @@
 title: PII セキュリティ ロックダウン
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699780"
 ---
 # <a name="pii-security-lockdown"></a>PII セキュリティ ロックダウン
 このサンプルでは、によって、Windows Communication Foundation (WCF) サービスの複数のセキュリティ関連機能を制御する方法を示しています。  
@@ -47,7 +47,7 @@ ms.locfileid: "50195139"
   
 3.  コマンド「`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`」を実行して、Web.config フォルダーの appSettings 構成設定を暗号化します。  
   
- 構成ファイルのセクションを暗号化する方法についての詳細については、ASP.NET 構成では DPAPI でに関する記事を参照して見つかんだことができます ([Building Secure ASP.NET Applications: 認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)) と ASP.NET の構成で RSA の使い方 ([How To: ASP.NET 2.0 を使用して RSA 暗号化の構成セクション](https://go.microsoft.com/fwlink/?LinkId=95138))。  
+ 構成ファイルのセクションを暗号化する方法についての詳細については、ASP.NET 構成では DPAPI でに関する記事を参照して見つかんだことができます ([Building Secure ASP.NET Applications:認証、承認、およびセキュリティ保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)) と ASP.NET の構成で RSA の使い方 ([How To:ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138))。  
   
 ## <a name="locking-configuration-file-elements"></a>構成ファイルの要素のロック  
  Web ホストのシナリオでは、サービスのサブディレクトリにサービスを設定できます。 こうした状況で、サブディレクトリ内のサービスの構成値を計算するには、Machine.config 内の値を調べ、続いて親ディレクトリの任意の Web.config ファイルとマージしてディレクトリ ツリーの下層に移動します。そして最後に、サービスが含まれるディレクトリ内の Web.config ファイルをマージします。 ほとんどの構成要素での既定の動作は、サブディレクトリ内の構成ファイルが、親ディレクトリに設定されている値をオーバーライドできるようにすることです。 特定の状況では、サブディレクトリ内の構成ファイルが、親ディレクトリの構成に設定されている値をオーバーライドしないようにするのが望ましい場合があります。  
@@ -124,7 +124,7 @@ ms.locfileid: "50195139"
   
  また、DPAPI や RSA を使用して構成ファイルの要素を暗号化することもできます。 詳細については、次のリンクを参照してください。  
   
--   [セキュリティで保護された ASP.NET アプリケーションの構築: 認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [セキュリティで保護された ASP.NET アプリケーションの構築:認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
 -   [方法: ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
@@ -142,5 +142,5 @@ ms.locfileid: "50195139"
   
 1.  Machine.config を編集して `enableLoggingKnownPii` 属性を `false` に設定します。  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

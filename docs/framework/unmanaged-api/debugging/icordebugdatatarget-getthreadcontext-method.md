@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab2fbf6bb08a33158ea450f0f19eca50e280d8c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71d267eedf621a11f8ad21cc7148e1810955521c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713432"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext メソッド
 指定したスレッドの現在のスレッド コンテキストを返します。  
@@ -39,7 +39,7 @@ HRESULT GetThreadContext(
   
 #### <a name="parameters"></a>パラメーター  
  `dwThreadID`  
- [in]コンテキストを取得するスレッドの識別子。 識別子は、オペレーティング システムによって定義されます。  
+ [in]コンテキストが取得されるスレッドの識別子。 識別子は、オペレーティング システムによって定義されます。  
   
  `contextFlags`  
  [in]コンテキストのどの部分を示すプラットフォームに依存するフラグのビットごとの組み合わせをお読みください。  
@@ -48,21 +48,21 @@ HRESULT GetThreadContext(
  [入力] `pContext` のサイズ。  
   
  `pContext`  
- [out]スレッドのコンテキストを格納するバッファー。  
+ [out]スレッド コンテキストを格納するバッファー。  
   
-## <a name="remarks"></a>コメント  
- Windows プラットフォームでは、`pContext`する必要があります、`CONTEXT`構造体 (WinNT.h で定義されている) で指定されたコンピューターの種類に適した、 [icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)メソッドです。 `contextFlags` 同じ値を持つ必要があります、`ContextFlags`のフィールド、`CONTEXT`構造体。 `CONTEXT`構造体は、プロセッサに固有です。 詳細については、WinNT.h でファイルを参照してください。  
+## <a name="remarks"></a>Remarks  
+ Windows のプラットフォームで`pContext`必要があります、`CONTEXT`構造 (WinNT.h で定義されている) で指定されたコンピューターの種類に適した、 [icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)メソッド。 `contextFlags` として値が同じである必要があります、`ContextFlags`のフィールド、`CONTEXT`構造体。 `CONTEXT`構造は、プロセッサ固有。 詳細については、WinNT.h でファイルを参照してください。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+- [ICorDebugDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

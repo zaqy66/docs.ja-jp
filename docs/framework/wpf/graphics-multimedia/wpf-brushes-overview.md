@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655960"
 ---
 # <a name="wpf-brushes-overview"></a>WPF のブラシの概要
 画面に表示できるものは、ブラシによって描画されているために表示されます。 など、ブラシを使用して、ボタン、テキストの前景色および図形の塗りつぶしの背景について説明します。 このトピックでの描画の概念を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ブラシし、例について説明します。 ブラシを使用すると、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] オブジェクトを単色で塗りつぶすことも、パターンとイメージの複雑な組み合わせで塗りつぶすこともできます。  
@@ -160,14 +160,14 @@ VisualBrush を使用して描画された四角形
   
  その理由の詳細については<xref:System.Windows.Media.VisualBrush>オブジェクトにすることはできません固定されているを参照してください、<xref:System.Windows.Media.VisualBrush>の種類 ページ。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Brushes>  
- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)  
- [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [パフォーマンスに関するその他の推奨事項](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Brushes>
+- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [パフォーマンスに関するその他の推奨事項](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

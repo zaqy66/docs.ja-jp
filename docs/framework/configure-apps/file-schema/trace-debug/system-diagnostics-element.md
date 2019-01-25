@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 54c20e56fa1729cb534821e263e316c26e01cde6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687319"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;system.diagnostics&gt;要素
 メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48029439"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -2,23 +2,23 @@
 title: EDM ジェネレーター (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: edec83b187afc74f3ad93181c4737a4d6cec8d0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd43b6ca31eea2cc4265c7f2e1a045f0f12a256c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722118"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM ジェネレーター (EdmGen.exe)
 EdmGen.exe は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] モデルとマッピング ファイルを操作するためのコマンドライン ツールです。 EdmGen.exe ツールを使用すると、次の操作を行うことができます。  
   
--   データ ソース固有の .NET Framework データ プロバイダーを使用してデータ ソースに接続し、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で使用される概念モデル (.csdl)、ストレージ モデル (.ssdl)、およびマッピング (.msl) のファイルを生成する。 詳細については、次を参照してください。[方法: モデル ファイルとマッピング ファイルを生成する使用 EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)します。  
+-   データ ソース固有の .NET Framework データ プロバイダーを使用してデータ ソースに接続し、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で使用される概念モデル (.csdl)、ストレージ モデル (.ssdl)、およびマッピング (.msl) のファイルを生成する。 詳細については、「[方法 :EdmGen.exe を使用して、モデルとマッピング ファイルを生成する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)します。  
   
--   既存のモデルを検証する。 詳細については、次を参照してください。[方法: モデルの検証とマッピング ファイルを使用して EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)します。  
+-   既存のモデルを検証する。 詳細については、「[方法 :EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)します。  
   
--   概念モデル (.csdl) ファイルから生成されたオブジェクト クラスを含む C# コード ファイルまたは Visual Basic コード ファイルを生成する。 詳細については、次を参照してください。[方法: オブジェクトレイヤーのコードの生成を使用して EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)します。  
+-   概念モデル (.csdl) ファイルから生成されたオブジェクト クラスを含む C# コード ファイルまたは Visual Basic コード ファイルを生成する。 詳細については、「[方法 :EdmGen.exe を使用してオブジェクト レイヤー コードを生成する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)します。  
   
--   事前に生成した既存のモデルのビューを含む C# コード ファイルまたは Visual Basic コード ファイルを生成する。 詳細については、[方法: クエリ パフォーマンスを向上させる Pre-Generate ビュー](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)します。  
+-   事前に生成した既存のモデルのビューを含む C# コード ファイルまたは Visual Basic コード ファイルを生成する。 詳細については、[方法。クエリのパフォーマンスを向上させるためにビューを事前に生成](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)します。  
   
  EdmGen.exe ツールは [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ディレクトリにインストールされます。 多くの場合、C:\windows\Microsoft.NET\Framework\v4.0 にあります。 64 ビット システムの場合は、C:\windows\Microsoft.NET\Framework64\v4.0 にあります。 Visual Studio コマンド プロンプトから EdmGen.exe ツールをアクセスすることもできます (をクリックして**開始**、 をポイント**すべてのプログラム**、 をポイント**Microsoft Visual Studio 2010**、 をポイント**Visual Studio Tools**、 をクリックし、 **Visual Studio 2010 コマンド プロンプト**)。  
   
@@ -65,13 +65,13 @@ EdmGen /mode:choice [options]
 |`/targetversion:` \<string>|生成されたコードのコンパイルに使用される .NET Framework のバージョンです。 サポートされているバージョンは 4 と 4.5 です。 既定値は 4 です。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
+ [方法: EdmGen.exe を使用して、モデルとマッピング ファイルを生成するには](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
   
- [方法: EdmGen.exe を使用してオブジェクトレイヤー コードを生成する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
+ [方法: EdmGen.exe を使用してオブジェクト レイヤー コードを生成するには](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
   
- [方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
+ [方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証するには](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)  
- [CSDL、SSDL、および MSL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a>関連項目
+- [ADO.NET Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)
+- [CSDL、SSDL、および MSL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

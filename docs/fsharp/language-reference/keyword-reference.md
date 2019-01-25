@@ -2,12 +2,12 @@
 title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579840"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857906"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
@@ -73,7 +73,7 @@ ms.locfileid: "54579840"
 |`return!`|[コンピュテーション式](computation-expressions.md)<br /><br />[非同期ワークフロー](asynchronous-workflows.md)|コンピュテーション式を示すために使用するには、評価されると、親のコンピュテーション式の結果を提供します。|
 |`select`|[クエリ式](query-expressions.md)|クエリ式で使用すると、どのようなフィールドまたは列を抽出するを指定します。 コンテキスト キーワード、つまり実際に予約語ではないと適切なコンテキストでのキーワードに似た動作のみであるに注意してください。|
 |`static`|[メンバー](members/index.md)|メソッドや型のインスタンスなしで呼び出されるプロパティまたは型のすべてのインスタンス間で共有される値のメンバーを示すために使用します。|
-|`struct`|[構造体](structures.md)<br /><br />[制約](generics/constraints.md)|構造体の型を宣言するために使用します。<br /><br />ジェネリック パラメーターの制約にも使用されます。<br /><br />OCaml モジュールの定義の互換性のために使用します。|
+|`struct`|[構造体](structures.md)<br /><br /> [タプル](tuples.md)<br/><br/>[制約](generics/constraints.md)|構造体の型を宣言するために使用します。<br /><br/>構造体タプルを指定するために使用します。<br/><br />ジェネリック パラメーターの制約にも使用されます。<br /><br />OCaml モジュールの定義の互換性のために使用します。|
 |`then`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[コンストラクター](members/constructors.md)|条件式で使用されます。<br /><br />オブジェクトの構築後に副作用を実行するために使用します。|
 |`to`|[ループ:`for...to` 式](loops-for-to-expression.md)|使用される`for`ループ範囲を示します。|
 |`true`|[プリミティブ型](primitive-types.md)|ブール型リテラルとして使用されます。|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d90c2d7f8be2448e1d4f10410b27bc5132cdb16a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653828"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>マネージド HTML DOM (Document Object Model) へのアクセス
 一部の HTML ドキュメントが帯で構成される*フレーム*、または独自の HTML ドキュメントを保持できる windows。 フレームを使用すると、ページ内に 1 つ以上の静的な部分 (ナビゲーション バーなど) があり、その他のフレームでは内容が常に変化するような HTML ページを簡単に作成できます。  
@@ -40,6 +40,6 @@ ms.locfileid: "49308488"
   
  クロスサイト スクリプティングの詳細については、次を参照してください。[フレーム間スクリプトおよびセキュリティについて](https://msdn.microsoft.com/library/ms533028.aspx)します。  
   
-## <a name="see-also"></a>関連項目  
- [フレーム要素&#124;フレーム オブジェクト](https://msdn.microsoft.com/library/ms535250.aspx)  
- [マネージド HTML DOM (Document Object Model) の使用](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>関連項目
+- [フレーム要素&#124;フレーム オブジェクト](https://msdn.microsoft.com/library/ms535250.aspx)
+- [マネージド HTML DOM (Document Object Model) の使用](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

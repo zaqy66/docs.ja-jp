@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655011"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
 クラス、フォーム、またはドキュメント内のモジュール レベルで宣言されているイベントをトリガーします。  
@@ -75,9 +75,9 @@ RaiseEvent eventname[( argumentlist )]
 > [!NOTE]
 >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>関連項目
+- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
+- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

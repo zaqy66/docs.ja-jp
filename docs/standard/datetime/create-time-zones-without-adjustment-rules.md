@@ -1,5 +1,5 @@
 ---
-title: '方法: 調整規則のないタイム ゾーンを作成'
+title: '方法: 調整規則のないタイム ゾーンを作成します。'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e06232a4e262b13439516114e65c81c07ba24ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681717"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>方法: 調整規則のないタイム ゾーンを作成
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>方法: 調整規則のないタイム ゾーンを作成します。
 
 アプリケーションで必要とされる正確なタイム ゾーン情報は、いくつかの理由で特定のシステムに存在しない場合があります。
 
@@ -34,7 +34,7 @@ ms.locfileid: "44192965"
 > [!IMPORTANT]
 > 呼び出すことによって作成されたカスタムのタイム ゾーン、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドは、レジストリに追加されません。 代わりに、によって返されるオブジェクトの参照を介してのみアクセスすることができます、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドの呼び出し。
 
-このトピックでは、調整規則のないタイム ゾーンを作成する方法を示します。 夏時間調整規則をサポートするタイム ゾーンを作成するを参照してください。[方法: 調整規則のあるタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)です。
+このトピックでは、調整規則のないタイム ゾーンを作成する方法を示します。 夏時間調整規則をサポートするタイム ゾーンを作成するを参照してください。[方法。タイム ゾーン調整規則を作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)です。
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>調整規則のないタイム ゾーンを作成するには
 
@@ -72,6 +72,6 @@ ms.locfileid: "44192965"
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
-* [方法: 調整規則のあるタイム ゾーンを作成する](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
+- [方法: タイム ゾーン調整規則を作成します。](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)

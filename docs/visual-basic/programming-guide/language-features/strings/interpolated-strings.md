@@ -1,12 +1,12 @@
 ---
 title: 補間文字列 (Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: 68194d4251f7057a070535531e0d4c1ad9154530
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eadd1d86c3294d7a19f2ef6d2ed767ed08430750
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647907"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>補間文字列 (Visual Basic リファレンス)
 
@@ -50,7 +50,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 挿入文字列から暗黙の型変換を行う方法は 3 種類あります。  
 
-1. 挿入文字列から <xref:System.String> への変換。 次の例では、挿入文字列式を文字列表現で置き換えた文字列が返されます。 例えば:
+1. 挿入文字列から <xref:System.String> への変換。 次の例では、挿入文字列式を文字列表現で置き換えた文字列が返されます。 例:
 
    [!code-vb[interpolated-strings1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings1.vb)]  
 
@@ -76,8 +76,8 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
-## <a name="see-also"></a>関連項目  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- [Visual Basic の言語リファレンス](index.md)  
- 
+## <a name="see-also"></a>関連項目
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- [Visual Basic の言語リファレンス](index.md)
+

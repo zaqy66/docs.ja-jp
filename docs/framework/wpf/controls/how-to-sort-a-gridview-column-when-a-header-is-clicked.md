@@ -1,5 +1,5 @@
 ---
-title: '方法 : ヘッダーがクリックされたときに GridView 列を並べ替える'
+title: '方法: ヘッダーがクリックされたときに GridView 列を並べ替える'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694088"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>方法 : ヘッダーがクリックされたときに GridView 列を並べ替える
-この例を作成する方法を示しています、<xref:System.Windows.Controls.ListView>を実装するコントロール、<xref:System.Windows.Controls.GridView>モードと並べ替え、ユーザーが列見出しをクリックしたときにデータがコンテンツを表示します。  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>方法: ヘッダーがクリックされたときに GridView 列を並べ替える
+この例は、作成する方法を示します、<xref:System.Windows.Controls.ListView>を実装するコントロールを<xref:System.Windows.Controls.GridView>モードと並べ替えをユーザーが列ヘッダーをクリックすると、データがコンテンツを表示します。  
   
 ## <a name="example"></a>例  
- 次の例では定義、 <xref:System.Windows.Controls.GridView> 3 つの列にバインドを持つ、 <xref:System.DateTime.Year%2A>、 <xref:System.DateTime.Month%2A>、および<xref:System.DateTime.Day%2A>のプロパティ、<xref:System.DateTime>構造体。  
+ 次の例では、定義、 <xref:System.Windows.Controls.GridView> 3 つの列にバインドを持つ、 <xref:System.DateTime.Year%2A>、 <xref:System.DateTime.Month%2A>、および<xref:System.DateTime.Day%2A>のプロパティ、<xref:System.DateTime>構造体。  
   
 ```xaml  
 <GridView>  
@@ -37,7 +37,7 @@ ms.locfileid: "33554899"
 </GridView>  
 ```  
   
- 次の例は、データ項目として定義されている、<xref:System.Collections.ArrayList>の<xref:System.DateTime>オブジェクト。 <xref:System.Collections.ArrayList>として定義されて、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>の<xref:System.Windows.Controls.ListView>コントロール。  
+ 次の例は、データ項目として定義されている、<xref:System.Collections.ArrayList>の<xref:System.DateTime>オブジェクト。 <xref:System.Collections.ArrayList>として定義されている場合は、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>の<xref:System.Windows.Controls.ListView>コントロール。  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -69,7 +69,7 @@ ms.locfileid: "33554899"
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- 処理するイベント ハンドラーを定義している例では、列の内容に合わせてデータを並べ替えるを<xref:System.Windows.Controls.Primitives.ButtonBase.Click>列ヘッダーのボタンを押したときに発生するイベントです。 次の例のイベント ハンドラーを指定する方法を示しています、<xref:System.Windows.Controls.GridViewColumnHeader>コントロール。  
+ 処理するイベント ハンドラーを定義している例では、列の内容に従ってデータを並べ替える、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>列ヘッダーのボタンを押したときに発生するイベントです。 次の例のイベント ハンドラーを指定する方法を示しています、<xref:System.Windows.Controls.GridViewColumnHeader>コントロール。  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -197,7 +197,7 @@ Partial Public Class Window1
 End Class
 ```  
   
- 次の例では、データを並べ替えるためにイベント ハンドラーにより呼び出される並べ替えアルゴリズムを示します。  新しいを作成して、並べ替えが実行される<xref:System.ComponentModel.SortDescription>構造体。  
+ 次の例では、データを並べ替えるためにイベント ハンドラーにより呼び出される並べ替えアルゴリズムを示します。  並べ替えは、新しいを作成して<xref:System.ComponentModel.SortDescription>構造体。  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [ListView の概要](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView の概要](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [ListView の概要](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [GridView の概要](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [方法トピック](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

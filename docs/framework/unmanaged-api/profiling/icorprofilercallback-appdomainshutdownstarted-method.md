@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705496"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted メソッド
 プロセスから、アプリケーション ドメインがアンロードされることをプロファイラーに通知します。  
@@ -38,17 +38,17 @@ HRESULT AppDomainShutdownStarted(
  `appDomainId`  
  [in]アプリケーションのアセンブリが格納されているドメインを識別します。  
   
-## <a name="remarks"></a>コメント  
- 値`appDomainId`後に、情報の要求に対して無効です、`AppDomainShutdownStarted`メソッドを返します。-これは、プロファイラーの最後のチャンスをこのアプリケーション ドメインに関する情報を取得します。  
+## <a name="remarks"></a>Remarks  
+ 値`appDomainId`は後の情報の要求は無効です、`AppDomainShutdownStarted`メソッドを返します。-これは、このアプリケーション ドメインに関する情報を取得するプロファイラーの最後のチャンスです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>関連項目
+- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

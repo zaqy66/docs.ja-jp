@@ -7,17 +7,17 @@ helpviewer_keywords:
 - PasswordBox control [WPF]
 - controls [WPF], PasswordBox
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
-ms.openlocfilehash: 0dda209b9d9ac82f573685c2940bc726df5d8d08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e40eb22981e397a22e8b73a46244aaa0299ff8a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708260"
 ---
 # <a name="passwordbox"></a>PasswordBox
-<xref:System.Windows.Controls.PasswordBox>コントロールを使用して、機密情報や秘密情報を入力します。  
+<xref:System.Windows.Controls.PasswordBox>コントロールを使用すると、機密情報や秘密情報を入力します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.TextBox>  
- <xref:System.Windows.Controls.RichTextBox>  
- [コントロール ライブラリ](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.RichTextBox>
+- [コントロール ライブラリ](../../../../docs/framework/wpf/controls/control-library.md)
