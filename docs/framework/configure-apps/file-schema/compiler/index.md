@@ -2,17 +2,21 @@
 title: コンパイラおよび言語プロバイダー設定のスキーマ
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'configuration settings [.NET Framework], compilers'
-  - 'compiler configuration elements, schema'
-  - compiler configuration elements
-  - language providers
-  - 'compiler configuration settings, schema'
-  - 'configuration schema [.NET Framework], compiler settings'
-  - 'language providers, settings schema'
-  - compiler configuration settings
+- configuration settings [.NET Framework], compilers
+- compiler configuration elements, schema
+- compiler configuration elements
+- language providers
+- compiler configuration settings, schema
+- configuration schema [.NET Framework], compiler settings
+- language providers, settings schema
+- compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: ab8225d664b658789f7eb9e7830d5ec527ded94a
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084368"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>コンパイラおよび言語プロバイダー設定のスキーマ
 コンパイラおよび言語プロバイダー設定は、使用可能な言語プロバイダーのコンパイラ構成要素を指定します。 各コンパイラ構成要素は、コード プロバイダーの型名、コンパイラ パラメーター、サポートされる言語名、およびサポートされるファイル拡張子を指定します。  
