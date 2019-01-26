@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518164"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066299"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>UI オートメーションによる Spinner コントロール型のサポート
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "54518164"
 |------------------|------------------|  
 |Spinner<br /><br /> -(0 または 1) を編集します。<br />ボタン (2)<br />リスト項目 (0 以上)|Spinner<br /><br /> -ListItem (0 以上)|  
   
- コントロール ビュー サブツリーの 2 つのボタンを自動テスト ツールが区別できるようにするには、必要に応じて `SmallIncrement` または `SmallDecrement``AutomationId` を割り当てます。 実装によっては、関連付けられたエディット コントロールが Spinner コントロールのピアである場合があります。  
+ 自動テスト ツールによってコントロール ビュー サブツリーの 2 つのボタンを識別できることを確実に割り当てる、`SmallIncrement`または`SmallDecrement``AutomationId`に応じて。 実装によっては、関連付けられたエディット コントロールが Spinner コントロールのピアである場合があります。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  

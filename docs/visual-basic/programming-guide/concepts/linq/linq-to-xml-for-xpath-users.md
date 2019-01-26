@@ -2,12 +2,12 @@
 title: LINQ to XML XPath ユーザー (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 471bd4faa44bcb23ff488df6fb93f0a28cc48950
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568167"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066265"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML XPath ユーザー (Visual Basic)
 
@@ -32,7 +32,7 @@ ms.locfileid: "54568167"
 |[方法: 2 つの場所のパス (XPATH-LINQ to XML) の和集合を検索 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|XPath の UNION 演算子 <code>&#124;</code> と <xref:System.Linq.Enumerable.Concat%2A> の [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 標準クエリ演算子を比較します。<br /><br /> 関連する XPath 式は <code>"//Category&#124;//Price"</code> です。|  
 |[方法: 兄弟ノード (XPATH-LINQ to XML) を検索 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|特定の名前を持つノードのすべての兄弟を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"../Book"` です。|  
 |[方法: 親 (XPATH-LINQ to XML) の属性を検索 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|親要素に移動してその属性を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"../@id"` です。|  
-|[方法: 特定の名前 (XPATH-LINQ to XML) を使用した兄弟の属性を検索 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|コンテキスト ノードの兄弟に関する特定の属性を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"``../Book/@id``"` です。|  
+|[方法: 特定の名前 (XPATH-LINQ to XML) を使用した兄弟の属性を検索 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|コンテキスト ノードの兄弟に関する特定の属性を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"../Book/@id"` です。|  
 |[方法: 特定の属性 (XPATH-LINQ to XML) を持つ要素を検索 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|特定の属性を持つすべての要素を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"./*[@Select]"` です。|  
 |[方法: (XPATH-LINQ to XML) の位置に基づいて子要素を検索 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|相対的位置に基づいて要素を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"Test[position() >= 2 and position() <= 4]"` です。|  
 |[方法: 前の兄弟を検索 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|ノードの直前の兄弟を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"preceding-sibling::*[1]"` です。|  

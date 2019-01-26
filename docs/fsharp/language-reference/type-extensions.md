@@ -1,13 +1,13 @@
 ---
 title: 型拡張
 description: 学習方法F#型の拡張機能により、定義済みのオブジェクト型に新しいメンバーを追加します。
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614064"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066156"
 ---
 # <a name="type-extensions"></a>型の拡張機能
 
@@ -121,7 +121,7 @@ type IEnumerable<'T> with
 
 * `Sum`メンバーは、さまざまな制約に`'T`(`static member get_Zero`と`static member (+)`) よりの種類の拡張子で定義されています。
 * 変更の種類の拡張子として同じ制約が`Sum`で定義された制約に一致が不要になった`IEnumerable<'T>`します。
-* メンバーの変更を行う`member inline Sum`はエラーの種類の制約が一致しないことになります
+* 変更する`member this.Sum`に`member inline this.Sum`はエラーの種類の制約が一致しないことになります。
 
 何が必要なは、"領域で float"と、これらの種類の拡張しているかのように表示されることができますを静的メソッドです。 これは、拡張メソッドが必要になります。
 

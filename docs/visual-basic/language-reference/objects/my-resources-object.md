@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571822"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065870"
 ---
 # <a name="myresources-object"></a>My.Resources オブジェクト
 アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。  
@@ -26,9 +26,9 @@ ms.locfileid: "54571822"
  アプリケーションのカルチャ固有のリソース ファイルにアクセスすることができます、`My.Resources`オブジェクト。 既定で、`My.Resources`オブジェクトのカルチャに一致するリソース ファイルからリソースを調べ、<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>プロパティ。 ただし、この動作をオーバーライドし、リソースに使用する特定のカルチャを指定できます。 詳細については、「[デスクトップ アプリケーションのリソース](../../../framework/resources/index.md)」を参照してください。  
   
 ## <a name="properties"></a>プロパティ  
- プロパティ、`My.Resources`オブジェクトは、アプリケーションのリソースへの読み取り専用アクセスを提供します。 を追加または削除のリソースを使用して、**プロジェクト デザイナー**します。 使用して追加のリソースにアクセスすることができます、**プロジェクト デザイナー**を使用して`My.Resources.``resourceName`します。  
+ プロパティ、`My.Resources`オブジェクトは、アプリケーションのリソースへの読み取り専用アクセスを提供します。 を追加または削除のリソースを使用して、**プロジェクト デザイナー**します。 使用して追加のリソースにアクセスすることができます、**プロジェクト デザイナー**を使用して`My.Resources.` *resourceName*します。  
   
- 追加またはでプロジェクトを選択してリソース ファイルを削除することができますも**ソリューション エクスプ ローラー**クリック**新しい項目の追加**または**既存項目の追加**から、 **プロジェクト**メニュー。 使用して、この方法で追加のリソースにアクセスすることができます`My.Resources.``resourceFileName`.`resourceName`します。  
+ 追加またはでプロジェクトを選択してリソース ファイルを削除することができますも**ソリューション エクスプ ローラー**クリック**新しい項目の追加**または**既存項目の追加**から、 **プロジェクト**メニュー。 使用して、この方法で追加のリソースにアクセスすることができます`My.Resources.` *resourceFileName*`.`*resourceName*します。  
   
  各リソースには、名前、カテゴリ、および値、およびこれらのリソースの設定は、リソースにアクセスするプロパティを表示する方法を決定、`My.Resources`オブジェクト。 追加するリソースの**プロジェクト デザイナー**:  
   

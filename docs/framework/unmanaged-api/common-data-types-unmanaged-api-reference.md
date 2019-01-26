@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5a6d69b121827c3ee4f55714dcf3d4628706ce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737898"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065831"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>共有のデータ型 (アンマネージ API リファレンス)
 このトピックでは、C/C++ `typedef` ステートメントで定義される .NET Framework のアンマネージ API で使用する、簡単なデータ型について示します。 これらのデータ型は通常、C/C++ のプリミティブ データ型のエイリアスです。 一般的にこれらのデータ型の値は不透明です。これらのデータ型の値は他の関数またはメソッドに対して変更なしで渡せるように、特定の関数またはメソッドによって返されるためです。  
@@ -18,7 +18,8 @@ ms.locfileid: "54737898"
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|アプリケーション ドメインの識別子。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|アセンブリの識別子。|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|マネージド クラスの識別子。|
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|マネージド クラスの識別子。|  
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|64 ビットのメモリ アドレス。|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|使用できません。|64 ビットのメモリ アドレス。|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h、mscoree.h|Microsoft SQL Server のインスタンスへ接続されるスレッドの接続識別子。|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|特定のマネージド スレッドに関連付けられているコンテキストの識別子。|  
@@ -29,7 +30,8 @@ ms.locfileid: "54737898"
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU レジスタの値。|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|関数またはメソッドの識別子。|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|ガベージ コレクション ハンドル。|  
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|メタデータ トークン (メタデータ テーブル内の行)。|  
+|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|メソッドの定義トークンです。|
+|mdToken|`typedef UINT32 mdToken;`|corprof.h|メタデータ トークン (メタデータ テーブルの行)。|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|アセンブリ モジュールの識別子。|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|オブジェクトの識別子。|  
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|マネージ プロセスの識別子。|  

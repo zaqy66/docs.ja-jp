@@ -2,12 +2,12 @@
 title: データベース アクセス アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850403"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066091"
 ---
 # <a name="database-access-activities"></a>データベース アクセス アクティビティ
 データベース アクセス アクティビティを使用すると、ワークフロー内でデータベースにアクセスできます。 これらのアクティビティは、取得、情報を変更または使用するデータベースへのアクセスを許可する[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  実行するクエリは `Sql` プロパティで構成し、パラメーターは `Parameters` コレクションを通じて渡します。
 
- 後`DbQueryScalar`は、スカラー型は、実行で返される、`Result``out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
+ 後`DbQueryScalar`は、スカラー型は、実行で返される、`Result out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  実行するクエリは `Sql` プロパティで構成し、パラメーターは `Parameters` コレクションを通じて渡します。
 
- 後に、`DbQueryDataSet`が実行される、`DataSet`で返される、`Result``out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
+ 後に、`DbQueryDataSet`が実行される、`DataSet`で返される、`Result out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>接続情報の構成
  すべての DbActivities は同じ構成パラメーターを共有します。 パラメーターを構成するには次の 2 つの方法があります。
 
--   `ConnectionString + InvariantName`: ADO.NET プロバイダーの不変名と接続文字列を設定します。
+-   `ConnectionString + InvariantName`:ADO.NET プロバイダーの不変の名前と接続文字列を設定します。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: 接続情報を含む構成セクションの名前を設定します。
+-   `ConfigName`:接続情報を含む構成セクションの名前を設定します。
 
     ```xml
     <connectionStrings>

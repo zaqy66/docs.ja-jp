@@ -2,12 +2,12 @@
 title: '方法: チャネルのセキュリティ資格情報を指定します。'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495202"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066197"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>方法: チャネルのセキュリティ資格情報を指定します。
 Windows Communication Foundation (WCF) サービス モニカーでは、COM アプリケーションで WCF サービスを呼び出すができます。 ほとんどの WCF サービスでは、クライアント認証と承認のための資格情報を指定する必要があります。 WCF クライアントから WCF サービスを呼び出すときに、マネージ コードで、またはアプリケーション構成ファイルで、これらの資格情報を指定できます。 COM アプリケーションから WCF サービスを呼び出すときに使用できます、<xref:System.ServiceModel.ComIntegration.IChannelCredentials>資格情報を指定するインターフェイス。 ここでは、<xref:System.ServiceModel.ComIntegration.IChannelCredentials> インターフェイスを使用して資格情報を指定するさまざまな方法を説明します。  
@@ -23,9 +23,9 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
   
 2.  メッセージ セキュリティのプロジェクトを開きます。  
   
-3.  追加`[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]`を`ICalculator`インターフェイス定義です。  
+3.  追加`[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`を`ICalculator`インターフェイス定義です。  
   
-4.  追加`bindingNamespace=``http://Microsoft.ServiceModel.Samples`サービスの App.config にエンドポイント タグにします。  
+4.  追加`bindingNamespace="http://Microsoft.ServiceModel.Samples"`サービスの App.config にエンドポイント タグにします。  
   
 5.  メッセージ セキュリティ サンプルをビルドし、Service.exe を実行します。 Internet Explorer を使用し、サービスの URI を参照 (http://localhost:8000/ServiceModelSamples/Service)サービスが動作していることを確認します。  
   

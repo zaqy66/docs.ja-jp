@@ -7,15 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: bfed5c969466cb427e6c94d39bfcc6a6e007c320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672046"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066117"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>方法: 構造体 (Visual Basic) を宣言します。
-構造体の宣言を開始する、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)、それを終了して、 `End` `Structure`ステートメント。 これら 2 つのステートメントの間で、少なくとも 1 つを宣言する必要があります*要素*します。 任意のデータ型の要素ができますが、非共有変数または非共有の非カスタム イベントのいずれかに少なくとも 1 つである必要があります。  
+構造体の宣言を開始する、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)、それを終了して、`End Structure`ステートメント。 これら 2 つのステートメントの間で、少なくとも 1 つを宣言する必要があります*要素*します。 任意のデータ型の要素ができますが、非共有変数または非共有の非カスタム イベントのいずれかに少なくとも 1 つである必要があります。  
   
  構造体の宣言で構造体の要素を初期化することはできません。 構造型の変数を宣言するときに、要素に、変数を通じてアクセスすることにより値を割り当てます。  
   

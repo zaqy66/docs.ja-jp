@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: d9c3c63dece8a32280f17af6cc143b73bef58242
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739285"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066143"
 ---
 # <a name="service-transaction-behavior"></a>サービス トランザクションの動作
 このサンプルでは、クライアント調整トランザクションの使用方法と、サービス トランザクションの動作を制御する ServiceBehaviorAttribute と OperationBehaviorAttribute の設定方法について説明します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスの実装が、データベース テーブルと合計電卓操作を実行しているステートフルに実行された操作のサーバー ログを保持するように拡張します。 サーバー ログ テーブルへの書き込みを保存するかどうかは、クライアント調整トランザクションの結果によって異なります。クライアント トランザクションが完了しない場合は、Web サービス トランザクションにより、データベースへの更新はコミットされません。  
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` プロパティは、トランザクションが完了したときにサービス インスタンスを再利用するかどうかを指定します。 `false` に設定すると、サービスは操作要求全体で同じサービス インスタンスを保持します。 この設定は、現在高を保持するために必要です。 `true` に設定すると、各アクションが完了するたびに新しいインスタンスが生成されます。  
   
-    -   `TransactionAutoCompleteOnSessionClose` プロパティは、セッションの終了時に未解決のトランザクションを完了するかどうかを指定します。 設定することで`false`、個別の操作で設定するか、`OperationBehaviorAttribute``TransactionAutoComplete`プロパティを`true`への呼び出しを明示的に要求するか、`SetTransactionComplete`メソッドがトランザクションを完了します。 このサンプルでは、両方の方法を示します。  
+    -   `TransactionAutoCompleteOnSessionClose` プロパティは、セッションの終了時に未解決のトランザクションを完了するかどうかを指定します。 設定することで`false`、個別の操作で設定するか、<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType>プロパティを`true`への呼び出しを明示的に要求するか、<xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType>メソッドがトランザクションを完了します。 このサンプルでは、両方の方法を示します。  
   
 -   `ServiceContractAttribute` :  
   
