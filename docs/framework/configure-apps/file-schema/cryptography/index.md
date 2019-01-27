@@ -10,14 +10,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3cd3ed8ab5005116971a79ad04d249ff14637f08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 2958ab01cb92872026437e31d2225d12d8606e97
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577085"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083380"
 ---
 # <a name="cryptography-settings-schema"></a>暗号設定スキーマ
 暗号設定スキーマには、アルゴリズムの表示名を、暗号化アルゴリズムを実装するクラスに割り当てる方法を指定する要素が含まれます。  
