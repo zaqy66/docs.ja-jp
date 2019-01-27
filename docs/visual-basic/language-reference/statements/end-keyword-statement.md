@@ -63,7 +63,7 @@ End With
 |`Property`|照合することによって開始されたプロパティの定義を終了するために必要な[Property ステートメント](property-statement.md)します。|
 |`RaiseEvent`|終了するために必要な`RaiseEvent`アクセサーを照合することによって開始された`RaiseEvent`カスタム ステートメント[Event ステートメント](event-statement.md)します。|
 |`RemoveHandler`|終了するために必要な`RemoveHandler`アクセサーを照合することによって開始された`RemoveHandler`カスタム ステートメント[Event ステートメント](event-statement.md)します。|
-|`Select`|終了するために必要な`Select`.`Case`ブロックを照合することによって開始された定義`Select`ステートメント。 参照してください[を選択しています.Case ステートメント](select-case-statement.md)します。  
+|`Select`|終了するために必要な`Select`.`Case`ブロックを照合することによって開始された定義`Select`ステートメント。 参照してください[Select...Case ステートメント](select-case-statement.md)します。  
 |`Set`|終了するために必要な`Property`プロシージャの定義を照合することによって開始された[Set ステートメント](set-statement.md)します。 実行されると、`End Set`ステートメントでは、プロパティの値を設定するステートメントに制御が戻ります。  
 |`Structure`|照合することによって開始された構造体の定義を終了するために必要な[Structure ステートメント](structure-statement.md)します。  
 |`Sub`|終了するために必要な`Sub`プロシージャの定義を照合することによって開始された[Sub ステートメント](sub-statement.md)します。 実行されると、`End Sub`ステートメントでは、呼び出し元のコードに制御が戻ります。  
