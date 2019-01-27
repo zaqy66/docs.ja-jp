@@ -2,12 +2,12 @@
 title: サービス ID サンプル
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 64adee14c3c0a0ba8071bbaca35b8712280e10b4
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 1efa354f62e1b28ad6cec02d9879448205791e4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707636"
 ---
 # <a name="service-identity-sample"></a>サービス ID サンプル
 このサービス ID サンプルでは、サービスの ID を設定する方法を示します。 クライアントは、デザイン時にサービスのメタデータを使用して ID を取得し、実行時にそのサービス ID を認証することができます。 サービス ID の概念は、クライアントがサービス操作を呼び出す前にそのサービスを認証できるようにし、それによって認証されていない呼び出しからクライアントを保護することにあります。 セキュリティ保護されている接続では、サービスがクライアントの資格情報を認証した後にクライアントのアクセスを許可できますが、このサンプルではこのことを主眼とはしていません。 サンプルを参照してください。[クライアント](../../../../docs/framework/wcf/samples/client.md)サーバー認証を表示します。

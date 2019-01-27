@@ -1,15 +1,15 @@
 ---
-title: 探索プロキシを実装する方法
+title: '方法: 探索プロキシを実装します。'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 2d76a2df0541dfd64058d61ca687a2749d745e8a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608915"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>探索プロキシを実装する方法
+# <a name="how-to-implement-a-discovery-proxy"></a>方法: 探索プロキシを実装します。
 このトピックでは、探索プロキシの実装方法について説明します。 Windows Communication Foundation (WCF) の検出機能の詳細については、次を参照してください。 [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)します。 探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。 このサンプルでは、他の多くのサポート クラスも定義され、使用されています。 `OnResolveAsyncResult`、`OnFindAsyncResult`、および `AsyncResult`。 これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。 詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。
 
  このトピックでは、探索プロキシの実装を 3 つの主要な部分に分けて説明します。
@@ -319,7 +319,7 @@ ms.locfileid: "48839119"
     }
     ```
 
- OnBegin. / OnEnd. メソッドは、以降の探索操作のロジックを提供します。 たとえば、<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> メソッドおよび <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> メソッドは、探索プロキシの検索ロジックを実装します。 探索プロキシがプローブ メッセージを受け取ると、これらのメソッドが実行されて、クライアントに応答が返されます。 必要に応じて、検索ロジックを変更できます。たとえば、アルゴリズムによるカスタム スコープ一致や、検索操作の一環として解析するアプリケーション固有の XML メタデータを組み込むことができます。
+ OnBegin. / OnEnd.  メソッドは、以降の探索操作のロジックを提供します。 たとえば、<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> メソッドおよび <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> メソッドは、探索プロキシの検索ロジックを実装します。 探索プロキシがプローブ メッセージを受け取ると、これらのメソッドが実行されて、クライアントに応答が返されます。 必要に応じて、検索ロジックを変更できます。たとえば、アルゴリズムによるカスタム スコープ一致や、検索操作の一環として解析するアプリケーション固有の XML メタデータを組み込むことができます。
 
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult クラスを実装するには
 
@@ -548,7 +548,7 @@ ms.locfileid: "48839119"
               }
     ```
 
- これで、探索プロキシの実装が完了しました。 進んでください[方法: 探索プロキシで登録される探索可能なサービスを実装](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)します。
+ これで、探索プロキシの実装が完了しました。 進んでください[方法。探索プロキシで登録される探索可能なサービスを実装](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)します。
 
 ## <a name="example"></a>例
  このトピックで使用するコード全体の一覧を次に示します。
@@ -980,6 +980,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>関連項目
 
 - [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [探索プロキシで登録される探索可能なサービスの実装方法](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [探索プロキシを使用してサービスを検索するクライアント アプリケーションの実装方法](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [探索プロキシをテストする方法](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [方法: 探索プロキシで登録される探索可能なサービスを実装します。](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [方法: 探索プロキシをテストします。](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

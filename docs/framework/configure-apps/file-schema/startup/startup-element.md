@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222741"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083718"
 ---
 # <a name="ltstartupgt-element"></a>&lt;スタートアップ&gt;要素
 
 共通言語ランタイムのスタートアップの情報を指定します。
 
- \<configuration >\<スタートアップ >
+ \<configuration> \<startup>
 
 ## <a name="syntax"></a>構文
 
@@ -98,6 +96,6 @@ ms.locfileid: "54222741"
 
 - [スタートアップ設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
-- [方法: .NET Framework 4 またはそれ以降のバージョンをサポートするアプリを構成します。](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [COM 相互運用機能のサイド バイ サイドで実行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
 - [インプロセスの side-by-side 実行](../../../deployment/in-process-side-by-side-execution.md)

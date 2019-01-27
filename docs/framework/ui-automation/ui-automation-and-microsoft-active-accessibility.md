@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1b7dbc8dffb15485ec035049d2da7aac6915eb58
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f8dfe0520e0db676a208dcd46a45db8fefe98703
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603743"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI オートメーションと Microsoft Active Accessibility
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  アプリケーションをアクセス可能にするための以前のソリューションは[!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] です。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] の新しいユーザー補助モデルであり、その目的は支援技術製品と自動テスト ツールのニーズを解決することです。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は多くの点で [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] よりも強化されています。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48036215"
   
  [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]における要素間ナビゲーションは、空間的 (画面上で左にある要素に移動するなど)、論理的 (次のメニュー項目に移動する、ダイアログ ボックスのタブ オーダー内で次の項目に移動するなど)、階層的 (コンテナー内の最初の子に移動する、子からその親に移動するなど) のいずれかです。 子要素が `IAccessible`を実装しているオブジェクトであるとは限らないため、階層的ナビゲーションは複雑です。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素は、同じ基本機能をサポートする <xref:System.Windows.Automation.AutomationElement> オブジェクトです (から継承されるインターフェイスを実装するオブジェクトは、プロバイダーの観点から<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>)。ナビゲーションは主に階層的 (親から子、兄弟から次の兄弟) です  (兄弟間のナビゲーションは、タブ オーダーに従う場合があるため、論理的要素も持っています)。使用して、ツリーの任意のフィルター選択されたビューを使用して、開始点から移動できる、<xref:System.Windows.Automation.TreeWalker>クラス。 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> と <xref:System.Windows.Automation.AutomationElement.FindAll%2A>を使用して、特定の子または子孫に移動することもできます。たとえば、指定したコントロール パターンがサポートされるダイアログ ボックス内のすべての要素を非常に簡単に取得できます。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素は、同じ基本機能をサポートする <xref:System.Windows.Automation.AutomationElement> オブジェクトです (プロバイダーの観点では、<xref:System.Windows.Automation.Provider.IRawElementProviderSimple> から継承されたインターフェイスを実装するオブジェクトです)。ナビゲーションは主に階層的 (親から子、兄弟から次の兄弟) です  (兄弟間のナビゲーションは、タブ オーダーに従う場合があるため、論理的要素も持っています)。フィルタリングされたツリー ビューで <xref:System.Windows.Automation.TreeWalker> クラスを使用して、任意の場所からナビゲーションを開始できます。 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> と <xref:System.Windows.Automation.AutomationElement.FindAll%2A>を使用して、特定の子または子孫に移動することもできます。たとえば、指定したコントロール パターンがサポートされるダイアログ ボックス内のすべての要素を非常に簡単に取得できます。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] におけるナビゲーションは [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]におけるナビゲーションより一貫性があります。 ドロップダウン リストやポップアップ ウィンドウなど、 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] ツリーに 2 回表示される要素がありますが、このような要素からナビゲーションすると、予期しない結果が生じる可能性があります。 実際には、rebar コントロールに対して [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] を正しく実装することは不可能です。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では親の再指定や位置の変更が可能なため、ウィンドウの所有関係による階層にかかわらず、要素をツリー内の任意の場所に配置できます。  
   
@@ -134,8 +134,8 @@ ms.locfileid: "48036215"
 |`get_accValue`|<xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>|ValuePattern または RangeValuePattern をサポートするコントロール型でのみ有効です。 MSAA 動作との一貫性を保つために、RangeValue 値は 0 ～ 100 に正規化されます。 Value 項目は文字列を使用します。|  
 |`get_accHelp`|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>||  
 |`accLocation`|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>||  
-|`get_accDescription`|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|`accDescription` に関する明確な仕様が MSAA 内に存在しなかったので、このプロパティに格納される情報はプロバイダーによって異なります。|  
-|`get_accHelpTopic`|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]||  
+|`get_accDescription`| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|`accDescription` に関する明確な仕様が MSAA 内に存在しなかったので、このプロパティに格納される情報はプロバイダーによって異なります。|  
+|`get_accHelpTopic`| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]||  
   
  次の表に、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティと [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] の状態定数との対応を示します。  
   
@@ -164,19 +164,19 @@ ms.locfileid: "48036215"
   
 |[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] の状態|Remarks|  
 |-----------------------------------------------------------------------|-------------|  
-|STATE_SYSTEM_BUSY|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_DEFAULT|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_ANIMATED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_BUSY| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_DEFAULT| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_ANIMATED| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_EXTSELECTABLE|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] サーバーで広範に実装されていません|  
 |STATE_SYSTEM_MARQUEED|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] サーバーで広範に実装されていません|  
 |STATE_SYSTEM_SELFVOICING|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] サーバーで広範に実装されていません|  
-|STATE_SYSTEM_TRAVERSED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_TRAVERSED| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_ALERT_HIGH|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] サーバーで広範に実装されていません|  
 |STATE_SYSTEM_ALERT_MEDIUM|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] サーバーで広範に実装されていません|  
 |STATE_SYSTEM_ALERT_LOW|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] サーバーで広範に実装されていません|  
 |STATE_SYSTEM_FLOATING|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] サーバーで広範に実装されていません|  
-|STATE_SYSTEM_HOTTRACKED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_PRESSED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_HOTTRACKED| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_PRESSED| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
  完全な一覧については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの識別子を参照してください[UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)します。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "48036215"
 |EVENT_OBJECT_SELECTIONWITHIN|同等の機能がありません|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|さまざまなプロパティ変更イベント|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType>変更|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> および <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> の変更|  
 |EVENT_SYSTEM_ALERT|同等の機能がありません|  
 |EVENT_SYSTEM_CAPTUREEND|同等の機能がありません|  
 |EVENT_SYSTEM_CAPTURESTART|同等の機能がありません|  
@@ -251,5 +251,5 @@ ms.locfileid: "48036215"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] モデルでは、プロバイダーが他のプロバイダー コードを呼び出す必要がありません。 必要な集約はすべて [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コア サービスが行います。  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーションの基礎](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>関連項目
+- [UI オートメーションの基礎](../../../docs/framework/ui-automation/index.md)
