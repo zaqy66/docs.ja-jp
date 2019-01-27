@@ -7,23 +7,21 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 12065d8bc484f7bbf77ae18c67df1de0845167b2
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599349"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083900"
 ---
-# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="0b712-102">\<assemblyBinding > 要素の\<構成 ></span><span class="sxs-lookup"><span data-stu-id="0b712-102">\<assemblyBinding> element for \<configuration></span></span>
+# <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="244de-102">\<assemblyBinding > 要素の\<構成 ></span><span class="sxs-lookup"><span data-stu-id="244de-102">\<assemblyBinding> element for \<configuration></span></span>
 
-<span data-ttu-id="0b712-103">構成レベルでのアセンブリ バインディング ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="0b712-103">Specifies assembly binding policy at the configuration level.</span></span>
+<span data-ttu-id="244de-103">構成レベルでのアセンブリ バインディング ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="244de-103">Specifies assembly binding policy at the configuration level.</span></span>
 
-<span data-ttu-id="0b712-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="0b712-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="0b712-105">&nbsp;&nbsp;**\<assemblyBinding >**</span><span class="sxs-lookup"><span data-stu-id="0b712-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
+<span data-ttu-id="244de-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="244de-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="244de-105">&nbsp;&nbsp;**\<assemblyBinding >**</span><span class="sxs-lookup"><span data-stu-id="244de-105">&nbsp;&nbsp;**\<assemblyBinding>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0b712-106">構文</span><span class="sxs-lookup"><span data-stu-id="0b712-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="244de-106">構文</span><span class="sxs-lookup"><span data-stu-id="244de-106">Syntax</span></span>
 
 ```xml
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
@@ -31,34 +29,34 @@ ms.locfileid: "54599349"
 </assemblyBinding>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="0b712-107">属性</span><span class="sxs-lookup"><span data-stu-id="0b712-107">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="244de-107">属性</span><span class="sxs-lookup"><span data-stu-id="244de-107">Attribute</span></span>
 
-|           | <span data-ttu-id="0b712-108">説明</span><span class="sxs-lookup"><span data-stu-id="0b712-108">Description</span></span> |
+|           | <span data-ttu-id="244de-108">説明</span><span class="sxs-lookup"><span data-stu-id="244de-108">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="0b712-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="0b712-109">**xmlns**</span></span> | <span data-ttu-id="0b712-110">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="0b712-110">Required attribute.</span></span><br><br><span data-ttu-id="0b712-111">アセンブリのバインディングに必要な XML 名前空間を指定します。</span><span class="sxs-lookup"><span data-stu-id="0b712-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="0b712-112">値として、文字列 "urn:schemas-microsoft-com:asm.v1" を使用します。</span><span class="sxs-lookup"><span data-stu-id="0b712-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
+| <span data-ttu-id="244de-109">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="244de-109">**xmlns**</span></span> | <span data-ttu-id="244de-110">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="244de-110">Required attribute.</span></span><br><br><span data-ttu-id="244de-111">アセンブリのバインディングに必要な XML 名前空間を指定します。</span><span class="sxs-lookup"><span data-stu-id="244de-111">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="244de-112">値として、文字列 "urn:schemas-microsoft-com:asm.v1" を使用します。</span><span class="sxs-lookup"><span data-stu-id="244de-112">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="0b712-113">親要素</span><span class="sxs-lookup"><span data-stu-id="0b712-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="244de-113">親要素</span><span class="sxs-lookup"><span data-stu-id="244de-113">Parent element</span></span>
 
-|     | <span data-ttu-id="0b712-114">説明</span><span class="sxs-lookup"><span data-stu-id="0b712-114">Description</span></span> |
+|     | <span data-ttu-id="244de-114">説明</span><span class="sxs-lookup"><span data-stu-id="244de-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="0b712-115">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="0b712-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="0b712-116">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="0b712-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="244de-115">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="244de-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="244de-116">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="244de-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-element"></a><span data-ttu-id="0b712-117">子要素</span><span class="sxs-lookup"><span data-stu-id="0b712-117">Child element</span></span>
+## <a name="child-element"></a><span data-ttu-id="244de-117">子要素</span><span class="sxs-lookup"><span data-stu-id="244de-117">Child element</span></span>
 
-|     | <span data-ttu-id="0b712-118">説明</span><span class="sxs-lookup"><span data-stu-id="0b712-118">Description</span></span> |
+|     | <span data-ttu-id="244de-118">説明</span><span class="sxs-lookup"><span data-stu-id="244de-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="0b712-119">**\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="0b712-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="0b712-120">インクルードする構成ファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="0b712-120">Specifies a configuration file to include.</span></span> |
+| [<span data-ttu-id="244de-119">**\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="244de-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="244de-120">インクルードする構成ファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="244de-120">Specifies a configuration file to include.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="0b712-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="0b712-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="244de-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="244de-121">Remarks</span></span>
 
-<span data-ttu-id="0b712-122">[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)要素は、構成ファイルをアプリケーション構成ファイルにアセンブリを含めるようにすることでコンポーネントのアセンブリの管理を簡略化既知の場所ではなく複製アセンブリの構成設定。</span><span class="sxs-lookup"><span data-stu-id="0b712-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
+<span data-ttu-id="244de-122">[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)要素は、構成ファイルをアプリケーション構成ファイルにアセンブリを含めるようにすることでコンポーネントのアセンブリの管理を簡略化既知の場所ではなく複製アセンブリの構成設定。</span><span class="sxs-lookup"><span data-stu-id="244de-122">The [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element simplifies the management of component assemblies by allowing application configuration files to include assembly configuration files in well-known locations, rather than duplicating assembly configuration settings.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0b712-123"> *\*\<LinkedConfiguration >** Windows サイド バイ サイドでマニフェストを使用するアプリケーションの要素がサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="0b712-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="244de-123"> *\*\<LinkedConfiguration >** Windows サイド バイ サイドでマニフェストを使用するアプリケーションの要素がサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="244de-123">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0b712-124">例</span><span class="sxs-lookup"><span data-stu-id="0b712-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="244de-124">例</span><span class="sxs-lookup"><span data-stu-id="244de-124">Example</span></span>
 
-<span data-ttu-id="0b712-125">次の例では、ローカルのハード ディスク上の構成ファイルを含める方法を示します。</span><span class="sxs-lookup"><span data-stu-id="0b712-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
+<span data-ttu-id="244de-125">次の例では、ローカルのハード ディスク上の構成ファイルを含める方法を示します。</span><span class="sxs-lookup"><span data-stu-id="244de-125">The following example shows how to include a configuration file on the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -68,6 +66,6 @@ ms.locfileid: "54599349"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0b712-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b712-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="244de-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="244de-126">See also</span></span>
 
-- [<span data-ttu-id="0b712-127">.NET Framework の構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="0b712-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="244de-127">.NET Framework の構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="244de-127">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
