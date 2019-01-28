@@ -50,7 +50,7 @@ End With
 |---|---|
 |`End`|必須。 プログラミング要素の定義を終了します。|
 |`AddHandler`|終了するために必要な`AddHandler`アクセサーを照合することによって開始された`AddHandler`カスタム ステートメント[Event ステートメント](event-statement.md)します。|
-|`Class`|照合することによって開始されたクラス定義を終了するために必要な[クラス ステートメント](class-statement.md)します。|
+|`Class`|照合することによって開始されたクラス定義を終了するために必要な[Class ステートメント](class-statement.md)します。|
 |`Enum`|照合することによって開始された列挙の定義を終了するために必要な[Enum ステートメント](enum-statement.md)します。|
 |`Event`|終了するために必要な`Custom`を照合することによって開始されたイベント定義[Event ステートメント](event-statement.md)します。|  
 |`Function`|終了するために必要な`Function`プロシージャの定義を照合することによって開始された[関数ステートメント](function-statement.md)します。 実行されると、`End Function`ステートメントでは、呼び出し元のコードに制御が戻ります。|
