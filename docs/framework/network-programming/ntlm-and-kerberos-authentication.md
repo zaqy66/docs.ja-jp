@@ -19,15 +19,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 254ffea79612c10f147984dda37d0117edbf9e3e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4b93bce3560aaf5e0c888324e74129b5cb62262e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515837"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="df87e-102">NTLM 認証および Kerberos 認証</span><span class="sxs-lookup"><span data-stu-id="df87e-102">NTLM and Kerberos Authentication</span></span>
-<span data-ttu-id="df87e-103">既定の NTLM 認証と Kerberos 認証は、呼び出し元のアプリケーションに関連付けられている Microsoft Windows NT ユーザー資格情報を使用して、サーバーで認証を試みます。</span><span class="sxs-lookup"><span data-stu-id="df87e-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="df87e-104">既定以外の NTLM 認証を使用する場合、アプリケーションは認証の種類を NTLM に設定し、次の例に示すように <xref:System.Net.NetworkCredential> オブジェクトを使用して、ユーザー名、パスワード、およびドメインをホストに渡します。</span><span class="sxs-lookup"><span data-stu-id="df87e-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
+# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="3e2d8-102">NTLM 認証および Kerberos 認証</span><span class="sxs-lookup"><span data-stu-id="3e2d8-102">NTLM and Kerberos Authentication</span></span>
+<span data-ttu-id="3e2d8-103">既定の NTLM 認証と Kerberos 認証は、呼び出し元のアプリケーションに関連付けられている Microsoft Windows NT ユーザー資格情報を使用して、サーバーで認証を試みます。</span><span class="sxs-lookup"><span data-stu-id="3e2d8-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="3e2d8-104">既定以外の NTLM 認証を使用する場合、アプリケーションは認証の種類を NTLM に設定し、次の例に示すように <xref:System.Net.NetworkCredential> オブジェクトを使用して、ユーザー名、パスワード、およびドメインをホストに渡します。</span><span class="sxs-lookup"><span data-stu-id="3e2d8-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -43,7 +43,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- <span data-ttu-id="df87e-105">アプリケーション ユーザーの資格情報を使用してインターネット サービスに接続する必要があるアプリケーションは、次の例に示すように、ユーザーの既定の資格情報を使用してこれを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="df87e-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
+ <span data-ttu-id="3e2d8-105">アプリケーション ユーザーの資格情報を使用してインターネット サービスに接続する必要があるアプリケーションは、次の例に示すように、ユーザーの既定の資格情報を使用してこれを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="3e2d8-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -57,11 +57,11 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- <span data-ttu-id="df87e-106">ネゴシエート認証モジュールは、リモート サーバーが NTLM 認証を使用しているか Kerberos 認証を使用しているかを確認し、適切な応答を送信します。</span><span class="sxs-lookup"><span data-stu-id="df87e-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
+ <span data-ttu-id="3e2d8-106">ネゴシエート認証モジュールは、リモート サーバーが NTLM 認証を使用しているか Kerberos 認証を使用しているかを確認し、適切な応答を送信します。</span><span class="sxs-lookup"><span data-stu-id="3e2d8-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="df87e-107">NTLM 認証は、プロキシ サーバー経由では機能しません。</span><span class="sxs-lookup"><span data-stu-id="df87e-107">NTLM authentication does not work through a proxy server.</span></span>  
+>  <span data-ttu-id="3e2d8-107">NTLM 認証は、プロキシ サーバー経由では機能しません。</span><span class="sxs-lookup"><span data-stu-id="3e2d8-107">NTLM authentication does not work through a proxy server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df87e-108">参照</span><span class="sxs-lookup"><span data-stu-id="df87e-108">See Also</span></span>  
- [<span data-ttu-id="df87e-109">基本認証とダイジェスト認証</span><span class="sxs-lookup"><span data-stu-id="df87e-109">Basic and Digest Authentication</span></span>](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [<span data-ttu-id="df87e-110">インターネット認証</span><span class="sxs-lookup"><span data-stu-id="df87e-110">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="3e2d8-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="3e2d8-108">See also</span></span>
+- [<span data-ttu-id="3e2d8-109">基本認証とダイジェスト認証</span><span class="sxs-lookup"><span data-stu-id="3e2d8-109">Basic and Digest Authentication</span></span>](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [<span data-ttu-id="3e2d8-110">インターネット認証</span><span class="sxs-lookup"><span data-stu-id="3e2d8-110">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
