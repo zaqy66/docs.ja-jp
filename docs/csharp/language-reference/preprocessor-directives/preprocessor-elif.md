@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: d7ca980146369174a202c8096cdba154712a438e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 00a9298be6ecd6f5e775d930190ddb6e227e4711
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587230"
 ---
-# <a name="elif-c-reference"></a><span data-ttu-id="d8377-102">#elif (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="d8377-102">#elif (C# Reference)</span></span>
-<span data-ttu-id="d8377-103">`#elif` を使用すると、複合条件付きディレクティブを作成できます。</span><span class="sxs-lookup"><span data-stu-id="d8377-103">`#elif` lets you create a compound conditional directive.</span></span> <span data-ttu-id="d8377-104">`#elif` 式が評価されるのは、先行するディレクティブ式 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) および `#elif` (オプション) が `true` と評価されなかった場合です。</span><span class="sxs-lookup"><span data-stu-id="d8377-104">The `#elif` expression will be evaluated if neither the preceding [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nor any preceding, optional, `#elif` directive expressions evaluate to `true`.</span></span> <span data-ttu-id="d8377-105">`#elif` 式が `true` と評価された場合は、`#elif` と次の条件付きディレクティブの間にあるすべてのコードが、コンパイラによって評価されます。</span><span class="sxs-lookup"><span data-stu-id="d8377-105">If a `#elif` expression evaluates to `true`, the compiler evaluates all the code between the `#elif` and the next conditional directive.</span></span> <span data-ttu-id="d8377-106">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="d8377-106">For example:</span></span>  
+# <a name="elif-c-reference"></a><span data-ttu-id="4cb6d-102">#elif (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="4cb6d-102">#elif (C# Reference)</span></span>
+<span data-ttu-id="4cb6d-103">`#elif` を使用すると、複合条件付きディレクティブを作成できます。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-103">`#elif` lets you create a compound conditional directive.</span></span> <span data-ttu-id="4cb6d-104">`#elif` 式が評価されるのは、先行するディレクティブ式 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) および `#elif` (オプション) が `true` と評価されなかった場合です。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-104">The `#elif` expression will be evaluated if neither the preceding [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nor any preceding, optional, `#elif` directive expressions evaluate to `true`.</span></span> <span data-ttu-id="4cb6d-105">`#elif` 式が `true` と評価された場合は、`#elif` と次の条件付きディレクティブの間にあるすべてのコードが、コンパイラによって評価されます。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-105">If a `#elif` expression evaluates to `true`, the compiler evaluates all the code between the `#elif` and the next conditional directive.</span></span> <span data-ttu-id="4cb6d-106">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-106">For example:</span></span>  
   
 ```csharp
 #define VC7  
@@ -27,22 +27,22 @@ ms.locfileid: "53239408"
 #endif  
 ```  
   
- <span data-ttu-id="d8377-107">複数のシンボルを評価するときには、`==` (等値)、`!=` (非等値)、`&&` (AND)、および `||` (OR) の演算子を使用できます。</span><span class="sxs-lookup"><span data-stu-id="d8377-107">You can use the operators `==` (equality), `!=` (inequality), `&&` (and), and `||` (or), to evaluate multiple symbols.</span></span> <span data-ttu-id="d8377-108">シンボルと演算子は、かっこを使用してグループ化できます。</span><span class="sxs-lookup"><span data-stu-id="d8377-108">You can also group symbols and operators with parentheses.</span></span>  
+ <span data-ttu-id="4cb6d-107">複数のシンボルを評価するときには、`==` (等値)、`!=` (非等値)、`&&` (AND)、および `||` (OR) の演算子を使用できます。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-107">You can use the operators `==` (equality), `!=` (inequality), `&&` (and), and `||` (or), to evaluate multiple symbols.</span></span> <span data-ttu-id="4cb6d-108">シンボルと演算子は、かっこを使用してグループ化できます。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-108">You can also group symbols and operators with parentheses.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d8377-109">コメント</span><span class="sxs-lookup"><span data-stu-id="d8377-109">Remarks</span></span>  
- <span data-ttu-id="d8377-110">`#elif` では、次のように記述した場合と同じ結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="d8377-110">`#elif` is equivalent to using:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4cb6d-109">コメント</span><span class="sxs-lookup"><span data-stu-id="4cb6d-109">Remarks</span></span>  
+ <span data-ttu-id="4cb6d-110">`#elif` では、次のように記述した場合と同じ結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-110">`#elif` is equivalent to using:</span></span>  
   
 ```csharp
 #else  
 #if  
 ```  
   
- <span data-ttu-id="d8377-111">`#elif` を使用する方が簡単です。`#if` には対になる [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) が必要ですが、`#elif` では対応する `#endif` が不要なためです。</span><span class="sxs-lookup"><span data-stu-id="d8377-111">Using `#elif` is simpler, because each `#if` requires a [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), whereas a `#elif` can be used without a matching `#endif`.</span></span>  
+ <span data-ttu-id="4cb6d-111">`#elif` を使用する方が簡単です。`#if` には対になる [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) が必要ですが、`#elif` では対応する `#endif` が不要なためです。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-111">Using `#elif` is simpler, because each `#if` requires a [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), whereas a `#elif` can be used without a matching `#endif`.</span></span>  
   
- <span data-ttu-id="d8377-112">`#elif` の使用例については、「[#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d8377-112">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#elif`.</span></span>  
+ <span data-ttu-id="4cb6d-112">`#elif` の使用例については、「[#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4cb6d-112">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#elif`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8377-113">参照</span><span class="sxs-lookup"><span data-stu-id="d8377-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4cb6d-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="4cb6d-113">See also</span></span>
 
-- [<span data-ttu-id="d8377-114">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="d8377-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="d8377-115">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="d8377-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="d8377-116">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="d8377-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="4cb6d-114">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="4cb6d-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="4cb6d-115">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="4cb6d-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="4cb6d-116">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="4cb6d-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

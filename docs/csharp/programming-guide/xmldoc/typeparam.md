@@ -8,41 +8,41 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 87629346238e92cf95141e72d79be37f8b11e48f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 21819bebbb304eaace3950f40b97033762cd6ce8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568050"
 ---
-# <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="a9dc4-102">&lt;typeparam&gt; (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="a9dc4-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="a9dc4-103">構文</span><span class="sxs-lookup"><span data-stu-id="a9dc4-103">Syntax</span></span>  
+# <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="52bfd-102">&lt;typeparam&gt; (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="52bfd-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="52bfd-103">構文</span><span class="sxs-lookup"><span data-stu-id="52bfd-103">Syntax</span></span>  
   
 ```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a9dc4-104">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a9dc4-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="52bfd-104">パラメーター</span><span class="sxs-lookup"><span data-stu-id="52bfd-104">Parameters</span></span>  
  `name`  
- <span data-ttu-id="a9dc4-105">型パラメーターの名前。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-105">The name of the type parameter.</span></span> <span data-ttu-id="a9dc4-106">名前は二重引用符 (" ") で囲みます。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-106">Enclose the name in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="52bfd-105">型パラメーターの名前。</span><span class="sxs-lookup"><span data-stu-id="52bfd-105">The name of the type parameter.</span></span> <span data-ttu-id="52bfd-106">名前は二重引用符 (" ") で囲みます。</span><span class="sxs-lookup"><span data-stu-id="52bfd-106">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="a9dc4-107">型パラメーターの説明。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-107">A description for the type parameter.</span></span>  
+ <span data-ttu-id="52bfd-107">型パラメーターの説明。</span><span class="sxs-lookup"><span data-stu-id="52bfd-107">A description for the type parameter.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a9dc4-108">コメント</span><span class="sxs-lookup"><span data-stu-id="a9dc4-108">Remarks</span></span>  
- <span data-ttu-id="a9dc4-109">`<typeparam>` タグは、型パラメーターを説明するためにジェネリック型またはメソッドの宣言のコメントで使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="a9dc4-110">ジェネリック型またはメソッドの型パラメーターごとにタグを追加します。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-110">Add a tag for each type parameter of the generic type or method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52bfd-108">コメント</span><span class="sxs-lookup"><span data-stu-id="52bfd-108">Remarks</span></span>  
+ <span data-ttu-id="52bfd-109">`<typeparam>` タグは、型パラメーターを説明するためにジェネリック型またはメソッドの宣言のコメントで使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="52bfd-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="52bfd-110">ジェネリック型またはメソッドの型パラメーターごとにタグを追加します。</span><span class="sxs-lookup"><span data-stu-id="52bfd-110">Add a tag for each type parameter of the generic type or method.</span></span>  
   
- <span data-ttu-id="a9dc4-111">詳細については、「[ジェネリック](../../../csharp/programming-guide/generics/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-111">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
+ <span data-ttu-id="52bfd-111">詳細については、「[ジェネリック](../../../csharp/programming-guide/generics/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="52bfd-111">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- <span data-ttu-id="a9dc4-112">`<typeparam>` タグのテキストは、IntelliSense、[オブジェクト ブラウザー ウィンドウ](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser)、コード コメント Web レポートに表示されます。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) code comment web report.</span></span>  
+ <span data-ttu-id="52bfd-112">`<typeparam>` タグのテキストは、IntelliSense、[オブジェクト ブラウザー ウィンドウ](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser)、コード コメント Web レポートに表示されます。</span><span class="sxs-lookup"><span data-stu-id="52bfd-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) code comment web report.</span></span>  
   
- <span data-ttu-id="a9dc4-113">コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="a9dc4-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="52bfd-113">コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="52bfd-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a9dc4-114">例</span><span class="sxs-lookup"><span data-stu-id="a9dc4-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="52bfd-114">例</span><span class="sxs-lookup"><span data-stu-id="52bfd-114">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="a9dc4-115">参照</span><span class="sxs-lookup"><span data-stu-id="a9dc4-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52bfd-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="52bfd-115">See also</span></span>
 
-- [<span data-ttu-id="a9dc4-116">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="a9dc4-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="a9dc4-117">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="a9dc4-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="a9dc4-118">ドキュメント コメントとして推奨されるタグ</span><span class="sxs-lookup"><span data-stu-id="a9dc4-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="52bfd-116">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="52bfd-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="52bfd-117">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="52bfd-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="52bfd-118">ドキュメント コメントとして推奨されるタグ</span><span class="sxs-lookup"><span data-stu-id="52bfd-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
