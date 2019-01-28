@@ -1,15 +1,15 @@
 ---
-title: DependentTransaction による同時実行の管理
+title: DependentTransaction によるコンカレンシーの管理
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664461"
 ---
-# <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction による同時実行の管理
+# <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction によるコンカレンシーの管理
 <xref:System.Transactions.Transaction> オブジェクトは、<xref:System.Transactions.Transaction.DependentClone%2A> メソッドを使用して作成されます。 このオブジェクトの唯一の目的は、他のコード (ワーカー スレッドなど) でトランザクションの処理を実行している間、トランザクションをコミットできないように保証することです。 複製されたトランザクション内の処理が完了してコミットの準備が整うと、<xref:System.Transactions.DependentTransaction.Complete%2A> メソッドを使用して、そのトランザクションの作成者に通知できます。 これにより、データの一貫性と正確性を保持できます。  
   
  <xref:System.Transactions.DependentTransaction> クラスは、非同期タスク間の同時実行の管理にも使用できます。 この場合は、トランザクションに依存している複製が独自のタスクの処理を行う間、親が任意のコードの実行を継続できます。 つまり、依存している複製が完了するまで親の実行がブロックされることはありません。  
@@ -70,10 +70,10 @@ using(TransactionScope scope = new TransactionScope())
   
  `ThreadMethod` メソッドは、新しいスレッドで実行されます。 クライアントは新しいスレッドを開始し、`ThreadMethod` パラメーターとして依存トランザクションを渡します。  
   
- 依存トランザクションは <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> により作成されるため、2 番目のスレッド上ですべてのトランザクションの処理が完了し、依存トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出されるまで、トランザクションがコミットされないことが保証されます。 つまり、クライアントのスコープが終了した場合 (、最後のトランザクション オブジェクトを破棄しようとすると、**を使用して**ステートメント) スレッドの新しい呼び出しの前に<xref:System.Transactions.DependentTransaction.Complete%2A>まで依存のトランザクションで、クライアントコードをブロック<xref:System.Transactions.DependentTransaction.Complete%2A>依存ファイルで呼び出されるとします。 その後、トランザクションはコミットまたは中止の処理を完了できます。  
+ 依存トランザクションは <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> により作成されるため、2 番目のスレッド上ですべてのトランザクションの処理が完了し、依存トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出されるまで、トランザクションがコミットされないことが保証されます。 つまり、クライアントのスコープが終了した場合 (の最後にトランザクション オブジェクトの破棄を試みたときに、**を使用して**ステートメント) 新しいスレッドの呼び出しの前に<xref:System.Transactions.DependentTransaction.Complete%2A>まで、依存トランザクションでのクライアントコードをブロック<xref:System.Transactions.DependentTransaction.Complete%2A> 、依存と呼びます。 その後、トランザクションはコミットまたは中止の処理を完了できます。  
   
-## <a name="concurrency-issues"></a>同時実行に関する問題  
- 同時実行に関して、<xref:System.Transactions.DependentTransaction> クラスを使用する場合に注意が必要な問題がいくつかあります。  
+## <a name="concurrency-issues"></a>コンカレンシーに関する問題  
+ コンカレンシーに関して、<xref:System.Transactions.DependentTransaction> クラスを使用する場合に注意が必要な問題がいくつかあります。  
   
 -   ワーカー スレッドがトランザクションをロールバックし、親がトランザクションのコミットを試みた場合、<xref:System.Transactions.TransactionAbortedException> がスローされます。  
   
@@ -81,5 +81,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   ワーカー スレッドが新しいワーカー スレッドを生成する場合、依存している複製から依存している複製を作成し、それを新しいスレッドに渡してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>関連項目
+- <xref:System.Transactions.DependentTransaction>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683022"
 ---
 # <a name="tilebrush-overview"></a>TileBrush の概要
 <xref:System.Windows.Media.TileBrush> オブジェクトを提供する非常に大量のイメージで領域を塗りつぶす方法を制御<xref:System.Windows.Media.Drawing>、または<xref:System.Windows.Media.Visual>します。 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.TileBrush>方法の詳細に制御する機能、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>領域を塗りつぶします。  
@@ -53,13 +53,13 @@ Tile の TileMode を使用する TileBrush のコンポーネント
 ## <a name="the-base-tile"></a>基本タイル  
  A<xref:System.Windows.Media.TileBrush>を基本タイルにそのコンテンツを射影します。 <xref:System.Windows.Media.TileBrush.Stretch%2A>プロパティ コントロール方法<xref:System.Windows.Media.TileBrush>コンテンツは、基本タイルをいっぱいに拡大されます。 <xref:System.Windows.Media.TileBrush.Stretch%2A>プロパティによって定義された、次の値では、<xref:System.Windows.Media.Stretch>列挙体。  
   
--   <xref:System.Windows.Media.Stretch.None>: タイルを塗りつぶすには、ブラシのコンテンツは拡張されていません。  
+-   <xref:System.Windows.Media.Stretch.None>:ブラシのコンテンツは、タイルを塗りつぶすには引き伸ばされません。  
   
--   <xref:System.Windows.Media.Stretch.Fill>:、ブラシのコンテンツは、タイルに合わせてスケーリングされます。 コンテンツの高さと幅は別々にスケーリングされるため、コンテンツの元の縦横比が維持されない場合があります。 つまり、出力タイルを完全に塗りつぶすために、ブラシのコンテンツがいびつになることがあります。  
+-   <xref:System.Windows.Media.Stretch.Fill>:ブラシのコンテンツは、タイルに合わせてスケーリングされます。 コンテンツの高さと幅は別々にスケーリングされるため、コンテンツの元の縦横比が維持されない場合があります。 つまり、出力タイルを完全に塗りつぶすために、ブラシのコンテンツがいびつになることがあります。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>ブラシのコンテンツに、タイル内で完全に収まるようにスケーリングします。 コンテンツの縦横比は維持されます。  
+-   <xref:System.Windows.Media.Stretch.Uniform>:ブラシのコンテンツに、タイル内で完全に収まるようにスケーリングされます。 コンテンツの縦横比は維持されます。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>:、ブラシのコンテンツは、コンテンツの元の縦横比を維持しながら、出力領域が完全にいっぱいにように拡大縮小されます。  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>:ブラシのコンテンツは、コンテンツの元の縦横比を維持しながら、出力領域が完全にいっぱいにように拡大縮小されます。  
   
  次の図は、異なる<xref:System.Windows.Media.TileBrush.Stretch%2A>設定します。  
   
@@ -100,15 +100,15 @@ Tile の TileMode を使用する TileBrush のコンポーネント
 ### <a name="tiling-behavior"></a>並べて表示する動作  
  A<xref:System.Windows.Media.TileBrush>基本タイルが完全にいっぱいにならない、出力領域と、他のタイル モード時に並べて表示するパターンが生成されます<xref:System.Windows.Media.TileMode.None>を指定します。 タイル ブラシのタイルが出力領域を完全に塗りつぶしていないときにその<xref:System.Windows.Media.TileBrush.TileMode%2A>プロパティは、基本タイルは出力領域に複製する必要があり、基本のタイルを複製する必要があれば、かどうかを指定します。 <xref:System.Windows.Media.TileBrush.TileMode%2A>プロパティによって定義された、次の値では、<xref:System.Windows.Media.TileMode>列挙体。  
   
--   <xref:System.Windows.Media.TileMode.None>: 基本タイルだけを描画します。  
+-   <xref:System.Windows.Media.TileMode.None>:基本タイルのみを描画します。  
   
--   <xref:System.Windows.Media.TileMode.Tile>: 基本タイルが描画され、残りの領域は基本タイルの繰り返しつまり、1 つのタイルの右端は、次の左端の横にある同様に上端と下端で塗りつぶされます。  
+-   <xref:System.Windows.Media.TileMode.Tile>:基本タイルが描画され、残りの領域は基本タイルの繰り返しつまり、1 つのタイルの右端は、次の左端の横にある同様に上端と下端で塗りつぶされます。  
   
--   <xref:System.Windows.Media.TileMode.FlipX>同じ:<xref:System.Windows.Media.TileMode.Tile>タイルの代替列が水平方向に反転するがします。  
+-   <xref:System.Windows.Media.TileMode.FlipX>:同じ<xref:System.Windows.Media.TileMode.Tile>タイルの代替列が水平方向に反転するがします。  
   
--   <xref:System.Windows.Media.TileMode.FlipY>同じ:<xref:System.Windows.Media.TileMode.Tile>が代替行のタイルが上下に反転します。  
+-   <xref:System.Windows.Media.TileMode.FlipY>:同じ<xref:System.Windows.Media.TileMode.Tile>が代替行のタイルが上下に反転します。  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: を組み合わせた<xref:System.Windows.Media.TileMode.FlipX>と<xref:System.Windows.Media.TileMode.FlipY>します。  
+-   <xref:System.Windows.Media.TileMode.FlipXY>:<xref:System.Windows.Media.TileMode.FlipX> と <xref:System.Windows.Media.TileMode.FlipY> の組み合わせです。  
   
  並べて表示するさまざまなモードを次のイメージに示します。  
   
@@ -121,13 +121,13 @@ Tile の TileMode を使用する TileBrush のコンポーネント
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>関連項目
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)

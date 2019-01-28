@@ -4,12 +4,12 @@ description: このトピックでは、再利用可能なライブラリと単�
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 710ce4c26bf06f7f7a9b1dc633fa55ddb3477dd6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727756"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築
 
@@ -192,4 +192,4 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio 2017 for Mac リリース ノート](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Visual Studio 2017 for Mac リリース ノート](/visualstudio/releasenotes/vs2017-mac-relnotes)
