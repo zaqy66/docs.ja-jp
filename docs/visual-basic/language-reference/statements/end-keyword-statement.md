@@ -1,5 +1,5 @@
 ---
-title: End&lt;keyword&gt;ステートメント (Visual Basic)
+title: End<keyword>ステートメント (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.EndDefinition
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54654842"
 ---
-# <a name="end-ltkeywordgt-statement-visual-basic"></a>End&lt;keyword&gt;ステートメント (Visual Basic)
+# <a name="end-ltkeywordgt-statement-visual-basic"></a>End<keyword>ステートメント (Visual Basic)
 
 その他のキーワードの後に、そのキーワードによって導入されるステートメント ブロックの定義を終了します。
 
