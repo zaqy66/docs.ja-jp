@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652186"
 ---
 # <a name="interface-properties-c-programming-guide"></a>インターフェイスのプロパティ (C# プログラミング ガイド)
 [interface](../../../csharp/language-reference/keywords/interface.md) でプロパティを宣言することができます。 インターフェイスのプロパティ アクセサーの例を次に示します。  
@@ -51,11 +51,11 @@ ms.locfileid: "53241588"
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [プロパティの使用](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [プロパティの使用](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
 - [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)

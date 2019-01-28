@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650981"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>ジェネリックの利点 (C# プログラミング ガイド)
 ジェネリックを使用することによって、汎用基本データ型 <xref:System.Object> との値で型をキャストして一般化を行う、共通言語ランタイムや C# 言語の以前のバージョンの制限を解決できます。 ジェネリック クラスを作成すると、コンパイル時にタイプ セーフなコレクションを作成できます。  
@@ -35,11 +35,11 @@ ms.locfileid: "53245013"
   
  クライアント コードでは、<xref:System.Collections.ArrayList> と比較される <xref:System.Collections.Generic.List%601> と共に追加される構文は、宣言とインスタンス化での型引数だけです。 このようにコーディングは若干複雑になりますが、それと引き換えに、<xref:System.Collections.ArrayList> よりも安全であるだけでなく、特にリスト項目が値型のときには処理時間が大幅に短縮されるリストを作成できます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Collections.Generic>  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)  
-- [コレクションに関するガイドライン](../../../standard/design-guidelines/guidelines-for-collections.md)   
+- <xref:System.Collections.Generic>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [ボックス化とボックス化解除](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)
+- [コレクションに関するガイドライン](../../../standard/design-guidelines/guidelines-for-collections.md)

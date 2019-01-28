@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 2d0a4f829f6fe4d9662e25a4d8fd3936d2afd7f1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700612"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定サイズ バッファー (C# プログラミング ガイド)
 
@@ -49,9 +49,9 @@ private fixed char name[30];
 - 配列の宣言には要素数を指定する必要があります (例: `char id[8]`)。 `char id[]` は使用できません。
 - アンセーフ バッファーは、unsafe コンテキストで構造体のインスタンス フィールドとしてのみ使用できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)  
-- [アンセーフ コードとポインター](index.md)  
-- [fixed ステートメント](../../language-reference/keywords/fixed-statement.md)  
+- [C# プログラミング ガイド](../index.md)
+- [アンセーフ コードとポインター](index.md)
+- [fixed ステートメント](../../language-reference/keywords/fixed-statement.md)
 - [相互運用性](../interop/index.md)

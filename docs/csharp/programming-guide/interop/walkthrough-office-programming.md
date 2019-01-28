@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 76d48b588db17a712ac698b604828520e38776a9
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f76fb1d52754999c16021f2417aebb8825e46340
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700014"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 Visual Studio には、Microsoft Office のプログラミングを改善する C# および Visual Basic の新機能が導入されています。 便利な C# の機能には、名前付き引数、省略可能な引数、型 `dynamic` の戻り値があります。 COM プログラミングでは、`ref` キーワードを省略し、インデックス付きプロパティにアクセスできます。 Visual Basic の機能には、自動実装プロパティ、ラムダ式内のステートメント、コレクション初期化子などがあります。
@@ -190,23 +190,23 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 8.  Visual Studio で、**[ビルド]** メニューの **[ソリューションのクリーン]** をクリックして、完成したプロジェクトをクリーンアップします。  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
-- [自動実装プロパティ (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [自動実装するプロパティ (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
-- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
-- [位置と名前による引数渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
-- [名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
-- [事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
-- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
-- [ラムダ式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [方法: COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
-- [チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
-- [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [チュートリアル: 初めての Excel 用 VSTO アドインの作成](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
-- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [自動実装プロパティ (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [自動実装するプロパティ (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [位置と名前による引数渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+- [名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [ラムダ式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [方法: COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [チュートリアル: 初めての Excel 用 VSTO アドインの作成](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
 - [相互運用性](../../../csharp/programming-guide/interop/index.md)

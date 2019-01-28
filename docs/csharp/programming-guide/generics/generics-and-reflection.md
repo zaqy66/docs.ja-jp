@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6a014309829d7dbd477a7ae4a658b84a3f35d91f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742421"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>ジェネリックとリフレクション (C# プログラミング ガイド)
 共通言語ランタイム (CLR) は実行時にジェネリック型の情報にアクセスできるため、非ジェネリック型の場合と同じように、リフレクションを使用してジェネリック型の情報を取得できます。 詳細については、「[ランタイムのジェネリック](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)」を参照してください。  
@@ -45,9 +45,9 @@ ms.locfileid: "53244937"
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|現在の <xref:System.Reflection.MethodInfo> がジェネリック メソッドの定義を表している場合に true を返します。|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|現在のジェネリック メソッド定義の型パラメーターを型の配列要素に置き換え、その結果構築されるメソッドを表す <xref:System.Reflection.MethodInfo> オブジェクトを返します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [ジェネリック](../../../csharp/programming-guide/generics/index.md)  
-- [リフレクションとジェネリック型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [ジェネリック](../../../csharp/programming-guide/generics/index.md)
+- [リフレクションとジェネリック型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [ジェネリック](~/docs/standard/generics/index.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 6acb40117c4f59deb084965cb3db9e4a96f7f61a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b0aaf6c0b2f614fa5ff8611407cea567da1faafb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616316"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
@@ -43,13 +43,13 @@ ms.locfileid: "53242348"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Char>  
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)  
+- <xref:System.Char>
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)
 - [文字列](../../../csharp/programming-guide/strings/index.md)

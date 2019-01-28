@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77c30db3e59461340ea6ac92f4769de87f4271dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570136"
 ---
 # <a name="using-delegates-c-programming-guide"></a>デリゲートの使用 (C# プログラミング ガイド)
 [デリゲート](../../../csharp/language-reference/keywords/delegate.md)は、C および C++ の関数ポインターのようなメソッドを安全にカプセル化する型です。 ただし、C 関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 デリゲートの型は、デリゲートの名前によって定義されます。 次の例では、引数として[文字列](../../../csharp/language-reference/keywords/string.md)を受け取り、[void](../../../csharp/language-reference/keywords/void.md) を返すメソッドをカプセル化できる `Del` という名前のデリゲートを宣言しています。  
@@ -45,7 +45,7 @@ ms.locfileid: "53238846"
   
  以前に示した静的な `DelegateMethod` と共に、`Del` インスタンスによってラップできるメソッドが 3 つあります。  
   
- デリゲートは、呼び出されたときに複数のメソッドを呼び出すことができます。 これはマルチキャスティングと呼ばれます。 デリゲートのメソッドの一覧 (呼び出しリスト) に追加のメソッドを追加するには、加算演算子または加算代入演算子 ('+' または '+=') を使用して 2 つのデリゲートを追加する必要があります。 例:  
+ デリゲートは、呼び出されたときに複数のメソッドを呼び出すことができます。 これはマルチキャスティングと呼ばれます。 デリゲートのメソッドの一覧 (呼び出しリスト) に追加のメソッドを追加するには、加算演算子または加算代入演算子 ('+' または '+=') を使用して 2 つのデリゲートを追加する必要があります。 次に例を示します。  
   
  [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
   
@@ -65,7 +65,7 @@ ms.locfileid: "53238846"
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [デリゲート](../../../csharp/programming-guide/delegates/index.md)

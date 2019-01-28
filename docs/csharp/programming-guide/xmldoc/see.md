@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 63476ff77f1a8286730f29149bb5b6b87779f144
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: fb8b7dd0f1620895ff95917977745ac391dadf61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718599"
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;see&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -38,7 +38,7 @@ ms.locfileid: "54058413"
   
  [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
