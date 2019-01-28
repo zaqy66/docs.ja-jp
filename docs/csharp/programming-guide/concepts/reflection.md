@@ -2,12 +2,12 @@
 title: リフレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: d04fb15add465d0a04ac6b38b1c47aa408c81eaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8cdfe00a09d340d8b77f1f5582a3a3ad82c496b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537648"
 ---
 # <a name="reflection-c"></a>リフレクション (C#)
 リフレクションは、アセンブリ、モジュール、および型を記述する (<xref:System.Type> 型の) オブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、作成したインスタンスを既存のオブジェクトにバインドしたり、さらに既存のオブジェクトから型を取得してそのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりできます。 コードで属性を使用している場合は、リフレクションを使用してそれらにアクセスできます。 詳細については、「[属性](../../../../docs/standard/attributes/index.md)」を参照してください。  
@@ -64,7 +64,7 @@ System.Console.WriteLine(info);
   
 -   [属性に格納されている情報の取得](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [共通言語ランタイムのアセンブリ](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

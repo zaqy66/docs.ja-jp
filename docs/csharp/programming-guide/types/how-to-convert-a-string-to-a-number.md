@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: a75d6dd5fdb74ca3cb6fe28db7415aeb478e2237
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d7971bfb4b6f96a2d8efb9c09f96c0bd2856b9d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528720"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>方法: 文字列を数値に変換する (C# プログラミング ガイド)
 <xref:System.Convert> クラスのメソッドを使用するか、さまざまな数値型 (int、long、float など) にある `TryParse` メソッドを使用して、[文字列](../../../csharp/language-reference/keywords/string.md)を数値に変換できます。  
@@ -54,8 +54,8 @@ ms.locfileid: "53243219"
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [型](../../../csharp/programming-guide/types/index.md)  
-- [方法: 文字列が数値を表しているかどうかを確認する](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [型](../../../csharp/programming-guide/types/index.md)
+- [方法: 文字列が数値を表しているかどうかを確認する](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [.NET Framework 4 の書式指定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

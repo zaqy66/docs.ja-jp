@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5cda3f1a076a89326d78e2be887d10eae9a722b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558021"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ をサポートする C# の機能
 このセクションでは、C# 3.0 で導入された新しい言語構成要素について説明します。 これらの新機能はすべてある程度まで [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリで使用されていますが、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] だけでなく、これらの機能が役立つと思われるあらゆる状況で使用できます。  
@@ -88,6 +88,6 @@ select new {name = cust.Name, phone = cust.Phone};
   
 -   [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
    
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

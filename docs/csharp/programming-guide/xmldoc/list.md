@@ -13,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: b960349d26a4addb5f4723bd7aa3f19b07e5f4d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a636fd35355dfa7320c2ca961ddada233c574dbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563159"
 ---
 # <a name="ltlistgt-c-programming-guide"></a>&lt;list&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -55,7 +55,7 @@ ms.locfileid: "53241549"
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

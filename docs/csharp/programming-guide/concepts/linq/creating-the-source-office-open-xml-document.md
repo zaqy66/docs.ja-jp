@@ -2,12 +2,12 @@
 title: ソースとなる Office Open XML ドキュメントの作成 (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 7941864e5dc2401a27df151c8c7806218609fcd4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0fe5463ae95374542482f768eee2bc694e2c5dd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635846"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>ソースとなる Office Open XML ドキュメントの作成 (C#)
 このトピックでは、このチュートリアルの他の例で使用する Office Open XML WordprocessingML ドキュメントを作成する方法について説明します。 この手順に従うと、それぞれの例に記載されているとおりの出力が得られます。  
@@ -53,6 +53,6 @@ ms.locfileid: "44189885"
     > [!NOTE]
     >  Microsoft Word 2003 を使用している場合、**[ファイルの種類]** ボックスの一覧の **[Word 2007 文書]** をクリックします。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

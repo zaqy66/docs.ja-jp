@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 39b5aeecba39c0e5377fd4f76902dae4b678c324
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660178"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# コンパイラ オプション)
 **-filealign** オプションを使用すると、出力ファイル内のセクションのサイズを指定できます。  
@@ -53,9 +53,9 @@ ms.locfileid: "43530403"
   
 4.  **[ファイルの配置]** プロパティを変更します。  
   
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>」をご覧ください。  
+ このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

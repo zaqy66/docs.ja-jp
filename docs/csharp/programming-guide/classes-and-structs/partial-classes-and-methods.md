@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713316"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分クラスと部分メソッド (C# プログラミング ガイド)
 [クラス](../../../csharp/language-reference/keywords/class.md)、[構造体](../../../csharp/language-reference/keywords/struct.md)、[インターフェイス](../../../csharp/language-reference/keywords/interface.md)やメソッドの定義を複数のソース ファイルに分割できます。 各ソース ファイルには型やメソッドの定義のセクションが含まれ、分割されたすべての部分はアプリケーションのコンパイル時に結合されます。  
@@ -162,10 +162,10 @@ partial void onNameChanged()
 
 詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[部分型](~/_csharplang/spec/classes.md#partial-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)
 - [partial (型)](../../../csharp/language-reference/keywords/partial-type.md)

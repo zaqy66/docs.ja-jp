@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 92ac601719ccb1c5e9f769c286a1d2dd443c713a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6217b741a4dfabb67fc182a58543187ac37987ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695674"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>方法: クエリ式で暗黙的に型指定されるローカル変数および配列を使用する (C# プログラミング ガイド)
 コンパイラによってローカル変数の型が決定されるようにする場合は、暗黙的に型指定されたローカル変数を使用できます。 クエリ式でよく使用する匿名型を格納するには、暗黙的に型指定されたローカル変数を使用する必要があります。 以下の例では、クエリで暗黙的に型指定されたローカル変数を省略できる場合と、使用しなければならない場合の両方を示します。  
@@ -27,10 +27,10 @@ ms.locfileid: "53237806"
   
  [!code-csharp[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [拡張メソッド](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
-- [統合言語クエリ (LINQ)](../../../csharp/linq/index.md)  
-- [var](../../../csharp/language-reference/keywords/var.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [拡張メソッド](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [統合言語クエリ (LINQ)](../../../csharp/linq/index.md)
+- [var](../../../csharp/language-reference/keywords/var.md)
 - [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)

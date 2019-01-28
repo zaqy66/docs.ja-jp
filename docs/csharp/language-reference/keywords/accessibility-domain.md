@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 6028ec3184d7b9e61a62bf185fd37072636c6bc5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 241fe7714bfd3dd3fd37f7ac83a836f89b4951bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605579"
 ---
 # <a name="accessibility-domain-c-reference"></a>アクセシビリティ ドメイン (C# リファレンス)
 メンバーのアクセシビリティ ドメインとは、どのプログラム セクションをメンバーから参照できるかを規定するものです。 そのメンバーが他の型の入れ子になっている場合、そのアクセシビリティ ドメインは、そのメンバーの[アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md)と、その直接のコンテナーである型のアクセシビリティ ドメインとの両方によって決定されます。  
@@ -25,15 +25,15 @@ ms.locfileid: "53235693"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [アクセス修飾子](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md)  
-- [アクセシビリティ レベルの使用に関する制限事項](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
-- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
+## <a name="see-also"></a>関連項目
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [アクセス修飾子](../../../csharp/language-reference/keywords/access-modifiers.md)
+- [アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md)
+- [アクセシビリティ レベルの使用に関する制限事項](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
+- [protected](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)

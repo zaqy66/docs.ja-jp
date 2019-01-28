@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6aabdf9956365548d3f0cdf0cd046343d8129f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560741"
 ---
 # <a name="using-properties-c-programming-guide"></a>プロパティの使用 (C# プログラミング ガイド)
 プロパティは、フィールドとメソッドの両方の側面を結合します。 オブジェクトのユーザーにとってプロパティは、プロパティへのアクセスに同じ構文を必要とするフィールドのように見えます。 クラスの実装者にとってプロパティは、[get](../../../csharp/language-reference/keywords/get.md) アクセサーと [set](../../../csharp/language-reference/keywords/set.md) アクセサーの両方またはいずれかを表す 1 つまたは 2 つのコード ブロックです。 `get` アクセサーのコード ブロックはプロパティが読み取られる時に実行され、`set` アクセサーのコード ブロックはプロパティに新しい値が割り当てられるときに実行されます。 `set` アクセサーのないプロパティは読み取り専用と見なされます。 `get` アクセサーのないプロパティは書き込み専用と見なされます。 両方のアクセサーを持つプロパティは、読み取り/書き込みです。  
@@ -44,7 +44,7 @@ ms.locfileid: "53243063"
   
  [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
- `get` アクセサーは、フィールド値を返すまたは計算してから返すために使用できます。 例:  
+ `get` アクセサーは、フィールド値を返すまたは計算してから返すために使用できます。 次に例を示します。  
   
  [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
@@ -100,9 +100,9 @@ ms.locfileid: "53243063"
   
  [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [インターフェイスのプロパティ](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [インターフェイスのプロパティ](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)
 - [自動実装プロパティ](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)

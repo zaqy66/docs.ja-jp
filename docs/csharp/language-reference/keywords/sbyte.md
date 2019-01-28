@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: e7dc10706257b2c1fa8574f193523272339f61ff
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df184bf32fa09b10c7f3de508ffb73b9cf156b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663404"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (C# リファレンス)
 
@@ -106,13 +106,13 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
 
 詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.SByte>  
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.SByte>
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

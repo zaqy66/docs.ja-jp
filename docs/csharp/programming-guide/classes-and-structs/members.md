@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592851"
 ---
 # <a name="members-c-programming-guide"></a>メンバー (C# プログラミング ガイド)
 クラスと構造体には、そのデータおよび動作を表すメンバーがあります。 クラスのメンバーには、クラスで宣言されているすべてのメンバーと、継承の階層構造のすべてのクラスで宣言されているメンバー (コンストラクターとファイナライザーを除く) が含まれます。 基底クラスのプライベート メンバーは継承されますが、派生クラスからはアクセスできません。  
@@ -31,17 +31,17 @@ ms.locfileid: "53245105"
 |[ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)|ファイナライザーが C# で使用されることはほとんどありません。 デストラクターは、オブジェクトがメモリから削除されるときに、ランタイム実行エンジンによって呼び出されるメソッドです。 デストラクターは、通常、解放する必要があるリソースが適切に処理されるようにするために使用します。|  
 |[入れ子にされた型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|入れ子にされた型は、別の型で宣言された型です。 入れ子にされた型は、通常、それを格納している型だけで使用されるオブジェクトを表すために使用します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
-- [イベント](../../../csharp/programming-guide/events/index.md)  
-- [入れ子にされた型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
-- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
+- [イベント](../../../csharp/programming-guide/events/index.md)
+- [入れ子にされた型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
+- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 - [オーバーロードされた演算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

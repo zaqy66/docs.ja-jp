@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: fabcbb084a74334a7a1bcddb9a04cc6705caeb29
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 74932c9a080a077a60ecbc45c997108afa176956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676888"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静的コンストラクター (C# プログラミング ガイド)
 静的コンストラクターは、任意の [static](../../../csharp/language-reference/keywords/static.md) データを初期化するため、または 1 回だけ実行する必要がある特定のアクションを実行するために使います。 最初のインスタンスが作成され前、または静的メンバーが参照される前に、自動的に呼び出されます。  
@@ -39,10 +39,10 @@ ms.locfileid: "53234930"
   
  [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)

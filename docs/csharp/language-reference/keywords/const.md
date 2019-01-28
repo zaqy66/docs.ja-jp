@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 63fb86ed24dd4e30d3783d70e3249b9f8e5e20bd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f0b2b3632e767710bd31f5f6edaccaf0c2ef8c85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526978"
 ---
 # <a name="const-c-reference"></a>const (C# リファレンス)
 
-定数フィールドまたはローカル定数を宣言するには、`const` キーワードを使用します。 定数フィールドとローカルは変数でないため、変更できません。 定数には、数字、ブール値、文字列、または null 参照が含まれます。 いずれかの時点で変わることが予想される情報を表すために定数を作成してはなりません。 たとえば、サービスの価格、製品バージョン番号、会社のブランド名などを格納するためには定数フィールドを使用しないでください。 これらの値は時間の経過とともに変更される場合があります。コンパイラは定数を伝達するため、ライブラリでコンパイルされた他のコードを再コンパイルして、変更点を反映することが必要になってしまいます。 [readonly](../../../csharp/language-reference/keywords/readonly.md) キーワードも参照してください。 例:
+定数フィールドまたはローカル定数を宣言するには、`const` キーワードを使用します。 定数フィールドとローカルは変数でないため、変更できません。 定数には、数字、ブール値、文字列、または null 参照が含まれます。 いずれかの時点で変わることが予想される情報を表すために定数を作成してはなりません。 たとえば、サービスの価格、製品バージョン番号、会社のブランド名などを格納するためには定数フィールドを使用しないでください。 これらの値は時間の経過とともに変更される場合があります。コンパイラは定数を伝達するため、ライブラリでコンパイルされた他のコードを再コンパイルして、変更点を反映することが必要になってしまいます。 [readonly](../../../csharp/language-reference/keywords/readonly.md) キーワードも参照してください。 次に例を示します。
 
 ```csharp
 const int x = 0;
@@ -65,8 +65,8 @@ public const int c2 = c1 + 100;
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
 - [readonly](../../../csharp/language-reference/keywords/readonly.md)

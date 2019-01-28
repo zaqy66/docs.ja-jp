@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: a290cd709dd6491981658f467fa0163011290128
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 16f65bc4ddcc37bbc1abb5dfa6299670a738073b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503574"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>配列での foreach の使用 (C# プログラミング ガイド)
 
@@ -27,11 +27,11 @@ ms.locfileid: "53238469"
 
 ただし、多次元配列では、入れ子になった [for](../../language-reference/keywords/for.md) ループを使用した方が、配列要素を処理する順序をより厳密に制御できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Array>  
-- [C# プログラミング ガイド](../index.md)  
-- [配列](index.md)  
-- [1 次元配列](single-dimensional-arrays.md)  
-- [多次元配列](multidimensional-arrays.md)  
+- <xref:System.Array>
+- [C# プログラミング ガイド](../index.md)
+- [配列](index.md)
+- [1 次元配列](single-dimensional-arrays.md)
+- [多次元配列](multidimensional-arrays.md)
 - [ジャグ配列](jagged-arrays.md)

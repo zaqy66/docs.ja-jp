@@ -2,12 +2,12 @@
 title: デリゲートの分散 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 75b1f94a3fc7a59393d6a114a2b5346dd0534297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657208"
 ---
 # <a name="variance-in-delegates-c"></a>デリゲートの分散 (C#)
 .NET Framework 3.5 では、C# のすべてのデリゲートで、メソッド シグネチャとデリゲート型を一致させるために分散 (共変性と反変性) のサポートが導入されました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。  
@@ -196,8 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ジェネリック](~/docs/standard/generics/index.md)  
-- [Func および Action 汎用デリゲートでの分散の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [ジェネリック](~/docs/standard/generics/index.md)
+- [Func および Action 汎用デリゲートでの分散の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
 - [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

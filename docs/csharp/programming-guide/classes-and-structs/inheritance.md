@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: e69d1dba59858ff0988806dd3ed0dd22e5213313
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607018"
 ---
 # <a name="inheritance-c-programming-guide"></a>継承 (C# プログラミング ガイド)
 
@@ -54,9 +54,9 @@ ms.locfileid: "53236599"
 ## <a name="derived-class-hiding-of-base-class-members"></a>派生クラスによる基底クラスのメンバーの隠ぺい  
  派生クラスは、同じ名前とシグネチャでメンバーを宣言することで、基底クラスのメンバーを隠ぺいすることができます。 [new](../../../csharp/language-reference/keywords/new.md) 修飾子を使用すると、そのメンバーが基底クラスのメンバーのオーバーライドとして用意されているのではないことを明示的に指定できます。 [new](../../../csharp/language-reference/keywords/new.md) の使用は必須ではありませんが、[new](../../../csharp/language-reference/keywords/new.md) が使用されていない場合はコンパイラの警告が生成されます。 詳細については、「[Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)」および「[Override キーワードと New キーワードを使用する場合について](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)

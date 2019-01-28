@@ -3,12 +3,12 @@ title: 構造体 - C# ガイド
 description: 構造体型と、構造体を作成する方法について説明します
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506980"
 ---
 # <a name="structs"></a>構造体
 "*構造体*" は値の型です。 構造体が作成されると、構造体が割り当てられている変数にはその構造体の実際のデータが設定されます。 構造体が新しい変数に割り当てられると、そのデータがコピーされます。 したがって、新しい変数と元の変数には、同じデータのコピーが別個に含まれることになります。 一方のコピーに対して行われた変更は、もう一方のコピーには影響しません。
@@ -65,7 +65,7 @@ C# では、リテラル値の型がコンパイラによって決定されま�
 ## <a name="nullable-types"></a>Null 許容型  
 値型には、通常、[null](./language-reference/keywords/null.md) 値を割り当てることができません。 しかし、型の後ろに **?**  を付けることによって、null 値を設定できる値型を作成できます。 たとえば、**int?** は、[null](./language-reference/keywords/null.md) も設定できる **int** 型です。 CTS では、null 許容型は一般的な構造体型 <xref:System.Nullable%601> のインスタンスです。 Null 許容型は、数値が null になる可能性のあるデータベースとの間でデータを受け渡しする場合に、特に便利です。 詳細については、「[null 許容型 (C# プログラミング ガイド)](./programming-guide/nullable-types/index.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [クラス](classes.md)
 - [基本型](basic-types.md)

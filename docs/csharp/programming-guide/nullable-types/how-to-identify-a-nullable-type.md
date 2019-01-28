@@ -6,12 +6,12 @@ ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: 88c8c9d881719bd1d09a8879112b26d1c484f827
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 33169315f8bef45aba52f0696d4acac031584817
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582631"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>方法: Null 許容型を識別する (C# プログラミング ガイド)
 
@@ -35,6 +35,6 @@ ms.locfileid: "53240269"
   
 ## <a name="see-also"></a>関連項目
 
-- [Null 許容型](index.md)  
-- [Null 許容型の使用](using-nullable-types.md)  
-- <xref:System.Nullable.GetUnderlyingType%2A>  
+- [Null 許容型](index.md)
+- [Null 許容型の使用](using-nullable-types.md)
+- <xref:System.Nullable.GetUnderlyingType%2A>

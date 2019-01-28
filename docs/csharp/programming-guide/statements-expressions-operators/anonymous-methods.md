@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732520"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>匿名メソッド (C# プログラミング ガイド)
 C# 2.0 より前のバージョンでは、[デリゲート](../../../csharp/language-reference/keywords/delegate.md)を宣言するには[名前付きメソッド](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)を使用するしかありませんでした。 C# 2.0 では匿名メソッドが導入され、C# 3.0 以降では、インライン コードを記述するための本来の方法として、匿名メソッドに代わってラムダ式が使用されるようになりました。 ただし、このトピックに記載した匿名メソッドに関する情報は、ラムダ式にも適用されます。 ラムダ式にはない機能を匿名メソッドが備えているケースが 1 つあります。 匿名メソッドではパラメーター リストを省略できます。 つまり、匿名メソッドを、さまざまなシグネチャを持つデリゲートに変換できます。 これはラムダ式では不可能です。 ラムダ式の詳細については、「[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。  
@@ -57,12 +57,12 @@ C# 2.0 より前のバージョンでは、[デリゲート](../../../csharp/lan
   
  [!code-csharp[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
-- [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [アンセーフ コードとポインター](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [デリゲート](../../../csharp/programming-guide/delegates/index.md)
+- [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [アンセーフ コードとポインター](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [名前付きメソッドを使用したデリゲートと匿名メソッドを使用したデリゲート](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)

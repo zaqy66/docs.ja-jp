@@ -2,12 +2,12 @@
 title: XML ツリーのシリアル化 (C#)
 ms.date: 07/20/2015
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-ms.openlocfilehash: f9bcf049eb6cfe129971923657f5d70a833209cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a1c39c4c85cbd01fa7c3f3f99f2dfae49e3721d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583445"
 ---
 # <a name="serializing-xml-trees-c"></a>XML ツリーのシリアル化 (C#)
 XML ツリーのシリアル化とは、XML ツリーから XML を生成することです。 ファイル、<xref:System.IO.TextWriter> クラスの具象実装、または <xref:System.Xml.XmlWriter> クラスの具象実装へのシリアル化を行うことができます。  
@@ -23,6 +23,6 @@ XML ツリーのシリアル化とは、XML ツリーから XML を生成する�
 |[ファイル、TextWriter、および XmlWriter へのシリアル化](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|ドキュメントを <xref:System.IO.File>、<xref:System.IO.TextWriter>、または <xref:System.Xml.XmlWriter> にシリアル化する方法について説明します。|  
 |[XmlReader へのシリアル化 (XSLT の呼び出し) (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|<xref:System.Xml.XmlReader> を作成して、別のモジュールが XML ツリーの内容を読み取れるようにする方法について説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [プログラミング ガイド (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

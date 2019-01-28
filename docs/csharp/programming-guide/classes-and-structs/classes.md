@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 614b70562954fee99c6de3e66b54bbdd1134f553
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596704"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
@@ -100,9 +100,9 @@ C++ と異なり、C# のクラスは 1 つの基底クラスから直接継承�
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [オブジェクト指向プログラミング](../concepts/object-oriented-programming.md)
 - [ポリモーフィズム](polymorphism.md)
 - [識別子名](../inside-a-program/identifier-names.md)

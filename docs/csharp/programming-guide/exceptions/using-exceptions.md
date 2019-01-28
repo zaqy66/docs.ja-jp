@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 64e62d9c6cfcffb9ea5c0b0e05a546753278e186
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad664f5b689a2305afc17f4b480fdc445d64e25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583461"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>例外の使用 (C# プログラミング ガイド)
 C# では、例外と呼ばれるメカニズムを使用して、プログラムの実行時に発生したエラーがプログラムに伝えられます。 例外は、エラーが発生したコードによってスローされ、エラーを修正できるコードによってキャッチされます。 例外をスローできるのは、.NET Framework 共通言語ランタイム (CLR) か、プログラム内のコードです。 スローされた例外は、例外の `catch` ステートメントが見つかるまで呼び出し履歴をさかのぼります。 キャッチされない例外は、システムが提供する汎用の例外ハンドラーによって処理されます。このとき、ダイアログ ボックスが表示されます。  
@@ -26,11 +26,11 @@ C# では、例外と呼ばれるメカニズムを使用して、プログラ�
   
  例外をスローするステートメントが `try` ブロックにない場合、または `try` ブロックにそのステートメントが含まれていても、対応する `catch` ブロックが存在しない場合は、ランタイムが呼び出し側のメソッドで `try` ステートメントと `catch` ブロックを探します。 続けて、呼び出し履歴で、対応する `catch` ブロックを探します。 `catch` ブロックが見つかり実行されると、その `catch` ブロックの後にある次のステートメントに制御が渡されます。  
   
- `try` ステートメントには、複数の `catch` ブロックを含めることができます。 例外を処理できる最初の `catch` ステートメントが実行され、その後の `catch` ステートメントは、対応していても無視されます。 そのため、catch ブロックは必ず特殊性が高いもの (または最も派生されたもの) から順に配置する必要があります。 例:  
+ `try` ステートメントには、複数の `catch` ブロックを含めることができます。 例外を処理できる最初の `catch` ステートメントが実行され、その後の `catch` ステートメントは、対応していても無視されます。 そのため、catch ブロックは必ず特殊性が高いもの (または最も派生されたもの) から順に配置する必要があります。 次に例を示します。  
   
  [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- `catch` ブロックが実行される前に、ランタイムにより `finally` ブロックがチェックされます。 `Finally` ブロックを使用すると、中止された `try` ブロックによって残ることがある、あいまいな状態をクリーンアップできます。また、ランタイムのガベージ コレクターがオブジェクトを終了させるのを待たずに外部リソース (グラフィック ハンドル、データベース接続、ファイル ストリームなど) を解放することもできます。 例:  
+ `catch` ブロックが実行される前に、ランタイムにより `finally` ブロックがチェックされます。 `Finally` ブロックを使用すると、中止された `try` ブロックによって残ることがある、あいまいな状態をクリーンアップできます。また、ランタイムのガベージ コレクターがオブジェクトを終了させるのを待たずに外部リソース (グラフィック ハンドル、データベース接続、ファイル ストリームなど) を解放することもできます。 次に例を示します。  
   
  [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
@@ -44,7 +44,7 @@ C# では、例外と呼ばれるメカニズムを使用して、プログラ�
   
 -   スレッドの開始位置に到達すると、スレッドは終了します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)

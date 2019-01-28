@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 1924e218f151a86b0524df6f3c91bdbe78131922
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3505cf44c187c2f7aa54ca61f38e5c40023d809d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502599"
 ---
 # <a name="using-constructors-c-programming-guide"></a>コンストラクターの使用 (C# プログラミング ガイド)
 [クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)を作成する際には、コンストラクターが呼び出されます。 コンストラクターの名前はクラスまたは構造体と同じで、通常は、このコンストラクターによって、新しいオブジェクトのデータ メンバーが初期化されます。  
@@ -92,9 +92,9 @@ Console.WriteLine("{0}, {1}", a, b);
 
 詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[インスタンス コンストラクター](~/_csharplang/spec/classes.md#instance-constructors)と[静的コンストラクター](~/_csharplang/spec/classes.md#static-constructors)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)

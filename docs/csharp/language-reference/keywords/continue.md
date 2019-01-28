@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C#]
 ms.assetid: 8a5ac96f-f98a-4519-b32d-345847ed7be0
-ms.openlocfilehash: fbb5d170f10c0a4b6c6edeae6c3f4a549de65525
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0b3baf6eb4843ff67a3d76af06ca86ca9ec2db03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690593"
 ---
 # <a name="continue-c-reference"></a>continue (C# リファレンス)
 
@@ -31,8 +31,8 @@ ms.locfileid: "53243902"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [break ステートメント](/cpp/cpp/break-statement-cpp)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [break ステートメント](/cpp/cpp/break-statement-cpp)
 - [ジャンプ ステートメント](../../../csharp/language-reference/keywords/jump-statements.md)

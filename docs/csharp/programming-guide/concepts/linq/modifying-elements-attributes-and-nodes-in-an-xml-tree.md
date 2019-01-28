@@ -2,12 +2,12 @@
 title: XML ツリー内の要素、属性、およびノードの変更
 ms.date: 07/20/2015
 ms.assetid: 0ed22e4e-4c6b-4eb1-b0eb-06685efd8c33
-ms.openlocfilehash: 9567d0c6c5cd4853eeb2a86066cd1a805f20a031
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 68195133a944f14f83bf6a33903152393205bfce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43777351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606243"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>XML ツリー内の要素、属性、およびノードの変更
 次の表は、要素、その子要素、またはその属性の変更に使用できるメソッドとプロパティについてまとめたものです。  
@@ -45,6 +45,6 @@ ms.locfileid: "43777351"
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|子ノードを新しいコンテンツに置き換えます。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

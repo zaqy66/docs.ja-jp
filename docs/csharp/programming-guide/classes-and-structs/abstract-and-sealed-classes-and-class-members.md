@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3257d365bb9816f4cb41d354f78c88ad4fa0f567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523832"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象クラスとシール クラス、およびクラス メンバー (C# プログラミング ガイド)
 [abstract](../../../csharp/language-reference/keywords/abstract.md) キーワードを使用すると、派生クラスで実装する必要のある不完全な[クラス](../../../csharp/language-reference/keywords/class.md) メンバーを作成できます。  
@@ -44,15 +44,15 @@ ms.locfileid: "53235856"
   
  シール クラスは、基底クラスとして使用できません。 このため、シール クラスは抽象クラスになることもできません。 シール クラスにより、派生が防止されます。 シール クラスは基底クラスとして使用できないので、実行時の最適化で、シール クラス メンバーを多少高速に呼び出すことができる場合があります。  
   
- 基底クラスの仮想メンバーをオーバーライドしている派生クラスのメソッド、インデクサー、プロパティ、またはイベントでは、そのメンバーをシールとして宣言できます。 これにより、その後の派生クラスでは、メンバーの仮想性が無効になります。 このように宣言するには、クラス メンバー宣言で [override](../../../csharp/language-reference/keywords/override.md) キーワードの前に `sealed` キーワードを配置します。 例:  
+ 基底クラスの仮想メンバーをオーバーライドしている派生クラスのメソッド、インデクサー、プロパティ、またはイベントでは、そのメンバーをシールとして宣言できます。 これにより、その後の派生クラスでは、メンバーの仮想性が無効になります。 このように宣言するには、クラス メンバー宣言で [override](../../../csharp/language-reference/keywords/override.md) キーワードの前に `sealed` キーワードを配置します。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)
 - [方法: 抽象プロパティを定義する](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

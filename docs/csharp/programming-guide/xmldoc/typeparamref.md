@@ -8,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: bbe9bed5a32e463424b98f4066e95374401931e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cfee16ad1cdc1e019a4133259c1603f5a0a09ac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536556"
 ---
 # <a name="lttypeparamrefgt-c-programming-guide"></a>&lt;typeparamref&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -36,7 +36,7 @@ ms.locfileid: "53243921"
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

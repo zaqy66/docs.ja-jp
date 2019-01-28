@@ -2,12 +2,12 @@
 title: '方法: 署名のないフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4281aa4d507b2150f65d7d7ff05dd2a2fa8aacd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703225"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>方法: 署名のないフレンド アセンブリを作成する (C#)
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
@@ -90,10 +90,10 @@ ms.locfileid: "54362146"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `internal` 型とメンバーの参照可能範囲を制御することです。  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
-- [フレンド アセンブリ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [方法: 署名されたフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [フレンド アセンブリ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [方法: 署名されたフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)

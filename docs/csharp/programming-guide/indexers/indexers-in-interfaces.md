@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5d2dc8f5bdb0b89d5fd265ad86cbb13401bc8b14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523585"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>インターフェイスのインデクサー (C# プログラミング ガイド)
 [interface](../../../csharp/language-reference/keywords/interface.md) でインデクサーを宣言することができます。 インターフェイスのインデクサーのアクセサーは、[クラス](../../../csharp/language-reference/keywords/class.md)のインデクサーのアクセサーと次の点で異なります。  
@@ -59,9 +59,9 @@ string ICitizen.this[int index]
   
  これは、`ICitizen` インターフェイスでインデクサーを実装します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)

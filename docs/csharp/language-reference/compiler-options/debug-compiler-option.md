@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502975"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# コンパイラ オプション)
 **-debug** オプションを指定すると、コンパイラによってデバッグ情報が生成され、出力ファイルに格納されます。  
@@ -54,7 +54,7 @@ ms.locfileid: "43470958"
   
 4.  **[デバッグ情報]** プロパティを変更します。  
   
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>」をご覧ください。  
+ このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>」をご覧ください。  
   
 ## <a name="example"></a>例  
  デバッグ情報を出力ファイル `app.pdb` に出力します。  
@@ -63,7 +63,7 @@ ms.locfileid: "43470958"
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

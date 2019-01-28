@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: d44d8d0143d366117a24495df3fa8a18f893ebb3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496258"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードを使用する場合について (C# プログラミング ガイド)
 C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../../csharp/language-reference/keywords/new.md) および [override](../../../csharp/language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスのメソッドを "*拡張*" し、`new` 修飾子は "*隠ぺい*" します。 このトピックの例ではその違いを示します。  
@@ -542,10 +542,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
-- [base](../../../csharp/language-reference/keywords/base.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
+- [base](../../../csharp/language-reference/keywords/base.md)
 - [abstract](../../../csharp/language-reference/keywords/abstract.md)

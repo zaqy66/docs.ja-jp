@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 5688e71c49309c3f879eda4fd6df8ba75b327426
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 39a34539fbd9623d4ae3c6bddf55e50e3502db61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692351"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>方法: バイト配列を int に変換する (C# プログラミング ガイド)
 次の例では、<xref:System.BitConverter> クラスを使用して、バイト配列を [int](../../../csharp/language-reference/keywords/int.md) に変換する方法、またバイト配列に戻す方法を示しています。 たとえば、ネットワークからバイトを読み込んだ後、バイトから組み込みデータ型への変換が必要になる場合があります。 この例の [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) メソッド以外にも、バイト列を (バイト配列から) 他の組み込み型に変換する <xref:System.BitConverter> クラスのメソッドがあります。次の表にそれらのメソッドを示します。  
@@ -45,8 +45,8 @@ ms.locfileid: "53241523"
   
  [!code-csharp[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.BitConverter>  
-- <xref:System.BitConverter.IsLittleEndian>  
+- <xref:System.BitConverter>
+- <xref:System.BitConverter.IsLittleEndian>
 - [型](../../../csharp/programming-guide/types/index.md)

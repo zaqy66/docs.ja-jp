@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 6aa3aebdc03fc54233ac1cc027241fcb36cc8535
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5bb97d9d46ae179e825f4615de902391640a14d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589205"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>方法: 参照の等価性 (同値) をテストする (C# プログラミング ガイド)
 独自の型で参照の等価性の比較をサポートするためにカスタム ロジックを実装する必要はありません。 この機能は、すべての型に対して <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 静的メソッドとして用意されています。  
@@ -27,6 +27,6 @@ ms.locfileid: "53237052"
   
  同じアセンブリ内の定数文字列は、常に、実行時にインターンされます。 つまり、一意のリテラル文字列ごとにそのインスタンスが 1 つだけ保持されます。 ただし、ランタイムは実行時に作成された文字列がインターンされることを保証しません。また、異なるアセンブリの 2 つの等しい定数文字列がインターンされることも保証しません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [等価比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)

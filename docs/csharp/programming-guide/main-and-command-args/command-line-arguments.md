@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 5bc73ece0560abfde7966678518ff57a8af3733f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 32dcfc8da52fc623473a1cc234e710463f8d28be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722700"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>コマンド ライン引数 (C# プログラミング ガイド)
 `Main` メソッドに引数を渡すには、次のいずれかの方法でメソッドを定義します。  
@@ -74,12 +74,12 @@ long num = Convert.ToInt64(s);
   
  コマンド ライン引数の使用方法の例については、「[方法: コマンド ラインを使用してアセンブリを作成および使用する](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Environment?displayProperty=nameWithType>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [方法: コマンド ライン引数を表示する](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [方法: foreach を使用してコマンド ライン引数にアクセスする](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
-- [Main() の戻り値](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- <xref:System.Environment?displayProperty=nameWithType>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [方法: コマンド ライン引数を表示する](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [方法: foreach を使用してコマンド ライン引数にアクセスする](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Main() の戻り値](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)

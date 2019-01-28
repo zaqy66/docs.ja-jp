@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: fd53e0abaab4ff7d242b32d6f26be13e97f20c44
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ed767ca100ee0405ce918d2d842d951f09d19e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646345"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>ジェネリックの概要 (C# プログラミング ガイド)
 ジェネリックのクラスとメソッドは、非ジェネリックでは不可能な方法で、再利用性、タイプ セーフ、効率性を同時に実現しています。 ジェネリックは、コレクションとそれを操作するメソッドとともに使用されるのが通常です。 .NET Framework クラス ライブラリのバージョン 2.0 には、いくつかの新しいジェネリック ベースのコレクション クラスを含む新しい名前空間、<xref:System.Collections.Generic> が用意されています。 .NET Framework 2.0 以降を対象とするすべてのアプリケーションでは、<xref:System.Collections.ArrayList> などの以前の非ジェネリック コレクション クラスの代わりに、新しいジェネリック コレクション クラスを使用することをお勧めします。 詳細については、「[.NET のジェネリック](../../../standard/generics/index.md)」を参照してください。  
@@ -31,8 +31,8 @@ ms.locfileid: "53239028"
   
  [!code-csharp[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Collections.Generic>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- <xref:System.Collections.Generic>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [ジェネリック](../../../csharp/programming-guide/generics/index.md)

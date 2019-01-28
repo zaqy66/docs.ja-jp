@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726651"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -154,12 +154,12 @@ ref readonly ローカルは、その署名に `ref readonly` があり、`retur
   
 ## <a name="see-also"></a>関連項目
 
-- [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)  
+- [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)
 - [ref 戻り値と ref ローカル変数](../../programming-guide/classes-and-structs/ref-returns.md)
 - [ref 条件式](../operators/conditional-operator.md#conditional-ref-expression)
 - [ref 代入演算子](../operators/assignment-operator.md#ref-assignment-operator)
-- [パラメーターの引き渡し](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [メソッド パラメーター](method-parameters.md)  
-- [C# リファレンス](../index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
+- [パラメーターの引き渡し](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [メソッド パラメーター](method-parameters.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)

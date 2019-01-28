@@ -3,12 +3,12 @@ title: クラスおよびオブジェクト - C# チュートリアルの概要
 description: 初めての C# プログラムを作成し、オブジェクト指向の概念を確認します
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 8b823e05ea5e51bb3096d6a0611630c996f56b33
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205363"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066069"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>クラスおよびオブジェクトを使用したオブジェクト指向プログラミングについて確認します
 
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-これがデータ メンバーです。 これは `private` であり、`BankAccount` クラス内のコードのみがこれにアクセスできます。 この方法により、プライベートな実装 (口座番号の生成方法) から (口座番号を持つなどの) パブリックな責任を分離できます。`static` でもあるため、すべての ``BankAccount`` オブジェクトによって共有されます。 静的でない変数の値は ``BankAccount`` オブジェクトのインスタンスごとに一意です。 次の 2 行をコンストラクターに追加して、口座番号を割り当てます。
+これがデータ メンバーです。 これは `private` であり、`BankAccount` クラス内のコードのみがこれにアクセスできます。 この方法により、プライベートな実装 (口座番号の生成方法) から (口座番号を持つなどの) パブリックな責任を分離できます。`static` でもあるため、すべての `BankAccount` オブジェクトによって共有されます。 静的でない変数の値は `BankAccount` オブジェクトのインスタンスごとに一意です。 次の 2 行をコンストラクターに追加して、口座番号を割り当てます。
 
 ```csharp
 this.Number = accountNumberSeed.ToString();

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 22d3883470f1435a50ae27f9d633ef566fec2913
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613845"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>方法: ディレクトリ ツリーを反復処理する (C# プログラミング ガイド)
 "ディレクトリ ツリーを反復処理する" とは、指定したルート フォルダー以下の入れ子になっている各サブディレクトリ内の各ファイルにアクセスすることです。 必ずしもファイルを 1 つ 1 つ開く必要はありません。 ファイルまたはサブディレクトリの名前だけを `string` として取得することも、その他の情報を <xref:System.IO.FileInfo?displayProperty=nameWithType> または <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> オブジェクトの形式で取得することもできます。  
@@ -57,8 +57,8 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  堅牢性の高いファイル反復処理コードでは、ファイル システムの数多くの複雑な部分を考慮する必要があります。 Windows ファイル システムの詳細については、「[NTFS の概要」](/windows-server/storage/file-server/ntfs-overview)を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.IO>  
-- [LINQ とファイル ディレクトリ](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- <xref:System.IO>
+- [LINQ とファイル ディレクトリ](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)

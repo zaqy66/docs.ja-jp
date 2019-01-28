@@ -2,12 +2,12 @@
 title: 関数型構築の比較 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: c2579da6e3cdfea6469742d29935b0137e320bbb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c749868606e70837a8eb423a6e4fada21407d4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544628"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>関数型構築の比較 (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、"*関数型構築*" と呼ばれる強力な XML 要素作成機能があります。 関数型構築は、単一のステートメントで XML ツリーを作成するための機能です。  
@@ -70,6 +70,6 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

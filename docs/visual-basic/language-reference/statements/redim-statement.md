@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617317"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim ステートメント (Visual Basic)
 配列変数の記憶域を再割り当てします。  
@@ -47,10 +47,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |用語|定義|  
 |----------|----------------|  
 |`Preserve`|任意。 最後の次元のサイズだけを変更したときに、既存の配列のデータを保持するために使用する修飾子|  
-|`name`|必須。 配列変数名。 参照してください[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)です。|  
+|`name`|必須。 配列変数名。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`boundlist`|必須。 再定義された配列の各次元の境界を一覧表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `ReDim` ステートメントを使用し、既に宣言されている配列の 1 つまたは複数の次元のサイズを変更できます。 大きな配列があり、その要素の一部が必要ない場合、`ReDim` で配列のサイズを減らし、メモリを解放できます。 一方で、配列に要素を追加する必要がある場合、`ReDim` は要素を追加できます。  
   
  `ReDim` ステートメントは配列のみを対象としています。 スカラー (単一の値のみが含まれる変数)、コレクション、構造体では有効ではありません。 `Array` 型の変数を宣言する場合、`ReDim` ステートメントには新しい配列を作成するために十分な型情報が与えられません。  
@@ -83,7 +83,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **保持しない初期化。** `Preserve` を指定しない場合、`ReDim` はそのデータ型の既定値を使用し、新しい配列の要素を初期化します。  
   
--   **保持する初期化します。** `Preserve` を指定する場合、Visual Basic は既存の配列から新しい配列に要素をコピーします。  
+-   **保持する初期化。** `Preserve` を指定する場合、Visual Basic は既存の配列から新しい配列に要素をコピーします。  
   
 ## <a name="example"></a>例  
  次の例では、配列の既存データを失うことなく動的配列の最後の次元のサイズを増やし、その後、一部のデータを損失しサイズを減らします。 最後に、サイズを減らして元の値に戻し、すべての配列要素を再初期化します。  
@@ -98,12 +98,12 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  3 番目の `ReDim` は新しい配列をもう 1 つ作成し、すべての層のすべての行の終わりから別の 5 つの列を削除します。 このとき、既存の要素はコピーされません。 このステートメントは配列を元のサイズに戻します。 ステートメントに `Preserve` 修飾子が含まれないため、すべての配列要素が元の初期値に設定されます。  
   
- その他の例では、次を参照してください。[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)です。  
+ その他の例では、次を参照してください。[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IndexOutOfRangeException>  
- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase ステートメント](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.IndexOutOfRangeException>
+- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Erase ステートメント](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -2,12 +2,12 @@
 title: ノードでのプログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 060f487e6e92c2ca42a685cc03afbe438106b839
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 0924d7b1d25a33635cc5140ca32622658b10fa0e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730179"
 ---
 # <a name="programming-with-nodes-c"></a>ノードでのプログラミング (C#)
 XML エディター、変換システム、レポート作成プログラムなどのプログラムを作成する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の開発者は、要素や属性よりも細かい粒度レベルで動作するプログラムを作成しなければならないことがよくあります。 また場合によっては、ノード レベルで、テキスト ノード、処理命令、およびコメントを操作する必要があります。 このトピックでは、ノード レベルでのプログラミングについて詳しく説明します。  
@@ -172,5 +172,6 @@ Console.WriteLine(doc.Nodes().Count());
 1  
 ```  
   
-## <a name="see-also"></a>参照  
- [高度な LINQ to XML プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>関連項目
+
+- [高度な LINQ to XML プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

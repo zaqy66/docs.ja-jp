@@ -4,12 +4,12 @@ description: ref 戻り値と ref ローカル変数を定義して使用する�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514416"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 戻り値と ref ローカル変数
 
@@ -124,5 +124,5 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="see-also"></a>関連項目
 
-- [ref キーワード](../../language-reference/keywords/ref.md)  
+- [ref キーワード](../../language-reference/keywords/ref.md)
 - [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)

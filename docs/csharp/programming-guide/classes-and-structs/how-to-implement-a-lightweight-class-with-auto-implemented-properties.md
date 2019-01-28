@@ -6,12 +6,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: faf7f635a42ece1a30c5bac096a909e32095fc0c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a987d0501e36232993a2f1a2b4ebda29d007afd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618647"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>方法: 自動実装するプロパティを使用して簡易クラスを実装する (C# プログラミング ガイド)
 この例では、一連の自動実装プロパティのカプセル化のみを行う、変更できない簡易クラスの作成方法を示します。 参照型のセマンティクスを使用する必要がある場合は、構造体ではなく次のようなコンストラクトを使用します。  
@@ -114,8 +114,8 @@ ms.locfileid: "53237234"
   
  コンパイラによって、各自動実装プロパティにバッキング フィールドが作成されます。 このフィールドは、ソース コードから直接アクセスできません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 - [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

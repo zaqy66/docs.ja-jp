@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: c5963f45ee233f4413c4281a063c9c3d2a4c2a93
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559281"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>方法: メソッドに構造体を渡すこととクラス参照を渡すことの違いを理解する (C# プログラミング ガイド)
 次の例では、メソッドに[構造体](../../../csharp/language-reference/keywords/struct.md)を渡すことと[クラス](../../../csharp/language-reference/keywords/class.md) インスタンスを渡すことの違いを示します。 この例では、両方の引数 (構造体とクラス インスタンス) が値によって渡され、両方のメソッドが引数の 1 つのフィールドの値を変更します。 ただし、2 つのメソッドの結果は同じではありません。構造体を渡した場合に渡される内容と、クラスのインスタンスを渡した場合に渡される内容が異なるためです。  
@@ -26,9 +26,9 @@ ms.locfileid: "53245455"
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)
 - [パラメーターの引き渡し](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

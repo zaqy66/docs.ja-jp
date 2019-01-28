@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493419"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 拡張メソッドを使用すると、新規の派生型の作成、再コンパイル、または元の型の変更を行うことなく既存の型にメソッドを "追加" できます。 拡張メソッドは特別な種類の静的メソッドですが、拡張された型のインスタンス メソッドのように呼び出します。 C#、F#、および Visual Basic で作成されたクライアント コードの場合は、拡張メソッドの呼び出しと、型で実際に定義されたメソッドの呼び出しに明確な違いはありません。  
@@ -79,13 +79,13 @@ using System.Linq;
   
  実装したクラス ライブラリでは、アセンブリのバージョン番号のインクリメントを避けるために、拡張メソッドは使用しないでください。 ソース コードを所有するライブラリに重要な機能を追加する場合は、アセンブリのバージョン管理について標準の .NET Framework ガイドラインに従う必要があります。 詳細については、「[アセンブリのバージョン管理](../../../../docs/framework/app-domains/assembly-versioning.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [並列プログラミングのサンプル (拡張メソッドの例が多数掲載されています)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
-- [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [並列プログラミングのサンプル (拡張メソッドの例が多数掲載されています)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [標準クエリ演算子の概要](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [インスタンス パラメーターの変換規則とその影響](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
-- [拡張メソッドの言語間での相互運用性](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
-- [拡張メソッドとカリー化デリゲート](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+- [インスタンス パラメーターの変換規則とその影響](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)
+- [拡張メソッドの言語間での相互運用性](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)
+- [拡張メソッドとカリー化デリゲート](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)
 - [バインディングとエラー報告に関する拡張メソッド](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

@@ -2,12 +2,12 @@
 title: ファイル、TextWriter、および XmlWriter へのシリアル化1
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 011e32054e39ee0f7f70baf9867f7cab6fe34540
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 19371c0422c607171ccbea1235ea4348852d801c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498818"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>ファイル、TextWriter、および XmlWriter へのシリアル化
 XML ツリーは、<xref:System.IO.File>、<xref:System.IO.TextWriter>、または <xref:System.Xml.XmlWriter> にシリアル化できます。  
@@ -30,6 +30,6 @@ XML ツリーは、<xref:System.IO.File>、<xref:System.IO.TextWriter>、また�
   
  例については、該当するリファレンス トピックを参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーのシリアル化 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

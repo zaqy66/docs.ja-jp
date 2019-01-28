@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659645"
 ---
 # <a name="polymorphism-c-programming-guide"></a>ポリモーフィズム (C# プログラミング ガイド)
 ポリモーフィズムは、カプセル化と継承に次ぐ、オブジェクト指向プログラミングの第 3 の柱と言われることがよくあります。 ポリモーフィズムは、ギリシャ語で "多形" を意味し、次の 2 つの側面を持っています。  
@@ -58,7 +58,7 @@ ms.locfileid: "53286456"
   
  [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- 基底クラスのメンバーが隠ぺいされても、派生クラスのインスタンスを基底クラスのインスタンスにキャストすることで、クライアント コードから基底クラスのメンバーにアクセスできます。 例:  
+ 基底クラスのメンバーが隠ぺいされても、派生クラスのインスタンスを基底クラスのインスタンスにキャストすることで、クライアント コードから基底クラスのメンバーにアクセスできます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
@@ -95,13 +95,13 @@ ms.locfileid: "53286456"
   
 -   [方法: ToString メソッドをオーバーライドする](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [イベント](../../../csharp/programming-guide/events/index.md)  
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
+- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [イベント](../../../csharp/programming-guide/events/index.md)
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
 - [型](../../../csharp/programming-guide/types/index.md)

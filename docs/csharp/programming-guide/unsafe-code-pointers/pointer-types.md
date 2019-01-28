@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724045"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
 
@@ -34,7 +34,7 @@ void* identifier; //allowed but not recommended
 
 ポインター型は [object](../../language-reference/keywords/object.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
 
-同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 例:
+同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 次に例を示します。
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -89,14 +89,14 @@ int* myVariable;
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)  
-- [アンセーフ コードとポインター](index.md)  
-- [ポインター変換](pointer-conversions.md)  
-- [ポインター式](pointer-expressions.md)  
-- [型](../../language-reference/keywords/types.md)  
-- [unsafe](../../language-reference/keywords/unsafe.md)  
-- [fixed ステートメント](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [C# プログラミング ガイド](../index.md)
+- [アンセーフ コードとポインター](index.md)
+- [ポインター変換](pointer-conversions.md)
+- [ポインター式](pointer-expressions.md)
+- [型](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
+- [fixed ステートメント](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/keywords/stackalloc.md)
 - [ボックス化とボックス化解除](../types/boxing-and-unboxing.md)

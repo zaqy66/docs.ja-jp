@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 2bf1e788c635dd466739178f80b0f2f147c04cfd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620176"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>等価比較 (C# プログラミング ガイド)
 2 つの値が等しいかどうかを比較することが必要な場合があります。 そのような場合、*値が等価であること* (*等価性*と呼ばれる) をテストすることになります。等価性とは 2 つの変数に含まれる値が等しいことを意味します。 また、2 つの変数がメモリ内の同一の基になるオブジェクトを参照しているかどうかを確認する必要がある場合もあります。 このタイプの等価は、*参照の等価性*または*同一性*と呼ばれます。 ここでは、2 種類の等価について説明します。また、詳細について他のトピックへのリンクを示します。  
@@ -54,6 +54,6 @@ if( b == a)
 |[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)|C# 言語の重要な機能に関する詳細情報へのリンクを示します。また、.NET Framework 経由でアクセスできる C# の機能について説明します。|  
 |[型](../../../csharp/programming-guide/types/index.md)|C# 型システムについて説明し、詳細情報へのリンクを示します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: ba4ddd7fa87eb200de0de3aea6f0bc056a40f0e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511840"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked と Unchecked (C# リファレンス)
 C# のステートメントは、checked または unchecked のいずれかのコンテキストで実行できます。 checked コンテキストでは、算術オーバーフローにより例外が発生します。 unchecked コンテキストでは、算術オーバーフローが無視され、結果の格納先の型に収まらない上位ビットが破棄されて、結果が切り詰められます。  
@@ -36,9 +36,9 @@ C# のステートメントは、checked または unchecked のいずれかの�
  
  定数式 (コンパイル時に完全に評価される式) の場合、既定のコンテキストは常に確認されます。 定数式が unchecked コンテキストに明示的に配置されていない限り、式のコンパイル時の評価中に発生するオーバーフローによってコンパイル時エラーが発生します。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
-- [C# のキーワード](index.md)  
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
 - [ステートメントのキーワード](statement-keywords.md)

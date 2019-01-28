@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8337303f97a3a654f5a3718bf0714ee876a7dc9f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd2111953bbc31799b3472f62e704667195e2532
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738483"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -93,7 +93,7 @@ private static async Task<int> AsyncConsoleWork()
 > [!NOTE]
 >この例の `Main` メソッドで `async` 修飾子を使用した場合、同じコードが生成されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)

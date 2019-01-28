@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ddb34fd32d13224faed92bd8ba01933ca19c04a9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5c83ce79bede1ee4e5752ac0b1dcf9647df1f36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555987"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードによるバージョン管理 (C# プログラミング ガイド)
 C# 言語は、異なるライブラリ内の[基底](../../../csharp/language-reference/keywords/base.md)クラスと派生クラス間でのバージョン管理を進化させると同時に、下位互換性も維持されるよう設計されています。 そのため、たとえば、派生クラスのメンバーと同じ名前を使用して基底[クラス](../../../csharp/language-reference/keywords/class.md)の新規メンバーが導入されても、C# では完全にサポートされ、予期しない動作は発生しません。 ただしこのことは、メソッドが派生メソッドをオーバーライドするためのものなのか、それとも同じ名前の派生メソッドを非表示にする新規メソッドなのかを、クラスで明示的に記述しなければならないということでもあります。  
@@ -73,15 +73,15 @@ C# 言語は、異なるライブラリ内の[基底](../../../csharp/language-r
   
  [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
- 変数 `val` は double 型に暗黙的に変換できるので、C# コンパイラは `DoWork(int)` の代わりに `DoWork(double)` を呼び出します。 この問題を回避する方法は 2 つあります。 1 つ目は、仮想メソッドと同じ名前の新しいメソッドを宣言しないようにすることです。 2 つ目は、`Derived` のインスタンスを `Base` にキャストすることで、C# コンパイラに基底クラス メソッドのリストを検索させ、仮想メソッドを呼び出すようにすることです。 メソッドが仮想なので、`Derived` にある `DoWork(int)` の実装が呼び出されます。 例:  
+ 変数 `val` は double 型に暗黙的に変換できるので、C# コンパイラは `DoWork(int)` の代わりに `DoWork(double)` を呼び出します。 この問題を回避する方法は 2 つあります。 1 つ目は、仮想メソッドと同じ名前の新しいメソッドを宣言しないようにすることです。 2 つ目は、`Derived` のインスタンスを `Base` にキャストすることで、C# コンパイラに基底クラス メソッドのリストを検索させ、仮想メソッドを呼び出すようにすることです。 メソッドが仮想なので、`Derived` にある `DoWork(int)` の実装が呼び出されます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
   
  `new` と `override` の例について詳しくは、「[Override キーワードと New キーワードを使用する場合について](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

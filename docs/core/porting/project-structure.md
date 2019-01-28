@@ -4,12 +4,12 @@ description: プロジェクト所有者が横並びの .NET Framework と .NET 
 author: conniey
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 52205a32af212dc74b000025c0e4fc8cde3ae134
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498662"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework と .NET Core の両方をサポートするようにプロジェクトを整理する
 
@@ -67,7 +67,7 @@ ms.locfileid: "53169132"
 * .NET Core と既存のプロジェクトを別々のフォルダーに保存します。
   * プロジェクトを別々のフォルダーに保存すれば、Visual Studio 2017 を所有する必要がありません。 古いプロジェクトだけを開く別個のソリューションを作成できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * .NET Core に移行する方法の詳細なガイダンスについては、[.NET Core の移植に関するドキュメント][porting-doc]のページを参照してください。
 
