@@ -11,11 +11,12 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85e7213342984276d8509fca8caefb2661865733
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c7e2f0f239ffded3d9f16a32b1f8e6601e27d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685856"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー
 このサンプルでは、[COM サーバー](#cpconcominteropsamplenetclientcomserveranchor2)にアクセスするように作成された [.NET クライアント](#cpconcominteropsamplenetclientcomserveranchor1)で、COM コクラスのインスタンスを作成し、クラスのメンバーを呼び出して住宅ローンの計算を行う方法を示します。  
@@ -298,5 +299,5 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [.NET Framework への COM コンポーネントの公開](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>関連項目
+- [.NET Framework への COM コンポーネントの公開](../../../docs/framework/interop/exposing-com-components.md)

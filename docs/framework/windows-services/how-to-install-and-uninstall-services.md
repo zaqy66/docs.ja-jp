@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 937c559130ea70ab125935ce26ecc5f9bd315ad1
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: eab291528080b75a07c8f8c3994428eafde94568
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612816"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>方法: サービスをインストールおよびアンインストールする
 .NET Framework を使用して Windows サービスを開発している場合は、InstallUtil.exe というコマンド ライン ユーティリティを使用してサービス アプリケーションをすばやくインストールできます。 開発者は、ユーザーがインストールおよびアンインストールできる Windows サービスをリリースする場合、InstallShield を使用する必要があります。 「[Windows インストーラー配置](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)」をご覧ください。  
@@ -62,8 +62,8 @@ ms.locfileid: "54221220"
   
 3.  場合によっては、サービスの実行可能ファイルを削除した後も、レジストリ内にサービスが存在したままになることがあります。 このような場合は、コマンド [sc delete](/windows-server/administration/windows-commands/sc-delete) を使って、レジストリからサービスのエントリを削除します。  
   
-## <a name="see-also"></a>「  
- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Installutil.exe (インストーラー ツール)](../../../docs/framework/tools/installutil-exe-installer-tool.md)
+## <a name="see-also"></a>関連項目
+- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Installutil.exe (インストーラー ツール)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

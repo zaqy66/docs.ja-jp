@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734517"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>方法: マネージ コード DCOM を WCF に移行する
 Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
@@ -421,8 +421,8 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>「  
- [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)  
- [双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>関連項目
+- [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
+- [双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)

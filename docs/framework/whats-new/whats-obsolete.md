@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541262"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework クラス ライブラリの互換性のために残されている機能
 .NET Framework は進化しています。 バージョンが新しくなるたびに、新しい機能を提供する新しい型と新しいメンバーが追加されています。 既存の型とそのメンバーも変更されています。 たとえば、一部の型は、その型がサポートするテクノロジが新しいテクノロジに置き換えられることで重要度が下がり、一部のメソッドは、より便利な新しいメソッドまたはより多くの機能を備えた新しいメソッドに置き換えられています。  
@@ -81,5 +81,5 @@ ms.locfileid: "50183478"
   
  [.NET Framework 2.0 Obsolete List (.NET Framework 2.0 の互換性のために残されている機能の一覧)](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>参照  
- [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>関連項目
+- [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

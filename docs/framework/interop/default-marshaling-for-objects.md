@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 84a3ea24120a9548c9d1cd2b7b83997a2c849cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528021"
 ---
 # <a name="default-marshaling-for-objects"></a>オブジェクトに対する既定のマーシャリング
 <xref:System.Object?displayProperty=nameWithType> として型指定されているパラメーターおよびフィールドを、次のいずれかの型としてアンマネージ コードに公開できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "34312184"
 |**UnmanagedType.IUnknown**<br /><br /> (フィールドの既定値)|**IUnknown** インターフェイス。|  
 |**UnmanagedType.IDispatch**|**IDispatch** インターフェイス。|  
   
- 次の例は、`MarshalObject` のマネージ インターフェイス定義を示しています。  
+ 次の例は、`MarshalObject` のマネージド インターフェイス定義を示しています。  
   
 ```vb  
 Interface MarshalObject  
@@ -129,7 +129,7 @@ struct ObjectHolder {
   
 <a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
 ## <a name="marshaling-object-to-interface"></a>インターフェイスへのオブジェクトのマーシャリング  
- オブジェクトがインターフェイスとして COM に公開される場合、そのインターフェイスはマネージ型 <xref:System.Object> 用のクラス インターフェイス (**_Object** インターフェイス) となります。 このインターフェイスは、結果のタイプ ライブラリでは、**IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) または **IUnknown** (**UnmanagedType.IUnknown**) として型指定されます。 COM クライアントは、マネージ クラスのメンバー、または派生クラスによって実装されるメンバーを **_Object** インターフェイス経由で動的に呼び出すことができます。 クライアントは **QueryInterface** を呼び出して、マネージ型によって明示的に実装された他の任意のインターフェイスを取得することもできます。  
+ オブジェクトがインターフェイスとして COM に公開される場合、そのインターフェイスはマネージド型 <xref:System.Object> 用のクラス インターフェイス (**_Object** インターフェイス) となります。 このインターフェイスは、結果のタイプ ライブラリでは、**IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) または **IUnknown** (**UnmanagedType.IUnknown**) として型指定されます。 COM クライアントは、マネージド クラスのメンバー、または派生クラスによって実装されるメンバーを **_Object** インターフェイス経由で動的に呼び出すことができます。 クライアントは **QueryInterface** を呼び出して、マネージド型によって明示的に実装された他の任意のインターフェイスを取得することもできます。  
   
 <a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
 ## <a name="marshaling-object-to-variant"></a>バリアントへのオブジェクトのマーシャリング  
@@ -142,7 +142,7 @@ struct ObjectHolder {
 -   マーシャリング動作を明示的に制御する必要があるその他のオブジェクトは、<xref:System.IConvertible> インターフェイスを実装できます。 その場合、バリアント型は <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> メソッドから返される型コードによって決定されます。 それ以外の場合、オブジェクトは **VT_UNKNOWN** 型のバリアントとしてマーシャリングされます。  
   
 ### <a name="marshaling-system-types-to-variant"></a>バリアントへのシステム型のマーシャリング  
- 次の表に、マネージ オブジェクト型とそれに対応する COM バリアント型を示します。 これらの型は、呼び出されるメソッドのシグネチャが <xref:System.Object?displayProperty=nameWithType> 型の場合にのみ変換されます。  
+ 次の表に、マネージド オブジェクト型とそれに対応する COM バリアント型を示します。 これらの型は、呼び出されるメソッドのシグネチャが <xref:System.Object?displayProperty=nameWithType> 型の場合にのみ変換されます。  
   
 |オブジェクトの種類|COM バリアント型|  
 |-----------------|----------------------|  
@@ -193,7 +193,7 @@ mo.SetVariant((single)27.0);   // Marshal as variant of type VT_R4.
 mo.SetVariant((double)27.0);   // Marshal as variant of type VT_R8.  
 ```  
   
- <xref:System.Runtime.InteropServices.ErrorWrapper>、<xref:System.Runtime.InteropServices.DispatchWrapper>、<xref:System.Runtime.InteropServices.UnknownWrapper>、および <xref:System.Runtime.InteropServices.CurrencyWrapper> などのラッパー クラスを使用すると、対応するマネージ型を持たない COM 型をマーシャリングできます。 次のコード例では、これらのラッパーを使用して、さまざまな型のバリアントを COM サーバーに渡す方法を示します。  
+ <xref:System.Runtime.InteropServices.ErrorWrapper>、<xref:System.Runtime.InteropServices.DispatchWrapper>、<xref:System.Runtime.InteropServices.UnknownWrapper>、および <xref:System.Runtime.InteropServices.CurrencyWrapper> などのラッパー クラスを使用すると、対応するマネージド型を持たない COM 型をマーシャリングできます。 次のコード例では、これらのラッパーを使用して、さまざまな型のバリアントを COM サーバーに渡す方法を示します。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -287,7 +287,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_RECORD**|対応するボックス化された値型。|  
 |**VT_VARIANT**|サポートされていません。|  
   
- COM からマネージ コードに渡された後で COM に返されるバリアント型が、呼び出し中に同じバリアント型を維持しないことがあります。 **VT_DISPATCH** 型のバリアントが COM から .NET Framework に渡される場合、どのようになるかを考えてみましょう。 マーシャリング時に、バリアントは <xref:System.Object?displayProperty=nameWithType> に変換されます。 その後、**Object** が COM に返される場合は、**VT_UNKNOWN** 型のバリアントにマーシャリングされます。 オブジェクトをマネージ コードから COM にマーシャリングするときに、生成されるバリアントの型が、最初にオブジェクトを生成するときに使用したバリアントの型と同じになる保証はありません。  
+ COM からマネージド コードに渡された後で COM に返されるバリアント型が、呼び出し中に同じバリアント型を維持しないことがあります。 **VT_DISPATCH** 型のバリアントが COM から .NET Framework に渡される場合、どのようになるかを考えてみましょう。 マーシャリング時に、バリアントは <xref:System.Object?displayProperty=nameWithType> に変換されます。 その後、**Object** が COM に返される場合は、**VT_UNKNOWN** 型のバリアントにマーシャリングされます。 オブジェクトをマネージド コードから COM にマーシャリングするときに、生成されるバリアントの型が、最初にオブジェクトを生成するときに使用したバリアントの型と同じになる保証はありません。  
   
 <a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>ByRef バリアントのマーシャリング  
@@ -298,26 +298,26 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  **オブジェクトとバリアントを値渡しでマーシャリングする場合の既定の動作**  
   
--   オブジェクトをマネージ コードから COM に渡す場合、そのオブジェクトの内容は、「[バリアントへのオブジェクトのマーシャリング](#cpcondefaultmarshalingforobjectsanchor3)」で定義されている規則を使用して、マーシャラーによって作成される新しいバリアントにコピーされます。 アンマネージ側でバリアントに対して行われた変更の内容は、呼び出しから制御が返されるときに、元のオブジェクトには反映されません。  
+-   オブジェクトをマネージド コードから COM に渡す場合、そのオブジェクトの内容は、「[バリアントへのオブジェクトのマーシャリング](#cpcondefaultmarshalingforobjectsanchor3)」で定義されている規則を使用して、マーシャラーによって作成される新しいバリアントにコピーされます。 アンマネージ側でバリアントに対して行われた変更の内容は、呼び出しから制御が返されるときに、元のオブジェクトには反映されません。  
   
--   バリアントを COM からマネージ コードに渡す場合、そのバリアントの内容は、「[オブジェクトへのバリアントのマーシャリング](#cpcondefaultmarshalingforobjectsanchor4)」で定義されている規則を使用して、新規作成されるオブジェクトにコピーされます。 マネージ側でオブジェクトに対して行われた変更の内容は、呼び出しから制御が返されるときに、元のバリアントには反映されません。  
+-   バリアントを COM からマネージド コードに渡す場合、そのバリアントの内容は、「[オブジェクトへのバリアントのマーシャリング](#cpcondefaultmarshalingforobjectsanchor4)」で定義されている規則を使用して、新規作成されるオブジェクトにコピーされます。 マネージド側でオブジェクトに対して行われた変更の内容は、呼び出しから制御が返されるときに、元のバリアントには反映されません。  
   
  **オブジェクトとバリアントを参照渡しでマーシャリングする場合の既定の動作**  
   
- 変更内容を呼び出し元に反映させるには、パラメーターを参照渡しする必要があります。 たとえば、C# でキーワード **ref** (Visual Basic マネージ コードの場合は **ByRef**) を使用すると、パラメーターを参照渡しできます。 COM の場合、参照パラメーターは **variant \*** などのポインターを使用して渡されます。  
+ 変更内容を呼び出し元に反映させるには、パラメーターを参照渡しする必要があります。 たとえば、C# でキーワード **ref** (Visual Basic マネージド コードの場合は **ByRef**) を使用すると、パラメーターを参照渡しできます。 COM の場合、参照パラメーターは **variant \*** などのポインターを使用して渡されます。  
   
 -   オブジェクトを COM に参照渡しする場合、マーシャラーは呼び出しを行う前に新しいバリアントを作成し、オブジェクト参照の内容をそのバリアントにコピーします。 このバリアントはアンマネージ関数に渡されます。ここで、バリアントの内容を自由に変更できます。 呼び出しから制御が返されるときに、アンマネージ側でバリアントが変更されている場合には、その内容が元のオブジェクトに反映されます。 バリアントの型が、呼び出しに渡されたバリアントの型と異なる場合、変更内容は別の型のオブジェクトに反映されます。 つまり、呼び出しに渡したオブジェクトの型が、呼び出しから返されるオブジェクトの型と異なることがあります。  
   
--   バリアントをマネージ コードに参照渡しする場合、マーシャラーは呼び出しを行う前に、新しいオブジェクトを作成し、バリアントの内容をそのオブジェクトにコピーします。 オブジェクトへの参照がマネージ関数に渡されます。ここで、オブジェクトを自由に変更できます。 呼び出しから制御が返されるときに、参照先オブジェクトが変更されている場合には、その内容が元のバリアントに反映されます。 オブジェクトの型が、呼び出しに渡されたオブジェクトの型と異なる場合、元のバリアントの型が変更され、値がそのバリアントに反映されます。 ここでも、呼び出しに渡されたバリアントの型が、呼び出しから返されるバリアントの型と異なることがあります。  
+-   バリアントをマネージド コードに参照渡しする場合、マーシャラーは呼び出しを行う前に、新しいオブジェクトを作成し、バリアントの内容をそのオブジェクトにコピーします。 オブジェクトへの参照がマネージド関数に渡されます。ここで、オブジェクトを自由に変更できます。 呼び出しから制御が返されるときに、参照先オブジェクトが変更されている場合には、その内容が元のバリアントに反映されます。 オブジェクトの型が、呼び出しに渡されたオブジェクトの型と異なる場合、元のバリアントの型が変更され、値がそのバリアントに反映されます。 ここでも、呼び出しに渡されたバリアントの型が、呼び出しから返されるバリアントの型と異なることがあります。  
   
  **VT_BYREF フラグの設定によるバリアントのマーシャリングの既定の動作**  
   
--   マネージ コードに値渡しされるバリアントに **VT_BYREF** フラグを設定することにより、そのバリアントに値ではなく、参照が含まれることを示すことができます。 この場合でも、バリアントは値渡しされるため、オブジェクトにマーシャリングされます。 呼び出しを行う前に、マーシャラーは自動的にバリアントの内容を逆参照し、その内容を新しく作成されるオブジェクトにコピーします。 その後、オブジェクトはマネージ関数に渡されます。ただし、呼び出しから制御が返されるときに、このオブジェクトは元のバリアントには反映されません。 マネージ オブジェクトに対する変更内容は失われます。  
+-   マネージド コードに値渡しされるバリアントに **VT_BYREF** フラグを設定することにより、そのバリアントに値ではなく、参照が含まれることを示すことができます。 この場合でも、バリアントは値渡しされるため、オブジェクトにマーシャリングされます。 呼び出しを行う前に、マーシャラーは自動的にバリアントの内容を逆参照し、その内容を新しく作成されるオブジェクトにコピーします。 その後、オブジェクトはマネージド関数に渡されます。ただし、呼び出しから制御が返されるときに、このオブジェクトは元のバリアントには反映されません。 マネージド オブジェクトに対する変更内容は失われます。  
   
     > [!CAUTION]
     >  バリアントに **VT_BYREF** フラグが設定されていても、値渡しされるバリアントの値を変更する方法はありません。  
   
--   マネージ コードに参照渡しされるバリアントについても、**VT_BYREF** フラグを設定することで、バリアントに別の参照が含まれることを示すことができます。 このようにすると、バリアントは参照渡しされるため、**ref** オブジェクトにマーシャリングされます。 呼び出しを行う前に、マーシャラーは自動的にバリアントの内容を逆参照し、その内容を新しく作成されるオブジェクトにコピーします。 呼び出しから制御が返されるときに、オブジェクトの値が元のバリアント内の参照に反映されるのは、そのオブジェクトの型が渡されたオブジェクトの型と同じ場合に限られます。 つまり、**VT_BYREF** フラグが設定されたバリアントの型が反映によって変更されることはありません。 呼び出しの間にオブジェクトの型が変更された場合、呼び出しから制御が返されるときに <xref:System.InvalidCastException> が発生します。  
+-   マネージド コードに参照渡しされるバリアントについても、**VT_BYREF** フラグを設定することで、バリアントに別の参照が含まれることを示すことができます。 このようにすると、バリアントは参照渡しされるため、**ref** オブジェクトにマーシャリングされます。 呼び出しを行う前に、マーシャラーは自動的にバリアントの内容を逆参照し、その内容を新しく作成されるオブジェクトにコピーします。 呼び出しから制御が返されるときに、オブジェクトの値が元のバリアント内の参照に反映されるのは、そのオブジェクトの型が渡されたオブジェクトの型と同じ場合に限られます。 つまり、**VT_BYREF** フラグが設定されたバリアントの型が反映によって変更されることはありません。 呼び出しの間にオブジェクトの型が変更された場合、呼び出しから制御が返されるときに <xref:System.InvalidCastException> が発生します。  
   
  バリアントとオブジェクトに関する反映規則を次の表にまとめます。  
   
@@ -330,8 +330,8 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Object**  *o*|Never|  
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref Object**  *o*|型が変更されていない場合のみ。|  
   
-## <a name="see-also"></a>参照  
- [既定のマーシャリング動作](default-marshaling-behavior.md)  
- [Blittable 型と非 Blittable 型](blittable-and-non-blittable-types.md)  
- [方向属性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [コピーと固定](copying-and-pinning.md)
+## <a name="see-also"></a>関連項目
+- [既定のマーシャリング動作](default-marshaling-behavior.md)
+- [Blittable 型と非 Blittable 型](blittable-and-non-blittable-types.md)
+- [方向属性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [コピーと固定](copying-and-pinning.md)

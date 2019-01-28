@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589179"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -403,9 +403,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|スペイン語 (スペイン、モダン ソート)|es|
 
 ## <a name="see-also"></a>関連項目
-- [配置ガイド (管理者向け)](../../../docs/framework/deployment/guide-for-administrators.md)  
-- [システム要件](../../../docs/framework/get-started/system-requirements.md)  
-- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)  
-- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
-- [.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [配置ガイド (管理者向け)](../../../docs/framework/deployment/guide-for-administrators.md)
+- [システム要件](../../../docs/framework/get-started/system-requirements.md)
+- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)
+- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572291fa5674c541136e587bc40818da85f71a65
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741706"
 ---
 # <a name="shadow-copying-assemblies"></a>アセンブリのシャドウ コピー
 シャドウ コピーにより、アプリケーション ドメインをアンロードしなくても、アプリケーション ドメインで使用されるアセンブリを更新できます。 これは、ASP.NET サイトなど、継続的に使用可能であることが必要なアプリケーションで特に役立ちます。  
@@ -77,9 +77,9 @@ ms.locfileid: "53125706"
 ## <a name="obsolete-methods"></a>廃止メソッド  
  <xref:System.AppDomain> クラスには、アプリケーション ドメインでシャドウ コピーを制御するために使用できる <xref:System.AppDomain.SetShadowCopyFiles%2A> や <xref:System.AppDomain.ClearShadowCopyPath%2A> などのいくつかのメソッドがありますが、これらは .NET Framework version 2.0 では廃止された機能としてマークされています。 シャドウ コピー用にアプリケーション ドメインを構成するには、<xref:System.AppDomainSetup> クラスのプロパティを使用することをお勧めします。  
   
-## <a name="see-also"></a>参照  
-- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
 - [\<shadowCopyVerifyByTimestamp> 要素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

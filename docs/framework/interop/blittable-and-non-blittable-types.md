@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b4c1d213c2ed87126fc5eb9995050e14f9214bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596892"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 型と非 Blittable 型
 ほとんどのデータ型の表現はマネージド メモリとアンマネージド メモリの両方で共通しているため、相互運用マーシャラーによる特別な処理は必要ありません。 これらの型は、マネージド コードとアンマネージド コード間での受け渡しの際に変換が必要でないため、*blittable 型*と呼ばれます。  
@@ -73,5 +73,5 @@ ms.locfileid: "53155341"
   
  クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C#、および C++ の対応する型については、「[クラス ライブラリの概要](../../../docs/standard/class-library-overview.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [既定のマーシャリング動作](../../../docs/framework/interop/default-marshaling-behavior.md)
+## <a name="see-also"></a>関連項目
+- [既定のマーシャリング動作](../../../docs/framework/interop/default-marshaling-behavior.md)

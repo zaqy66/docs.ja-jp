@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88604058bd460d80214be6051abef7dc561c7710
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523091"
 ---
 # <a name="default-marshaling-for-strings"></a>文字列に対する既定のマーシャリング
 <xref:System.String?displayProperty=nameWithType> と <xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスのマーシャリング動作は類似しています。  
@@ -79,7 +79,7 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 <a name="cpcondefaultmarshalingforstringsanchor5"></a>
 
 ## <a name="strings-used-in-platform-invoke"></a>プラットフォーム呼び出しで使用される文字列  
- プラットフォーム呼び出しは、文字列の引数を、.NET Framework 形式 (Unicode) から、プラットフォーム アンマネージ形式に変換してコピーします。 文字列は不変であり、呼び出しが戻るときに、アンマネージ メモリから元のマネージ メモリにコピーされることはありません。  
+ プラットフォーム呼び出しは、文字列の引数を、.NET Framework 形式 (Unicode) から、プラットフォーム アンマネージ形式に変換してコピーします。 文字列は不変であり、呼び出しが戻るときに、アンマネージド メモリから元のマネージド メモリにコピーされることはありません。  
   
  次の表は、文字列をプラットフォーム呼び出しのメソッド引数としてマーシャリングする際のマーシャリング オプションをリストしています。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、文字列をマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
   
@@ -91,7 +91,7 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 |`UnmanagedType.LPTStr`|プラットフォーム依存文字の null で終わる配列へのポインター。|  
 |`UnmanagedType.LPWStr`|Unicode 文字の null で終わる配列へのポインター。|  
 |`UnmanagedType.TBStr`|長さとプラットフォーム依存文字がプレフィックスされた COM スタイル `BSTR`。|  
-|`VBByRefStr`|Visual Basic .NET で、アンマネージ コードの文字列を変更し、結果をマネージ コードに反映できるようにする値。 この値は、プラットフォーム呼び出しでだけサポートされます。 これが、`ByVal` 文字列の Visual Basic での既定値です。|  
+|`VBByRefStr`|Visual Basic .NET で、アンマネージド コードの文字列を変更し、結果をマネージド コードに反映できるようにする値。 この値は、プラットフォーム呼び出しでだけサポートされます。 これが、`ByVal` 文字列の Visual Basic での既定値です。|  
   
  この表は文字列に適用されます。 ただし、<xref:System.Text.StringBuilder> の場合、許可される唯一のオプションは `LPStr`、`LPTStr`、および `LPWStr` です。  
   
@@ -263,8 +263,8 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [既定のマーシャリング動作](default-marshaling-behavior.md)  
- [Blittable 型と非 Blittable 型](blittable-and-non-blittable-types.md)  
- [方向属性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [コピーと固定](copying-and-pinning.md)
+## <a name="see-also"></a>関連項目
+- [既定のマーシャリング動作](default-marshaling-behavior.md)
+- [Blittable 型と非 Blittable 型](blittable-and-non-blittable-types.md)
+- [方向属性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [コピーと固定](copying-and-pinning.md)

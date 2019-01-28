@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 437bbb7a1645c0ab13da33e57c1e70b5ec98984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628540"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>完全修飾型名の指定
 多様なリフレクション操作に対して有効な入力の型名を指定する必要があります。 完全修飾型名は、アセンブリ名の指定、名前空間の指定、および型名で構成されます。 型名の指定は、<xref:System.Type.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> などのメソッドで使用されます。  
@@ -182,7 +182,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  SimpleTypeSpec* はアンマネージ ポインターを示します。 たとえば、型 MyType に対するポインターを取得するには、`Type.GetType("MyType*")` を使用します。 型 MyType のポインターに対するポインターを取得するには、`Type.GetType("MyType**")` を使用します。  
   
 ## <a name="specifying-references"></a>参照の指定  
- SimpleTypeSpec & はマネージ ポインターまたは参照を表します。 たとえば、型 MyType に対する参照を取得するには、`Type.GetType("MyType &")` を使用します。 ポインターとは異なり、参照は 1 つのレベルに制限されます。  
+ SimpleTypeSpec &amp; はマネージド ポインターまたは参照を表します。 たとえば、型 MyType に対する参照を取得するには、`Type.GetType("MyType &")` を使用します。 ポインターとは異なり、参照は 1 つのレベルに制限されます。  
   
 ## <a name="specifying-arrays"></a>配列の指定  
  BNF 文法では、ReflectionEmitDimension は <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> を使用して取得された不完全な型定義にのみ適用されます。 不完全な型定義とは、<xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> で呼び出されていない、<xref:System.Reflection.Emit?displayProperty=nameWithType> を使用して構築された <xref:System.Reflection.Emit.TypeBuilder> オブジェクトです。 ReflectionDimension を使用して、完了している任意の型定義 (読み込まれている型) を取得できます。  
@@ -201,11 +201,11 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  **ModuleBuilder.GetType** の場合、`MyArray[0..5]` はサイズが 6 で下限が 0 の 1 次元配列です。 `MyArray[4…]` は、不明なサイズで下限が 4 の 1 次元配列です。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Reflection.AssemblyName>  
- <xref:System.Reflection.Emit.ModuleBuilder>  
- <xref:System.Reflection.Emit.TypeBuilder>  
- <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Reflection.AssemblyName>
+- <xref:System.Reflection.Emit.ModuleBuilder>
+- <xref:System.Reflection.Emit.TypeBuilder>
+- <xref:System.Type.FullName%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
+- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

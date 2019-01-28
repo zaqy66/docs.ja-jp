@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540625"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (コード生成ツール)
 SqlMetal コマンド ライン ツールは、 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] の [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]コンポーネント用のコードとマッピングを生成します。 このトピックで後述するオプションを適用することにより、次のようなアクションを SqlMetal で実行できます。  
@@ -132,7 +132,7 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  サンプル データベース Northwind で **/pluralize** オプションを使用する場合には、注意を必要とする動作があります。 SqlMetal がテーブルのために行型の名前を生成するとき、テーブル名は単数形です。 テーブルに関する <xref:System.Data.Linq.DataContext> プロパティを生成するときには、テーブル名は複数形です。 偶然にも、サンプル データベース Northwind 内のテーブルには既に複数形が使われています。 このため、この部分はうまく機能しません。 データベース テーブルの名前は単数形にするのが一般的ですが、.NET では、コレクションの名前を複数形にすることも一般的です。  
   
-## <a name="see-also"></a>「  
- [方法: Visual Basic または C# でオブジェクト モデルを生成する](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- [LINQ to SQL でのコード生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [外部マップ](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+## <a name="see-also"></a>関連項目
+- [方法: Visual Basic または C# でオブジェクト モデルを生成する](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [LINQ to SQL でのコード生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [外部マップ](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

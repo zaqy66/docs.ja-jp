@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e62d115292edc7b75ff782ac2c9161d942077333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655336"
 ---
 # <a name="com-callable-wrapper"></a>COM 呼び出し可能ラッパー
 COM クライアントが .NET オブジェクトを呼び出すと、共通言語ランタイムがマネージド オブジェクトとそのオブジェクトのための COM 呼び出し可能ラッパー (CCW: COM Callable Wrapper) を作成します。 COM クライアントは .NET オブジェクトを直接参照できないため、CCW をマネージド オブジェクトのプロキシとして使用します。  
@@ -189,9 +189,9 @@ public class LoanApp
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>参照  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [COM ラッパー](com-wrappers.md)  
- [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)  
- [要件 (相互運用のための .NET 型の)](qualifying-net-types-for-interoperation.md)  
- [ランタイム呼び出し可能ラッパー](runtime-callable-wrapper.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [COM ラッパー](com-wrappers.md)
+- [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
+- [要件 (相互運用のための .NET 型の)](qualifying-net-types-for-interoperation.md)
+- [ランタイム呼び出し可能ラッパー](runtime-callable-wrapper.md)
