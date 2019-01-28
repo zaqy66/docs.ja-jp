@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628852"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (厳密型クラス ジェネレーター)
-厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージ クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  
+厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,21 +32,21 @@ WMIClass [options]
   
 |引数|説明|  
 |--------------|-----------------|  
-|*WMIClass*|事前バインディングしたマネージ クラスを生成する対象の WMI クラスです。|  
+|*WMIClass*|事前バインディングしたマネージド クラスを生成する対象の WMI クラスです。|  
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/l**  *language*|事前バインディングされたマネージ クラスの生成に使用する言語を指定します。 language 引数として **CS** (C#、既定値)、**VB** (Visual Basic)、**MC** (C++)、または **JS** (JScript) を指定できます。|  
+|**/l**  *language*|事前バインディングされたマネージド クラスの生成に使用する言語を指定します。 language 引数として **CS** (C#、既定値)、**VB** (Visual Basic)、**MC** (C++)、または **JS** (JScript) を指定できます。|  
 |**/m**  *machine*|WMI クラスが常駐する、接続先のコンピューターを指定します。 既定値はローカル コンピューターです。|  
 |**/n**  *path*|WMI クラスが含まれている WMI 名前空間へのパスを指定します。 このオプションを指定しない場合、このツールは既定の **Root\cimv2** 名前空間に *WMIClass*のコードを生成します。|  
-|**/o**  *classnamespace*|マネージ コード クラスを生成する先の .NET 名前空間を指定します。 このオプションを指定しない場合、このツールは WMI 名前空間およびスキーマ プリフィックスを使用して名前空間を指定します。 スキーマ プリフィックスはクラス名の一部で、アンダースコア (_) 文字の前に付きます。 たとえば、**Root\cimv2** 名前空間内の **Win32_OperatingSystem**クラスの場合、このツールは **ROOT.CIMV2.Win32** にクラスを生成します。|  
+|**/o**  *classnamespace*|マネージド コード クラスを生成する先の .NET 名前空間を指定します。 このオプションを指定しない場合、このツールは WMI 名前空間およびスキーマ プリフィックスを使用して名前空間を指定します。 スキーマ プリフィックスはクラス名の一部で、アンダースコア (_) 文字の前に付きます。 たとえば、**Root\cimv2** 名前空間内の **Win32_OperatingSystem**クラスの場合、このツールは **ROOT.CIMV2.Win32** にクラスを生成します。|  
 |**/p**  *filepath*|生成されたコードを保存するファイルへのパスを指定します。 このオプションを指定しない場合、このツールは現在のディレクトリにファイルを作成します。 *WMIClass* 引数を使用して生成したクラスと、そのクラスを保存したファイルには名前が付けられます。 クラスおよびファイルの名前は、*WMIClass* の名前と同じです。 *WMIClass* にアンダースコア (_) 文字が含まれている場合は、アンダースコア (_) 文字の後に続く、クラス名の一部が使用されます。 たとえば、*WMIClass* 名が **Win32_LogicalDisk** という形式の場合、生成されたクラスおよびファイルには "logicaldisk" という名前が付けられます。 ファイルが既に存在している場合は、既存のファイルが上書きされます。|  
 |**/pw**  *password*|**/m** オプションで指定したコンピューターにログオンするときに使用するパスワードを指定します。|  
 |**/u**  *user name*|**/m** オプションで指定したコンピューターにログオンするときに使用するユーザー名を指定します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>コメント  
- Mgmtclassgen.exe は、<xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> メソッドを使用します。 したがって、任意のカスタム コード プロバイダーを使用して、C#、Visual Basic、および JScript 以外のマネージ言語でコードを生成できます。  
+ Mgmtclassgen.exe は、<xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> メソッドを使用します。 したがって、任意のカスタム コード プロバイダーを使用して、C#、Visual Basic、および JScript 以外のマネージド言語でコードを生成できます。  
   
  生成されたクラスは、それらのクラスを生成する目的となったスキーマにバインドされます。 基になるスキーマが変更された場合に、その変更をこのスキーマに反映するには、クラスを生成し直す必要があります。  
   
@@ -94,7 +94,7 @@ WMIClass [options]
  WMI の詳細については、プラットフォーム SDK の「**Windows Management Instrumentation**」のトピックを参照してください。  
   
 ## <a name="examples"></a>使用例  
- **Root\cimv2** 名前空間内の **Win32_LogicalDisk** WMI クラスに対してマネージ クラスを C# コードで生成するコマンドを次に示します。 このツールは、**ROOT.CIMV2.Win32** 名前空間内の c:\disk.cs にあるソース ファイルにマネージ クラスを書き込みます。  
+ **Root\cimv2** 名前空間内の **Win32_LogicalDisk** WMI クラスに対してマネージド クラスを C# コードで生成するコマンドを次に示します。 このツールは、**ROOT.CIMV2.Win32** 名前空間内の c:\disk.cs にあるソース ファイルにマネージド クラスを書き込みます。  
   
 ```  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
@@ -150,9 +150,9 @@ public class App
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:System.Management>  
- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
- [ツール](../../../docs/framework/tools/index.md)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Management>
+- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
+- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
+- [ツール](../../../docs/framework/tools/index.md)
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

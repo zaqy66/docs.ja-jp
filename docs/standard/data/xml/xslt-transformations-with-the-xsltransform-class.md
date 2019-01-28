@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67062ab87182bcb42793cb166323020178ac1688
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9aebc284e845eff229fff5bd41792e0c990a1092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691361"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform クラスを使用した XSLT 変換
 
@@ -98,11 +98,11 @@ public class Sample
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.Xsl.XslTransform>  
-- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)  
-- [XslTransform クラスの随意動作の実装](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
-- [変換における XPathNavigator](xpathnavigator-in-transformations.md)  
-- [変換における XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-- [XslTransform への XPathDocument の入力](xpathdocument-input-to-xsltransform.md)  
-- [XslTransform への XmlDataDocument の入力](xmldatadocument-input-to-xsltransform.md)  
-- [XslTransform への XmlDocument の入力](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>
+- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform クラスの随意動作の実装](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)
+- [変換における XPathNavigator](xpathnavigator-in-transformations.md)
+- [変換における XPathNodeIterator](xpathnodeiterator-in-transformations.md)
+- [XslTransform への XPathDocument の入力](xpathdocument-input-to-xsltransform.md)
+- [XslTransform への XmlDataDocument の入力](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform への XmlDocument の入力](xmldocument-input-to-xsltransform.md)

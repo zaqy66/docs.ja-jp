@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: ce365d088c01ae4a89c77713b6970ae3389b3f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0ed97626d86b380565453191f7840c1d1a180dfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689079"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net クラスのベスト プラクティス
 次の推奨事項は、<xref:System.Net> に含まれるクラスを最大限に活用するのに役立ちます。  
@@ -32,5 +32,5 @@ ms.locfileid: "50190951"
   
 -   資格情報を必要とするサイトにアクセスする場合、要求ごとに資格情報を入力するのではなく、<xref:System.Net.CredentialCache> クラスを使用して資格情報のキャッシュを作成します。 **CredentialCache** クラスがキャッシュを検索して要求で表示する適切な資格情報を検索するため、ユーザーは URL に基づいて資格情報を作成したり、表示したりする必要がなくなります。  
   
-## <a name="see-also"></a>参照  
- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>関連項目
+- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)

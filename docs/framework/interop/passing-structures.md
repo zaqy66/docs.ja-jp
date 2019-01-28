@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f24187d0c9992008e7471ffe1a5b75f9768239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494376"
 ---
 # <a name="passing-structures"></a>構造体の受け渡し
-多くのアンマネージ関数では、構造体のメンバー (Visual Basic ではユーザー定義型) またはマネージ コードで定義されたクラスのメンバーがパラメーターとして渡されることを期待しています。 プラットフォーム呼び出しを使って構造体またはクラスをアンマネージ コードに渡す場合は、元のレイアウトやアラインメントを保持するための追加情報を提供する必要があります。 このトピックでは、フォーマットされた型を定義するために使用する <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性について説明します。 マネージ構造体やマネージ クラスの場合は、**LayoutKind** 列挙型によって提供される想定されたレイアウト動作から選択できます。  
+多くのアンマネージド 関数では、構造体のメンバー (Visual Basic ではユーザー定義型) またはマネージド コードで定義されたクラスのメンバーがパラメーターとして渡されることを期待しています。 プラットフォーム呼び出しを使って構造体またはクラスをアンマネージ コードに渡す場合は、元のレイアウトやアラインメントを保持するための追加情報を提供する必要があります。 このトピックでは、フォーマットされた型を定義するために使用する <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性について説明します。 マネージ構造体やマネージド クラスの場合は、**LayoutKind** 列挙型によって提供される想定されたレイアウト動作から選択できます。  
   
- ここで説明する概念の中心は、構造体の型とクラスの型の相違点です。 構造体は値型であり、クラスは参照型です。クラスは常に最低 1 つのレベルのメモリの間接参照 (値へのポインター) を提供します。 アンマネージ関数は、次の表の第 1 列のシグネチャに示されているように、間接参照を必要とすることが多いため、この違いは重要です。 他の列のマネージ構造体およびマネージ クラスの宣言は、宣言でどの程度間接参照のレベルを調整できるかを示しています。宣言は、Visual Basic と Visual C# の両方で指定されています。  
+ ここで説明する概念の中心は、構造体の型とクラスの型の相違点です。 構造体は値型であり、クラスは参照型です。クラスは常に最低 1 つのレベルのメモリの間接参照 (値へのポインター) を提供します。 アンマネージ関数は、次の表の第 1 列のシグネチャに示されているように、間接参照を必要とすることが多いため、この違いは重要です。 他の列のマネージ構造体およびマネージド クラスの宣言は、宣言でどの程度間接参照のレベルを調整できるかを示しています。宣言は、Visual Basic と Visual C# の両方で指定されています。  
   
-|アンマネージ シグネチャ|マネージ宣言 <br />間接参照なし<br />`Structure MyType`<br />`struct MyType;`|マネージ宣言 <br />1 レベルの間接参照<br />`Class MyType`<br />`class MyType;`|  
+|アンマネージ シグネチャ|マネージド宣言 <br />間接参照なし<br />`Structure MyType`<br />`struct MyType;`|マネージド宣言 <br />1 レベルの間接参照<br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
 |`DoWork(MyType x);`<br /><br /> 0 レベルの間接参照を必要とします。|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> 0 レベルの間接参照を追加します。|既に 1 レベルの間接参照が存在するため調整できません。|  
 |`DoWork(MyType* x);`<br /><br /> 1 レベルの間接参照を必要とします。|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> 1 レベルの間接参照を追加します。|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> 0 レベルの間接参照を追加します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "33391509"
 -   アンマネージ関数が 2 レベルの間接参照を必要とする場合は、参照渡しによるクラスを使用します。  
   
 ## <a name="declaring-and-passing-structures"></a>構造体の宣言と受け渡し  
- マネージ コードで `Point` 型および `Rect` 型を定義し、これらの型を User32.dll ファイル内の **PtInRect** 関数にパラメーターとして渡す方法の例を次に示します。 **PtInRect** は、次に示すアンマネージ シグネチャを持っています。  
+ マネージド コードで `Point` 型および `Rect` 型を定義し、これらの型を User32.dll ファイル内の **PtInRect** 関数にパラメーターとして渡す方法の例を次に示します。 **PtInRect** は、次に示すアンマネージ シグネチャを持っています。  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -175,8 +175,8 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [DLL 関数の呼び出し](../../../docs/framework/interop/calling-a-dll-function.md)  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+## <a name="see-also"></a>関連項目
+- [DLL 関数の呼び出し](../../../docs/framework/interop/calling-a-dll-function.md)
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

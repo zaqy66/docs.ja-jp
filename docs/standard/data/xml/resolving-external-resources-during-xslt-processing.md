@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 958699b8e3a00cfe3f8fd8ac4bb96914dcd0598c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7f73edf5912f8158db51ed070da8816d5b988b8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44185127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555480"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>XSLT 処理中の外部リソースの解決
 XSLT 変換中には、外部リソースの解決が必要になる場合があります。  
@@ -36,7 +36,7 @@ XSLT 変換中には、外部リソースの解決が必要になる場合があ
   
 -   動作をカスタマイズする場合は、独自の <xref:System.Xml.XmlResolver> クラスを実装し、これを使用してリソースを解決することができます。  
   
--   外部リソースにアクセスできないようにする場合は、`null` の引数に <xref:System.Xml.XmlResolver> を指定します。  
+-   外部リソースにアクセスできないようにする場合は、<xref:System.Xml.XmlResolver> の引数に `null` を指定します。  
   
 ## <a name="example"></a>例  
  ネットワーク リソースに格納されているスタイル シートをコンパイルする例を次に示します。 <xref:System.Xml.XmlUrlResolver> オブジェクトには、スタイル シートにアクセスするのに必要な資格情報を指定します。  
@@ -46,6 +46,6 @@ XSLT 変換中には、外部リソースの解決が必要になる場合があ
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- <xref:System.Xml.Xsl.XsltSettings>
 - [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)

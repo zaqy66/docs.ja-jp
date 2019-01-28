@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35b8e062c9f207eba19bcee5593425095de2e267
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 465d5e8f37be3dad0d548387f9928a9f79fcebf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565788"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>推奨される国際対応アプリケーション開発手順
 このセクションでは、推奨される国際対応アプリケーション開発手順について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "44041471"
   
     -   グレゴリオ暦とグレゴリオ暦以外の暦には、<xref:System.Globalization.Calendar> クラスまたは特定のカレンダー実装を使用します。  
   
-3.  状況に応じて、<xref:System.Globalization.CultureInfo?displayProperty=nameWithType> クラスのカルチャ プロパティ設定を使用します。 日付と時刻や数値の書式指定などの書式指定処理には、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用します。 リソースを取得するには、<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用します。 `CurrentCulture` プロパティと `CurrentUICulture` プロパティはスレッドごとに設定できることに注意してください。  
+3.  状況に応じて、<xref:System.Globalization.CultureInfo?displayProperty=nameWithType> クラスのカルチャ プロパティ設定を使用します。 日付と時刻や数値の書式指定などの書式指定タスクには、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用します。 リソースを取得するには、<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用します。 `CurrentCulture` プロパティと `CurrentUICulture` プロパティはスレッドごとに設定できることに注意してください。  
   
 4.  <xref:System.Text> 名前空間のエンコーディング クラスを使用して、アプリケーションでの各種エンコーディングのデータの読み取り操作と書き込み操作を有効にします。 常に ASCII データが使用されるとは限らないことに注意してください。 どのようなテキスト入力でも、各種の言語の文字が使用される可能性があります。 たとえば、アプリケーションは、サーバー名、ディレクトリ名、ファイル名、ユーザー名、および URL に含まれる各種言語の文字を受け入れる必要があります。  
   
@@ -102,5 +102,5 @@ ms.locfileid: "44041471"
   
 ## <a name="see-also"></a>関連項目
 
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
 - [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)

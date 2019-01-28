@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad74b9e23c65209c8084588d09670e3c64e44213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493730"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET アプリでのリソースのパッケージ化と配置
 アプリケーションは、<xref:System.Resources.ResourceManager> クラスによって表される .NET Framework リソース マネージャーに依存して、ローカライズされたリソースを取得します。 リソース マネージャーでは、リソースのパッケージ化と配置にハブ アンド スポーク モデルを使うことが想定されています。 ハブは、ローカライズできない実行可能コードと、ニュートラル カルチャまたは既定のカルチャと呼ばれる単一カルチャ用のリソースを含む、メイン アセンブリです。 既定のカルチャはアプリケーション用のフォールバック カルチャです。つまり、ローカライズされたリソースが見つからない場合に使われるリソースのカルチャです。 各スポークは、単一のカルチャ用のリソースを含むがコードは含まないサテライト アセンブリに接続します。  
@@ -221,8 +221,8 @@ Bon jour!
 ## <a name="suggested-packaging-alternative"></a>推奨されるパッケージ化の代替方法  
  時間や予算の制約により、アプリケーションがサポートするすべてのサブカルチャのリソース セットを作成できない場合があります。 そのような場合は、関連のあるすべてのサブカルチャで使うことができる親カルチャ用の単一のサテライト アセンブリを作成できます。 たとえば、地域固有の英語リソースを要求するユーザーによって取得される単一の英語サテライト アセンブリ (en) と、地域固有のドイツ語リソースを要求するユーザー用の単一のドイツ語サテライト アセンブリ (de) を提供することができます。 たとえば、ドイツ (de-DE)、オーストリア (de-AT)、スイス (de-CH) で話されるドイツ語の要求は、ドイツ語のサテライト アセンブリ (de) にフォールバックします。 既定のリソースは最終的なフォールバックであり、アプリケーションのほとんどのユーザーによって要求されるリソースであるため、これらのリソースは慎重に選択する必要があります。 この方法では、カルチャ固有性の低いリソースが配置されますが、アプリケーションのローカライズ費用を大幅に削減できます。  
   
-## <a name="see-also"></a>参照  
- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)  
- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
- [リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [サテライト アセンブリの作成](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+## <a name="see-also"></a>関連項目
+- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
+- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)
+- [リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [サテライト アセンブリの作成](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573965"
 ---
 # <a name="editing-xml-schemas"></a>XML スキーマの編集
 XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) の最も重要な機能の 1 つです。 XML スキーマの既存の値を変更する場合、SOM のスキーマ コンパイル前のすべてのプロパティを使用できます。 その後、XML スキーマを再コンパイルすると、変更が反映されます。  
@@ -33,7 +33,7 @@ XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) �
   
 3.  `PhoneNumber` クラスを使用する <xref:System.Xml.Schema.XmlSchemaElement> 要素を作成し、`xs:string` クラスおよび <xref:System.Xml.Schema.XmlSchemaSimpleType> クラスを使用する <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 単純型の制限を作成し、制限の <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> プロパティに pattern ファセットを追加し、単純型の <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> プロパティに制限を追加して、<xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 要素の `PhoneNumber` に単純型を追加します。  
   
-4.  スキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchemaElement> コレクションの <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> を反復処理します。  
+4.  スキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションの <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchemaElement> を反復処理します。  
   
 5.  要素の <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> が `"Customer"` である場合、`Customer` クラスを使用する複合型の <xref:System.Xml.Schema.XmlSchemaComplexType> 要素と <xref:System.Xml.Schema.XmlSchemaSequence> クラスを使用する複合型の sequence のパーティクルを取得します。  
   
@@ -137,10 +137,10 @@ XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) �
   
 ## <a name="see-also"></a>関連項目
 
-- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

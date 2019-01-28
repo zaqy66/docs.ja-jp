@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19c4b030e8b44bed5377827d016127b4a574f5ee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0b065fe488031329815f6ec38da9661fd19700d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50183751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529935"
 ---
 # <a name="assembly-location"></a>アセンブリの場所
 アセンブリの場所は、参照時に共通言語ランタイムがそれを見つけることができるかどうかを決定します。また、アセンブリをその他のアセンブリと共有できるかどうかも決定できます。 次の場所にアセンブリを展開することができます。  
@@ -29,8 +29,8 @@ ms.locfileid: "50183751"
   
      HTTP サーバーに展開されているアセンブリは、厳密な名前を持つ必要があります。アプリケーションの構成ファイルのコードベース セクションにあるアセンブリをポイントします。  
   
-## <a name="see-also"></a>参照  
-- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
-- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
-- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>関連項目
+- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)
+- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)
+- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)

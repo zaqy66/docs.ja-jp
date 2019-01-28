@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692965"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 <a name="top"></a> 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
@@ -33,7 +33,7 @@ ms.locfileid: "44038745"
   
      最初に指定された型よりも一般的な (弱い派生の) 型を使用できるようにします。  
   
-     `Action<Base>` (Visual Basic では `Action(Of Base)`) のインスタンスを `Action<Derived>` 型の変数に割り当てることができます。  
+     `Action<Base>` (Visual Basic では`Action(Of Base)` ) のインスタンスを `Action<Derived>`型の変数に割り当てることができます。  
   
 -   `Invariance`  
   
@@ -53,7 +53,7 @@ ms.locfileid: "44038745"
  [!code-csharp[CoContraSimpleAction#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleaction/cs/example.cs#1)]
  [!code-vb[CoContraSimpleAction#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleaction/vb/example.vb#1)]  
   
- これは逆方向のように見えますが、コンパイルして実行できるタイプ セーフ コードです。 ラムダ式は代入先のデリゲートに一致するため、`Base` 型のパラメーターを 1 つ受け取って戻り値を返さないメソッドを定義します。 `Action<Derived>` デリゲートの型パラメーター `T` は反変であるため、結果として得られたデリゲートは <xref:System.Action%601> 型の変数に代入できます。 `T` はパラメーター型を指定するため、コードはタイプ セーフです。 `Action<Base>` 型のデリゲートが `Action<Derived>`型のデリゲートであるかのように呼び出される場合、その引数は `Derived`型である必要があります。 メソッドのパラメーターは `Base`型であるため、この引数は、基になるメソッドに常に安全に渡すことができます。  
+ これは逆方向のように見えますが、コンパイルして実行できるタイプ セーフ コードです。 ラムダ式は代入先のデリゲートに一致するため、 `Base` 型のパラメーターを 1 つ受け取って戻り値を返さないメソッドを定義します。 `Action<Derived>` デリゲートの型パラメーター `T` は反変であるため、結果として得られたデリゲートは <xref:System.Action%601> 型の変数に代入できます。 `T` はパラメーター型を指定するため、コードはタイプ セーフです。 `Action<Base>` 型のデリゲートが `Action<Derived>`型のデリゲートであるかのように呼び出される場合、その引数は `Derived`型である必要があります。 メソッドのパラメーターは `Base`型であるため、この引数は、基になるメソッドに常に安全に渡すことができます。  
   
  一般に、共変の型パラメーターはデリゲートの戻り値の型として使用でき、反変の型パラメーターはパラメーター型として使用できます。 インターフェイスについては、共変の型パラメーターをインターフェイスのメソッドの戻り値の型として使用でき、反変の型パラメーターをインターフェイスのメソッドのパラメーター型として使用できます。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "44038745"
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>反変のジェネリック型パラメーターを持つジェネリック インターフェイス  
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]以降には、反変の型パラメーターを持つジェネリック インターフェイスがいくつかあります ( <xref:System.Collections.Generic.IComparer%601>、 <xref:System.IComparable%601>、 <xref:System.Collections.Generic.IEqualityComparer%601>など)。 これらのインターフェイスの型パラメーターは反変のみであるため、これらの型パラメーターは、インターフェイスのメンバーのパラメーター型としてのみ使用されます。  
   
- 反変の型パラメーターの例を以下に示します。 この例では、`MustInherit` プロパティを使用して抽象 (Visual Basic では `Shape` ) `Area` クラスを定義しています。 また、 `ShapeAreaComparer` (Visual Basic では `IComparer<Shape>` ) を実装する`IComparer(Of Shape)` クラスを定義しています。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> メソッドの実装は `Area` プロパティの値に基づくため、`ShapeAreaComparer` を使用して、領域で `Shape` オブジェクトを並べ替えることができます。  
+ 反変の型パラメーターの例を以下に示します。 この例では、`MustInherit` プロパティを使用して抽象 (Visual Basic では `Shape` ) `Area` クラスを定義しています。 また、 `ShapeAreaComparer` (Visual Basic では `IComparer<Shape>` ) を実装する`IComparer(Of Shape)` クラスを定義しています。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> メソッドの実装は `Area` プロパティの値に基づくため、 `ShapeAreaComparer` を使用して、領域で `Shape` オブジェクトを並べ替えることができます。  
   
- `Circle` クラスは `Shape` を継承し、 `Area`をオーバーライドします。 この例では、 <xref:System.Collections.Generic.SortedSet%601> (Visual Basic では `Circle` ) を受け取るコンストラクターを使用して、 `IComparer<Circle>` オブジェクトの`IComparer(Of Circle)` を作成します。 ただし、`IComparer<Circle>` を渡す代わりに、`ShapeAreaComparer` を実装する `IComparer<Shape>` オブジェクトを渡します。 この例では、`Shape`ジェネリック インターフェイスの型パラメーターは反変であるため、コードがより強い派生型 (`Circle`) の比較子を要求している場合に、より弱い派生型 ( <xref:System.Collections.Generic.IComparer%601> ) の比較子を渡すことができます。  
+ `Circle` クラスは `Shape` を継承し、 `Area`をオーバーライドします。 この例では、 <xref:System.Collections.Generic.SortedSet%601> (Visual Basic では `Circle` ) を受け取るコンストラクターを使用して、 `IComparer<Circle>` オブジェクトの`IComparer(Of Circle)` を作成します。 ただし、 `IComparer<Circle>`を渡す代わりに、 `ShapeAreaComparer` を実装する `IComparer<Shape>`オブジェクトを渡します。 この例では、`Shape`ジェネリック インターフェイスの型パラメーターは反変であるため、コードがより強い派生型 (`Circle`) の比較子を要求している場合に、より弱い派生型 ( <xref:System.Collections.Generic.IComparer%601> ) の比較子を渡すことができます。  
   
  新しい `Circle` オブジェクトを `SortedSet<Circle>`に追加すると、新しい要素が既存の要素と比較されるたびに `IComparer<Shape>.Compare` オブジェクトの`IComparer(Of Shape).Compare` メソッド (Visual Basic では `ShapeAreaComparer` メソッド) が呼び出されます。 このメソッドのパラメーターの型 (`Shape`) は、渡される型 (`Circle`) より弱い派生型なので、この呼び出しはタイプ セーフです。 反変性により、 `ShapeAreaComparer` で、単一の型のコレクションおよび `Shape`から派生した型の混合コレクションを並べ替えることができるようになります。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "44038745"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>バリアント型パラメーターを持つ汎用デリゲート  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]では、 `Func` などの <xref:System.Func%602>汎用デリゲートに、共変の戻り値の型と反変のパラメーターの型があります。 `Action` などの <xref:System.Action%602>汎用デリゲートには、反変のパラメーターの型があります。 したがって、より強い派生型のパラメーターと、より弱い派生型の戻り値 (`Func` 汎用デリゲートの場合) を持つ変数に、デリゲートを代入できます。  
+ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]では、 `Func` などの <xref:System.Func%602>汎用デリゲートに、共変の戻り値の型と反変のパラメーターの型があります。 `Action` などの <xref:System.Action%602>汎用デリゲートには、反変のパラメーターの型があります。 したがって、より強い派生型のパラメーターと、より弱い派生型の戻り値 ( `Func` 汎用デリゲートの場合) を持つ変数に、デリゲートを代入できます。  
   
 > [!NOTE]
 >  `Func` 汎用デリゲートの最後のジェネリック型パラメーターは、デリゲート シグネチャの戻り値の型を指定します。 他のジェネリック型パラメーターは反変 (`out` キーワード) ですが、この最後のジェネリック型パラメーターは共変 (`in` キーワード) です。  
@@ -172,11 +172,11 @@ ms.locfileid: "44038745"
   
 |型|共変の型パラメーター|反変の型パラメーター|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> ～ <xref:System.Action%6016>||[はい]|  
+|<xref:System.Action%601> ～ <xref:System.Action%6016>||はい|  
 |<xref:System.Comparison%601>||[はい]|  
 |<xref:System.Converter%602>|[はい]|[はい]|  
-|<xref:System.Func%601>|[はい]||  
-|<xref:System.Func%602> ～ <xref:System.Func%6017>|[はい]|[はい]|  
+|<xref:System.Func%601>|はい||  
+|<xref:System.Func%602> ～ <xref:System.Func%6017>|はい|[はい]|  
 |<xref:System.IComparable%601>||[はい]|  
 |<xref:System.Predicate%601>||[はい]|  
 |<xref:System.Collections.Generic.IComparer%601>||[はい]|  
@@ -186,10 +186,10 @@ ms.locfileid: "44038745"
 |<xref:System.Linq.IGrouping%602>|[はい]||  
 |<xref:System.Linq.IOrderedEnumerable%601>|[はい]||  
 |<xref:System.Linq.IOrderedQueryable%601>|[はい]||  
-|<xref:System.Linq.IQueryable%601>|[はい]||  
+|<xref:System.Linq.IQueryable%601>|はい||  
   
 ## <a name="see-also"></a>関連項目
 
-- [共変性と反変性 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
-- [共変性と反変性 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [共変性と反変性 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [共変性と反変性 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [デリゲートの分散](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

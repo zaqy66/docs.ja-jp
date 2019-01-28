@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652021"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
 <a name="introduction"></a> マネージド実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  
@@ -109,12 +109,12 @@ ms.locfileid: "44192594"
   
 ## <a name="see-also"></a>関連項目
 
-- [概要](../../docs/framework/get-started/overview.md)  
-- [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)  
-- [メタデータと自己言及的なコンポーネント](../../docs/standard/metadata-and-self-describing-components.md)  
-- [Ilasm.exe (IL アセンブラー)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-- [セキュリティ](../../docs/standard/security/index.md)  
-- [アンマネージ コードとの相互運用](../../docs/framework/interop/index.md)  
-- [配置](../../docs/framework/deployment/net-framework-applications.md)  
-- [共通言語ランタイムのアセンブリ](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [概要](../../docs/framework/get-started/overview.md)
+- [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)
+- [メタデータと自己言及的なコンポーネント](../../docs/standard/metadata-and-self-describing-components.md)
+- [Ilasm.exe (IL アセンブラー)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [セキュリティ](../../docs/standard/security/index.md)
+- [アンマネージ コードとの相互運用](../../docs/framework/interop/index.md)
+- [配置](../../docs/framework/deployment/net-framework-applications.md)
+- [共通言語ランタイムのアセンブリ](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [アプリケーション ドメイン](../../docs/framework/app-domains/application-domains.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ba8a897ba0840d6e159c4d48c2ca9427bb2937c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579499"
 ---
 # <a name="localization"></a>ローカリゼーション
 ローカリゼーションはアプリケーションのリソースを翻訳するプロセスであり、そのアプリケーションで対応するカルチャ別のバージョンが作られます。 [ローカライズ化の確認](../../../docs/standard/globalization-localization/localizability-review.md)手順で世界展開するアプリケーションがローカライズ可能であることを確認してから、ローカリゼーション手順に進んでください。  
@@ -34,7 +34,7 @@ ms.locfileid: "48840416"
   
 ## <a name="see-also"></a>関連項目
 
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
-- [ローカライズ化の確認](../../../docs/standard/globalization-localization/localizability-review.md)  
-- [グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)  
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
+- [ローカライズ化の確認](../../../docs/standard/globalization-localization/localizability-review.md)
+- [グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)
 - [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)

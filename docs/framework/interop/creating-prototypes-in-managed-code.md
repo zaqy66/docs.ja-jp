@@ -1,5 +1,5 @@
 ---
-title: マネージ コードでのプロトタイプの作成
+title: マネージド コードでのプロトタイプの作成
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564293"
 ---
-# <a name="creating-prototypes-in-managed-code"></a>マネージ コードでのプロトタイプの作成
-このトピックは、アンマネージ関数にアクセスする方法について説明し、マネージ コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
+# <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
+このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
   
- マネージ コードからアンマネージ DLL 関数にアクセスする前に、関数の名前とエクスポートする DLL の名前を知っている必要があります。 この情報を使用すると、マネージ DLL に実装されているアンマネージ関数の定義の作成を開始できます。 さらに、プラットフォーム呼び出しが関数を作成し、関数間でデータをマーシャリングする方法を調整できます。  
+ マネージド コードからアンマネージド DLL 関数にアクセスする前に、関数の名前とエクスポートする DLL の名前を知っている必要があります。 この情報を使用すると、マネージド DLL に実装されているアンマネージド 関数の定義の作成を開始できます。 さらに、プラットフォーム呼び出しが関数を作成し、関数間でデータをマーシャリングする方法を調整できます。  
   
 > [!NOTE]
 >  文字列を割り当てる Win32 API 関数を使用して、`LocalFree` などのメソッドを使用して文字列を解放できます。 プラットフォーム呼び出しは、このようなパラメーターを異なる方法で処理します。 プラットフォーム呼び出しでは、パラメーターを `String` 型の代わりに `IntPtr` 型にします。 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> クラスにより提供されるメソッドを使用して、型を手動で文字列に変換し、手動で解放します。  
   
 ## <a name="declaration-basics"></a>宣言の基本  
- アンマネージ関数に対するマネージ定義は、次の例で確認できるように、言語に依存します。 完全なコード例については、「[プラットフォーム呼び出しの例](platform-invoke-examples.md)」を参照してください。  
+ アンマネージド 関数に対するマネージド定義は、次の例で確認できるように、言語に依存します。 完全なコード例については、「[プラットフォーム呼び出しの例](platform-invoke-examples.md)」を参照してください。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -75,7 +75,7 @@ using namespace System::Runtime::InteropServices;
 ```  
   
 ## <a name="adjusting-the-definition"></a>定義の調整  
- 明示的に設定するかどうかに関係なく、属性フィールドは作業はマネージ コードの動作を動作中に定義します。 プラットフォーム呼び出しは、アセンブリ内のメタデータとして存在するさまざまなフィールドで設定された既定値どおりに動作します。 1 つまたは複数のフィールドの値を調整することによって、この既定の動作を変更することができます。 多くの場合、<xref:System.Runtime.InteropServices.DllImportAttribute> を使用して値を設定します。  
+ 明示的に設定するかどうかに関係なく、属性フィールドは作業はマネージド コードの動作を動作中に定義します。 プラットフォーム呼び出しは、アセンブリ内のメタデータとして存在するさまざまなフィールドで設定された既定値どおりに動作します。 1 つまたは複数のフィールドの値を調整することによって、この既定の動作を変更することができます。 多くの場合、<xref:System.Runtime.InteropServices.DllImportAttribute> を使用して値を設定します。  
   
  次の表では、プラットフォーム呼び出しに関連する属性フィールドの完全なセットを一覧表示します。 各フィールドについては、表に既定値とこれらのフィールドを使用してアンマネージ DLL 関数を定義する方法に関する情報へのリンクが含まれます。  
   
@@ -86,7 +86,7 @@ using namespace System::Runtime::InteropServices;
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|名前修飾および文字列の引数を関数にマーシャリングする方法を管理します。 既定値は、`CharSet.Ansi` です。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|呼び出される DLL エントリ ポイントを指定します。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|文字セットに対応するエントリ ポイントを変更する必要があるかどうかを制御します。 既定値は、プログラミング言語によって異なります。|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|マネージ メソッドのシグネチャが、HRESULT を返すアンマネージ シグネチャに変換され、戻り値の追加の [out, retval] 引数を持つかどうかを制御します。<br /><br /> 既定値は `true` です (シグネチャは変換されません)。|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|マネージド メソッドのシグネチャが、HRESULT を返すアンマネージド シグネチャに変換され、戻り値の追加の [out, retval] 引数を持つかどうかを制御します。<br /><br /> 既定値は `true` です (シグネチャは変換されません)。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|呼び出し元が `Marshal.GetLastWin32Error` API の関数を使用して、メソッドの実行中にエラーが発生したかどうかを判断できるようにします。 Visual Basic では既定値は `true`、C# および C++ では既定値は `false` です。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>|ANSI の"?" 文字に変換されるマップできない Unicode 文字での例外のスローを制御します。|  
   
@@ -221,12 +221,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [アンマネージ DLL 関数の処理](consuming-unmanaged-dll-functions.md)  
- [エントリ ポイントの指定](specifying-an-entry-point.md)  
- [文字セットの指定](specifying-a-character-set.md)  
- [プラットフォーム呼び出しの例](platform-invoke-examples.md)  
- [プラットフォーム呼び出しのセキュリティに関する考慮事項](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
- [DLL 内の関数の識別](identifying-functions-in-dlls.md)  
- [DLL 関数を保持するクラスの作成](creating-a-class-to-hold-dll-functions.md)  
- [DLL 関数の呼び出し](calling-a-dll-function.md)
+## <a name="see-also"></a>関連項目
+- [アンマネージ DLL 関数の処理](consuming-unmanaged-dll-functions.md)
+- [エントリ ポイントの指定](specifying-an-entry-point.md)
+- [文字セットの指定](specifying-a-character-set.md)
+- [プラットフォーム呼び出しの例](platform-invoke-examples.md)
+- [プラットフォーム呼び出しのセキュリティに関する考慮事項](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [DLL 内の関数の識別](identifying-functions-in-dlls.md)
+- [DLL 関数を保持するクラスの作成](creating-a-class-to-hold-dll-functions.md)
+- [DLL 関数の呼び出し](calling-a-dll-function.md)

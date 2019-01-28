@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: eaabb382a7bbb2cdd19c884fcd8499e626f70d4a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608678"
 ---
 # <a name="proxy-configuration"></a>プロキシの構成
 プロキシ サーバーは、リソースに対するクライアント要求を処理します。 プロキシは、要求されたリソースをキャッシュから返したり、リソースが存在するサーバーに要求を転送したりできます。 プロキシは、リモート サーバーに送信された要求の数を減らすことで、ネットワークのパフォーマンスを向上できます。 プロキシを使用して、リソースへのアクセスを制限することもできます。  
@@ -75,7 +75,7 @@ ms.locfileid: "50180992"
 </system.net>  
 ```  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.WebProxy>  
- <xref:System.Net.GlobalProxySelection>  
- [自動プロキシ検出](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.WebProxy>
+- <xref:System.Net.GlobalProxySelection>
+- [自動プロキシ検出](../../../docs/framework/network-programming/automatic-proxy-detection.md)

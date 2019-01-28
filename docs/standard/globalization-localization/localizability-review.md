@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623986"
 ---
 # <a name="localizability-review"></a>ローカライズ化の確認
 ローカライズ化の確認は、国際対応アプリケーション開発の中間段階です。 グローバル化されたアプリケーションがローカライズの準備ができていることを確認し、特別な処理が必要なコードやユーザー インターフェイスの側面を特定します。 この手順は、ローカライズ プロセスでアプリケーションに機能上の欠陥が持ち込まれないようにするためにも役立ちます。 ローカライズ化の確認で生じた問題がすべて解決されたら、アプリケーションのローカライズの準備は完了です。 ローカライズ化の確認が徹底していれば、ローカライズ プロセス中にソース コードを変更する必要はありません。  
@@ -75,7 +75,7 @@ ms.locfileid: "49086506"
   
 ## <a name="see-also"></a>関連項目
 
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
-- [ローカリゼーション](../../../docs/standard/globalization-localization/localization.md)  
-- [グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)  
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
+- [ローカリゼーション](../../../docs/standard/globalization-localization/localization.md)
+- [グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)
 - [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)

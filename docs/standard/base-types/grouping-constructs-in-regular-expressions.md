@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645900"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのグループ化構成体
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "44041601"
  ここで、 *subexpression* は有効な正規表現パターンです。 かっこを使用するキャプチャには、正規表現の左かっこの順番に基づいて、左から右に自動的に 1 から始まる番号が付けられます。 番号が 0 になるキャプチャは、正規表現パターン全体と一致するテキストです。  
   
 > [!NOTE]
->  既定では、 `(`*subexpression*`)` 言語要素が、一致する部分式をキャプチャします。 ただし、正規表現パターン一致メソッドの <xref:System.Text.RegularExpressions.RegexOptions> パラメーターに <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> フラグが含まれる場合や、`n` オプションがこの部分式に適用される場合は (このトピックで後述する「[グループ オプション](#group_options)」を参照)、一致した部分式はキャプチャされません。  
+>  既定では、 `(`*subexpression*`)` 言語要素が、一致する部分式をキャプチャします。 ただし、正規表現パターン一致メソッドの <xref:System.Text.RegularExpressions.RegexOptions> パラメーターに <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> フラグが含まれる場合や、 `n` オプションがこの部分式に適用される場合は (このトピックで後述する「 [グループ オプション](#group_options) 」を参照)、一致した部分式はキャプチャされません。  
   
  キャプチャされたグループにアクセスする方法は 4 つあります。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "44041601"
  ここで、 *name* は有効なグループ名、 *subexpression* は有効な正規表現パターンです。 *name* は区切り記号を含まず、先頭が数字以外である必要があります。  
   
 > [!NOTE]
->  正規表現パターン一致メソッドの <xref:System.Text.RegularExpressions.RegexOptions> パラメーターに <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> フラグが含まれる場合や、`n` オプションがこの部分式に適用される場合は (このトピックで後述する「[グループ オプション](#group_options)」を参照)、部分式をキャプチャする唯一の方法は、キャプチャ グループの名前を明示的に指定することです。  
+>  正規表現パターン一致メソッドの <xref:System.Text.RegularExpressions.RegexOptions> パラメーターに <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> フラグが含まれる場合や、 `n` オプションがこの部分式に適用される場合は (このトピックで後述する「 [グループ オプション](#group_options) 」を参照)、部分式をキャプチャする唯一の方法は、キャプチャ グループの名前を明示的に指定することです。  
   
  キャプチャされた名前付きグループには次の方法でアクセスできます。  
   
@@ -444,7 +444,7 @@ ms.locfileid: "44041601"
   
 <a name="Objects"></a>   
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>グループ化構成体および正規表現オブジェクト  
- 正規表現キャプチャ グループと一致する部分文字列は、<xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> オブジェクトで表されます。このオブジェクトは、<xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトから取得できます。 <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトの値は次のように設定されます。  
+ 正規表現キャプチャ グループと一致する部分文字列は、 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> オブジェクトで表されます。このオブジェクトは、 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトから取得できます。 <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトの値は次のように設定されます。  
   
 -   コレクション内の最初の <xref:System.Text.RegularExpressions.Group> オブジェクト (インデックス 0 の位置にあるオブジェクト) は、一致した文字列全体を表します。  
   
@@ -452,7 +452,7 @@ ms.locfileid: "44041601"
   
 -   最後の <xref:System.Text.RegularExpressions.Group> オブジェクト セットは、名前付きキャプチャ グループを表します。 正規表現で定義されている順序で左から右に並びます。 最初の名前付きキャプチャ グループのインデックス値は、最後の名前のないキャプチャ グループのインデックスよりも 1 大きい数値になります。 正規表現に名前のないキャプチャ グループがない場合、最初の名前付きキャプチャ グループのインデックス値は 1 になります。  
   
- 量指定子をキャプチャ グループに適用する場合、対応する <xref:System.Text.RegularExpressions.Group> オブジェクトの <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、<xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>、および <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> の各プロパティには、キャプチャ グループによってキャプチャされた最後の部分文字列が反映されます。 量指定子を持つグループによってキャプチャされたすべての部分文字列は、<xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから取得できます。  
+ 量指定子をキャプチャ グループに適用する場合、対応する <xref:System.Text.RegularExpressions.Group> オブジェクトの <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>、および <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> の各プロパティには、キャプチャ グループによってキャプチャされた最後の部分文字列が反映されます。 量指定子を持つグループによってキャプチャされたすべての部分文字列は、 <xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから取得できます。  
   
  次の例では、 <xref:System.Text.RegularExpressions.Group> オブジェクトと <xref:System.Text.RegularExpressions.Capture> オブジェクトの関係を明確にします。  
   
@@ -468,9 +468,9 @@ ms.locfileid: "44041601"
 |`\W+`|1 個以上の単語文字に使用されない文字と一致します。|  
 |`(\w+)\W+)+`|1 個以上の単語文字、および 1 個以上の単語文字に使用されない文字が 1 回以上続くパターンと一致します。 これが最初のキャプチャ グループです。|  
   
- 最初のキャプチャ グループは、文の各単語と一致します。 2 番目のキャプチャ グループは、各単語およびその単語に続く句読点や空白と一致します。 インデックスが 2 の <xref:System.Text.RegularExpressions.Group> オブジェクトは、2 番目のキャプチャ グループと一致したテキストの情報を保持します。 キャプチャ グループによってキャプチャされたすべての単語は、<xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから取得できます。  
+ 最初のキャプチャ グループは、文の各単語と一致します。 2 番目のキャプチャ グループは、各単語およびその単語に続く句読点や空白と一致します。 インデックスが 2 の <xref:System.Text.RegularExpressions.Group> オブジェクトは、2 番目のキャプチャ グループと一致したテキストの情報を保持します。 キャプチャ グループによってキャプチャされたすべての単語は、 <xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから取得できます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

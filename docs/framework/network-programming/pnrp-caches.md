@@ -2,12 +2,12 @@
 title: PNRP キャッシュ
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736949"
 ---
 # <a name="pnrp-caches"></a>PNRP キャッシュ
 ピア名解決プロトコル (PNRP) キャッシュは、アルゴリズムによって選択され、ピアで保持されているピア エンドポイントのローカル コレクションです。  
@@ -35,5 +35,5 @@ ms.locfileid: "53147188"
   
  ピアは、他のピアからオブジェクトを受信する希望を登録できます。 オブジェクトが更新されると、コラボレーション アプリケーションに通知され、新しいオブジェクトはアプリケーションのすべてのサブスクライバーに渡されます。 たとえば、グループ チャット アプリケーションのピアは、アプリケーション情報を受信する希望を登録できます。そのアプリケーションからは、すべてのチャット レコードがアプリケーション データとして送信されます。  これによって、クラウド内のチャット アクティビティを監視できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.PeerToPeer>

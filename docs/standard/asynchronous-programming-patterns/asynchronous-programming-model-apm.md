@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a1921f1a0f0e724bfc8d8289ac1b654cc8198d2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654309"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同期プログラミング モデル (APM)
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は `BeginOperationName` と `EndOperationName` という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  
@@ -38,7 +38,7 @@ ms.locfileid: "53152384"
 |<xref:System.IAsyncResult.CompletedSynchronously%2A>|非同期操作が別の <xref:System.Threading.ThreadPool> スレッドで完了する代わりに、`BeginOperationName` の呼び出しに使用されたスレッドで完了したかどうかを示す値。|  
 |<xref:System.IAsyncResult.IsCompleted%2A>|非同期操作が完了したかどうかを示す値。|  
   
- `BeginOperationName` メソッドは、同期バージョンのメソッドのシグネチャで宣言された、値渡しまたは参照渡しのパラメーターを受け取ります。 どの out パラメーターも、`BeginOperationName` メソッド シグネチャの一部ではありません。 `BeginOperationName` メソッド シグネチャには、2 種類の追加のパラメーターが含まれます。 1 つ目のパラメーターは、非同期操作が完了したときに呼び出されるメソッドを参照する <xref:System.AsyncCallback> デリゲートを定義します。 操作完了時にメソッドを呼び出さない場合、呼び出し元は `null` (Visual Basic では `Nothing`) を指定できます。 2 つ目の追加のパラメーターは、ユーザー定義オブジェクトです。 このオブジェクトは、アプリケーション固有の状態情報を、非同期操作が完了したときに呼び出されるメソッドに渡すために使用できます。 `BeginOperationName` メソッドが、ファイルから読み取ったバイトを格納するバイト配列など操作固有の追加のパラメーターを受け取る場合は、<xref:System.AsyncCallback> とアプリケーション状態オブジェクトが `BeginOperationName` メソッド シグネチャの最後のパラメーターになります。  
+ `BeginOperationName` メソッドは、同期バージョンのメソッドのシグネチャで宣言された、値渡しまたは参照渡しのパラメーターを受け取ります。 どの out パラメーターも、`BeginOperationName` メソッド シグネチャの一部ではありません。 `BeginOperationName` メソッド シグネチャには、2 種類の追加のパラメーターが含まれます。 1 つ目のパラメーターは、非同期操作が完了したときに呼び出されるメソッドを参照する <xref:System.AsyncCallback> デリゲートを定義します。 操作完了時にメソッドを呼び出さない場合、呼び出し元は `null` (Visual Basic では`Nothing` ) を指定できます。 2 つ目の追加のパラメーターは、ユーザー定義オブジェクトです。 このオブジェクトは、アプリケーション固有の状態情報を、非同期操作が完了したときに呼び出されるメソッドに渡すために使用できます。 `BeginOperationName` メソッドが、ファイルから読み取ったバイトを格納するバイト配列など操作固有の追加のパラメーターを受け取る場合は、<xref:System.AsyncCallback> とアプリケーション状態オブジェクトが `BeginOperationName` メソッド シグネチャの最後のパラメーターになります。  
   
  `BeginOperationName` は、瞬時にコントロールを呼び出し元スレッドに返します。 `BeginOperationName` メソッドが例外をスローする場合は、非同期操作が開始される前に例外がスローされます。 `BeginOperationName` メソッドが例外をスローする場合、コールバック メソッドは呼び出されません。  
   
@@ -67,6 +67,6 @@ ms.locfileid: "53152384"
   
 ## <a name="see-also"></a>関連項目
 
-- [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
-- [同期メソッドの非同期呼び出し](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+- [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [同期メソッドの非同期呼び出し](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [AsyncCallback デリゲートおよび状態オブジェクトの使用](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)

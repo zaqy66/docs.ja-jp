@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1a0ee772618b89d3b8cf6efc9400e3dcf4804da
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 31200b72cb551c91791e2e14332aacab8e7f0519
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672007"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -230,6 +230,6 @@ ms.locfileid: "54223183"
 
 ## <a name="see-also"></a>関連項目
 
-[方法: インストールされている .NET Framework の更新プログラムを確認する](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
-[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)  
-[バージョンおよび依存関係](~/docs/framework/migration-guide/versions-and-dependencies.md)  
+- [方法: インストールされている .NET Framework の更新プログラムを確認する](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)
+- [バージョンおよび依存関係](~/docs/framework/migration-guide/versions-and-dependencies.md)

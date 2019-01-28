@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982868"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066324"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  
@@ -98,7 +98,7 @@ ms.locfileid: "50982868"
   
  マネージド ヒープはマネージド プロセスごとに割り当てられます。 プロセス内のすべてのスレッドは、同じヒープにオブジェクト用のメモリを割り当てます。  
   
- メモリを予約するために、ガベージ コレクターは Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 関数を呼び出し、マネージド アプリケーション用のメモリのセグメントを一度に 1 つずつ予約します。 また、ガベージ コレクターは、必要に応じてセグメントを予約したり、Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 関数を呼び出すことで (オブジェクトのセグメントをクリアしてから) セグメントを解放してオペレーティング システムに戻したりします。  
+ メモリを予約するために、ガベージ コレクターは Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 関数を呼び出し、マネージド アプリケーション用のメモリのセグメントを一度に 1 つずつ予約します。 また、ガベージ コレクターは、必要に応じてセグメントを予約したり、Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 関数を呼び出すことで (オブジェクトのセグメントをクリアしてから) セグメントを解放してオペレーティング システムに戻したりします。  
   
 > [!IMPORTANT]
 >  ガベージ コレクターによって割り当てらるセグメントのサイズは実装に固有であり、定期的な更新プログラムによる場合を含め、いつでも変更されることがあります。 アプリでは、セグメント サイズを推測することや、特定のセグメント サイズに依存することを絶対に避けてください。また、セグメントの割り当てに使用可能なメモリの量を構成しようとしてもなりません。  

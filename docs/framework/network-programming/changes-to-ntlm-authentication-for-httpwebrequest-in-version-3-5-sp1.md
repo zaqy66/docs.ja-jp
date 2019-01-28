@@ -2,12 +2,12 @@
 title: バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589559"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 セキュリティの変更は、System.Net 名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、.NET Framework Version 3.5 SP1 以降で行われました。 これらの変更は、これらのクラスを使用して Web 要求を作成し、NTLM に基づく統合 Windows 認証が使用されている応答を受信するアプリケーションに影響を及ぼす場合があります。 この変更は、統合 Windows 認証を使用するように構成されている Web サーバーおよびクライアント アプリケーションに影響を与える可能性があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "50202869"
   
  <https://support.microsoft.com/kb/896861> で説明されているように、あまり安全ではない回避策はループ バック チェックを無効にすることです。 これによって、リフレクション攻撃に対する保護が無効になります。 そのため、実際に使用するコンピューターと想定するコンピューターにのみ、代替名のセットを制限することをお勧めします。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
+- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
+- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

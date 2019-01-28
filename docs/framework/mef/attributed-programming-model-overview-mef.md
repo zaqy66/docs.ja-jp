@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5429dfbf7b318b60d6c3150315dbe22ee73b4792
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563445"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>属性付きプログラミング モデルの概要 (MEF)
 MEF (Managed Extensibility Framework) における *プログラミング モデル* とは、MEF で操作する一連の概念オブジェクトを定義するための特定の方法です。 これらの概念オブジェクトには、パート、インポート、およびエクスポートが含まれます。 MEF では、これらのオブジェクトが使用されますが、その表現方法は指定されていません。 そのため、カスタマイズしたプログラミング モデルを含むさまざまなプログラミング モデルを使用できます。  
@@ -670,7 +670,7 @@ public class NumFour : NumThree
 }  
 ```  
   
- `InheritedExport` 属性にメタデータが関連付けられている場合は、そのメタデータも継承されます  (詳細については、前の「メタデータとメタデータ ビュー」を参照してください)。継承されたメタデータをサブクラスで変更することはできません。 ただし、同じコントラクト名およびコントラクト型と新しいメタデータを使用して `InheritedExport` 属性を再宣言すると、継承されたメタデータをサブクラスで新しいメタデータに置き換えることができます。 次のクラスはこの基本原則を示しています。 ここでは、 `MegaLogger` を継承する `Logger` パートに `InheritedExport` 属性が含まれています。 `MegaLogger` で Status という新しいメタデータが再宣言されているため、 `Logger`のメタデータの Name と Version は継承されません。  
+ `InheritedExport` 属性にメタデータが関連付けられている場合は、そのメタデータも継承されます (詳細については、前の「メタデータとメタデータ ビュー」を参照してください)。継承されたメタデータをサブクラスで変更することはできません。 ただし、同じコントラクト名およびコントラクト型と新しいメタデータを使用して `InheritedExport` 属性を再宣言すると、継承されたメタデータをサブクラスで新しいメタデータに置き換えることができます。 次のクラスはこの基本原則を示しています。 ここでは、 `MegaLogger` を継承する `Logger` パートに `InheritedExport` 属性が含まれています。 `MegaLogger` で Status という新しいメタデータが再宣言されているため、 `Logger`のメタデータの Name と Version は継承されません。  
   
 ```vb  
 <InheritedExport(GetType(IPlugin))>  
@@ -730,7 +730,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- `InheritedExport` 属性を再宣言してメタデータをオーバーライドする際は、コントラクト型が同じであることを確認してください  (上の例では、`IPlugin` がコントラクト型です)。コントラクト型が違っていると、メタデータがオーバーライドされる代わりに、2 つ目の属性によって別の 2 つ目のエクスポートが作成されます。 したがって、`InheritedExport` 属性をオーバーライドする際は、一般に、上の例のようにコントラクト型を明示的に指定する必要があります。  
+ `InheritedExport` 属性を再宣言してメタデータをオーバーライドする際は、コントラクト型が同じであることを確認してください (上の例では、`IPlugin` がコントラクト型です)。コントラクト型が違っていると、メタデータがオーバーライドされる代わりに、2 つ目の属性によって別の 2 つ目のエクスポートが作成されます。 したがって、 `InheritedExport` 属性をオーバーライドする際は、一般に、上の例のようにコントラクト型を明示的に指定する必要があります。  
   
  インターフェイスは直接インスタンス化できないため、通常は `Export` 属性や `Import` 属性で装飾できませんが、 インターフェイス レベルで `InheritedExport` 属性を使用すると、インターフェイスを装飾できます。この場合、そのエクスポートは、関連付けられているメタデータと共に、そのインターフェイスを実装するすべてのクラスに継承されます。 ただし、そのインターフェイス自体をパートとして使用できるようにはなりません。  
   
@@ -957,6 +957,6 @@ public class PartSeven
   
  `IPartImportsSatisfiedNotification` には、 `OnImportsSatisfied`という 1 つのメソッドが含まれています。 このメソッドは、合成コンテナーにより、このインターフェイスを実装するパートに対して、合成が完了してそのパートのインポートを使用できるようになったときに呼び出されます。 パートは、他のパートのインポートを満たすために合成エンジンによって作成されます。 パートのインポートが設定されるまでは、パートのコンストラクターで、インポートされる値に依存する初期化や、インポートされる値を操作する初期化を実行できません。初期化を実行できるようにするには、 `ImportingConstructor` 属性を使用して、それらの値を必須として指定します。 通常はこの方法が推奨されますが、コンストラクター インジェクションを使用できない場合もあります。 そのような場合は、 `OnImportsSatisfied`で初期化を実行できます。この場合は、パートに `IPartImportsSatisfiedNotification`を実装する必要があります。  
   
-## <a name="see-also"></a>参照  
- [Channel 9 ビデオ:Managed Extensibility Framework を使用してアプリケーションを開く](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Channel 9 ビデオ:Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+## <a name="see-also"></a>関連項目
+- [Channel 9 ビデオ:Managed Extensibility Framework を使用してアプリケーションを開く](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Channel 9 ビデオ:Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

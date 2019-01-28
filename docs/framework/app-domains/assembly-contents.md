@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649168"
 ---
 # <a name="assembly-contents"></a>アセンブリの内容
 一般に、静的アセンブリは次の 4 つの要素から構成されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "50194840"
   
  ソース コードをデザインするときは、作成するアプリケーションの機能を 1 つのファイルにまとめるのか複数のファイルに分割するのか、分割する場合は機能をどのように分けるのかを明確に決める必要があります。 .NET Framework コードをデザインする場合も同様に、機能を 1 つのアセンブリにまとめるのか複数のアセンブリに分割するのか、分割する場合は機能をどのように分割するのかを決めておく必要があります。  
   
-## <a name="see-also"></a>参照  
-- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [アセンブリ マニフェスト](../../../docs/framework/app-domains/assembly-manifest.md)  
+## <a name="see-also"></a>関連項目
+- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [アセンブリ マニフェスト](../../../docs/framework/app-domains/assembly-manifest.md)
 - [アセンブリのセキュリティに関する考慮事項](../../../docs/framework/app-domains/assembly-security-considerations.md)

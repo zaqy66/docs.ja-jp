@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727405"
 ---
 # <a name="target-frameworks"></a>ターゲット フレームワーク
 
@@ -131,10 +131,10 @@ public class MyClass
 
 ## <a name="see-also"></a>関連項目
 
-- [パッケージ、メタパッケージ、フレームワーク](../core/packages.md)  
-- [クロス プラットフォーム ツールによるライブラリの開発](../core/tutorials/libraries.md)  
-- [.NET Standard](net-standard.md)  
-- [.NET Core バージョン管理](../core/versions/index.md)  
-- [dotnet/standard GitHub リポジトリ](https://github.com/dotnet/standard)  
-- [NuGet Tools GitHub リポジトリ](https://github.com/joelverhagen/NuGetTools)  
+- [パッケージ、メタパッケージ、フレームワーク](../core/packages.md)
+- [クロス プラットフォーム ツールによるライブラリの開発](../core/tutorials/libraries.md)
+- [.NET Standard](net-standard.md)
+- [.NET Core バージョン管理](../core/versions/index.md)
+- [dotnet/standard GitHub リポジトリ](https://github.com/dotnet/standard)
+- [NuGet Tools GitHub リポジトリ](https://github.com/joelverhagen/NuGetTools)
 - [.NET のフレームワーク プロファイル](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
