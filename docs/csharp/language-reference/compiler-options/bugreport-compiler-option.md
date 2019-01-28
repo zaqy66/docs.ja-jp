@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 6e4674acd2a5edbbffd2babf130d2078019ab9b7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560339"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# コンパイラ オプション)
 後で分析を実行できるように、デバッグ情報をファイルに出力するよう指定します。  
@@ -53,8 +53,8 @@ ms.locfileid: "43517004"
   
  生成されたファイルの内容によってソース コードが公開され、意図しない情報開示につながる場合があることに注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
-- [-errorreport (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [-errorreport (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

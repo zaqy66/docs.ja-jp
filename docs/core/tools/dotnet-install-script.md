@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET Core CLI ツールと共有ランタイムをインストールする dotnet-install スクリプトについて説明します。
 ms.date: 01/16/2019
-ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f796ac494c0be5458b3ea192e809a4d875bcc6dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608794"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト参照
 
@@ -200,5 +200,5 @@ macOS/Linux の場合:
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core のリリース](https://github.com/dotnet/core/releases)
-* [.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET Core のリリース](https://github.com/dotnet/core/releases)
+- [.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

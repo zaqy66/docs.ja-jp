@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ea8b93128e4acd435ad95fc42257df6ab22812fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620553"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -140,5 +140,5 @@ Visual Studio Code C# の拡張機能では、ビルドおよびデバッグす�
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio Code の設定](https://code.visualstudio.com/docs/setup/setup-overview)
-* [Visual Studio Code でのデバッグ](https://code.visualstudio.com/Docs/editor/debugging)
+- [Visual Studio Code の設定](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Visual Studio Code でのデバッグ](https://code.visualstudio.com/Docs/editor/debugging)

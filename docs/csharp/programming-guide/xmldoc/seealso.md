@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: eec4a0c2041d7d10b5887950bfec03ec8847c82b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e75480db9aebdeb2199694168abf4f774773b9c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543553"
 ---
 # <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt; (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -41,7 +41,7 @@ ms.locfileid: "53244792"
 ## <a name="example"></a>例  
  \<seealso> の使用例については、[\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

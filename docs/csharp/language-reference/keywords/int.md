@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 3436d2ceeec9eed80f346c28231ba376cf6d5fb6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b1a621b7cce61ecd2c26c72adbdc3aa56749c914
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615651"
 ---
 # <a name="int-c-reference"></a>int (C# リファレンス)
 
@@ -52,7 +52,7 @@ C# 7.0 以降では、読みやすさを強化するためにいくつかの機�
 ここで示した例では、リテラル 90946 は `int` 型になります。
   
 ## <a name="conversions"></a>変換  
- `int` から [long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md)、[decimal](../../../csharp/language-reference/keywords/decimal.md) への、定義済みの暗黙の型変換が組み込まれています。 例:  
+ `int` から [long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md)、[decimal](../../../csharp/language-reference/keywords/decimal.md) への、定義済みの暗黙の型変換が組み込まれています。 次に例を示します。  
   
 ```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
@@ -80,13 +80,13 @@ int y = (int)3.0;    // OK: explicit conversion.
 
 詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Int32>  
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Int32>
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

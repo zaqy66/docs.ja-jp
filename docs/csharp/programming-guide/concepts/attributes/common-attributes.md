@@ -2,12 +2,12 @@
 title: 共通属性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558589"
 ---
 # <a name="common-attributes-c"></a>共通属性 (C#)
 このトピックでは、C# プログラムで最もよく使用される属性について説明します。  
@@ -73,7 +73,7 @@ ms.locfileid: "43504396"
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|アセンブリ マニフェストのわかりやすい既定の別名を定義します。|  
   
 ##  <a name="Obsolete"></a> Obsolete 属性  
- `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 例:  
+ `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 次に例を示します。  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -229,11 +229,11 @@ class SampleClass
   
  呼び出し元情報属性の詳細については、「[呼び出し元情報 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
-- [属性](../../../../../docs/standard/attributes/index.md)  
-- [リフレクション (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [属性](../../../../../docs/standard/attributes/index.md)
+- [リフレクション (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [リフレクションを使用した属性へのアクセス (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

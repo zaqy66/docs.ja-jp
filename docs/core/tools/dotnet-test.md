@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 05/29/2018
-ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535283"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -304,5 +304,5 @@ RunSettings について詳しくは、[vstest.console.exe:RunSettings 引数渡
 
 ## <a name="see-also"></a>関連項目
 
-* [フレームワークとターゲット](../../standard/frameworks.md)  
-* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [フレームワークとターゲット](../../standard/frameworks.md)
+- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

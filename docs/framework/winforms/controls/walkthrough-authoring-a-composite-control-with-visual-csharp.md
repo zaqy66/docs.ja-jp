@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Visual C# による複合コントロールの作成'
+title: 'チュートリアル: Visual C# による複合コントロールの作成'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [C#]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6205bea2ccb75078cba507c09f1a4d65571e3418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631699"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>チュートリアル : Visual C# による複合コントロールの作成 #
+# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>チュートリアル: Visual C# による複合コントロールの作成 #
 複合コントロールは、カスタム グラフィカル インターフェイスを作成し、再利用するための手段を提供します。 複合コントロールは、基本的には視覚的に表示されるコンポーネントです。 そのため、複合コントロールは、1 つ以上の Windows フォーム コントロール、コンポーネント、または機能を拡張できるコード ブロックで構成されます。コード ブロックでは、ユーザー入力の検証、表示プロパティの変更、作成者が必要とする他のタスクの実行などによって機能を拡張します。 複合コントロールは、他のコントロールと同様に Windows フォームに配置できます。 このチュートリアルの前半では、`ctlClock` という単純な複合コントロールを作成します。 チュートリアルの後半では、継承によって `ctlClock` の機能を拡張します。  
   
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "48580824"
     |プロパティ|変更後の値|  
     |--------------|---------------|  
     |**Name**|`lblDisplay`|  
-    |**[テキスト]**|`(blank space)`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -146,7 +146,7 @@ ms.locfileid: "48580824"
 4.  **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
   
 ## <a name="testing-the-control"></a>コントロールのテスト  
- コントロールはスタンドアロン アプリケーションではないため、コンテナー内でホストする必要があります。 **UserControl Test Container** でコントロールの実行時の動作をテストし、プロパティを実行します。 詳細については、「[方法: UserControl の実行時の動作をテストする](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)」を参照してください。  
+ コントロールはスタンドアロン アプリケーションではないため、コンテナー内でホストする必要があります。 **UserControl Test Container** でコントロールの実行時の動作をテストし、プロパティを実行します。 詳細については、「[方法 :UserControl の実行時の動作をテスト](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)します。  
   
 #### <a name="to-test-your-control"></a>コントロールをテストするには  
   
@@ -248,7 +248,7 @@ ms.locfileid: "48580824"
     |プロパティ|設定|  
     |--------------|-------------|  
     |**Name**|`lblAlarm`|  
-    |**[テキスト]**|**Alarm!**|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`false`|  
   
@@ -320,7 +320,7 @@ ms.locfileid: "48580824"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|`btnAlarmOff`|  
-    |**[テキスト]**|**Disable Alarm**|  
+    |**Text**|**Disable Alarm**|  
   
 3.  デザイナーで **[btnAlarmOff]** をダブルクリックします。  
   
@@ -341,7 +341,7 @@ ms.locfileid: "48580824"
 5.  **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>フォームでの継承されたコントロールの使用  
- 継承されたコントロールは、基本クラスのコントロールである `ctlClock` をテストしたときと同様にテストできます。F5 キーを押してプロジェクトをビルドし、**UserControl Test Container** でコントロールを実行します。 詳細については、「[方法: UserControl の実行時の動作をテストする](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)」を参照してください。  
+ 継承されたコントロールは基本クラスのコントロールをテストするのと同じ方法でテストできます`ctlClock`:F5 キーを押してプロジェクトをビルドし、**UserControl Test Container** でコントロールを実行します。 詳細については、「[方法 :UserControl の実行時の動作をテスト](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)します。  
   
  コントロールを使用するには、フォーム上でコントロールをホストする必要があります。 標準の複合コントロールと同様に、継承された複合コントロールをスタンドアロンにすることはできないので、フォームまたは他のコンテナー内でホストする必要があります。 `ctlAlarmClock` は機能が拡張されているため、テストするには追加のコードが必要となります。 次の手順では、`ctlAlarmClock` の機能をテストするための簡単なプログラムを作成します。 `ctlAlarmClock` の `AlarmTime` プロパティを設定して表示するコードを記述し、固有の機能をテストします。  
   
@@ -367,7 +367,7 @@ ms.locfileid: "48580824"
   
     |コントロール|プロパティ|[値]|  
     |-------------|--------------|-----------|  
-    |`label1`|**[テキスト]**|`(blank space)`|  
+    |`label1`|**Text**|`(blank space)`|  
     ||**Name**|`lblTest`|  
     |`dateTimePicker1`|**Name**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -404,9 +404,9 @@ ms.locfileid: "48580824"
   
      このチュートリアルでは、多数の重要な概念を取り上げました。 コントロールとコンポーネントを複合コントロール コンテナーに組み込んで複合コントロールを作成する方法を説明しました。 また、コントロールにプロパティを追加する方法と、カスタム機能を実装するコードを記述する方法も説明しました。 最後のセクションでは、継承によって特定の複合コントロールの機能を拡張する方法と、ホスト メソッドをオーバーライドすることでメソッドの機能を変更する方法を説明しました。  
   
-## <a name="see-also"></a>関連項目  
- [さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [コンポーネント作成のチュートリアル](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [チュートリアル: Visual C# による Windows フォーム コントロールからの継承](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+## <a name="see-also"></a>関連項目
+- [さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [コンポーネント作成のチュートリアル](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

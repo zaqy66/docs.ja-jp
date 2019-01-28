@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: 11f34e230a1f953ba3d886e416f1ece4253e3c8d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6d6e84861ec48be5bccbc050624b0843947cb727
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539865"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>方法: 派生クラスから基本クラス イベントを発生させる (C# プログラミング ガイド)
 ここでは単純な例を使用し、派生クラスからも発生させることができるように基底クラスでイベントを宣言する標準的な方法について説明します。 このパターンは、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリの Windows フォーム クラスで広く使用されています。  
@@ -23,10 +23,10 @@ ms.locfileid: "53239619"
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [イベント](../../../csharp/programming-guide/events/index.md)  
-- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
-- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [イベント](../../../csharp/programming-guide/events/index.md)
+- [デリゲート](../../../csharp/programming-guide/delegates/index.md)
+- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Windows フォーム内でのイベント ハンドラーの作成](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

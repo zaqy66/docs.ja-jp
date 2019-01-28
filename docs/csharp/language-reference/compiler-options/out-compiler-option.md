@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: ea371dc968c8d8bf1569d17531cf7f6faff1d315
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 62a8835361e2e55d3d970cf3ae7cd2699e3c79fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725741"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# コンパイラ オプション)
 **-out** オプションは、出力ファイルの名前を指定します。  
@@ -64,8 +64,8 @@ ms.locfileid: "46004206"
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
-- [フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

@@ -2,12 +2,12 @@
 title: 純粋関数型変換の概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 63b7a69baeb42c82fb1c94d08cee17519330025c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501805"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>純粋関数型変換の概要 (C#)
 ここでは、関数型変換の概要について、その基になる概念や、それをサポートする言語構成要素も含めて説明します。 また、オブジェクト指向変換と関数型変換という 2 つのプログラミング方法を対比させて、関数型変換に移行するためのアドバイスを紹介します。 関数型変換はさまざまなプログラミング シナリオで使用できますが、ここでは XML 変換を具体例として取り上げます。  
@@ -22,6 +22,6 @@ ms.locfileid: "49087262"
 |[関数型変換の適用範囲 (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|関数型変換の一般的なシナリオについて説明します。|  
 |[XML の関数型変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|XML ツリーの変換のコンテキストにおける関数型変換について説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML の純粋関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

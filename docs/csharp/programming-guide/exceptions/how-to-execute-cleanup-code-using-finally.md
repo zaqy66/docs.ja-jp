@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 67ef164232a27b8110dfcd108a0345d9d63e8f91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d1a95519b2c7fc1d90d677e7a62c549defe289ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596398"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>方法: finally を使用してクリーンアップ コードを実行する (C# プログラミング ガイド)
 `finally` ステートメントの目的は、例外がスローされた場合でも、オブジェクト (一般に外部リソースを保持しているオブジェクト) に対して必要なクリーンアップをすぐに実行できるようにすることです。 次のように、共通言語ランタイムによってオブジェクトがガベージ コレクションされるまで待機するのではなく、オブジェクトを使用した後すぐに <xref:System.IO.FileStream> で <xref:System.IO.Stream.Close%2A> を呼び出すというのも、このようなクリーンアップの一例です。  
@@ -28,12 +28,12 @@ ms.locfileid: "53244947"
   
  データベース接続も、`finally` ブロックで閉じられる対象になります。 データベース サーバーで許可される接続数は限られていることがあるため、データベース接続はできるだけ早く閉じる必要があります。 接続を閉じる前に例外がスローされる場合も、ガベージ コレクションを待機するより、`finally` ブロックを使用することをお勧めします。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
-- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
-- [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)
+- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
