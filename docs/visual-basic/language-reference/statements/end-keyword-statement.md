@@ -53,7 +53,7 @@ End With
 |`Class`|照合することによって開始されたクラス定義を終了するために必要な[クラス ステートメント](class-statement.md)します。|
 |`Enum`|照合することによって開始された列挙の定義を終了するために必要な[Enum ステートメント](enum-statement.md)します。|
 |`Event`|終了するために必要な`Custom`を照合することによって開始されたイベント定義[Event ステートメント](event-statement.md)します。|  
-|`Function`|終了するために必要な`Function`プロシージャの定義を照合することによって開始された[関数ステートメント](function-statement.md)します。 実行されると、`End Function`ステートメントでは、呼び出し元のコードに制御が戻ります。|
+|`Function`|終了するために必要な`Function`プロシージャの定義を照合することによって開始された[Function ステートメント](function-statement.md)します。 実行されると、`End Function`ステートメントでは、呼び出し元のコードに制御が戻ります。|
 |`Get`|終了するために必要な`Property`プロシージャの定義を照合することによって開始された[Get ステートメント](get-statement.md)します。 実行されると、`End Get`ステートメントでは、プロパティの値を要求するステートメントに制御が戻ります。|
 |`If`|終了するために必要な`If`.`Then`...`Else`ブロックを照合することによって開始された定義`If`ステートメント。 参照してください[If...Then...Else ステートメント](if-then-else-statement.md)です。|
 |`Interface`|照合することによって開始されたインターフェイス定義を終了するために必要な[インターフェイス ステートメント](interface-statement.md)します。|
