@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/16/2019
 ms.locfileid: "54333721"
 ---
-# <a name="-operator-c-reference"></a>. operator (C# リファレンス)
+# <a name="-operator-c-reference"></a>. 演算子 (C# リファレンス)
 
 ドット演算子 (`.`) は、メンバー アクセスに使用されます。 ドット演算子は、型または名前空間のメンバーを指定します。 たとえば、ドット演算子は、.NET Framework クラス ライブラリ内の特定のメソッドにアクセスするために使用されます。
 
