@@ -4,7 +4,7 @@
 ## [厳密な名前付け](strong-naming.md)
 ## [NuGet](nuget.md)
 ### [依存関係](dependencies.md)
-### [SourceLink](sourcelink.md)
+### [ソース リンク](sourcelink.md)
 ### [発行](publish-nuget-package.md)
 ## [バージョン管理](versioning.md)
 ### [破壊的変更](breaking-changes.md)
