@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54606609"
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma 警告 (C# リファレンス)
+# <a name="pragma-warning-c-reference"></a>#pragma warning (C# リファレンス)
 `#pragma warning` を使用すると、特定の警告を有効または無効にすることができます。  
   
 ## <a name="syntax"></a>構文  
