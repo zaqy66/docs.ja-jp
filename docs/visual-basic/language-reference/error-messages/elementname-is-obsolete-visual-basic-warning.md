@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;elementname&gt; &#39;は廃止されています (Visual Basic 警告)'
+title: "'<elementname>' は古い形式です (Visual Basic 警告)"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40008
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: eeeca3354592bfc6d657b435c42ad5644fd2b97d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6d927ef6681838d8a77a0c6018eb6bbe30913e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552391"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255863"
 ---
-# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>&#39;&lt;elementname&gt; &#39;は廃止されています (Visual Basic 警告)
+# <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname >' は廃止されています (Visual Basic 警告)
 <xref:System.ObsoleteAttribute> 属性でマークされているプログラミング要素にステートメントがアクセスを試行しています。この試行をディレクティブは警告として処理します。  
   
  <xref:System.ObsoleteAttribute> を適用することで、任意のプログラミング要素を使用しない要素としてマークできます。 これを行う場合、この属性の <xref:System.ObsoleteAttribute.IsError%2A> プロパティを `True` または `False`のどちらかに設定できます。 `True`に設定した場合、この要素を使用しようとすると、コンパイラはエラーとして処理します。 `False`に設定した場合、または既定値の `False`を使用した場合、コンパイラはこの要素の使用が試行されると、警告を発行します。  

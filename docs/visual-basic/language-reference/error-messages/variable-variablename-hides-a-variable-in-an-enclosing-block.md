@@ -1,5 +1,5 @@
 ---
-title: 変数&#39; &lt;variablename&gt; &#39;それを囲むブロック内の変数を非表示になります
+title: 変数 '<variablename>' は、囲まれたブロック内の変数を非表示にします。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30616
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 23ec659535b71ee9af189f5c4fec0dec2bb1cd8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ec1aac7ee8d292e2a433e0fb35039d4fb317b4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719431"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278500"
 ---
-# <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>変数&#39; &lt;variablename&gt; &#39;それを囲むブロック内の変数を非表示になります
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>変数 '\<variablename >'、それを囲むブロック内の変数を非表示になります
 ブロックで囲まれた変数では、別のローカル変数と同じ名前を持ちます。  
   
  **エラー ID:** BC30616  

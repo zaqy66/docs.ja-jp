@@ -1,5 +1,5 @@
 ---
-title: メンバーの型&#39; &lt;membername&gt; &#39; CLS 準拠ではありません
+title: メンバー '<membername>' の型は CLS に準拠していません。
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b23ebca955d961771b194df2c7316cb1b7f4a50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603845"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254094"
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>メンバーの型&#39; &lt;membername&gt; &#39; CLS 準拠ではありません
+# <a name="type-of-member-membername-is-not-cls-compliant"></a>メンバーの型 '\<membername >' は CLS 準拠
 このメンバーが指定されたデータ型の一部、 [Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS)。 これはないため、エラー、コンポーネント内で、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]と Visual Basic は、このデータ型をサポートします。 ただし、厳密に CLS 準拠コードで記述された別のコンポーネントでは、このデータ型がサポートしない可能性があります。 このようなコンポーネントはできないコンポーネントを正常にやり取りすることがあります。  
   
  次の Visual Basic データ型は CLS 準拠ではありません。  

@@ -1,5 +1,5 @@
 ---
-title: 範囲変数&lt;変数&gt;外側のブロック、以前に定義された範囲変数、またはクエリ式で、暗黙的に宣言された変数内の変数を非表示になります
+title: 範囲変数 <variable> により、それを囲むブロック内の変数、以前に定義された範囲変数、またはクエリ式内で暗黙的に宣言された変数が非表示になります
 ms.date: 07/20/2015
 f1_keywords:
 - bc36633
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
-ms.openlocfilehash: aef52ea912a4180a6505949c8077296628592c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d898d2d3c5f36177a6363c1a24940fe46de83d3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748117"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259876"
 ---
-# <a name="range-variable-ltvariablegt-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>範囲変数&lt;変数&gt;外側のブロック、以前に定義された範囲変数、またはクエリ式で、暗黙的に宣言された変数内の変数を非表示になります
+# <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>範囲変数\<変数 >、それを囲むブロック、以前に定義された範囲変数、またはクエリ式で、暗黙的に宣言された変数内の変数を非表示になります
 指定された範囲変数の名前、 `Select`、 `From`、 `Aggregate`、または`Let`句、クエリまたはクエリで暗黙的に宣言されている変数の名前で既に指定されて範囲変数の名前に重複など、フィールド名または集計関数の名前。  
   
  **エラー ID:** BC36633  

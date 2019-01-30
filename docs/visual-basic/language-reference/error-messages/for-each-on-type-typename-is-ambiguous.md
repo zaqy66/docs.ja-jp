@@ -1,5 +1,5 @@
 ---
-title: "&#39;各&#39;型&#39; &lt;typename&gt; &#39;が型の複数のインスタンスを実装しているために、あいまいな&#39;'system.collections.generic.ienumerable(of T)&#39;"
+title: 型が、'System.Collections.Generic.IEnumerable(Of T)' の複数のインスタンス生成を実装するため、型 '<typename>' の 'For Each' は不適切です。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32096
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-ms.openlocfilehash: 7fd779ba34afa2a59fa6c42971597df8ce01495a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a9032a00079b39851a3e8a80bc8f9bbdea1817c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597347"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281230"
 ---
-# <a name="39for-each39-on-type-39lttypenamegt39-is-ambiguous-because-the-type-implements-multiple-instantiations-of-39systemcollectionsgenericienumerableof-t39"></a>&#39;各&#39;型&#39; &lt;typename&gt; &#39;が型の複数のインスタンスを実装しているために、あいまいな&#39;'system.collections.generic.ienumerable(of T)&#39;
+# <a name="for-each-on-type-typename-is-ambiguous-because-the-type-implements-multiple-instantiations-of-systemcollectionsgenericienumerableof-t"></a>'For Each' 種類 '\<typename >' は型が 'system.collections.generic.ienumerable(of (Of T)' の複数のインスタンスを実装しているために、あいまいです
 A`For Each`ステートメントで指定する反復子変数を 1 つ以上持つ<xref:System.Collections.IEnumerable.GetEnumerator%2A>メソッド。  
   
  実装する型の反復子変数がある必要があります、<xref:System.Collections.IEnumerable?displayProperty=nameWithType>または<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>インターフェイスのいずれかで、`Collections`の名前空間、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 それぞれの構築についての別の型引数を使用して、構築された 1 つ以上のジェネリック インターフェイスを実装するクラスのことができます。 その変数が 1 つ以上の反復子変数は、このクラスを使用する場合<xref:System.Collections.IEnumerable.GetEnumerator%2A>メソッド。 このような場合は、Visual Basic は、どのメソッドを呼び出すを選択できません。  

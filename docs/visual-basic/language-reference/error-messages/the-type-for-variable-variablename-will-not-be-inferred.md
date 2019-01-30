@@ -1,5 +1,5 @@
 ---
-title: 変数の型&#39; &lt;variablename&gt; &#39;は、外側のスコープ内のフィールドにバインドされているために、推論できません。
+title: 変数 '<variablename>' の型は、外側のスコープ内のフィールドにバインドされているため、推論できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7289b8ab0a141d6efdb0f4ca4b4547f15e0e182
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672384"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259242"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>変数の型&#39; &lt;variablename&gt; &#39;は、外側のスコープ内のフィールドにバインドされているために、推論できません。
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>変数の型 '\<variablename >' は、外側のスコープ内のフィールドにバインドされているために、推論できません。
 変数の型 '\<variablename >' は、外側のスコープ内のフィールドにバインドされているために、推論できません。 名前を変更するか '\<variablename >'、または完全修飾名 (たとえば、Me.variablename"や 'MyBase.variablename') を使用します。  
   
  コードのループ制御変数は、クラスまたは他の外側のスコープ内のフィールドと同じ名前を持っています。 制御変数は、`As` 句なしで使用されるため、外側のスコープ内のフィールドにバインドされ、コンパイラがこれに対して新しい変数を作成したり、その型を推論したりすることはありません。  

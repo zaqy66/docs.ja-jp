@@ -1,15 +1,15 @@
 ---
-title: レジストリ キー '&lt;keyname&gt;' は見つかりませんでした
+title: レジストリ キー '<keyname>' は見つかりませんでした
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
-ms.openlocfilehash: 549ce3544057eae6fa203592de343ddc703d3d97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38c25fd9e5494b09c0b3c3aa8947d6540b9ac1bc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730868"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274587"
 ---
-# <a name="registry-key-ltkeynamegt-could-not-be-found"></a>レジストリ キー '&lt;keyname&gt;' は見つかりませんでした
+# <a name="registry-key-keyname-could-not-be-found"></a>レジストリ キー '\<keyname >' は見つかりませんでした
 レジストリ キーが見つかりません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

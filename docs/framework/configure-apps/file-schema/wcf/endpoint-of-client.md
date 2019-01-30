@@ -1,15 +1,15 @@
 ---
-title: '&lt;client&gt; の &lt;endpoint&gt;'
+title: <endpoint> の <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598306"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287769"
 ---
-# <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; の &lt;endpoint&gt;
+# <a name="endpoint-of-client"></a>\<エンドポイント > の\<クライアント >
 サーバーのサービス エンドポイントに接続するためにクライアントによって使用されるチャネル エンドポイントのコントラクト、バインディング、およびアドレスのプロパティを指定します。  
   
  \<system.ServiceModel >  

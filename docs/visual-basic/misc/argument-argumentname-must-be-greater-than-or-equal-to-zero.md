@@ -1,17 +1,17 @@
 ---
-title: 引数 '&lt;argumentname&gt;' より大きいまたは 0 に等しい必要があります
+title: 引数 '<argumentname>' より大きいまたは 0 に等しい必要があります
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
-ms.openlocfilehash: 5be8eee5383a2a9f80dfb258719a89d23402ca27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1987958e463ade5d1d8caead99d801b0a076c77
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524638"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257925"
 ---
-# <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>引数 '&lt;argumentname&gt;' より大きいまたは 0 に等しい必要があります
+# <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>引数 '\<argumentname >' より大きいまたは 0 に等しい必要があります
 引数は 0 未満であるため無効です。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

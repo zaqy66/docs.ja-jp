@@ -1,5 +1,5 @@
 ---
-title: 値をコピー &#39;ByRef&#39;パラメーター &#39; &lt;parametername&gt; &#39;型から縮小変換、一致する引数に戻して&#39; &lt;typename1&gt; &#39;型&#39; &lt;typename2&gt;&#39;
+title: "'ByRef' パラメーター '<parametername>' の値を一致する引数へ戻してコピーすると、型 '<typename1>' から型 '<typename2>' に下位変換します"
 ms.date: 07/20/2015
 f1_keywords:
 - bc32053
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: ec733ecd605d0a9db840ea3f0c3e0e3b5b698054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506277"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276615"
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>値をコピー &#39;ByRef&#39;パラメーター &#39; &lt;parametername&gt; &#39;型から縮小変換、一致する引数に戻して&#39; &lt;typename1&gt; &#39;型&#39; &lt;typename2&gt;&#39;
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' パラメーターの値をコピー '\<parametername >' 型から縮小変換、一致する引数に戻して'\<typename1 >' 型に '\<typename2 >'
 プロシージャは、対応するパラメーターの型を拡張する引数を指定して呼び出され、パラメーターから、引数への変換は縮小します。  
   
  クラスまたは構造体を定義するときは、そのクラスまたは構造体の型を他の型に変換する 1 つまたは複数の変換演算子を定義できます。 その他の型をクラスまたは構造体の型に変換する逆の変換演算子を定義することもできます。 プロシージャ呼び出しでクラスまたは構造体の型を使用すると、Visual Basic は、対応するパラメーターの型の引数の型に変換するのにこれらの変換演算子を使用できます。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873519"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280008"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 の新機能
 
@@ -58,7 +58,7 @@ ms.locfileid: "48873519"
  サード パーティの WSDL の処理スタックには、xsd:import を使用して他のドキュメントに依存している WSDL ドキュメントを処理できないものもあります。  WCF により、すべての WSDL 情報が 1 つのドキュメントで返されるように指定できるようになりました。 単一 WSDL ドキュメントをリクエストするには、サービスからメタデータを要求するときに、その URI に "?singleWSDL" を追加します。
 
 ## <a name="websocket-support"></a>WebSocket のサポート
- Websocket は、TCP と同様のパフォーマンス特性を持つポート 80 と 443 で真の双方向通信を実現するテクノロジです。 WebSocket トランスポート経由の通信をサポートするために 2 つの新しいバインドが追加されました。 <xref:System.ServiceModel.NetHttpBinding> および <xref:System.ServiceModel.NetHttpsBinding>。 詳細については、次を参照してください。: [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。
+ Websocket は、TCP と同様のパフォーマンス特性を持つポート 80 と 443 で真の双方向通信を実現するテクノロジです。 WebSocket トランスポート経由の通信をサポートするために 2 つの新しいバインドが追加されました。 <xref:System.ServiceModel.NetHttpBinding> および <xref:System.ServiceModel.NetHttpsBinding>。 詳細については、次のトピックを参照してください。[システム指定のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)します。
 
 ## <a name="new-transport-default-values"></a>トランスポートの新しい既定値
  次の表は、変更された設定と追加情報の場所を示しています。

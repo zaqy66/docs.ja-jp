@@ -2,12 +2,12 @@
 title: データ コントラクト リゾルバーの使用
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 8859a343c5dcc3b88edf4840a759fbed52bbf984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658833"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279150"
 ---
 # <a name="using-a-data-contract-resolver"></a>データ コントラクト リゾルバーの使用
 データ コントラクト リゾルバーでは、既知の型を動的に構成できます。 データ コントラクトが予期しない型をシリアル化または逆シリアル化するときには、既知の型が必要です。 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。 通常、既知の型は静的に指定されます。 これは、操作を実装する間に操作が受け取る可能性のあるすべての型を把握しておく必要があることを意味します。 これが当てはまらず、既知の型を動的に指定できることが重要である場合もあります。  
@@ -55,7 +55,7 @@ public class MyCustomerResolver : DataContractResolver
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- 次の例に示すように、<xref:System.Runtime.Serialization.DataContractSerializer> を、<xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> メソッドまたは <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A> メソッドへの呼び出しで指定できます。  
+ 次の例に示すように、<xref:System.Runtime.Serialization.DataContractResolver> を、<xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType> メソッドへの呼び出しで指定できます。  
   
 ```  
 MemoryStream ms = new MemoryStream();  

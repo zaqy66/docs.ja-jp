@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCertificate&gt; 要素の &lt;authentication&gt;'
+title: <authentication> <serviceCertificate>要素
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 967ab391c9a6dfe7da9b6ef0542b052872b21f52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8288e530d0164b41a6cf53cc39385a2d29fdb091
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661127"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255173"
 ---
-# <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;serviceCertificate&gt; 要素の &lt;authentication&gt;
+# <a name="authentication-of-servicecertificate-element"></a>\<認証 > の\<serviceCertificate > 要素
 SSL/TLS ネゴシエーションを使用して取得されたサービス証明書を認証するためにクライアント プロキシが使用する設定を指定します。  
   
  \<system.ServiceModel >  

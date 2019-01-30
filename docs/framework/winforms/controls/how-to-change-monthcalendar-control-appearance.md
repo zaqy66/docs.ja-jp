@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの MonthCalendar コントロールを変更する&#39;外観'
+title: '方法: Windows フォーム MonthCalendar コントロールの外観を変更します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 5afee81d3db9452be352c875dbba0f7885592c02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624350"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258924"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>方法: Windows フォームの MonthCalendar コントロールを変更する&#39;外観
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>方法: Windows フォーム MonthCalendar コントロールの外観を変更します。
 Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロールでは、さまざまな方法で、カレンダーの外観をカスタマイズできます。 たとえば、配色を設定でき、または週数と現在の日付を非表示に選択できます。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>月間予定表の配色を変更するには  

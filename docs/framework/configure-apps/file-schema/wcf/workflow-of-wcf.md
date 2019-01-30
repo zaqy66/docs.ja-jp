@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;workflow&gt;
+title: <workflow> WCF の
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: 6c6efe9ee1ad582e25fc2bc578a15d6182eee2a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9920a9b75a033515584f4108503faa45687b7203
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639956"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255381"
 ---
-# <a name="ltworkflowgt-of-wcf"></a>WCF の &lt;workflow&gt;
+# <a name="workflow-of-wcf"></a>\<ワークフロー > の WCF
 ランタイムから直接出力される追跡レコードをリッスンし、追跡レコードの構成方法に従って処理を行う追跡参加要素を構成します。 これには、特定の出力 (ファイル、コンソール、ETW など) への書き込み、レコードの処理や集計、またはその他の必要な組み合わせが含まれます。  
   
  ワークフロー追跡と追跡参加要素の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)します。  

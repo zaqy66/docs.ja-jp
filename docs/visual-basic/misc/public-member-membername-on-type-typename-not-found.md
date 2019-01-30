@@ -1,17 +1,17 @@
 ---
-title: パブリック メンバー '&lt;membername&gt;'type' で&lt;typename&gt;' が見つかりません。
+title: パブリック メンバー '<membername>'type' で<typename>' が見つかりません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-ms.openlocfilehash: 36918c99b41ed9b31b3463e22294e7462732c5e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14bd5dac22a8bed6402363294237569cb2ba00ea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625199"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258296"
 ---
-# <a name="public-member-ltmembernamegt-on-type-lttypenamegt-not-found"></a>パブリック メンバー '&lt;membername&gt;'type' で&lt;typename&gt;' が見つかりません。
+# <a name="public-member-membername-on-type-typename-not-found"></a>パブリック メンバー '\<membername >' 型で'\<typename >' が見つかりません。
 アクセスしようとしているメンバーが見つかりません。 このエラーは、遅延バインディング オブジェクトの非パブリック メンバーにアクセスするときに発生することがあります。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

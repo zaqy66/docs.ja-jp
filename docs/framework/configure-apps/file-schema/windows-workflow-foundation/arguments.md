@@ -1,16 +1,16 @@
 ---
-title: '&lt;引数&gt;'
+title: <arguments>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
-ms.openlocfilehash: 34695cd2fd62a0a10398fd73f014c093c3c5f61b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e9fc4f286e7aba6406ce61910da9e614e13ffca
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681665"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276564"
 ---
-# <a name="ltargumentsgt"></a>&lt;引数&gt;
+# <a name="arguments"></a>\<arguments>
 アクティビティ状態クエリに関連付けられている引数のコレクションを表します。  
   
  追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  

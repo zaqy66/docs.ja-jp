@@ -1,15 +1,15 @@
 ---
-title: '&lt;ルーティング&gt;'
+title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 855faedfd2e9523e939174441b0cfa50e052b375
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565879"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275575"
 ---
-# <a name="ltroutinggt"></a>&lt;ルーティング&gt;
+# <a name="routing"></a>\<ルーティング >
 
 Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義する構成セクションを表します<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージの評価とルーティング テーブルをするターゲット エンドポイントを定義するときに使用される。フィルターが一致したときにメッセージを送信します。
 

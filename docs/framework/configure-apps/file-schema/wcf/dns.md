@@ -1,15 +1,15 @@
 ---
-title: '&lt;dns&gt;'
+title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 68cbb25b79bbda301c29d72800a125c7a6ba0b6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb5459625cf58feeef5ba29d76e74691a4f87cc8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616460"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278422"
 ---
-# <a name="ltdnsgt"></a>&lt;dns&gt;
+# <a name="dns"></a>\<dns>
 予想されるサーバーの ID を指定します。 この ID は、同じ値を持つ DNS がサーバーの証明書に含まれていれば、X509 証明書の認証モードで有効です。 さらに、SPN に同じ値があれば、Windows 認証モードでも有効です。  
   
  要素の値を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
