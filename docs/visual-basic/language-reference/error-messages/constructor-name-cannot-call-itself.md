@@ -1,5 +1,5 @@
 ---
-title: コンス トラクター &#39;&lt;名前&gt;&#39;自体を呼び出すことはできません
+title: コンストラクター '<name>' はそれ自体を呼び出すことはできません。
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 4a02277893147716098a3dcc327e221e0775d476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67933e9365b1aa18063f0ccf3c2146a261e7eafc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662726"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276043"
 ---
-# <a name="constructor-39ltnamegt39-cannot-call-itself"></a>コンス トラクター &#39;&lt;名前&gt;&#39;自体を呼び出すことはできません
+# <a name="constructor-name-cannot-call-itself"></a>コンス トラクター '\<名 >' 自体を呼び出すことはできません
 A`Sub New`クラスまたは構造体でプロシージャを呼び出します。  
   
  コンス トラクターの目的は、クラスのインスタンスを初期化するために、またはそのが最初に構造を作成します。 異なるパラメーター リストがすべて、クラスまたは構造体によって複数のコンス トラクター、することができます。 コンス トラクターは、独自に加え、その機能を実行する別のコンス トラクターを呼び出す許可されています。 コンス トラクターを呼び出す意味がありませんし、許可されている場合、無限再帰の結果が実際にします。  

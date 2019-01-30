@@ -1,5 +1,5 @@
 ---
-title: プロパティ&#39; &lt;propertyname&gt; &#39;は&#39;t は、すべてのコード パスで値を返しません
+title: プロパティ '<propertyname>' は、すべてのコードのパスでは値を返しません。
 ms.date: 07/20/2015
 f1_keywords:
 - bc42107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: b8059ebc9b6c1de685f2f04c3ee362ab8cf6d05e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1788d06aa5236d4cfc33999df86ad72c420b41df
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611255"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269004"
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>プロパティ&#39; &lt;propertyname&gt; &#39;は&#39;t は、すべてのコード パスで値を返しません
+# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>プロパティ '\<propertyname >' は、すべてのコード パスで値を返しません
 プロパティ '\<propertyname >' は、すべてのコード パスで値を返しません。 この結果が使用されると、実行時に Null 参照例外が生じる可能性があります。  
   
  プロパティ`Get`手順では、値を返さないコードの少なくとも 1 つの可能なパス。  

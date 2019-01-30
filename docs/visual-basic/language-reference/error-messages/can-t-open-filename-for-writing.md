@@ -1,5 +1,5 @@
 ---
-title: できます&#39;t オープン&#39; &lt;filename&gt; &#39;書き込み用
+title: "'<filename>' を書き込むために開くことができません。"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc2012
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
-ms.openlocfilehash: b296d3b3bff3a96ce9b42d1fcbcca6a5efd06f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a7103358bcbeca21433d126a66430d5f0cb475
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683113"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279774"
 ---
-# <a name="can39t-open-39ltfilenamegt39-for-writing"></a>できます&#39;t オープン&#39; &lt;filename&gt; &#39;書き込み用
+# <a name="cant-open-filename-for-writing"></a>開くことができません '\<filename >' の書き込み
 既に開かれているため、おそらく、記述するため、指定したファイルを開くことができません。  
   
  **エラー ID:** BC2012  

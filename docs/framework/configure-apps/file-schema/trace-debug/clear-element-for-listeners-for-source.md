@@ -1,5 +1,5 @@
 ---
-title: '&lt;オフ&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;'
+title: <clear> の <listeners> の <source> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 362e1d7a4ac4c39309aa86561683df1d239f2ab1
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ee4d5f1880cf6b7aac871149bf7bf59a06903bf2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083868"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286742"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;オフ&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;
+# <a name="clear-element-for-listeners-for-source"></a>\<クリア > 要素の\<リスナー > の\<ソース >
 トレース ソースの `Listeners` コレクションを消去します。  
   
  \<configuration>  

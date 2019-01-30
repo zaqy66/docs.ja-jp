@@ -1,5 +1,5 @@
 ---
-title: 省略可能なパラメーターの省略可能な値の型&lt;parametername&gt; CLS 準拠ではありません
+title: 省略可能なパラメーター <parametername> に対する省略可能な値の型は、CLS に準拠していません
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960350"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261426"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>省略可能なパラメーターの省略可能な値の型&lt;parametername&gt; CLS 準拠ではありません
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>省略可能なパラメーターの省略可能な値の型\<parametername > CLS 準拠ではありません
 プロシージャは `<CLSCompliant(True)>` に設定されていますが、非準拠の型が既定値である [Optional](../../../visual-basic/language-reference/modifiers/optional.md) パラメーターが宣言されています。  
   
  プロシージャを[言語への非依存性および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) に準拠させるには、CLS 準拠型のみを使用する必要があります。 これは、パラメーターの型、戻り値の型、およびすべてのローカル変数の型に適用されます。 また、省略可能なパラメーターの既定値にも適用されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "37960350"
   
  要素に <xref:System.CLSCompliantAttribute> を適用しないと、その要素は非準拠と見なされます。  
   
- 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
+ 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」をご覧ください。  
   
  **エラー ID:** BC40042  
   
