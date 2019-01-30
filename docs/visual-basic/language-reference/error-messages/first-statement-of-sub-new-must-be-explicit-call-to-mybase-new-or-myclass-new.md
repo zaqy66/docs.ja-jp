@@ -1,5 +1,5 @@
 ---
-title: 'この最初のステートメント&#39;Sub New&#39;を明示的に呼び出す必要があります&#39;MyBase.New&#39;または&#39;に対して&#39;ため、 &#39;&lt;ある&gt;&#39;基底クラスで&#39;&lt;baseclassname&gt; &#39;の&#39; &lt;derivedclassname&gt; &#39;旧式とマークされて: &#39; &lt;errormessage&gt;&#39;'
+title: "'<constructorname>' の基本クラス '<baseclassname>' にある '<derivedclassname>' が古い形式に設定されているため、この 'Sub New' の最初のステートメントは、明示的な 'MyBase.New' または 'MyClass.New' への呼び出しでなければなりません: '<errormessage>'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 9d07a68fd8d9790178427c512375323f23f46772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566779"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268796"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>この最初のステートメント&#39;Sub New&#39;を明示的に呼び出す必要があります&#39;MyBase.New&#39;または&#39;に対して&#39;ため、 &#39;&lt;ある&gt;&#39;基底クラスで&#39;&lt;baseclassname&gt; &#39;の&#39; &lt;derivedclassname&gt; &#39;旧式とマークされて: &#39; &lt;errormessage&gt;&#39;
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>この 'Sub New' の最初のステートメントは、ためには、'mybase.new' または 'myclass.new' の明示的な呼び出しにある必要があります、'\<ある >' の基底クラスの\<baseclassname >' の'\<derivedclassname >' 旧式とマークされて: '\<errormessage >'
 クラス コンストラクターが基底クラスのコンストラクターを明示的に呼び出さず、暗黙的な基底クラスのコンストラクターが <xref:System.ObsoleteAttribute> 属性およびエラーとして扱うことを示すディレクティブでマークされています。  
   
  派生クラスのコンス トラクターが基底クラスのコンス トラクターを呼び出さない場合、Visual Basic はパラメーターなしの基本クラス コンス トラクターへの暗黙の呼び出しを生成しようとします。 引数を指定せずに呼び出すことができる基底クラスにアクセス可能なコンス トラクターがない場合、Visual Basic は、暗黙の呼び出しを生成できません。 この場合、必要なコンス トラクターがでマークされた、<xref:System.ObsoleteAttribute>属性は、Visual Basic で呼び出すことはできませんので。  

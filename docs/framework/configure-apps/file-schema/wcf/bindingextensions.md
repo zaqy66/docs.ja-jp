@@ -1,15 +1,15 @@
 ---
-title: '&lt;bindingExtensions&gt;'
+title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 2b0e3fe417d76a08b7dd3295b68a179c3d9acefc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6eed4e8c549bccb06d8d425b084554a2ec7a1183
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672895"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272761"
 ---
-# <a name="ltbindingextensionsgt"></a>&lt;bindingExtensions&gt;
+# <a name="bindingextensions"></a>\<bindingExtensions>
 このセクションは、コンピューターまたはアプリケーションの構成ファイルからユーザー定義のバインディングを使用できます。 このコレクションにユーザー定義のバインディングを追加するには、`add` キーワードを使用し、要素の `type` 属性をユーザー定義のバインディングに設定して、`name` 属性をユーザー定義のバインディングの名前に設定します。  
   
  バインディングの拡張により、ユーザーは、エンドポイント構成の一部として使用するユーザー定義のバインディングを作成できます。 プログラムではバインディング拡張は、抽象クラス <xref:System.ServiceModel.Channels.Binding> を実装する型です。  

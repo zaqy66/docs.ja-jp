@@ -1,15 +1,15 @@
 ---
-title: '&lt;scopedCertificates&gt; 要素'
+title: <scopedCertificates> 要素
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: c6236093eada1b7be5244d98eabd99482017a395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de85b3230461e876ec48e98887805d767e981e0f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556497"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270389"
 ---
-# <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 要素
+# <a name="scopedcertificates-element"></a>\<scopedCertificates > 要素
 認証用の (範囲指定された) 特定のサービスにより提供される X.509 証明書のコレクションを表します。 このコレクションは一般に、フェデレーション シナリオでセキュリティ トークン サービスのサービス証明書を指定するために使用されます。  
   
  \<system.ServiceModel >  

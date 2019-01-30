@@ -1,15 +1,15 @@
 ---
-title: '&lt;endpointExtensions&gt;'
+title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 3883a23c679abc83d7cfe9011b7cdb7e4154adfe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 746f98b54285f95bb63e15136508909327c0d140
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146447"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264610"
 ---
-# <a name="ltendpointextensionsgt"></a>&lt;endpointExtensions&gt;
+# <a name="endpointextensions"></a>\<endpointExtensions>
 このセクションは、コンピューターまたはアプリケーションの構成ファイルの拡張セクションに新たな標準エンドポイントを登録します。 このコレクションに標準エンドポイントを追加するには、`add` キーワードを使用し、要素の `type` 属性をエンドポイントの種類に設定して、`name` 属性を標準エンドポイントの名前に設定します。  
   
  次の例は、`add` 要素と `name` 属性を使用して、構成ファイルの `<endpointExtensions>` セクションに標準エンドポイントを追加します。  

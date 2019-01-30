@@ -1,15 +1,15 @@
 ---
-title: '&lt;bindingElementExtensions&gt;'
+title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 1b843f2986a0020b8ce079e58bf9865a0b3d402d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569902"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270469"
 ---
-# <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
+# <a name="bindingelementextensions"></a>\<bindingElementExtensions>
 このセクションは、コンピューターまたはアプリケーションの構成ファイルからカスタム バインド要素を使用できます。 このコレクションにカスタム バインディング要素を追加するには、`add` キーワードを使用し、要素の `type` 属性をバインディング要素拡張に設定して、`name` 属性をカスタム バインディング要素に設定します。  
   
  バインディングの拡張により、ユーザーは、カスタム バインディングの一部として使用するユーザー定義のバインディング要素を作成できます。 プログラムではバインディング拡張は、抽象クラス <xref:System.ServiceModel.Channels.BindingElement> を実装する型です。 構成ファイルでは、`bindingElementExtensions` セクションは、拡張要素を定義するために使用されます。  

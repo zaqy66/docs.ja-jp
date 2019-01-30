@@ -1,5 +1,5 @@
 ---
-title: "''<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。'&lt;&gt;&lt;&gt;&lt;&gt;"
+title: "'<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1548c9894d476cc4b92d6581362d309e7b4d00d4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506297"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264995"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>''<membername>' は、継承インターフェイス '<interfacename1>' および '<interfacename2>' 間ではあいまいです。'&lt;&gt;&lt;&gt;&lt;&gt;
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<membername >' は継承されたインターフェイスの間であいまいな\<interfacename1 >' と'\<interfacename2 >'
 インターフェイスは、複数のインターフェイスから同じ名前の 2 つ以上のメンバーを継承します。  
   
  **エラー ID:** BC30685  

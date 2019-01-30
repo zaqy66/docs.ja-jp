@@ -1,5 +1,5 @@
 ---
-title: 名前&lt;namespacename&gt;ルート名前空間で&lt;fullnamespacename&gt; CLS 準拠ではありません
+title: ルート名前空間 <namespacename> にある名前 <fullnamespacename> は CLS に準拠していません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40039
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 8d35268891711ca7f2a7f5ec47be425e342dccd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5afdcc98b7acb1927c9b0735a69fbe64c3d8e60
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642530"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268718"
 ---
-# <a name="name-ltnamespacenamegt-in-the-root-namespace-ltfullnamespacenamegt-is-not-cls-compliant"></a>名前&lt;namespacename&gt;ルート名前空間で&lt;fullnamespacename&gt; CLS 準拠ではありません
+# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>名前\<namespacename > ルート名前空間で\<fullnamespacename > CLS 準拠ではありません
 アセンブリをマーク`<CLSCompliant(True)>`、ルート名前空間の名前の要素は、アンダー スコアで始まるが、(`_`)。  
   
  プログラミング要素ですが準拠するため、1 つまたは複数アンダー スコアを含めることができます、 [Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS) にする必要がありますされませんアンダー スコアで始まりです。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  

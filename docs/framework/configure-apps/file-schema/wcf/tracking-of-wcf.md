@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;tracking&gt;
+title: <tracking> WCF の
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 52efc1b5284c2a64eae30ea18995e5ee761dc2e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddaf6f7871b4d10961b615f74d1ed49dd76d379a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582605"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268250"
 ---
-# <a name="lttrackinggt-of-wcf"></a>WCF の &lt;tracking&gt;
+# <a name="tracking-of-wcf"></a>\<追跡 > の WCF
 ワークフロー サービスの追跡設定を定義する構成セクションを表します。  
   
  ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。  
