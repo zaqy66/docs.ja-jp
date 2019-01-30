@@ -1,5 +1,5 @@
 ---
-title: "'<interfacename>.<membername>' は、基本クラス '<baseclassname>' によって既に実装されています。&lt;&gt;&lt;&gt;&lt;&gt; <type> の再実装と見なされます。&lt;&gt;"
+title: "'<interfacename>.<membername>' は、基本クラス '<baseclassname>' によって既に実装されています。<type> の再実装と見なされます。"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
