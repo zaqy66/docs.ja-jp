@@ -2,12 +2,12 @@
 title: F#コードの書式設定に関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
 ms.date: 11/26/2018
-ms.openlocfilehash: d4b61646154c613093374ef3dcf7436de4b0d3ea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415443"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254824"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
 
@@ -275,6 +275,17 @@ match x, y with
 | x, 1 -> 0
 | x, y -> 1
 ```
+
+タプルが関数の戻り値の場合は、かっこを省略することもよく受け入れられます。
+
+```fsharp
+// OK
+let update model msg =
+    match msg with
+    | 1 -> model + 1, []
+    | _ -> model, [ msg ]
+```
+要約すると、かっこで囲まれたタプルのインスタンス化、必要に応じてをパターンに一致するか、戻り値のタプルを使用する場合と見なされるかっこを回避するために問題ありません。
 
 ## <a name="formatting-discriminated-union-declarations"></a>判別共用体の宣言の書式設定
 

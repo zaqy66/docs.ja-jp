@@ -1,5 +1,5 @@
 ---
-title: '&#39;取得&#39;プロパティのアクセサー &#39; &lt;propertyname&gt; &#39;にアクセスできません'
+title: プロパティ '<propertyname>' の 'Get' アクセサーにアクセスできません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31103
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: 10b7168ac40ca7c7d696cd63cd823454f404bb94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72675f882676d3ded9ccc9ff245a1d757fa4393a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582215"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257786"
 ---
-# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;取得&#39;プロパティのアクセサー &#39; &lt;propertyname&gt; &#39;にアクセスできません
+# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>プロパティのアクセサーを 'get''\<propertyname >' にアクセスできません
 ステートメントが、プロパティへのアクセスがあるない場合は、プロパティの値を取得しようとしています。`Get`プロシージャ。  
   
  場合、 [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)レベルよりもより制限の厳しいアクセスでマークされたその[Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)プロパティの値を読み取ろうとしてが失敗する、次の場合。  

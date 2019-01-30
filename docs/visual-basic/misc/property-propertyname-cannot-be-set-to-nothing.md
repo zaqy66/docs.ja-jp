@@ -1,17 +1,17 @@
 ---
-title: プロパティ&lt;propertyname&gt; Nothing に設定することはできません
+title: プロパティ<propertyname>Nothing に設定することはできません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_PropertyNothing
 ms.assetid: 074014b4-5070-4c2f-9496-cbbbe9393dd6
-ms.openlocfilehash: e4c6def045f37a43121a1003b73a916f40be3fcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3d80b5e240b0bb5fedd339e76a6c7ad34889239
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549055"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258302"
 ---
-# <a name="property-ltpropertynamegt-cannot-be-set-to-nothing"></a>プロパティ&lt;propertyname&gt; Nothing に設定することはできません
+# <a name="property-propertyname-cannot-be-set-to-nothing"></a>プロパティ\<propertyname > Nothing に設定することはできません
 プロパティを `Nothing`以外の値に設定する必要があります。 値の計算に誤りがある可能性があります。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

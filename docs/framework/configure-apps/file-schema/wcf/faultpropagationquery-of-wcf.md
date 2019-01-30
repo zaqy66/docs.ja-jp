@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;faultPropagationQuery&gt;
+title: <faultPropagationQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: 1da2a95d27756296aab5a205a90fb028508c4b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1670f8fdf72bc202a4a595034f3818ab43b11be6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601806"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276056"
 ---
-# <a name="ltfaultpropagationquerygt-of-wcf"></a>WCF の &lt;faultPropagationQuery&gt;
+# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery > の WCF
 
 1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリを表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。 1 つのアクティビティ内で発生したエラーの処理は、このようなクエリを使用して追跡する必要があります。 追跡参加要素がエラー伝達レコードを定期受信するには、このクエリが必要です。  
   

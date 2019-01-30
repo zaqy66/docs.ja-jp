@@ -1,16 +1,16 @@
 ---
-title: '&lt;nameClaimType&gt;'
+title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 502fc5dd14d7bc3d979153607e1eeeb9354031bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aab76949d9c31ac003b8afd519c2ad66529cbf26
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737430"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254862"
 ---
-# <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
+# <a name="nameclaimtype"></a>\<nameClaimType>
 設定を指定するクレームの種類、<xref:System.Security.Principal.IIdentity.Name%2A>プロパティ。 要求の種類が検索に使用される、<xref:System.Security.Claims.Claim>のコレクションで<xref:System.Security.Claims.ClaimsIdentity>によって返されるオブジェクト、<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>このトークン ハンドラーのメソッド。 名前と一致するクレームの値が設定し、<xref:System.Security.Principal.IIdentity>このトークン ハンドラーを生成します。  
   
  \<system.identityModel>  

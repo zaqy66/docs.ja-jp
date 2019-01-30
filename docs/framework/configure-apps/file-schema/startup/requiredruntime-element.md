@@ -1,5 +1,5 @@
 ---
-title: '&lt;requiredRuntime&gt;要素'
+title: <requiredRuntime> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222130"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254731"
 ---
-# <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;要素
+# <a name="requiredruntime-element"></a>\<requiredRuntime > 要素
 
 バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 この要素は非推奨し、使用できなくする必要があります。 [ `supportedRuntime` ](supportedruntime-element.md)要素を代わりに使用する必要があります。
 
-\<configuration >\<スタートアップ > \<requiredRuntime >
+\<configuration> \<startup> \<requiredRuntime>
 
 ## <a name="syntax"></a>構文
 
@@ -86,4 +86,4 @@ safemode="true|false"/>
 
 - [スタートアップ設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
-- [方法: .NET Framework 4 またはそれ以降のバージョンをサポートするアプリを構成します。](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

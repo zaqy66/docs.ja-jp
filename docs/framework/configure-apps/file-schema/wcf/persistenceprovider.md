@@ -1,15 +1,15 @@
 ---
-title: '&lt;persistenceProvider&gt;'
+title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: 8deca5b4bec4808ac9add201db0c936764fddcb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 054991687a54ecbf95cc18f58717a4ed3e36f050
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602222"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260802"
 ---
-# <a name="ltpersistenceprovidergt"></a>&lt;persistenceProvider&gt;
+# <a name="persistenceprovider"></a>\<persistenceProvider >
 使用する永続化プロバイダーの実装の型と、永続化操作に使用するタイムアウトを指定します。  
   
  \<system.ServiceModel >  

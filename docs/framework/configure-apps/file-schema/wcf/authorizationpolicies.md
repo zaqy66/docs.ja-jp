@@ -1,15 +1,15 @@
 ---
-title: '&lt;authorizationPolicies&gt;'
+title: <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
-ms.openlocfilehash: 7648c221a61efb99b4dc486f9b4d121439632c63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8ca43a7b633d7d19dd37ceb0ff64075931b6c5c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519555"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254772"
 ---
-# <a name="ltauthorizationpoliciesgt"></a>&lt;authorizationPolicies&gt;
+# <a name="authorizationpolicies"></a>\<authorizationPolicies>
 この構成セクションには、`add` キーワードを使用して追加できる承認ポリシーの種類のコレクションが含まれています。 各承認ポリシーは、文字列の単一の必須属性 `policyType` を含みます。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。 承認ポリシーのしくみの詳細については、次を参照してください。<xref:System.IdentityModel.Policy.IAuthorizationPolicy>と[承認ポリシー](../../../../../docs/framework/wcf/samples/authorization-policy.md)します。  
   
 ## <a name="see-also"></a>関連項目
