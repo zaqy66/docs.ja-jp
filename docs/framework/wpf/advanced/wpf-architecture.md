@@ -24,18 +24,18 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54634585"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
-このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 主要なサブシステムの大半に対応[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、やり取りする方法について説明します。 一部のアーキテクトが行う選択の詳細も[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。  
+このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
   
   
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
- プライマリ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 設計段階の早い段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]さまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネント間、行を描画する場所についての論争がありました。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]さまざまな生産性と (メモリ管理、エラー処理、共通型システムなど) を含む堅牢な開発を行う機能を提供しますが、コストになったものも。  
+ 主要な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 初期の設計段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のさまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネントとの線引きについての論争がありました。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]は生産性と堅牢性 (メモリ管理、エラー処理、共通型システムなどを含む) のある開発を行う数多くの機能を提供しますが、それらはコストの増加を招きます。  
   
- 主要コンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は次の図のようになります。 (PresentationFramework、PresentationCore、および milcore) の図の赤のセクションではの大規模なコード部分[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 これらのうち、1 つだけは、アンマネージ コンポーネント – milcore です。 緊密な統合を有効にするには Milcore がアンマネージ コードで記述された[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]します。 すべて表示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を行う、[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジン、効率的なハードウェアとソフトウェア レンダリングすることができます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] メモリと実行を細かく制御も必要です。 Milcore 合成エンジンは、非常に機密性の高い、やの多くの利点をあきらめる必要なパフォーマンス、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]パフォーマンスを向上させます。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要コンポーネントは次の図のようになります。 図の赤のセクション(PresentationFramework、PresentationCore、および milcore) が[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を構成する主要なコードです。 これらのなかで milcore だけはアンマネージ コンポーネントです。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]との緊密な統合を有効にするために milcore はアンマネージ コードで記述されています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のすべて表示は[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジンを介して、効率的なハードウェアとソフトウェア レンダリングをすることができます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ではメモリと実行を精密に制御することが必要でした。 milcore の合成エンジンはパフォーマンスにとても敏感で、パフォーマンスを向上させるためには[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]の多くの利点をあきらめる必要がありました。   
   
  ![WPF、.NET Framework 内の位置。](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
   
- マネージ コードとアンマネージの部分の間の通信[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]はこのトピックの後半で説明します。 マネージ プログラミング モデルの残りの部分を以下に示します。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のマネージ コードとアンマネージの部分の間の通信はこのトピックの後半で説明します。 マネージ プログラミング モデルの残りの部分を以下に示します。  
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
