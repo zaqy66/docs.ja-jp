@@ -1,20 +1,20 @@
 ---
-title: '&lt;allowAccounts&gt;'
+title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: c1c4630e6191dbbe02688a4e4a9db9e18b8d36d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3121146577122446ba82528fc6e46dadbf5033
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508419"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255550"
 ---
-# <a name="ltallowaccountsgt"></a><span data-ttu-id="4c734-102">&lt;allowAccounts&gt;</span><span class="sxs-lookup"><span data-stu-id="4c734-102">&lt;allowAccounts&gt;</span></span>
-<span data-ttu-id="4c734-103">ユーザーがプロセスのアカウントをホストする Windows Communication Foundation (WCF) サービス、および共有サービスへの接続アクセスが許可を指定する構成要素のコレクションを含みます。</span><span class="sxs-lookup"><span data-stu-id="4c734-103">Contains a collection of configuration elements that specify user accounts for processes that host Windows Communication Foundation (WCF) services, and are granted connection access to the sharing service.</span></span>  
+# <a name="allowaccounts"></a><span data-ttu-id="00f6b-101">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="00f6b-101">\<allowAccounts></span></span>
+<span data-ttu-id="00f6b-102">ユーザーがプロセスのアカウントをホストする Windows Communication Foundation (WCF) サービス、および共有サービスへの接続アクセスが許可を指定する構成要素のコレクションを含みます。</span><span class="sxs-lookup"><span data-stu-id="00f6b-102">Contains a collection of configuration elements that specify user accounts for processes that host Windows Communication Foundation (WCF) services, and are granted connection access to the sharing service.</span></span>  
   
- <span data-ttu-id="4c734-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="4c734-104">\<system.serviceModel.activation></span></span>  
+ <span data-ttu-id="00f6b-103">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="00f6b-103">\<system.serviceModel.activation></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c734-105">構文</span><span class="sxs-lookup"><span data-stu-id="4c734-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00f6b-104">構文</span><span class="sxs-lookup"><span data-stu-id="00f6b-104">Syntax</span></span>  
   
 ```xml  
 <allowAccounts>
@@ -22,25 +22,25 @@ ms.locfileid: "54508419"
 </allowAccounts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4c734-106">属性および要素</span><span class="sxs-lookup"><span data-stu-id="4c734-106">Attributes and Elements</span></span>  
- <span data-ttu-id="4c734-107">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="4c734-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00f6b-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="00f6b-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="00f6b-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="00f6b-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4c734-108">属性</span><span class="sxs-lookup"><span data-stu-id="4c734-108">Attributes</span></span>  
- <span data-ttu-id="4c734-109">なし。</span><span class="sxs-lookup"><span data-stu-id="4c734-109">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="00f6b-107">属性</span><span class="sxs-lookup"><span data-stu-id="00f6b-107">Attributes</span></span>  
+ <span data-ttu-id="00f6b-108">なし。</span><span class="sxs-lookup"><span data-stu-id="00f6b-108">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="4c734-110">子要素</span><span class="sxs-lookup"><span data-stu-id="4c734-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="00f6b-109">子要素</span><span class="sxs-lookup"><span data-stu-id="00f6b-109">Child Elements</span></span>  
   
-|<span data-ttu-id="4c734-111">属性</span><span class="sxs-lookup"><span data-stu-id="4c734-111">Attribute</span></span>|<span data-ttu-id="4c734-112">説明</span><span class="sxs-lookup"><span data-stu-id="4c734-112">Description</span></span>|  
+|<span data-ttu-id="00f6b-110">属性</span><span class="sxs-lookup"><span data-stu-id="00f6b-110">Attribute</span></span>|<span data-ttu-id="00f6b-111">説明</span><span class="sxs-lookup"><span data-stu-id="00f6b-111">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="4c734-113">\<add></span><span class="sxs-lookup"><span data-stu-id="4c734-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|<span data-ttu-id="4c734-114">WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセス用のユーザー アカウントを追加します。</span><span class="sxs-lookup"><span data-stu-id="4c734-114">Adds a user account for processes that host WCF services, and are granted connection access to the sharing service</span></span>|  
+|[<span data-ttu-id="00f6b-112">\<add></span><span class="sxs-lookup"><span data-stu-id="00f6b-112">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|<span data-ttu-id="00f6b-113">WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセス用のユーザー アカウントを追加します。</span><span class="sxs-lookup"><span data-stu-id="00f6b-113">Adds a user account for processes that host WCF services, and are granted connection access to the sharing service</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4c734-115">親要素</span><span class="sxs-lookup"><span data-stu-id="4c734-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="00f6b-114">親要素</span><span class="sxs-lookup"><span data-stu-id="00f6b-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="4c734-116">要素</span><span class="sxs-lookup"><span data-stu-id="4c734-116">Element</span></span>|<span data-ttu-id="4c734-117">説明</span><span class="sxs-lookup"><span data-stu-id="4c734-117">Description</span></span>|  
+|<span data-ttu-id="00f6b-115">要素</span><span class="sxs-lookup"><span data-stu-id="00f6b-115">Element</span></span>|<span data-ttu-id="00f6b-116">説明</span><span class="sxs-lookup"><span data-stu-id="00f6b-116">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4c734-118">[\<net.pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md)または[ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)</span><span class="sxs-lookup"><span data-stu-id="4c734-118">[\<net.pipe>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) or [\<net.tcp>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)</span></span>|<span data-ttu-id="4c734-119">Net Pipe または TCP 共有サービスの構成設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="4c734-119">Specifies configuration settings for the Net Pipe or TCP sharing services.</span></span>|  
+|<span data-ttu-id="00f6b-117">[\<net.pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md)または[ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)</span><span class="sxs-lookup"><span data-stu-id="00f6b-117">[\<net.pipe>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) or [\<net.tcp>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)</span></span>|<span data-ttu-id="00f6b-118">Net Pipe または TCP 共有サービスの構成設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="00f6b-118">Specifies configuration settings for the Net Pipe or TCP sharing services.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="4c734-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="4c734-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00f6b-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="00f6b-119">See also</span></span>
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>
