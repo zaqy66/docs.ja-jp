@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuerChannelBehaviors&gt; 要素'
+title: <issuerChannelBehaviors> 要素
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: b77d0ce79557dff4b5a243da4d24703ed45fde07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 624848db4cead14e46c97bba7404adcb65e43d4d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677109"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274141"
 ---
-# <a name="ltissuerchannelbehaviorsgt-element"></a>&lt;issuerChannelBehaviors&gt; 要素
+# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 要素
 指定されたサービス トークン サービスと通信するときに使用するには、Windows Communication Foundation (WCF) クライアント エンドポイントの動作 (構成で定義されている) のコレクションを含みます。 定義された動作は、いずれかを含めることはできません[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)要素。  
   
  \<system.ServiceModel >  

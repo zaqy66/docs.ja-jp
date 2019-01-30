@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;state&gt;、&lt;workflowInstanceQuery&gt;
+title: <state> WCF の <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 168a6980e955f602ee60bff26461f06cb16c836a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145927"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270854"
 ---
-# <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>WCF の &lt;state&gt;、&lt;workflowInstanceQuery&gt;
+# <a name="state-of-wcf-workflowinstancequery"></a>\<状態 > WCF の\<workflowInstanceQuery >
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
   
  追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
@@ -20,9 +20,9 @@ ms.locfileid: "54145927"
 \<trackingProfile>  
 \<ワークフロー >  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
-\<状態 >  
-\<状態 >  
+\<workflowInstanceQuery>  
+\<states>  
+\<state>  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,7 @@ ms.locfileid: "54145927"
 
 |要素|説明|  
 |-------------|-----------------|  
-|[\<状態 >](states-of-wcf-workflowinstancequery.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクション。|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクション。|  
   
 ## <a name="remarks"></a>Remarks  
 

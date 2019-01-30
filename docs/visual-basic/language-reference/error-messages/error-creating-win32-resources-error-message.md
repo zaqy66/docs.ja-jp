@@ -1,5 +1,5 @@
 ---
-title: Win32 リソースの作成エラー:&lt;エラー メッセージ&gt;
+title: 'Win32 リソースの作成中にエラーが発生しました : <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30136
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 00ad9b30a354794647f9b4c097732cd572c100b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56de1554480fdb31f64859da2d94a81618f01c50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566765"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270467"
 ---
-# <a name="error-creating-win32-resources-lterror-messagegt"></a>Win32 リソースの作成エラー:&lt;エラー メッセージ&gt;
+# <a name="error-creating-win32-resources-error-message"></a>Win32 リソースの作成エラー:\<エラー メッセージ >
 Visual Basic コンパイラでは、マニフェストを持つアセンブリを生成するには、アセンブリ リンカー (Al.exe、Alink とも呼ばれます) を呼び出します。 リンカーが、インメモリ リソースの作成エラーを報告しています。 環境に関する問題、またはコンピューターのメモリが低下している可能性があります。  
   
  **エラー ID:** BC30136  

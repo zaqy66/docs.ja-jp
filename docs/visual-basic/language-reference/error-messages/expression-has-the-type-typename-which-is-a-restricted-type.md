@@ -1,5 +1,5 @@
 ---
-title: 式の型&#39; &lt;typename&gt; &#39;は制限付きの型から継承されたメンバーのアクセスに使用することはできませんと&#39;オブジェクト&#39;または&#39;ValueType&#39;
+title: 式は制限がある型 '<typename>' を含んでいるため、'Object' または 'ValueType' から継承されたメンバーにアクセスするのに使用できません。
 ms.date: 07/20/2015
 f1_keywords:
 - bc31393
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: d44b9a29f0848508d8cd814e857d9b01819ce7ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d366ec750ea5a4505ae5ea618e27f47406ba959
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535958"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274028"
 ---
-# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>式の型&#39; &lt;typename&gt; &#39;は制限付きの型から継承されたメンバーのアクセスに使用することはできませんと&#39;オブジェクト&#39;または&#39;ValueType&#39;
+# <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>式の型 '\<typename >' は制限付きの型と 'Object' または 'ValueType' から継承されたメンバーのアクセスに使用することはできません
 式では、共通言語ランタイム (CLR) でボックス化できない型に評価が、ボックス化を必要とするメンバーにアクセスします。  
   
  *ボックス化* とは、型を `Object` (場合によっては <xref:System.ValueType>) に変換するために不可欠な処理です。 共通言語ランタイムでは、特定の構造体の型をたとえばボックスことはできません<xref:System.ArgIterator>、 <xref:System.RuntimeArgumentHandle>、および<xref:System.TypedReference>します。  

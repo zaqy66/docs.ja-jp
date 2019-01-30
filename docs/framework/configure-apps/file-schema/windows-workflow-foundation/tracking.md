@@ -1,16 +1,16 @@
 ---
-title: '&lt;追跡&gt;'
+title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 26f8c6f82ba752c9d431e30771256a58df9b14a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa96cb374204ffbdb4c0fcd353c70b6e27ef7481
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553582"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263811"
 ---
-# <a name="lttrackinggt"></a>&lt;追跡&gt;
+# <a name="tracking"></a>\<追跡 >
 ワークフロー サービスの追跡設定を定義する構成セクションを表します。  
   
  ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。  

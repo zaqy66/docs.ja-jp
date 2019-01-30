@@ -1,5 +1,5 @@
 ---
-title: Default プロパティ アクセスは、継承インターフェイス メンバーの間にあいまいな&#39; &lt;defaultpropertyname&gt; &#39;インターフェイスの&#39; &lt;interfacename1&gt; &#39;と&#39; &lt;defaultpropertyname&gt; &#39;インターフェイスの&#39; &lt;interfacename2&gt;&#39;
+title: Default プロパティ アクセスは、インターフェイス '<defaultpropertyname>' の継承インターフェイス メンバー '<interfacename1>' とインターフェイス '<defaultpropertyname>' の '<interfacename2>' との間で不適切です。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518645"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270590"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Default プロパティ アクセスは、継承インターフェイス メンバーの間にあいまいな&#39; &lt;defaultpropertyname&gt; &#39;インターフェイスの&#39; &lt;interfacename1&gt; &#39;と&#39; &lt;defaultpropertyname&gt; &#39;インターフェイスの&#39; &lt;interfacename2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Default プロパティ アクセスは継承インターフェイス メンバーの間であいまいな\<defaultpropertyname >' のインターフェイス '\<interfacename1 >' と'\<defaultpropertyname >' のインターフェイス '\<interfacename2 >'
 インターフェイスは、同じ名前の既定プロパティを宣言するそれぞれの 2 つのインターフェイスから継承します。 コンパイラは、この既定のプロパティを修飾なしに、アクセスを解決できません。 次に例を示します。  
   
 ```  

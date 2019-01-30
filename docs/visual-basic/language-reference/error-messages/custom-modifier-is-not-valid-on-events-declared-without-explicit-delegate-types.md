@@ -1,5 +1,5 @@
 ---
-title: '&#39;カスタム&#39;修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です'
+title: "'Custom' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31122
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c909973ef1c00cb01179b0e5527dfecd6f41e577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1b57ccdaa9e04c837ecf7572bc164683a934b2d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574782"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273518"
 ---
-# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;カスタム&#39;修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です
+# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>'Custom' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。
 非カスタム イベントとは異なり、`Custom Event`宣言が必要です、`As`句は次のイベント名を明示的にイベントのデリゲート型を指定します。  
   
  非カスタム イベントは、いずれかで定義されている、`As`句と明示的なデリゲート型、またはすぐにパラメーターを持つリスト次のイベント名。  
