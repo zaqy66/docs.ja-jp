@@ -1,24 +1,24 @@
 ---
-title: '&lt;ClaimType&gt;'
+title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47234962"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267236"
 ---
-# <a name="ltclaimtypegt"></a><span data-ttu-id="dc0d7-102">&lt;ClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="dc0d7-102">&lt;claimType&gt;</span></span>
-<span data-ttu-id="dc0d7-103">受け取ったセキュリティ トークンの 1 つの省略可能または必須のクレームを指定します。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  
+# <a name="claimtype"></a><span data-ttu-id="4fe43-101">\<claimType></span><span class="sxs-lookup"><span data-stu-id="4fe43-101">\<claimType></span></span>
+<span data-ttu-id="4fe43-102">受け取ったセキュリティ トークンの 1 つの省略可能または必須のクレームを指定します。</span><span class="sxs-lookup"><span data-stu-id="4fe43-102">Specifies a single optional or required claim for incoming security tokens.</span></span>  
   
- <span data-ttu-id="dc0d7-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="dc0d7-104">\<system.identityModel></span></span>  
-<span data-ttu-id="dc0d7-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="dc0d7-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="dc0d7-106">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="dc0d7-106">\<claimTypeRequired></span></span>  
-<span data-ttu-id="dc0d7-107">\<claimType ></span><span class="sxs-lookup"><span data-stu-id="dc0d7-107">\<claimType></span></span>  
+ <span data-ttu-id="4fe43-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="4fe43-103">\<system.identityModel></span></span>  
+<span data-ttu-id="4fe43-104">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="4fe43-104">\<identityConfiguration></span></span>  
+<span data-ttu-id="4fe43-105">\<claimTypeRequired></span><span class="sxs-lookup"><span data-stu-id="4fe43-105">\<claimTypeRequired></span></span>  
+<span data-ttu-id="4fe43-106">\<claimType></span><span class="sxs-lookup"><span data-stu-id="4fe43-106">\<claimType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dc0d7-108">構文</span><span class="sxs-lookup"><span data-stu-id="dc0d7-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fe43-107">構文</span><span class="sxs-lookup"><span data-stu-id="4fe43-107">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -31,21 +31,21 @@ ms.locfileid: "47234962"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dc0d7-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="dc0d7-109">Attributes and Elements</span></span>  
- <span data-ttu-id="dc0d7-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4fe43-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="4fe43-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="4fe43-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="4fe43-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dc0d7-111">属性</span><span class="sxs-lookup"><span data-stu-id="dc0d7-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4fe43-110">属性</span><span class="sxs-lookup"><span data-stu-id="4fe43-110">Attributes</span></span>  
   
-|<span data-ttu-id="dc0d7-112">属性</span><span class="sxs-lookup"><span data-stu-id="dc0d7-112">Attribute</span></span>|<span data-ttu-id="dc0d7-113">説明</span><span class="sxs-lookup"><span data-stu-id="dc0d7-113">Description</span></span>|  
+|<span data-ttu-id="4fe43-111">属性</span><span class="sxs-lookup"><span data-stu-id="4fe43-111">Attribute</span></span>|<span data-ttu-id="4fe43-112">説明</span><span class="sxs-lookup"><span data-stu-id="4fe43-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="dc0d7-114">型</span><span class="sxs-lookup"><span data-stu-id="dc0d7-114">type</span></span>|<span data-ttu-id="dc0d7-115">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-115">The claim type.</span></span> <span data-ttu-id="dc0d7-116">通常は URI です。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-116">Typically a URI.</span></span> <span data-ttu-id="dc0d7-117">必須。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-117">Required.</span></span>|  
-|<span data-ttu-id="dc0d7-118">optional</span><span class="sxs-lookup"><span data-stu-id="dc0d7-118">optional</span></span>|<span data-ttu-id="dc0d7-119">要求の種類が省略可能かどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-119">A boolean value that specifies whether the claim type is optional.</span></span> <span data-ttu-id="dc0d7-120">任意。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-120">Optional.</span></span>|  
+|<span data-ttu-id="4fe43-113">型</span><span class="sxs-lookup"><span data-stu-id="4fe43-113">type</span></span>|<span data-ttu-id="4fe43-114">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="4fe43-114">The claim type.</span></span> <span data-ttu-id="4fe43-115">通常は URI です。</span><span class="sxs-lookup"><span data-stu-id="4fe43-115">Typically a URI.</span></span> <span data-ttu-id="4fe43-116">必須。</span><span class="sxs-lookup"><span data-stu-id="4fe43-116">Required.</span></span>|  
+|<span data-ttu-id="4fe43-117">optional</span><span class="sxs-lookup"><span data-stu-id="4fe43-117">optional</span></span>|<span data-ttu-id="4fe43-118">要求の種類が省略可能かどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="4fe43-118">A boolean value that specifies whether the claim type is optional.</span></span> <span data-ttu-id="4fe43-119">任意。</span><span class="sxs-lookup"><span data-stu-id="4fe43-119">Optional.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="dc0d7-121">子要素</span><span class="sxs-lookup"><span data-stu-id="dc0d7-121">Child Elements</span></span>  
- <span data-ttu-id="dc0d7-122">なし</span><span class="sxs-lookup"><span data-stu-id="dc0d7-122">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4fe43-120">子要素</span><span class="sxs-lookup"><span data-stu-id="4fe43-120">Child Elements</span></span>  
+ <span data-ttu-id="4fe43-121">なし</span><span class="sxs-lookup"><span data-stu-id="4fe43-121">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="dc0d7-123">親要素</span><span class="sxs-lookup"><span data-stu-id="dc0d7-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4fe43-122">親要素</span><span class="sxs-lookup"><span data-stu-id="4fe43-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="dc0d7-124">要素</span><span class="sxs-lookup"><span data-stu-id="dc0d7-124">Element</span></span>|<span data-ttu-id="dc0d7-125">説明</span><span class="sxs-lookup"><span data-stu-id="dc0d7-125">Description</span></span>|  
+|<span data-ttu-id="4fe43-123">要素</span><span class="sxs-lookup"><span data-stu-id="4fe43-123">Element</span></span>|<span data-ttu-id="4fe43-124">説明</span><span class="sxs-lookup"><span data-stu-id="4fe43-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dc0d7-126">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="dc0d7-126">\<claimTypeRequired></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|<span data-ttu-id="dc0d7-127">必要な受信セキュリティ トークンのクレームのセットを指定します。</span><span class="sxs-lookup"><span data-stu-id="dc0d7-127">Specifies the set of required claims for incoming security tokens.</span></span>|
+|[<span data-ttu-id="4fe43-125">\<claimTypeRequired></span><span class="sxs-lookup"><span data-stu-id="4fe43-125">\<claimTypeRequired></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|<span data-ttu-id="4fe43-126">必要な受信セキュリティ トークンのクレームのセットを指定します。</span><span class="sxs-lookup"><span data-stu-id="4fe43-126">Specifies the set of required claims for incoming security tokens.</span></span>|

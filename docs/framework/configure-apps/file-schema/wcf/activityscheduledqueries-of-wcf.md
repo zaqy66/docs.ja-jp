@@ -1,27 +1,27 @@
 ---
-title: WCF の &lt;activityScheduledQueries&gt;
+title: <activityScheduledQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 5430058049e8a09c1e2a289e1f997338c23b9d94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c9c292080016d7a2d0014ed07be371c0e247621
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492157"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285780"
 ---
-# <a name="ltactivityscheduledqueriesgt-of-wcf"></a><span data-ttu-id="ac3bb-102">WCF の &lt;activityScheduledQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="ac3bb-102">&lt;activityScheduledQueries&gt; of WCF</span></span>
-<span data-ttu-id="ac3bb-103">親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用する、クエリのコレクションを表します。</span><span class="sxs-lookup"><span data-stu-id="ac3bb-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="ac3bb-104">アクティビティがスケジュールされたレコードを追跡参加要素が定期受信するには、このクエリが必要です。</span><span class="sxs-lookup"><span data-stu-id="ac3bb-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
+# <a name="activityscheduledqueries-of-wcf"></a><span data-ttu-id="e916a-102">\<activityScheduledQueries > の WCF</span><span class="sxs-lookup"><span data-stu-id="e916a-102">\<activityScheduledQueries> of WCF</span></span>
+<span data-ttu-id="e916a-103">親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用する、クエリのコレクションを表します。</span><span class="sxs-lookup"><span data-stu-id="e916a-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="e916a-104">アクティビティがスケジュールされたレコードを追跡参加要素が定期受信するには、このクエリが必要です。</span><span class="sxs-lookup"><span data-stu-id="e916a-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
   
-<span data-ttu-id="ac3bb-105">追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="ac3bb-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+<span data-ttu-id="e916a-105">追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="e916a-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-<span data-ttu-id="ac3bb-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="ac3bb-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="ac3bb-107">\<追跡 ></span><span class="sxs-lookup"><span data-stu-id="ac3bb-107">\<tracking></span></span>  
-<span data-ttu-id="ac3bb-108">\<プロファイル ></span><span class="sxs-lookup"><span data-stu-id="ac3bb-108">\<profiles></span></span>  
-<span data-ttu-id="ac3bb-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="ac3bb-109">\<trackingProfile></span></span>  
-<span data-ttu-id="ac3bb-110">\<ワークフロー ></span><span class="sxs-lookup"><span data-stu-id="ac3bb-110">\<workflow></span></span>  
-<span data-ttu-id="ac3bb-111">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="ac3bb-111">\<activityScheduledQueries></span></span>  
+<span data-ttu-id="e916a-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="e916a-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="e916a-107">\<追跡 ></span><span class="sxs-lookup"><span data-stu-id="e916a-107">\<tracking></span></span>  
+<span data-ttu-id="e916a-108">\<プロファイル ></span><span class="sxs-lookup"><span data-stu-id="e916a-108">\<profiles></span></span>  
+<span data-ttu-id="e916a-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="e916a-109">\<trackingProfile></span></span>  
+<span data-ttu-id="e916a-110">\<ワークフロー ></span><span class="sxs-lookup"><span data-stu-id="e916a-110">\<workflow></span></span>  
+<span data-ttu-id="e916a-111">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="e916a-111">\<activityScheduledQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac3bb-112">構文</span><span class="sxs-lookup"><span data-stu-id="ac3bb-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e916a-112">構文</span><span class="sxs-lookup"><span data-stu-id="e916a-112">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -38,29 +38,29 @@ ms.locfileid: "54492157"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ac3bb-113">属性と要素</span><span class="sxs-lookup"><span data-stu-id="ac3bb-113">Attributes and elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e916a-113">属性と要素</span><span class="sxs-lookup"><span data-stu-id="e916a-113">Attributes and elements</span></span>  
 
-<span data-ttu-id="ac3bb-114">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="ac3bb-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="e916a-114">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="e916a-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ac3bb-115">属性</span><span class="sxs-lookup"><span data-stu-id="ac3bb-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e916a-115">属性</span><span class="sxs-lookup"><span data-stu-id="e916a-115">Attributes</span></span>  
 
-<span data-ttu-id="ac3bb-116">なし。</span><span class="sxs-lookup"><span data-stu-id="ac3bb-116">None.</span></span>  
+<span data-ttu-id="e916a-116">なし。</span><span class="sxs-lookup"><span data-stu-id="e916a-116">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ac3bb-117">子要素</span><span class="sxs-lookup"><span data-stu-id="ac3bb-117">Child elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e916a-117">子要素</span><span class="sxs-lookup"><span data-stu-id="e916a-117">Child elements</span></span>  
   
-|<span data-ttu-id="ac3bb-118">要素</span><span class="sxs-lookup"><span data-stu-id="ac3bb-118">Element</span></span>|<span data-ttu-id="ac3bb-119">説明</span><span class="sxs-lookup"><span data-stu-id="ac3bb-119">Description</span></span>|  
+|<span data-ttu-id="e916a-118">要素</span><span class="sxs-lookup"><span data-stu-id="e916a-118">Element</span></span>|<span data-ttu-id="e916a-119">説明</span><span class="sxs-lookup"><span data-stu-id="e916a-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ac3bb-120">\<activityScheduledQuery></span><span class="sxs-lookup"><span data-stu-id="ac3bb-120">\<activityScheduledQuery></span></span>](activityscheduledquery-of-wcf.md)|<span data-ttu-id="ac3bb-121">親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用するクエリ。</span><span class="sxs-lookup"><span data-stu-id="ac3bb-121">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
+|[<span data-ttu-id="e916a-120">\<activityScheduledQuery></span><span class="sxs-lookup"><span data-stu-id="e916a-120">\<activityScheduledQuery></span></span>](activityscheduledquery-of-wcf.md)|<span data-ttu-id="e916a-121">親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用するクエリ。</span><span class="sxs-lookup"><span data-stu-id="e916a-121">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ac3bb-122">親要素</span><span class="sxs-lookup"><span data-stu-id="ac3bb-122">Parent elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e916a-122">親要素</span><span class="sxs-lookup"><span data-stu-id="e916a-122">Parent elements</span></span>  
   
-|<span data-ttu-id="ac3bb-123">要素</span><span class="sxs-lookup"><span data-stu-id="ac3bb-123">Element</span></span>|<span data-ttu-id="ac3bb-124">説明</span><span class="sxs-lookup"><span data-stu-id="ac3bb-124">Description</span></span>|  
+|<span data-ttu-id="e916a-123">要素</span><span class="sxs-lookup"><span data-stu-id="e916a-123">Element</span></span>|<span data-ttu-id="e916a-124">説明</span><span class="sxs-lookup"><span data-stu-id="e916a-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ac3bb-125">\<workflow></span><span class="sxs-lookup"><span data-stu-id="ac3bb-125">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="ac3bb-126">`activityDefinitionId` プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。</span><span class="sxs-lookup"><span data-stu-id="ac3bb-126">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
+|[<span data-ttu-id="e916a-125">\<workflow></span><span class="sxs-lookup"><span data-stu-id="e916a-125">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="e916a-126">`activityDefinitionId` プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。</span><span class="sxs-lookup"><span data-stu-id="e916a-126">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="ac3bb-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac3bb-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e916a-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="e916a-127">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [<span data-ttu-id="ac3bb-128">ワークフローの追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="ac3bb-128">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="ac3bb-129">追跡プロファイル</span><span class="sxs-lookup"><span data-stu-id="ac3bb-129">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="e916a-128">ワークフローの追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="e916a-128">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="e916a-129">追跡プロファイル</span><span class="sxs-lookup"><span data-stu-id="e916a-129">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

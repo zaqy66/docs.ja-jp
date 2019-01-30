@@ -1,25 +1,25 @@
 ---
-title: '&lt;trackingProfile&gt;'
+title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: 6a722936e61c6883ec9fb075a8beffedb4f30a97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff5bf2b4140665e7af8f8ec0103c32fe2e8a3142
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679475"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267860"
 ---
-# <a name="lttrackingprofilegt"></a><span data-ttu-id="02189-102">&lt;trackingProfile&gt;</span><span class="sxs-lookup"><span data-stu-id="02189-102">&lt;trackingProfile&gt;</span></span>
-<span data-ttu-id="02189-103">ワークフロー追跡参加要素内のレコードを追跡するサブスクリプションを作成するための構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="02189-103">Represents a configuration section for creating a subscription to workflow tracking records in a tracking participant.</span></span> <span data-ttu-id="02189-104">追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。</span><span class="sxs-lookup"><span data-stu-id="02189-104">A tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="02189-105">追跡プロファイル セクション内で定義されたクエリでは、サブスクリプションによって返されるイベントの種類が定義されます。</span><span class="sxs-lookup"><span data-stu-id="02189-105">The queries defined within the tracking profile section define the kinds of events that are returned by the subscription.</span></span>  
+# <a name="trackingprofile"></a><span data-ttu-id="7b29f-101">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="7b29f-101">\<trackingProfile></span></span>
+<span data-ttu-id="7b29f-102">ワークフロー追跡参加要素内のレコードを追跡するサブスクリプションを作成するための構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="7b29f-102">Represents a configuration section for creating a subscription to workflow tracking records in a tracking participant.</span></span> <span data-ttu-id="7b29f-103">追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。</span><span class="sxs-lookup"><span data-stu-id="7b29f-103">A tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="7b29f-104">追跡プロファイル セクション内で定義されたクエリでは、サブスクリプションによって返されるイベントの種類が定義されます。</span><span class="sxs-lookup"><span data-stu-id="7b29f-104">The queries defined within the tracking profile section define the kinds of events that are returned by the subscription.</span></span>  
   
- <span data-ttu-id="02189-106">ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。</span><span class="sxs-lookup"><span data-stu-id="02189-106">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="7b29f-105">ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。</span><span class="sxs-lookup"><span data-stu-id="7b29f-105">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="02189-107">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="02189-107">\<system.serviceModel></span></span>  
-<span data-ttu-id="02189-108">\<追跡 ></span><span class="sxs-lookup"><span data-stu-id="02189-108">\<tracking></span></span>  
-<span data-ttu-id="02189-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="02189-109">\<trackingProfile></span></span>  
+<span data-ttu-id="7b29f-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="7b29f-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="7b29f-107">\<追跡 ></span><span class="sxs-lookup"><span data-stu-id="7b29f-107">\<tracking></span></span>  
+<span data-ttu-id="7b29f-108">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="7b29f-108">\<trackingProfile></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02189-110">構文</span><span class="sxs-lookup"><span data-stu-id="02189-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b29f-109">構文</span><span class="sxs-lookup"><span data-stu-id="7b29f-109">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -77,33 +77,33 @@ ms.locfileid: "54679475"
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="02189-111">属性および要素</span><span class="sxs-lookup"><span data-stu-id="02189-111">Attributes and Elements</span></span>  
- <span data-ttu-id="02189-112">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="02189-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7b29f-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="7b29f-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7b29f-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="7b29f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="02189-113">属性</span><span class="sxs-lookup"><span data-stu-id="02189-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7b29f-112">属性</span><span class="sxs-lookup"><span data-stu-id="7b29f-112">Attributes</span></span>  
   
-|<span data-ttu-id="02189-114">属性</span><span class="sxs-lookup"><span data-stu-id="02189-114">Attribute</span></span>|<span data-ttu-id="02189-115">説明</span><span class="sxs-lookup"><span data-stu-id="02189-115">Description</span></span>|  
+|<span data-ttu-id="7b29f-113">属性</span><span class="sxs-lookup"><span data-stu-id="7b29f-113">Attribute</span></span>|<span data-ttu-id="7b29f-114">説明</span><span class="sxs-lookup"><span data-stu-id="7b29f-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="02189-116">name</span><span class="sxs-lookup"><span data-stu-id="02189-116">name</span></span>|<span data-ttu-id="02189-117">追跡プロファイルの名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="02189-117">A string that specifies the name of the tracking profile.</span></span>|  
+|<span data-ttu-id="7b29f-115">name</span><span class="sxs-lookup"><span data-stu-id="7b29f-115">name</span></span>|<span data-ttu-id="7b29f-116">追跡プロファイルの名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="7b29f-116">A string that specifies the name of the tracking profile.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="02189-118">子要素</span><span class="sxs-lookup"><span data-stu-id="02189-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7b29f-117">子要素</span><span class="sxs-lookup"><span data-stu-id="7b29f-117">Child Elements</span></span>  
   
-|<span data-ttu-id="02189-119">要素</span><span class="sxs-lookup"><span data-stu-id="02189-119">Element</span></span>|<span data-ttu-id="02189-120">説明</span><span class="sxs-lookup"><span data-stu-id="02189-120">Description</span></span>|  
+|<span data-ttu-id="7b29f-118">要素</span><span class="sxs-lookup"><span data-stu-id="7b29f-118">Element</span></span>|<span data-ttu-id="7b29f-119">説明</span><span class="sxs-lookup"><span data-stu-id="7b29f-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="02189-121">\<participants></span><span class="sxs-lookup"><span data-stu-id="02189-121">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="02189-122"><xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。</span><span class="sxs-lookup"><span data-stu-id="02189-122">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> property.</span></span>|  
+|[<span data-ttu-id="7b29f-120">\<participants></span><span class="sxs-lookup"><span data-stu-id="7b29f-120">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="7b29f-121"><xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。</span><span class="sxs-lookup"><span data-stu-id="7b29f-121">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> property.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="02189-123">親要素</span><span class="sxs-lookup"><span data-stu-id="02189-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7b29f-122">親要素</span><span class="sxs-lookup"><span data-stu-id="7b29f-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="02189-124">要素</span><span class="sxs-lookup"><span data-stu-id="02189-124">Element</span></span>|<span data-ttu-id="02189-125">説明</span><span class="sxs-lookup"><span data-stu-id="02189-125">Description</span></span>|  
+|<span data-ttu-id="7b29f-123">要素</span><span class="sxs-lookup"><span data-stu-id="7b29f-123">Element</span></span>|<span data-ttu-id="7b29f-124">説明</span><span class="sxs-lookup"><span data-stu-id="7b29f-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="02189-126">\<tracking></span><span class="sxs-lookup"><span data-stu-id="02189-126">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="02189-127">ワークフロー サービスの追跡設定を定義する構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="02189-127">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
+|[<span data-ttu-id="7b29f-125">\<tracking></span><span class="sxs-lookup"><span data-stu-id="7b29f-125">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="7b29f-126">ワークフロー サービスの追跡設定を定義する構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="7b29f-126">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="02189-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="02189-128">Remarks</span></span>  
- <span data-ttu-id="02189-129">追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。</span><span class="sxs-lookup"><span data-stu-id="02189-129">Tracking profiles contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="02189-130">監視の要件に応じて、ワークフローの主な状態変化の少数のセットを定期受信する、大まかなプロファイルを作成できます。</span><span class="sxs-lookup"><span data-stu-id="02189-130">Depending on your monitoring requirements you may write a profile that is very coarse, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="02189-131">それとは反対に、結果として得られるイベントが、後で詳細な実行フローを十分に再構築できるほど豊富な、詳細なプロファイルを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="02189-131">Conversely, you may create a very specific profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7b29f-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="7b29f-127">Remarks</span></span>  
+ <span data-ttu-id="7b29f-128">追跡プロファイルには、実行時にワークフロー インスタンスの状態が変化したときに生成されるワークフロー イベントを追跡参加要素が定期受信できるようにする、追跡クエリが含まれています。</span><span class="sxs-lookup"><span data-stu-id="7b29f-128">Tracking profiles contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="7b29f-129">監視の要件に応じて、ワークフローの主な状態変化の少数のセットを定期受信する、大まかなプロファイルを作成できます。</span><span class="sxs-lookup"><span data-stu-id="7b29f-129">Depending on your monitoring requirements you may write a profile that is very coarse, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="7b29f-130">それとは反対に、結果として得られるイベントが、後で詳細な実行フローを十分に再構築できるほど豊富な、詳細なプロファイルを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="7b29f-130">Conversely, you may create a very specific profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>  
   
- <span data-ttu-id="02189-132">追跡プロファイルは、特定の追跡レコードを対象としてワークフロー ランタイムを照会できる、追跡レコード用の宣言型のサブスクリプションとして構築されます。</span><span class="sxs-lookup"><span data-stu-id="02189-132">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="02189-133">いくつかのクエリの種類のさまざまなクラスを定期受信できる<xref:System.Activities.Tracking.TrackingRecord>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="02189-133">There are a handful of query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="02189-134">クエリの完全な一覧を参照してください[\<参加者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)と[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).。</span><span class="sxs-lookup"><span data-stu-id="02189-134">For a complete list of queries, see [\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)..</span></span>  
+ <span data-ttu-id="7b29f-131">追跡プロファイルは、特定の追跡レコードを対象としてワークフロー ランタイムを照会できる、追跡レコード用の宣言型のサブスクリプションとして構築されます。</span><span class="sxs-lookup"><span data-stu-id="7b29f-131">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="7b29f-132">いくつかのクエリの種類のさまざまなクラスを定期受信できる<xref:System.Activities.Tracking.TrackingRecord>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="7b29f-132">There are a handful of query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="7b29f-133">クエリの完全な一覧を参照してください[\<参加者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)と[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).。</span><span class="sxs-lookup"><span data-stu-id="7b29f-133">For a complete list of queries, see [\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)..</span></span>  
   
- <span data-ttu-id="02189-135">次の例は、追跡参加要素をサブスクライブできるようにする構成ファイルで追跡プロファイルを示します、`Started`と`Completed`ワークフロー イベント。</span><span class="sxs-lookup"><span data-stu-id="02189-135">The following example shows a tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>  
+ <span data-ttu-id="7b29f-134">次の例は、追跡参加要素をサブスクライブできるようにする構成ファイルで追跡プロファイルを示します、`Started`と`Completed`ワークフロー イベント。</span><span class="sxs-lookup"><span data-stu-id="7b29f-134">The following example shows a tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -125,8 +125,8 @@ ms.locfileid: "54679475"
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="02189-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="02189-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b29f-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="7b29f-135">See also</span></span>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>
 - <xref:System.Activities.Tracking.TrackingProfile>
-- [<span data-ttu-id="02189-137">ワークフローの追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="02189-137">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="02189-138">追跡プロファイル</span><span class="sxs-lookup"><span data-stu-id="02189-138">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="7b29f-136">ワークフローの追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="7b29f-136">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="7b29f-137">追跡プロファイル</span><span class="sxs-lookup"><span data-stu-id="7b29f-137">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
