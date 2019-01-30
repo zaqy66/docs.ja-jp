@@ -1,24 +1,24 @@
 ---
-title: '&lt;binaryMessageEncoding&gt;'
+title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: 7753340be01c407157d9a0576f31db4245c0b4f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faad93554954accd341a1fc2262251fbda61910c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672844"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254536"
 ---
-# <a name="ltbinarymessageencodinggt"></a><span data-ttu-id="2885d-102">&lt;binaryMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="2885d-102">&lt;binaryMessageEncoding&gt;</span></span>
-<span data-ttu-id="2885d-103">ネットワーク上で Windows Communication Foundation (WCF) メッセージをバイナリにエンコードするバイナリ メッセージ エンコーダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="2885d-103">Defines a binary message encoder that encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span>  
+# <a name="binarymessageencoding"></a><span data-ttu-id="82d3a-101">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="82d3a-101">\<binaryMessageEncoding></span></span>
+<span data-ttu-id="82d3a-102">ネットワーク上で Windows Communication Foundation (WCF) メッセージをバイナリにエンコードするバイナリ メッセージ エンコーダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="82d3a-102">Defines a binary message encoder that encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span>  
   
- <span data-ttu-id="2885d-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="2885d-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="2885d-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="2885d-105">\<bindings></span></span>  
-<span data-ttu-id="2885d-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="2885d-106">\<customBinding></span></span>  
-<span data-ttu-id="2885d-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="2885d-107">\<binding></span></span>  
-<span data-ttu-id="2885d-108">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="2885d-108">\<binaryMessageEncoding></span></span>  
+ <span data-ttu-id="82d3a-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="82d3a-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="82d3a-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="82d3a-104">\<bindings></span></span>  
+<span data-ttu-id="82d3a-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="82d3a-105">\<customBinding></span></span>  
+<span data-ttu-id="82d3a-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="82d3a-106">\<binding></span></span>  
+<span data-ttu-id="82d3a-107">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="82d3a-107">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2885d-109">構文</span><span class="sxs-lookup"><span data-stu-id="2885d-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82d3a-108">構文</span><span class="sxs-lookup"><span data-stu-id="82d3a-108">Syntax</span></span>  
   
 ```xml  
 <binaryMessageEncoding maxReadPoolSize="Integer"
@@ -27,36 +27,36 @@ ms.locfileid: "54672844"
                        messageVersion="Soap11Addressing10/Soap12Addressing10" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2885d-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="2885d-110">Attributes and Elements</span></span>  
- <span data-ttu-id="2885d-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="2885d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="82d3a-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="82d3a-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="82d3a-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="82d3a-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2885d-112">属性</span><span class="sxs-lookup"><span data-stu-id="2885d-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="82d3a-111">属性</span><span class="sxs-lookup"><span data-stu-id="82d3a-111">Attributes</span></span>  
   
-|<span data-ttu-id="2885d-113">属性</span><span class="sxs-lookup"><span data-stu-id="2885d-113">Attribute</span></span>|<span data-ttu-id="2885d-114">説明</span><span class="sxs-lookup"><span data-stu-id="2885d-114">Description</span></span>|  
+|<span data-ttu-id="82d3a-112">属性</span><span class="sxs-lookup"><span data-stu-id="82d3a-112">Attribute</span></span>|<span data-ttu-id="82d3a-113">説明</span><span class="sxs-lookup"><span data-stu-id="82d3a-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="2885d-115">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="2885d-115">maxReadPoolSize</span></span>|<span data-ttu-id="2885d-116">新しいリーダーを割り当てずに同時に読み取り可能なメッセージの数を定義する整数です。</span><span class="sxs-lookup"><span data-stu-id="2885d-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="2885d-117">プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。</span><span class="sxs-lookup"><span data-stu-id="2885d-117">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="2885d-118">既定値は 64 です。</span><span class="sxs-lookup"><span data-stu-id="2885d-118">The default is 64.</span></span>|  
-|<span data-ttu-id="2885d-119">maxSessionSize</span><span class="sxs-lookup"><span data-stu-id="2885d-119">maxSessionSize</span></span>|<span data-ttu-id="2885d-120">エンコーディングに使用されるバッファーのサイズをバイト単位で設定する正の整数。</span><span class="sxs-lookup"><span data-stu-id="2885d-120">A positive integer that sets the size, in bytes, of the buffer used for encoding.</span></span> <span data-ttu-id="2885d-121">バッファーが大きくなると、作業セットのサイズの増加時に、エンコーディングの速度が高まります。</span><span class="sxs-lookup"><span data-stu-id="2885d-121">A larger buffer increases encoding speed at the expense of the size of the working set.</span></span> <span data-ttu-id="2885d-122">既定値は 2048 です。</span><span class="sxs-lookup"><span data-stu-id="2885d-122">The default is 2048.</span></span>|  
-|<span data-ttu-id="2885d-123">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="2885d-123">maxWritePoolSize</span></span>|<span data-ttu-id="2885d-124">新しいライターを割り当てずに同時に送信可能なメッセージの数を定義する整数です。</span><span class="sxs-lookup"><span data-stu-id="2885d-124">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="2885d-125">プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。</span><span class="sxs-lookup"><span data-stu-id="2885d-125">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="2885d-126">既定値は 16 です。</span><span class="sxs-lookup"><span data-stu-id="2885d-126">The default is 16.</span></span>|  
-|<span data-ttu-id="2885d-127">messageVersion</span><span class="sxs-lookup"><span data-stu-id="2885d-127">messageVersion</span></span>|<span data-ttu-id="2885d-128">使用または予想される SOAP メッセージおよび WS-Addressing のバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="2885d-128">Specifies the SOAP message and WS-Addressing versions that are used or expected.</span></span>|  
+|<span data-ttu-id="82d3a-114">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="82d3a-114">maxReadPoolSize</span></span>|<span data-ttu-id="82d3a-115">新しいリーダーを割り当てずに同時に読み取り可能なメッセージの数を定義する整数です。</span><span class="sxs-lookup"><span data-stu-id="82d3a-115">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="82d3a-116">プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。</span><span class="sxs-lookup"><span data-stu-id="82d3a-116">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="82d3a-117">既定値は 64 です。</span><span class="sxs-lookup"><span data-stu-id="82d3a-117">The default is 64.</span></span>|  
+|<span data-ttu-id="82d3a-118">maxSessionSize</span><span class="sxs-lookup"><span data-stu-id="82d3a-118">maxSessionSize</span></span>|<span data-ttu-id="82d3a-119">エンコーディングに使用されるバッファーのサイズをバイト単位で設定する正の整数。</span><span class="sxs-lookup"><span data-stu-id="82d3a-119">A positive integer that sets the size, in bytes, of the buffer used for encoding.</span></span> <span data-ttu-id="82d3a-120">バッファーが大きくなると、作業セットのサイズの増加時に、エンコーディングの速度が高まります。</span><span class="sxs-lookup"><span data-stu-id="82d3a-120">A larger buffer increases encoding speed at the expense of the size of the working set.</span></span> <span data-ttu-id="82d3a-121">既定値は 2048 です。</span><span class="sxs-lookup"><span data-stu-id="82d3a-121">The default is 2048.</span></span>|  
+|<span data-ttu-id="82d3a-122">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="82d3a-122">maxWritePoolSize</span></span>|<span data-ttu-id="82d3a-123">新しいライターを割り当てずに同時に送信可能なメッセージの数を定義する整数です。</span><span class="sxs-lookup"><span data-stu-id="82d3a-123">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="82d3a-124">プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。</span><span class="sxs-lookup"><span data-stu-id="82d3a-124">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="82d3a-125">既定値は 16 です。</span><span class="sxs-lookup"><span data-stu-id="82d3a-125">The default is 16.</span></span>|  
+|<span data-ttu-id="82d3a-126">messageVersion</span><span class="sxs-lookup"><span data-stu-id="82d3a-126">messageVersion</span></span>|<span data-ttu-id="82d3a-127">使用または予想される SOAP メッセージおよび WS-Addressing のバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="82d3a-127">Specifies the SOAP message and WS-Addressing versions that are used or expected.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2885d-129">子要素</span><span class="sxs-lookup"><span data-stu-id="2885d-129">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="82d3a-128">子要素</span><span class="sxs-lookup"><span data-stu-id="82d3a-128">Child Elements</span></span>  
   
-|<span data-ttu-id="2885d-130">要素</span><span class="sxs-lookup"><span data-stu-id="2885d-130">Element</span></span>|<span data-ttu-id="2885d-131">説明</span><span class="sxs-lookup"><span data-stu-id="2885d-131">Description</span></span>|  
+|<span data-ttu-id="82d3a-129">要素</span><span class="sxs-lookup"><span data-stu-id="82d3a-129">Element</span></span>|<span data-ttu-id="82d3a-130">説明</span><span class="sxs-lookup"><span data-stu-id="82d3a-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2885d-132">\<readerQuotas></span><span class="sxs-lookup"><span data-stu-id="2885d-132">\<readerQuotas></span></span>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="2885d-133">このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。</span><span class="sxs-lookup"><span data-stu-id="2885d-133">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="2885d-134">この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。</span><span class="sxs-lookup"><span data-stu-id="2885d-134">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="82d3a-131">\<readerQuotas></span><span class="sxs-lookup"><span data-stu-id="82d3a-131">\<readerQuotas></span></span>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="82d3a-132">このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。</span><span class="sxs-lookup"><span data-stu-id="82d3a-132">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="82d3a-133">この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。</span><span class="sxs-lookup"><span data-stu-id="82d3a-133">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2885d-135">親要素</span><span class="sxs-lookup"><span data-stu-id="2885d-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="82d3a-134">親要素</span><span class="sxs-lookup"><span data-stu-id="82d3a-134">Parent Elements</span></span>  
   
-|<span data-ttu-id="2885d-136">要素</span><span class="sxs-lookup"><span data-stu-id="2885d-136">Element</span></span>|<span data-ttu-id="2885d-137">説明</span><span class="sxs-lookup"><span data-stu-id="2885d-137">Description</span></span>|  
+|<span data-ttu-id="82d3a-135">要素</span><span class="sxs-lookup"><span data-stu-id="82d3a-135">Element</span></span>|<span data-ttu-id="82d3a-136">説明</span><span class="sxs-lookup"><span data-stu-id="82d3a-136">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2885d-138">\<binding></span><span class="sxs-lookup"><span data-stu-id="2885d-138">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="2885d-139">カスタム バインドのすべてのバインド機能を定義します。</span><span class="sxs-lookup"><span data-stu-id="2885d-139">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="82d3a-137">\<binding></span><span class="sxs-lookup"><span data-stu-id="82d3a-137">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="82d3a-138">カスタム バインドのすべてのバインド機能を定義します。</span><span class="sxs-lookup"><span data-stu-id="82d3a-138">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2885d-140">Remarks</span><span class="sxs-lookup"><span data-stu-id="2885d-140">Remarks</span></span>  
- <span data-ttu-id="2885d-141">エンコーディングは、メッセージをバイト シーケンスに変換するプロセスです。</span><span class="sxs-lookup"><span data-stu-id="2885d-141">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="2885d-142">デコードは、その逆のプロセスです。</span><span class="sxs-lookup"><span data-stu-id="2885d-142">Decoding is the reverse process.</span></span> <span data-ttu-id="2885d-143">Windows Communication Foundation (WCF) には、SOAP メッセージのエンコードの 3 つの種類が含まれます。テキスト、バイナリ、および Message Transmission Optimization Mechanism (MTOM)。</span><span class="sxs-lookup"><span data-stu-id="2885d-143">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="82d3a-139">Remarks</span><span class="sxs-lookup"><span data-stu-id="82d3a-139">Remarks</span></span>  
+ <span data-ttu-id="82d3a-140">エンコーディングは、メッセージをバイト シーケンスに変換するプロセスです。</span><span class="sxs-lookup"><span data-stu-id="82d3a-140">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="82d3a-141">デコードは、その逆のプロセスです。</span><span class="sxs-lookup"><span data-stu-id="82d3a-141">Decoding is the reverse process.</span></span> <span data-ttu-id="82d3a-142">Windows Communication Foundation (WCF) には、SOAP メッセージのエンコードの 3 つの種類が含まれます。テキスト、バイナリ、および Message Transmission Optimization Mechanism (MTOM)。</span><span class="sxs-lookup"><span data-stu-id="82d3a-142">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
   
- <span data-ttu-id="2885d-144">`binaryMessageEncoding` 要素は、XML 用の .NET バイナリ形式を指定します。この要素には、使用する文字エンコーディング、SOAP バージョン、および WS-Addressing バージョンを指定するオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="2885d-144">The `binaryMessageEncoding` element specifies the .NET Binary Format for XML and has options to specify the character encoding and the SOAP and WS-Addressing version to be used.</span></span> <span data-ttu-id="2885d-145">バイナリ メッセージ エンコーダーは、ネットワーク上で Windows Communication Foundation (WCF) メッセージをバイナリにエンコードします。</span><span class="sxs-lookup"><span data-stu-id="2885d-145">The binary message encoder encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span> <span data-ttu-id="2885d-146">このエンコーディングによりメッセージ転送は非常に高速になりますが、WS-\* 標準に基づいた相互運用性は失われます。</span><span class="sxs-lookup"><span data-stu-id="2885d-146">While this encoding results in very fast transmission of messages, interoperability based on the WS-\* standards is lost.</span></span>  
+ <span data-ttu-id="82d3a-143">`binaryMessageEncoding` 要素は、XML 用の .NET バイナリ形式を指定します。この要素には、使用する文字エンコーディング、SOAP バージョン、および WS-Addressing バージョンを指定するオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="82d3a-143">The `binaryMessageEncoding` element specifies the .NET Binary Format for XML and has options to specify the character encoding and the SOAP and WS-Addressing version to be used.</span></span> <span data-ttu-id="82d3a-144">バイナリ メッセージ エンコーダーは、ネットワーク上で Windows Communication Foundation (WCF) メッセージをバイナリにエンコードします。</span><span class="sxs-lookup"><span data-stu-id="82d3a-144">The binary message encoder encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span> <span data-ttu-id="82d3a-145">このエンコーディングによりメッセージ転送は非常に高速になりますが、WS-\* 標準に基づいた相互運用性は失われます。</span><span class="sxs-lookup"><span data-stu-id="82d3a-145">While this encoding results in very fast transmission of messages, interoperability based on the WS-\* standards is lost.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2885d-147">例</span><span class="sxs-lookup"><span data-stu-id="2885d-147">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="82d3a-146">例</span><span class="sxs-lookup"><span data-stu-id="82d3a-146">Example</span></span>  
   
 ```xml  
 <binaryMessageEncoding maxReadPoolSize="211"
@@ -64,14 +64,14 @@ ms.locfileid: "54672844"
                        maxSessionSize="3141" />
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2885d-148">関連項目</span><span class="sxs-lookup"><span data-stu-id="2885d-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="82d3a-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="82d3a-147">See also</span></span>
 - <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
-- [<span data-ttu-id="2885d-149">メッセージ エンコーディング</span><span class="sxs-lookup"><span data-stu-id="2885d-149">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [<span data-ttu-id="2885d-150">メッセージ エンコーダーを選択する</span><span class="sxs-lookup"><span data-stu-id="2885d-150">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [<span data-ttu-id="2885d-151">バインディング</span><span class="sxs-lookup"><span data-stu-id="2885d-151">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="2885d-152">バインディングの拡張</span><span class="sxs-lookup"><span data-stu-id="2885d-152">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="2885d-153">カスタム バインディング</span><span class="sxs-lookup"><span data-stu-id="2885d-153">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="2885d-154">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="2885d-154">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="82d3a-148">メッセージ エンコーディング</span><span class="sxs-lookup"><span data-stu-id="82d3a-148">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [<span data-ttu-id="82d3a-149">メッセージ エンコーダーを選択する</span><span class="sxs-lookup"><span data-stu-id="82d3a-149">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [<span data-ttu-id="82d3a-150">バインディング</span><span class="sxs-lookup"><span data-stu-id="82d3a-150">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="82d3a-151">バインディングの拡張</span><span class="sxs-lookup"><span data-stu-id="82d3a-151">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="82d3a-152">カスタム バインディング</span><span class="sxs-lookup"><span data-stu-id="82d3a-152">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="82d3a-153">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="82d3a-153">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
