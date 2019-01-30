@@ -1,15 +1,15 @@
 ---
-title: '&lt;wsdlImporter&gt;'
+title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 5f3d53111c4d303146701b03d7e7b32833cd9edd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6c8661f94610d932ffee631aee7ad060f04c6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651046"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269316"
 ---
-# <a name="ltwsdlimportergt"></a>&lt;wsdlImporter&gt;
+# <a name="wsdlimporter"></a>\<wsdlImporter >
 WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデータをインポートするすべての WSDL インポーターを指定します。  
   
 \<system.ServiceModel >  

@@ -1,5 +1,5 @@
 ---
-title: 型の値&#39; &lt;typename1&gt; &#39;に変換できない&#39; &lt;typename2&gt; &#39; (複数ファイル参照)
+title: 型 '<typename1>' の値を '<typename2>' に変換することはできません。(複数ファイル参照)
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30961
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 943b9612a9217b90c19f34285e812c4e1cccf81a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691374"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261348"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>型の値&#39; &lt;typename1&gt; &#39;に変換できない&#39; &lt;typename2&gt; &#39; (複数ファイル参照)
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>型の値 '\<typename1 >' に変換できません'\<typename2 >' (複数ファイル参照)。
 型の値 '\<typename1 >' に変換できません。'\<typename2 >'。 型の不一致がへの参照をファイルの混合によって生じた可能性があります '\<filepath1 >' プロジェクトで'\<projectname1 >' への参照をファイルに '\<filepath2 >' プロジェクトで'\<projectname2 >'。 両方のアセンブリが同一である場合は、これらの参照を同じ場所から参照するように置き換えてください。  
   
  プロジェクト アセンブリへの 1 つ以上のファイル参照は、場所の状況で、コンパイラは別に 1 つの型を変換できることを保証することはできません。  

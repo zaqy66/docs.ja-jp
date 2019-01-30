@@ -1,5 +1,5 @@
 ---
-title: 入力&#39; &lt;variablename&gt; &#39;ループの境界とステップの変数が同じ型に変換されないため、推論することはできません
+title: ループの境界とステップの句が同じ型に変換されないため、'<variablename>' の型を推論できません
 ms.date: 07/20/2015
 f1_keywords:
 - bc30982
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1ae14426181778a78254db8a5cd968d60bbdc8f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631263"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287496"
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>入力&#39; &lt;variablename&gt; &#39;ループの境界とステップの変数が同じ型に変換されないため、推論することはできません
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>型 '\<variablename >' ループの境界とステップの変数が同じ型に変換されないため、推論することはできません
 記述した、`For...Next`をコンパイラを推論できませんループ コントロール変数のデータ型を次の条件に当てはまるため、ループ。  
   
 -   ループ コントロール変数のデータ型が `As` 句で指定されていません。  

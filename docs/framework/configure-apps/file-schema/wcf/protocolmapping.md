@@ -1,15 +1,15 @@
 ---
-title: '&lt;protocolMapping&gt;'
+title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 199a5d820a80565ccdfa2cb11fe749d63bd65087
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec17457c8742fdf17208c6588e0ab70ece7c42a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644261"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268674"
 ---
-# <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
+# <a name="protocolmapping"></a>\<protocolMapping >
 トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義する構成セクションを表します。 実行時に既定のエンドポイントを作成するときに、Windows Communication Foundation (WCF) が構成済みのマッピングではされ、特定に使用するバインディングをベース アドレスを決定します。  
   
 [**\<system.serviceModel>**](system-servicemodel.md)  

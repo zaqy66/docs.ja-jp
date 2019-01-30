@@ -1,5 +1,5 @@
 ---
-title: 型の式&lt;型&gt;はクエリ不可能
+title: 型 <type> の式はクエリ不可能です
 ms.date: 07/20/2015
 f1_keywords:
 - bc36593
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: ce0831e0770e5733759c072b8d7c6f20b56f771b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521492"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261257"
 ---
-# <a name="expression-of-type-lttypegt-is-not-queryable"></a>型の式&lt;型&gt;はクエリ不可能
+# <a name="expression-of-type-type-is-not-queryable"></a>型の式\<型 > はクエリ不可能
 型の式\<型 > はクエリ不可能です。 LINQ プロバイダーに対してアセンブリ参照や名前空間インポートを欠落していないことを確認します。  
   
  クエリ可能型が定義されている、 <xref:System.Linq>、 <xref:System.Data.Linq>、および<xref:System.Xml.Linq>名前空間。 1 つ以上の LINQ クエリを実行するこれらの名前空間をインポートする必要があります。  

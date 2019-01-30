@@ -1,15 +1,15 @@
 ---
-title: '&lt;診断&gt;'
+title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2041125e5bb538a9b64beb54778219c2a51a18f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524595"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264713"
 ---
-# <a name="ltdiagnosticsgt"></a>&lt;診断&gt;
+# <a name="diagnostics"></a>\<diagnostics>
 `diagnostics` 要素は、ランタイムの検査と管理を行う管理者が使用できる設定を定義します。  
   
  \<system.ServiceModel >  
