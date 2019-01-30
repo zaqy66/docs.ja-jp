@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: ce8e4f0ebb086ca2f8335a0a5a625638e079fde2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638302"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204809"
 ---
 # <a name="examples-of-xml-serialization"></a>XML シリアル化の例
 XML シリアル化は、単純な形式から複雑な形式に至るまで、さまざまな形で実行できます。 たとえば、「[XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)」に示すように、パブリック フィールドとパブリック プロパティだけで構成されるクラスをシリアル化できます。 次の例では、XML シリアル化を使用して特定の XML スキーマ (XSD) ドキュメントに準拠する XML ストリームを生成する方法など、各種の高度なシナリオに対応するコード例を示します。  
@@ -71,7 +71,7 @@ private void SerializeDataSet(string filename){
 ```  
   
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>XmlElement および XmlNode のシリアル化  
- 次のコード例に示すように、<xref:System.Xml.XmlElement> クラスまたは <xref:System.Xml.XmlNode> クラスのインスタンスもシリアル化できます。  
+ インスタンスをシリアル化することも、<xref:System.Xml.XmlElement>または<xref:System.Xml.XmlNode>クラスに、次のコード例に示すようにします。  
   
 ```vb  
 private Sub SerializeElement(filename As String)  
@@ -146,9 +146,9 @@ public class Address
   
 ```xml  
 <PurchaseOrder>  
-    <Address>  
+    <MyAddress>  
         <FirstName>George</FirstName>  
-    </Address>  
+    </MyAddress>  
 </PurchaseOrder>  
 ```  
   
@@ -169,13 +169,13 @@ End Class
 ```csharp  
 public class PurchaseOrder  
 {  
-    public Item [] ItemsOrders  
+    public Item [] ItemsOrders;  
 }  
   
 public class Item  
 {  
-    public string ItemID  
-    public decimal ItemPrice  
+    public string ItemID;  
+    public decimal ItemPrice;  
 }  
 ```  
   
@@ -183,7 +183,7 @@ public class Item
   
 ```xml  
 <PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
-    <Items>  
+    <ItemsOrders>  
         <Item>  
             <ItemID>aaa111</ItemID>  
             <ItemPrice>34.22</ItemPrice>  
@@ -192,7 +192,7 @@ public class Item
             <ItemID>bbb222</ItemID>  
             <ItemPrice>2.89</ItemPrice>  
         <Item>  
-    </Items>  
+    </ItemsOrders>  
 </PurchaseOrder>  
 ```  
   
@@ -363,7 +363,7 @@ public class Employee {
   
  `CreatePO` メソッドは、`PurchaseOrder`、`Address`、`OrderedItem` の各クラス オブジェクトを作成し、それらのパブリック フィールドの値を設定します。 このメソッドは、<xref:System.Xml.Serialization.XmlSerializer> のシリアル化および逆シリアル化に使用される `PurchaseOrder` クラスのインスタンスも生成します。 このコードは、シリアル化されるクラスの型をコンストラクターに渡します。 さらに、XML ストリームを XML ドキュメントに書き込むために使用する `FileStream` も作成します。  
   
- `ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 `CreatePo` メソッドの場合と同様に、まず、逆シリアル化の対象となるクラスの型をコンストラクターに渡して、<xref:System.Xml.Serialization.XmlSerializer> を生成する必要があります。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。  
+ `ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。  
   
 ```vb  
 Imports System  
@@ -395,8 +395,8 @@ End Class
   
 Public Class Address  
     ' The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    ' Name field as an XML attribute instead of an XML element (the   
-    ' default behavior).   
+    ' Name field as an XML attribute instead of an XML element (XML element is  
+    ' the default behavior).     
     <XmlAttribute()> _  
     Public Name As String  
     Public Line1 As String  
@@ -575,8 +575,8 @@ public class PurchaseOrder
 public class Address  
 {  
     // The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    // Name field as an XML attribute instead of an XML element (the   
-    // default behavior).  
+    // Name field as an XML attribute instead of an XML element (XML element is  
+    // the default behavior).  
     [XmlAttribute]  
     public string Name;  
     public string Line1;  

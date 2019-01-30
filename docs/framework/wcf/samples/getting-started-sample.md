@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 69cafb53feca392729c20efe0de3d1e74362dc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69dad31e750143af8fee94de9ccdbfd609737fe
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720562"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204484"
 ---
 # <a name="getting-started-sample"></a>入門サンプル
 Getting Started サンプルでは、一般的なサービスと Windows Communication Foundation (WCF) を使用して一般的なクライアントを実装する方法を示します。 このサンプルは、他のすべての基本的な技術サンプルの基礎になります。  
@@ -27,7 +27,7 @@ Getting Started サンプルでは、一般的なサービスと Windows Communi
 >   
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`  
   
  サービスが実行する操作は、メタデータとしてパブリックに公開するサービス コントラクト内に表されています。 また、サービスにはその操作を実装するためのコードが含まれています。  
   

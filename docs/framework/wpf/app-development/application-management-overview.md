@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 39e78be4806a58d8e274d1e6ce58a1f1ee46ce1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae02f77948da9b1371db1d1b67ce5030d207c0e8
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592034"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204848"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、機能の概要、<xref:System.Windows.Application>クラスを作成すると、アプリケーションを管理します。  
    
   
 ## <a name="the-application-class"></a>Application クラス  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]でアプリケーション スコープの一般的な機能がカプセル化、<xref:System.Windows.Application>クラス。 <xref:System.Windows.Application>クラスには、次の機能が含まれています。  
+ WPF では、一般的なアプリケーション スコープの機能がカプセル化された、<xref:System.Windows.Application>クラス。 <xref:System.Windows.Application>クラスには、次の機能が含まれています。  
   
 -   アプリケーションの有効期間を追跡し、相互作用する。  
   
@@ -56,10 +56,10 @@ ms.locfileid: "54592034"
   
 <a name="The_Application_Definition"></a>   
 ## <a name="the-application-definition"></a>アプリケーション定義  
- 機能を利用する、<xref:System.Windows.Application>クラス、アプリケーション定義を実装する必要があります。 A[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション定義から派生したクラスは、<xref:System.Windows.Application>で特別な構成と[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]設定します。  
-  
+ 機能を利用する、<xref:System.Windows.Application>クラス、アプリケーション定義を実装する必要があります。 WPF アプリケーションの定義から派生したクラスは、<xref:System.Windows.Application>が特殊な MSBuild 設定で構成されているとします。  
+
 ### <a name="implementing-an-application-definition"></a>アプリケーション定義の実装  
- 一般的な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション定義は、マークアップと分離コードの両方を使用して実装されます。 これにより、マークアップを使用して、アプリケーションのプロパティやリソースを宣言によって設定したり、イベントを登録したりでき、分離コードでイベントを処理し、アプリケーション固有の動作を実装することができます。  
+ 一般的な WPF アプリケーションの定義は、マークアップと分離コードの両方を使用して実装されます。 これにより、マークアップを使用して、アプリケーションのプロパティやリソースを宣言によって設定したり、イベントを登録したりでき、分離コードでイベントを処理し、アプリケーション固有の動作を実装することができます。  
   
  次の例では、マークアップと分離コードの両方を使用してアプリケーション定義を実装する方法を示します。  
   
@@ -70,19 +70,19 @@ ms.locfileid: "54592034"
   
  マークアップ ファイルと分離コード ファイルを連携させるには、次のようにする必要があります。  
   
--   マークアップでは、`Application`要素を含める必要があります、`x:Class`属性。 ときに、アプリケーションがビルドが存在する`x:Class`ファイルにより、マークアップで[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]を作成する、`partial`クラスから派生した<xref:System.Windows.Application>によって指定された名前を持つ、`x:Class`属性。 追加する必要があります、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]名前空間宣言、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]スキーマ ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。  
+- マークアップでは、`Application`要素を含める必要があります、`x:Class`属性。 ときに、アプリケーションがビルドが存在する`x:Class`を作成するために MSBuild を原因と、マークアップ ファイルを`partial`クラスから派生した<xref:System.Windows.Application>によって指定された名前を持つ、`x:Class`属性。 XAML スキーマの XML 名前空間宣言を追加する必要があります (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`)。
   
 -   分離コード クラスがある必要があります、`partial`によって指定される同じ名前のクラス、`x:Class`マークアップ属性およびから派生する必要があります<xref:System.Windows.Application>します。 これにより、分離コード ファイルに関連付けられる、`partial`アプリケーションのビルド時にマークアップ ファイル用に生成されたクラス (を参照してください[WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。  
   
 > [!NOTE]
->  新しい WPF アプリケーション プロジェクトまたはを使用して WPF ブラウザー アプリケーション プロジェクトを作成するときに[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、アプリケーション定義が既定で含まれているし、マークアップと分離コードの両方を使用して定義されます。  
+>  新しい WPF アプリケーション プロジェクトまたは Visual Studio を使用して WPF ブラウザー アプリケーション プロジェクトを作成するときに、アプリケーション定義は既定で含まれているし、マークアップと分離コードの両方を使用して定義されます。  
   
- このコードは、アプリケーション定義を実装するために最低限必要です。 ただし、追加[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]構成を構築してアプリケーションを実行する前に、アプリケーション定義をできる必要があります。  
+ このコードは、アプリケーション定義を実装するために最低限必要です。 ただし、追加の MSBuild の構成を構築してアプリケーションを実行する前にアプリケーション定義にする必要があります。  
   
 ### <a name="configuring-the-application-definition-for-msbuild"></a>MSBuild 用のアプリケーション定義の構成  
- スタンドアロン アプリケーションと[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]を実行する前に、特定のレベルのインフラストラクチャの実装を必要とします。 このインフラストラクチャの最も重要な部分は、エントリ ポイントです。 ユーザーがアプリケーションを起動するとき、オペレーティング システムはエントリ ポイントを呼び出します。これは、アプリケーションを起動するための、よく知られている機能です。  
+ スタンドアロン アプリケーションと XAML ブラウザー アプリケーション (Xbap) に実行する前に、一定レベルのインフラストラクチャの実装が必要です。 このインフラストラクチャの最も重要な部分は、エントリ ポイントです。 ユーザーがアプリケーションを起動するとき、オペレーティング システムはエントリ ポイントを呼び出します。これは、アプリケーションを起動するための、よく知られている機能です。  
   
- 従来、開発者は、テクノロジに応じて、このコードの一部または全部を自分で記述する必要がありました。 ただし、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]として、アプリケーション定義のマークアップ ファイルが構成されている場合は、このコードを生成、 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition`項目を次に示す[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]プロジェクト ファイル。  
+ 従来、開発者は、テクノロジに応じて、このコードの一部または全部を自分で記述する必要がありました。 ただし、WPF このコードを生成する MSBuild として、アプリケーション定義のマークアップ ファイルが構成されている`ApplicationDefinition`項目を次の MSBuild プロジェクト ファイルに示すようにします。  
   
 ```xml  
 <Project   
@@ -95,16 +95,14 @@ ms.locfileid: "54592034"
 </Project>  
 ```  
   
- としてマークされている分離コード ファイルにコードが含まれているため、 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile`項目、通常は。  
+ MSBuild とマークされている分離コード ファイルには、コードが含まれている、ため`Compile`項目、通常は。  
   
- これらのアプリケーション[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]アプリケーション定義のマークアップと分離コード ファイルに構成が[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]次のようなコードを生成します。  
+ アプリケーション定義のマークアップと分離コード ファイルにこれらの MSBuild 構成のアプリケーションでは、次のようなコードを生成する MSBuild が発生します。  
   
- [!code-csharp[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode1)]
- [!code-vb[AppDefAugSnippets#AppDefAugCODE1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode1)]  
-[!code-csharp[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs#appdefaugcode2)]
-[!code-vb[AppDefAugSnippets#AppDefAugCODE2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb#appdefaugcode2)]  
+ [!code-csharp[auto-generated-code](~/samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs)]
+ [!code-vb[auto-generated-code](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb)]  
   
- 結果のコードは、アプリケーション定義に追加のインフラストラクチャのコードは、エントリ ポイント メソッドが含まれる`Main`します。 <xref:System.STAThreadAttribute>属性に適用されます、`Main`メソッドを示すために、メイン[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションは STA スレッドでの必要な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。 呼び出されると、`Main`の新しいインスタンスを作成します。`App`呼び出す前に、`InitializeComponent`マークアップでイベントが登録され、プロパティを設定するメソッドを実装します。 `InitializeComponent`が生成される、明示的に呼び出す必要はありません`InitializeComponent`と同じように、アプリケーション定義から<xref:System.Windows.Controls.Page>と<xref:System.Windows.Window>実装します。 最後に、<xref:System.Windows.Application.Run%2A>メソッドが呼び出され、アプリケーションを起動します。  
+ 結果のコードは、アプリケーション定義に追加のインフラストラクチャのコードは、エントリ ポイント メソッドが含まれる`Main`します。 <xref:System.STAThreadAttribute>属性に適用されます、`Main`メソッドの WPF アプリケーションのメイン UI スレッドが STA スレッドでは WPF アプリケーションに必要であることを示します。 呼び出されると、`Main`の新しいインスタンスを作成します。`App`呼び出す前に、`InitializeComponent`マークアップでイベントが登録され、プロパティを設定するメソッドを実装します。 `InitializeComponent`が生成される、明示的に呼び出す必要はありません`InitializeComponent`と同じように、アプリケーション定義から<xref:System.Windows.Controls.Page>と<xref:System.Windows.Window>実装します。 最後に、<xref:System.Windows.Application.Run%2A>メソッドが呼び出され、アプリケーションを起動します。  
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>現在のアプリケーションの取得  
@@ -126,7 +124,7 @@ ms.locfileid: "54592034"
   
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>アプリケーションの有効期間  
- 有効期間、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]によって発生するいくつかのイベントによってアプリケーションがマークされている<xref:System.Windows.Application>アプリケーションが開始したことを知らせるがアクティブ化され、非アクティブ化し、シャット ダウンされています。  
+ WPF アプリケーションの有効期間がによって発生するいくつかのイベントによってマークされている<xref:System.Windows.Application>アプリケーションが開始したことを知らせるがアクティブ化され、非アクティブ化し、シャット ダウンされています。  
   
   
 <a name="Splash_Screen"></a>   
@@ -137,14 +135,12 @@ ms.locfileid: "54592034"
 ### <a name="starting-an-application"></a>アプリケーションの起動  
  後<xref:System.Windows.Application.Run%2A>が呼び出されますと、アプリケーションが初期化される、アプリケーションを実行する準備ができます。 ときにこの時点で表されますが、<xref:System.Windows.Application.Startup>イベントが発生します。  
   
- [!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind1)]
- [!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind1)]  
-[!code-csharp[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#startupcodebehind2)]
-[!code-vb[ApplicationStartupSnippets#StartupCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#startupcodebehind2)]  
+[!code-csharp[Startup-event](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs?range=3-11,31-33)]
+[!code-vb[Startup-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb?range=5-11,30-32)]
   
- この時点でアプリケーションの有効期間、最も一般的なことを行うには表示、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。  
+ この時点で、アプリケーションの有効期間は最も一般的なすは UI を表示します。  
   
-<a name="Showing_a_User_Interface"></a>   
+<a name="Showing_a_User_Interface"></a>
 ### <a name="showing-a-user-interface"></a>ユーザー インターフェイスの表示  
  ほとんどのスタンドアロンの Windows アプリケーションを開く、<xref:System.Windows.Window>開始時期を実行します。 <xref:System.Windows.Application.Startup>次のコードに示すように、イベント ハンドラーが 1 つの場所がこれを行うことができます。  
   
@@ -156,7 +152,7 @@ ms.locfileid: "54592034"
 > [!NOTE]
 >  最初の<xref:System.Windows.Window>スタンドアロンのインスタンス化される、既定で、アプリケーションでアプリケーションのメイン ウィンドウになります。 これは、<xref:System.Windows.Window>によってオブジェクトが参照される、<xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>プロパティ。 値、<xref:System.Windows.Application.MainWindow%2A>場合最初よりも、別のウィンドウにプロパティをプログラムで変更することができますをインスタンス化<xref:System.Windows.Window>メイン ウィンドウにする必要があります。  
   
- ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]最初の開始にはほとんどの場合に移動、<xref:System.Windows.Controls.Page>します。 これを次のコードに示します。  
+ 移動が多くの場合、XBAP を最初に起動するとき、<xref:System.Windows.Controls.Page>します。 これを次のコードに示します。  
   
  [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
@@ -169,7 +165,7 @@ ms.locfileid: "54592034"
   
  [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
- 次の例は、使用する方法を示します<xref:System.Windows.Application.StartupUri%2A>から、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]に移動する、<xref:System.Windows.Controls.Page>します。  
+ 次の例は、使用する方法を示します<xref:System.Windows.Application.StartupUri%2A>XBAP に移動しますから、<xref:System.Windows.Controls.Page>します。  
   
  [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
@@ -186,7 +182,7 @@ ms.locfileid: "54592034"
   
  `wpfapplication.exe /StartMinimized`  
   
- アプリケーションの初期化中に[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]オペレーティング システムからコマンドライン引数を取得し、コマンドを渡し、<xref:System.Windows.Application.Startup>イベント ハンドラーを使用して、<xref:System.Windows.StartupEventArgs.Args%2A>のプロパティ、<xref:System.Windows.StartupEventArgs>パラメーター。 次のようなコードを使用して、コマンド ライン引数を取得し、格納することができます。  
+ WPF、アプリケーションの初期化中に、オペレーティング システムからコマンドライン引数を取得およびコマンドを渡し、<xref:System.Windows.Application.Startup>イベント ハンドラーを使用して、<xref:System.Windows.StartupEventArgs.Args%2A>のプロパティ、<xref:System.Windows.StartupEventArgs>パラメーター。 次のようなコードを使用して、コマンド ライン引数を取得し、格納することができます。  
   
  [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
@@ -195,7 +191,7 @@ ms.locfileid: "54592034"
   
  コード ハンドル<xref:System.Windows.Application.Startup>を確認するかどうか、 **/StartMinimized**コマンドライン引数が指定されました。 メイン ウィンドウに開いた場合は、を<xref:System.Windows.WindowState>の<xref:System.Windows.WindowState.Minimized>します。 ため、<xref:System.Windows.Window.WindowState%2A>プロパティ プログラムでは、メイン<xref:System.Windows.Window>コードで明示的に開く必要があります。  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 取得しを使用して起動するためにコマンドライン引数を処理できません[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]展開 (を参照してください[WPF アプリケーションの配置](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md))。 ただし、起動に使用される URL のクエリ文字列パラメーターを取得して処理することはできます。  
+ Xbap は取得できず、ClickOnce 配置を使用して起動するためにコマンドライン引数を処理 (を参照してください[WPF アプリケーションの配置](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md))。 ただし、起動に使用される URL のクエリ文字列パラメーターを取得して処理することはできます。  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>アプリケーションのアクティブ化と非アクティブ化  
@@ -225,7 +221,7 @@ ms.locfileid: "54592034"
  A<xref:System.Windows.Window>アクティブおよび非アクティブ化できるはもします。 詳細については、「<xref:System.Windows.Window.Activated?displayProperty=nameWithType>」および「<xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>」を参照してください。  
   
 > [!NOTE]
->  どちらも<xref:System.Windows.Application.Activated?displayProperty=nameWithType>も<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>が発生した[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。  
+>  どちらも<xref:System.Windows.Application.Activated?displayProperty=nameWithType>も<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>Xbap が発生します。  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>アプリケーションのシャットダウン  
@@ -242,7 +238,7 @@ ms.locfileid: "54592034"
  アプリケーションのシャット ダウンの管理に役立つ<xref:System.Windows.Application>を提供します、<xref:System.Windows.Application.Shutdown%2A>メソッド、<xref:System.Windows.Application.ShutdownMode%2A>プロパティ、および<xref:System.Windows.Application.SessionEnding>と<xref:System.Windows.Application.Exit>イベント。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A> 持つアプリケーションから呼び出すことができますのみ<xref:System.Security.Permissions.UIPermission>します。 スタンドアロン[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションが常にこの権限を持っています。 ただし、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]しないインターネット ゾーン部分信頼セキュリティ サンド ボックスで実行されています。  
+>  <xref:System.Windows.Application.Shutdown%2A> 持つアプリケーションから呼び出すことができますのみ<xref:System.Security.Permissions.UIPermission>します。 スタンドアロン WPF アプリケーションには、常に、このアクセス許可があります。 ただし、インターネット ゾーン部分信頼セキュリティ サンド ボックスで実行されている Xbap は必要ありません。  
   
 #### <a name="shutdown-mode"></a>シャットダウン モード  
  ほとんどのアプリケーションは、すべてのウィンドウが閉じられるか、メイン ウィンドウが閉じられたときにシャットダウンします。 ただし、場合によっては、他のアプリケーションに固有の条件によって、アプリケーションがシャット ダウンするタイミングに影響します。 アプリケーションがシャットを設定して、条件を指定する<xref:System.Windows.Application.ShutdownMode%2A>、次のいずれかで<xref:System.Windows.ShutdownMode>列挙値。  
@@ -253,14 +249,14 @@ ms.locfileid: "54592034"
   
 -   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
- 既定値<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnLastWindowClose>アプリケーションに自動的にシャット ダウン、ユーザーがアプリケーションの最後のウィンドウを閉じたときのことを意味します。 ただし、アプリケーションをシャット ダウンする場合は場合、メイン ウィンドウが閉じられた、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]自動的に設定した場合は<xref:System.Windows.Application.ShutdownMode%2A>に<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。 これを次の例に示します。  
+ 既定値<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnLastWindowClose>アプリケーションに自動的にシャット ダウン、ユーザーがアプリケーションの最後のウィンドウを閉じたときのことを意味します。 ただし場合は、アプリケーションはメイン ウィンドウが閉じられたときに、シャット ダウンする必要があります、WPF が自動的を設定した場合<xref:System.Windows.Application.ShutdownMode%2A>に<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。 これを次の例に示します。  
   
  [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
  設定するときに、アプリケーション固有のシャット ダウン条件がある場合は、<xref:System.Windows.Application.ShutdownMode%2A>に<xref:System.Windows.ShutdownMode.OnExplicitShutdown>します。 明示的に呼び出すことによって、アプリケーションをシャット ダウンする必要がここで、<xref:System.Windows.Application.Shutdown%2A>メソッドです。 それ以外の場合、アプリケーションが引き続きすべてのウィンドウを閉じた場合でも実行します。 なお<xref:System.Windows.Application.Shutdown%2A>暗黙的にすると呼び出されます、<xref:System.Windows.Application.ShutdownMode%2A>か<xref:System.Windows.ShutdownMode.OnLastWindowClose>または<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> 設定することができます、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]は無視されますが、;、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]が常にシャット ダウンがブラウザーまたはブラウザーをホストするときから移動時に、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]が閉じられました。 詳細については、「[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)」を参照してください。  
+>  <xref:System.Windows.Application.ShutdownMode%2A> XBAP から設定できますが、無視されます。ブラウザーまたは XBAP をホストするブラウザーが閉じられたときから移動、ときに、常に、XBAP はシャット ダウンです。 詳細については、「[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)」を参照してください。  
   
 #### <a name="session-ending"></a>セッションの終了  
  によって記述されるシャット ダウン条件、<xref:System.Windows.Application.ShutdownMode%2A>プロパティは、アプリケーションに固有です。 ただし、場合によっては、アプリケーションは、外部条件の結果としてシャットダウンすることもあります。 最も一般的な外部条件は、ユーザーは、次の操作を Windows セッションを終了したときに発生します。  
@@ -283,34 +279,31 @@ ms.locfileid: "54592034"
  この例で、コードの検査、 <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> Windows セッションが終了する方法を決定するプロパティ。 この値を使用して、ユーザーに確認メッセージを表示します。 ユーザーがセッションの終了をしない場合、コードが設定<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>に`true`Windows セッションを終了に防ぐためにします。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding> 発生しません[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。  
-  
+>  <xref:System.Windows.Application.SessionEnding> Xbap は発生しません。
+
 #### <a name="exit"></a>終了  
- アプリケーションがシャット ダウンするときには、アプリケーション状態の保存など、いくつかの最終処理を実行しなければならない場合があります。 このような場合は、処理することができます、<xref:System.Windows.Application.Exit>イベント。  
+ アプリケーションがシャット ダウンするときには、アプリケーション状態の保存など、いくつかの最終処理を実行しなければならない場合があります。 このような場合は、処理することができます、<xref:System.Windows.Application.Exit>イベントとして、`App_Exit`イベント ハンドラーは、次の例です。 内のイベント ハンドラーとして定義されて、 *App.xaml*ファイル。 その実装で強調表示されて、 *App.xaml.cs*と*Application.xaml.vb*ファイル。
   
- [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+[!code-xaml[Defining-the-Exit-event-handler](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]  
   
- [!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind1)]
- [!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind1)]  
-[!code-csharp[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistappscopepropertiescodebehind2)]
-[!code-vb[HOWTOApplicationModelSnippets#PersistAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistappscopepropertiescodebehind2)]  
+ [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
+ [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
  完全な例では、次を参照してください。[を永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)します。  
   
- <xref:System.Windows.Application.Exit> 両方のスタンドアロン アプリケーションで処理できると[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]、<xref:System.Windows.Application.Exit>は、次の状況で発生します。  
+ <xref:System.Windows.Application.Exit> スタンドアロン アプリケーションと Xbap の両方で処理できます。 Xbap の<xref:System.Windows.Application.Exit>は、次の状況で発生します。  
   
--   [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]から移動します。  
+-   XBAP はから移動します。  
   
--   [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]、ときに、タブをホストしている、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]が閉じられました。  
+-   [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]XBAP をホストするタブが閉じられたときに、します。  
   
 -   ブラウザーが閉じられた。  
   
 #### <a name="exit-code"></a>終了コード  
- ほとんどのアプリケーションは、ユーザー要求に応じてオペレーティング システムから起動されます。 ただし、アプリケーションは、特定のタスクを実行するために、別のアプリケーションに起動されることもあります。 起動されたアプリケーションがシャット ダウンするとき、起動元のアプリケーションは、起動されたアプリケーションのシャット ダウン条件を知ならなければならないことがあります。 このような状況では、Windows は、アプリケーションをシャット ダウン時にアプリケーション終了コードを返すをできます。 既定では、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションは、終了コード値が 0 を返します。  
+ ほとんどのアプリケーションは、ユーザー要求に応じてオペレーティング システムから起動されます。 ただし、アプリケーションは、特定のタスクを実行するために、別のアプリケーションに起動されることもあります。 起動されたアプリケーションがシャット ダウンするとき、起動元のアプリケーションは、起動されたアプリケーションのシャット ダウン条件を知ならなければならないことがあります。 このような状況では、Windows は、アプリケーションをシャット ダウン時にアプリケーション終了コードを返すをできます。 既定では、WPF アプリケーションには、終了コード値 0 が返されます。  
   
 > [!NOTE]
->  デバッグする場合[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]でアプリケーションの終了コードが表示されます、**出力**ウィンドウで、次のようなメッセージ、アプリケーションのシャット ダウン、時。  
+>  アプリケーションの終了コードが表示される Visual Studio からデバッグするときに、**出力**ウィンドウで、次のようなメッセージ、アプリケーションのシャット ダウン、時。  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -324,7 +317,7 @@ ms.locfileid: "54592034"
  終了コードの値を検出して処理することにより、変更、<xref:System.Windows.Application.Exit>イベント。 <xref:System.Windows.Application.Exit>イベント ハンドラーに渡される、<xref:System.Windows.ExitEventArgs>の終了コードへのアクセスを提供する、<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>プロパティ。 詳細については、「 <xref:System.Windows.Application.Exit> 」を参照してください。  
   
 > [!NOTE]
->  両方のスタンドアロン アプリケーションの終了コードを設定して[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。 ただし、終了コード値は無視されます[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。  
+>  終了コードは、スタンドアロン アプリケーションと Xbap の両方で設定できます。 ただし、Xbap の終了コード値が無視されます。  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>未処理の例外  
@@ -338,30 +331,28 @@ ms.locfileid: "54592034"
   
 -   アプリケーションの続行を試みる。  
   
--   記録の詳細、開発者向け Windows イベント ログに例外情報。  
+-   記録なは、Windows イベント ログの開発者にとって使いやすい例外情報。  
   
  これはどのような未処理の例外を検出できることに依存このサポートを実装する、<xref:System.Windows.Application.DispatcherUnhandledException>のイベントが発生します。  
   
- [!code-xaml[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
+[!code-xaml[detecting-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
- [!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind1)]
- [!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind1)]  
-[!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind2)]
-[!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind2)]  
+[!code-csharp[code-to-detect-unhandled-exceptions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
+[!code-vb[code-to-detect-unhandled-exceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
   
  <xref:System.Windows.Application.DispatcherUnhandledException>イベント ハンドラーに渡される、<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs>例外自体を含め、未処理の例外に関するコンテキスト情報を含むパラメーター (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>)。 この情報を使用して、例外の処理方法を決定できます。  
   
- 処理するときに<xref:System.Windows.Application.DispatcherUnhandledException>を設定する必要があります、<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType>プロパティを`true`、それ以外の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]も例外を処理できないし、前に説明した既定の動作に戻ります。 ハンドルされない例外が発生した場合、どちらか、<xref:System.Windows.Application.DispatcherUnhandledException>イベントが処理されない、またはイベントを処理し、<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A>に設定されている`false`アプリケーションがすぐにシャット ダウンします。 さらに、他の<xref:System.Windows.Application>イベントが発生します。 そのため、処理する必要があります<xref:System.Windows.Application.DispatcherUnhandledException>場合は、アプリケーションがあるコードをアプリケーションがシャット ダウンする前に実行する必要があります。  
+ 処理するときに<xref:System.Windows.Application.DispatcherUnhandledException>を設定する必要があります、<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType>プロパティを`true`、それ以外の WPF は引き続き例外を処理できないし、前に説明した既定の動作に戻ります。 ハンドルされない例外が発生した場合、どちらか、<xref:System.Windows.Application.DispatcherUnhandledException>イベントが処理されない、またはイベントを処理し、<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A>に設定されている`false`アプリケーションがすぐにシャット ダウンします。 さらに、他の<xref:System.Windows.Application>イベントが発生します。 そのため、処理する必要があります<xref:System.Windows.Application.DispatcherUnhandledException>場合は、アプリケーションがあるコードをアプリケーションがシャット ダウンする前に実行する必要があります。  
   
  アプリケーションは、未処理の例外の結果としてシャットダウンすることがありますが、通常は、次のセクションで説明されているように、ユーザーの要求に応じてシャットダウンします。  
   
 <a name="Application_Lifetime_Events"></a>   
 ### <a name="application-lifetime-events"></a>アプリケーションの有効期間イベント  
- スタンドアロン アプリケーションと[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]正確に同じ有効期間はありません。 次の図は、スタンドアロン アプリケーションの有効期間中の主なイベントと発生順を示しています。  
+ Xbap のスタンドアロン アプリケーションとまったく同じ有効期間はありません。 次の図は、スタンドアロン アプリケーションの有効期間中の主なイベントと発生順を示しています。  
   
  ![スタンドアロン アプリケーション - アプリケーション オブジェクト イベント](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
- 有効期間に同様に、次の図が主なイベントを示しています、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]、し、発生するシーケンスを示しています。  
+ 同様に、次の図は、XBAP の有効期間における主なイベントを示していて、発生するシーケンスを示しています。  
   
  ![XBAP - アプリケーション オブジェクト イベント](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
