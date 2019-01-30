@@ -1,26 +1,26 @@
 ---
-title: フィールド '&lt;fieldname&gt;'type' の&lt;typename&gt;' は 'ReadOnly'
+title: フィールド '<fieldname>'type' の<typename>' は 'ReadOnly'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_ReadOnlyField2
 ms.assetid: fb51f54b-f12d-4aea-9a6e-6e070721c010
-ms.openlocfilehash: 9796c83db2eac46313e7f5ede8bb618a3a3c584e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77d02cbd58f45e7a2901fc50fe127d0554d219bb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612633"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259203"
 ---
-# <a name="field-ltfieldnamegt-of-type-lttypenamegt-is-readonly"></a><span data-ttu-id="d9ad3-102">フィールド '&lt;fieldname&gt;'type' の&lt;typename&gt;' は 'ReadOnly'</span><span class="sxs-lookup"><span data-stu-id="d9ad3-102">Field '&lt;fieldname&gt;' of type '&lt;typename&gt;' is 'ReadOnly'</span></span>
-<span data-ttu-id="d9ad3-103">`ReadOnly`に宣言されているフィールドに書き込もうとしました。</span><span class="sxs-lookup"><span data-stu-id="d9ad3-103">You attempted to write to a field that is declared `ReadOnly`.</span></span>  
+# <a name="field-fieldname-of-type-typename-is-readonly"></a><span data-ttu-id="e4514-102">フィールド '\<fieldname >' 型の'\<typename >' は 'ReadOnly'</span><span class="sxs-lookup"><span data-stu-id="e4514-102">Field '\<fieldname>' of type '\<typename>' is 'ReadOnly'</span></span>
+<span data-ttu-id="e4514-103">`ReadOnly`に宣言されているフィールドに書き込もうとしました。</span><span class="sxs-lookup"><span data-stu-id="e4514-103">You attempted to write to a field that is declared `ReadOnly`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d9ad3-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="d9ad3-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e4514-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="e4514-104">To correct this error</span></span>  
   
--   <span data-ttu-id="d9ad3-105">`ReadOnly`に宣言されないようにフィールドを変更します。</span><span class="sxs-lookup"><span data-stu-id="d9ad3-105">Change the field so it is no longer declared `ReadOnly`.</span></span>  
+-   <span data-ttu-id="e4514-105">`ReadOnly`に宣言されないようにフィールドを変更します。</span><span class="sxs-lookup"><span data-stu-id="e4514-105">Change the field so it is no longer declared `ReadOnly`.</span></span>  
   
--   <span data-ttu-id="d9ad3-106">または</span><span class="sxs-lookup"><span data-stu-id="d9ad3-106">—or—</span></span>  
+-   <span data-ttu-id="e4514-106">または</span><span class="sxs-lookup"><span data-stu-id="e4514-106">—or—</span></span>  
   
--   <span data-ttu-id="d9ad3-107">このフィールドに書き込まないでください。</span><span class="sxs-lookup"><span data-stu-id="d9ad3-107">Do not attempt to write to this field.</span></span>  
+-   <span data-ttu-id="e4514-107">このフィールドに書き込まないでください。</span><span class="sxs-lookup"><span data-stu-id="e4514-107">Do not attempt to write to this field.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9ad3-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9ad3-108">See also</span></span>
-- [<span data-ttu-id="d9ad3-109">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="d9ad3-109">ReadOnly</span></span>](../../visual-basic/language-reference/modifiers/readonly.md)
+## <a name="see-also"></a><span data-ttu-id="e4514-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="e4514-108">See also</span></span>
+- [<span data-ttu-id="e4514-109">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="e4514-109">ReadOnly</span></span>](../../visual-basic/language-reference/modifiers/readonly.md)
