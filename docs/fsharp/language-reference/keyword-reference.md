@@ -3,10 +3,10 @@ title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857906"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
@@ -64,7 +64,7 @@ ms.locfileid: "54857906"
 |`null`|[null 値](values/null-values.md)<br /><br />[制約](generics/constraints.md)|オブジェクトがないことを示します。<br /><br />ジェネリック パラメーターの制約にも使用されます。|
 |`of`|[判別共用体](discriminated-unions.md)<br /><br />[デリゲート](delegates.md)<br /><br />[例外の種類](exception-handling/exception-types.md)|値のカテゴリの種類を示すために、判別共用体およびデリゲートと例外の宣言を使用します。|
 |`open`|[インポート宣言: `open`キーワード](import-declarations-the-open-keyword.md)|修飾なしの名前空間またはモジュールの内容を利用するために使用します。|
-|`or`|[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)<br /><br />[制約](generics/constraints.md)|ブール値としてブール条件で使用される`or`演算子。 等価 '||`.<br /><br />メンバー制約でも使用されます。|
+|`or`|[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)<br /><br />[制約](generics/constraints.md)|ブール値としてブール条件で使用される`or`演算子。 これは、`||` に相当します。<br /><br />メンバー制約でも使用されます。|
 |`override`|[メンバー](members/index.md)|基本のバージョンとは異なる抽象または仮想メソッドのバージョンを実装するために使用します。|
 |`private`|[アクセス制御](access-control.md)|同じ型またはモジュール内のコードにメンバーへのアクセスを制限します。|
 |`public`|[アクセス制御](access-control.md)|型の外部からのメンバーにアクセスをできます。|

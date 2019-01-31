@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513725"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480063"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ
-キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 データをもう一度アクセスすると、アプリケーションは、代わりに、元のソースから取得するキャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
+キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]でキャッシュを使用するためのクラスを提供します[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アプリケーション。 これらのクラスにある、<xref:System.Runtime.Caching>名前空間。
 
@@ -218,7 +218,7 @@ ms.locfileid: "54513725"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     削除または有効期限の情報が指定されていない場合、既定値は<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>、絶対時間にのみに基づいて切れないので、キャッシュ エントリ。 代わりに、キャッシュ エントリは、メモリ負荷がある場合にのみ有効期限します。 ベスト プラクティスとして、絶対またはおおう有効期限のいずれかを常に明示的に提供する必要があります。
+     削除または有効期限の情報が指定されていない場合、既定値は<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>、絶対時間にのみに基づいて切れないので、キャッシュ エントリ。 代わりに、キャッシュ エントリは、メモリ負荷がある場合にのみ有効期限します。 ベスト プラクティスとして、絶対またはスライド式有効期限のいずれかを常に明示的に指定する必要があります。
 
 7.  内で、`if/then`をブロックし、前の手順で追加したコードの後を監視して、コレクションにテキスト ファイルのパスを追加するファイルのパスのコレクションを作成するには、次のコードを追加します。
 
@@ -254,7 +254,7 @@ ms.locfileid: "54513725"
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      キャッシュ エントリの有効期限が切れるときに表示できるように、日付と時刻のタイムスタンプが追加されます。
@@ -296,7 +296,7 @@ ms.locfileid: "54513725"
 
      テキスト ファイルからキャッシュされたコンテンツは、メッセージ ボックスに表示されます。 ファイルのタイムスタンプに注目してください。
 
-3.  メッセージ ボックスを閉じ、クリックして**取得キャッシュ**もう一度**します。**
+3.  メッセージ ボックスを閉じ、クリックして**取得キャッシュ**もう一度です。
 
      タイムスタンプは変更されません。 これは、キャッシュされたコンテンツの表示を示します。
 
@@ -306,7 +306,7 @@ ms.locfileid: "54513725"
 
 5.  テキスト エディターで作成したテキスト ファイルを開きます。 すべての変更をまだしないでください。
 
-6.  メッセージ ボックスを閉じ、クリックして**取得キャッシュ**もう一度**します。**
+6.  メッセージ ボックスを閉じ、クリックして**取得キャッシュ**もう一度です。
 
      もう一度、タイムスタンプに注目してください。
 

@@ -1,15 +1,15 @@
 ---
-title: '&lt;net.pipe&gt;'
+title: < net.pipe >
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 7997894bfad8d5bf874a7f52d2cade7526375b13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddd25d3d25f4c4be1a9e26d444fa799a55c9cccc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715297"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283284"
 ---
-# <a name="ltnetpipegt"></a>&lt;net.pipe&gt;
+# <a name="netpipe"></a>\<net.pipe>
 名前付きパイプ接続の有効期間を管理し、名前付きパイプを介して到着するアクティベーション要求を処理する名前付きパイプ アクティベーション サービスの構成設定を指定します。  
   
  \<system.serviceModel.activation>  
