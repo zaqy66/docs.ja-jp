@@ -1,17 +1,17 @@
 ---
-title: ないオーバー ロードされた '&lt;methodname&gt;' 縮小変換しないで、これらの引数と共に呼び出すことができます:&lt;一覧&gt;
+title: ないオーバー ロードされた '<methodname>' 縮小変換しないで、これらの引数と共に呼び出すことができます。 <list>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
-ms.openlocfilehash: 2a34365c9f978f88e1e2b8c4cd4e673e6a49389b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392c8937f7b12a4628b57be37388c350df8fa9c3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495826"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290005"
 ---
-# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>ないオーバー ロードされた '&lt;methodname&gt;' 縮小変換しないで、これらの引数と共に呼び出すことができます:&lt;一覧&gt;
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion-list"></a>ないオーバー ロードされた '\<methodname >' 縮小変換しないで、これらの引数と共に呼び出すことができます:\<一覧 >
 オーバーロードされたメソッドが呼び出されましたが、メソッドは縮小変換せずに指定された引数のリストと一致しません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

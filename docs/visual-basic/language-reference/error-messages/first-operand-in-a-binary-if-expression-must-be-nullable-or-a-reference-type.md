@@ -1,5 +1,5 @@
 ---
-title: 最初のオペランドのバイナリで&#39;場合&#39;式は、null 許容である必要がありますまたは型の参照
+title: バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 85094ba6d6a44bf2e6cc4fba7946598c286a08a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668274"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284636"
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>最初のオペランドのバイナリで&#39;場合&#39;式は、null 許容である必要がありますまたは型の参照
+# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
 `If`式が 2 つまたは 3 つの引数を受け取ることができます。 2 つの引数を送信すると、最初の引数は、参照型または null 許容型でする必要があります。 最初の引数の評価が何も以外の場合`Nothing`、その値が返されます。 最初の引数が評価された場合`Nothing`、2 番目の引数が評価され、返されます。  
   
  たとえば、次のコードには 2 つ`If`で 3 つの引数と 2 つの引数の式。 式を計算し、同じ値を返します。  

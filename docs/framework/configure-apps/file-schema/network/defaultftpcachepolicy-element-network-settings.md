@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultFtpCachePolicy&gt;要素 (ネットワーク設定)'
+title: <defaultFtpCachePolicy> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: f237831befab627ec603a9000a7cef6184e0ae65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eda246c93660c1a37f7db3a6a38144a44a0ae1d3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546110"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279709"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;要素 (ネットワーク設定)
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 要素 (ネットワーク設定)
 FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。  
   
  \<configuration>  

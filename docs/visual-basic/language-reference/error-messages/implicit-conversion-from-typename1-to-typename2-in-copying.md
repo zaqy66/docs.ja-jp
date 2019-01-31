@@ -1,5 +1,5 @@
 ---
-title: 暗黙的な変換&#39; &lt;typename1&gt; &#39;に&#39; &lt;typename2&gt; &#39;の値をコピーで&#39;ByRef&#39;パラメーター &#39; &lt;parametername&gt; &#39; 、一致する引数に戻しています。
+title: "'ByRef' パラメーター '<typename1>' の値を、一致する引数に戻してコピーする際の、'<typename2>' から '<parametername>' への暗黙的な変換です。"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537237"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279618"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>暗黙的な変換&#39; &lt;typename1&gt; &#39;に&#39; &lt;typename2&gt; &#39;の値をコピーで&#39;ByRef&#39;パラメーター &#39; &lt;parametername&gt; &#39; 、一致する引数に戻しています。
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>暗黙的な変換 '\<typename1 >' を'\<typename2 >' の 'ByRef' パラメーターの値をコピー '\<parametername >'、一致する引数に戻してします。
 プロシージャが呼び出される、 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)よりも、対応するパラメーターのさまざまな型の引数。  
   
  引数を渡す場合`ByRef`、Visual Basic は、ローカル変数の参照を渡す代わりにプロシージャに引数の値をコピーすることがあります。 このような場合は、プロシージャが返されるときに Visual Basic する必要がありますにコピーしてローカル変数の値戻す呼び出し元のコードの引数。  

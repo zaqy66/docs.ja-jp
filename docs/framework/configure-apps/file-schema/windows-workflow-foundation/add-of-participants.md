@@ -1,16 +1,16 @@
 ---
-title: '&lt;participants&gt; の &lt;add&gt;'
+title: <add> の <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: bc32b9b55ef8767be44cc69b9277c81d62a1944d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65b8a34250a22da79e900f6bee894b501c5ad6ba
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575896"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284545"
 ---
-# <a name="ltaddgt-of-ltparticipantsgt"></a>&lt;participants&gt; の &lt;add&gt;
+# <a name="add-of-participants"></a>\<追加 > の\<参加者 >
 ランタイムから直接出力される追跡レコードをリッスンし、追跡レコードの構成方法に従って処理を行う追跡参加要素を構成します。 これには、特定の出力 (ファイル、コンソール、ETW など) への書き込み、レコードの処理や集計、またはその他の必要な組み合わせが含まれます。  
   
  ワークフロー追跡と追跡参加要素の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)します。  
