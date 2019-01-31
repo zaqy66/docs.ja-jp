@@ -2,36 +2,37 @@
 title: 制限された並列 ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
-ms.openlocfilehash: 8691edb8a5a61204b187be8def553f2f06be0f0d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: fd30a1ac587359a054a273b3deca2e9bb8bc2798
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581863"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261829"
 ---
-# <a name="throttled-parallel-foreach"></a><span data-ttu-id="d16f7-102">制限された並列 ForEach</span><span class="sxs-lookup"><span data-stu-id="d16f7-102">Throttled Parallel ForEach</span></span>
-<span data-ttu-id="d16f7-103">`ThrottleParallelForEach`アクティビティと似ています、 <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach`アクティビティが 1 つの例外を使用できることを同時実行要因を設定を実行する同時分岐の数を制限します。</span><span class="sxs-lookup"><span data-stu-id="d16f7-103">The `ThrottleParallelForEach` activity is similar to the <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` activity with the one exception that it allows setting a concurrency factor to restrict the number of simultaneous branches to execute.</span></span> <span data-ttu-id="d16f7-104">`ThrottleParallelForEach` アクティビティは、<xref:System.Activities.NativeActivity> クラスを介してのみアクセスできる他のアクティビティ (子アクティビティ) をスケジュールする必要があるため、<xref:System.Activities.NativeActivityContext> クラスから派生します。</span><span class="sxs-lookup"><span data-stu-id="d16f7-104">The `ThrottleParallelForEach` activity derives from <xref:System.Activities.NativeActivity>, because it needs to schedule other activities (the child activities) and this is only accessible through the <xref:System.Activities.NativeActivityContext> class.</span></span>
+# <a name="throttled-parallel-foreach"></a><span data-ttu-id="b6479-102">制限された並列 ForEach</span><span class="sxs-lookup"><span data-stu-id="b6479-102">Throttled Parallel ForEach</span></span>
 
-## <a name="projects"></a><span data-ttu-id="d16f7-105">プロジェクト</span><span class="sxs-lookup"><span data-stu-id="d16f7-105">Projects</span></span>
+<span data-ttu-id="b6479-103">`ThrottleParallelForEach` アクティビティは、実行する同時分岐の数を制限するためのコンカレンシー要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。</span><span class="sxs-lookup"><span data-stu-id="b6479-103">The `ThrottleParallelForEach` activity is similar to the <xref:System.Activities.Statements.ParallelForEach%601> activity with the one exception that it allows setting a concurrency factor to restrict the number of simultaneous branches to execute.</span></span> <span data-ttu-id="b6479-104">`ThrottleParallelForEach` アクティビティは、<xref:System.Activities.NativeActivity> クラスを介してのみアクセスできる他のアクティビティ (子アクティビティ) をスケジュールする必要があるため、<xref:System.Activities.NativeActivityContext> クラスから派生します。</span><span class="sxs-lookup"><span data-stu-id="b6479-104">The `ThrottleParallelForEach` activity derives from <xref:System.Activities.NativeActivity>, because it needs to schedule other activities (the child activities) and this is only accessible through the <xref:System.Activities.NativeActivityContext> class.</span></span>
 
-|<span data-ttu-id="d16f7-106">**ProjectName**</span><span class="sxs-lookup"><span data-stu-id="d16f7-106">**ProjectName**</span></span>|<span data-ttu-id="d16f7-107">**説明**</span><span class="sxs-lookup"><span data-stu-id="d16f7-107">**Description**</span></span>|<span data-ttu-id="d16f7-108">**メイン ファイル**</span><span class="sxs-lookup"><span data-stu-id="d16f7-108">**Main Files**</span></span>|
+## <a name="projects"></a><span data-ttu-id="b6479-105">プロジェクト</span><span class="sxs-lookup"><span data-stu-id="b6479-105">Projects</span></span>
+
+|<span data-ttu-id="b6479-106">**ProjectName**</span><span class="sxs-lookup"><span data-stu-id="b6479-106">**ProjectName**</span></span>|<span data-ttu-id="b6479-107">**説明**</span><span class="sxs-lookup"><span data-stu-id="b6479-107">**Description**</span></span>|<span data-ttu-id="b6479-108">**メイン ファイル**</span><span class="sxs-lookup"><span data-stu-id="b6479-108">**Main Files**</span></span>|
 |-|-|-|
-|<span data-ttu-id="d16f7-109">ThrottledParallelForEach</span><span class="sxs-lookup"><span data-stu-id="d16f7-109">ThrottledParallelForEach</span></span>|<span data-ttu-id="d16f7-110">`ThrottledParallelForEach` アクティビティとそのデザイナーが含まれます。</span><span class="sxs-lookup"><span data-stu-id="d16f7-110">Contains `ThrottledParallelForEach` activity and its designer.</span></span>|<span data-ttu-id="d16f7-111">ThrottledParallelForEach.cs</span><span class="sxs-lookup"><span data-stu-id="d16f7-111">ThrottledParallelForEach.cs</span></span><br /><br /> <span data-ttu-id="d16f7-112">`ThrottledParallelForEach` アクティビティ定義。</span><span class="sxs-lookup"><span data-stu-id="d16f7-112">The `ThrottledParallelForEach` activity definition.</span></span>|
-|<span data-ttu-id="d16f7-113">CodeTestClient</span><span class="sxs-lookup"><span data-stu-id="d16f7-113">CodeTestClient</span></span>|<span data-ttu-id="d16f7-114">命令型コードを使用して、`ThrottledParallelForEach` を含むワークフローを構成および実行するサンプル クライアント アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="d16f7-114">Sample client application that configures and runs a workflow with a `ThrottledParallelForEach` using imperative code.</span></span>|<span data-ttu-id="d16f7-115">Program.cs</span><span class="sxs-lookup"><span data-stu-id="d16f7-115">Program.cs</span></span><br /><br /> <span data-ttu-id="d16f7-116">サンプル ワークフローのインスタンスを定義および実行します。</span><span class="sxs-lookup"><span data-stu-id="d16f7-116">Defines and runs an instance of the sample workflow.</span></span>|
+|<span data-ttu-id="b6479-109">ThrottledParallelForEach</span><span class="sxs-lookup"><span data-stu-id="b6479-109">ThrottledParallelForEach</span></span>|<span data-ttu-id="b6479-110">`ThrottledParallelForEach` アクティビティとそのデザイナーが含まれます。</span><span class="sxs-lookup"><span data-stu-id="b6479-110">Contains `ThrottledParallelForEach` activity and its designer.</span></span>|<span data-ttu-id="b6479-111">ThrottledParallelForEach.cs</span><span class="sxs-lookup"><span data-stu-id="b6479-111">ThrottledParallelForEach.cs</span></span><br /><br /> <span data-ttu-id="b6479-112">`ThrottledParallelForEach` アクティビティ定義。</span><span class="sxs-lookup"><span data-stu-id="b6479-112">The `ThrottledParallelForEach` activity definition.</span></span>|
+|<span data-ttu-id="b6479-113">CodeTestClient</span><span class="sxs-lookup"><span data-stu-id="b6479-113">CodeTestClient</span></span>|<span data-ttu-id="b6479-114">命令型コードを使用して、`ThrottledParallelForEach` を含むワークフローを構成および実行するサンプル クライアント アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="b6479-114">Sample client application that configures and runs a workflow with a `ThrottledParallelForEach` using imperative code.</span></span>|<span data-ttu-id="b6479-115">Program.cs</span><span class="sxs-lookup"><span data-stu-id="b6479-115">Program.cs</span></span><br /><br /> <span data-ttu-id="b6479-116">サンプル ワークフローのインスタンスを定義および実行します。</span><span class="sxs-lookup"><span data-stu-id="b6479-116">Defines and runs an instance of the sample workflow.</span></span>|
 
-#### <a name="to-use-this-sample"></a><span data-ttu-id="d16f7-117">このサンプルを使用するには</span><span class="sxs-lookup"><span data-stu-id="d16f7-117">To use this sample</span></span>
+## <a name="to-use-this-sample"></a><span data-ttu-id="b6479-117">このサンプルを使用するには</span><span class="sxs-lookup"><span data-stu-id="b6479-117">To use this sample</span></span>
 
-1.  <span data-ttu-id="d16f7-118">Visual Studio 2010 を使用して、ThrottledParallelForEach.sln ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="d16f7-118">Using Visual Studio 2010, open the ThrottledParallelForEach.sln file.</span></span>
+1. <span data-ttu-id="b6479-118">Visual Studio 2010 を使用して、ThrottledParallelForEach.sln ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="b6479-118">Using Visual Studio 2010, open the ThrottledParallelForEach.sln file.</span></span>
 
-2.  <span data-ttu-id="d16f7-119">ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。</span><span class="sxs-lookup"><span data-stu-id="d16f7-119">To build the solution, press CTRL+SHIFT+B.</span></span>
+2. <span data-ttu-id="b6479-119">ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。</span><span class="sxs-lookup"><span data-stu-id="b6479-119">To build the solution, press CTRL+SHIFT+B.</span></span>
 
-3.  <span data-ttu-id="d16f7-120">ソリューションを実行するには、F5 キーを押します。</span><span class="sxs-lookup"><span data-stu-id="d16f7-120">To run the solution, press F5.</span></span>
+3. <span data-ttu-id="b6479-120">ソリューションを実行するには、F5 キーを押します。</span><span class="sxs-lookup"><span data-stu-id="b6479-120">To run the solution, press F5.</span></span>
 
 > [!IMPORTANT]
->  <span data-ttu-id="d16f7-121">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="d16f7-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d16f7-122">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="d16f7-122">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="d16f7-123">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="d16f7-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d16f7-124">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="d16f7-124">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ThrottledParallelForEach`
+> <span data-ttu-id="b6479-121">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="b6479-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b6479-122">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="b6479-122">Check for the following (default) directory before continuing.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> <span data-ttu-id="b6479-123">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="b6479-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b6479-124">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="b6479-124">This sample is located in the following directory.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ThrottledParallelForEach`
