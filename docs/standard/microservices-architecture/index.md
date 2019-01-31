@@ -3,19 +3,19 @@ title: .NET マイクロサービス。 コンテナー化された .NET アプ�
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030439"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479946"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ
 
 ![本の表紙](./media/cover-small.png)
 
-**エディション v2.1.03** - ASP.NET Core 2.1 に更新
+**エディション v2.2.00** - ASP.NET Core 2.2 に更新
 
 このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。 
 
@@ -49,7 +49,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ## <a name="version"></a>Version
 
-このガイドは、**.NET Core 2.1** に加え、.NET Core 2.1 と同時期に起こっているテクノロジーの "波" (つまり  Azure とサードパーティのテクノロジー) に関連する多数の最新情報も扱うように改訂されています。 本書がバージョン **2.1** に更新されているのはそれが理由です。 
+このガイドは、**.NET Core 2.2** バージョンに加え、.NET Core 2.2 と同時期に起こっているテクノロジーの "波" (つまり  Azure とサードパーティのテクノロジー) に関連する多数の最新情報も扱うように改訂されています。 本書がバージョン **2.2** に更新されているのはそれが理由です。 
 
 ## <a name="what-this-guide-does-not-cover"></a>このガイドに含まれないもの
 
@@ -124,6 +124,8 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 >
 > **Scott Hunter**、Microsoft、.NET チーム、パートナー ディレクター PM
 >
+> **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
+>
 > **Dylan Reisenberger**、Polly のアーキテクト兼開発リーダー
 >
 > **Steve Smith**、ASPSmith Ltd. のソフトウェア設計者兼トレーナー
@@ -147,7 +149,6 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 > **Charles Lowell**、Microsoft、VS CAT チーム、ソフトウェア エンジニア
 >
 > **Miguel Veloso**、Turing Challenge のシニアコンサルタント
-
 
 ## <a name="copyright"></a>Copyright
 

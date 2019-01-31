@@ -27,8 +27,8 @@ ms.locfileid: "50198225"
 |HttpSendFailure|指定された対象への HTTP 要求の発行中にエラーが発生しました。 この原因がセキュリティ バインディングの不一致ではないことを確認してください。 また、サービスが SSL (Secure Sockets Layer) 用に構成されていないことも確認してください。|  
 |MessageXmlProtocolError|ネットワークから受信した XML に問題があります。 詳細については、内部例外を参照してください。|  
 |MissingContentType|受信側は、指定された対象への要求でコンテンツの種類が指定されていないことを示すエラーを返しました。 詳細については、内部例外を参照してください。|  
-|ProxyAuthenticationLevelMismatch|HTTP プロキシ認証の資格情報で、対象サーバーの認証要件より厳しい要件である相互認証が指定されています。|  
-|ProxyImpersonationLevelMismatch|HTTP プロキシ認証の資格情報で、対象サーバーの認証制限より厳しい制限である偽装レベルの制限が指定されています。|  
+|ProxyAuthenticationLevelMismatch|HTTP プロキシ認証の資格情報で、ターゲット サーバーの認証要件より厳しい要件である相互認証が指定されています。|  
+|ProxyImpersonationLevelMismatch|HTTP プロキシ認証の資格情報で、ターゲット サーバーの認証制限より厳しい制限である偽装レベルの制限が指定されています。|  
 |SecureChannelFailure|指定された証明機関との間で、SSL/TLS のセキュリティで保護されたチャネルを確立できませんでした。|  
 |TrustFailure|指定された証明機関との間の SSL/TLS のセキュリティで保護されたチャネルで、信頼関係を確立できません。|  
 |UseDefaultWebProxyCantBeUsedWithExplicitProxyAddress|HttpTransportBinding 要素では、明示的なプロキシ アドレスだけでなく、UseDefaultWebProxy=true も指定できません。|

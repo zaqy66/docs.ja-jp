@@ -35,7 +35,7 @@ ms.locfileid: "54663080"
   
 3.  コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、次を参照してください。、[厳密名ツール (SN です。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)と言語のコンパイラ コマンド。  
   
-### <a name="to-install-the-validator-into-the-target-computer"></a>検証コントロールをターゲット コンピューターにインストールには  
+### <a name="to-install-the-validator-into-the-target-computer"></a>検証コントロールをターゲット コンピューターにインストールするには  
   
 1.  適切な機構を使用してエンドポイント検証をインストールします。 企業では、グループ ポリシーと Systems Management Server (SMS) を使用してインストールします。  
   
