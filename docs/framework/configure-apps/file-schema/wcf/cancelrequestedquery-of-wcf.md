@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;cancelRequestedQuery&gt;
+title: <cancelRequestedQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 72fd23097760375738c2116b4535940873436986
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498269"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281334"
 ---
-# <a name="ltcancelrequestedquerygt-of-wcf"></a>WCF の &lt;cancelRequestedQuery&gt;
+# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery > の WCF
 
 親アクティビティが子アクティビティを取り消すための要求を追跡するのに使用するクエリを表します。 追跡参加要素がキャンセル要求レコード オブジェクトを定期受信するには、このクエリが必要です。  
   
