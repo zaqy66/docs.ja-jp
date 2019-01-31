@@ -1,7 +1,7 @@
 # [C# 演算子](index.md)
 ## [[] 演算子](index-operator.md)
 ## [() 演算子](invocation-operator.md)
-## [。演算子](member-access-operator.md)
+## [. 演算子](member-access-operator.md)
 ## [?. 演算子と ?[] 演算子](null-conditional-operators.md)
 ## [:: 演算子](namespace-alias-qualifer.md)
 ## [+ 演算子](addition-operator.md)

@@ -1,24 +1,24 @@
 ---
-title: '&lt;discoveryClient&gt;'
+title: <discoveryClient>
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-ms.openlocfilehash: 5046d3342372960211942128372e9f62d98a2952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 512a91bf25180606213eb9eb3b4f7c6a0cb4cbbf
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573086"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284806"
 ---
-# <a name="ltdiscoveryclientgt"></a><span data-ttu-id="df751-102">&lt;discoveryClient&gt;</span><span class="sxs-lookup"><span data-stu-id="df751-102">&lt;discoveryClient&gt;</span></span>
-<span data-ttu-id="df751-103">クライアント アプリケーションが実行時に探索可能なサービスを自動的に検索し、そのアドレスを見つけることができるカスタム バインドを作成するための構成要素。</span><span class="sxs-lookup"><span data-stu-id="df751-103">A configuration element for creating a custom binding that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>  
+# <a name="discoveryclient"></a><span data-ttu-id="b284c-101">\<discoveryClient></span><span class="sxs-lookup"><span data-stu-id="b284c-101">\<discoveryClient></span></span>
+<span data-ttu-id="b284c-102">クライアント アプリケーションが実行時に探索可能なサービスを自動的に検索し、そのアドレスを見つけることができるカスタム バインドを作成するための構成要素。</span><span class="sxs-lookup"><span data-stu-id="b284c-102">A configuration element for creating a custom binding that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>  
   
-<span data-ttu-id="df751-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="df751-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="df751-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="df751-105">\<bindings></span></span>  
-<span data-ttu-id="df751-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="df751-106">\<customBinding></span></span>  
-<span data-ttu-id="df751-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="df751-107">\<binding></span></span>  
-<span data-ttu-id="df751-108">\<discoveryClient></span><span class="sxs-lookup"><span data-stu-id="df751-108">\<discoveryClient></span></span>  
+<span data-ttu-id="b284c-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="b284c-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="b284c-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="b284c-104">\<bindings></span></span>  
+<span data-ttu-id="b284c-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="b284c-105">\<customBinding></span></span>  
+<span data-ttu-id="b284c-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="b284c-106">\<binding></span></span>  
+<span data-ttu-id="b284c-107">\<discoveryClient></span><span class="sxs-lookup"><span data-stu-id="b284c-107">\<discoveryClient></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df751-109">構文</span><span class="sxs-lookup"><span data-stu-id="df751-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b284c-108">構文</span><span class="sxs-lookup"><span data-stu-id="b284c-108">Syntax</span></span>  
   
 ```xml  
 <discoveryClient discoveryEndpoint="String">
@@ -37,27 +37,27 @@ ms.locfileid: "54573086"
 </discoveryClient>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="df751-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="df751-110">Attributes and Elements</span></span>  
- <span data-ttu-id="df751-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="df751-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b284c-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="b284c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="b284c-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="b284c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="df751-112">属性</span><span class="sxs-lookup"><span data-stu-id="df751-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b284c-111">属性</span><span class="sxs-lookup"><span data-stu-id="b284c-111">Attributes</span></span>  
   
-|<span data-ttu-id="df751-113">属性</span><span class="sxs-lookup"><span data-stu-id="df751-113">Attribute</span></span>|<span data-ttu-id="df751-114">説明</span><span class="sxs-lookup"><span data-stu-id="df751-114">Description</span></span>|  
+|<span data-ttu-id="b284c-112">属性</span><span class="sxs-lookup"><span data-stu-id="b284c-112">Attribute</span></span>|<span data-ttu-id="b284c-113">説明</span><span class="sxs-lookup"><span data-stu-id="b284c-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="df751-115">discoveryEndpoint</span><span class="sxs-lookup"><span data-stu-id="df751-115">discoveryEndpoint</span></span>|<span data-ttu-id="df751-116">クライアント アプリケーションが実行時に探索可能なサービスを自動的に検索し、そのアドレスを見つけることができる探索エンドポイントの名前を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="df751-116">A string that contains the name of the Discovery Endpoint that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>|  
+|<span data-ttu-id="b284c-114">discoveryEndpoint</span><span class="sxs-lookup"><span data-stu-id="b284c-114">discoveryEndpoint</span></span>|<span data-ttu-id="b284c-115">クライアント アプリケーションが実行時に探索可能なサービスを自動的に検索し、そのアドレスを見つけることができる探索エンドポイントの名前を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="b284c-115">A string that contains the name of the Discovery Endpoint that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="df751-117">子要素</span><span class="sxs-lookup"><span data-stu-id="df751-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b284c-116">子要素</span><span class="sxs-lookup"><span data-stu-id="b284c-116">Child Elements</span></span>  
   
-|<span data-ttu-id="df751-118">要素</span><span class="sxs-lookup"><span data-stu-id="df751-118">Element</span></span>|<span data-ttu-id="df751-119">説明</span><span class="sxs-lookup"><span data-stu-id="df751-119">Description</span></span>|  
+|<span data-ttu-id="b284c-117">要素</span><span class="sxs-lookup"><span data-stu-id="b284c-117">Element</span></span>|<span data-ttu-id="b284c-118">説明</span><span class="sxs-lookup"><span data-stu-id="b284c-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="df751-120">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="df751-120">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="df751-121">探索サービスの検索にクライアント アプリケーションによって使用される基準を提供する構成要素。</span><span class="sxs-lookup"><span data-stu-id="df751-121">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="df751-122">条件は、(探しているサービスの種類を指定して) 検索条件にグループ化することができ、検索 (検索持続期間)、終了条件。</span><span class="sxs-lookup"><span data-stu-id="df751-122">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
+|[<span data-ttu-id="b284c-119">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="b284c-119">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="b284c-120">探索サービスの検索にクライアント アプリケーションによって使用される基準を提供する構成要素。</span><span class="sxs-lookup"><span data-stu-id="b284c-120">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="b284c-121">条件は、(探しているサービスの種類を指定して) 検索条件にグループ化することができ、検索 (検索持続期間)、終了条件。</span><span class="sxs-lookup"><span data-stu-id="b284c-121">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="df751-123">親要素</span><span class="sxs-lookup"><span data-stu-id="df751-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b284c-122">親要素</span><span class="sxs-lookup"><span data-stu-id="b284c-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="df751-124">要素</span><span class="sxs-lookup"><span data-stu-id="df751-124">Element</span></span>|<span data-ttu-id="df751-125">説明</span><span class="sxs-lookup"><span data-stu-id="df751-125">Description</span></span>|  
+|<span data-ttu-id="b284c-123">要素</span><span class="sxs-lookup"><span data-stu-id="b284c-123">Element</span></span>|<span data-ttu-id="b284c-124">説明</span><span class="sxs-lookup"><span data-stu-id="b284c-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="df751-126">\<binding></span><span class="sxs-lookup"><span data-stu-id="df751-126">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="df751-127">カスタム バインドのすべてのバインド機能を定義します。</span><span class="sxs-lookup"><span data-stu-id="df751-127">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="b284c-125">\<binding></span><span class="sxs-lookup"><span data-stu-id="b284c-125">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="b284c-126">カスタム バインドのすべてのバインド機能を定義します。</span><span class="sxs-lookup"><span data-stu-id="b284c-126">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="df751-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="df751-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b284c-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="b284c-127">See also</span></span>
 - <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>
 - <xref:System.ServiceModel.Discovery.Configuration.DiscoveryClientElement>
