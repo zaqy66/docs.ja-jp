@@ -1,15 +1,15 @@
 ---
-title: '&lt;webHttp&gt;'
+title: <webHttp>
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: b52259af5e05de5bf5dd42a2cd0bf4b01f3e46f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca6d401109d14ce11dcd40c393cd079170e4d20d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597555"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259871"
 ---
-# <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
+# <a name="webhttp"></a>\<webHttp>
 この要素は、構成によってエンドポイントに <xref:System.ServiceModel.Description.WebHttpBehavior> を指定します。 この動作は、組み合わせて使用する場合、 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)標準バインディングにより、Windows Communication Foundation (WCF) サービスの Web プログラミング モデル。  
   
  \<system.ServiceModel >  

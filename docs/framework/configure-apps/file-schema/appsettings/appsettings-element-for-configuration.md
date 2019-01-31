@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt;要素&lt;構成&gt;'
+title: <appSettings> の <configuration> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190932"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289589"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > 要素の\<構成 >
 
 カスタム アプリケーションの設定が含まれています。 これは、.NET Framework で提供される定義済みの構成セクションです。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<appSettings >**
+&nbsp;&nbsp;**\<appSettings>**
 
 ## <a name="syntax"></a>構文
 
@@ -53,7 +53,7 @@ ms.locfileid: "50190932"
 
 ## <a name="remarks"></a>Remarks
 
-**\<AppSettings >** 要素は、データベース接続文字列、ファイル パス、XML Web サービスの Url の他のカスタム構成情報などのカスタム アプリケーションの構成情報を格納します。アプリケーション。 指定されたキーと値のペア、  **\<appSettings >** 要素は、コードを使用して、<xref:System.Configuration.ConfigurationSettings>クラス。
+ **\<AppSettings >** 要素は、データベース接続文字列、ファイル パス、XML Web サービスの Url の他のカスタム構成情報などのカスタム アプリケーションの構成情報を格納します。アプリケーション。 指定されたキーと値のペア、  **\<appSettings >** 要素は、コードを使用して、<xref:System.Configuration.ConfigurationSettings>クラス。
 
 使用することができます、**ファイル**属性、  **\<appSettings >** の要素、 *Web.config*とアプリケーション構成ファイル。 この属性は、追加の設定を提供またはで指定された設定をオーバーライドする構成ファイルを指定、  **\<appSettings >** 要素。 **ファイル**属性をソース制御チーム開発などのシナリオで、ユーザーがアプリケーション構成ファイルで指定されたプロジェクトの設定をオーバーライドできます。
 
