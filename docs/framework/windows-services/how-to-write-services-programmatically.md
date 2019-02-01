@@ -1,5 +1,5 @@
 ---
-title: '方法 : プログラムでサービスを作成する'
+title: '方法: プログラムでサービスを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 904a82a3cc725221defb6795bf813b8cbc490c41
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 70a2c184e7b39af7b4f0466ac9ac627cff98f0c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672913"
 ---
-# <a name="how-to-write-services-programmatically"></a>方法 : プログラムでサービスを作成する
+# <a name="how-to-write-services-programmatically"></a>方法: プログラムでサービスを作成する
 Windows サービス プロジェクトのテンプレートを使用しない場合は、継承などの基本要素を設定して独自のサービスを作成できます。 プログラミングによってサービスを作成する場合は、テンプレートでは自動化される手順を手動で行う必要があります。  
   
 -   サービス クラスが <xref:System.ServiceProcess.ServiceBase> クラスから継承されるように設定します。  
@@ -59,20 +59,20 @@ Windows サービス プロジェクトのテンプレートを使用しない�
   
 6.  他に独自の処理を定義するメソッドがあればそれをオーバーライドし、サービスが行うアクションを記述します。  
   
-7.  サービス アプリケーションの必要なインストーラーを追加します。 詳しくは、「[方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」をご覧ください。  
+7.  サービス アプリケーションの必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」を参照してください。  
   
 8.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックして、プロジェクトを作成します。  
   
     > [!NOTE]
     >  F5 キーを押してプロジェクトを実行しないでください。この方法ではサービス プロジェクトを実行できません。  
   
-9. セットアップ プロジェクトと、サービスをインストールするカスタム処理を作成します。 例については、「[チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)」をご覧ください。  
+9. セットアップ プロジェクトと、サービスをインストールするカスタム処理を作成します。 例については、「[チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)」を参照してください。  
   
-10. サービスをインストールします。 詳細については、「 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。  
+10. サービスをインストールします。 詳細については、「[方法 :サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [方法 : Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [方法 : サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [方法 : サービスに関する情報のログを記録する](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a>関連項目
+- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [方法: サービスに関する情報のログを記録する](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

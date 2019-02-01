@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55267648"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>'<keyword>' は、インスタンス メソッド内でのみ有効です。
+# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' は、インスタンス メソッド内でのみ有効です。
 `Me`、 `MyClass`、および`MyBase`キーワードは、特定のクラスのインスタンスを参照してください。 共有内で使用することはできません`Function`または`Sub`プロシージャ。  
   
  **エラー ID:** BC30043  

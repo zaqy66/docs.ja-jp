@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653750"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 
@@ -29,7 +29,7 @@ ms.locfileid: "43525686"
 |[-baseaddress](baseaddress-compiler-option.md)|ビルドするライブラリのベース アドレスを指定します。|
 |[-bugreport](bugreport-compiler-option.md)|"障害報告" ファイルを作成します。 -errorreport:prompt または -errorreport:send と組み合わせて使用した場合、このファイルがクラッシュ情報と共に送信されます。|
 |[/checked](checked-compiler-option.md)|オーバーフロー チェックを生成するようコンパイラに指示します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は、SHA1 (既定値) または SHA256 です。|
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。|
 |[-codepage](codepage-compiler-option.md)|ソース ファイルを開くときに使用するコードページを指定します。|
 |[-debug](debug-compiler-option.md)|デバッグ情報を生成します。|
 |[-define](define-compiler-option.md)|条件付きコンパイル シンボルを定義します。|
@@ -44,7 +44,7 @@ ms.locfileid: "43525686"
 |-incremental|インクリメンタル コンパイルを有効にします [廃止]。|
 |[-keycontainer](keycontainer-compiler-option.md)|厳密な名前のキー コンテナーを指定します。|
 |[-keyfile](keyfile-compiler-option.md)|厳密な名前のキー ファイルを指定します。|
-|[-langversion:\<string>](langversion-compiler-option.md)|言語のバージョンを指定します: Default、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3、Latest |
+|[-langversion:\<string>](langversion-compiler-option.md)|言語バージョンとして、既定、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3、または最新を指定します。 |
 |[/lib](lib-compiler-option.md)|参照を検索する追加のディレクトリを指定します。|
 |[-link](link-compiler-option.md)|指定したアセンブリ内の COM 型情報をプロジェクトで使用できるようにします。|
 |[-linkresource](linkresource-compiler-option.md)|このアセンブリに指定されたリソースをリンクします。|
@@ -80,9 +80,9 @@ ms.locfileid: "43525686"
 |[-win32manifest](win32manifest-compiler-option.md)|カスタム win32 マニフェスト ファイルを指定します。|
 |[/win32res:](win32res-compiler-option.md)|win32 リソース ファイル (.res) を指定します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](index.md)  
-- [カテゴリ別の C# コンパイラ オプションの一覧](listed-by-category.md)  
-- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [C# コンパイラ オプション](index.md)
+- [カテゴリ別の C# コンパイラ オプションの一覧](listed-by-category.md)
+- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

@@ -1,18 +1,18 @@
 ---
-title: '方法 : C# で定数を定義する'
+title: '方法: C# で定数を定義する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 09d19f708570b55509a3ec2a41e439cb9c9de973
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 26d46335df3333379d5577a5c21a85a39eb6e43a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713200"
 ---
-# <a name="how-to-define-constants-in-c"></a>方法 : C# で定数を定義する
+# <a name="how-to-define-constants-in-c"></a>方法: C# で定数を定義する
 定数とは、値がコンパイル時に設定され、変更できないフィールドです。 定数を使用して、特殊な値の数値リテラル ("マジック ナンバー") の代わりにわかりやすい名前を提供します。  
   
 > [!NOTE]
@@ -27,6 +27,6 @@ ms.locfileid: "43739696"
   
  クラス名修飾子を使用すると、定数を使用するユーザーは、それが定数であり、変更できないことがわかります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)

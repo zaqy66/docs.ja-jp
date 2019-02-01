@@ -1,5 +1,5 @@
 ---
-title: '軽減策: DataContractJsonSerializer での制御文字のシリアル化'
+title: 軽減策:DataContractJsonSerializer での制御文字のシリアル化
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a00edbf2d5833349de14986f2a57a2c943f3ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31f946fa01f3d6334011098d12483445159ce54a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738119"
 ---
-# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>軽減策: DataContractJsonSerializer での制御文字のシリアル化
+# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>軽減策:DataContractJsonSerializer での制御文字のシリアル化
 
 .NET Framework 4.7 以降では、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> での制御文字のシリアル化の方法が、ECMAScript V6 および V8 に準拠するように変更されました。 
  
@@ -43,4 +43,4 @@ ms.locfileid: "33388434"
 ```
  
 ## <a name="see-also"></a>関連項目
-[.NET Framework 4.7 における再ターゲットの変更点](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7 における再ターゲットの変更点](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

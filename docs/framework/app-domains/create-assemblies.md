@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8590b38ace0abcc370f94852a35569b95c4a2d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643612"
 ---
 # <a name="creating-assemblies"></a>アセンブリの作成
 
@@ -46,7 +46,7 @@ Visual Studio などの IDE を使用して単一ファイルまたはマルチ�
 
 アンマネージ COM アプリケーションで使用できる共通言語ランタイム アセンブリを作成する際は、特別な考慮事項を設定する必要があります。 アンマネージ コードの使用の詳細については、「[COM への .NET Framework コンポーネントの公開](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [アセンブリのバージョン管理](../../../docs/framework/app-domains/assembly-versioning.md)

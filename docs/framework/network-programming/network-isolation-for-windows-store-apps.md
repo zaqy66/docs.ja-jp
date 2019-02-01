@@ -2,12 +2,12 @@
 title: Windows ストア アプリのネットワーク分離
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 537d94201b3e0ae92707c858f10032848a690004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0209bd57bfa98fec8a3057490502081c4c20554f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594266"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows ストア アプリのネットワーク分離
 <xref:System.Net>、<xref:System.Net.Http>、<xref:System.Net.Http.Headers> の各名前空間のクラスは、Windows ストア アプリまたはデスクトップ アプリを開発するために使用できます。 Windows ストア アプリで使用する場合、これらの名前空間のクラスは、[!INCLUDE[win8](../../../includes/win8-md.md)]で使用されるアプリケーション セキュリティ モデルの一部であるネットワーク分離の影響を受けます。 システムでネットワーク アクセスが許可されるように、Windows ストア アプリのアプリ マニフェストで適切なネットワーク機能を有効にする必要があります。  
@@ -25,10 +25,10 @@ ms.locfileid: "50182672"
   
  ネットワーク機能の構成と、ネットワーク分離のトラブルシューティングに使用する分離ツールの詳細については、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 開発者向けドキュメントで、[ネットワーク分離の機能を構成する方法](https://go.microsoft.com/fwlink/?LinkID=228265)に関するページを参照してください。  
   
-## <a name="see-also"></a>参照  
- [Web サービスへの接続](https://go.microsoft.com/fwlink/?LinkID=245696)  
- [ネットワーク分離のガイドラインとチェックリスト](https://go.microsoft.com/fwlink/?LinkID=228265)  
- [クイック スタート: HttpClient を使って接続する](https://go.microsoft.com/fwlink/?LinkId=245697)  
- [HttpClient ハンドラーを使う方法](https://go.microsoft.com/fwlink/?LinkId=245699)  
- [HttpClient の接続をセキュリティで保護する方法](https://go.microsoft.com/fwlink/?LinkId=245698)  
- [HttpClient のサンプル](https://go.microsoft.com/fwlink/?LinkId=242550)
+## <a name="see-also"></a>関連項目
+- [Web サービスへの接続](https://go.microsoft.com/fwlink/?LinkID=245696)
+- [ネットワーク分離のガイドラインとチェックリスト](https://go.microsoft.com/fwlink/?LinkID=228265)
+- [クイック スタート:HttpClient を使って接続する](https://go.microsoft.com/fwlink/?LinkId=245697)
+- [HttpClient ハンドラーを使う方法](https://go.microsoft.com/fwlink/?LinkId=245699)
+- [HttpClient の接続をセキュリティで保護する方法](https://go.microsoft.com/fwlink/?LinkId=245698)
+- [HttpClient のサンプル](https://go.microsoft.com/fwlink/?LinkId=242550)

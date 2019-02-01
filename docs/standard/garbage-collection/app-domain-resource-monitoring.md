@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606531"
 ---
 # <a name="application-domain-resource-monitoring"></a>アプリケーション ドメインのリソース監視
 アプリケーション ドメインのリソース監視 (ARM) を使用して、ホストでアプリケーション ドメインによる CPU とメモリの使用状況を監視できます。 これは、実行時間の長いプロセスで多数のアプリケーション ドメインを使用する ASP.NET などのホストに役立ちます。 問題のあるアプリケーションを特定できる場合に限り、ホストは、プロセス全体のパフォーマンスに悪影響を与えるアプリケーションのアプリケーション ドメインをアンロードできます。 ARM は、このような意思決定を支援するために使用できる情報を提供します。  
@@ -56,7 +56,7 @@ ms.locfileid: "48266651"
   
     -   ETW イベント: `AppDomainMemAllocated` イベント、`Allocated` フィールド。  
   
--   **アプリケーション ドメインによって参照され、最新の完全なブロッキング コレクションの後に残っているマネージド メモリ (バイト単位)**: この数値は完全なブロッキング コレクションの後にのみ正確になります (これは、バックグラウンドで発生し、アプリケーションをブロックしない同時コレクションとは対照的です)。たとえば、<xref:System.GC.Collect?displayProperty=nameWithType> メソッドのオーバーロードによって、完全なブロッキング コレクションが実行されます。  
+-   **アプリケーション ドメインによって参照され、最新の完全なブロッキング コレクションの後に残っているマネージド メモリ (バイト単位)**: この数値は完全なブロッキング コレクションの後にのみ正確になります。 (これは、バックグラウンドで発生し、アプリケーションをブロックしない同時コレクションとは対照的です)。たとえば、<xref:System.GC.Collect?displayProperty=nameWithType> メソッドのオーバーロードによって、完全なブロッキング コレクションが実行されます。  
   
     -   マネージド API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> プロパティ。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48266651"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ICLRAppDomainResourceMonitor インターフェイス](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ICLRAppDomainResourceMonitor インターフェイス](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

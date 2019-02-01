@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636603"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>アプリケーション ドメインとアセンブリに関する方法のトピック
 次のセクションには、アプリケーション ドメインとアセンブリを使用したプログラミングの概念に関するドキュメントに用意されているすべての方法トピックへのリンクが含まれています。  
@@ -45,7 +45,7 @@ ms.locfileid: "50190997"
   
 -   [方法: 厳密な名前のバイパス機能を無効にする](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
--   [方法: グローバル アセンブリ キャッシュにアセンブリをインストールする](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+-   [方法: アセンブリをグローバル アセンブリ キャッシュにインストールする](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
 -   [方法: グローバル アセンブリ キャッシュの内容を表示する](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
   
@@ -53,5 +53,5 @@ ms.locfileid: "50190997"
   
 -   [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 - [アプリケーション ドメインとアセンブリ](../../../docs/framework/app-domains/index.md)

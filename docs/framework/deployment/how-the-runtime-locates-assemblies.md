@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661868"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>ランタイムがアセンブリを検索する方法
 .NET Framework アプリケーションを正しく配置するには、アプリケーションを構成するアセンブリを共通言語ランタイムがどのように検索し、バインドするかを理解している必要があります。 既定では、ランタイムはアプリケーションを構成するアセンブリの正しいバージョンをバインドしようとします。 この既定の動作は、構成ファイルの設定によってオーバーライドできます。  
@@ -151,7 +151,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  厳密な名前の付いたアセンブリの場合、バインディング プロセスは、続いてグローバル アセンブリ キャッシュ内を調べます。 グローバル アセンブリ キャッシュには、コンピューター上の複数のアプリケーションで使用できるアセンブリが格納されています。 グローバル アセンブリ キャッシュに配置するアセンブリには、すべて厳密な名前を付ける必要があります。  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>手順 4 : コードベースまたはプローブによるアセンブリの検索  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>手順 4: コードベースまたはプローブによるアセンブリの検索  
  共通言語ランタイムは、呼び出し元アセンブリの参照および構成ファイル内の情報を使用して正しいアセンブリ バージョンを決定した後、およびグローバル アセンブリ キャッシュ内をチェック (厳密な名前が付いたアセンブリの場合だけ) した後で、アセンブリの検索を試みます。 アセンブリを検索するプロセスは、次のとおりです。  
   
 1.  [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素は、アプリケーション構成ファイルに格納されている場合、ランタイムはこの要素に指定されている場所を調べます。 一致するアセンブリが見つかった場合は、そのアセンブリが使用され、プローブは実行されません。 指定されている場所でアセンブリが見つからなかった場合、バインド要求は失敗します。  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  たとえば、Assembly1 が Assembly2 を参照し、Assembly1 が `http://www.code.microsoft.com/utils` からダウンロードされていた場合、この場所が、Assembly2.dll を検索する場所についてのヒントと見なされます。 次に、ランタイムは `http://www.code.microsoft.com/utils/Assembly2.dll` と `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` のアセンブリをプローブします。 どちらの場所でも Assembly2 が見つからなかった場合は、ランタイムは Windows Installer に問い合わせます。  
   
-## <a name="see-also"></a>参照  
-- [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>関連項目
+- [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [配置](../../../docs/framework/deployment/index.md)

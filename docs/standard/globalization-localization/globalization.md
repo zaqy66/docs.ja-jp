@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713942"
 ---
 # <a name="globalization"></a>グローバリゼーション
 グローバリゼーションとは、さまざまな文化圏 (カルチャ) のユーザー向けに、ローカライズされたインターフェイスと、その地域に合ったデータをサポートするような、国際対応アプリの設計と開発をいいます。 設計フェーズに着手する前に、アプリでサポートするカルチャを決定してください。 アプリは既定値として 1 つのカルチャまたは地域を対象としますが、別のカルチャまたは地域のユーザーに簡単に拡張できるようにアプリを設計および作成できます。  
@@ -99,7 +99,7 @@ ms.locfileid: "49453360"
 > [!TIP]
 >  <xref:System.Globalization.StringInfo> クラスを使用して、文字列の個別の文字ではなく、テキスト要素を操作できます。  
   
- 文字列の検索と比較でよくある間違いは、それぞれが <xref:System.Char> オブジェクトによって表される文字のコレクションとして文字列を処理することです。 実際に、1 つの文字が 1 つ、2 つ、またはそれ以上の <xref:System.Char> オブジェクトによって形成される場合があります。 このような文字は、アルファベットが、Unicode 基本ラテン文字の範囲 (U+0021 ～ U+007E) 外にある文字で構成されるカルチャの文字列に最もよくみられます。 次の例では、文字列で LATIN CAPITAL LETTER A WITH GRAVE 文字 (U+00C0) のインデックスを検索します。 ただし、この文字は、1 つのコード単位 (U+00C0) または複合文字 (2 つのコード単位: U+0021 と U+007E) という 2 つの方法で表現できます。 この場合、この文字は、文字列インスタンスで 2 つの <xref:System.Char> オブジェクト (U+0021 と U+007E) によって表されます。 このコード例では、<xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> オーバーロードと <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> オーバーロードを呼び出して、文字列インスタンスでのこの文字の位置を検索しますが、この 2 つは異なる結果を返します。 最初のメソッド呼び出しでは <xref:System.Char> 引数を指定しているので、序数に基づく比較が実行され、一致を見つけることができません。 2 番目の呼び出しでは <xref:System.String> 引数を指定しているので、カルチャに依存した比較が実行され、一致が見つかります。  
+ 文字列の検索と比較でよくある間違いは、それぞれが <xref:System.Char> オブジェクトによって表される文字のコレクションとして文字列を処理することです。 実際に、1 つの文字が 1 つ、2 つ、またはそれ以上の <xref:System.Char> オブジェクトによって形成される場合があります。 このような文字は、アルファベットが、Unicode 基本ラテン文字の範囲 (U+0021 ～ U+007E) 外にある文字で構成されるカルチャの文字列に最もよくみられます。 次の例では、文字列で LATIN CAPITAL LETTER A WITH GRAVE 文字 (U+00C0) のインデックスを検索します。 ただし、この文字は、1 つのコード単位 (U+00C0) または複合文字 (2 つのコード単位:U+0021 と U+007E) という 2 つの方法で表現できます。 この場合、この文字は、文字列インスタンスで 2 つの <xref:System.Char> オブジェクト (U+0021 と U+007E) によって表されます。 このコード例では、<xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> オーバーロードと <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> オーバーロードを呼び出して、文字列インスタンスでのこの文字の位置を検索しますが、この 2 つは異なる結果を返します。 最初のメソッド呼び出しでは <xref:System.Char> 引数を指定しているので、序数に基づく比較が実行され、一致を見つけることができません。 2 番目の呼び出しでは <xref:System.String> 引数を指定しているので、カルチャに依存した比較が実行され、一致が見つかります。  
   
  [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
  [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]  
@@ -204,7 +204,7 @@ ms.locfileid: "49453360"
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>シリアル化とタイム ゾーンへの対応  
- 日付と時刻の値は、一般的な時刻 ("店舗は 2013 年 1 月 2 日の午前 9 時に開店します") から特定の時点 ("生年月日: 2013 年 1 月 2 日午前 6 時 32 分 00 秒") まで、多様に解釈できます。 時刻の値が特定の時点を表し、それをシリアル化された値から復元する場合、ユーザーの地理的場所またはタイム ゾーンに関係なく同じ特定の時点を表すことを確認する必要があります。  
+ 日付と時刻の値は、一般的な時刻 ("店舗は 2013 年 1 月 2 日の午前 9 時に開店します") から特定の時点 ("生年月日:2013 年 1 月 2 日午前 6 時 32 分 00 秒") まで、多様に解釈できます。 時刻の値が特定の時点を表し、それをシリアル化された値から復元する場合、ユーザーの地理的場所またはタイム ゾーンに関係なく同じ特定の時点を表すことを確認する必要があります。  
   
  この問題を説明する例を次に示します。 この例では、1 つのローカル日付と時刻の値を、3 つの[標準書式](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (一般の日付と長い形式の時刻の "G"、並べ替え可能な日付と時刻の "s"、およびラウンド トリップする日付と時刻の "o") の文字列として、およびバイナリ形式で保存します。  
   
@@ -371,5 +371,5 @@ ms.locfileid: "49453360"
   
 ## <a name="see-also"></a>関連項目
 
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)  
+- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
 - [文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)

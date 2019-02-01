@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532193"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。  
@@ -43,19 +43,19 @@ ms.locfileid: "53151292"
 |----------------------|-----------------|--------------|  
 |"d"|短い形式の日付パターン。<br /><br /> 詳細については、「[短い形式の日付 ("d") 書式指定子](#ShortDate)」を参照してください。|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |"D"|長い形式の日付パターン。<br /><br /> 詳細については、「[長い形式の日付 ("D") 書式指定子](#LongDate)」を参照してください。|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
-|"f"|完全な日付と時刻のパターン (短い形式の時刻)。<br /><br /> 詳細については、「[完全な日付と短い形式の時刻 ("f") 書式指定子](#FullDateShortTime)」を参照してください。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|  
-|"F"|完全な日付と時刻のパターン (長い形式の時刻)。<br /><br /> 詳細については、「[完全な日付と長い形式の時刻 ("F") 書式指定子](#FullDateLongTime)」を参照してください。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
-|"g"|一般の日付と時刻のパターン (短い形式の時刻)。<br /><br /> 詳細については、「[一般の日付と短い形式の時刻 ("g") 書式指定子](#GeneralDateShortTime)」を参照してください。|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
-|"G"|一般の日付と時刻のパターン (長い形式の時刻)。<br /><br /> 詳細については、「[一般の日付と長い形式の時刻 ("G") 書式指定子](#GeneralDateLongTime)」を参照してください。|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
-|"M"、"m"|月日パターン。<br /><br /> 詳細については、「[月 ("M"、"m") 書式指定子](#MonthDay)」を参照してください。|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
-|"O"、"o"|ラウンドトリップする日付と時刻のパターン。<br /><br /> 詳細については、「[ラウンドトリップ ("O"、"o") 書式指定子](#Roundtrip)」を参照してください。|<xref:System.DateTime> の値:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> の値:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
-|"R"、"r"|RFC1123 パターン。<br /><br /> 詳細については、「[RFC1123 ("R"、"r") 書式指定子](#RFC1123)」を参照してください。|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
-|"s"|並べ替え可能な日付と時刻のパターン。<br /><br /> 詳細については、「[並べ替え可能な日付と時刻 ("s") 書式指定子](#Sortable)」を参照してください。|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
-|"t"|短い形式の時刻パターン。<br /><br /> 詳細については、「[短い形式の時刻 ("t") 書式指定子](#ShortTime)」を参照してください。|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
-|"T"|長い形式の時刻パターン。<br /><br /> 詳細については、「[長い形式の時刻 ("T") 書式指定子](#LongTime)」を参照してください。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
-|"u"|並べ替え可能な日付と時刻のパターン (世界時刻)。<br /><br /> 詳細については、「[世界共通の並べ替え可能な日付と時刻 ("u") 書式指定子](#UniversalSortable)」を参照してください。|<xref:System.DateTime> 値の場合: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> <xref:System.DateTimeOffset> 値の場合: 2009-06-15T13:45:30 -&gt; 2009-06-15 20:45:30Z|  
-|"U"|完全な日付と時刻のパターン (世界時刻)。<br /><br /> 詳細については、「[世界共通の完全な日付と時刻 ("U") 書式指定子](#UniversalFull)」を参照してください。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
-|"Y"、"y"|年月パターン。<br /><br /> 詳細については、「[年月 ("Y") 書式指定子](#YearMonth)」を参照してください。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
+|"f"|完全な日付と時刻のパターン (短い形式の時刻)。<br /><br /> 詳細情報:[完全な日付と短い形式の時刻 ("f") 書式指定子](#FullDateShortTime)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|  
+|"F"|完全な日付と時刻のパターン (長い形式の時刻)。<br /><br /> 詳細情報:[完全な日付と長い形式の時刻 ("F") 書式指定子](#FullDateLongTime)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
+|"g"|一般の日付と時刻のパターン (短い形式の時刻)。<br /><br /> 詳細情報:[一般の日付と短い形式の時刻 ("g") 書式指定子](#GeneralDateShortTime)。|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
+|"G"|一般の日付と時刻のパターン (長い形式の時刻)。<br /><br /> 詳細情報:[一般の日付と長い形式の時刻 ("G") 書式指定子](#GeneralDateLongTime)。|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
+|"M"、"m"|月日パターン。<br /><br /> 詳細情報:[月 ("M"、"m") 書式指定子](#MonthDay)。|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
+|"O"、"o"|ラウンドトリップする日付と時刻のパターン。<br /><br /> 詳細情報:[ラウンドトリップ ("O"、"o") 書式指定子](#Roundtrip)。|<xref:System.DateTime> の値:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> の値:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
+|"R"、"r"|RFC1123 パターン。<br /><br /> 詳細情報:[RFC1123 ("R"、"r") 書式指定子](#RFC1123)。|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
+|"s"|並べ替え可能な日付と時刻のパターン。<br /><br /> 詳細情報:[並べ替え可能な日付と時刻 ("s") 書式指定子](#Sortable)。|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
+|"t"|短い形式の時刻パターン。<br /><br /> 詳細情報:[短い形式の時刻 ("t") 書式指定子](#ShortTime)。|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
+|"T"|長い形式の時刻パターン。<br /><br /> 詳細情報:[長い形式の時刻 ("T") 書式指定子](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
+|"u"|並べ替え可能な日付と時刻のパターン (世界時刻)。<br /><br /> 詳細情報:[世界共通の並べ替え可能な日付と時刻 ("u") 書式指定子](#UniversalSortable)。|<xref:System.DateTime> 値の場合: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> <xref:System.DateTimeOffset> 値の場合: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
+|"U"|完全な日付と時刻のパターン (世界時刻)。<br /><br /> 詳細情報:[世界共通の完全な日付と時刻 ("U") 書式指定子](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
+|"Y"、"y"|年月パターン。<br /><br /> 詳細情報:[年月 ("Y") 書式指定子](#YearMonth)。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
 |その他の 1 文字|未定義の指定子。|ランタイム <xref:System.FormatException> をスローします。|  
   
 ## <a name="how-standard-format-strings-work"></a>標準書式指定文字列の動作  
@@ -415,8 +415,8 @@ ms.locfileid: "53151292"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.DateTime?displayProperty=nameWithType>  
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [サンプル: .NET Framework 4 の書式設定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

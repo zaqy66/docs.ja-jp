@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499870"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# コンパイラ オプション)
 **-warn** オプションは、コンパイラが表示する警告レベルを指定します。  
@@ -30,7 +30,7 @@ ms.locfileid: "43865609"
   
 ## <a name="arguments"></a>引数  
  `option`  
- コンパイルで表示する警告レベル: 数値が小さいほど重要度が高い警告のみが表示され、数値が大きいほど多くの警告が表示されます。 有効な値は 0 から 4 です。  
+ コンパイルで表示する警告レベル:数値が小さいほど重要度が高い警告のみが表示され、数値が大きいほど多くの警告が表示されます。 有効な値は 0 から 4 です。  
   
 |警告レベル|説明|  
 |-------------------|-------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "43865609"
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

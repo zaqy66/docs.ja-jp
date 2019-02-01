@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 2b19b6d29d0117d4822f370dcc9abc840a18ad3d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527849"
 ---
 # <a name="listening-with-sockets"></a>リッスン (ソケットで)
 リスナーまたはサーバー ソケットは、ネットワーク上のポートを開き、クライアントがそのポートに接続するまで待機します。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、TCP/IP ネットワーク用のリモート サービスを作成する方法を説明します。  
@@ -59,9 +59,9 @@ listener.Listen(100);
   
  **Listen** メソッドには、**Socket** に対する保留中の接続数の上限を指定する 1 つのパラメーターがあります。この上限を超えると、サーバー ビジー エラーが接続クライアントに返されます。 この例では、接続キューに格納できるクライアント数の上限は 100 個で、クライアント番号 101 にはサーバー ビジー応答が返されます。  
   
-## <a name="see-also"></a>参照  
- [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [クライアント ソケットの使用](../../../docs/framework/network-programming/using-client-sockets.md)  
- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [ソケット](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>関連項目
+- [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [クライアント ソケットの使用](../../../docs/framework/network-programming/using-client-sockets.md)
+- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [ソケット](../../../docs/framework/network-programming/sockets.md)

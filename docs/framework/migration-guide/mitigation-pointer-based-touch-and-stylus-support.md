@@ -1,5 +1,5 @@
 ---
-title: '軽減策: ポインター ベースのタッチおよびスタイラスのサポート'
+title: 軽減策:ポインター ベースのタッチおよびスタイラスのサポート
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da7d55b34bc21f0c11f13565d017587b4276bad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501947"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>軽減策: ポインター ベースのタッチおよびスタイラスのサポート
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>軽減策:ポインター ベースのタッチおよびスタイラスのサポート
 
 .NET Framework 4.7 を対象とし、Windows 10 Creators Update 以降の Windows システムで実行されている WPF アプリケーションは、オプションの `WM_POINTER` ベースの WPF タッチ/スタイラス スタックを有効にすることができます。
 
@@ -56,4 +56,4 @@ ms.locfileid: "33387781"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework 4.7 における再ターゲットの変更点](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7 における再ターゲットの変更点](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569941"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>デスクトップ アプリケーションに対するリソース ファイルの作成
 リソース ファイルにリソース (文字列、イメージ、オブジェクト データなど) を追加して、アプリケーションで簡単に使用できるようにすることが可能です。 .NET Framework では、次の 5 つの方法でリソース ファイルを作成できます。  
@@ -58,7 +58,7 @@ name2=value2
   
  .txt ファイルと .restext ファイルのリソース ファイル形式は同じです。 .restext ファイル拡張子は、テキスト ファイルがテキスト ベースのリソース ファイルであることをすぐに識別するために使用します。  
   
- 文字列リソースは、*name/value* のペアとして表示されます。ここで、*name* はリソースを識別する文字列です。*value* は、リソース取得メソッド (<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> など) に *name* を渡すときに返されるリソース文字列です。 *name* と *value* は等号 (=) で区切る必要があります。 例:  
+ 文字列リソースは、*name/value* のペアとして表示されます。ここで、*name* はリソースを識別する文字列です。*value* は、リソース取得メソッド (<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> など) に *name* を渡すときに返されるリソース文字列です。 *name* と *value* は等号 (=) で区切る必要があります。 次に例を示します。  
   
 ```  
 FileMenuName=File  
@@ -70,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  パスワード、セキュリティの配慮が必要な情報、プライベートなデータなどの格納には、リソース ファイルを使用しないでください。  
   
- 空の文字列 (つまり、値が <xref:System.String.Empty?displayProperty=nameWithType> であるリソース) はテキスト ファイルで使用できます。 例:  
+ 空の文字列 (つまり、値が <xref:System.String.Empty?displayProperty=nameWithType> であるリソース) はテキスト ファイルで使用できます。 次に例を示します。  
   
 ```  
 EmptyString=  
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
   
  コンパイル時に、Visual Studio ではまずプロジェクト内の .resx ファイルをバイナリ リソース (.resources) ファイルに変換して、プロジェクトの obj ディレクトリのサブディレクトリに格納します。 ローカライズされたリソースが格納されていないリソース ファイルは、プロジェクトで生成されたメイン アセンブリに埋め込みます。 ローカライズされたリソースがリソース ファイルに格納されている場合、Visual Studio では、各ローカライズ カルチャの個別のサテライト アセンブリにそのファイルを埋め込みます。 各サテライト アセンブリは、ローカライズ カルチャに対応する名前のディレクトリに格納します。 たとえば、ローカライズされた英語 (米国) リソースは、en-US サブディレクトリ内のサテライト アセンブリに格納されます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Resources>  
- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)  
- [リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Resources>
+- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
+- [リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

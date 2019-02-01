@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cf9b842243cd7b9ae244688b0da348f63b68f08a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492040"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ の概要
 ## <a name="what-is-a-parallel-query"></a>並列クエリとは  
@@ -59,7 +59,7 @@ ms.locfileid: "43879755"
  <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 拡張メソッドは、それ以降のクエリ演算子 (この場合は `where` および `select`) を <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> の実装にバインドします。  
   
 ## <a name="execution-modes"></a>実行モード  
- 既定では、PLINQ は保守的です。 PLINQ インフラストラクチャは、実行時に、クエリの全体的な構造を分析します。 並列化によってクエリを高速化できることが見込まれる場合は、PLINQ は、同時実行できるタスクにソース シーケンスをパーティション分割します。 クエリの並列化が安全ではない場合は、PLINQ はクエリを順次実行します。 PLINQ で、負荷が高くなる可能性がある並列アルゴリズムと負荷が低い順次アルゴリズムを選ぶ必要がある場合は、既定では順次アルゴリズムが選択されます。 並列アルゴリズムを選択するよう PLINQ に指示するには、<xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> メソッドと <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> 列挙型を使用します。 これは、テストと測定の結果、特定のクエリで並列化の方が速く実行されることが判明している場合に便利です。 詳細については、「[How to: Specify the Execution Mode in PLINQ (方法: PLINQ の実行モードを指定する)](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)」を参照してください。  
+ 既定では、PLINQ は保守的です。 PLINQ インフラストラクチャは、実行時に、クエリの全体的な構造を分析します。 並列化によってクエリを高速化できることが見込まれる場合は、PLINQ は、同時実行できるタスクにソース シーケンスをパーティション分割します。 クエリの並列化が安全ではない場合は、PLINQ はクエリを順次実行します。 PLINQ で、負荷が高くなる可能性がある並列アルゴリズムと負荷が低い順次アルゴリズムを選ぶ必要がある場合は、既定では順次アルゴリズムが選択されます。 並列アルゴリズムを選択するよう PLINQ に指示するには、<xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> メソッドと <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> 列挙型を使用します。 これは、テストと測定の結果、特定のクエリで並列化の方が速く実行されることが判明している場合に便利です。 詳細については、「[方法 :PLINQ の実行モードを指定する](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)」をご覧ください。  
   
 ## <a name="degree-of-parallelism"></a>並列化の次数  
  既定では、PLINQ はホスト コンピューター上のすべてのプロセッサを使用します。 <xref:System.Linq.ParallelEnumerable.WithDegreeOfParallelism%2A> メソッドを使用すると、指定されたプロセッサ数よりも多くのプロセッサを使用するよう、PLINQ に指示できます。 これは、コンピューター上で実行されるその他のプロセスが、一定の CPU 時間を確保できるようにする場合に便利です。 次のスニペットでは、クエリが最大で 2 つのプロセッサしか使用できないように制限します。  
@@ -80,7 +80,7 @@ ms.locfileid: "43879755"
  詳細については、「[Order Preservation in PLINQ (PLINQ における順序維持)](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)」を参照してください。  
   
 ## <a name="parallel-vs-sequential-queries"></a>並列クエリと順次クエリ  
- 一部の操作では、ソース データを順次提供する必要があります。 <xref:System.Linq.ParallelEnumerable> クエリ演算子は、必要に応じて、順次モードに自動的に切り替わります。 ユーザー定義のクエリ演算子と、順次実行を必要とするユーザー デリゲート向けに、PLINQ では <xref:System.Linq.ParallelEnumerable.AsSequential%2A> メソッドを使用できます。 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> を使用すると、それ以降のクエリの演算子は、<xref:System.Linq.ParallelEnumerable.AsParallel%2A> が再度呼び出されるまで順次実行されます。 詳細については、「[How to: Combine Parallel and Sequential LINQ Queries (方法: 並列および順次の LINQ クエリを連結する)](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)」を参照してください。  
+ 一部の操作では、ソース データを順次提供する必要があります。 <xref:System.Linq.ParallelEnumerable> クエリ演算子は、必要に応じて、順次モードに自動的に切り替わります。 ユーザー定義のクエリ演算子と、順次実行を必要とするユーザー デリゲート向けに、PLINQ では <xref:System.Linq.ParallelEnumerable.AsSequential%2A> メソッドを使用できます。 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> を使用すると、それ以降のクエリの演算子は、<xref:System.Linq.ParallelEnumerable.AsParallel%2A> が再度呼び出されるまで順次実行されます。 詳細については、「[方法 :並列および順次の LINQ クエリを連結する](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)」をご覧ください。  
   
 ## <a name="options-for-merging-query-results"></a>クエリ結果のマージのオプション  
  PLINQ クエリが並列実行される場合、`foreach` ループ (Visual Basic では `For Each`) による消費、またはリストや配列への挿入を行うことができるよう、各ワーカー スレッドからの結果をメイン スレッドに再マージする必要があります。 結果をより迅速に生成する場合など、特定のマージ操作を指定すると便利なこともあります。 そのために、PLINQ では <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> メソッドと <xref:System.Linq.ParallelMergeOptions> 列挙型をサポートしています。 詳細については、「[Merge Options in PLINQ (PLINQ のマージ オプション)](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)」を参照してください。  
@@ -100,14 +100,14 @@ ms.locfileid: "43879755"
   
  キャンセル トークンが設定された後も、PLINQ クエリが一部の要素の処理を継続する可能性があります。  
   
- 応答性を高めるため、長時間にわたるユーザー デリゲートのキャンセル要求に対応することもできます。 詳細については、「[How to: Cancel a PLINQ Query (方法: PLINQ クエリを取り消す)](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)」を参照してください。  
+ 応答性を高めるため、長時間にわたるユーザー デリゲートのキャンセル要求に対応することもできます。 詳細については、「[方法 :PLINQ クエリを取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)」をご覧ください。  
   
 ## <a name="exceptions"></a>例外  
  PLINQ クエリが実行されると、異なるスレッドから複数の例外が同時にスローされることがあります。 また、例外を処理するコードが、例外をスローしたコードとは異なるスレッドにあることもあります。 PLINQ では <xref:System.AggregateException> 型を使用し、クエリによってスローされたすべての例外をカプセル化し、それらの例外を呼び出し元のスレッドにマーシャリングします。 呼び出し元のクエリでは、try-catch ブロックが 1 つだけ必要です。 ただし、<xref:System.AggregateException> でカプセル化されたすべての例外を反復処理し、安全に回復できる例外をキャッチできます。 まれに、<xref:System.AggregateException> にラップされていない例外がスローされ、<xref:System.Threading.ThreadAbortException> もラップされていないことがあります。  
   
  連結しているスレッドへ例外が上方向へ通知されると、例外が発生した後も、クエリによって一部の項目の処理が続行される可能性があります。  
   
- 詳細については、「[How to: Handle Exceptions in a PLINQ Query (方法: PLINQ クエリの例外を処理する)](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)」を参照してください。  
+ 詳細については、「[方法 :PLINQ クエリの例外を処理する](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)」をご覧ください。  
   
 ## <a name="custom-partitioners"></a>カスタム パーティショナー  
  ソース データの特性を活用するカスタム パーティショナーを記述することによって、クエリのパフォーマンスを向上できる場合があります。 クエリでは、カスタム パーティショナー自体は、クエリの対象となる列挙可能なオブジェクトです。  
@@ -118,9 +118,9 @@ ms.locfileid: "43879755"
  PLINQ は、固定数のパーティションをサポートしています (ただし、負荷分散の目的で、これらのパーティションに対してデータが実行時に動的に再割り当てされることもあります)。 <xref:System.Threading.Tasks.Parallel.For%2A> および <xref:System.Threading.Tasks.Parallel.ForEach%2A> は動的なパーティション分割しかサポートしていないので、パーティションの数は実行時に変化します。 詳細については、「[Custom Partitioners for PLINQ and TPL (PLINQ および TPL 用のカスタム パーティショナー)](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)」を参照してください。  
   
 ## <a name="measuring-plinq-performance"></a>PLINQ のパフォーマンスの測定  
- クエリは、多くの場合並列化できますが、並列クエリの設定に伴うオーバーヘッドは、並列化によって得られるパフォーマンスの利点よりも大きくなります。 クエリが大量の計算を実行しない場合、またはデータ ソースが小さい場合、PLINQ クエリは、順次的な LINQ to Objects クエリよりも低速になります。 Visual Studio Team Server の Parallel Performance Analyzer を使用し、さまざまなクエリのパフォーマンスの比較、処理のボトルネックの場所の特定、クエリが並行処理されているか順次処理されているかの確認を行うことができます。 詳細については、「[Concurrency Visualizer (同時実行ビジュアライザー)](/visualstudio/profiling/concurrency-visualizer)」と「[How to: Measure PLINQ Query Performance (方法: PLINQ クエリのパフォーマンスを測定する)](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)」を参照してください。  
+ クエリは、多くの場合並列化できますが、並列クエリの設定に伴うオーバーヘッドは、並列化によって得られるパフォーマンスの利点よりも大きくなります。 クエリが大量の計算を実行しない場合、またはデータ ソースが小さい場合、PLINQ クエリは、順次的な LINQ to Objects クエリよりも低速になります。 Visual Studio Team Server の Parallel Performance Analyzer を使用し、さまざまなクエリのパフォーマンスの比較、処理のボトルネックの場所の特定、クエリが並行処理されているか順次処理されているかの確認を行うことができます。 詳細については、「[コンカレンシー ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)」および「[方法:PLINQ クエリのパフォーマンスを測定する](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [PLINQ での高速化について](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

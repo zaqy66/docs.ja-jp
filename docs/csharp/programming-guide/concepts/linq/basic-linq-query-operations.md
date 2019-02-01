@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728365"
 ---
 # <a name="basic-linq-query-operations-c"></a>LINQ クエリの基本操作 (C#)
 このトピックでは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式とクエリで実行する一般的な操作について、簡単に説明します。 詳細については、以下のトピックを参照してください。  
@@ -44,7 +44,7 @@ ms.locfileid: "53131301"
  範囲変数は、`foreach`ループの反復変数と似ていますが、クエリ式では実際の反復は発生しません。 クエリが実行されると、範囲変数は `customers` の連続する各要素への参照として機能します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 追加の範囲変数は、`let` 句で導入できます。 詳しくは、「[let 句](../../../../csharp/language-reference/keywords/let-clause.md)」をご覧ください。  
   
 > [!NOTE]
->  <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、「[方法: LINQ を使用して ArrayList を照会する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)」および「[from 句](../../../../csharp/language-reference/keywords/from-clause.md)」を参照してください。  
+>  <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、「[方法 :LINQ を使用して ArrayList を照会する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)」と「[from 句](../../../../csharp/language-reference/keywords/from-clause.md)」をご覧ください。  
   
 ## <a name="filtering"></a>フィルター処理  
  最も一般的なクエリ操作は、ブール式の形式でフィルターを適用することです。 クエリにフィルターを使用すると、式の条件に該当する要素だけがクエリから返されます。 結果は、`where` 句を使って生成されます。 フィルターは、実質的にはソース シーケンスから除外する要素を指定します。 次の例では、住所がロンドンにある `customers` だけが返されます。  
@@ -99,10 +99,10 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>選択 (投影)  
  `select` 句はクエリの結果を生成し、返される各要素の "シェイプ" つまり型を指定します。 たとえば、完全な `Customer` オブジェクト、１ つのメンバーのみ、メンバーのサブセット、または計算や新しいオブジェクトの作成に基づいた、まったく異なる種類の結果のいずれで結果が構成されるかを指定できます。 `select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。 投影を使用したデータの変換は、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式の強力な機能です。 詳細については、「[LINQ によるデータ変換 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)」と「[select 句](../../../../csharp/language-reference/keywords/select-clause.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [クエリ キーワード (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [クエリ キーワード (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
 - [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

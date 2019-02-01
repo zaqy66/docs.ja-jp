@@ -1,15 +1,15 @@
 ---
-title: '方法: Descendants メソッドを使用して単一の子孫を検索する (C#)'
+title: '方法: 方法: Descendants メソッドを使用して単一の子孫を検索する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a13a4aef6a3d22d2b7c3adb8e37996de08978b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43784661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690528"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>方法: Descendants メソッドを使用して単一の子孫を検索する (C#)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>方法: 方法: Descendants メソッドを使用して単一の子孫を検索する (C#)
 <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸メソッドを使用すると、一意の名前を持つ単一の要素を検索するコードを簡単に記述できます。 この手法は、特定の名前を持つ特定の子孫を検索する必要がある場合に特に役立ちます。 目的の要素に移動するコードを記述することもできますが、多くの場合、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用してコードを記述する方がより迅速で簡単です。  
   
 ## <a name="example"></a>例  
@@ -73,6 +73,6 @@ Console.WriteLine(grandChild3);
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [基本的なクエリ (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

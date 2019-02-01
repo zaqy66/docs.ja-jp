@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202921"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066403"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework コマンド ライン デバッガー)
 .NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージド コードのデバッグしか実行できません。アンマネージド コードのデバッグはサポートされていません。  
@@ -57,7 +57,7 @@ MDbg [ProgramName[arguments]] [options]
 |**int** **[ercept]** *FrameNumber*|デバッガーを指定したフレーム番号にロールバックします。<br /><br /> デバッガーの実行時に例外が発生した場合は、このコマンドを使用してデバッガーを指定したフレーム番号にロールバックします。 **set** コマンドを使用してプログラムの状態を変更し、**go** コマンドを使用して続行できます。|  
 |**k** **[ill]**|アクティブ プロセスを停止します。|  
 |**l** **[ist]** [*modules* &#124; *appdomains* &#124; *assemblies*]|読み込まれたモジュール、アプリケーション ドメイン、またはアセンブリを表示します。|  
-|**lo** **[ad]** *assemblyName*|拡張機能を読み込みます。指定したアセンブリが読み込まれた後、`LoadExtension` 型の静的メソッド `Microsoft.Tools.Mdbg.Extension.Extension` の実行が試行され、拡張機能が読み込まれます。|  
+|**lo** **[ad]** *assemblyName*|拡張機能を読み込みます。指定したアセンブリが読み込まれた後、`Microsoft.Tools.Mdbg.Extension.Extension` 型の静的メソッド `LoadExtension` の実行が試行され、拡張機能が読み込まれます。|  
 |**log** [*eventType*]|ログに記録するイベントを設定または表示します。|  
 |**mo** **[de]** [*option on/off*]|デバッガーのさまざまなオプションを設定します。 オプションを指定せずに `mode` を使用すると、デバッグ モードとその現在の設定のリストが取得されます。|  
 |**mon** **[itorInfo]** *monitorReference*|オブジェクトのモニター ロックの情報を表示します。|  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh** **[ow]** [*lines*]|表示する行数を指定します。|  
 |**s** **[tep]**|現在の行の次の関数の実行に移ります。実行する関数がない場合は、次の行に移動します。|  
 |**su** **[spend]** [\* &#124; [~]*threadNumber*]|現在のスレッドまたは *threadNumber* パラメーターで指定したスレッドを中断します。  *threadNumber* に `*` を指定した場合、コマンドはすべてのスレッドに適用されます。 スレッド番号が `~` で始まる場合、コマンドは *threadNumber* で指定したスレッドを除くすべてのスレッドに適用されます。 プロセスが **go** コマンドまたは **step** コマンドによって実行されている場合、中断されたスレッドは実行から除外されます。 プロセス内に中断されているスレッドがない場合に **go** コマンドを実行しても、プロセスは続行されません。 この場合、Ctrl キーを押しながら C キーを押してプロセスを中止する必要があります。|  
-|**sy** **[mbol]** *commandName* [*commandValue*]|次のコマンドのいずれかを指定します。<br /><br /> -   `symbol path` [`"``value``"`] - 現在のシンボル パスを表示または設定します。<br />-   `symbol addpath` `"` `value` `"` - 現在のシンボル パスに追加します。<br />-   `symbol reload` [`"``module``"`]- すべてのシンボルまたは指定したモジュールのシンボルを再読み込みします。<br />-   `symbol list` [`module`] - すべてのモジュールまたは指定したモジュールの現在読み込まれているシンボルを表示します。|  
+|**sy** **[mbol]** *commandName* [*commandValue*]|次のコマンドのいずれかを指定します。<br /><br /> -   `symbol path` [`"value"`] - 現在のシンボル パスを表示または設定します。<br />-   `symbol addpath` `"value"` - 現在のシンボル パスに追加します。<br />-   `symbol reload` [`"module"`] - すべてのシンボルまたは指定したモジュールのシンボルを再読み込みします。<br />-   `symbol list` [`module`] - すべてのモジュールまたは指定したモジュールの現在読み込まれているシンボルを表示します。|  
 |**t** **[hread]** [*newThread*] [-*nick nickname*`]`|パラメーターを指定しないで thread コマンドを実行すると、現在のプロセス内のすべてのマネージド スレッドが表示されます。 通常、スレッドはスレッド番号で識別されますが、スレッドにニックネームが割り当てられている場合は、スレッド番号ではなくニックネームが表示されます。 `-nick` パラメーターを使用すると、スレッドにニックネームを割り当てることができます。<br /><br /> -   **thread** `-nick` *threadName* は、現在実行中のスレッドにニックネームを割り当てます。<br /><br /> ニックネームを数字にすることはできません。 現在のスレッドにニックネームが既に割り当てられている場合、古いニックネームは新しいニックネームに置き換えられます。 新しいニックネームが空の文字列 ("") の場合は、現在のスレッドのニックネームが削除され、新しいニックネームはスレッドに割り当てられません。|  
 |**u** **[p]**|アクティブなスタック フレームを上へ移動します。|  
 |**uwgc** **[handle]** [*var*] &#124; [*address*]|ハンドルによって追跡された変数を出力します。 ハンドルは、名前またはアドレスで指定できます。|  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>使用例  
   
-## <a name="see-also"></a>参照  
- [ツール](../../../docs/framework/tools/index.md)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>関連項目
+- [ツール](../../../docs/framework/tools/index.md)
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

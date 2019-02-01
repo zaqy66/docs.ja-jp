@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: ae6cb54d73c56db7c118b617e070ea86944adeaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720211"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング
 
@@ -33,7 +33,7 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 |Microsoft .NET Framework をアンインストールすると、一部のアプリケーションが機能しなくなる可能性があります。|一般に、コンピューターにインストールされている .NET Framework のバージョンはアンインストールしないでください。使用するアプリケーションが .NET Framework の特定のバージョンに依存している可能性があるからです。 詳しくは、*概要*ガイドの「[ユーザーにとっての .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)」をご覧ください。|  
 |このコンピューターには .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (ENU) 以降のバージョンが既にインストールされています。|アクションは必要ありません。<br /><br /> システムにインストールされている .NET Framework のバージョンを確認する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (*言語*) には、.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* が必要です。 ダウンロード センターから .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* をインストールしてセットアップを再実行してください。|言語パックをインストールする前に、指定された .NET Framework リリースの英語バージョンをインストールする必要があります。 詳細については、インストール ガイドの「[言語パックのインストール](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs)」を参照してください。|  
-|.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* をインストールできません。 このプログラムと互換性がないアプリケーションがコンピューター上に存在します。<br /><br /> または<br /><br /> このプログラムと互換性がないアプリケーションがコンピューター上に存在します。|このメッセージは、通常 .NET Framework のプレビューまたは RC バージョンがインストールされているために表示されます。 プレビューまたは RC バージョンをアンインストールし、セットアップを再実行します。|  
+|.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* をインストールできません。 このプログラムと互換性がないアプリケーションがコンピューター上に存在します。<br /><br /> - または -<br /><br /> このプログラムと互換性がないアプリケーションがコンピューター上に存在します。|このメッセージは、通常 .NET Framework のプレビューまたは RC バージョンがインストールされているために表示されます。 プレビューまたは RC バージョンをアンインストールし、セットアップを再実行します。|  
 |このパッケージを使用して .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* をアンインストールすることはできません。 コンピューターから .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* をアンインストールするには、**コントロール パネル**で **[プログラムと機能]**、**[インストールされた更新プログラムを表示]** を選び、[Microsoft Windows (KB2828152) の更新プログラム] を選んで **[アンインストール]** を選択します。|インストールしているパッケージによって、.NET Framework のプレビューまたは RC リリースはアンインストールされません。<br /><br /> コントロール パネルからプレビューまたは RC リリースをアンインストールします。|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* をアンインストールできません。 このプログラムに依存するアプリケーションがコンピューター上に存在します。|一般に、コンピューターから .NET Framework のバージョンをアンインストールしないでください。使用するアプリケーションが .NET Framework の特定のバージョンに依存している可能性があるからです。 詳しくは、*概要*ガイドの「[ユーザーにとっての .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)」をご覧ください。|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* 再配布可能パッケージは、このオペレーティング システムには適応されません。 Microsoft ダウンロード センターからご使用のオペレーティング システムに対応した .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* をダウンロードしてください。|サポートされていないプラットフォームに [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、または 4.7.2 をインストールしようとしている可能性があります。または、サポートされているすべてのオペレーティング システム用のコンポーネントが含まれていないインストール パッケージを選択しました。 オフライン インストーラー ([4.5.1 用](https://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2 用](https://go.microsoft.com/fwlink/p/?LinkId=397706)、[4.6 用](https://go.microsoft.com/fwlink/p/?LinkId=528233)、[4.6.1 用](https://go.microsoft.com/fwlink/p/?LinkId=671744)、[4.6.2 用](https://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7 用](https://go.microsoft.com/fwlink/p/?LinkId=825306)、[4.7.1 用](https://go.microsoft.com/fwlink/p/?LinkId=852090)、または [4.7.2 用](https://go.microsoft.com/fwlink/p/?LinkId=863265)) を使用してインストールを再実行します。 サポートされているオペレーティング システムの詳細については、[インストール ガイド](../../../docs/framework/install/guide-for-developers.md)に関するページおよび[システム要件](../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。|  
@@ -77,6 +77,6 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 
 ## <a name="see-also"></a>関連項目
 
-[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)   
-[方法: インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[バージョンおよび依存関係](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)
+- [方法: インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [バージョンおよび依存関係](../../../docs/framework/migration-guide/versions-and-dependencies.md)

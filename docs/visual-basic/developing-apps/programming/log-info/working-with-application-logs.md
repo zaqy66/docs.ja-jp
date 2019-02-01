@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec54e2234d11a474f89c2890353b4eab53c3d41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693137"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic でのアプリケーション ログの使用
 `My.Applicaton.Log` オブジェクトと `My.Log` オブジェクトを使用すると、ログおよびトレース情報をログに簡単に書き込むことができます。  
@@ -42,10 +42,10 @@ ms.locfileid: "47397687"
   
  `CompanyName`、 `ProductName`、 `ProductVersion` の値は、アプリケーションのアセンブリ情報から取得されます。 ログ ファイル名の形式は *AssemblyName*.log です。 *AssemblyName* は、アセンブリのファイル名から拡張子を取り除いたものです。 複数のログ ファイルが必要な場合 (たとえば、アプリケーションがログに書き込もうとしているときで、元のログが利用できない場合) には、ログ ファイル名の形式は *AssemblyName*-*iteration*.log です。 `iteration` は正の `Integer`をクリックします。  
   
- コンピューターおよびアプリケーションの構成ファイルを追加または変更すると、既定の動作をオーバーライドできます。 詳細については、「 [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)」を参照してください。  
+ コンピューターおよびアプリケーションの構成ファイルを追加または変更すると、既定の動作をオーバーライドできます。 詳細については、「[チュートリアル:My.Application.Log による情報の書き込み先の変更](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)」を参照してください。  
   
 ## <a name="configuring-log-settings"></a>ログ設定を構成する  
- `Log` オブジェクトの既定の実装では、アプリケーション構成ファイル app.config がなくても動作するようになっています。既定の動作を変更するには、新しい設定を記述した構成ファイルを追加する必要があります。 詳細については、「 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)」を参照してください。  
+ `Log` オブジェクトの既定の実装では、アプリケーション構成ファイル app.config がなくても動作するようになっています。既定の動作を変更するには、新しい設定を記述した構成ファイルを追加する必要があります。 詳細については、「[チュートリアル:My.Application.Log の出力をフィルター処理する](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)」を参照してください。  
   
  app.config ファイルでは、ログの構成セクションは、メインの `<system.diagnostics>` ノードの `<configuration>` ノードにあります。 ログ情報は、以下のノードに定義されています。  
   
@@ -100,6 +100,6 @@ ms.locfileid: "47397687"
   
 -   **サービス拒否を避けます。** アプリケーションがログに書き込む情報が多すぎると、ログが満杯になったり、重要な情報を見つけにくくなったりする可能性があります。  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [アプリケーションからの情報のログ記録](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [アプリケーションからの情報のログ記録](../../../../visual-basic/developing-apps/programming/log-info/index.md)

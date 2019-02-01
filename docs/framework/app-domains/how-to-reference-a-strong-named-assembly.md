@@ -1,5 +1,5 @@
 ---
-title: '方法 : 厳密な名前のアセンブリを参照する'
+title: '方法: 厳密な名前のアセンブリを参照する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596073"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>方法 : 厳密な名前のアセンブリを参照する
+# <a name="how-to-reference-a-strong-named-assembly"></a>方法: 厳密な名前のアセンブリを参照する
 通常、厳密な名前付きアセンブリ内にある型またはリソースを参照するプロセスは透過的です。 コンパイル時 (事前バインディング) または実行時に参照を作成できます。  
   
  コンパイル時参照は、あるアセンブリが別のアセンブリを明示的に参照することをコンパイラに対して指定するときに発生します。 コンパイル時参照を使用する場合、コンパイラは対象の厳密な名前付きアセンブリの公開キーを自動的に取得し、その公開キーをコンパイルされるアセンブリのアセンブリ参照内に自動的に配置します。  
@@ -48,7 +48,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
      \<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
   
-     例:  
+     次に例を示します。  
   
     ```  
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
@@ -70,5 +70,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **sn -tp \<** *public key file* **>**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 - [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

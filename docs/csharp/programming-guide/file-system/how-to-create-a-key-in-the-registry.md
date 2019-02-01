@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: a3a6af8eb493ce17ac73769decd1f60b903ae165
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553770"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>方法: レジストリにキーを作成する (Visual C#)
 現在のユーザーのレジストリに存在する "Names" というキーの下に "Name" と "Isabella" という値のペアを追加する例を次に示します。  
@@ -55,9 +55,9 @@ key.Close();
   
  レジストリ キーがアクセス制御リスト (ACL: Access Control List) によって保護されていても、パスワードなど他人に知られたくないデータをプレーン テキストでレジストリに格納するのは危険です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)
 - [C# によるレジストリからの読み取り、書き込み、および削除](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

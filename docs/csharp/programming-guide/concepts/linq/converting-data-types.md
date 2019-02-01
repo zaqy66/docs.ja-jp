@@ -2,12 +2,12 @@
 title: データ型の変換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: ea1f204ab59ecdd3e3e7e65d12c1be37e9b09f01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736887"
 ---
 # <a name="converting-data-types-c"></a>データ型の変換 (C#)
 変換メソッドは、入力オブジェクトの型を変更します。  
@@ -29,7 +29,7 @@ ms.locfileid: "47089725"
 |-----------------|-----------------|---------------------------------|----------------------|  
 |AsEnumerable|<xref:System.Collections.Generic.IEnumerable%601> として型指定された入力を返します。|該当なし。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|(ジェネリック) <xref:System.Collections.IEnumerable> を (ジェネリック) <xref:System.Linq.IQueryable> に変換します。|該当なし。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
-|Cast|コレクションの要素を指定した型にキャストします。|明示的に型指定された範囲変数を使用します。 例:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
+|Cast|コレクションの要素を指定した型にキャストします。|明示的に型指定された範囲変数を使用します。 次に例を示します。<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
 |OfType|指定した型にキャストできるかどうかに応じて値をフィルター処理します。|該当なし。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |ToArray|コレクションを配列に変換します。 このメソッドはクエリの実行を強制します。|該当なし。|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
 |ToDictionary|キー セレクター関数に基づいて、<xref:System.Collections.Generic.Dictionary%602> に要素を変換します。 このメソッドはクエリの実行を強制します。|該当なし。|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
@@ -74,10 +74,10 @@ static void Cast()
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Linq>  
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [from 句](../../../../csharp/language-reference/keywords/from-clause.md)  
-- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [from 句](../../../../csharp/language-reference/keywords/from-clause.md)
+- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [方法: LINQ を使用して ArrayList を照会する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

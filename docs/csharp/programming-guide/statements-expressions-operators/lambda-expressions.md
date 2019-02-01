@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737521"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
@@ -89,7 +89,8 @@ namespace ConsoleApplication1
 
  この例では、式形式のラムダの本体をメソッド呼び出しで構成できることに注目してください。 ただし、SQL Server など .NET Framework の外部で評価される式ツリーを作成する場合は、ラムダ式内でメソッド呼び出しを使用することはできません。 .NET 共通言語ランタイムのコンテキストの外部では、これらのメソッドは通用しません。  
   
-## <a name="statement-lambdas"></a>ステートメント形式のラムダ  
+## <a name="statement-lambdas"></a>ステートメント形式のラムダ
+
  ステートメント形式のラムダは式形式のラムダに似ていますが、ステートメントが中かっこで囲まれる点が異なります。  
   
 (input-parameters) => { statement; }
@@ -102,7 +103,8 @@ namespace ConsoleApplication1
 
  匿名メソッドと同様、ステートメント形式のラムダを使用して式ツリーを作成することはできません。  
   
-## <a name="async-lambdas"></a>非同期ラムダ  
+## <a name="async-lambdas"></a>非同期ラムダ
+
  [async](../../../csharp/language-reference/keywords/async.md) キーワードと [await](../../../csharp/language-reference/keywords/await.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。  
   
 ```csharp
@@ -154,7 +156,8 @@ public partial class Form1 : Form
 
  非同期メソッドの作成および使用方法の詳細については、「[Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)」を参照してください。  
   
-## <a name="lambdas-with-the-standard-query-operators"></a>標準クエリ演算子でのラムダ  
+## <a name="lambdas-with-the-standard-query-operators"></a>標準クエリ演算子を使用したラムダ
+
  標準クエリ演算子の多くが、汎用デリゲートの <xref:System.Func%602> ファミリに属する型の入力パラメーターを持ちます。 これらのデリゲートは型パラメーターを使用して入力パラメーターの数と型、およびデリゲートの戻り値の型を定義します。 `Func` デリゲートは、ソース データのセット内の各要素に適用されるユーザー定義の式をカプセル化する場合に非常に便利です。 たとえば、次のデリゲート型を考えてみましょう。  
   
 ```csharp  
@@ -191,7 +194,8 @@ var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
-## <a name="type-inference-in-lambdas"></a>ラムダにおける型の推論  
+## <a name="type-inference-in-lambdas"></a>ラムダにおける型の推論
+
  ラムダを記述する際、多くの場合は入力パラメーターの型を指定する必要はありません。これは、ラムダ本体やパラメーターのデリゲート型など C# 言語仕様に記述されている要素に基づいて、コンパイラが型を推論できるためです。 ほとんどの標準クエリ演算子では、最初の入力がソース シーケンス内の要素の型です。 したがって、 `IEnumerable<Customer>`を問い合わせると、入力変数は `Customer` オブジェクトであると推論されます。これは、そのメソッドとプロパティにアクセスできることを意味します。  
   
 ```csharp  
@@ -208,7 +212,8 @@ customers.Where(c => c.City == "London");
   
  共通型システムには "ラムダ式" の概念が組み込まれていないため、ラムダ式自体は型を持ちません。 しかし、変則的ではあってもラムダ式の "型" を表現できると都合が良い場合もあります。 このような場合の型は、ラムダ式の変換後のデリゲート型または <xref:System.Linq.Expressions.Expression> 型を指します。  
   
-## <a name="variable-scope-in-lambda-expressions"></a>ラムダ式における変数のスコープ  
+## <a name="variable-scope-in-lambda-expressions"></a>ラムダ式における変数のスコープ
+
  ラムダは、"*外部変数*" を参照できます (「[匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)」を参照)。外部変数とは、ラムダ関数を定義するメソッド内のスコープ、またはラムダ式を含む型のスコープに存在する変数のことです。 こうして取り込まれた変数は、ラムダ式で使用するために格納されます。これは、変数がスコープ外に出てガベージ コレクトされる場合でも変わりません。 外部変数は、ラムダ式で使用される前に明示的に代入する必要があります。 次の例は、こうした規則を示しています。  
   
 ```csharp  
@@ -269,18 +274,20 @@ class Test
   
 -   ラムダ式には、 `goto` ステートメント、 `break` ステートメント、およびジャンプ ステートメントのジャンプ先がブロック外である場合はラムダ式の内部にある `continue` ステートメントを含めることはできません。 また、ジャンプ先がブロックの内部にある場合は、ラムダ式の外部でジャンプ ステートメントを使用するとエラーになります。  
   
-## <a name="c-language-specification"></a>C# 言語仕様  
+## <a name="c-language-specification"></a>C# 言語仕様
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="featured-book-chapter"></a>参考書籍の該当する章  
+## <a name="featured-book-chapter"></a>参考書籍の該当する章
+
  「[Delegates, Events, and Lambda Expressions (デリゲート、イベント、およびラムダ式)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)」(『[C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers (C# 3.0 クックブック (第 3 版): C# 3.0 プログラマ向けの 250 以上のソリューション)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)』)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)  
-- [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [式ツリー](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Visual Studio 2008 C# Samples (Visual Studio 2008 の C# サンプル) (LINQ サンプル クエリ ファイルと XQuery プログラムを参照してください)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)
+- [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [式ツリー](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Visual Studio 2008 C# Samples (Visual Studio 2008 の C# サンプル) (LINQ サンプル クエリ ファイルと XQuery プログラムを参照してください)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Recursive lambda expressions (再帰的なラムダ式)](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

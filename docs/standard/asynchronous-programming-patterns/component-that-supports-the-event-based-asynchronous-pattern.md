@@ -1,5 +1,5 @@
 ---
-title: '方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する'
+title: '方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745468"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
   
  このチュートリアルでは、イベント ベースの非同期パターンを実装するコンポーネントの作成方法を示します。 これは、<xref:System.ComponentModel?displayProperty=nameWithType> 名前空間のヘルパー クラスを使用して実装します。これにより、コンポーネントは任意のアプリケーション モデルで正常に動作します ([!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、コンソール アプリケーション、Windows フォーム アプリケーションなど)。 また、このコンポーネントは、<xref:System.Windows.Forms.PropertyGrid> コントロールや独自のカスタム デザイナーで設計可能です。  
@@ -48,7 +48,7 @@ ms.locfileid: "46003816"
   
 -   開始メソッドとキャンセル メソッドの実装  
   
- このトピックのコードを単一のリストとしてコピーするには、「[方法 : イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
+ このトピックのコードを単一のリストとしてコピーするには、「[方法:イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 ## <a name="creating-the-component"></a>コンポーネントの作成  
  最初に、イベント ベースの非同期パターンを実装するコンポーネントを作成します。  
@@ -176,7 +176,7 @@ ms.locfileid: "46003816"
  `CalculateWorker` メソッドはデリゲートにラップされており、`BeginInvoke` の呼び出しとは非同期に呼び出されます。  
   
 > [!NOTE]
->  進行状況の報告は、`BuildPrimeNumberList` メソッドで実装されています。 高速なコンピューターでは、`ProgressChanged` イベントが立て続けに発生する可能性があります。 これらのイベントが生成されるクライアント スレッドは、このような状況を処理できる必要があります。 ユーザー インターフェイスのコードがメッセージであふれ、処理が追いつかなくなり、ハングする可能性があります。 この状況を処理するユーザー インターフェイスの例については、「[方法: イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
+>  進行状況の報告は、`BuildPrimeNumberList` メソッドで実装されています。 高速なコンピューターでは、`ProgressChanged` イベントが立て続けに発生する可能性があります。 これらのイベントが生成されるクライアント スレッドは、このような状況を処理できる必要があります。 ユーザー インターフェイスのコードがメッセージであふれ、処理が追いつかなくなり、ハングする可能性があります。 この状況を処理するユーザー インターフェイスの例については、「[方法:イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>素数の計算を非同期に実行するには:  
   
@@ -190,14 +190,14 @@ ms.locfileid: "46003816"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#27)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#27)]  
   
-3.  `BuildPrimeNumberList` を実装します。 このメソッドは、テストする数と <xref:System.ComponentModel.AsyncOperation> の 2 つのパラメーターを受け取ります。 <xref:System.ComponentModel.AsyncOperation> を使って、進行状況とインクリメンタルな結果を報告します。 これにより、アプリケーション モデルの適切なスレッドまたはコンテキストで、クライアントのイベント ハンドラーが呼び出されます。 `BuildPrimeNumberList` は、素数を見つけると、`ProgressChanged` イベントに対するクライアントのイベント ハンドラーに、インクリメンタルな結果としてこれを報告します。 これには <xref:System.ComponentModel.ProgressChangedEventArgs> から派生した `CalculatePrimeProgressChangedEventArgs` という名前のクラスが必要であり、このクラスには `LatestPrimeNumber` という名前の追加プロパティが 1 つあります。  
+3.  `BuildPrimeNumberList`を実装します。 このメソッドは、テストする数と <xref:System.ComponentModel.AsyncOperation> の 2 つのパラメーターを受け取ります。 <xref:System.ComponentModel.AsyncOperation> を使って、進行状況とインクリメンタルな結果を報告します。 これにより、アプリケーション モデルの適切なスレッドまたはコンテキストで、クライアントのイベント ハンドラーが呼び出されます。 `BuildPrimeNumberList` は、素数を見つけると、`ProgressChanged` イベントに対するクライアントのイベント ハンドラーに、インクリメンタルな結果としてこれを報告します。 これには <xref:System.ComponentModel.ProgressChangedEventArgs> から派生した `CalculatePrimeProgressChangedEventArgs` という名前のクラスが必要であり、このクラスには `LatestPrimeNumber` という名前の追加プロパティが 1 つあります。  
   
      `BuildPrimeNumberList` メソッドは `TaskCanceled` メソッドも定期的に呼び出し、このメソッドが `true` を返すと終了します。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
   
-4.  `IsPrime` を実装します。 このメソッドは、既知の素数のリスト、テスト対象の数、および見つかった最初の約数の出力パラメーターの、3 つのパラメーターを受け取ります。 素数のリストを基に、テスト対象の数が素数かどうかを特定します。  
+4.  `IsPrime`を実装します。 このメソッドは、既知の素数のリスト、テスト対象の数、および見つかった最初の約数の出力パラメーターの、3 つのパラメーターを受け取ります。 素数のリストを基に、テスト対象の数が素数かどうかを特定します。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  
@@ -242,7 +242,7 @@ ms.locfileid: "46003816"
   
  `PrimeNumberCalculator` コンポーネントが完全して使用できるようになります。  
   
- `PrimeNumberCalculator` コンポーネントを使うクライアントの例については、「[方法: イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
+ `PrimeNumberCalculator` コンポーネントを使うクライアントの例については、「[方法:イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 ## <a name="next-steps"></a>次の手順  
  `CalculatePrimeAsync` メソッドに相当する同期メソッドである `CalculatePrime` を作成して、この例を拡張できます。 このようにすると、`PrimeNumberCalculator` コンポーネントはイベント ベースの非同期パターンに完全に準拠するようになります。  
@@ -253,6 +253,6 @@ ms.locfileid: "46003816"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: バックグラウンドで操作を実行する](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [イベントベースの非同期パターンの概要](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [方法: バックグラウンドで操作を実行する](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [イベントベースの非同期パターンの概要](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

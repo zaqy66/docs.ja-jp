@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633853"
 ---
 # <a name="ipv6-addressing"></a>IPv6 アドレス指定
 インターネット プロトコル バージョン 6 (IPv6) では、アドレスの長さは 128 ビットです。 このような大きいアドレス空間の 1 つの理由は、インターネットのトポロジを反映したルーティング ドメインの階層構造に利用可能なアドレスを細分化するためです。 別の理由は、ネットワークにデバイスを接続するネットワーク アダプター (インターフェイス) のアドレスをマップするためです。 IPv6 は、ネットワーク インターフェイス レベルである最下位レベルでアドレスを解決する固有の機能、および自動構成機能を備えています。  
@@ -72,6 +72,6 @@ ms.locfileid: "50183413"
   
  一般に、ノードは常にリンク ローカル アドレスを持ちます。 サイト ローカル アドレスおよび 1 つまたは複数のグローバル アドレスを持つ場合があります。  
   
-## <a name="see-also"></a>参照  
- [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [ソケット](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>関連項目
+- [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [ソケット](../../../docs/framework/network-programming/sockets.md)

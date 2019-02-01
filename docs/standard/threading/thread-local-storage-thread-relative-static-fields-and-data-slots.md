@@ -1,5 +1,5 @@
 ---
-title: 'スレッド ローカル ストレージ : スレッド相対静的フィールドとデータ スロット'
+title: スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718261"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ : スレッド相対静的フィールドとデータ スロット
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット
 1 つのスレッドとアプリケーション ドメインに固有のデータを格納するには、マネージド スレッド ローカル ストレージ (TLS: Thread Local Storage) を使用します。 .NET Framework は、マネージド TLS の使用に関して、スレッド相対静的フィールドとデータ スロットという 2 つの機構を備えています。  
   
 -   コンパイル時に要件を正確に予測できる場合は、スレッド相対静的フィールド (Visual Basic ではスレッド相対 `Shared` フィールド) を使用します。 スレッド相対静的フィールドは、最適なパフォーマンスを提供します。 また、コンパイル時に型チェックを利用することもできます。  
@@ -59,8 +59,8 @@ ms.locfileid: "44042232"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.ContextStaticAttribute>  
-- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
-- <xref:System.ThreadStaticAttribute>  
-- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- <xref:System.ContextStaticAttribute>
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>
+- <xref:System.ThreadStaticAttribute>
+- <xref:System.Runtime.Remoting.Messaging.CallContext>
 - [スレッド化](../../../docs/standard/threading/index.md)

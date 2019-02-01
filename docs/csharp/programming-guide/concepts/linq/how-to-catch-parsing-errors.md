@@ -2,12 +2,12 @@
 title: '方法: 解析エラーをキャッチする (C#)'
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 879a8f037e9d31051ef0d4059ee3ce2a2fca7a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2f56ca48278f9ad8b38f8564f54a379cc09f94ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515863"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>方法: 解析エラーをキャッチする (C#)
 このトピックでは、形式が正しくないか無効な XML を検出する方法について説明します。  
@@ -42,6 +42,6 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>、および <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> メソッドによってスローされる例外の詳細については、<xref:System.Xml.XmlReader> のドキュメントを参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML の解析 (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

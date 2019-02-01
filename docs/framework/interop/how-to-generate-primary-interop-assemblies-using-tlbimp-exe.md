@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596138"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する
 プライマリ相互運用機能アセンブリを生成するには、次の 2 つの方法があります。  
@@ -46,7 +46,7 @@ ms.locfileid: "33389994"
   
  元のタイプ ライブラリとは異なるバージョン番号の依存プライマリ相互運用機能アセンブリは、現在のディレクトリにインストールされている場合、検出できません。 依存プライマリ相互運用機能アセンブリを Windows レジストリに登録するか、または **/reference** オプションを使用して、Tlbimp.exe が依存 DLL を検出できるようにする必要があります。  
   
- 複数のバージョンのタイプ ライブラリをラップすることもできます。 その方法については、「[方法: 複数のバージョンのタイプ ライブラリをラップする](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100))」を参照してください。  
+ 複数のバージョンのタイプ ライブラリをラップすることもできます。 手順については、「[方法:複数のバージョンのタイプ ライブラリをラップする](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100))」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、COM タイプ ライブラリ `LibUtil.tlb` をインポートし、アセンブリ `LibUtil.dll` にキー ファイル `CompanyA.snk` を使用して厳密な名前で署名します。 この例では、特定の名前空間名を省略することにより、既定の名前空間 `LibUtil` を生成します。  
@@ -67,5 +67,5 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
-## <a name="see-also"></a>参照  
- [方法: プライマリ相互運用機能アセンブリを登録する](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+## <a name="see-also"></a>関連項目
+- [方法: プライマリ相互運用機能アセンブリを登録する](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

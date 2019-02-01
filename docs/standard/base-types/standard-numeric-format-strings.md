@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0618e9853eea2f4aa6e6a5dfd11b571cb3d7b123
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506720"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
 
@@ -55,15 +55,15 @@ ms.locfileid: "47397177"
   
 |書式指定子|name|説明|使用例|  
 |----------------------|----------|-----------------|--------------|  
-|"C" または "c"|通貨|結果: 通貨値。<br /><br /> サポート: すべての数値型。<br /><br /> 精度指定子: 小数部の桁数。<br /><br /> 既定の精度指定子: <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細については、「[通貨 ("C") 書式指定子](#CFormatString)」を参照してください。|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
-|"D" または "d"|Decimal (10 進数型)|結果: 必要に応じて負の符号が付く整数。<br /><br /> サポート: 整数型のみ。<br /><br /> 精度指定子: 最小桁数。<br /><br /> 既定の精度指定子: 必要な最小桁数。<br /><br /> 詳細については、「[10 進数 ("D") 書式指定子](#DFormatString)」を参照してください。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
-|"E" または "e"|指数|結果: 指数表記。<br /><br /> サポート: すべての数値型。<br /><br /> 精度指定子: 小数部の桁数。<br /><br /> 既定の精度指定子: 6。<br /><br /> 詳細については、「[指数 ("E") 書式指定子](#EFormatString)」を参照してください。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
-|"F" または "f"|固定小数点|結果: 必要に応じて負の符号が付く整数と小数。<br /><br /> サポート: すべての数値型。<br /><br /> 精度指定子: 小数部の桁数。<br /><br /> 既定の精度指定子: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細については、「[固定小数点 ("F") 書式指定子](#FFormatString)」を参照してください。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
-|"G" または "g"|全般|結果: 固定小数点表記または指数表記のいずれかのより簡潔な形式。<br /><br /> サポート: すべての数値型。<br /><br /> 精度指定子: 有効桁数。<br /><br /> 既定の精度指定子: 数値型によって異なります。<br /><br /> 詳細については、「[一般 ("G") 書式指定子](#GFormatString)」を参照してください。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
-|"N" または "n"|数値|結果: 必要に応じて負の符号が付く整数と小数、桁区切り記号、および小数点記号。<br /><br /> サポート: すべての数値型。<br /><br /> 精度指定子: 小数部の桁数。<br /><br /> 既定の精度指定子: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細については、「[数値 ("N") 書式指定子](#NFormatString)」を参照してください。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
-|"P" または "p"|パーセント|結果: 数値に 100 を掛けて、パーセント記号を付けて表示します。<br /><br /> サポート: すべての数値型。<br /><br /> 精度指定子: 小数部の桁数。<br /><br /> 既定の精度指定子: <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細については、「[パーセント ("P") 書式指定子](#PFormatString)」を参照してください。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" または "r"|ラウンドトリップ|結果: 同じ数値にラウンドトリップできる文字列。<br /><br /> サポート: <xref:System.Single>、<xref:System.Double>、および <xref:System.Numerics.BigInteger>。<br /><br /> 注: <xref:System.Numerics.BigInteger> 型にのみお勧めします。 <xref:System.Double> 型の場合は "G17"、<xref:System.Single> 型の場合は "G9" を使用します。 </br> 精度指定子: 無視されます。<br /><br /> 詳細については、「[ラウンドトリップ ("R") 書式指定子](#RFormatString)」を参照してください。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
-|"X" または "x"|16 進数|結果: 16 進数文字列。<br /><br /> サポート: 整数型のみ。<br /><br /> 精度指定子: 結果文字列の桁数。<br /><br /> 詳細については、「[16 進数 ("X") 書式指定子](#XFormatString)」を参照してください。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
+|"C" または "c"|通貨|結果: 通貨値。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[通貨 ("C") 書式指定子](#CFormatString)。|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
+|"D" または "d"|Decimal (10 進数型)|結果: 必要に応じて負の符号が付く整数。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:最小桁数。<br /><br /> 既定の精度指定子:必要な最小桁数。<br /><br /> 詳細情報:[10 進数 ("D") 書式指定子](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
+|"E" または "e"|指数|結果: 指数表記。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:6.<br /><br /> 詳細情報:[指数 ("E") 書式指定子](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
+|"F" または "f"|固定小数点|結果: 必要に応じて負の符号が付く整数と小数。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[固定小数点 ("F") 書式指定子](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
+|"G" または "g"|全般|結果: 固定小数点表記または指数表記のいずれかのより簡潔な形式。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:有効桁数。<br /><br /> 既定の精度指定子:数値型によって異なります。<br /><br /> 詳細情報:[一般 ("G") 書式指定子](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
+|"N" または "n"|数値|結果: 必要に応じて負の符号が付く整数と小数、桁区切り記号、および小数点記号。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[数値 ("N") 書式指定子](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
+|"P" または "p"|パーセント|結果: 数値に 100 を掛けて、パーセント記号を付けて表示します。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[パーセント ("P") 書式指定子](#PFormatString)。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
+|"R" または "r"|ラウンドトリップ|結果: 同じ数値にラウンドトリップできる文字列。<br /><br /> サポート: <xref:System.Single>、<xref:System.Double>、および <xref:System.Numerics.BigInteger>。<br /><br /> メモ:<xref:System.Numerics.BigInteger> 型にのみお勧めします。 <xref:System.Double> 型の場合は "G17"、<xref:System.Single> 型の場合は "G9" を使用します。 </br> 精度指定子:無視されます。<br /><br /> 詳細情報:[ラウンドトリップ ("R") 書式指定子](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"X" または "x"|16 進数|結果: 16 進数文字列。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:結果文字列の桁数。<br /><br /> 詳細情報:[16 進数 ("X") 書式指定子](#XFormatString)。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |その他の 1 文字|未定義の指定子|結果: 実行時に <xref:System.FormatException> をスローします。||  
   
 <a name="Using"></a>   
@@ -361,9 +361,9 @@ ms.locfileid: "47397177"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Globalization.NumberFormatInfo>  
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
-- [方法: 数値に先行するゼロを埋め込む](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
-- [サンプル: .NET Framework 4 の書式設定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+- <xref:System.Globalization.NumberFormatInfo>
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+- [方法: 数値に先行するゼロを埋め込む](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [サンプル: .NET Framework 4 の書式設定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
 - [複合書式指定](../../../docs/standard/base-types/composite-formatting.md)

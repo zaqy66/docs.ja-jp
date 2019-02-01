@@ -2,12 +2,12 @@
 title: プロジェクションと変換 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
-ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8d721f600a4a5bb6f3e8c625f825b08d9f59b0ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43747835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514656"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>プロジェクションと変換 (LINQ to XML) (C#)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のプロジェクションと変換の例について説明します。  
@@ -25,6 +25,6 @@ ms.locfileid: "43747835"
 |[方法: XML からテキスト ファイルを生成する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|XML ファイルを XML 以外のテキスト ファイルに変換する方法について説明します。|  
 |[方法: CSV ファイルから XML を生成する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] を使用して CSV ファイルを解析し、そのファイルから XML を生成する方法について説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

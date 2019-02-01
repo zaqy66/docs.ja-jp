@@ -2,12 +2,12 @@
 title: '方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: dece3cd6dbac2d10a3467892ef8aed80443cb2ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4e10001e4c4b84265147c43aa9a5557e68e2d54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696062"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ) (C#)
 次の例では、LINQ でリフレクションを使用して、指定した検索条件に一致するメソッドについてのメタデータを取得する方法を示します。 この例のクエリでは、配列などの列挙可能な型を返すすべてのメソッドの名前をアセンブリ内で検索します。  
@@ -54,6 +54,6 @@ namespace LINQReflection
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

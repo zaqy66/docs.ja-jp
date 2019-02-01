@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: fbe75d8ec4a677c47a98a5868c4e7e44c95f1d93
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714881"
 ---
 # <a name="service-application-programming-architecture"></a>サービス アプリケーションのプログラミング アーキテクチャ
 Windows サービス アプリケーションは、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> クラスから継承するクラスが基になっています。 このクラスのメソッドをオーバーライドして機能を定義し、サービスの動作を決定します。  
@@ -57,7 +57,7 @@ Windows サービス アプリケーションは、<xref:System.ServiceProcess.S
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  これらの例では、アプリケーションに含まれる各サービスを追加できる <xref:System.ServiceProcess.ServiceBase> 型の配列を使用しており、すべてのサービスを一緒に実行できます。 一方、作成するサービスが 1 つのみの場合は、配列は使わず、<xref:System.ServiceProcess.ServiceBase> から継承する新しいオブジェクトを単純に宣言して、それを実行します。 詳しくは、「[方法: プログラムでサービスを作成する](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)」をご覧ください。  
+    >  これらの例では、アプリケーションに含まれる各サービスを追加できる <xref:System.ServiceProcess.ServiceBase> 型の配列を使用しており、すべてのサービスを一緒に実行できます。 一方、作成するサービスが 1 つのみの場合は、配列は使わず、<xref:System.ServiceProcess.ServiceBase> から継承する新しいオブジェクトを単純に宣言して、それを実行します。 例については、「[方法: プログラムでサービスを作成する](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)」を参照してください。  
   
 -   <xref:System.ServiceProcess.ServiceBase> クラスの一連のプロパティ。 これらは、サービスで呼び出すことができるメソッドを決定します。 たとえば、<xref:System.ServiceProcess.ServiceBase.CanStop%2A> プロパティを `true` に設定すると、サービスで <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドを呼び出すことができます。 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> プロパティが `true` に設定されていると、<xref:System.ServiceProcess.ServiceBase.OnPause%2A> および <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> メソッドを呼び出すことができます。 これらのプロパティのいずれかを `true` に設定するときは、関連するメソッドをオーバーライドして処理を定義する必要があります。  
   
@@ -66,6 +66,6 @@ Windows サービス アプリケーションは、<xref:System.ServiceProcess.S
   
  また、<xref:System.ServiceProcess.ServiceController> コンポーネントを使うと、既存のサービスと通信して、その動作を制御できます。  
   
-## <a name="see-also"></a>参照  
- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [方法 : Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>関連項目
+- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)

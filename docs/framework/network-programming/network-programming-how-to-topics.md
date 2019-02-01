@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5b9236b3dd9d40c3f5656fd050f25cbb12f6a1ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561973"
 ---
 # <a name="network-programming-how-to-topics"></a>ネットワーク プログラミング方法のトピック
 概念を説明したドキュメントに用意されている、ネットワーク プログラミングに関する方法を説明したトピックへのリンクの一覧を次に示します。  
@@ -77,7 +77,7 @@ ms.locfileid: "50192359"
   
 -   [方法: ホストに対して ping を実行](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>参照  
- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)  
- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>関連項目
+- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

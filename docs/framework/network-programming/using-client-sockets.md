@@ -16,12 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 42cea87576ca4c5cbca685c6d71272649eabb844
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562851"
 ---
 # <a name="using-client-sockets"></a>クライアント ソケットの使用
 <xref:System.Net.Sockets.Socket> を使用して会話を開始するには、まずアプリケーションとリモート デバイス間にデータ パイプを作成する必要があります。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、リモート サービスとの TCP/IP 接続を作成する方法を説明します。  
@@ -77,8 +77,8 @@ try {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [非同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [ソケット](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>関連項目
+- [同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [非同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [ソケット](../../../docs/framework/network-programming/sockets.md)

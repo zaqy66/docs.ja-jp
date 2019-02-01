@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517683"
 ---
 # <a name="composite-formatting"></a>複合書式指定
 
@@ -67,7 +67,7 @@ ms.locfileid: "53126862"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 同じパラメーター指定子を指定することによって、複数の書式指定項目でオブジェクトのリスト内の同じ要素を参照できます。 たとえば、次の例に示すように、"0x{0:X} {0:E} {0:N}" など、複合書式文字列を指定することで、16 進数、指数、および数字形式で同じ数値の書式を指定できます。  
+ 同じパラメーター指定子を指定することによって、複数の書式指定項目でオブジェクトのリスト内の同じ要素を参照できます。 たとえば、次のような複合書式文字列を指定することで、16 進数、指数、および数字形式で同じ数値の書式を指定できます:次の例に示すような "0x{0:X} {0:E} {0:N}"。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -161,15 +161,15 @@ ms.locfileid: "53126862"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [文字列補間 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [文字列補間 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
-- [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [文字列補間 (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [文字列補間 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+- [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

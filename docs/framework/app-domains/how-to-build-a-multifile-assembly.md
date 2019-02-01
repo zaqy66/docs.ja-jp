@@ -1,5 +1,5 @@
 ---
-title: '方法 : マルチファイル アセンブリをビルドする'
+title: '方法: マルチファイル アセンブリをビルドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5f7bbbb2a0c0344d1da1e26d2eb35a65a56a80d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534440"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>方法 : マルチファイル アセンブリをビルドする
+# <a name="how-to-build-a-multifile-assembly"></a>方法: マルチファイル アセンブリをビルドする
 この記事では、マルチファイル アセンブリを作成する方法を説明し、プロシージャの各手順を示すコードを提供します。  
   
 > [!NOTE]
@@ -96,8 +96,8 @@ ms.locfileid: "50183101"
   
      [MSIL 逆アセンブラー (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用すると、アセンブリの内容を調査したり、ファイルがアセンブリであるかモジュールであるかを判断したりできます。  
   
-## <a name="see-also"></a>参照  
-- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
-- [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
-- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>関連項目
+- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)
+- [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [マルチファイル アセンブリ](../../../docs/framework/app-domains/multifile-assemblies.md)

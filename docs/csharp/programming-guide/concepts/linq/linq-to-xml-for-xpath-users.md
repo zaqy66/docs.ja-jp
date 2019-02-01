@@ -2,12 +2,12 @@
 title: XPath ユーザー向けの LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-ms.openlocfilehash: c5c3d94c218f712a127ad313d3b000174644f9dd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79894aa0f7ba6b64119de6fa8e82be369299e361
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516407"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066334"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>XPath ユーザー向けの LINQ to XML (C#)
 次に示す一連のトピックでは、さまざまな XPath 式、およびそれらに関連する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の式について説明します。  
@@ -31,13 +31,13 @@ ms.locfileid: "43516407"
 |[方法: 2 つのロケーション パスの和集合を検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md)|XPath の UNION 演算子 <code>&#124;</code> と <xref:System.Linq.Enumerable.Concat%2A> の [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 標準クエリ演算子を比較します。<br /><br /> 関連する XPath 式は <code>"//Category&#124;//Price"</code> です。|  
 |[方法: 兄弟ノードを検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|特定の名前を持つノードのすべての兄弟を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"../Book"` です。|  
 |[方法: 親の属性を検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|親要素に移動してその属性を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"../@id"` です。|  
-|[方法: 特定の名前を持つ兄弟の属性を検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md)|コンテキスト ノードの兄弟に関する特定の属性を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"``../Book/@id``"` です。|  
+|[方法: 特定の名前を持つ兄弟の属性を検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md)|コンテキスト ノードの兄弟に関する特定の属性を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"../Book/@id"` です。|  
 |[方法: 特定の属性を持つ要素を検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md)|特定の属性を持つすべての要素を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"./*[@Select]"` です。|  
 |[方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|相対的位置に基づいて要素を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"Test[position() >= 2 and position() <= 4]"` です。|  
 |[方法: 直前の兄弟を検索する (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|ノードの直前の兄弟を検索する方法を、XPath と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の間で比較します。<br /><br /> 関連する XPath 式は `"preceding-sibling::*[1]"` です。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.XPath?displayProperty=nameWithType>  
-- [XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
+- <xref:System.Xml.XPath?displayProperty=nameWithType>
+- [XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
 - [XPath データ モデルを使用した XML データの処理](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

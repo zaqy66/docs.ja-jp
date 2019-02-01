@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a1e4dacf66cc17182265e8ea9f132938017a54e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698428"
 ---
 # <a name="registration-free-com-interop"></a>登録を必要としない COM 相互運用機能
 登録を必要としない COM 相互運用機能は、アセンブリ情報を格納するために Windows レジストリを使用しないで、コンポーネントをアクティブにします。 展開中にコンピューター上のコンポーネントを登録するのではなく、バインディングとアクティベーションに関する情報を含む Win32 スタイルのマニフェスト ファイルをデザイン時に作成します。 レジストリ キーではなく、これらのマニフェスト ファイルが、オブジェクトのアクティベーションを指示します。  
@@ -54,5 +54,5 @@ ms.locfileid: "46002230"
     > [!NOTE]
     >  Side-by-side 実行は、ランタイムの複数のバージョンと、特定のバージョンのランタイムを使用するアプリケーションおよびコンポーネントの複数のバージョンを、同一のコンピューター上で同時に実行できるようにするための、.NET Framework の機能です。 Side-by-side 実行と side-by-side アセンブリは、side-by-side 機能を提供するための別個のメカニズムです。  
   
-## <a name="see-also"></a>参照  
- [方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+## <a name="see-also"></a>関連項目
+- [方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

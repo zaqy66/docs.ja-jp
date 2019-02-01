@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690619"
 ---
 # <a name="using-threads-and-threading"></a>スレッドの使用とスレッド処理
 
@@ -54,6 +54,6 @@ ms.locfileid: "43864230"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [スレッドおよびスレッド処理](threads-and-threading.md)  
-- [並列プログラミング](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [スレッドおよびスレッド処理](threads-and-threading.md)
+- [並列プログラミング](../parallel-programming/index.md)

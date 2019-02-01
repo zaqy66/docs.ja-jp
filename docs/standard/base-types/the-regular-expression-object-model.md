@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535309"
 ---
 # <a name="the-regular-expression-object-model"></a>正規表現のオブジェクト モデル
 <a name="introduction"></a> ここでは、.NET の正規表現を扱うときに使用するオブジェクト モデルについて説明します。 このチュートリアルは、次のセクションで構成されています。  
@@ -353,6 +353,6 @@ ms.locfileid: "45664736"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Text.RegularExpressions>  
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
 - [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : リフレクションを使用してジェネリック型をチェックおよびインスタンス化する'
+title: '方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0f964ac73f070b99cdfd06e9037d06ce7888938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622053"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>方法 : リフレクションを使用してジェネリック型をチェックおよびインスタンス化する
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する
 ジェネリック型の情報は、他の型の情報と同じ方法で取得します。つまり、ジェネリック型を表す <xref:System.Type> オブジェクトをチェックすることによって取得します。 根本的な違いとして、ジェネリック型には、そのジェネリック型パラメーターを表す <xref:System.Type> オブジェクトの一覧が含まれています。 このセクションでは、まず、ジェネリック型をチェックする手順を示します。  
   
  ジェネリック型の定義の型パラメーターに型引数をバインドすることにより、構築された型を表す <xref:System.Type> オブジェクトを作成できます。 2 番目の手順でこの方法を示します。  
@@ -123,9 +123,9 @@ ms.locfileid: "33397573"
   
 -   コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Type>  
- <xref:System.Reflection.MethodInfo>  
- [リフレクションとジェネリック型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [ジェネリック](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Type>
+- <xref:System.Reflection.MethodInfo>
+- [リフレクションとジェネリック型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [ジェネリック](../../../docs/standard/generics/index.md)

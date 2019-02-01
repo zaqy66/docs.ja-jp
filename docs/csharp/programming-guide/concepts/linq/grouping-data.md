@@ -2,12 +2,12 @@
 title: データのグループ化 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583221"
 ---
 # <a name="grouping-data-c"></a>データのグループ化 (C#)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
@@ -59,13 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Linq>  
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [group 句](../../../../csharp/language-reference/keywords/group-clause.md)  
-- [方法: 入れ子になったグループを作成する](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
-- [方法: 拡張子別にファイルをグループ化する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
-- [方法: クエリ結果をグループ化する](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
-- [方法: グループ化操作でサブクエリを実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [group 句](../../../../csharp/language-reference/keywords/group-clause.md)
+- [方法: 入れ子になったグループの作成](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
+- [方法: 拡張子別にファイルをグループ化する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [方法: クエリ結果のグループ化](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
+- [方法: グループ化操作でのサブクエリの実行](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
 - [方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c0b6ee6fc789b2586d76b5ec8f10815e543e1d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596859"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック メソッドを定義する
 最初の手順では、2 つの型パラメーターを持つ単純なジェネリック メソッドを作成する方法と、クラスの制約、インターフェイスの制約、および特殊な制約を型パラメーターに適用する方法を示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "33396806"
  3 番目の手順では、ジェネリック メソッドを呼び出す方法を示します。  
   
 > [!IMPORTANT]
->  メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 この例のように、ジェネリック メソッドは非ジェネリック型で表すことができます。 ジェネリック型の非ジェネリック メソッド例については、「[方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)」を参照してください。  
+>  メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 この例のように、ジェネリック メソッドは非ジェネリック型で表すことができます。 ジェネリック型の非ジェネリック メソッドの例については、「[方法:リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)」をご覧ください。  
   
 ### <a name="to-define-a-generic-method"></a>ジェネリック メソッドを定義するには  
   
@@ -170,6 +170,6 @@ ms.locfileid: "33396806"
   
 -   コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Reflection.Emit.MethodBuilder>  
- [方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Reflection.Emit.MethodBuilder>
+- [方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

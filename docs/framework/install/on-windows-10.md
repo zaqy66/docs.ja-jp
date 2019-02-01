@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6db1a3f5fd2011a13a28551a38b319995039ab38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153613"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066313"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Windows 10 と Windows Server 2016 に .NET Framework をインストールする
 
-.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。 この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。 最新版は [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) です。
+.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。 この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。 最新版は [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) です。
 
 このページをご覧になっている理由は、アプリケーションを実行しようとして次のようなダイアログがコンピューターに表示されたからではないでしょうか。
 
@@ -29,11 +29,11 @@ ms.locfileid: "53153613"
 * [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-> [.NET Framework 4.7.2 のダウンロード](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [.NET Framework 4.7.2 のダウンロード](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 から 4.7.1 用に構築されたアプリケーションを実行するために使用できます。
+[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) は、.NET Framework 4.0 から 4.7.1 用に構築されたアプリケーションを実行するために使用できます。
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) は次の Windows にインストールできます。
+[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) は次の Windows にインストールできます。
 
 * Windows 10 Fall Creators Update (バージョン 1709)
 * Windows 10 Creators Update (バージョン 1703)
@@ -78,6 +78,6 @@ Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.7.
 
 ## <a name="see-also"></a>関連項目
 
-[.NET ダウンロード](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
-[.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)   
-[開発者向けの .NET Framework のインストール](guide-for-developers.md)
+- [.NET ダウンロード](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)
+- [開発者向けの .NET Framework のインストール](guide-for-developers.md)

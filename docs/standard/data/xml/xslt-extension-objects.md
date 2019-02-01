@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db0d609e4a930a839dae014b597d42aa4499c5ec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab96d5bdefee0cd85d98174f8f7410e940cb12b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498373"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 拡張オブジェクト
 拡張オブジェクトは、スタイル シートの機能を拡張する場合に使用します。 拡張オブジェクトは、<xref:System.Xml.Xsl.XsltArgumentList> クラスによって維持されます。  
@@ -24,7 +24,7 @@ ms.locfileid: "49452561"
  XSLT 拡張オブジェクトを <xref:System.Xml.Xsl.XsltArgumentList> オブジェクトに追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを使用します。 その時点で、修飾名と名前空間 URI がその拡張オブジェクトに関連付けられます。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを呼び出すには、FullTrust アクセス許可セットが必要です。 詳細については、「[コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)」と [NIB: 名前付きアクセス許可セット](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)に関するページを参照してください。  
+>  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを呼び出すには、FullTrust アクセス許可セットが必要です。 詳細については、「[コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)」および「[NIB:名前付きアクセス許可セット](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)」を参照してください。  
   
  拡張オブジェクトが返すデータ型は、4 つの基本 XPath データ型である `number`、`string`、`Boolean`、および `node set` のうちのいずれかになります。  
   
@@ -40,5 +40,5 @@ ms.locfileid: "49452561"
   
 ## <a name="see-also"></a>関連項目
 
-- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT のセキュリティに関する考慮事項](../../../../docs/standard/data/xml/xslt-security-considerations.md)

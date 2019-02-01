@@ -4,12 +4,12 @@ description: Linux マシンで .NET Core アプリケーションを開発、�
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656051"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083887"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux における .NET Core の前提条件
 
@@ -100,7 +100,8 @@ ARM64 で .NET Core 3.0 をインストールする方法の詳細について�
 Ubuntu ディストリビューションには、次のライブラリがインストールされている必要があります。
 
 * liblttng-ust0
-* libcurl3
+* libcurl3 (14.x および 16.x 用)
+* libcurl4 (18.x 用)
 * libssl1.0.0
 * libkrb5-3
 * zlib1g

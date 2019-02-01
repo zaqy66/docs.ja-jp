@@ -3,12 +3,12 @@ title: '方法: 文字列の内容を変更する - C# ガイド'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664022"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>方法: C\# で文字列の内容を変更する
 
@@ -73,5 +73,5 @@ ms.locfileid: "49453438"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework 正規表現](../../standard/base-types/regular-expressions.md)  
-- [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [.NET Framework 正規表現](../../standard/base-types/regular-expressions.md)
+- [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)

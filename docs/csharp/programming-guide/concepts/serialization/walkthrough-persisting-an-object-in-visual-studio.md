@@ -1,12 +1,12 @@
 ---
 title: 'チュートリアル: C# を使用してオブジェクトを永続化する'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512451"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>チュートリアル: C# を使用してオブジェクトを永続化する #
 
@@ -99,7 +99,7 @@ C# 7.3 以降、`field` のターゲット値を使用して、自動実装プ�
 
 この時点で、アプリケーションを再度ビルドして実行できます。 初めて実行すると、利率は 7.5 から始まり、7.1 に変更されます。 いったんアプリケーションを閉じて、再び実行します。 利率を変更するコードの前でも、保存済みのファイルが読み込まれ、利率は 7.1 であるというメッセージがアプリケーションから出力されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [シリアル化 (C#)](index.md)  
-- [C# プログラミングガイド](../..//index.md)  
+- [シリアル化 (C#)](index.md)
+- [C# プログラミング ガイド](../..//index.md)

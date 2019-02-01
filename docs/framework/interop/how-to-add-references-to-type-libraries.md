@@ -9,11 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c05e7399e9378751f803ae56dfaf664490e6d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebd7599205206e026c7de7b4e7bc2e5352771bd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522220"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>方法: タイプ ライブラリへの参照を追加する
 Visual Studio は、タイプ ライブラリに参照を追加する際に、メタデータを含む相互運用機能アセンブリを生成します。 プライマリ相互運用機能アセンブリが使用可能な場合、Visual Studio では、新しい相互運用機能アセンブリを生成する前に既存のアセンブリが使用されます。  
@@ -39,14 +40,14 @@ Visual Studio は、タイプ ライブラリに参照を追加する際に、�
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>コマンド ライン コンパイルのために参照をタイプ ライブラリに追加するには  
   
-1.  「[How to: Generate Interop Assemblies from Type Libraries](how-to-generate-interop-assemblies-from-type-libraries.md)」(方法: 相互運用機能アセンブリをタイプ ライブラリから生成する) の説明に従って、相互運用機能アセンブリを生成します。  
+1.  「[方法:相互運用機能アセンブリをタイプ ライブラリから生成する](how-to-generate-interop-assemblies-from-type-libraries.md)」の説明に従って、相互運用機能アセンブリを生成します。  
   
 2.  相互運用機能アセンブリ名を指定して [/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md) または [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) コンパイラ オプションを使用し、COM 型の型情報を実行可能ファイルに埋め込みます。  
   
-## <a name="see-also"></a>参照  
- [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)  
- [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)  
- [チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
- [チュートリアル: マネージ アセンブリからの型の埋め込み](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+## <a name="see-also"></a>関連項目
+- [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)
+- [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)
+- [チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))
+- [チュートリアル: マネージド アセンブリからの型の埋め込み](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)
+- [/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

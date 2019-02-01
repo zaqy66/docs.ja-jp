@@ -2,12 +2,12 @@
 title: 高度なクエリ手法 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2552610c88dd095228b960fdea37d46357106fb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44141192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742355"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>高度なクエリ手法 (LINQ to XML) (C#)
 ここでは、高度な [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリ手法の例について説明します。  
@@ -26,6 +26,6 @@ ms.locfileid: "44141192"
 |[方法: Office Open XML ドキュメントを変更する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Office Open XML ドキュメントを開き、変更し、保存するコードについて説明します。|  
 |[方法: ファイル システムから XML ツリーを設定する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|ファイル システムから XML ツリーを作成するコードについて説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

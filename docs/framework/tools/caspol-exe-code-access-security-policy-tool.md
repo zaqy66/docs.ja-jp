@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 1c2ae67b79559b0966ba0b36bbf420febbcb1672
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693319"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 ユーザーと管理者は、コード アクセス セキュリティ (CAS) ポリシー ツール (Caspol.exe) を使用して、コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを変更できます。  
@@ -56,7 +56,7 @@ caspol [options]
 |**-customall**  *path*<br /><br /> または<br /><br /> **-ca**  *path*|このオプションの後に続くすべてのオプションを、コンピューター、エンタープライズ、指定したカスタム ユーザーの各ポリシーに適用します。 カスタム ユーザーのセキュリティ構成ファイルの位置を引数 *path* で指定する必要があります。|  
 |**-cu** **[stomuser]** *path*|現在実行中の Caspol.exe を実行したユーザーに属さないカスタム ユーザー ポリシーを管理できます。 カスタム ユーザーのセキュリティ構成ファイルの位置を引数 *path* で指定する必要があります。|  
 |**-enterprise**<br /><br /> または<br /><br /> **-en**|このオプションの後に続くすべてのオプションを、エンタープライズ レベル ポリシーに適用します。 エンタープライズ管理者ではないユーザーは、エンタープライズ ポリシーを変更するための十分な権限を持ちませんが、参照はできます。 エンタープライズ以外の場合、既定では、このポリシーがコンピューター ポリシーやユーザー ポリシーに干渉することはありません。|  
-|**-e** **[xecution]** {**on** &#124; **off**}|コードの実行が開始される前に実行許可を確認する機構のオンとオフを切り替えます。 **メモ:** このスイッチは、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降のバージョンでは削除されています。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。|  
+|**-e** **[xecution]** {**on** &#124; **off**}|コードの実行が開始される前に実行許可を確認する機構のオンとオフを切り替えます。 **注:** このスイッチは、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降のバージョンでは削除されています。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。|  
 |**-f** **[orce]**|ツールの自己破棄テストを行わず、ユーザーに指定されたとおりにポリシーを変更します。 通常、Caspol.exe は、ポリシーを変更した結果 Caspol.exe 自体の適切な動作が妨げられることにならないかどうかをチェックします。妨げられる場合は、Caspol.exe は変更されたポリシーを保存せず、エラー メッセージを表示します。 Caspol.exe の動作を妨げることになっても強制的に Caspol.exe にポリシーを変更する場合は、 **–force** オプションを使用します。|  
 |**-h** **[elp]**|Caspol.exe のコマンド構文とオプションを表示します。|  
 |**-l** **[ist]**|指定されたコンピューター、ユーザー、エンタープライズ、またはすべてのポリシー レベルにかかわる、コード グループの階層とアクセス許可セットの一覧を表示します。 Caspol.exe は、最初にコード グループのラベルを、次に (null でない場合) 名前を表示します。|  
@@ -75,7 +75,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> または<br /><br /> **-rsld**|ポリシーを既定の状態のより制限されたバージョンに戻してディスクに永続化します。前のコンピューター ポリシーのバックアップを作成し、`security.config.bac` というファイルに永続化します。  ロック ダウンされているポリシーは、`Local Intranet`、`Trusted Sites`、および `Internet` の各ゾーンに属し、対応するコード グループに子コード グループがないコードにアクセスを許可しないことを除いて、既定のポリシーと同じです。|  
 |**-resolvegroup** *assembly_file*<br /><br /> または<br /><br /> **-rsg**  *assembly_file*|特定のアセンブリ (*assembly_file*) が属するコード グループを表示します。 既定では、このオプションは、アセンブリが属するコンピューター、ユーザー、エンタープライズの各ポリシー レベルを表示します。 1 つのポリシー レベルだけを参照するには、このオプションと共に **-machine**、**-user**、または **-enterprise** のいずれかのオプションを使用します。|  
 |**-resolveperm** *assembly_file*<br /><br /> または<br /><br /> **-rsp** *assembly_file*|アセンブリの実行が許可されていた場合は、指定した (または既定の) レベルのセキュリティ ポリシーによってそのアセンブリに与えられるすべてのアクセス許可を表示します。 引数 *assembly_file* はアセンブリを指定します。 **-all** オプションを指定すると、Caspol.exe は、ユーザー ポリシー、コンピューター ポリシー、およびエンタープライズ ポリシーに基づいて、アセンブリに与えられるアクセス許可を計算します。それ以外の場合は、既定の動作規則が適用されます。|  
-|**-s** **[ecurity]** {**on** &#124; **off**}|コード アクセス セキュリティのオンとオフを切り替えます。 **-s off** オプションを指定しても、ロール ベース セキュリティは無効になりません。 **メモ:** このスイッチは、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降のバージョンでは削除されています。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。 **注意:** コード アクセス セキュリティを無効にすると、すべてのコード アクセス要求が成功します。 コード アクセス セキュリティを無効にすると、システムは、ウイルスやワームなどの悪意のあるコードの攻撃を受けやすくなります。 セキュリティをオフにすると、パフォーマンスは多少向上しますが、他のセキュリティ対策を講じて、システム セキュリティ全体が損なわれていないことを確認した場合にだけ、オフにしてください。 その他のセキュリティ対策の例としては、公衆ネットワークからの切断、コンピューターの物理的な保護などがあります。|  
+|**-s** **[ecurity]** {**on** &#124; **off**}|コード アクセス セキュリティのオンとオフを切り替えます。 **-s off** オプションを指定しても、ロール ベース セキュリティは無効になりません。 **注:** このスイッチは、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降のバージョンでは削除されています。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。 **注意:** コード アクセス セキュリティを無効にすると、すべてのコード アクセス要求が成功します。 コード アクセス セキュリティを無効にすると、システムは、ウイルスやワームなどの悪意のあるコードの攻撃を受けやすくなります。 セキュリティをオフにすると、パフォーマンスは多少向上しますが、他のセキュリティ対策を講じて、システム セキュリティ全体が損なわれていないことを確認した場合にだけ、オフにしてください。 その他のセキュリティ対策の例としては、公衆ネットワークからの切断、コンピューターの物理的な保護などがあります。|  
 |**-u** **[ser]**|このオプションの後に続くすべてのオプションを、Caspol.exe を実行したユーザーにかかわるユーザー レベル ポリシーに適用します。 管理者以外のユーザーの場合は、**-user** が既定値です。|  
 |**-?**|Caspol.exe のコマンド構文とオプションを表示します。|  
   
@@ -88,9 +88,9 @@ caspol [options]
 |**-custom**  *xmlfile*|カスタム メンバーシップ条件を追加します。 必須引数の *xmlfile* は、XML シリアル化したカスタム メンバーシップ条件を含む .xml ファイルを指定します。|  
 |**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file*}|指定されたアセンブリ ハッシュを持つコードを指定します。 コード グループのメンバーシップ条件としてハッシュを使用するには、ハッシュ値またはアセンブリ ファイルを指定する必要があります。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-pub** {**-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|指定されたソフトウェア発行者を持つコードを、証明書ファイル、ファイル上の署名、または X509 証明書の 16 進表示で指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
-|**-site** *website*|指定されたサイトがソースであるコードを指定します。 例:<br /><br /> `-site** www.proseware.com`<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|特定の厳密な名前を持つコードを、ファイル名、文字列としてのアセンブリ名、および *major*.*minor*.*build*.*revision* 形式のアセンブリ バージョンで指定します。 例:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
-|**-url** *URL*|指定された URL をソースとするコードを指定します。 URL には、`http://` や `ftp://` などのプロトコルを含める必要があります。 さらに、ワイルドカード文字 (\*) を使用して、特定の URL から複数のアセンブリを指定できます。 **メモ:** 複数の名前を使用して 1 つの URL を識別できるため、URL をメンバーシップ条件として使用する方法は、コードの識別情報を安全に確認できる方法ではありません。 できるだけ厳密な名前メンバーシップ条件、発行元メンバーシップ条件、またはハッシュ メンバーシップ条件を使用してください。 <br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-site** *website*|指定されたサイトがソースであるコードを指定します。 次に例を示します。<br /><br /> `-site** www.proseware.com`<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|特定の厳密な名前を持つコードを、ファイル名、文字列としてのアセンブリ名、および *major*.*minor*.*build*.*revision* 形式のアセンブリ バージョンで指定します。 次に例を示します。<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-url** *URL*|指定された URL をソースとするコードを指定します。 URL には、`http://` や `ftp://` などのプロトコルを含める必要があります。 さらに、ワイルドカード文字 (\*) を使用して、特定の URL から複数のアセンブリを指定できます。 **注:** 複数の名前を使用して 1 つの URL を識別できるため、URL をメンバーシップ条件として使用する方法は、コードの識別情報を安全に確認できる方法ではありません。 できるだけ厳密な名前メンバーシップ条件、発行元メンバーシップ条件、またはハッシュ メンバーシップ条件を使用してください。 <br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-zone** *zonename*|指定されたゾーンがソースであるコードを指定します。 引数 *zonename* として、**MyComputer**、**Intranet**、**Trusted**、**Internet**、または **Untrusted** のいずれかの値を指定できます。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.ZoneMembershipCondition> クラス」を参照してください。|  
   
  **–addgroup** オプションまたは **–chggroup** オプションと併用できる引数 *flags* は、次のいずれかの方法で指定します。  
@@ -246,6 +246,6 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>参照  
- [ツール](index.md)  
- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>関連項目
+- [ツール](index.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

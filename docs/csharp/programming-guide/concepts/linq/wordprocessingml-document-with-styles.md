@@ -2,12 +2,12 @@
 title: スタイルを含む WordprocessingML ドキュメント3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1dc7f30bfdef66c31b5c262fd6d1a2c3f4365634
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603925"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>スタイルを含む WordprocessingML ドキュメント
 複雑な WordprocessingML ドキュメントには、スタイルを使用して書式設定された段落が含まれています。  
@@ -17,7 +17,7 @@ ms.locfileid: "47196097"
  パッケージにアクセスする場合、任意のパスを使用してではなく、パーツ間のリレーションシップを通じてアクセスすることが重要です。 この問題は「WordprocessingML ドキュメント内のコンテンツの操作」のチュートリアルでは扱いませんが、このチュートリアルに用意されているプログラム例では正しい方法を示しています。  
   
 ## <a name="a-document-that-uses-styles"></a>スタイルを使用するドキュメント  
- 「[WordprocessingML ドキュメントの構造 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)」のトピックに示されている WordML の例は、とても簡単な例です。 次のドキュメントはより複雑で、スタイルを使用して書式設定された段落を含んでいます。 Office Open XML ドキュメントを構成する XML を確認するには、「[Office Open XML ドキュメント パーツを出力する例 (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)」を実行するのが最も簡単です。  
+ 「[WordprocessingML ドキュメントの構造 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)」のトピックに示されている WordML の例は、とても簡単な例です。 次のドキュメントはもっと複雑になっています。段落がスタイルで書式設定されています。 Office Open XML ドキュメントを構成する XML を確認するには、「[Office Open XML ドキュメント パーツを出力する例 (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)」を実行するのが最も簡単です。  
   
  次のドキュメントでは、最初の段落にスタイル `Heading1` が設定されています。 既定のスタイルが設定されている段落が多数あります。 スタイル `Code` が設定されている段落も多数あります。 このドキュメントは比較的複雑であるため、LINQ to XML を使用した解析を行うのに適したドキュメントといえます。  
   
@@ -137,6 +137,6 @@ ms.locfileid: "47196097"
 </w:document>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

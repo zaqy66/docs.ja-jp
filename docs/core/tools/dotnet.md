@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170850"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066442"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -78,9 +78,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 インストールされている .NET Core SDK を表示します。
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- `0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
+必要な共有フレームワークが利用できない場合の動作を定義します。 `N` には以下があります。
+ * `0` - マイナー バージョンのロールフォワードでも無効にします。
+ * `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
+ * `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。
+
+ 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
 `-v|--verbosity <LEVEL>`
 

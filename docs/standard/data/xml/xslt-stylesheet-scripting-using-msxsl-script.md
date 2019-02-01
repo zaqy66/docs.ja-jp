@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46584254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563432"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>&lt;msxsl:script&gt; を使用した XSLT スタイルシートのスクリプト
 <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
@@ -31,7 +31,7 @@ ms.locfileid: "46584254"
   
  `msxsl` は、名前空間 `urn:schemas-microsoft-com:xslt` に関連付けられたプレフィックスです。  
   
- `language` 属性は必須ではありませんが、指定する場合は、値を C#、VB、JScript、JavaScript、VisualBasic、または CSharp のいずれかにする必要があります。 language 属性を指定しない場合、既定の言語は JScript です。 `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
+ `language` 属性は必須ではありませんが、指定する場合は、値をC#、VB、JScript、JavaScript、VisualBasic、または CSharp のいずれかにする必要があります。 language 属性を指定しない場合、既定の言語は JScript です。 `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
   
  `implements-prefix` 属性は必須です。 この属性は、名前空間を宣言し、それをスクリプト ブロックに関連付けるために使用されます。 この属性の値は、名前空間を表すプレフィックスです。 この名前空間は、スタイル シート内の任意の場所で定義できます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "46584254"
   
  呼び出し元が `UnmanagedCode` へのアクセス許可を持っている場合、スクリプトはコンパイルされますが、許可される操作は、読み込み時に指定される証拠によって異なります。  
   
- <xref:System.Xml.Xsl.XslTransform.Load%2A> または <xref:System.Xml.XmlReader> を受け取る <xref:System.Xml.XPath.XPathNavigator> メソッドを使用してスタイル シートを読み込む場合は、<xref:System.Xml.Xsl.XslTransform.Load%2A> パラメーターを引数として受け取る <xref:System.Security.Policy.Evidence> オーバーロードを使用する必要があります。 証拠を指定する場合、呼び出し元は、スクリプト アセンブリの `Evidence` を渡すための <xref:System.Security.Permissions.SecurityPermissionFlag> へのアクセス許可を持っている必要があります。 呼び出し元がこのアクセス許可を持っていない場合は、`Evidence` パラメーターが `null` に設定されることがあります。 その場合は、<xref:System.Xml.Xsl.XslTransform.Load%2A> 関数がスクリプトを見つけると、処理が失敗します。 `ControlEvidence` へのアクセス許可は、非常に強力なアクセス権であるため、信頼性の高いコード以外に与えてはいけません。  
+ <xref:System.Xml.XmlReader> または <xref:System.Xml.XPath.XPathNavigator> を受け取る <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドを使用してスタイル シートを読み込む場合は、<xref:System.Security.Policy.Evidence> パラメーターを引数として受け取る <xref:System.Xml.Xsl.XslTransform.Load%2A> オーバーロードを使用する必要があります。 証拠を指定する場合、呼び出し元は、スクリプト アセンブリの `Evidence` を渡すための <xref:System.Security.Permissions.SecurityPermissionFlag> へのアクセス許可を持っている必要があります。 呼び出し元がこのアクセス許可を持っていない場合は、`Evidence` パラメーターが `null` に設定されることがあります。 その場合は、<xref:System.Xml.Xsl.XslTransform.Load%2A> 関数がスクリプトを見つけると、処理が失敗します。 `ControlEvidence` へのアクセス許可は、非常に強力なアクセス権であるため、信頼性の高いコード以外に与えてはいけません。  
   
  アセンブリから証拠を取得するには、`this.GetType().Assembly.Evidence` を使用します。 URI (Uniform Resource Identifier) から証拠を取得するには、`Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)` を使用します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "46584254"
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- スクリプト関数が数値型 Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、または Decimal を使用する場合、これらの数値型は、W3C XPath 数値型に対応する Double に強制的に変換されます。 その他の型はすべて、`ToString` メソッドを呼び出して強制的に文字列に変換されます。  
+ スクリプト関数が数値型Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、または Decimal を使用する場合、これらの数値型は、W3C XPath 数値型に対応する Double に強制的に変換されます。 その他の型はすべて、`ToString` メソッドを呼び出して強制的に文字列に変換されます。  
   
  スクリプト関数が上記以外の型を使用したり、スタイル シートが <xref:System.Xml.Xsl.XslTransform> オブジェクトに読み込まれるときにスクリプト関数がコンパイルを実行しなかったりすると、例外がスローされます。  
   
@@ -89,9 +89,10 @@ ms.locfileid: "46584254"
  特定の言語の演算子、識別子、または区切り記号が誤って XML として解釈される可能性があるため、スクリプトのすべての内容を CDATA セクション内に配置することをお勧めします。 スクリプトで論理 AND 演算子を使用する例を次に示します。  
   
 ```xml  
-<msxsl:script implements-prefix='yourprefix' language='CSharp>  
+<msxsl:script implements-prefix='yourprefix' language='CSharp'>  
     public string book(string abc, string xyz)  
-    {  if ((abc== abc)&&(abc== xyz)) return bar+xyz;  
+    {  
+        if ((abc == bar) && (abc == xyz)) return bar + xyz;  
         else return null;  
     }  
 </msxsl:script>  
@@ -146,8 +147,8 @@ public class Sample
    private const String filename = "number.xml";  
    private const String stylesheet = "calc.xsl";  
   
-   public static void Main() {  
-  
+   public static void Main()  
+   {  
     //Create the XslTransform and load the style sheet.  
     XslTransform xslt = new XslTransform();  
     xslt.Load(stylesheet);  
@@ -162,7 +163,7 @@ public class Sample
     //Transform the file.  
     xslt.Transform(doc, null, writer, null);  
     writer.Close();  
-  }   
+  }  
 }  
 ```  
   
@@ -190,7 +191,8 @@ public class Sample
   
   <msxsl:script language="C#" implements-prefix="user">  
      <![CDATA[  
-     public double circumference(double radius){  
+     public double circumference(double radius)  
+     {  
        double pi = 3.14;  
        double circ = pi*radius*2;  
        return circ;  

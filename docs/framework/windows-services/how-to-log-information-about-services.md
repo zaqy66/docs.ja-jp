@@ -1,5 +1,5 @@
 ---
-title: '方法 : サービスに関する情報のログを記録する'
+title: '方法: サービスに関する情報のログを記録する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 5556b83346aba5bc48eddb930dedc56f4786bdb5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660142"
 ---
-# <a name="how-to-log-information-about-services"></a>方法 : サービスに関する情報のログを記録する
+# <a name="how-to-log-information-about-services"></a>方法: サービスに関する情報のログを記録する
 既定では、すべての Windows サービス プロジェクトはアプリケーション イベント ログとやり取りして、そこに情報および例外を書き込むことができます。 アプリケーションにこの機能が必要かどうかを指定するには、 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> プロパティを使用します。 既定では、Windows サービス プロジェクト テンプレートで作成したサービスには、ログが有効にされます。 <xref:System.Diagnostics.EventLog> クラスの静的フォームを使用すると、 <xref:System.Diagnostics.EventLog> コンポーネントのインスタンスを作成したり、手動でソースを登録したりすることなく、ログにサービス情報を書き込むことができます。  
   
  ログが有効にされていると、サービスのインストーラーは自動的に、プロジェクトの各サービスを有効なイベント ソースとして、サービスのインストール先コンピューター上のアプリケーション ログに登録します。 サービスの起動時、停止時、一時停止時、再開時、インストール時、アンインストール時には常に、サービスが情報をログに記録します。 また、発生したすべてのエラーもログに記録します。 既定の動作を使用している場合、ログにエントリを書き込むためのコードを作成する必要はありません。これは、サービスが自動的に処理します。  
@@ -69,5 +69,5 @@ ms.locfileid: "48036173"
     [!code-csharp[VbRadconService#15](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#15)]
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
-## <a name="see-also"></a>参照  
- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a>関連項目
+- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

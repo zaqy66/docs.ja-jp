@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 2f27d1f11e4517653c9beb2d868d798c215741a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730985"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>方法: パーティション ローカル変数を使用する Parallel.ForEach ループを記述する
 パーティション ローカル変数を使用する <xref:System.Threading.Tasks.Parallel.ForEach%2A> メソッドを記述する方法を次の例に示します。 <xref:System.Threading.Tasks.Parallel.ForEach%2A> ループが実行されると、そのソース コレクションが複数のパーティションに分割されます。 各パーティションは、パーティション ローカル変数の独自のコピーを所有しています。 パーティション ローカル変数は、1 つのスレッドに対して複数のパーティションを実行できる点を除き、[スレッド ローカル変数](xref:System.Threading.ThreadLocal%601)と似ています。
   
- この例のコードおよびパラメーターは、対応する <xref:System.Threading.Tasks.Parallel.For%2A> メソッドによく似ています。 詳細については、「[方法: スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」を参照してください。  
+ この例のコードおよびパラメーターは、対応する <xref:System.Threading.Tasks.Parallel.For%2A> メソッドによく似ています。 詳細については、「[方法 :スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」を参照してください。  
   
  <xref:System.Threading.Tasks.Parallel.ForEach%2A> ループでパーティション ローカル変数を使用するには、2 つのタイプのパラメーターを取るメソッド オーバーロードのうち、いずれか 1 つを呼び出す必要があります。 最初の型パラメーター `TSource` でソース要素の型を指定し、2 番目の型パラメーター `TLocal` でパーティション ローカル変数の型を指定します。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "46562308"
   
      この例では、デリゲートによって個々の整数の値がパーティション ローカル変数に追加されます。スレッド ローカル変数には、そのパーティションで順次追加される整数要素の値の現在の合計が保持されます。  
   
--   `localFinally`。各パーティションでのループ操作が完了した時点で、`Action<TLocal>` によって呼び出される <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> デリゲート。 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドは、`Action<TLocal>` デリゲートに、このループ パーティションのパーティション ローカル変数の最終値を返します。プログラマは、このパーティションの結果と他のパーティションの結果を結合するために必要な操作を実行するコードを作成します。 このデリゲートは、複数のタスクで同時に呼び出すことができます。 このため、この例では <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> 変数へのアクセスを同期するために `total` メソッドが使用されます。 デリゲート型は <xref:System.Action%601> であるため、戻り値はありません。  
+-   `localFinally`。各パーティションでのループ操作が完了した時点で、`Action<TLocal>` によって呼び出される <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> デリゲート。 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドは、`Action<TLocal>` デリゲートに、このループ パーティションのパーティション ローカル変数の最終値を返します。プログラマは、このパーティションの結果と他のパーティションの結果を結合するために必要な操作を実行するコードを作成します。 このデリゲートは、複数のタスクで同時に呼び出すことができます。 このため、この例では `total` 変数へのアクセスを同期するために <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> メソッドが使用されます。 デリゲート型は <xref:System.Action%601> であるため、戻り値はありません。  
   
  [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
  [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [方法: スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [方法: スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

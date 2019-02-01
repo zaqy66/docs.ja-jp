@@ -2,12 +2,12 @@
 title: '方法: ファイルがアセンブリであるかどうかを確認する (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681769"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>方法: ファイルがアセンブリであるかどうかを確認する (C#)
 ファイルが管理されていて、ファイルのメタデータにアセンブリ エントリが含まれている場合、そのファイルはアセンブリです。 アセンブリとメタデータの詳細については、「[アセンブリ マニフェスト](../../../../../docs/framework/app-domains/assembly-manifest.md)」を参照してください。  
@@ -18,7 +18,7 @@ ms.locfileid: "53125536"
   
 2.  テストするファイルを読み込みます。  
   
-3.  **ILDASM** で、そのファイルが移植可能な実行可能 (PE) ファイルではないと報告された場合、そのファイルはアセンブリでありません。 詳細については、「[方法: アセンブリの内容を表示する](../../../../framework/app-domains/how-to-view-assembly-contents.md)」を参照してください。  
+3.  **ILDASM** で、そのファイルが移植可能な実行可能 (PE) ファイルではないと報告された場合、そのファイルはアセンブリでありません。 詳細については、トピック「[方法: アセンブリの内容を表示する](../../../../framework/app-domains/how-to-view-assembly-contents.md)」を参照してください。  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>ファイルがアセンブリかどうかをプログラムによって確認する方法  
   
@@ -66,8 +66,8 @@ class TestAssembly
   
  <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> メソッドはテスト ファイルを読み込み、情報が読み取られた時点で解放します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Reflection.AssemblyName>  
-- [C# プログラミングガイド](../../../../csharp/programming-guide/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
 - [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

@@ -2,12 +2,12 @@
 title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679175"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084121"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -575,15 +575,15 @@ private static IEnumerable<int> EvenSequence(
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [プログラミングの概念 (C#)](../../../csharp/programming-guide/concepts/index.md)  
-- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [コレクションとデータ構造体](../../../standard/collections/index.md)  
-- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)  
-- [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
-- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)  
+- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [プログラミングの概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [コレクションとデータ構造体](../../../standard/collections/index.md)
+- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)
+- [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)

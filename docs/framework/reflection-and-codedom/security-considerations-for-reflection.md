@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509313"
 ---
 # <a name="security-considerations-for-reflection"></a>リフレクションに関するセキュリティ上の考慮事項
 リフレクションを使用すると、型とメンバーに関する情報を取得し、メンバーにアクセスできます (つまり、メソッドやコンストラクターの呼び出し、プロパティ値の取得と設定、イベント ハンドラーの追加と削除などを実行できます)。 リフレクションを使用した型とメンバーに関する情報の取得には、制限がありません。 すべてのコードで、次のタスクを実行するためにリフレクションを使用できます。  
@@ -104,13 +104,13 @@ ms.locfileid: "33398705"
   
 -   [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降、リフレクションを使用して非パブリックな型とメンバーに関する情報を取得する場合、アクセス許可が不要になりました。 以前のバージョンでは、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>  
- <xref:System.Security.Permissions.ReflectionPermission>  
- <xref:System.Security.Permissions.SecurityPermission>  
- [セキュリティの変更](../../../docs/framework/security/security-changes.md)  
- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)  
- [リフレクション出力のセキュリティ関連事項](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [属性の適用](../../../docs/standard/attributes/applying-attributes.md)  
- [カスタム属性へのアクセス](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+## <a name="see-also"></a>関連項目
+- <xref:System.Security.Permissions.ReflectionPermissionFlag>
+- <xref:System.Security.Permissions.ReflectionPermission>
+- <xref:System.Security.Permissions.SecurityPermission>
+- [セキュリティの変更](../../../docs/framework/security/security-changes.md)
+- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)
+- [リフレクション出力のセキュリティ関連事項](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [属性の適用](../../../docs/standard/attributes/applying-attributes.md)
+- [カスタム属性へのアクセス](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

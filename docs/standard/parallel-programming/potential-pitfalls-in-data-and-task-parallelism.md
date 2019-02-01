@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513426"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>データとタスクの並列化における注意点
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> を使用すると、多くの場合、通常の順次ループよりもパフォーマンスが大幅に向上します。 ただし、ループを並列化すると複雑になるため、逐次コードでは一般的でない、またはまったく発生しない問題の原因になる可能性があります。 このトピックでは、並列ループを記述するときに回避すべきプラクティスをいくつか説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "47087433"
  並列ループは、場合によっては対応する順次処理よりも時間がかかる可能性があります。 基本的な経験則では、イテレーションが少なく、高速ユーザー デリゲートを使用する並列ループの速度が大幅に向上することはほとんどありません。 ただし、パフォーマンスには多くの要因が関係するため、常に実際の結果を測定することをお勧めします。  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>共有メモリの位置への書き込みを回避する  
- 逐次コードでは、静的変数またはクラス フィールドから読み取ることや、これらの場所に書き込むことはよくあります。 ただし、複数のスレッドからこのような変数に同時にアクセスしているときは、著しい競合状態になる場合がよくあります。 ロックを使用して変数へのアクセスを同期できる場合でも、同期のコストでパフォーマンスが低下する可能性があります。 そのため、並列ループにおける共有状態へのアクセスは、可能な限り回避するか、少なくとも制限することをお勧めします。 この場合の最適な方法は、ループの実行中に <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 変数を使用してスレッド ローカルの状態を格納する、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> のオーバーロードを使用することです。 詳細については、「[方法: スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」と「[How to: Write a Parallel.ForEach Loop with Thread-Local Variables (方法: パーティション ローカル変数を使用する Parallel.ForEach ループを記述する)](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)」を参照してください。  
+ 逐次コードでは、静的変数またはクラス フィールドから読み取ることや、これらの場所に書き込むことはよくあります。 ただし、複数のスレッドからこのような変数に同時にアクセスしているときは、著しい競合状態になる場合がよくあります。 ロックを使用して変数へのアクセスを同期できる場合でも、同期のコストでパフォーマンスが低下する可能性があります。 そのため、並列ループにおける共有状態へのアクセスは、可能な限り回避するか、少なくとも制限することをお勧めします。 この場合の最適な方法は、ループの実行中に <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 変数を使用してスレッド ローカルの状態を格納する、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> のオーバーロードを使用することです。 詳細については、「[方法 :スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」および「[方法:パーティション ローカル変数を使用する Parallel.ForEach ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)」をご覧ください。  
   
 ## <a name="avoid-over-parallelization"></a>過剰な並列化を回避する  
  並列ループを使用することで、ソース コレクションのパーティション分割とワーカー スレッドの同期によるオーバヘッド コストが発生します。 並列化の利点は、コンピューター上のプロセッサ数によってさらに制限されます。 1 つのプロセッサで複数の計算主体のスレッドを実行しても、高速化は実現しません。 そのため、ループを過剰に並列処理しないように注意する必要があります。  
@@ -52,7 +52,7 @@ ms.locfileid: "47087433"
 >  これは、クエリに <xref:System.Console.WriteLine%2A> の呼び出しをいくつか挿入することで自分でテストできます。 このメソッドは、ドキュメントの例でデモのために使用されていますが、必要がない限り並列ループでは使用しないでください。  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>スレッド アフィニティの問題に注意する  
- シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 つまり、たとえば、UI スレッドのみで処理をスケジュールするようにスレッド スケジューラを構成していない限り、並列ループからはリスト コントロールを更新できません。 詳細については、「[How to: Schedule Work on the User Interface (UI) Thread (方法: ユーザー インターフェイス (UI) スレッドで作業をスケジュールする)](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)」を参照してください。  
+ シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 つまり、たとえば、UI スレッドのみで処理をスケジュールするようにスレッド スケジューラを構成していない限り、並列ループからはリスト コントロールを更新できません。 詳細については、「[方法 :ユーザー インターフェイス (UI) スレッドで作業をスケジュールする](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)」をご覧ください。  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Parallel.Invoke によって呼び出されるデリゲートで待機する場合は注意する  
  状況によっては、タスク並列ライブラリでタスクをインライン展開します。これは、現在実行中のスレッドでタスクが実行されることを意味します  (詳細については、[タスク スケジューラ](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)に関するページを参照してください)。場合によっては、このパフォーマンスの最適化によって、デッドロックが発生する可能性があります。 たとえば、2 つのタスクで同じデリゲート コードを実行していて、そのデリゲート コードは、イベントの発生時に通知し、もう 1 つのタスクが通知するまで待機するとします。 この場合、2 番目のタスクが 1 番目のタスクと同じスレッド情にインライン展開され、1 番目のタスクが待機状態になると、2 番目のタスクではそのイベントを通知できなくなります。 このような状況を回避するために、待機操作のタイムアウトを指定するか、明示的なスレッド コンストラクターを使用して、1 つのタスクがもう 1 つのタスクをブロックしないようにすることができます。  
@@ -82,6 +82,6 @@ ms.locfileid: "47087433"
   
 ## <a name="see-also"></a>関連項目
 
-- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
-- [PLINQ の非利便性](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
-- [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (並列プログラミングのパターン: .NET Framework 4 での並列パターンの理解と適用)](https://www.microsoft.com/download/details.aspx?id=19222)
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+- [PLINQ の非利便性](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [並列プログラミングのパターン:.NET Framework 4 での並列パターンの理解と適用](https://www.microsoft.com/download/details.aspx?id=19222)

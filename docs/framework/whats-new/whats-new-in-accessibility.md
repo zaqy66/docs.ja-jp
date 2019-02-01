@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680304"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -213,37 +213,37 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.Expander> コントロール
 
-    フォーカスを合わせたとき、<xref:System.Windows.Controls.Expander> コントロールが見やすくなりました。 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.RadioButton> コントロールのキーボードも見やすくなりました。 例:
+    フォーカスを合わせたとき、<xref:System.Windows.Controls.Expander> コントロールが見やすくなりました。 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.RadioButton> コントロールのキーボードも見やすくなりました。 次に例を示します。
 
-    前: 
+    前: 
     
     ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善前)](media/expander-before.png)
 
-    後: 
+    後: 
 
     ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善後)](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロール
  
-    <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロールのテキストは、ハイ コントラスト テーマで選択されているとき、見やすくなりました。 例:
+    <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロールのテキストは、ハイ コントラスト テーマで選択されているとき、見やすくなりました。 次に例を示します。
 
-    前: 
+    前: 
 
     ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善前)](media/radio-button-before.png)
     
-    後: 
+    後: 
 
     ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善後)](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> コントロール
  
-    .NET Framework 4.7.1 以降、無効にした <xref:System.Windows.Controls.ComboBox> コントロールの枠線が無効にしたテキストと同じ色になります。 例:
+    .NET Framework 4.7.1 以降、無効にした <xref:System.Windows.Controls.ComboBox> コントロールの枠線が無効にしたテキストと同じ色になります。 次に例を示します。
     
-    前: 
+    前: 
 
      ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善前)](media/combo-disabled-before.png)
 
-    後:   
+    後:   
 
      ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善後)](media/combo-disabled-after.png)
 
@@ -251,43 +251,43 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     前:
 
-    ![ボタンのテーマ色 (アクセシビリティ機能改善前)](media/button-themes-before.png) 
+    ![ボタンのテーマ色 (アクセシビリティ機能改善前)](media/button-themes-before.png) 
     
-    後: 
+    後: 
 
-    ![ボタンのテーマ色 (アクセシビリティ機能改善後)](media/button-themes-after.png) 
+    ![ボタンのテーマ色 (アクセシビリティ機能改善後)](media/button-themes-after.png) 
 
-    最後になりますが、.NET Framework 4.7 以前のバージョンでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルを `Toolbar.ComboBoxStyleKey` に設定すると、ドロップダウンの矢印が見えなくなりました。 この問題は .NET Framework 4.7.1 以降で修正されています。 例:
+    最後になりますが、.NET Framework 4.7 以前のバージョンでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルを `Toolbar.ComboBoxStyleKey` に設定すると、ドロップダウンの矢印が見えなくなりました。 この問題は .NET Framework 4.7.1 以降で修正されています。 次に例を示します。
 
-    前: 
+    前: 
 
-    ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善前)](media/comboboxstylekey-before.png) 
+    ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善前)](media/comboboxstylekey-before.png) 
     
-    後: 
+    後: 
 
-    ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善後)](media/comboboxstylekey-after.png) 
+    ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善後)](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> コントロール
 
-    .NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> コントロールの並べ替えインジケーターで正しいテーマ色が使われるようになりました。 例:
+    .NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> コントロールの並べ替えインジケーターで正しいテーマ色が使われるようになりました。 次に例を示します。
 
-    前: 
+    前: 
 
-    ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善前)](media/sort-indicator-before.png) 
+    ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善前)](media/sort-indicator-before.png) 
     
-    後:   
+    後:   
  
-    ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善後)](media/sort-indicator-after.png) 
+    ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善後)](media/sort-indicator-after.png) 
     
     また、.NET Framework 4.7 以前のバージョンでは、ハイ コントラスト モードでカーソルを合わせたとき、既定のリンク スタイルが正しくない色に変化しました。 これは .NET Framework 4.7.1 以降で修正されています。 同様に、.NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> チェックボックス列でキーボード フォーカス フィードバックに既定の色が使用されます。
 
-    前: 
+    前: 
 
-    ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善前)](media/default-link-style-before.png) 
+    ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善前)](media/default-link-style-before.png) 
  
-    後:    
+    後:    
   
-    ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善後)](media/default-link-style-after.png)  
+    ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善後)](media/default-link-style-after.png)  
 
 .NET Framework 4.7.1 のアクセシビリティ機能の改善の詳細については、「[Accessibility improvements in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)」 (WPF のアクセシビリティ機能改善) を参照してください。
 
@@ -312,15 +312,15 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 選択した <xref:System.Windows.Forms.Button> コントロールのテキストが背景色に対して際立ち、見やすくなりました。
 
-- 無効になっているテキストが読みやすくなりました。 例:
+- 無効になっているテキストが読みやすくなりました。 次に例を示します。
 
     前:
 
-    ![無効にしたテキスト (アクセシビリティ機能改善前)](media/wf-disabled-before.png) 
+    ![無効にしたテキスト (アクセシビリティ機能改善前)](media/wf-disabled-before.png) 
 
     後:
 
-    ![無効にしたテキスト (アクセシビリティ機能改善後)](media/wf-disabled-after.png) 
+    ![無効にしたテキスト (アクセシビリティ機能改善後)](media/wf-disabled-after.png) 
 
 - スレッド例外ダイアログのハイ コントラストが改善されました。
 
@@ -439,7 +439,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - ハイ コントラスト テーマを選ぶと、要素間のコントラスト比の向上や、フォーカス要素に使われる選択ボックスの認識性の向上など、ワークフロー デザイナーとそのコントロールの表示について多くの点が向上していることがわかります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET Framework の新機能](whats-new.md)
- 
+- [.NET Framework の新機能](whats-new.md)
+

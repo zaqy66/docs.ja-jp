@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690840"
 ---
 # <a name="task-cancellation"></a>タスクのキャンセル
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> クラスは、.NET Framework のキャンセル トークンを使用したキャンセルをサポートしています。 詳細については、「[マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)」を参照してください。 Task クラスのキャンセル処理では、キャンセル可能な操作を表すユーザー デリゲートと、キャンセルを要求したコードが連携します。  キャンセル処理が正常に実行されるためには、要求コードが <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを呼び出し、ユーザー デリゲートが操作を適時に終了する必要があります。 次のオプションのいずれかを使用して操作を終了できます。  
   
--   デリゲートから戻ります。 多くの場合、この処理で十分ですが、この方法で取り消されたタスク インスタンスは、<xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 状態ではなく、<xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態に遷移します。  
+-   デリゲートから戻ります。 多くの場合、この処理で十分ですが、この方法で取り消されたタスク インスタンスは、 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 状態ではなく、 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態に遷移します。  
   
 -   <xref:System.OperationCanceledException> をスローし、これをキャンセルが要求されたトークンに渡します。 これを行うには、 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> メソッドを使用する方法をお勧めします。 この方法で取り消されたタスクは Canceled 状態に遷移し、タスクがキャンセル要求に応答したことを確認するために呼び出し元のコードによって使用されます。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "43865632"
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  
   
- より詳細な例については、「[方法: タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)」を参照してください。  
+ より完全なコード例については、「[方法:タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)」を参照してください。  
   
  タスク インスタンスがユーザー コードによってスローされた <xref:System.OperationCanceledException> を確認した場合は、例外のトークンと関連付けられたトークン (タスクを作成した API に渡されたトークン) とを比較します。 これらのトークンが同一であり、トークンの <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティから true が返されると、タスクはこれをキャンセルの受信確認と解釈し、Canceled 状態に遷移します。 <xref:System.Threading.Tasks.Task.Wait%2A> メソッドまたは <xref:System.Threading.Tasks.Task.WaitAll%2A> メソッドを使用してタスクを待機しない場合、タスクの状態は <xref:System.Threading.Tasks.TaskStatus.Canceled>に設定されます。  
   
- タスクが Canceled 状態に遷移するのを待っていると、<xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> 例外 (<xref:System.AggregateException> 例外にラップされている) がスローされます。 この例外は、障害のある状況ではなく、正常なキャンセル処理を示すことに注意してください。 このため、タスクの <xref:System.Threading.Tasks.Task.Exception%2A> プロパティは `null`を返します。  
+ タスクが Canceled 状態に遷移するのを待っていると、 <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> 例外 ( <xref:System.AggregateException> 例外にラップされている) がスローされます。 この例外は、障害のある状況ではなく、正常なキャンセル処理を示すことに注意してください。 このため、タスクの <xref:System.Threading.Tasks.Task.Exception%2A> プロパティは `null`を返します。  
   
  トークンの <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティが false を返した場合、または例外のトークンがタスクのトークンと一致しない場合、 <xref:System.OperationCanceledException> は標準の例外のように扱われるため、タスクは Faulted 状態に遷移します。 他の例外が存在する場合も、タスクが Faulted 状態に遷移することに注意してください。 完了したタスクの状態は <xref:System.Threading.Tasks.Task.Status%2A> プロパティで取得できます。  
   
@@ -42,5 +42,5 @@ ms.locfileid: "43865632"
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)
 - [方法: タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

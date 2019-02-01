@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127551"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066351"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -96,23 +96,30 @@ dotnet tool install -g dotnetsay
 .NET Core 2.0 以降では、アプリケーションのビルドに使用した .NET Core のバージョンが実行時に存在しない場合、インストールされている .NET Core の最新の*マイナー バージョン*に対してアプリケーションが自動的に実行されます。 つまり、アプリケーションが .NET Core 2.0 を使用してビルドされ、ホスト システムにインストールされているのが .NET Core 2.0 ではなく .NET Core 2.1 である場合は、.NET Core 2.1 を使用してアプリケーションが実行されます。
 
 > [!IMPORTANT]
-> このロールフォワードの動作はプレビュー リリースには適用されません。 また、メジャー リリースにも適用されません。 たとえば、.NET Core 1.0 アプリケーションは .NET Core 2.0 または .NET Core 2.1 にロールフォワードされません。
+> このロールフォワードの動作はプレビュー リリースには適用されません。 既定では、メジャー リリースにも適用されませんが、次の設定で変更できます。
 
-次に示す 3 つのいずれかの方法でマイナー バージョンのロールフォワードを無効にすることもできます。
+共有フレームワークの候補なしでロール フォワードの設定を変更することで、この動作を変更できます。 使用可能な設定は次のとおりです。
+- `0` - マイナー バージョンのロールフォワード動作を無効にします。 この設定では、.NET Core 2.0.0 用にビルドされたアプリケーションが、.NET Core 2.2.0 または .NET Core 3.0.0 ではなく、.NET Core 2.0.1 にロール フォワードされます。
+- `1` - マイナー バージョンのロールフォワード動作を有効にします。 これが設定の既定値です。 この設定では、.NET Core 2.0.0 用にビルドされたアプリケーションが、インストールされているバージョンに応じて、.NET Core 2.0.1 または .NET Core 2.2.0 のいずれかにロール フォワードされますが、.NET Core 3.0.0 にはロール フォワードされません。
+- `2` - マイナー バージョンとメジャー バージョンのロールフォワード動作を有効にします。 設定すると、異なるメジャー バージョンも考慮されるため、.NET Core 2.0.0 用にビルドされたアプリケーションは、.NET Core 3.0.0 にロール フォワードされます。
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 環境変数を 0 に設定する。
+この設定は、次の 3 つのいずれかの方法で変更できます。
 
-- 次の行を runtimeconfig.json ファイルに追加する。
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 環境変数を目的の値に設定します。
+
+- 次の行を目的の値を指定して `runtimeconfig.json` ファイルに追加します。
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- [.NET Core CLI ツール](../tools/index.md)の使用時に、.NET Core コマンド (`run` など) に次のオプションを追加する。
+- [.NET Core CLI ツール](../tools/index.md)を使用している場合、次のオプションに目的の値を指定して .NET Core コマンド (`run` など) に追加します。
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+修正プログラムのバージョンのロール フォワードは、この設定からは独立しており、任意の潜在的なマイナー バージョンまたはメジャー バージョンのロール フォワードが適用された後に行われます。
 
 ## <a name="deployment"></a>配置
 
@@ -239,6 +246,6 @@ Linux と macOS では、<xref:System.Net.Http.HttpClient> をプロセス単位
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core の新機能](index.md)  
-* [EF Core 2.1 の新機能](/ef/core/what-is-new/ef-core-2.1)  
-* [ASP.NET Core 2.1 の新機能](/aspnet/core/aspnetcore-2.1)
+- [.NET Core の新機能](index.md)
+- [EF Core 2.1 の新機能](/ef/core/what-is-new/ef-core-2.1)
+- [ASP.NET Core 2.1 の新機能](/aspnet/core/aspnetcore-2.1)

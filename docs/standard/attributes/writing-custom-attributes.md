@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696218"
 ---
 # <a name="writing-custom-attributes"></a>カスタム属性の記述
-独自のカスタム属性をデザインするために、多くの新しい概念を習得する必要はありません。 オブジェクト指向プログラミングに精通してクラスをデザインする方法を理解しているなら、必要な知識をほぼすべて持っています。 カスタム属性は、基本的には、<xref:System.Attribute?displayProperty=nameWithType> から直接的に派生したか間接的に派生した従来のクラスです。 従来のクラスと同じように、カスタム属性には、データを格納したり取得したりするメソッドが含まれます。  
+独自のカスタム属性をデザインするために、多くの新しい概念を習得する必要はありません。 オブジェクト指向プログラミングに精通してクラスをデザインする方法を理解しているなら、必要な知識をほぼすべて持っています。 カスタム属性は、基本的には、 <xref:System.Attribute?displayProperty=nameWithType>から直接的に派生したか間接的に派生した従来のクラスです。 従来のクラスと同じように、カスタム属性には、データを格納したり取得したりするメソッドが含まれます。  
   
  カスタム属性クラスを適切にデザインするための主要な手順は次のとおりです。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "44087392"
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute> には、カスタム属性を作成するために重要な 3 つのメンバーがあります。それらは、[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property)、[AllowMultiple](#allowmultiple-property) です。  
+ <xref:System.AttributeUsageAttribute> には、カスタム属性を作成するために重要な 3 つのメンバー([AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property)、[AllowMultiple](#allowmultiple-property)) があります。  
   
 ### <a name="attributetargets-member"></a>AttributeTargets メンバー  
  前の例では、<xref:System.AttributeTargets.All?displayProperty=nameWithType> を指定し、この属性をすべてのプログラム要素に適用できることが示されています。 代わりに、属性をクラスにのみ適用できることを示す <xref:System.AttributeTargets.Class?displayProperty=nameWithType> を指定するか、属性をメソッドにのみ適用できることを示す <xref:System.AttributeTargets.Method?displayProperty=nameWithType> を指定できます。 この方法で、カスタム属性を使って、説明としてすべてのプログラム要素をマークすることができます。  
@@ -150,6 +150,6 @@ ms.locfileid: "44087392"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Attribute?displayProperty=nameWithType>  
-- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- <xref:System.Attribute?displayProperty=nameWithType>
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
 - [属性](../../../docs/standard/attributes/index.md)

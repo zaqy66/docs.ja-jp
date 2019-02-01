@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635976"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 この記事の表には、.NET Framework 4.5 以降のバージョンで互換性のために残されている型メンバーがアセンブリ別にまとめられています。 各アセンブリで互換性のために残されているメンバーと推奨される代替メンバーの一覧を表示するには、以下のリンクを使用してください。 このトピックでは、廃止された型のメンバーの一覧は表示されていません。 廃止された型の一覧については、[互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)に関するページをご覧ください。  
@@ -256,7 +256,7 @@ ms.locfileid: "53151409"
 |<xref:System.Threading.WaitHandle?displayProperty=nameWithType>|<xref:System.Threading.WaitHandle.Handle%2A>|代わりに、<xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> プロパティを使用してください。|  
   
 <a name="PresentationCore"></a>   
-### <a name="assembly-presentationcoredll"></a>アセンブリ: PresentationCore.dll  
+### <a name="assembly-presentationcoredll"></a>アセンブリ:PresentationCore.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -291,7 +291,7 @@ ms.locfileid: "53151409"
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=nameWithType>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|ビットマップ効果は非推奨とされており、機能しなくなりました。 代わりに、必要に応じて <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> を使用することを検討してください。|  
   
 <a name="PresFW"></a>   
-### <a name="assembly-presentationframeworkdll"></a>アセンブリ: PresentationFramework.dll  
+### <a name="assembly-presentationframeworkdll"></a>アセンブリ:PresentationFramework.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -301,7 +301,7 @@ ms.locfileid: "53151409"
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|<xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>で置き換えられます。|  
   
 <a name="Act"></a>   
-### <a name="assembly-systemactivitiesdll"></a>アセンブリ: System.Activities.dll  
+### <a name="assembly-systemactivitiesdll"></a>アセンブリ:System.Activities.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -309,7 +309,7 @@ ms.locfileid: "53151409"
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このコンストラクターは使用しないでください。 代わりに、<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=nameWithType> タグまたは <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=nameWithType> タグを使用してください。|  
   
 <a name="ActPres"></a>   
-### <a name="assembly-systemactivitiespresentationdll"></a>アセンブリ: System.Activities.Presentation.dll  
+### <a name="assembly-systemactivitiespresentationdll"></a>アセンブリ:System.Activities.Presentation.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -324,9 +324,9 @@ ms.locfileid: "53151409"
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=nameWithType>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このプロパティは使用しないでください。 代わりに、<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A> を使用してください。|  
   
 <a name="core"></a>   
-### <a name="assembly-systemcoredll"></a>アセンブリ: System.Core.dll  
+### <a name="assembly-systemcoredll"></a>アセンブリ:System.Core.dll  
   
-|種類|メンバー|メッセージ|  
+|型|メンバー|メッセージ|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords?displayProperty=nameWithType>|<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> 値が無効です。代わりに <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint2> を使用してください。|  
 |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Concat%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|二項演算子の 2 番目のデータ ソースは、<xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> ではなく、<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> の型である必要があります。 この問題を解決するには、<xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 拡張メソッドを使用して、適切なデータ ソースを <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> に変換します。|  
@@ -367,7 +367,7 @@ ms.locfileid: "53151409"
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=nameWithType>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> このメソッドは使用しないでください。|  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>アセンブリ: System.Data.dll  
+### <a name="assembly-systemdatadll"></a>アセンブリ:System.Data.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -389,7 +389,7 @@ ms.locfileid: "53151409"
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29> の使用は非推奨とされました。 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=nameWithType> を使用してください。|  
   
 <a name="entity"></a>   
-### <a name="assembly-systemdataentitydll"></a>アセンブリ: System.Data.Entity.dll  
+### <a name="assembly-systemdataentitydll"></a>アセンブリ:System.Data.Entity.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -399,7 +399,7 @@ ms.locfileid: "53151409"
 |<xref:System.Data.Objects.ObjectContext?displayProperty=nameWithType>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|代わりに、<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29> を使用してください。|  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>アセンブリ: System.Data.OracleClient.dll  
+### <a name="assembly-systemdataoracleclientdll"></a>アセンブリ:System.Data.OracleClient.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -408,7 +408,7 @@ ms.locfileid: "53151409"
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29> の使用は非推奨とされました。 <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=nameWithType> を使用してください。|  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>アセンブリ: System.Design.dll  
+### <a name="assembly-systemdesigndll"></a>アセンブリ:System.Design.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -416,7 +416,7 @@ ms.locfileid: "53151409"
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|このメソッドの使用は非推奨とされました。 代わりに、<xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType> を使用してください。|  
 |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A> メソッドは <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29>に置き換えられました。|  
 |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|このメソッドの使用は非推奨とされました。 代わりに、<xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> タグまたは <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> タグを使用してください。|  
-|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|このプロパティを使用すると、コンパイラ エラーが発生します。<br /><br /> エラー: このプロパティは参照できなくなりましたが、コンパイル済みの既存のアプリケーションをサポートするために含まれています。 デザイン時の要素のビュー アーキテクチャは使用されなくなりました。|  
+|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|このプロパティを使用すると、コンパイラ エラーが発生します。<br /><br /> エラー :このプロパティは参照できなくなりましたが、コンパイル済みの既存のアプリケーションをサポートするために含まれています。 デザイン時の要素のビュー アーキテクチャは使用されなくなりました。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|別の方法として、[`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) を使用することをお勧めします。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|別の方法として、<xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType> を使用することをお勧めします。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|別の方法として、[`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) および [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A) を使用することをお勧めします。|  
@@ -426,7 +426,7 @@ ms.locfileid: "53151409"
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A>|サイズ変更は <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A?displayProperty=nameWithType> メソッドによって処理されるので、このメソッドの使用は推奨されていません。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>|別の方法として、<xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=nameWithType> から継承して、<xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType> を使用することをお勧めします。 デザイナーの各領域を使用すると、コンテンツの制御を強化できます。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.Behavior%2A>|別の方法として、<xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType> を使用することをお勧めします。|  
-|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|このプロパティを使用すると、コンパイラ エラーが発生します。<br /><br /> エラー: このプロパティは参照できなくなりましたが、コンパイル済みの既存のアプリケーションをサポートするために含まれています。 デザイン時の要素によっては、マークアップ要素へのアクセスが提供されない場合があります。 <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> には、クライアント スクリプトとコントロールを処理する際の別のメソッドがあります。|  
+|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|このプロパティを使用すると、コンパイラ エラーが発生します。<br /><br /> エラー :このプロパティは参照できなくなりましたが、コンパイル済みの既存のアプリケーションをサポートするために含まれています。 デザイン時の要素によっては、マークアップ要素へのアクセスが提供されない場合があります。 <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> には、クライアント スクリプトとコントロールを処理する際の別のメソッドがあります。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached%2A>|別の方法として、<xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType> を使用することをお勧めします。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A>|別の方法として、<xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType> を使用することをお勧めします。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|別の方法として、[HtmlControlDesigner.DataBindings.Changed](xref:System.Web.UI.DataBindingCollection.Changed) イベントを処理することをお勧めします。 <xref:System.Web.UI.DataBindingCollection> プロパティによって返される <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=nameWithType> コレクションを使用すると、コントロールに関連付けられているデータ バインディングの制御を強化できます。|  
@@ -461,7 +461,7 @@ ms.locfileid: "53151409"
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|このメソッドの使用は非推奨とされました。 代わりに、<xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=nameWithType> を使用してください。|  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>アセンブリ: System.dll  
+### <a name="assembly-systemdll"></a>アセンブリ:System.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -573,7 +573,7 @@ ms.locfileid: "53151409"
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=nameWithType>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=nameWithType> を使用して、<xref:System.Security.Claims.ClaimsIdentity> にクレームを追加します。|  
   
 <a name="drawing"></a>   
-### <a name="assembly-systemdrawingdll"></a>アセンブリ: System.Drawing.dll  
+### <a name="assembly-systemdrawingdll"></a>アセンブリ:System.Drawing.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -581,7 +581,7 @@ ms.locfileid: "53151409"
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このコンストラクターの使用は非推奨とされました。 <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29> を使用してください。|  
   
 <a name="messaging"></a>   
-### <a name="assembly-systemmessagingdll"></a>アセンブリ: System.Messaging.dll  
+### <a name="assembly-systemmessagingdll"></a>アセンブリ:System.Messaging.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -589,7 +589,7 @@ ms.locfileid: "53151409"
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|このメソッドは、<xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> メソッド ファミリを正しく実装していない <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> を返します。 代わりに、<xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> を使用してください。|  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>アセンブリ: System.ServiceModel.dll  
+### <a name="assembly-systemservicemodeldll"></a>アセンブリ:System.ServiceModel.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -601,7 +601,7 @@ ms.locfileid: "53151409"
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=nameWithType>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|このプロパティの使用は非推奨とされます。下位互換性のためだけに保持されています。 NTLM を使用するかどうかを判断する場合には、ローカル コンピューター ポリシーが使用されます。|  
   
 <a name="smDisc"></a>   
-### <a name="assembly-systemservicemodeldiscoverydll"></a>アセンブリ: System.ServiceModel.Discovery.dll  
+### <a name="assembly-systemservicemodeldiscoverydll"></a>アセンブリ:System.ServiceModel.Discovery.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -609,14 +609,14 @@ ms.locfileid: "53151409"
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> は互換性のために残されています。 トランスポート プロパティを設定する際は、<xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> を使用することを検討してください。|  
   
 <a name="datavisualization"></a>   
-### <a name="assembly-systemwebdatavisualizationdll"></a>アセンブリ: System.Web.DataVisualization.dll  
+### <a name="assembly-systemwebdatavisualizationdll"></a>アセンブリ:System.Web.DataVisualization.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> の使用は非推奨とされました。 代わりに、<xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType> の使用を検討してください。|  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>アセンブリ: System.Web.dll  
+### <a name="assembly-systemwebdll"></a>アセンブリ:System.Web.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -651,14 +651,14 @@ ms.locfileid: "53151409"
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=nameWithType>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|別の方法として、<xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=nameWithType> プロパティを使用することをお勧めします。 <xref:System.Xml.XPath.XPathDocument?displayProperty=nameWithType> を作成するには、<xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=nameWithType> を作成して、<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> を呼び出します。|  
   
 <a name="dynamicdata"></a>   
-### <a name="assembly-systemwebdynamicdatadll"></a>アセンブリ: System.Web.DynamicData.dll  
+### <a name="assembly-systemwebdynamicdatadll"></a>アセンブリ:System.Web.DynamicData.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|`EnablePersistedSelection` や <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> など、データ バインディング コントロールの <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType> プロパティを使用してください。|  
   
 <a name="extensions"></a>   
-### <a name="assembly-systemwebextensionsdll"></a>アセンブリ: System.Web.Extensions.dll  
+### <a name="assembly-systemwebextensionsdll"></a>アセンブリ:System.Web.Extensions.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -672,7 +672,7 @@ ms.locfileid: "53151409"
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|このプロパティは今後使用しません。 代わりに、<xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=nameWithType> を使用してください。|  
   
 <a name="services"></a>   
-### <a name="assembly-systemwebservicesdll"></a>アセンブリ: System.Web.Services.dll  
+### <a name="assembly-systemwebservicesdll"></a>アセンブリ:System.Web.Services.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -680,7 +680,7 @@ ms.locfileid: "53151409"
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|このプロパティは、将来のバージョンでは削除されます。 SOAP メッセージ内の特定のヘッダーは必須ではなくなりました。|  
   
 <a name="forms"></a>   
-### <a name="assembly-systemwindowsformsdll"></a>アセンブリ: System.Windows.Forms.dll  
+### <a name="assembly-systemwindowsformsdll"></a>アセンブリ:System.Windows.Forms.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -697,7 +697,7 @@ ms.locfileid: "53151409"
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|このプロパティは非推奨とされました。 代わりに、<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType> プロパティを使用してください。|  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>アセンブリ: System.Xaml.dll  
+### <a name="assembly-systemxamldll"></a>アセンブリ:System.Xaml.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -705,7 +705,7 @@ ms.locfileid: "53151409"
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|`expressionType` 引数は、XAML パーサーで使用されなくなりました。 有効な戻り値の型を指定するには、<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=nameWithType> を使用します。 式の型に対するカスタム ハンドリングを指定するには、<xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType> を使用します。|  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>アセンブリ: System.Xml.dll  
+### <a name="assembly-systemxmldll"></a>アセンブリ:System.Xml.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -731,18 +731,18 @@ ms.locfileid: "53151409"
  次の表に、互換性のために残されている Microsoft アセンブリのメンバーを示します。 これらのアセンブリは特殊な目的のアセンブリであり、個別の言語 (Microsoft.VisualBasic.dll など) やビルド システム (Microsoft.Build.Engine.dll など) を対象としたアセンブリが含まれています。  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ: IEHost.dll and IEExec.exe  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ:IEHost.dll および IEExec.exe  
  IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除されています。 そのすべての型およびメンバーは廃止され、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ではサポートされていません。 これらのアセンブリは Internet Explorer で Windows フォーム コントロールをホストし、実行可能ファイルを実行するために使用されていました。 代替手段としては、ClickOnce、XAML ブラウザー アプリケーション (XBAP)、および Microsoft Silverlight をお勧めします。  
   
 <a name="isymwrapper"></a>   
-### <a name="assembly-isymwrapperdll"></a>アセンブリ: ISymWrapper.dll  
+### <a name="assembly-isymwrapperdll"></a>アセンブリ:ISymWrapper.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|別の方法として、<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> を使用することをお勧めします。 <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> は、インポーターのインターフェイス ポインターを <xref:System.IntPtr?displayProperty=nameWithType> ではなく、<xref:System.Int32?displayProperty=nameWithType> として取得するので、32 ビット アーキテクチャと 64 ビット アーキテクチャの両方で機能します。|  
   
 <a name="conversion"></a>   
-### <a name="assembly-microsoftbuildconversionv40dll"></a>アセンブリ: Microsoft.Build.Conversion.v4.0.dll  
+### <a name="assembly-microsoftbuildconversionv40dll"></a>アセンブリ:Microsoft.Build.Conversion.v4.0.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -752,7 +752,7 @@ ms.locfileid: "53151409"
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|代わりに、パラメーターなしの <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=nameWithType> メソッドを使用してください。|  
   
 <a name="engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>アセンブリ: Microsoft.Build.Engine.dll  
+### <a name="assembly-microsoftbuildenginedll"></a>アセンブリ:Microsoft.Build.Engine.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -760,28 +760,28 @@ ms.locfileid: "53151409"
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|.NET Framework の場所を <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> として単純に渡そうとしていた場合は、パラメーターなしの <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> コンストラクターに変更するだけです。 それ以外の場合は、カスタム ツールセットをレジストリまたは構成ファイルに定義するか、エンジンの <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType> に要素を追加できます。 次に、<xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> コンストラクターまたは <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=nameWithType> コンストラクターを代わりに使用してください。|  
   
 <a name="BuildFW"></a>   
-### <a name="assembly-microsoftbuildframeworkdll"></a>アセンブリ: Microsoft.Build.Framework.dll  
+### <a name="assembly-microsoftbuildframeworkdll"></a>アセンブリ:Microsoft.Build.Framework.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> 代わりに、<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType> プロパティを使用してください。|  
   
 <a name="BuildUtil4"></a>   
-### <a name="assembly-microsoftbuildutilitiesv40dll"></a>アセンブリ: Microsoft.Build.Utilities.v4.0.dll  
+### <a name="assembly-microsoftbuildutilitiesv40dll"></a>アセンブリ:Microsoft.Build.Utilities.v4.0.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType> プロパティを使用します。|  
   
 <a name="data_entity_tasks"></a>   
-### <a name="assembly-microsoftdataentitybuildtasksdll"></a>アセンブリ: Microsoft.Data.Entity.Build.Tasks.dll  
+### <a name="assembly-microsoftdataentitybuildtasksdll"></a>アセンブリ:Microsoft.Data.Entity.Build.Tasks.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
 |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> バージョン 3.5 の下位互換性のためだけに使用されます。|  
   
 <a name="visualbasic"></a>   
-### <a name="assembly-microsoftvisualbasicdll"></a>アセンブリ: Microsoft.VisualBasic.dll  
+### <a name="assembly-microsoftvisualbasicdll"></a>アセンブリ:Microsoft.VisualBasic.dll  
   
 |型|メンバー|メッセージ|  
 |----------|------------|-------------|  
@@ -798,6 +798,6 @@ ms.locfileid: "53151409"
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> このメソッドは使用しないでください。|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` レジストリ キーは Win9x でのみ機能し、このバージョンの .NET Framework ではサポートされていません。 代わりに、`PerformanceData` レジストリ キーを使用してください。 このプロパティは、.NET Framework の将来のバージョンでは削除されます。|  
   
-## <a name="see-also"></a>参照  
- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)  
- [互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)
+## <a name="see-also"></a>関連項目
+- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)
+- [互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)

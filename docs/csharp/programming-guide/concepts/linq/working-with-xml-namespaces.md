@@ -2,12 +2,12 @@
 title: XML 名前空間の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: faffead73211fcfd8c00ba4c3dd2d4f3aa001b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590554"
 ---
 # <a name="working-with-xml-namespaces-c"></a>XML 名前空間の使用 (C#)
 このセクションのトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] で名前空間がどのようにサポートされるかについて説明します。  
@@ -22,6 +22,6 @@ ms.locfileid: "48841093"
 |[C# での既定の名前空間のスコープ](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|既定の名前空間内の XML に対するクエリの適切な記述方法について説明します。|  
 |[方法: 名前空間内の XML に対するクエリを記述する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|C# の LINQ to XML クエリで XML 名前空間を指定する方法について説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [プログラミング ガイド (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

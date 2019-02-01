@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 80aafccab9b9183a1dc4dc25d531ebe65f6905b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605134"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ クエリの概要 (C#)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーを利用できる XML ドキュメント、SQL データベース、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  
@@ -56,7 +56,7 @@ IQueryable<Customer> custQuery =
  それぞれの種類のデータ ソースを作成する方法の詳細については、対応する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーのドキュメントを参照してください。 ただし、基本的な規則は非常に単純です。[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] データ ソースは、ジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイス、またはこれを継承するインターフェイスをサポートする任意のオブジェクトです。  
   
 > [!NOTE]
->  非ジェネリック <xref:System.Collections.ArrayList> インターフェイスをサポートする <xref:System.Collections.IEnumerable> などの型も、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] データ ソースとして使用できます。 詳細については、「[How to: Query an ArrayList with LINQ (C#) (方法: LINQ を使用して ArrayList を照会する (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)」を参照してください。  
+>  非ジェネリック <xref:System.Collections.ArrayList> インターフェイスをサポートする <xref:System.Collections.IEnumerable> などの型も、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] データ ソースとして使用できます。 詳細については、「[方法 :LINQ を使用して ArrayList を照会する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
   
 ##  <a name="query"></a> クエリ  
  クエリでは、データ ソースからどのような情報を取得するかを指定します。 オプションとして、情報が返される前に、その情報を並べ替え、グループ化し、構造化する方法を指定することもできます。 クエリはクエリ変数に格納され、クエリ式で初期化されます。 クエリを簡単に記述できるようにするために、C# に新しいクエリ構文が導入されています。  
@@ -88,11 +88,11 @@ IQueryable<Customer> custQuery =
   
  クエリ式の直後に `foreach` ループを配置することでも実行を強制できます。 ただし、`ToList` または `ToArray` を呼び出した場合は、単一のコレクション オブジェクトにすべてのデータをキャッシュする処理も行われます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [foreach、in](../../../../csharp/language-reference/keywords/foreach-in.md)  
+- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [チュートリアル: C# でのクエリの作成](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [foreach、in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [クエリ キーワード (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

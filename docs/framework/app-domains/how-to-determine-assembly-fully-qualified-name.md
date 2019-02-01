@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520712"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>方法: アセンブリの完全修飾名を特定する
-グローバル アセンブリ キャッシュ内のアセンブリの完全修飾名を検出するには、グローバル アセンブリ キャッシュ ツール ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)) を使用します。 「[方法 : グローバル アセンブリ キャッシュの内容を表示する](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)」を参照してください。  
+グローバル アセンブリ キャッシュ内のアセンブリの完全修飾名を検出するには、グローバル アセンブリ キャッシュ ツール ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)) を使用します。 「[方法:グローバル アセンブリ キャッシュの内容を表示する](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)」をご覧ください。  
   
  グローバル アセンブリ キャッシュにないアセンブリについては、複数の方法で完全修飾アセンブリ名を取得できます。コードを使用しコンソールや変数に情報を出力したり、[Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用して完全修飾名を含むアセンブリのメタデータを調べたりできます。  
   
@@ -42,10 +42,10 @@ ms.locfileid: "53142720"
  [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)]
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
-## <a name="see-also"></a>参照  
-- [アセンブリ名](../../../docs/framework/app-domains/assembly-names.md)  
-- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
-- [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
-- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>関連項目
+- [アセンブリ名](../../../docs/framework/app-domains/assembly-names.md)
+- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)
+- [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)
+- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)

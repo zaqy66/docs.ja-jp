@@ -1,5 +1,5 @@
 ---
-title: '方法 : イベント プロパティを使用して複数のイベントを処理する'
+title: '方法: イベント プロパティを使用して複数のイベントを処理する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592222"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>方法 : イベント プロパティを使用して複数のイベントを処理する
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>方法: イベント プロパティを使用して複数のイベントを処理する
 イベント プロパティを使用するには、イベントを発生させるクラスにイベント プロパティを定義し、そのイベントを処理するクラスにイベント プロパティのデリゲートを設定します。 1 つのクラスにイベント プロパティを複数実装するには、そのクラス内部に、各イベント用に定義されたデリゲートを格納および保持する必要があります。 通常は、イベント キーをインデックスとするデリゲート コレクションを実装することによってこれを実現します。  
   
  イベントのデリゲートを格納するには、<xref:System.ComponentModel.EventHandlerList> クラスを使用するか、独自のコレクションを実装します。 コレクション クラスには、イベント キーに基づいてイベント ハンドラー デリゲートに対する設定、アクセス、および取得を行うメソッドを用意する必要があります。 たとえば、<xref:System.Collections.Hashtable> クラスを使用したり、<xref:System.Collections.DictionaryBase> クラスからカスタム クラスを派生させたりできます。 デリゲート コレクションの実装の詳細をクラスの外部に公開する必要はありません。  
@@ -52,7 +52,7 @@ ms.locfileid: "48873295"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
-- [イベント](../../../docs/standard/events/index.md)  
-- <xref:System.Web.UI.Control.Events%2A>  
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
+- [イベント](../../../docs/standard/events/index.md)
+- <xref:System.Web.UI.Control.Events%2A>
 - [方法: カスタム イベントを宣言してメモリを節約する](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

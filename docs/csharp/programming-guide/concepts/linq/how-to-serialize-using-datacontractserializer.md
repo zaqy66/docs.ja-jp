@@ -2,12 +2,12 @@
 title: '方法: DataContractSerializer を使用してシリアル化する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 2c0324b1eeeab9f6cf9223e2a3e201771b188749
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f805c2a954957519f2ebb9425ae7e2e2a967b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721842"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>方法: DataContractSerializer を使用してシリアル化する (C#)
 このトピックでは、<xref:System.Runtime.Serialization.DataContractSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。  
@@ -91,6 +91,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XElement オブジェクトを含むオブジェクト グラフのシリアル化 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

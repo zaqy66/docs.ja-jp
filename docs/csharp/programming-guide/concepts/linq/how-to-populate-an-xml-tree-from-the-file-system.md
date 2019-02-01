@@ -2,12 +2,12 @@
 title: '方法: ファイル システムから XML ツリーを設定する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 664994dad75871a5b70f2c132df67d1658808c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47231460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705811"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>方法: ファイル システムから XML ツリーを設定する (C#)
 XML ツリーの一般的で便利な用途の 1 つに、名前と値の階層データ ストアとしての用途があります。 階層データを XML ツリーに設定し、そのツリーをクエリや変換の対象としたり、必要に応じてシリアル化したりすることができます。 この使用シナリオでは、名前空間や空白の扱いなど XML 固有のセマンティクスの多くは重要ではありません。 この場合は、XML ツリーをメモリ内の小さなシングル ユーザー階層データベースとして使用します。  
@@ -116,6 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [高度なクエリ手法 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

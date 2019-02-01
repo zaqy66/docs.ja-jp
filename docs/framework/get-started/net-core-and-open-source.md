@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494562"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core とオープン ソース
 このトピックでは、.NET Core の概要のほか、詳細情報の入手方法を説明します。 .NET Core に関するトピックの完全な一覧については、[「.NET Core のガイド」](../../core/index.md) を参照してください。
@@ -22,7 +22,7 @@ ms.locfileid: "49454396"
   
  .NET Core の主な特徴を次に示します。  
   
--   **クロス プラットフォーム:** .NET Core には、ターゲットとするプラットフォームに関係なく、必要とするアプリケーション機能を実装したり、そのコードを再使用したりするための主な機能が備わっています。 現在、Windows、Linux と macOS の 3 つの主要オペレーティング システム (OS) をサポートしています。 サポートされている複数の OS で、修正せずに動作するアプリやライブラリを作成することができます。 サポートされるオペレーティング システムの一覧については、[「.NET Core Roadmap」](https://github.com/dotnet/core/blob/master/roadmap.md) (.NET Core ロードマップ) を参照してください。
+-   **クロス プラットフォーム:** .NET Core には、ターゲットとするプラットフォームに関係なく、必要とするアプリケーション機能を実装したり、そのコードを再使用したりするための主な機能が備わっています。 現在、次の 3 つの主要オペレーティング システム (OS) がサポートされています:Windows、Linux、macOS。 サポートされている複数の OS で、修正せずに動作するアプリやライブラリを作成することができます。 サポートされるオペレーティング システムの一覧については、[「.NET Core Roadmap」](https://github.com/dotnet/core/blob/master/roadmap.md) (.NET Core ロードマップ) を参照してください。
   
 -   **オープン ソース:** .NET Core は [.NET Foundation ](https://www.dotnetfoundation.org/)が管理している多くのプロジェクトの 1 つで、[GitHub](https://github.com/) で入手することができます。  .NET Core をオープン ソース プロジェクトとして使用すると、開発プロセスの透明性が高まるほか、コミュニティが活発化して交流が促進されます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "49454396"
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>参照  
-- [.NET Core のホーム ページ](https://www.microsoft.com/net/core)  
-- [.NET Core のガイド](../../core/index.md)  
+## <a name="see-also"></a>関連項目
+- [.NET Core のホーム ページ](https://www.microsoft.com/net/core)
+- [.NET Core のガイド](../../core/index.md)
 - [ASP.NET Core ドキュメント](/aspnet/core/)

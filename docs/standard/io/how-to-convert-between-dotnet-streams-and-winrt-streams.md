@@ -8,16 +8,16 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492761"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う
 
-Windows ストア アプリ用 .NET Framework は、完全な .NET Framework のサブセットです。 Windows ストア アプリのセキュリティおよびその他の要件のために、ファイルを開いたり読み取ったりするために使用する .NET Framework API の完全なセットを使用できません。 詳細については、[「Windows ストア アプリ用 .NET の概要」](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))を参照してください。 ただし、他のストリームの処理操作のために .NET Framework API を使用することもできます。 これらのストリームを操作するには、<xref:System.IO.MemoryStream> や <xref:System.IO.FileStream> などの .NET Framework ストリーム型と、<xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream>、<xref:Windows.Storage.Streams.IRandomAccessStream> などの Windows ランタイム ストリームの間で変換が必要になる場合があります。
+Windows ストア アプリ用 .NET Framework は、完全な .NET Framework のサブセットです。 Windows ストア アプリのセキュリティおよびその他の要件のために、ファイルを開いたり読み取ったりするために使用する .NET Framework API の完全なセットを使用できません。 詳細については、 [「Windows ストア アプリ用 .NET の概要」](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))を参照してください。 ただし、他のストリームの処理操作のために .NET Framework API を使用することもできます。 これらのストリームを操作するには、<xref:System.IO.MemoryStream> や <xref:System.IO.FileStream> などの .NET Framework ストリーム型と、<xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream>、<xref:Windows.Storage.Streams.IRandomAccessStream> などの Windows ランタイム ストリームの間で変換が必要になる場合があります。
 
 [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx) クラスには、これらの変換を簡単にできるようにするメソッドが含まれています。 ただし、.NET Framework と Windows ランタイムのストリームには、これらのメソッドの使用結果に影響する、根本的な違いがあります。 詳細については、以下のセクションで説明します。
 
@@ -68,7 +68,7 @@ Windows ランタイムには、読み取り専用、書き込み専用、また
 - 次の例に示すように、[AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) メソッドを使用します。
 
   > [!IMPORTANT]
-  > 使用している .NET Framework ストリームがシークをサポートすること、またはそれを実行するストリームにコピーすることを確認します。 この確認には、<xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> プロパティを使用できます。
+  > 使用している .NET Framework ストリームがシークをサポートすること、またはそれを実行するストリームにコピーすることを確認します。 この確認には、 <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> プロパティを使用できます。
 
   この例を実行するには、.NET Framework 4.5.1 を対象とし、 `TextBlock2` という名前のテキスト ブロックと `Button2`という名前のボタンを含む、Windows ストア XAML アプリを作成する必要があります。 ボタン クリック イベントはこの例に示す `button2_Click` メソッドに関連付けられている必要があります。
 
@@ -79,6 +79,6 @@ Windows ランタイムには、読み取り専用、書き込み専用、また
 
 ## <a name="see-also"></a>関連項目
 
-- [クイック スタート: ファイルの読み取りと書き込み (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [Windows ストア アプリ用 .NET の概要](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [Windows ストア アプリ用 .NET – サポートされている API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [クイック スタート:ファイルの読み取りと書き込み (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [Windows ストア アプリ用 .NET の概要](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [Windows ストア アプリ用 .NET – サポートされている API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

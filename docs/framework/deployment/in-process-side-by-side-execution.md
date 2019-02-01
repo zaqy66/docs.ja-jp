@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554557"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
@@ -50,17 +50,17 @@ ms.locfileid: "53143845"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>side-by-side ホスティングの一般的なシナリオ  
   
--   **シナリオ 1:** 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーション。  
+-   **シナリオ 1 :** 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーション。  
   
      インストールされている .NET Framework のバージョン: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] および COM コンポーネントによって使われている他のすべての .NET Framework のバージョンの場合。  
   
      対処方法: このシナリオの場合は、何も行いません。 COM コンポーネントは、登録された .NET Framework のバージョンで実行されます。  
   
--   **シナリオ 2**: [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] でビルドされたマネージド アプリケーションを、できれば [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] で実行したいが、バージョン 2.0 が存在しない場合は [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行したい場合。  
+-   **シナリオ 2**: [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] で実行することが好ましいが、バージョン 2.0 が存在しない場合は [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行する、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] でビルドされたマネージド アプリケーション。  
   
-     インストールされている .NET Framework のバージョン: 以前のバージョンの .NET Framework と [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
+     インストールされている .NET Framework のバージョン: 以前のバージョンの .NET Framework および [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
-     対処方法: アプリケーション ディレクトリの[アプリケーション構成ファイル](../../../docs/framework/configure-apps/index.md)で、次のように設定された [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)と [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)を使います。  
+     対処方法: アプリケーション ディレクトリ内の[アプリケーション構成ファイル](../../../docs/framework/configure-apps/index.md)で、次のように設定された [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)と [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)を使用します。  
   
     ```xml  
     <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "53143845"
     </configuration>  
     ```  
   
--   **シナリオ 3:** 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーションを、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行したい場合。  
+-   **シナリオ 3**: 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーションを、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行したい場合。  
   
      インストールされている .NET Framework のバージョン: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>参照  
-- [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>関連項目
+- [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

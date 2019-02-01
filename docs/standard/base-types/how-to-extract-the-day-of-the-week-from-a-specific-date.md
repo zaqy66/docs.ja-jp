@@ -1,5 +1,5 @@
 ---
-title: '方法 : 特定の日付から曜日を抽出する'
+title: '方法: 特定の日付から曜日を抽出する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537973"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>方法 : 特定の日付から曜日を抽出する
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>方法: 特定の日付から曜日を抽出する
 .NET Framework では、特定の日付が週の何日目であるかを容易に判別でき、また特定の日付のローカライズされた曜日名を表示できます。 特定の日付に対応する曜日を示す列挙値は、<xref:System.DateTime.DayOfWeek%2A> または <xref:System.DateTimeOffset.DayOfWeek%2A> プロパティから取得できます。 対照的に、曜日名の取得は、書式指定メソッド （日付と時刻の値の `ToString` メソッドや <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドなど） を呼び出して実行できる書式指定操作です。 このトピックでは、このような書式指定操作を実行する方法について説明します。  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>特定の日付から曜日を示す番号を抽出するには  
@@ -102,6 +102,6 @@ ms.locfileid: "43872344"
   
 ## <a name="see-also"></a>関連項目
 
-- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
