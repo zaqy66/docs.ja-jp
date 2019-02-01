@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645066"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック型を定義する
 このトピックでは、2 種類のパラメーターを持つ単純なジェネリック型を作成する方法、クラス制約、インターフェイス制約、特殊な制約をパラメーターに適用する方法、パラメーターの型や戻り値の型としてクラスの型パラメーターを使用するメンバーを作成する方法を紹介します。  
   
 > [!IMPORTANT]
->  メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 ジェネリック型のほとんどのメソッドは、この例のように、ジェネリックではありません。 ジェネリック メソッドの出力の例は、「[方法: リフレクション出力を使用してジェネリック メソッドを定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)」を参照してください。  
+>  メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 ジェネリック型のほとんどのメソッドは、この例のように、ジェネリックではありません。 ジェネリック メソッドの出力の例については、「[方法: リフレクション出力を使用してジェネリック メソッドを定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)」を参照してください。  
   
 ### <a name="to-define-a-generic-type"></a>ジェネリック型を定義するには  
   
@@ -135,7 +135,7 @@ ms.locfileid: "44085254"
   
 -   コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [リフレクション出力の使用](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [リフレクション出力による動的アセンブリのシナリオ](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+## <a name="see-also"></a>関連項目
+- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
+- [リフレクション出力の使用](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [リフレクション出力による動的アセンブリのシナリオ](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

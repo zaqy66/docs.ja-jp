@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614420"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows サービス アプリケーションの概要
 Microsoft Windows サービス (旧 NT サービス) を使用すると、Microsoft Windows サービス自体の Windows セッションで長時間にわたって実行されるアプリケーションを作成できます。 作成したサービスは、コンピューターのブート時に自動的に起動させることができます。また、サービスを一時停止したり、再起動したりすることもできます。このサービスはユーザー インターフェイスを表示しません。 このような特徴があるため、サービスはサーバー上で使用するのに適しており、コンピューターを共用する他のユーザーの邪魔をせずに長時間稼動させる機能を実現するのに最適です。 また、ログオン ユーザーや既定のコンピューター アカウントとは異なる、特定のユーザー アカウントのセキュリティ コンテキストでサービスを実行することもできます。 サービスと Windows セッションの詳細については、Windows SDK ドキュメントを参照してください。  
@@ -41,9 +41,9 @@ Microsoft Windows サービス (旧 NT サービス) を使用すると、Micros
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>サービス アプリケーションと他の Visual Studio アプリケーション  
  サービス アプリケーションの動作は、次に示すように、他のプロジェクトと異なります。  
   
--   サービス アプリケーション プロジェクトが作成するコンパイル済み実行可能ファイルは、プロジェクトの使用開始前にサーバーにインストールしておく必要があります。 F5 キーまたは F11 キーを押してサービス アプリケーションをデバッグまたは実行することはできません。サービスを即時に実行したり、サービスのコードにステップ インすることはできません。 サービスのインストールと起動を行ってから、デバッガーをサービスのプロセスにアタッチする必要があります。 詳しくは、「[方法: Windows サービス アプリケーションをデバッグする](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)」をご覧ください。  
+-   サービス アプリケーション プロジェクトが作成するコンパイル済み実行可能ファイルは、プロジェクトの使用開始前にサーバーにインストールしておく必要があります。 F5 キーまたは F11 キーを押してサービス アプリケーションをデバッグまたは実行することはできません。サービスを即時に実行したり、サービスのコードにステップ インすることはできません。 サービスのインストールと起動を行ってから、デバッガーをサービスのプロセスにアタッチする必要があります。 詳細については、「[方法 :Windows サービス アプリケーションをデバッグする](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
   
--   一部のプロジェクトの場合とは異なり、サービス アプリケーションのインストール コンポーネントは必ず作成する必要があります。 インストール コンポーネントは、サーバーへのサービスのインストールと登録を行い、Windows **サービス コントロール マネージャー**でサービスのエントリを作成します。 詳しくは、「[方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」をご覧ください。  
+-   一部のプロジェクトの場合とは異なり、サービス アプリケーションのインストール コンポーネントは必ず作成する必要があります。 インストール コンポーネントは、サーバーへのサービスのインストールと登録を行い、Windows **サービス コントロール マネージャー**でサービスのエントリを作成します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」を参照してください。  
   
 -   サービス アプリケーションの `Main` メソッドは、プロジェクトに含まれているサービスの Run コマンドを実行する必要があります。 `Run` メソッドによって、適切なサーバーの**サービス コントロール マネージャー**にサービスが読み込まれます。 **Windows サービス**のプロジェクト テンプレートを使用すると、このメソッドは自動的に作成されます。 サービスの読み込みとサービスの起動は異なります。 詳細については、後述の「サービスの有効期間」を参照してください。  
   
@@ -74,18 +74,18 @@ Microsoft Windows サービス (旧 NT サービス) を使用すると、Micros
   
  詳細については、「<xref:System.ServiceProcess.ServiceController>」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 -   サービスは、**Windows サービス** アプリケーション プロジェクトなどの .NET Framework 対応プロジェクト内で作成する必要があります。 .NET Framework 対応プロジェクトは、ビルド時に .exe ファイルを作成し、<xref:System.ServiceProcess.ServiceBase> クラスから継承を行います。  
   
--   Windows サービスを含むプロジェクトには、プロジェクトのインストール コンポーネントと、プロジェクトのサービスのインストール コンポーネントが必要です。 これは **[プロパティ]** ウィンドウで簡単に設定できます。 詳しくは、「[方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」をご覧ください。  
+-   Windows サービスを含むプロジェクトには、プロジェクトのインストール コンポーネントと、プロジェクトのサービスのインストール コンポーネントが必要です。 これは **[プロパティ]** ウィンドウで簡単に設定できます。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Windows サービス アプリケーション](../../../docs/framework/windows-services/index.md)  
- [サービス アプリケーションのプログラミング アーキテクチャ](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [方法 : Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [方法 : サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [方法 : サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)  
- [方法 : Windows サービス アプリケーションをデバッグする](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [方法 : サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>関連項目
+- [Windows サービス アプリケーション](../../../docs/framework/windows-services/index.md)
+- [サービス アプリケーションのプログラミング アーキテクチャ](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+- [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [方法: サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [方法: サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)
+- [方法: Windows サービス アプリケーションをデバッグする](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

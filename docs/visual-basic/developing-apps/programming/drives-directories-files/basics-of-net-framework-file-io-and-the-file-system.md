@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600766"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework のファイル I/O とファイル システムの基礎 (Visual Basic)
 <xref:System.IO> 名前空間のクラスは、ドライブ、ファイル、ディレクトリの操作に使用されます。  
@@ -55,13 +55,13 @@ ms.locfileid: "53155026"
   
  次の表は、ストリームで一般的に実行するタスクの一覧です。  
   
-|目的|解決方法については、|
+|終了|解決方法については、|
 |---|---|   
 |データ ファイルに対する読み取りと書き込み|[方法: 新しく作成されたデータ ファイルに対して読み書きする](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|ファイルのテキストの読み取り|[方法: ファイルからテキストを読み取る](../../../../standard/io/how-to-read-text-from-a-file.md)|  
-|テキストのファイルへの書き込み|[方法: ファイルにテキストを書き込む](../../../../standard/io/how-to-write-text-to-a-file.md)|  
-|文字列からの文字の読み取り|[方法: 文字列から文字を読み取る](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
-|文字列への文字の書き込み|[方法: 文字列に文字を書き込む](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|ファイルのテキストの読み取り|[方法: ファイルからのテキストの読み取り](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|テキストのファイルへの書き込み|[方法: テキストのファイルへの書き込み](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|文字列からの文字の読み取り|[方法: 文字列からの文字の読み取り](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|文字列への文字の書き込み|[方法: 文字列への文字の書き込み](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |データの暗号化|[データの暗号化](../../../../standard/security/encrypting-data.md)|  
 |データの復号化|[データの復号化](../../../../standard/security/decrypting-data.md)|  
   
@@ -91,15 +91,15 @@ ms.locfileid: "53155026"
 |分離ストアの列挙|[方法: 分離ストレージでストアを列挙する](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
 |分離ストアの削除|[方法: 分離ストレージでストアを削除する](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
 |分離ストレージのファイルまたはディレクトリの作成|[方法: 分離ストレージでファイルおよびディレクトリを作成する](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|分離ストレージのファイルの検索|[方法: 分離ストレージ内でファイルおよびディレクトリを検索する](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|分離ストレージのファイルの検索|[方法: 分離ストレージ内で既存のファイルおよびディレクトリを検索する](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
 |分離ストレージのファイルに対する読み取りと書き込み|[方法: 分離ストレージ内でファイルの読み取りと書き込みを行う](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
 |分離ストレージのファイルまたはディレクトリの削除|[方法: 分離ストレージでファイルおよびディレクトリを削除する](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>ファイルのイベント  
  <xref:System.IO.FileSystemWatcher> コンポーネントを使用すると、自システム上のファイルとディレクトリ、またはネットワークでアクセスできる任意のコンピューター上のファイルとディレクトリの変更を監視できます。 たとえば、ファイルが変更されたときに、その旨をユーザーに警告することが必要な場合があります。 変更が行われると、1 つまたは複数のイベントが発生し、バッファーに格納され、<xref:System.IO.FileSystemWatcher> コンポーネントに渡されて処理されます。  
   
-## <a name="see-also"></a>参照  
- [ストリームの構成](../../../../standard/io/composing-streams.md)  
- [ファイルおよびストリーム入出力](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [.NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>関連項目
+- [ストリームの構成](../../../../standard/io/composing-streams.md)
+- [ファイルおよびストリーム入出力](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [.NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

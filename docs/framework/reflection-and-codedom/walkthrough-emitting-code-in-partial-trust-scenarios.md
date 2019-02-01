@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8461e0a074e7bdf9e1e2631c3f65e16de7256fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712575"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>チュートリアル: 部分信頼シナリオにおけるコード出力
 リフレクション出力は、完全信頼または部分信頼において同じ API セットを使用しますが、部分的に信頼されるコードでは実行する機能によって特定のアクセス許可が必要になります。 リフレクション出力には、匿名でホストされる動的メソッドという機能があります。この機能は、透過的セキュリティ アセンブリによって部分信頼で使用されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "33399757"
 -   [部分的に信頼されたコードのテスト用に単純なサンドボックスを設定する](#Setting_up)  
   
     > [!IMPORTANT]
-    >  これは、部分信頼でコードを試す簡単な方法です。 実際には信頼されていない場所から取得したコードを実行する場合は、「[How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。  
+    >  これは、部分信頼でコードを試す簡単な方法です。 実際には信頼されていない場所から取得したコードを実行する場合は、「[How to:Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。  
   
 -   [部分的に信頼されたアプリケーション ドメインでコードを実行する](#Running_code)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33399757"
 2.  アプリケーション ドメインをアプリケーション パスで初期化するため、<xref:System.AppDomainSetup> オブジェクトを作成します。  
   
     > [!IMPORTANT]
-    >  単純にするため、このコード例では現在のフォルダーを使用します。 実際にインターネットから取得されたコードを実行する場合は、信頼できないコード用の別のフォルダーを使用してください。詳細については、「[How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」(方法: サンドボックスで部分信頼コードを実行する) を参照してください。  
+    >  単純にするため、このコード例では現在のフォルダーを使用します。 実際にインターネットから取得されたコードを実行する場合は、信頼できないコード用の別のフォルダーを使用してください。詳細については、「[How to:Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
@@ -211,6 +211,6 @@ ms.locfileid: "33399757"
   
 -   このコード例を Visual Studio でビルドする場合は、クラスを <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> メソッドに渡すときに、名前空間を含むようにクラスの名前を変更する必要があります。 既定では、名前空間がプロジェクト名になります。 たとえば、プロジェクト名が "PartialTrust" である場合、クラス名は "PartialTrust.Worker" にする必要があります。  
   
-## <a name="see-also"></a>参照  
- [リフレクション出力のセキュリティ関連事項](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [方法 : サンドボックスで部分信頼コードを実行する](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a>関連項目
+- [リフレクション出力のセキュリティ関連事項](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [方法: サンドボックスで部分信頼コードを実行する](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
