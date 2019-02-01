@@ -2,20 +2,20 @@
 title: '方法: XmlReader からツリーを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: f0e75e4d3f6964fa44c41265c1c276c32fb9e87d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fb65c7b74bf3bd006fd4f545e4587efe9a392131
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496183"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a><span data-ttu-id="8a84a-102">方法: XmlReader からツリーを作成する (C#)</span><span class="sxs-lookup"><span data-stu-id="8a84a-102">How to: Create a Tree from an XmlReader (C#)</span></span>
-<span data-ttu-id="8a84a-103">このトピックでは、<xref:System.Xml.XmlReader> から直接 XML ツリーを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="8a84a-103">This topic shows how to create an XML tree directly from an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="8a84a-104"><xref:System.Xml.Linq.XElement> から <xref:System.Xml.XmlReader> を作成するには、<xref:System.Xml.XmlReader> を要素ノードに配置する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8a84a-104">To create an <xref:System.Xml.Linq.XElement> from an <xref:System.Xml.XmlReader>, you must position the <xref:System.Xml.XmlReader> on an element node.</span></span> <span data-ttu-id="8a84a-105"><xref:System.Xml.XmlReader> はコメントや処理命令をスキップしますが、<xref:System.Xml.XmlReader> がテキスト ノードに配置されている場合はエラーがスローされます。</span><span class="sxs-lookup"><span data-stu-id="8a84a-105">The <xref:System.Xml.XmlReader> will skip comments and processing instructions, but if the <xref:System.Xml.XmlReader> is positioned on a text node, an error will be thrown.</span></span> <span data-ttu-id="8a84a-106">このようなエラーを回避するため、<xref:System.Xml.XmlReader> から XML ツリーを作成する前に、必ず <xref:System.Xml.XmlReader> を要素に配置してください。</span><span class="sxs-lookup"><span data-stu-id="8a84a-106">To avoid such errors, always position the <xref:System.Xml.XmlReader> on an element before you create an XML tree from the <xref:System.Xml.XmlReader>.</span></span>  
+# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a><span data-ttu-id="c037b-102">方法: XmlReader からツリーを作成する (C#)</span><span class="sxs-lookup"><span data-stu-id="c037b-102">How to: Create a Tree from an XmlReader (C#)</span></span>
+<span data-ttu-id="c037b-103">このトピックでは、<xref:System.Xml.XmlReader> から直接 XML ツリーを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="c037b-103">This topic shows how to create an XML tree directly from an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="c037b-104"><xref:System.Xml.Linq.XElement> から <xref:System.Xml.XmlReader> を作成するには、<xref:System.Xml.XmlReader> を要素ノードに配置する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c037b-104">To create an <xref:System.Xml.Linq.XElement> from an <xref:System.Xml.XmlReader>, you must position the <xref:System.Xml.XmlReader> on an element node.</span></span> <span data-ttu-id="c037b-105"><xref:System.Xml.XmlReader> はコメントや処理命令をスキップしますが、<xref:System.Xml.XmlReader> がテキスト ノードに配置されている場合はエラーがスローされます。</span><span class="sxs-lookup"><span data-stu-id="c037b-105">The <xref:System.Xml.XmlReader> will skip comments and processing instructions, but if the <xref:System.Xml.XmlReader> is positioned on a text node, an error will be thrown.</span></span> <span data-ttu-id="c037b-106">このようなエラーを回避するため、<xref:System.Xml.XmlReader> から XML ツリーを作成する前に、必ず <xref:System.Xml.XmlReader> を要素に配置してください。</span><span class="sxs-lookup"><span data-stu-id="c037b-106">To avoid such errors, always position the <xref:System.Xml.XmlReader> on an element before you create an XML tree from the <xref:System.Xml.XmlReader>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8a84a-107">例</span><span class="sxs-lookup"><span data-stu-id="8a84a-107">Example</span></span>  
- <span data-ttu-id="8a84a-108">この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="8a84a-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="c037b-107">例</span><span class="sxs-lookup"><span data-stu-id="c037b-107">Example</span></span>  
+ <span data-ttu-id="c037b-108">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」。</span><span class="sxs-lookup"><span data-stu-id="c037b-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="8a84a-109">次のコードでは、`T:System.Xml.XmlReader` オブジェクトを作成し、最初の要素ノードが見つかるまでノードを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="8a84a-109">The following code creates an `T:System.Xml.XmlReader` object, and then reads nodes until it finds the first element node.</span></span> <span data-ttu-id="8a84a-110">次に <xref:System.Xml.Linq.XElement> オブジェクトを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="8a84a-110">It then loads the <xref:System.Xml.Linq.XElement> object.</span></span>  
+ <span data-ttu-id="c037b-109">次のコードでは、`T:System.Xml.XmlReader` オブジェクトを作成し、最初の要素ノードが見つかるまでノードを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="c037b-109">The following code creates an `T:System.Xml.XmlReader` object, and then reads nodes until it finds the first element node.</span></span> <span data-ttu-id="c037b-110">次に <xref:System.Xml.Linq.XElement> オブジェクトを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="c037b-110">It then loads the <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```csharp  
 XmlReader r = XmlReader.Create("books.xml");  
@@ -25,7 +25,7 @@ XElement e = XElement.Load(r);
 Console.WriteLine(e);  
 ```  
   
- <span data-ttu-id="8a84a-111">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8a84a-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="c037b-111">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="c037b-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Catalog>  
@@ -51,6 +51,6 @@ Console.WriteLine(e);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8a84a-112">参照</span><span class="sxs-lookup"><span data-stu-id="8a84a-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c037b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="c037b-112">See also</span></span>
 
-- [<span data-ttu-id="8a84a-113">XML の解析 (C#)</span><span class="sxs-lookup"><span data-stu-id="8a84a-113">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="c037b-113">XML の解析 (C#)</span><span class="sxs-lookup"><span data-stu-id="c037b-113">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

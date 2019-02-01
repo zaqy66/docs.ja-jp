@@ -1,107 +1,59 @@
 ---
 title: =&gt; 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 10/02/2017
+ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: fa2e149f5b19e80e3171d08519be3ae249d2a112
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540807"
 ---
-# <a name="gt-operator-c-reference"></a><span data-ttu-id="b2bf9-102">=&gt; 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b2bf9-102">=&gt; Operator (C# Reference)</span></span>
+# <a name="gt-operator-c-reference"></a><span data-ttu-id="a5cea-102">=&gt; 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="a5cea-102">=&gt; operator (C# Reference)</span></span>
 
-<span data-ttu-id="b2bf9-103">C# では、`=>` 演算子を 2 通りの方法で使用できます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-103">The `=>` operator can be used in two ways in C#:</span></span>
+<span data-ttu-id="a5cea-103">`=>` トークンは、ラムダ演算子、および式本体の定義におけるメンバー名とメンバー実装の区切り記号という 2 つの形式でサポートされています。</span><span class="sxs-lookup"><span data-stu-id="a5cea-103">The `=>` token is supported in two forms: as the lambda operator and as a separator of a member name and the member implementation in an expression body definition.</span></span>
 
-- <span data-ttu-id="b2bf9-104">[ラムダ式](../../lambda-expressions.md)の[ラムダ演算子](#lambda-operator)として使用する場合、入力変数とラムダ本体が切り離されます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-104">As the [lambda operator](#lambda-operator) in a [lambda expression](../../lambda-expressions.md), it separates the input variables from the lambda body.</span></span>
- 
-- <span data-ttu-id="b2bf9-105">[式本体の定義](#expression-body-definition)で、メンバー名とメンバー実装が切り離されます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-105">In an [expression body definition](#expression-body-definition), it separates a member name from the member implementation.</span></span> 
+## <a name="lambda-operator"></a><span data-ttu-id="a5cea-104">ラムダ演算子</span><span class="sxs-lookup"><span data-stu-id="a5cea-104">Lambda operator</span></span>
 
-## <a name="lambda-operator"></a><span data-ttu-id="b2bf9-106">ラムダ演算子</span><span class="sxs-lookup"><span data-stu-id="b2bf9-106">Lambda operator</span></span>
+<span data-ttu-id="a5cea-105">[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)では、ラムダ演算子 `=>` により、左側の入力変数と右側のラムダ本体とが分けられます。</span><span class="sxs-lookup"><span data-stu-id="a5cea-105">In [lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md), the lambda operator `=>` separates the input variables on the left side from the lambda body on the right side.</span></span>
 
-<span data-ttu-id="b2bf9-107">`=>` トークンはラムダ演算子と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-107">The `=>` token is called the lambda operator.</span></span> <span data-ttu-id="b2bf9-108">これは、左側の入力変数を右側のラムダ本体から分けるために*ラムダ式*で使用されます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-108">It is used in *lambda expressions* to separate the input variables on the left side from the lambda body on the right side.</span></span> <span data-ttu-id="b2bf9-109">ラムダ式はインライン式の一種で匿名メソッドと似ていますが、それよりも柔軟性があります。この式はメソッド構文で表される LINQ クエリで広く使用されています。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-109">Lambda expressions are inline expressions similar to anonymous methods but more flexible; they are used extensively in LINQ queries that are expressed in method syntax.</span></span> <span data-ttu-id="b2bf9-110">詳細については、「[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-110">For more information, see [Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
-  
- <span data-ttu-id="b2bf9-111">次の例では、文字列の配列の最も短い文字列の長さを検索して表示する 2 とおりの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-111">The following example shows two ways to find and display the length of the shortest string in an array of strings.</span></span> <span data-ttu-id="b2bf9-112">この例の最初の部分では、`words` の配列の各要素にラムダ式 (`w => w.Length`) を適用し、<xref:System.Linq.Enumerable.Min%2A> メソッドを使用して最小の長さを検索します。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-112">The first part of the example applies a lambda expression (`w => w.Length`) to each element of the `words` array and then uses the <xref:System.Linq.Enumerable.Min%2A> method to find the smallest length.</span></span> <span data-ttu-id="b2bf9-113">比較のために、例の 2 番目の部分では、同じ機能を実行するためにクエリ構文を使用する長いソリューションを示します。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-113">For comparison, the second part of the example shows a longer solution that uses query syntax to do the same thing.</span></span>  
-  
-```csharp  
-string[] words = { "cherry", "apple", "blueberry" };  
-  
-// Use method syntax to apply a lambda expression to each element  
-// of the words array.   
-int shortestWordLength = words.Min(w => w.Length);  
-Console.WriteLine(shortestWordLength);  
-  
-// Compare the following code that uses query syntax.  
-// Get the lengths of each word in the words array.  
-var query = from w in words  
-            select w.Length;  
-// Apply the Min method to execute the query and get the shortest length.  
-int shortestWordLength2 = query.Min();  
-Console.WriteLine(shortestWordLength2);  
-  
-// Output:   
-// 5  
-// 5  
-```  
-  
-### <a name="remarks"></a><span data-ttu-id="b2bf9-114">コメント</span><span class="sxs-lookup"><span data-stu-id="b2bf9-114">Remarks</span></span>  
- <span data-ttu-id="b2bf9-115">`=>` 演算子と代入演算子 (`=`) は優先順位が同じで、結合規則が右から左です。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-115">The `=>` operator has the same precedence as the assignment operator (`=`) and is right-associative.</span></span>  
-  
- <span data-ttu-id="b2bf9-116">入力変数の型を明示的に指定することができます。また、コンパイラで型を推測することもできます。いずれの場合も、変数はコンパイル時に厳密に型指定されます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-116">You can specify the type of the input variable explicitly or let the compiler infer it; in either case, the variable is strongly typed at compile time.</span></span> <span data-ttu-id="b2bf9-117">型を指定する場合は、次の例のように、型名と変数名をかっこで囲む必要があります。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-117">When you specify a type, you must enclose the type name and the variable name in parentheses, as the following example shows.</span></span>  
-  
-```csharp  
-int shortestWordLength = words.Min((string w) => w.Length);  
-```  
-  
-### <a name="example"></a><span data-ttu-id="b2bf9-118">例</span><span class="sxs-lookup"><span data-stu-id="b2bf9-118">Example</span></span>  
- <span data-ttu-id="b2bf9-119">次の例は、2 つの引数を受け取る標準クエリ演算子 <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> のオーバーロードのラムダ式を記述する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-119">The following example shows how to write a lambda expression for the overload of the standard query operator <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> that takes two arguments.</span></span> <span data-ttu-id="b2bf9-120">ラムダ式には複数のパラメーターがあるため、パラメーターをかっこで囲む必要があります。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-120">Because the lambda expression has more than one parameter, the parameters must be enclosed in parentheses.</span></span> <span data-ttu-id="b2bf9-121">2 番目のパラメーター `index` は、コレクション内の現在の要素のインデックスを表します。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-121">The second parameter, `index`, represents the index of the current element in the collection.</span></span> <span data-ttu-id="b2bf9-122">`Where` 式は、長さが配列内のインデックスの位置より短い文字列をすべて返します。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-122">The `Where` expression returns all the strings whose lengths are less than their index positions in the array.</span></span>  
-  
-```csharp  
-static void Main(string[] args)  
-{  
-    string[] digits = { "zero", "one", "two", "three", "four", "five",   
-            "six", "seven", "eight", "nine" };  
-  
-    Console.WriteLine("Example that uses a lambda expression:");  
-    var shortDigits = digits.Where((digit, index) => digit.Length < index);  
-    foreach (var sD in shortDigits)  
-    {  
-        Console.WriteLine(sD);  
-    }  
-  
-    // Output:  
-    // Example that uses a lambda expression:  
-    // five  
-    // six  
-    // seven  
-    // eight  
-    // nine  
-}  
-```  
-## <a name="expression-body-definition"></a><span data-ttu-id="b2bf9-123">式本体の定義</span><span class="sxs-lookup"><span data-stu-id="b2bf9-123">Expression body definition</span></span>
+<span data-ttu-id="a5cea-106">次の例は、メソッド構文で [LINQ](../../programming-guide/concepts/linq/index.md) 機能を使用して、ラムダ式の使用法を示しています。</span><span class="sxs-lookup"><span data-stu-id="a5cea-106">The following example uses the [LINQ](../../programming-guide/concepts/linq/index.md) feature with method syntax to demonstrate the usage of lambda expressions:</span></span>
 
-<span data-ttu-id="b2bf9-124">式本体の定義を使用すると、メンバーの実装が簡潔でわかりやすい形式になります。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-124">An expression body definition provides a member's implementation in a highly condensed, readable form.</span></span> <span data-ttu-id="b2bf9-125">一般的な構文は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-125">It has the following general syntax:</span></span>
+[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+
+<span data-ttu-id="a5cea-107">ラムダ式の入力変数は、コンパイル時に厳密に型指定されます。</span><span class="sxs-lookup"><span data-stu-id="a5cea-107">Input variables of lambda expressions are strongly typed at compile time.</span></span> <span data-ttu-id="a5cea-108">前の例のように、コンパイラが入力変数の型を推論できる場合は、省型宣言を略できます。</span><span class="sxs-lookup"><span data-stu-id="a5cea-108">When the compiler can infer the types of input variables, like in the preceding example, you may omit type declarations.</span></span> <span data-ttu-id="a5cea-109">入力変数の型を指定する必要がある場合は、次の例に示すように、変数ごとに指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a5cea-109">If you need to specify the type of input variables, you must do that for each variable, as the following example shows:</span></span>
+
+[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+
+<span data-ttu-id="a5cea-110">次の例は、入力変数を含まないラムダ式を定義する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="a5cea-110">The following example shows how to define a lambda expression without input variables:</span></span>
+
+[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+
+<span data-ttu-id="a5cea-111">詳細については、「[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5cea-111">For more information, see [Lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>
+
+## <a name="expression-body-definition"></a><span data-ttu-id="a5cea-112">式本体の定義</span><span class="sxs-lookup"><span data-stu-id="a5cea-112">Expression body definition</span></span>
+
+<span data-ttu-id="a5cea-113">式本体の定義には、次の一般的な構文があります。</span><span class="sxs-lookup"><span data-stu-id="a5cea-113">An expression body definition has the following general syntax:</span></span>
 
 ```csharp
 member => expression;
 ```
-<span data-ttu-id="b2bf9-126">この *expression* には有効な式を指定します。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-126">where *expression* is a valid expression.</span></span> <span data-ttu-id="b2bf9-127">メンバーの戻り値の型が `void` の場合か、メンバーがコンストラクターかファイナライザーの場合にのみ、*式*は*ステートメント式*になります。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-127">Note that *expression* can be a *statement expression* only if the member's return type is `void`, or if the member is a constructor or a finalizer.</span></span>
 
-<span data-ttu-id="b2bf9-128">メソッドとプロパティの get ステートメントの場合、C# 6 以降で式本体の定義を利用できます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-128">Expression body definitions for methods and property get statements are supported starting with C# 6.</span></span> <span data-ttu-id="b2bf9-129">コンストラクター、ファイナライザー、プロパティの set ステートメント、インデクサーの場合、C# 7 以降で式本体の定義を利用できます。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-129">Expression body definitions for constructors, finalizers, property set statements, and indexers are supported starting with C# 7.</span></span>
+<span data-ttu-id="a5cea-114">この *expression* には有効な式を指定します。</span><span class="sxs-lookup"><span data-stu-id="a5cea-114">where *expression* is a valid expression.</span></span> <span data-ttu-id="a5cea-115">メンバーの戻り値の型が `void` の場合か、メンバーがコンストラクター、ファイナライザー、またはプロパティ `set` アクセサーの場合にのみ、*式*は*ステートメント式*になります。</span><span class="sxs-lookup"><span data-stu-id="a5cea-115">Note that *expression* can be a *statement expression* only if the member's return type is `void`, or if the member is a constructor, a finalizer, or a property `set` accessor.</span></span>
 
-<span data-ttu-id="b2bf9-130">`Person.ToString` メソッドの式本体の定義は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-130">The following is an expression body definition for a `Person.ToString` method:</span></span>
+<span data-ttu-id="a5cea-116">次の例は、`Person.ToString` メソッドの式本体の定義を示しています。</span><span class="sxs-lookup"><span data-stu-id="a5cea-116">The following example shows an expression body definition for a `Person.ToString` method:</span></span>
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-<span data-ttu-id="b2bf9-131">次のメソッド定義を短くしたものです。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-131">It is a shorthand version of the following method definition:</span></span>
+<span data-ttu-id="a5cea-117">これは、次のメソッド定義の短縮形バージョンです。</span><span class="sxs-lookup"><span data-stu-id="a5cea-117">It's a shorthand version of the following method definition:</span></span>
 
 ```csharp
 public override string ToString()
@@ -109,11 +61,23 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-<span data-ttu-id="b2bf9-132">式本体の定義の詳細については、[式形式メンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b2bf9-132">For more detailed information on expression body definitions, see [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b2bf9-133">「</span><span class="sxs-lookup"><span data-stu-id="b2bf9-133">See Also</span></span>
+<span data-ttu-id="a5cea-118">メソッドおよび読み取り専用プロパティの式本体の定義は、C# 6 以降でサポートされています。</span><span class="sxs-lookup"><span data-stu-id="a5cea-118">Expression body definitions for methods and read-only properties are supported starting with C# 6.</span></span> <span data-ttu-id="a5cea-119">コンストラクター、ファイナライザー、プロパティ アクセサー、およびインデクサーの式本体の定義は、C# 7.0 以降でサポートされています。</span><span class="sxs-lookup"><span data-stu-id="a5cea-119">Expression body definitions for constructors, finalizers, property accessors, and indexers are supported starting with C# 7.0.</span></span>
 
-- [<span data-ttu-id="b2bf9-134">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="b2bf9-134">C# Reference</span></span>](../../../csharp/language-reference/index.md)   
-- [<span data-ttu-id="b2bf9-135">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="b2bf9-135">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)   
-- [<span data-ttu-id="b2bf9-136">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="b2bf9-136">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-- <span data-ttu-id="b2bf9-137">[式形式のメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)</span><span class="sxs-lookup"><span data-stu-id="b2bf9-137">[Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
+<span data-ttu-id="a5cea-120">詳細については、「[式形式のメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5cea-120">For more information, see [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="a5cea-121">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="a5cea-121">Operator overloadability</span></span>
+
+<span data-ttu-id="a5cea-122">`=>` 演算子はオーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="a5cea-122">The `=>` operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="a5cea-123">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="a5cea-123">C# language specification</span></span>
+
+<span data-ttu-id="a5cea-124">詳細については、「[C# 言語仕様](../language-specification/index.md)」の[無名関数の式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5cea-124">For more information, see the [Anonymous function expressions](~/_csharplang/spec/expressions.md#anonymous-function-expressions) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a5cea-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="a5cea-125">See also</span></span>
+
+- [<span data-ttu-id="a5cea-126">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="a5cea-126">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="a5cea-127">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="a5cea-127">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="a5cea-128">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="a5cea-128">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="a5cea-129">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="a5cea-129">Lambda expressions</span></span>](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [<span data-ttu-id="a5cea-130">式形式のメンバー</span><span class="sxs-lookup"><span data-stu-id="a5cea-130">Expression-bodied members</span></span>](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

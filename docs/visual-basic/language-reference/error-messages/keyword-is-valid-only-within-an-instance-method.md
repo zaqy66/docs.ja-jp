@@ -14,16 +14,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55267648"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="973fe-102">'\<キーワード >' は、インスタンス メソッド内でのみ有効です</span><span class="sxs-lookup"><span data-stu-id="973fe-102">'\<keyword>' is valid only within an instance method</span></span>
-<span data-ttu-id="973fe-103">`Me`、 `MyClass`、および`MyBase`キーワードは、特定のクラスのインスタンスを参照してください。</span><span class="sxs-lookup"><span data-stu-id="973fe-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="973fe-104">共有内で使用することはできません`Function`または`Sub`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="973fe-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="7221d-102">'\<keyword>' は、インスタンス メソッド内でのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="7221d-102">'\<keyword>' is valid only within an instance method</span></span>
+<span data-ttu-id="7221d-103">`Me`、 `MyClass`、および`MyBase`キーワードは、特定のクラスのインスタンスを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7221d-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="7221d-104">共有内で使用することはできません`Function`または`Sub`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="7221d-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
   
- <span data-ttu-id="973fe-105">**エラー ID:** BC30043</span><span class="sxs-lookup"><span data-stu-id="973fe-105">**Error ID:** BC30043</span></span>  
+ <span data-ttu-id="7221d-105">**エラー ID:** BC30043</span><span class="sxs-lookup"><span data-stu-id="7221d-105">**Error ID:** BC30043</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="973fe-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="973fe-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7221d-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="7221d-106">To correct this error</span></span>  
   
--   <span data-ttu-id="973fe-107">プロシージャからキーワードを削除または削除、`Shared`プロシージャ宣言からキーワード。</span><span class="sxs-lookup"><span data-stu-id="973fe-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
+-   <span data-ttu-id="7221d-107">プロシージャからキーワードを削除または削除、`Shared`プロシージャ宣言からキーワード。</span><span class="sxs-lookup"><span data-stu-id="7221d-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="973fe-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="973fe-108">See also</span></span>
-- [<span data-ttu-id="973fe-109">オブジェクト変数の代入</span><span class="sxs-lookup"><span data-stu-id="973fe-109">Object Variable Assignment</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="973fe-110">Me、My、MyBase、および MyClass</span><span class="sxs-lookup"><span data-stu-id="973fe-110">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [<span data-ttu-id="973fe-111">継承の基本</span><span class="sxs-lookup"><span data-stu-id="973fe-111">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="7221d-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="7221d-108">See also</span></span>
+- [<span data-ttu-id="7221d-109">オブジェクト変数の代入</span><span class="sxs-lookup"><span data-stu-id="7221d-109">Object Variable Assignment</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="7221d-110">Me、My、MyBase、および MyClass</span><span class="sxs-lookup"><span data-stu-id="7221d-110">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [<span data-ttu-id="7221d-111">継承の基本</span><span class="sxs-lookup"><span data-stu-id="7221d-111">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

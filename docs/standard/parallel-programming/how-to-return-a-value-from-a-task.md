@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2af0f82e66da1c8db5e17863dfad861c8a7d195e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df928ec6494da6da368b3cef1f1d25a84a692aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45742500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741783"
 ---
-# <a name="how-to-return-a-value-from-a-task"></a><span data-ttu-id="f8214-102">方法: タスクから値を返す</span><span class="sxs-lookup"><span data-stu-id="f8214-102">How to: Return a Value from a Task</span></span>
-<span data-ttu-id="f8214-103">この例では、<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> の型を使用して <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティから値を返す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="f8214-103">This example shows how to use the <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> type to return a value from the <xref:System.Threading.Tasks.Task%601.Result%2A> property.</span></span> <span data-ttu-id="f8214-104">C:\Users\Public\Pictures\Sample Pictures\ ディレクトリが存在している必要があり、それがファイルを含んでいる必要があります。</span><span class="sxs-lookup"><span data-stu-id="f8214-104">It requires that the C:\Users\Public\Pictures\Sample Pictures\ directory exists, and that it contains files.</span></span>  
+# <a name="how-to-return-a-value-from-a-task"></a><span data-ttu-id="1460e-102">方法: タスクから値を返す</span><span class="sxs-lookup"><span data-stu-id="1460e-102">How to: Return a Value from a Task</span></span>
+<span data-ttu-id="1460e-103">この例では、<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> の型を使用して <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティから値を返す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="1460e-103">This example shows how to use the <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> type to return a value from the <xref:System.Threading.Tasks.Task%601.Result%2A> property.</span></span> <span data-ttu-id="1460e-104">C:\Users\Public\Pictures\Sample Pictures\ ディレクトリが存在している必要があり、それがファイルを含んでいる必要があります。</span><span class="sxs-lookup"><span data-stu-id="1460e-104">It requires that the C:\Users\Public\Pictures\Sample Pictures\ directory exists, and that it contains files.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8214-105">例</span><span class="sxs-lookup"><span data-stu-id="f8214-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1460e-105">例</span><span class="sxs-lookup"><span data-stu-id="1460e-105">Example</span></span>  
  [!code-csharp[TPL#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/returnavalue10.cs#10)]
  [!code-vb[TPL#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/10_returnavalue.vb#10)]  
   
- <span data-ttu-id="f8214-106"><xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは、タスクが終了するまで呼び出し元のスレッドをブロックします。</span><span class="sxs-lookup"><span data-stu-id="f8214-106">The <xref:System.Threading.Tasks.Task%601.Result%2A> property blocks the calling thread until the task finishes.</span></span>  
+ <span data-ttu-id="1460e-106"><xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは、タスクが終了するまで呼び出し元のスレッドをブロックします。</span><span class="sxs-lookup"><span data-stu-id="1460e-106">The <xref:System.Threading.Tasks.Task%601.Result%2A> property blocks the calling thread until the task finishes.</span></span>  
   
- <span data-ttu-id="f8214-107">1 つの <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> の結果を継続タスクに渡す方法を確認するには、「[継続タスクを使用したタスクの連結](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f8214-107">To see how to pass the result of one <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> to a continuation task, see [Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).</span></span>  
+ <span data-ttu-id="1460e-107">1 つの <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> の結果を継続タスクに渡す方法を確認するには、「[継続タスクを使用したタスクの連結](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1460e-107">To see how to pass the result of one <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> to a continuation task, see [Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8214-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8214-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1460e-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="1460e-108">See also</span></span>
 
-- [<span data-ttu-id="f8214-109">タスク ベースの非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="f8214-109">Task-based Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
-- [<span data-ttu-id="f8214-110">PLINQ および TPL のラムダ式</span><span class="sxs-lookup"><span data-stu-id="f8214-110">Lambda Expressions in PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [<span data-ttu-id="1460e-109">タスク ベースの非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="1460e-109">Task-based Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [<span data-ttu-id="1460e-110">PLINQ および TPL のラムダ式</span><span class="sxs-lookup"><span data-stu-id="1460e-110">Lambda Expressions in PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

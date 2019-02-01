@@ -2,26 +2,26 @@
 title: '方法: ツリー内のすべてのノードを一覧表示する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 90c92e8390f75e7b7e2c63d809d8a0aca34e2fd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744480"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="adf82-102">方法: ツリー内のすべてのノードを一覧表示する (C#)</span><span class="sxs-lookup"><span data-stu-id="adf82-102">How to: List All Nodes in a Tree (C#)</span></span>
-<span data-ttu-id="adf82-103">ツリー内のすべてのノードを一覧表示すると便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="adf82-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="adf82-104">これは、メソッドやプロパティがツリーに及ぼす影響を確認するときに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="adf82-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="adf82-105">すべてのノードをテキスト形式で一覧表示する方法の 1 つは、ツリー内の任意のノードを正確かつ明確に識別する XPath 式を生成することです。</span><span class="sxs-lookup"><span data-stu-id="adf82-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="27f9d-102">方法: ツリー内のすべてのノードを一覧表示する (C#)</span><span class="sxs-lookup"><span data-stu-id="27f9d-102">How to: List All Nodes in a Tree (C#)</span></span>
+<span data-ttu-id="27f9d-103">ツリー内のすべてのノードを一覧表示すると便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="27f9d-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="27f9d-104">これは、メソッドやプロパティがツリーに及ぼす影響を確認するときに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="27f9d-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="27f9d-105">すべてのノードをテキスト形式で一覧表示する方法の 1 つは、ツリー内の任意のノードを正確かつ明確に識別する XPath 式を生成することです。</span><span class="sxs-lookup"><span data-stu-id="27f9d-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
   
- <span data-ttu-id="adf82-106">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XPath 式を実行する方法は特に有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="adf82-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="adf82-107">XPath 式は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりパフォーマンスが低く、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの方がはるかに強力です。</span><span class="sxs-lookup"><span data-stu-id="adf82-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="adf82-108">ただし、XPath 式は、XML ツリー内のノードを識別する手段としては有効です。</span><span class="sxs-lookup"><span data-stu-id="adf82-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
+ <span data-ttu-id="27f9d-106">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XPath 式を実行する方法は特に有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="27f9d-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="27f9d-107">XPath 式は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりパフォーマンスが低く、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの方がはるかに強力です。</span><span class="sxs-lookup"><span data-stu-id="27f9d-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="27f9d-108">ただし、XPath 式は、XML ツリー内のノードを識別する手段としては有効です。</span><span class="sxs-lookup"><span data-stu-id="27f9d-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="adf82-109">例</span><span class="sxs-lookup"><span data-stu-id="adf82-109">Example</span></span>  
- <span data-ttu-id="adf82-110">この例では、XML ツリー内の任意のノードを表す特定の XPath 式を生成する、`GetXPath` という名前の関数を示します。</span><span class="sxs-lookup"><span data-stu-id="adf82-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="adf82-111">この関数は、ノードが名前空間に含まれている場合でも、適切な XPath 式を生成します。</span><span class="sxs-lookup"><span data-stu-id="adf82-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="adf82-112">XPath 式は、名前空間プレフィックスを使用して生成されます。</span><span class="sxs-lookup"><span data-stu-id="adf82-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="27f9d-109">例</span><span class="sxs-lookup"><span data-stu-id="27f9d-109">Example</span></span>  
+ <span data-ttu-id="27f9d-110">この例では、XML ツリー内の任意のノードを表す特定の XPath 式を生成する、`GetXPath` という名前の関数を示します。</span><span class="sxs-lookup"><span data-stu-id="27f9d-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="27f9d-111">この関数は、ノードが名前空間に含まれている場合でも、適切な XPath 式を生成します。</span><span class="sxs-lookup"><span data-stu-id="27f9d-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="27f9d-112">XPath 式は、名前空間プレフィックスを使用して生成されます。</span><span class="sxs-lookup"><span data-stu-id="27f9d-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
   
- <span data-ttu-id="adf82-113">この例では、複数の種類のノード例を含む小さな XML ツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="adf82-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="adf82-114">次に、子孫ノードを反復処理し、各ノードを表す XPath 式を出力します。</span><span class="sxs-lookup"><span data-stu-id="adf82-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
+ <span data-ttu-id="27f9d-113">この例では、複数の種類のノード例を含む小さな XML ツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="27f9d-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="27f9d-114">次に、子孫ノードを反復処理し、各ノードを表す XPath 式を出力します。</span><span class="sxs-lookup"><span data-stu-id="27f9d-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
   
- <span data-ttu-id="adf82-115">XML 宣言がツリー内のノードではないことがわかります。</span><span class="sxs-lookup"><span data-stu-id="adf82-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
+ <span data-ttu-id="27f9d-115">XML 宣言がツリー内のノードではないことがわかります。</span><span class="sxs-lookup"><span data-stu-id="27f9d-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
   
- <span data-ttu-id="adf82-116">複数の種類のノードを含む XML ファイルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="adf82-116">The following is an XML file that contains several types of nodes:</span></span>  
+ <span data-ttu-id="27f9d-116">複数の種類のノードを含む XML ファイルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="27f9d-116">The following is an XML file that contains several types of nodes:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,7 +37,7 @@ ms.locfileid: "43513685"
 </Root>  
 ```  
   
- <span data-ttu-id="adf82-117">上記の XML ツリー内のノードを表す XPath 式の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="adf82-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
+ <span data-ttu-id="27f9d-117">上記の XML ツリー内のノードを表す XPath 式の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="27f9d-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
   
 ```  
 /processing-instruction()  
@@ -315,7 +315,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="adf82-118">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="adf82-118">This example produces the following output:</span></span>  
+ <span data-ttu-id="27f9d-118">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="27f9d-118">This example produces the following output:</span></span>  
   
 ```  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -348,6 +348,6 @@ class Program
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="adf82-119">参照</span><span class="sxs-lookup"><span data-stu-id="adf82-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27f9d-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="27f9d-119">See also</span></span>
 
-- [<span data-ttu-id="adf82-120">高度なクエリ手法 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="adf82-120">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="27f9d-120">高度なクエリ手法 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="27f9d-120">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -1,18 +1,18 @@
 ---
-title: 'サンプル XML ファイル: 統合購買発注書 2'
+title: サンプル XML ファイル:統合購買発注書 2
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: 3f7f24d0607be9a657e00b9e81c821ac3b41c3b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1f6af1f326b5a3e4bb115a02a62ac30a6e29602
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501725"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="4a7d0-102">サンプル XML ファイル : 統合購買発注書</span><span class="sxs-lookup"><span data-stu-id="4a7d0-102">Sample XML File: Consolidated Purchase Orders</span></span>
-<span data-ttu-id="4a7d0-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="4a7d0-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="4a7d0-104">このファイルは、形式の異なる複数企業の購買発注書をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="4a7d0-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="4a7d0-105">各企業の購買発注書は、別々の名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="4a7d0-105">Purchase orders from each company are in separate namespaces.</span></span>  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="f7445-102">サンプル XML ファイル:統合購買発注書</span><span class="sxs-lookup"><span data-stu-id="f7445-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="f7445-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="f7445-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f7445-104">このファイルは、形式の異なる複数企業の購買発注書をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="f7445-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="f7445-105">各企業の購買発注書は、別々の名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="f7445-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="4a7d0-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="4a7d0-106">ConsolidatedPurchaseOrders.xml</span></span>  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="f7445-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="f7445-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -144,6 +144,6 @@ ms.locfileid: "43520474"
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4a7d0-107">参照</span><span class="sxs-lookup"><span data-stu-id="4a7d0-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7445-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="f7445-107">See also</span></span>
 
-- [<span data-ttu-id="4a7d0-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="4a7d0-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="f7445-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f7445-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

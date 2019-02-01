@@ -1,18 +1,18 @@
 ---
-title: 'サンプル XML ファイル: 名前空間内の顧客と注文 2'
+title: サンプル XML ファイル:名前空間内の顧客と注文 2
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 1af227118f5c3c03d1559797d5977f5c71469678
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e25017481b91f8bf4dcbbc464391c939bc672057
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506967"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="8a791-102">サンプル XML ファイル : 名前空間内の顧客と注文</span><span class="sxs-lookup"><span data-stu-id="8a791-102">Sample XML File: Customers and Orders in a Namespace</span></span>
-<span data-ttu-id="8a791-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="8a791-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8a791-104">このファイルには顧客と注文が含まれています。</span><span class="sxs-lookup"><span data-stu-id="8a791-104">This file contains customers and orders.</span></span> <span data-ttu-id="8a791-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="8a791-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="3a943-102">サンプル XML ファイル:名前空間内の顧客と注文</span><span class="sxs-lookup"><span data-stu-id="3a943-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="3a943-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="3a943-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="3a943-104">このファイルには顧客と注文が含まれています。</span><span class="sxs-lookup"><span data-stu-id="3a943-104">This file contains customers and orders.</span></span> <span data-ttu-id="3a943-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="3a943-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a><span data-ttu-id="8a791-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="8a791-106">CustomersOrdersInNamespace.xml</span></span>  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="3a943-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="3a943-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -430,6 +430,6 @@ ms.locfileid: "44217036"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8a791-107">参照</span><span class="sxs-lookup"><span data-stu-id="8a791-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a943-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="3a943-107">See also</span></span>
 
-- [<span data-ttu-id="8a791-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8a791-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="3a943-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="3a943-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

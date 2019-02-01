@@ -2,22 +2,22 @@
 title: '方法: Office Open XML ドキュメントを変更する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 7a85341ee64c71a3f57b71b3db82889aee667040
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556026"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="9c435-102">方法: Office Open XML ドキュメントを変更する (C#)</span><span class="sxs-lookup"><span data-stu-id="9c435-102">How to: Modify an Office Open XML Document (C#)</span></span>
-<span data-ttu-id="9c435-103">このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。</span><span class="sxs-lookup"><span data-stu-id="9c435-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
+# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="5ef8b-102">方法: Office Open XML ドキュメントを変更する (C#)</span><span class="sxs-lookup"><span data-stu-id="5ef8b-102">How to: Modify an Office Open XML Document (C#)</span></span>
+<span data-ttu-id="5ef8b-103">このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
   
- <span data-ttu-id="9c435-104">Office Open XML の詳細については、[Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) と [www.ericwhite.com](http://ericwhite.com/) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9c435-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
+ <span data-ttu-id="5ef8b-104">Office Open XML の詳細については、[Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) と [www.ericwhite.com](http://ericwhite.com/) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9c435-105">例</span><span class="sxs-lookup"><span data-stu-id="9c435-105">Example</span></span>  
- <span data-ttu-id="9c435-106">この例では、ドキュメント内の最初の段落要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="9c435-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="9c435-107">次に、段落からテキストを取得し、段落内のテキスト ランをすべて削除します。</span><span class="sxs-lookup"><span data-stu-id="9c435-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="9c435-108">また、大文字に変換された最初の段落のテキストから構成される新しいテキスト ランを作成します。</span><span class="sxs-lookup"><span data-stu-id="9c435-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="9c435-109">最後に、変更した XML を Open XML パッケージにシリアル化して閉じます。</span><span class="sxs-lookup"><span data-stu-id="9c435-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
+## <a name="example"></a><span data-ttu-id="5ef8b-105">例</span><span class="sxs-lookup"><span data-stu-id="5ef8b-105">Example</span></span>  
+ <span data-ttu-id="5ef8b-106">この例では、ドキュメント内の最初の段落要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="5ef8b-107">次に、段落からテキストを取得し、段落内のテキスト ランをすべて削除します。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="5ef8b-108">また、大文字に変換された最初の段落のテキストから構成される新しいテキスト ランを作成します。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="5ef8b-109">最後に、変更した XML を Open XML パッケージにシリアル化して閉じます。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
   
- <span data-ttu-id="9c435-110">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="9c435-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="9c435-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="9c435-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="5ef8b-110">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="5ef8b-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -139,14 +139,14 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="9c435-112">このプログラムを実行した後で `SampleDoc.docx` を開くと、このプログラムによってドキュメント内の最初の段落が大文字に変換されたかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="9c435-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
+ <span data-ttu-id="5ef8b-112">このプログラムを実行した後で `SampleDoc.docx` を開くと、このプログラムによってドキュメント内の最初の段落が大文字に変換されたかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
   
- <span data-ttu-id="9c435-113">この例で「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」に記載されているサンプルの Open XML ドキュメントを使用して実行すると、次のように出力されます。</span><span class="sxs-lookup"><span data-stu-id="9c435-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="5ef8b-113">この例で「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」に記載されているサンプルの Open XML ドキュメントを使用して実行すると、次のように出力されます。</span><span class="sxs-lookup"><span data-stu-id="5ef8b-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9c435-114">参照</span><span class="sxs-lookup"><span data-stu-id="9c435-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ef8b-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ef8b-114">See also</span></span>
 
-- [<span data-ttu-id="9c435-115">高度なクエリ手法 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9c435-115">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="5ef8b-115">高度なクエリ手法 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="5ef8b-115">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
