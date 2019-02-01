@@ -1,18 +1,18 @@
 ---
-title: 'サンプル XML ファイル : 複数の購買発注書 (LINQ to XML)'
+title: サンプル XML ファイル:複数の購買発注書 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: f510de028198dc6ad1f86490704d1c8df6e39cf4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 232be52bb75c6e07773c79a65f4e8e8f346a65d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44201024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747792"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="c2746-102">サンプル XML ファイル : 複数の購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c2746-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
-<span data-ttu-id="c2746-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="c2746-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c2746-104">このファイルには、複数の購買発注書が含まれています。</span><span class="sxs-lookup"><span data-stu-id="c2746-104">This file contains several purchase orders.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="fec42-102">サンプル XML ファイル:複数の購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="fec42-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
+<span data-ttu-id="fec42-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="fec42-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="fec42-104">このファイルには、複数の購買発注書が含まれています。</span><span class="sxs-lookup"><span data-stu-id="fec42-104">This file contains several purchase orders.</span></span>  
   
-## <a name="purchaseordersxml"></a><span data-ttu-id="c2746-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="c2746-105">PurchaseOrders.xml</span></span>  
+## <a name="purchaseordersxml"></a><span data-ttu-id="fec42-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="fec42-105">PurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -109,6 +109,6 @@ ms.locfileid: "44201024"
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c2746-106">参照</span><span class="sxs-lookup"><span data-stu-id="c2746-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fec42-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="fec42-106">See also</span></span>
 
-- [<span data-ttu-id="c2746-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c2746-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="fec42-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="fec42-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
