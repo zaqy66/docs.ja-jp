@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48845542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558918"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework のバージョンの互換性
-下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。 .NET Framework では、下位互換性が最大限に高められています。 .NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。  
+下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。  .NET Framework では、下位互換性が最大限に高め67られています。.NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。  
   
 <a name="Apps"></a>   
 ## <a name="version-compatibility-for-apps"></a>アプリのバージョンの互換性  
@@ -34,7 +34,7 @@ ms.locfileid: "48845542"
 </configuration>  
 ```  
   
- 詳しくは、[.NET Framework 4 または 4.x をサポートするアプリの構成方法](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)に関するページをご覧ください。  
+ 詳細については、「[方法 :.NET Framework 4 以降のバージョンをサポートするアプリを構成する](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)」を参照してください。  
   
 ## <a name="version-compatibility-for-components"></a>コンポーネントのバージョンの互換性  
  アプリは、それが実行される .NET Framework を制御できますが、コンポーネントは制御できません。 コンポーネントとクラス ライブラリは特定のアプリのコンテキストで読み込まれるので、アプリが実行されるバージョンの .NET Framework で自動的に実行されます。  
@@ -65,9 +65,9 @@ ms.locfileid: "48845542"
 ## <a name="compatibility-and-side-by-side-execution"></a>互換性と side-by-side 実行  
  問題の適切な解決策が見つからない場合は、.NET Framework 4.5 (またはそのポイント リリース) は Version 1.1、2.0、3.5 と side-by-side で実行でき、Version 4 に置き換わるインプレース更新であることを思い出してください。 Version 1.1、2.0、3.5 を対象とするアプリでは、適切なバージョンの .NET Framework を対象コンピューターにインストールして、アプリを最良の環境で実行できます。 side-by-side 実行について詳しくは、[side-by-side 実行](../../../docs/framework/deployment/side-by-side-execution.md)に関するページを参照してください。  
   
-## <a name="see-also"></a>参照  
- [新機能](../../../docs/framework/whats-new/index.md)  
- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)  
- [アプリケーションの互換性](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
- [.NET framework 4 への移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
+## <a name="see-also"></a>関連項目
+- [新機能](../../../docs/framework/whats-new/index.md)
+- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)
+- [アプリケーションの互換性](../../../docs/framework/migration-guide/application-compatibility.md)
+- [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [.NET framework 4 への移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
