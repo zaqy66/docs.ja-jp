@@ -1,5 +1,5 @@
 ---
-title: パラメーターの一覧 (Visual Basic)
+title: パラメーター リスト (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54662284"
 ---
-# <a name="parameter-list-visual-basic"></a>パラメーターの一覧 (Visual Basic)
+# <a name="parameter-list-visual-basic"></a>パラメーター リスト (Visual Basic)
 プロシージャは呼び出された場合、パラメーターを指定します。 複数のパラメーターは、コンマで区切られます。 1 つのパラメーターの構文を次に示します。  
   
 ## <a name="syntax"></a>構文  
