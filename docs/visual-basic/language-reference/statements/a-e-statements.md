@@ -18,7 +18,7 @@ ms.locfileid: "54672358"
 |[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|  
 |[Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[End](../../../visual-basic/language-reference/statements/end-statement.md)|[End \<キーワード>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
 |[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|[Error](../../../visual-basic/language-reference/statements/error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|  
-|[終了](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
+|[Exit](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   
 ## <a name="see-also"></a>関連項目
 - [ステートメント F ～ P](../../../visual-basic/language-reference/statements/f-p-statements.md)
