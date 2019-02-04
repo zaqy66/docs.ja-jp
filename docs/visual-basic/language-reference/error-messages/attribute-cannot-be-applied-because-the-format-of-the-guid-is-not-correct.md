@@ -14,18 +14,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55279865"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<属性 >' 適用できません GUID の形式'\<数 >' が正しくありません。
-A`COMClassAttribute`属性ブロックを GUID の適切な形式に準拠しないグローバル一意識別子 (GUID) を指定します。 `COMClassAttribute` クラス、インターフェイス、および作成イベントを一意に識別するのに Guid を使用します。  
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'GUID '<number>' の形式が正しくないため、'<attribute>' を適用できません。
+`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定
+されています。`COMClassAttribute` は GUID を使ってクラス、インターフェイス、および作成イベントを一意に識別します。  
   
- GUID は、16 バイトで構成されます。前半の 8 バイトは数値、後半の 8 バイトはバイナリです。 Uuidgen.exe などの Microsoft ユーティリティによって生成され、領域と時間で一意であることが保証されます。  
+ GUID は 16 バイトで構成され、前の 8 バイトは数値、後の 8 バイトはバイナリです。GUID は uuidgen.exe などの Microsoft ユーティリティで
+生成され、空間および時間内で一意であることが保証されています。  
   
  **エラー ID:** BC32500  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  適切な GUID または COM オブジェクトを識別するために必要な Guid を決定します。  
+1.  COM オブジェクトを識別するために必要な正しい GUID を決定します。  
   
-2.  `COMClassAttribute` 属性ブロックに表示される GUID 文字列が正しくコピーされていることを確認します。  
+2.  `COMClassAttribute` 属性ブロックに示される GUID 文字列が正しくコピーされていることを確認します。 
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Guid>
