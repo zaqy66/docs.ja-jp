@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: dfbeb5ff94f39e8d8df03feea9ff55db748d2182
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058582"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204666"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
@@ -46,10 +46,10 @@ public readonly int y = 5;
 
 > [!NOTE]
 > `readonly` キーワードは [const](const.md) キーワードとは異なります。 `const` フィールドは、フィールドの宣言でしか初期化できません。 `readonly` フィールドは、フィールドの宣言と任意のコンストラクターで複数回割り当てることができます。 このため、`readonly` フィールドは、使用するコンストラクターに応じて異なる値を持つことができます。 また、次の例のように、`const` フィールドがコンパイル時定数であるのに対し、`readonly` フィールドは実行時定数として使用できます。
-
-```csharp
-public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
-```
+>
+> ```csharp
+> public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
+> ```
 
 [!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 

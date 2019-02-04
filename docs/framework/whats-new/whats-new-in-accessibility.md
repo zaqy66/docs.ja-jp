@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680304"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675440"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -292,7 +292,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 .NET Framework 4.7.1 のアクセシビリティ機能の改善の詳細については、「[Accessibility improvements in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)」 (WPF のアクセシビリティ機能改善) を参照してください。
 
 <a name="winforms471"></a>
-## <a name="windows-forms-accessibility-improvements"></a>Windows フォームのアクセシビリティ機能改善
+### <a name="windows-forms-accessibility-improvements"></a>Windows フォームのアクセシビリティ機能改善
 
 .NET Framework 4.7.1 では、Windows フォーム (WinForms) のアクセシビリティが次の領域で変更されました。
 
@@ -358,7 +358,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - ナレーターの動作が改善されました。
  
 <a name="aspnet471"></a>
-## <a name="aspnet-web-controls"></a>ASP.NET Web コントロール
+### <a name="aspnet-web-controls"></a>ASP.NET Web コントロール
 
 .NET Framework 4.7.1 および Visual Studio 2017 15.3 以降では、ASP.NET Web コントロールによる Visual Studio のアクセシビリティ テクノロジの処理方法が向上しています。 主な変更点は以下のとおりです。
 
@@ -369,14 +369,14 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - DataPager コントロールの **[ページャーのフィールドを編集]** ウィザードの **[フィールド]** ダイアログ、**[ObjectContext の構成]** ダイアログ、**[データ ソースの構成]** ウィザードの **[データの選択の構成]** ダイアログなど、キーボードの操作性を改善するための変更。
 
 <a name="tools471"></a>
-## <a name="net-sdk-tools"></a>.NET SDK Tools
+### <a name="net-sdk-tools"></a>.NET SDK Tools
 
 [構成エディター ツール (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) および[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) が、さまざまなアクセシビリティの問題を修正して改善されています。 その問題のほとんどは、名前の未定義や、特定の UI の自動化パターンが正しく実装されていないといった軽微なものです。 このような問題は、多くのユーザーが認識しないものですが、スクリーン リーダーのような支援技術を使用するお客様はこれらの SDK ツールのアクセシビリティの強化を実感されるでしょう。 
 
 これらの機能強化により、キーボード フォーカスの順序など、以前のいくつかの動作が変更されます。
 
 <a name="wf471"></a>
-## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) ワークフロー デザイナー
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) ワークフロー デザイナー
 
 ワークフロー デザイナーでのアクセシビリティに関する変更は次のとおりです。
 

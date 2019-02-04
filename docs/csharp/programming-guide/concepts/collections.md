@@ -2,12 +2,12 @@
 title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084121"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675414"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -583,7 +583,6 @@ private static IEnumerable<int> EvenSequence(
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [コレクションとデータ構造体](../../../standard/collections/index.md)
-- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
 - [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)
 - [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066403"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282036"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework コマンド ライン デバッガー)
 .NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージド コードのデバッグしか実行できません。アンマネージド コードのデバッグはサポートされていません。  
@@ -103,8 +103,6 @@ mdbg>
  `mdbg>` プロンプトは、デバッガーが起動したことを表します。  
   
  デバッガーが起動したら、前のセクションで説明したコマンドと引数を使用します。  
-  
-## <a name="examples"></a>使用例  
   
 ## <a name="see-also"></a>関連項目
 - [ツール](../../../docs/framework/tools/index.md)

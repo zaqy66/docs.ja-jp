@@ -1,5 +1,5 @@
 ---
-title: '&gt;= 演算子 - C# リファレンス'
+title: '>= 演算子 - C# リファレンス'
 ms.custom: seodec18
 ms.date: 12/18/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - greater than or equal to operator (>=) [C#]
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
-ms.openlocfilehash: 34437742d33cff97e53c6dfb163df083e80d41f3
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 821369734e64648714bf89efb0c02d12d4d816e3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655934"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256554"
 ---
-# <a name="gt-operator-c-reference"></a>&gt;= 演算子 (C# リファレンス)
+# <a name="-operator-c-reference"></a>>= 演算子 (C# リファレンス)
 
 "次の値より大きいか等しい" 関係演算子 `>=` は、最初のオペランドが 2 番目のオペランドより大きいか等しい場合に `true` を返し、それ以外の場合は `false` を返します。 すべての数値型と列挙型が `>=` 演算子をサポートします。 同じ[列挙](../keywords/enum.md)型のオペランドで、基になる整数型の対応する値が比較されます。
 

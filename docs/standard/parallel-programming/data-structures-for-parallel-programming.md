@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517618"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479699"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミングのデータ構造
 .NET Framework バージョン 4 では、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ複数の新しい型が導入されています。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
@@ -41,7 +41,7 @@ ms.locfileid: "54517618"
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|各タスクが到着を通知し、一部または全部のタスクが到着するまでブロックすることができるポイントを提供することにより、複数のスレッドが 1 つのアルゴリズムで並列に動作できるようにします。 詳細については、「[バリア](../../../docs/standard/threading/barrier.md)」を参照してください|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|簡単なランデブー メカニズムを提供することにより、フォークと結合のシナリオを簡略化します。 詳しくは、「[CountdownEvent](../../../docs/standard/threading/countdownevent.md)」をご覧ください。|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> と同様の同期プリミティブです。 <xref:System.Threading.ManualResetEventSlim> の方が軽量ですが、プロセス内通信にしか使えません。 詳しくは、「[ManualResetEvent と ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)」をご覧ください。|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> と同様の同期プリミティブです。 <xref:System.Threading.ManualResetEventSlim> の方が軽量ですが、プロセス内通信にしか使えません。|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|リソースまたはリソースのプールに同時にアクセスできるスレッドの数を制限する同期プリミティブです。 詳しくは、「[Semaphore と SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)」をご覧ください。|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|ロックを取得しようとしているスレッドがクォンタムを生成する前にしばらくループ ("*スピン*") で待機するようになる、相互排他ロック プリミティブです。 ロックの待機が短いと予想されるシナリオでは、他のロック形式より <xref:System.Threading.SpinLock> の方がよいパフォーマンスを提供します。 詳しくは、「[SpinLock](../../../docs/standard/threading/spinlock.md)」をご覧ください。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|指定された時間だけスピンし、スピン カウントを超過した場合は最終的にスレッドを待機状態にする、小型で軽量の型です。  詳しくは、「[SpinWait](../../../docs/standard/threading/spinwait.md)」をご覧ください。|  

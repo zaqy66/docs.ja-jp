@@ -1,11 +1,17 @@
 ---
-title: 'デリゲート - C# プログラミング ガイド'
+title: デリゲート - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, delegates'
-  - 'delegates [C#]'
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
+ms.openlocfilehash: 1c272dd9ab4f810a0eb1a1064b4c7731873d2c80
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675375"
 ---
 # <a name="delegates-c-programming-guide"></a>デリゲート (C# プログラミング ガイド)
 [デリゲート](../../../csharp/language-reference/keywords/delegate.md)は、特定のパラメーター リストおよび戻り値の型を使用して、メソッドへの参照を表す型です。 デリゲートをインスタンス化するときは、互換性のあるシグネチャと戻り値の型を持つ任意のメソッドにそのインスタンスを関連付けることができます。 メソッドは、デリゲート インスタンスを使用して起動する (呼び出す) ことができます。  
@@ -40,7 +46,7 @@ ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
   
 -   [デリゲートの使用](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [インターフェイス (c# プログラミング ガイド) ではなくデリゲートを使用する場合](https://msdn.microsoft.com/library/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [インターフェイス (c# プログラミング ガイド) ではなくデリゲートを使用する場合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 -   [名前付きメソッドを使用したデリゲートと匿名メソッドを使用したデリゲート](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   

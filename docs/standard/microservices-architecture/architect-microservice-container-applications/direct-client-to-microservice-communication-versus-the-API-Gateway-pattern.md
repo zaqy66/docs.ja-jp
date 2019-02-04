@@ -3,13 +3,13 @@ title: API ゲートウェイ パターンと、クライアントからマイ�
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030543"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675453"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -25,7 +25,7 @@ ms.locfileid: "54030543"
 
 この方法では、各マイクロサービスにパブリック エンドポイントがあり、マイクロサービスごとに異なる TCP ポートがある場合があります。 特定のサービスの URL の例として、Azure での URL を以下に示します。
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 クラスターに基づく運用環境では、その URL がクラスターで使用されるロード バランサーにマップされ、その後、マイクロサービス全体に要求が分散されます。 運用環境では、マイクロサービスとインターネット間で [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) などのアプリケーション配信コントローラー (ADC) を使用できます。 これは、負荷分散を実行するだけでなく、SSL 終了を提供することにより、サービスをセキュリティで保護する透過層として機能します。 CPU 負荷の高い SSL 終了と他のルーティング作業を Azure Application Gateway にオフロードすることで、ホストの負荷が改善されます。 いずれの場合も、論理アプリケーション アーキテクチャの観点からロード バランサーと ADC は透過的となります。
 
@@ -134,7 +134,7 @@ API ゲートウェイ製品の実装によっては、さらに幅広い横断�
 
 **図 4-14**.  API ゲートウェイでの Azure API Management の使用
 
-この場合、Azure API Management などの製品を使用する際に単一の API ゲートウェイを使用することはそれほど危険ではありません。この種の API ゲートウェイは "細かい" ためです。つまり、モノシリック コンポーネントに進化する可能性のあるカスタム C# コードを実装することはありません。 これらの製品はイングレス通信のリバース プロキシに近い動作をします。ここでは内部マイクロサービスから API をフィルター処理し、さらにこの単一層で公開された API に承認を適用することもできます。
+この場合、Azure API Management などの製品を使用する際に単一の API ゲートウェイを使用することはそれほど危険ではありません。この種の API ゲートウェイは "細かい" ためです。つまり、モノシリック コンポーネントに進化する可能性のあるカスタム C# コードを実装することはありません。 
 
 API ゲートウェイ製品は通常、イングレス通信のリバース プロキシに近い動作をします。ここでは内部マイクロサービスから API をフィルター処理し、さらにこの単一層で公開された API に承認を適用することもできます。
 

@@ -3,12 +3,12 @@ title: クラスおよびオブジェクト - C# チュートリアルの概要
 description: 初めての C# プログラムを作成し、オブジェクト指向の概念を確認します
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066069"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204783"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>クラスおよびオブジェクトを使用したオブジェクト指向プログラミングについて確認します
 
@@ -156,14 +156,14 @@ using System.Collections.Generic;
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
 Console.WriteLine(account.Balance);
-account.MakeDeposit(100, DateTime.Now, "friend paid me back");
+account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
 次に、残高が負の値になっているアカウントを作成してみることで、エラー条件のキャッチをテストします。
 
 ```csharp
-// Test that the initial balances must be positive:
+// Test that the initial balances must be positive.
 try
 {
     var invalidAccount = new BankAccount("invalid", -55);
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 [`try` と `catch` のステートメント](../../language-reference/keywords/try-catch.md)を使用して、例外をスローする可能性のあるコード ブロックをマークし、想定したエラーをキャッチします。 同じ方法で、残高が負の値になっている場合に例外をスローするコードをテストします。
 
 ```csharp
-// Test for a negative balance
+// Test for a negative balance:
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
