@@ -15,11 +15,9 @@ ms.lasthandoff: 01/30/2019
 ms.locfileid: "55279865"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'GUID '<number>' の形式が正しくないため、'<attribute>' を適用できません。
-`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定
-されています。`COMClassAttribute` は GUID を使ってクラス、インターフェイス、および作成イベントを一意に識別します。  
+`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定されています。`COMClassAttribute` は GUID を使ってクラス、インターフェイス、および作成イベントを一意に識別します。  
   
- GUID は 16 バイトで構成され、前の 8 バイトは数値、後の 8 バイトはバイナリです。GUID は uuidgen.exe などの Microsoft ユーティリティで
-生成され、空間および時間内で一意であることが保証されています。  
+ GUID は 16 バイトで構成され、前の 8 バイトは数値、後の 8 バイトはバイナリです。GUID は uuidgen.exe などの Microsoft ユーティリティで生成され、空間および時間内で一意であることが保証されています。  
   
  **エラー ID:** BC32500  
   
