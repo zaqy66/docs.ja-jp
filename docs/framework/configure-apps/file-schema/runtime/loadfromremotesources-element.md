@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebb32a74f5413f9c927a84ababf2d60d20e0b024
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269693"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675310"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 要素
 リモート ソースから読み込まれたアセンブリに対して、.NET Framework 4 以降の完全な信頼を付与するかどうかを指定します。
   
 > [!NOTE]
->  場合は、Visual Studio プロジェクトのエラー一覧またはビルド エラーのエラー メッセージのため、このトピックにダイレクトされたを参照してください。[方法。Visual Studio で Web からアセンブリを使用して](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)します。  
+>  場合は、Visual Studio プロジェクトのエラー一覧またはビルド エラーのエラー メッセージのため、この記事にダイレクトされたを参照してください。[方法。Visual Studio で Web からアセンブリを使用して](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))します。  
   
  \<configuration>  
 \<runtime>  
@@ -118,7 +118,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 ## <a name="see-also"></a>関連項目
 
 - [CAS ポリシーの暗黙的な複数の使用: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [方法: サンド ボックスで部分信頼コードを実行します。](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [方法: サンドボックスで部分信頼コードを実行する](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

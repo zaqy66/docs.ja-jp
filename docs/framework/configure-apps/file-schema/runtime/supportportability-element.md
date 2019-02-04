@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2295ebd919a91ae9942ec225f2bfe784e5ee151
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c1e1c3236ed2d79592bca46e925c9f67e5ac9c51
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267795"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675336"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 要素
 .NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。  
@@ -80,4 +80,4 @@ ms.locfileid: "55267795"
   
 ## <a name="see-also"></a>関連項目
 - [/appconfig (c# コンパイラ オプション)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET framework アセンブリ統合の概要](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+- [.NET framework アセンブリ統合の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

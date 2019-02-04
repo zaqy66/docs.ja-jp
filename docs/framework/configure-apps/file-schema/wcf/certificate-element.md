@@ -2,12 +2,12 @@
 title: <certificate> 要素
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: b53a0328ed1fcbae03e8844ccca64e949db44e7e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f0cec2ad0e7747ddbc0ef566b4e8cbc7f8795b02
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254549"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675388"
 ---
 # <a name="certificate-element"></a>\<証明書 > 要素
 ピアツーピア クライアントのメッセージの署名と暗号化に使用する X.509 証明書を指定します。  
@@ -81,6 +81,6 @@ ms.locfileid: "55254549"
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [ピアツーピア ネットワーク](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [ピア チャネル メッセージの認証](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [ピア チャネル カスタム認証](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [ピア チャネル メッセージの認証](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [ピア チャネル カスタム認証](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [セキュリティによるピア チャネル アプリケーションの保護](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

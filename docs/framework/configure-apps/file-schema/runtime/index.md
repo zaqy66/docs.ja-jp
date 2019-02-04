@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4289f013123796badcaedac2f89e1560397a0aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6c0ead0715221354970ddee90e89bae7c583266
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659005"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675427"
 ---
 # <a name="runtime-settings-schema"></a>ランタイム設定スキーマ
 ランタイム設定は、.NET Framework を対象とするアプリケーションを構成する共通言語ランタイムによって使用されます。  
@@ -133,5 +133,5 @@ ms.locfileid: "54659005"
   
 ## <a name="see-also"></a>関連項目
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [同時実行ガベージ コレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

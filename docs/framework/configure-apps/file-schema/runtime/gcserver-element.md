@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c5cfe52d37c3ce2e78d07886b0856be46bfaadc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9125ee35b081a1723f379bd3fbdec808d085c675
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287561"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674452"
 ---
 # <a name="gcserver-element"></a>\<gcServer > 要素
 共通言語ランタイムがサーバーのガベージ コレクションを実行するかどうかを指定します。  
@@ -82,4 +82,4 @@ ms.locfileid: "55287561"
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [同時実行ガベージ コレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)

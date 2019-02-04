@@ -2,12 +2,12 @@
 title: コレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55234e39fc692ec8f6cc10d05df6b29be5818927
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698766"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674829"
 ---
 # <a name="collections-visual-basic"></a>コレクション (Visual Basic)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -578,7 +578,6 @@ End Function
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [コレクションとデータ構造体](../../../standard/collections/index.md)
-- [コレクションの作成と操作](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
 - [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)
 - [コレクション内での比較と並べ替え](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)
