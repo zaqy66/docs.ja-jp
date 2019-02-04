@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55260200"
 ---
-# <a name="c-visual-basic"></a>\<c > (Visual Basic)
+# <a name="c-visual-basic"></a>\<c> (Visual Basic)
 説明内のテキストがコードであることを示します。  
   
 ## <a name="syntax"></a>構文  
