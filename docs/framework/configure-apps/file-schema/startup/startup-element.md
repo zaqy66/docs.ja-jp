@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280203"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674569"
 ---
 # <a name="startup-element"></a>\<startup > 要素
 
@@ -70,7 +70,7 @@ ms.locfileid: "55280203"
  この属性は、アプリケーションなどに、レガシ アクティブ化パスを使用する場合に便利ですが、 [CorBindToRuntimeEx 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)、それらのパスを以前のバージョンではなく、CLR の version 4 をアクティブ化して、アプリケーションがある場合、または構築された、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]が以前のバージョンの .NET Framework でビルドされた混合モードのアセンブリに依存しています。 そのようなシナリオで、属性を設定して`true`します。
 
 > [!NOTE]
-> 属性を設定`true`CLR version 1.1 または CLR バージョン 2.0 が実質的にインプロセスでサイド バイ サイドでの機能を無効にする、同じプロセスに読み込まれなくなります (を参照してください[COM 相互運用機能のサイド バイ サイドで実行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32))。
+> 属性を設定`true`CLR version 1.1 または CLR バージョン 2.0 が実質的にインプロセスでサイド バイ サイドでの機能を無効にする、同じプロセスに読み込まれなくなります (を参照してください[COM 相互運用機能のサイド バイ サイドで実行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100)))。
 
 ## <a name="example"></a>例
 
@@ -97,5 +97,5 @@ ms.locfileid: "55280203"
 - [スタートアップ設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
 - [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [COM 相互運用機能のサイド バイ サイドで実行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [COM 相互運用機能のサイド バイ サイドで実行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [インプロセスの side-by-side 実行](../../../deployment/in-process-side-by-side-execution.md)
