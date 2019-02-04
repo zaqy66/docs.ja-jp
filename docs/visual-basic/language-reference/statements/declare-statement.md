@@ -72,7 +72,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  `Declare` は、モジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*外部参照は、クラス、構造体、またはモジュールである必要があり、ソース ファイル、名前空間、インターフェイス、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- 外部参照の既定値は[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。  
+ 外部参照の既定値は[Public](../../../visual-basic/language-reference/modifiers/public.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。  
   
 ## <a name="rules"></a>ルール  
   
