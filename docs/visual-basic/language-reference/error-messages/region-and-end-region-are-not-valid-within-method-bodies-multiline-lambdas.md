@@ -21,9 +21,9 @@ ms.locfileid: "55265572"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  前の手順が正しくで終了することを確認、`End Function`または`End Sub`ステートメント。  
+1.  直前のプロシージャが、`End Function`ステートメントまたは`End Sub`ステートメントによって正しく終了していることを確認します。  
   
-2.  いることを確認、`#Region`と`#End Region`ディレクティブは、同じコード ブロックにします。  
+2.  `#Region`ディレクティブおよび`#End Region`ディレクティブが同じコード ブロック内にあることを確認します。  
   
 ## <a name="see-also"></a>関連項目
 - [#Region ディレクティブ](../../../visual-basic/language-reference/directives/region-directive.md)
