@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55255525"
 ---
-# <a name="example-visual-basic"></a>\<例 > (Visual Basic)
+# <a name="example-visual-basic"></a>\<example> (Visual Basic)
 メンバーの例を指定します。  
   
 ## <a name="syntax"></a>構文  
