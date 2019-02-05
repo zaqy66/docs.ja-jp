@@ -1,13 +1,19 @@
 ---
-title: 'C# のガイド'
-description: '開発の初心者であるか、経験豊富な専門家であるかを問わず、C# のガイドが C# に関する広範な知識を得るのにどのように役立つかを示します。'
+title: C# のガイド
+description: 開発の初心者であるか、経験豊富な専門家であるかを問わず、C# のガイドが C# に関する広範な知識を得るのにどのように役立つかを示します。
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
-  - 'documentation [C#]'
-  - 'Help, Visual C# documentation'
-  - 'C# language'
-  - 'Visual C#'
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709482"
 ---
 # <a name="c-guide"></a><span data-ttu-id="7953c-103">C# のガイド</span><span class="sxs-lookup"><span data-stu-id="7953c-103">C# Guide</span></span>
 
