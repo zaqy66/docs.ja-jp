@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635678"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738930"
 ---
 # <a name="configuring-http-and-https"></a>HTTP および HTTPS の構成
 WCF サービスと WCF クライアントは、HTTP および HTTPS を介して通信できます。 HTTP または HTTPS の設定は、インターネット インフォメーション サービス (IIS) またはコマンド ライン ツールを使用して構成します。 WCF サービスが IIS でホストされている場合は、IIS 内で HTTP または HTTPS の設定を構成できます (inetmgr.exe ツールを使用)。 WCF サービスが自己ホスト型の場合は、コマンド ライン ツールを使用して HTTP または HTTPS の設定を構成します。  
@@ -33,7 +33,7 @@ WCF サービスと WCF クライアントは、HTTP および HTTPS を介し�
  `set urlacl` オプションを使用する Httpcfg コマンドの構文を次に示します。  
   
 ```console  
-httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
+httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /a ACL  
 ```  
   
  `/u` を使用する場合には、`set urlacl` パラメーターが必要です。 このパラメーターには、実行された予約のレコード キーとして動作する完全修飾 URL を含む文字列を指定します。  

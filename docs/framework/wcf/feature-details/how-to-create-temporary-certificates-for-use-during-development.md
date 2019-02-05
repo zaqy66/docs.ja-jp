@@ -1,18 +1,18 @@
 ---
-title: '方法 : 開発中に使用する一時的な証明書を作成する'
+title: '方法: 開発中に使用するための一時的な証明書を作成します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698585"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738631"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法 : 開発中に使用する一時的な証明書を作成する
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法: 開発中に使用するための一時的な証明書を作成します。
 
 セキュリティで保護されたサービスまたは Windows Communication Foundation (WCF) を使用してクライアントを開発する場合は、資格情報として使用する X.509 証明書を指定する必要があります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、Powershell を使用してこれら 2 つの証明書を作成する手順について説明します[New-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate)コマンドレット。
 
@@ -21,7 +21,7 @@ ms.locfileid: "46698585"
 >
 > 既定で、 [New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate)コマンドレットは自己署名証明書を作成し、これらの証明書は安全ではありません。 ストアは信頼されたルート証明機関に自己署名証明書を配置するデプロイ環境をより忠実にシミュレートする開発環境を作成できます。
 
- 作成して、証明書の使用の詳細については、次を参照してください。 [Working with Certificates](working-with-certificates.md)します。 資格情報として証明書を使用する方法の詳細については、次を参照してください。 [Securing Services and Clients](securing-services-and-clients.md)します。 Microsoft Authenticode テクノロジの使用に関するチュートリアルについては、次を参照してください。 [Authenticode の概要とチュートリアル](https://go.microsoft.com/fwlink/?LinkId=88919)します。
+ 作成して、証明書の使用の詳細については、次を参照してください。 [Working with Certificates](working-with-certificates.md)します。 資格情報として証明書を使用する方法の詳細については、次を参照してください。 [Securing Services and Clients](securing-services-and-clients.md)します。 Microsoft Authenticode テクノロジの使用方法については、「 [Authenticode Overviews and Tutorials (Authenticode の概要とチュートリアル)](https://go.microsoft.com/fwlink/?LinkId=88919)」を参照してください。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>自己署名ルート証明書を作成して秘密キーをエクスポートするには
 
@@ -62,7 +62,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>自己署名証明書を信頼されたルート証明機関としてインストールするには
 
-1. 証明書スナップインを開きます。 詳細については、「[方法: MMC スナップインを使用して証明書を参照する](how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。
+1. 証明書スナップインを開きます。 詳細については、「[方法 :MMC スナップインで証明書を表示](how-to-view-certificates-with-the-mmc-snap-in.md)します。
 
 2. 証明書の格納先となる、 **[ローカル コンピューター]** または **[現在のユーザー]** のフォルダーを開きます。
 
@@ -70,7 +70,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 4. **[証明書]** フォルダーを右クリックして、 **[すべてのタスク]** メニューの **[インポート]** を実行します。
 
-5. ウィザード画面が開くので、その指示に従って TempCa.cer を証明書ストアにインポートしてください。
+5. 画面の指示に従って、RootCA.pfx をストアにインポートする方法について。
 
 ## <a name="using-certificates-with-wcf"></a>WCF で証明書の使用
 
@@ -106,7 +106,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 </behaviors>
 ```
 
-WCF で証明書の使用に関する詳細については、次を参照してください。 [Working with Certificates](working-with-certificates.md)します。
+WCF での証明書の使用に関する詳細については、「 [Working with Certificates](working-with-certificates.md)」を参照してください。
 
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ
 
@@ -115,5 +115,5 @@ WCF で証明書の使用に関する詳細については、次を参照して�
 ## <a name="see-also"></a>関連項目
 
 - [証明書の使用](working-with-certificates.md)
-- [方法 : MMC スナップインを使用して証明書を参照する](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [方法: MMC スナップインで証明書の表示](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)

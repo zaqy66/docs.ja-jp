@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5cbe0dfa8053a93cde9c92ffe87f0eae15d3efd
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660724"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739294"
 ---
 # <a name="recursive-procedures-visual-basic"></a>再帰プロシージャ (Visual Basic)
 A*再帰*手順は、自分自身を呼び出します。 通常、これは Visual Basic コードを記述する最も効果的な方法ではありません。  
@@ -48,4 +48,3 @@ A*再帰*手順は、自分自身を呼び出します。 通常、これは Vis
 - [プロシージャのオーバーロード](./procedure-overloading.md)
 - [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)
 - [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [例外のトラブルシューティング。System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

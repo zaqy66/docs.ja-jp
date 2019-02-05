@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: d57f2a59a9ab54003e3627787785741b3d0fdb11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cebf5123ab6cdfff58a2e6a483af63f4215f8de2
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529058"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739528"
 ---
 # <a name="preview-events"></a>プレビュー イベント
 プレビュー イベント、トンネル イベントとも呼ばれますにはルーティング イベントがあるイベントを発生し、イベント データのソースとして報告された要素に対するアプリケーションのルートからルートの方向が送信されます。 すべてのイベント シナリオがサポートまたはプレビュー イベント; が必要です。このトピックでは、カスタム コンポーネントまたはクラスでプレビュー イベントを作成する可能性がありますが、適切なである場合、プレビュー イベントが存在、アプリケーションまたはコンポーネントを処理する方法、それらの状況について説明します。  
@@ -25,7 +25,7 @@ ms.locfileid: "54529058"
  クラスの処理とプレビュー イベントに関連付ける方法の詳細については、次を参照してください。[ルーティング イベントの処理済み、およびクラス処理としてのマーキング](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)します。  
   
 ### <a name="working-around-event-suppression-by-controls"></a>コントロールによるイベント抑制の回避  
- プレビュー イベントが頻繁に使用されている 1 つのシナリオが、複合コントロールの入力イベントを処理します。 場合によっては、コントロールの作成者より多くの情報をより具体的な動作を表すコンポーネント定義のイベントを置換するには、おそらくそのコントロールでは、送信元から特定のイベントを抑制します。 たとえば、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>を抑制します<xref:System.Windows.UIElement.MouseLeftButtonDown>と<xref:System.Windows.UIElement.MouseLeftButtonDown>によって生成されるイベントのバブリング、<xref:System.Windows.Controls.Button>またはマウスをキャプチャして発生を優先してその複合要素を<xref:System.Windows.Controls.Primitives.ButtonBase.Click>によって常に発生するイベントを<xref:System.Windows.Controls.Button>自体。 イベントとそのデータ、ルートでは、引き続きだ、 <xref:System.Windows.Controls.Button> 、イベント データをマーク<xref:System.Windows.RoutedEventArgs.Handled%2A>で動作する必要がありますが、個別に指定したイベントのハンドラーにのみ、`handledEventsToo`ケースが呼び出されます。  代わりをコードでハンドラーをアタッチする場合は、アプリケーションのルートに近い方には、その他の要素もコントロールで抑制されたイベントを処理すること、`handledEventsToo`として指定された`true`します。 プレビューと同等の入力イベントを処理するルーティングの方向を変更する単純な手法は、多くの場合。 たとえば、コントロールを抑制する場合<xref:System.Windows.UIElement.MouseLeftButtonDown>、ハンドラーを添付するをお試しください<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>代わりにします。 この手法だけが、基本要素の入力イベントなど<xref:System.Windows.UIElement.MouseLeftButtonDown>します。 これらの入力イベントは、トンネル/バブルのペアを使用して、両方のイベントを発生させるし、イベント データを共有します。  
+ プレビュー イベントが頻繁に使用されている 1 つのシナリオが、複合コントロールの入力イベントを処理します。 場合によっては、コントロールの作成者より多くの情報をより具体的な動作を表すコンポーネント定義のイベントを置換するには、おそらくそのコントロールでは、送信元から特定のイベントを抑制します。 たとえば、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>を抑制します<xref:System.Windows.UIElement.MouseLeftButtonDown>と<xref:System.Windows.UIElement.MouseRightButtonDown>によって生成されるイベントのバブリング、<xref:System.Windows.Controls.Button>またはマウスをキャプチャして発生を優先してその複合要素を<xref:System.Windows.Controls.Primitives.ButtonBase.Click>によって常に発生するイベントを<xref:System.Windows.Controls.Button>自体。 イベントとそのデータ、ルートでは、引き続きだ、 <xref:System.Windows.Controls.Button> 、イベント データをマーク<xref:System.Windows.RoutedEventArgs.Handled%2A>で動作する必要がありますが、個別に指定したイベントのハンドラーにのみ、`handledEventsToo`ケースが呼び出されます。  代わりをコードでハンドラーをアタッチする場合は、アプリケーションのルートに近い方には、その他の要素もコントロールで抑制されたイベントを処理すること、`handledEventsToo`として指定された`true`します。 プレビューと同等の入力イベントを処理するルーティングの方向を変更する単純な手法は、多くの場合。 たとえば、コントロールを抑制する場合<xref:System.Windows.UIElement.MouseLeftButtonDown>、ハンドラーを添付するをお試しください<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>代わりにします。 この手法だけが、基本要素の入力イベントなど<xref:System.Windows.UIElement.MouseLeftButtonDown>します。 これらの入力イベントは、トンネル/バブルのペアを使用して、両方のイベントを発生させるし、イベント データを共有します。  
   
  これらの手法が、副作用または制限事項のいずれか。 プレビュー イベントの処理の副作用は、バブル イベントを処理するハンドラーが無効にイベントをその時点で処理をそのため、制限がある通常いない処理、Previ にまだ残っているイベントをマークすることをお勧め新しいルートの一部です。 制限、`handledEventsToo`手法は指定できません、`handledEventsToo`ハンドラー[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を属性としてする必要がありますに登録するイベント ハンドラーのコード ハンドラーがアタッチされる要素へのオブジェクト参照を取得した後。  
   

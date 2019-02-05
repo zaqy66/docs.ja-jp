@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: bd1a3b0b163d3ab0fcc7eb9616e88c11381ff189
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0abc7c8c1c4f93f6b12edc94c678aef6e6b72608
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552048"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739437"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してストアド プロシージャを呼び出す
 統合言語クエリ (LINQ) を簡単にデータベースなどに格納されているオブジェクトの手順も含め、データベースの情報にアクセスします。  
@@ -73,4 +73,4 @@ ms.locfileid: "54552048"
 - [クエリ](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
