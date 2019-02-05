@@ -1,17 +1,23 @@
 ---
-title: '型 - C# プログラミング ガイド'
+title: 型 - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739317"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 ## <a name="types-variables-and-values"></a>型、変数、および値  
@@ -82,8 +88,8 @@ CTS での値型と参照型
  組み込みの数値型は構造体であり、次のようにしてアクセスできるプロパティとメソッドを持ちます。  
   
 ```csharp  
-// Static method on type Byte.  
-byte b = Byte.MaxValue;  
+// Static method on type byte.  
+byte b = byte.MaxValue;
 ```  
   
  ただし、宣言とそこへの値の代入は、あたかも単純な非集約型であるかのように行うことができます。  
