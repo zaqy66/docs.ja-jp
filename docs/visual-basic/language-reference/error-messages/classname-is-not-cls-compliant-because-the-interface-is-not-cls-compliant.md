@@ -23,7 +23,7 @@ ms.locfileid: "55283479"
   
  要素に <xref:System.CLSCompliantAttribute> を適用しないと、その要素は非準拠と見なされます。  
   
- 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」をご覧ください。  
+ 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「[Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)」をご覧ください。  
   
  **エラー ID:** BC40029  
   
