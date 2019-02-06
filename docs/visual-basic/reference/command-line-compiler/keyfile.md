@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: b113c2b0311f1f108e36b7a81e60818fe1c2c3df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e90535739adb4f7f8a88f91e301c2db121241a7
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529078"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759341"
 ---
 # <a name="-keyfile"></a>-keyfile
 アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。  
@@ -27,7 +27,7 @@ ms.locfileid: "54529078"
  必須。 キーを含むファイルです。 ファイル名にスペースが含まれている場合は、名前を引用符で囲みます ("")。  
   
 ## <a name="remarks"></a>Remarks  
- コンパイラはアセンブリ マニフェストに公開キーを挿入し、秘密キーで最終アセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、[Sn.exe (厳密名ツール)] を参照してください。[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))。  
+ コンパイラはアセンブリ マニフェストに公開キーを挿入し、秘密キーで最終アセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
  使用してコンパイルする場合`-target:module`、キー ファイルの名前がモジュールに保持され、使用してアセンブリをコンパイルするときに作成されるアセンブリに組み込まれます[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)します。  
   

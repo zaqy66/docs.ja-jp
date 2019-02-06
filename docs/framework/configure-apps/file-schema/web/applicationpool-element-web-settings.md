@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: b1afd6227444828c58b6dbb44de24fe82af9f8b2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271981"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758275"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 要素 (Web 設定)
 ASP.NET アプリケーションが統合モードで実行されている場合に、プロセス全体の動作を管理する、ASP.NET で使用される構成設定を指定します[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  
@@ -61,7 +61,7 @@ ASP.NET アプリケーションが統合モードで実行されている場合
   
  `maxConcurrentRequestsPerCPU`設定、「5000」の既定の設定、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]が実際には、CPU あたり 5000 以上の要求がない限り、要求の調整をオフに効果的が ASP.NET によって制御されます。 既定の設定は、CPU あたりの同時実行を自動的に管理する CLR のスレッド プールに代わりに依存します。 非同期要求の処理の広範な使用を構成する、またはネットワーク I/O でブロックされている多くの実行時間の長い要求のアプリケーションにメリットが増加の既定の制限から、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]します。 設定`maxConcurrentRequestsPerCPU`ASP.NET 要求を処理するためのマネージ スレッドの使用を解除します。 0 にします。 アプリケーションを IIS アプリケーション プールで実行すると、IIS の I/O スレッドで常に要求とスレッドの IIS 設定によって同時実行を調整するためです。  
   
- `requestQueueLimit`設定と同じように機能、`requestQueueLimit`の属性、 [processModel](https://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)要素で、ASP.NET アプリケーションの Web.config ファイルで設定されます。 ただし、 `requestQueueLimit` aspnet.config ファイルの設定のオーバーライド、 `requestQueueLimit` Web.config ファイルで設定します。 つまり、両方の属性が設定されている場合 (既定では、これが true)、 `requestQueueLimit` aspnet.config ファイルで設定が優先されます。  
+ `requestQueueLimit`設定と同じように機能、`requestQueueLimit`の属性、 [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))要素で、ASP.NET アプリケーションの Web.config ファイルで設定されます。 ただし、 `requestQueueLimit` aspnet.config ファイルの設定のオーバーライド、 `requestQueueLimit` Web.config ファイルで設定します。 つまり、両方の属性が設定されている場合 (既定では、これが true)、 `requestQueueLimit` aspnet.config ファイルで設定が優先されます。  
   
 ## <a name="example"></a>例  
  次の例では、次の状況で aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。  

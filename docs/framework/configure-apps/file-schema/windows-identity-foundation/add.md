@@ -3,12 +3,12 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: cb88d2a37740cf439f4fd2aa0f7fe4c098da1cf2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269758"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759484"
 ---
 # <a name="add"></a>\<add>
 トークン ハンドラー コレクションには、指定したセキュリティ トークン ハンドラーを追加します。  
@@ -40,7 +40,7 @@ ms.locfileid: "55269758"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|追加するトークン ハンドラーの CLR 型名。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24)します。|  
+|型|追加するトークン ハンドラーの CLR 型名。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)します。|  
   
 ### <a name="child-elements"></a>子要素  
   

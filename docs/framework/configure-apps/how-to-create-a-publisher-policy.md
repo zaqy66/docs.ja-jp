@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083510"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758990"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成します。
 アセンブリの販売できる状態の監視アプリケーションがアップグレード済みのアセンブリに発行者ポリシー ファイルを含めることによって、新しいバージョンのアセンブリを使用する必要があります。 発行者ポリシー ファイルは、アセンブリのリダイレクトとコードの基本設定を指定し、アプリケーション構成ファイルと同じ形式を使用します。 発行者ポリシー ファイルがアセンブリにコンパイルし、グローバル アセンブリ キャッシュに配置します。  
@@ -103,8 +103,7 @@ ms.locfileid: "55083510"
 ## <a name="see-also"></a>関連項目
 - [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [アプリの構成](../../../docs/framework/configure-apps/index.md)
-- [.NET Framework アプリの構成](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [構成ファイルを使用してアプリを構成します。](../../../docs/framework/configure-apps/index.md)
 - [ランタイム設定スキーマ](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)
 - [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

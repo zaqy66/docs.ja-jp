@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 0fecc8e890f44512fe4ac2058f26fe54db7570a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 733013c8eca75bad0dc0bdf1d76f1468b1d903a8
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588614"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759393"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 DLL を作成するときに、既定のベース アドレスを指定します。  
@@ -48,4 +48,4 @@ DLL を作成するときに、既定のベース アドレスを指定します
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Sn.exe (厳密名ツール)][Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))

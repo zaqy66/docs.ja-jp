@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e263062d47708983e7771a8db63ba20d2193ece3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260035"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759645"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Windows Communication Foundation (WCF) での使用時に、プレーンテキストの XML、JavaScript Object Notation (JSON) メッセージ エンコード、および "無変換の" バイナリ コンテンツの読み取りおよび書き込みを有効にします。  
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
   
  `maxReadPoolSize` と `maxWritePoolSize` を使用して、割り当てられるリーダーとライターの最大数をそれぞれ設定することもできます。 既定では、64 のリーダーと 16 のライターが割り当てられています。  
   
- 既定の複雑さの制約を使用してを設定しても、 [ \<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)サービス拒否 (DOS) のクラスから保護するための要素がメッセージの複雑さを使用してエンドポイント処理を停滞させるを試行するを攻撃リソース。  
+ 既定の複雑さの制約を使用してを設定しても、 [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))サービス拒否 (DOS) のクラスから保護するための要素がメッセージの複雑さを使用してエンドポイント処理を停滞させるを試行するを攻撃リソース。  
   
 ## <a name="example"></a>例  
   

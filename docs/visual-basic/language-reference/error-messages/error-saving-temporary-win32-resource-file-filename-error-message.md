@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-ms.openlocfilehash: 3af4ff0ace8afcb2f576ec4fde022672def0b90b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: af41297fb3e512db579204d54d77133e85fd5758
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265091"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758249"
 ---
 # <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>一時 Win32 リソース ファイルを保存中にエラー '\<filename >':\<エラー メッセージ >
 Visual Basic コンパイラでは、マニフェストを持つアセンブリを生成するには、アセンブリ リンカー (Al.exe、Alink とも呼ばれます) を呼び出します。 リンカーが、インメモリ リソースの書き込み先となるファイルの名前の取得エラーを報告しています。  
@@ -27,5 +27,5 @@ Visual Basic コンパイラでは、マニフェストを持つアセンブリ�
   
 ## <a name="see-also"></a>関連項目
 
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)します。  
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [ご意見](/visualstudio/ide/talk-to-us)

@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193589"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758795"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) メソッド
 
@@ -25,7 +25,7 @@ ms.locfileid: "44193589"
 
 特定のストリームをランダム アクセス ストリームに変換します。
 
-**Namespace:** <xref:System.IO?displayProperty=nameWithType> 
+**名前空間:**<xref:System.IO?displayProperty=nameWithType>
 **アセンブリ:** System.Runtime.WindowsRuntime (system.runtime.windowsruntime.dll 内)
 
 ## <a name="syntax"></a>構文
@@ -72,9 +72,8 @@ A[!INCLUDE[wrt](../../../includes/wrt-md.md)]ランダム アクセス ストリ
 
 **Windows ストア アプリ用 .NET**
 
-Windows 8.1 でサポート
+サポートされています。Windows 8.1
 
 ## <a name="see-also"></a>関連項目
 
--[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
--[方法: .NET Framework ストリームと Windows ランタイム ストリーム間の変換](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
