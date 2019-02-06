@@ -1,5 +1,5 @@
 # [宣言された要素](index.md)
-## [Declared Element Names](declared-element-names.md)
+## [宣言された要素の名前](declared-element-names.md)
 ## [宣言された要素の特性](declared-element-characteristics.md)
 ### [有効期間](lifetime.md)
 ### [スコープ](scope.md)
