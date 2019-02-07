@@ -1,5 +1,5 @@
 ---
-title: '&lt;list&gt; - C# プログラミング ガイド'
+title: <list> - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: a636fd35355dfa7320c2ca961ddada233c574dbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a127509d603ada952b3d48d4bbc417db64f607ea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563159"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290174"
 ---
-# <a name="ltlistgt-c-programming-guide"></a><span data-ttu-id="a766b-102">&lt;list&gt; (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="a766b-102">&lt;list&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="a766b-103">構文</span><span class="sxs-lookup"><span data-stu-id="a766b-103">Syntax</span></span>  
+# <a name="list-c-programming-guide"></a><span data-ttu-id="96f62-102">\<list> (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="96f62-102">\<list> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="96f62-103">構文</span><span class="sxs-lookup"><span data-stu-id="96f62-103">Syntax</span></span>  
   
 ```xml  
 <list type="bullet" | "number" | "table">  
@@ -36,26 +36,26 @@ ms.locfileid: "54563159"
 </list>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a766b-104">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a766b-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="96f62-104">パラメーター</span><span class="sxs-lookup"><span data-stu-id="96f62-104">Parameters</span></span>  
  `term`  
- <span data-ttu-id="a766b-105">定義される用語であり、`description` で定義されます。</span><span class="sxs-lookup"><span data-stu-id="a766b-105">A term to define, which will be defined in `description`.</span></span>  
+ <span data-ttu-id="96f62-105">定義される用語であり、`description` で定義されます。</span><span class="sxs-lookup"><span data-stu-id="96f62-105">A term to define, which will be defined in `description`.</span></span>  
   
  `description`  
- <span data-ttu-id="a766b-106">行頭文字または番号付きリストの項目、または `term` の定義です。</span><span class="sxs-lookup"><span data-stu-id="a766b-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
+ <span data-ttu-id="96f62-106">行頭文字または番号付きリストの項目、または `term` の定義です。</span><span class="sxs-lookup"><span data-stu-id="96f62-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a766b-107">コメント</span><span class="sxs-lookup"><span data-stu-id="a766b-107">Remarks</span></span>  
- <span data-ttu-id="a766b-108">\< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。</span><span class="sxs-lookup"><span data-stu-id="a766b-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="a766b-109">テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a766b-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96f62-107">コメント</span><span class="sxs-lookup"><span data-stu-id="96f62-107">Remarks</span></span>  
+ <span data-ttu-id="96f62-108">\< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。</span><span class="sxs-lookup"><span data-stu-id="96f62-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="96f62-109">テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="96f62-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
   
- <span data-ttu-id="a766b-110">リスト内の各項目は、\<item> ブロックで指定されます。</span><span class="sxs-lookup"><span data-stu-id="a766b-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="a766b-111">定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a766b-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="a766b-112">ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。</span><span class="sxs-lookup"><span data-stu-id="a766b-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
+ <span data-ttu-id="96f62-110">リスト内の各項目は、\<item> ブロックで指定されます。</span><span class="sxs-lookup"><span data-stu-id="96f62-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="96f62-111">定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="96f62-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="96f62-112">ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。</span><span class="sxs-lookup"><span data-stu-id="96f62-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
   
- <span data-ttu-id="a766b-113">リストまたはテーブルでは、必要な数の \<item> ブロックを使用できます。</span><span class="sxs-lookup"><span data-stu-id="a766b-113">A list or table can have as many \<item> blocks as needed.</span></span>  
+ <span data-ttu-id="96f62-113">リストまたはテーブルでは、必要な数の \<item> ブロックを使用できます。</span><span class="sxs-lookup"><span data-stu-id="96f62-113">A list or table can have as many \<item> blocks as needed.</span></span>  
   
- <span data-ttu-id="a766b-114">コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="a766b-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="96f62-114">コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="96f62-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a766b-115">例</span><span class="sxs-lookup"><span data-stu-id="a766b-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="96f62-115">例</span><span class="sxs-lookup"><span data-stu-id="96f62-115">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="a766b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="a766b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96f62-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="96f62-116">See also</span></span>
 
-- [<span data-ttu-id="a766b-117">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="a766b-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="a766b-118">ドキュメント コメントとして推奨されるタグ</span><span class="sxs-lookup"><span data-stu-id="a766b-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="96f62-117">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="96f62-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="96f62-118">ドキュメント コメントとして推奨されるタグ</span><span class="sxs-lookup"><span data-stu-id="96f62-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
