@@ -1,5 +1,5 @@
 ---
-title: '&lt;seealso&gt; - C# プログラミング ガイド'
+title: <seealso> - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e75480db9aebdeb2199694168abf4f774773b9c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42cc976a160f1ff9ce08fc4ab71ed03984034850
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543553"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267608"
 ---
-# <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt; (C# プログラミング ガイド)
+# <a name="seealso-c-programming-guide"></a>\<seealso> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -29,7 +29,7 @@ ms.locfileid: "54543553"
   
 #### <a name="parameters"></a>パラメーター  
  cref = "`member`"  
- 現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。`member`  は二重引用符 (" ") で囲む必要があります。  
+ 現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。`member` は二重引用符 (" ") で囲む必要があります。  
   
  ジェネリック型への cref 参照を作成する方法については、「[\<see>](../../../csharp/programming-guide/xmldoc/see.md)」を参照してください。  
   

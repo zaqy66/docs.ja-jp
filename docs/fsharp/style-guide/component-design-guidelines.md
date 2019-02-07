@@ -3,10 +3,10 @@ title: F#コンポーネントのデザイン ガイドライン
 description: 他の呼び出し元で消費するための F# コンポーネントを記述するためのガイドラインについて説明します。
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066026"
 ---
 # <a name="f-component-design-guidelines"></a>F#コンポーネントのデザイン ガイドライン
@@ -74,7 +74,7 @@ type Point =
 |-----------|------|------|----------|-------|
 | 具象型 | PascalCase | 名詞または形容詞 | 一覧で、Double、複雑な | 具象型は、構造体、クラス、列挙、デリゲート、レコード、および共用体です。 型名が小文字従来 OCaml には、F# 型の .NET の名前付けスキームは採用します。
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使用しないでください。 必要に応じてときなど、内部プレフィックスを使用して、 `チームの入力 TAlpha を = | TBeta | TDelta` |
+| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使用しないでください。 必要に応じてときなど、内部プレフィックスを使用します。 `type Teams = TAlpha | TBeta | TDelta.` |
 | event          | PascalCase | 動詞 | ValueChanged/ValueChanging |  |
 | 例外     | PascalCase |      | WebException | 名前は、"Exception"で終わる必要があります。 |
 | フィールド          | PascalCase | 名詞 | CurrentName  | |
