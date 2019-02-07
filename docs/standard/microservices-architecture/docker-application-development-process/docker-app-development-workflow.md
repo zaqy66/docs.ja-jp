@@ -3,13 +3,13 @@ title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/27/2018
-ms.openlocfilehash: 52053f270067ba0cc3ab8535560ec8145eda0758
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.date: 01/07/2019
+ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084980"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480102"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -97,14 +97,14 @@ Visual Studio と Docker 用のツールでは、このタスクはマウスを�
 
 通常、[Docker Hub](https://hub.docker.com/) レジストリなどの公式のリポジトリから取得する基本イメージ上に、コンテナーのカスタム イメージをビルドします。 Visual Studio で Docker のサポートを有効にした場合、背後ではこれがまさに発生します。 Dockerfile では、既存の `aspnetcore` イメージを使用します。
 
-選択した OS とフレームワークによって、使用できる Docker イメージとリポジトリについては、既に説明しています。 たとえば、ASP.NET Core (Linux または Windows) を使用したい場合は、`microsoft/dotnet:2.1-aspnetcore-runtime` のイメージを使用します。 この場合は、コンテナーに使用する基本の Docker イメージのみを指定する必要があります。 これは、`FROM microsoft/dotnet:2.1-aspnetcore-runtime` を Dockerfile に追加することで行います。 これは、Visual Studio が自動的に実行しますが、バージョンを更新する場合は、この値を更新する必要があります。
+選択した OS とフレームワークによって、使用できる Docker イメージとリポジトリについては、既に説明しています。 たとえば、ASP.NET Core (Linux または Windows) を使用したい場合は、`microsoft/dotnet:2.2-aspnetcore-runtime` のイメージを使用します。 この場合は、コンテナーに使用する基本の Docker イメージのみを指定する必要があります。 これは、`FROM microsoft/dotnet:2.2-aspnetcore-runtime` を Dockerfile に追加することで行います。 これは、Visual Studio が自動的に実行しますが、バージョンを更新する場合は、この値を更新する必要があります。
 
 バージョン番号を使用して Docker Hub の公式の .NET イメージ リポジトリを使うと、同じ言語機能が (開発、テスト、および実稼働環境などの) すべてのコンピューターで使用できるようになります。
 
 次の例では、ASP.NET Core コンテナー用のサンプルの Dockerfile を示しています。
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-この場合、イメージは、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 2.1 に基づいています。 この設定は、`FROM microsoft/dotnet:2.1-aspnetcore-runtime` です。 (この基本イメージの詳細については、「[ASP.NET Core Docker Image](https://hub.docker.com/r/microsoft/aspnetcore/)」 (ASP.NET Core Docker イメージ) ページと「[.NET Core Docker Image](https://hub.docker.com/r/microsoft/dotnet/)」 (.NET Core Docker イメージ) ページを参照してください)。Dockerfile では、実行時に使用する、リッスンする TCP ポートを、Docker に指示する必要があります (ここでは、EXPOSE 設定で構成したポート 80)。
+この場合、イメージは、公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチアーキテクチャ) のバージョン 2.2 に基づいています。 この設定は、`FROM microsoft/dotnet:2.2-aspnetcore-runtime` です。 (この基本イメージの詳細については、「[.NET Core Docker Image](https://hub.docker.com/r/microsoft/dotnet/)」 (.NET Core Docker イメージ) ページを参照してください)。Dockerfile では、実行時に使用する、リッスンする TCP ポートを、Docker に指示する必要があります (ここでは、EXPOSE 設定で構成したポート 80)。
 
 使用している言語とフレームワークによっては、Dockerfile に別の構成設定を指定できます。 たとえば、`["dotnet", "MySingleContainerWebApp.dll"]` の ENTRYPOINT 行では、.NET Core アプリケーションを実行するように Docker に指示します。 SDK と .NET Core CLI (dotnet CLI) を使用して、.NET アプリケーションをビルドおよび実行している場合、この設定は異なります。 つまり、アプリケーションに選択した言語とプラットフォームにより、ENTRYPOINT 行とその他の設定は別になります。
 
@@ -132,20 +132,20 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="using-multi-arch-image-repositories"></a>マルチアーキテクチャ イメージ リポジトリの使用
 
-単一のリポジトリには、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) リポジトリでは、同じリポジトリ名を使用して Linux および Windows Nano Server をサポートしています。
+単一のリポジトリには、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能では、Microsoft (基本イメージの作成者) などのベンダーが、複数のプラットフォーム (つまり、Linux および Windows) に対応できるリポジトリを 1 つ作成できます。 たとえば、Docker Hub レジストリにある [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) リポジトリでは、同じリポジトリ名を使用して Linux および Windows Nano Server をサポートしています。
 
 タグを指定する場合、次の場合のように、明示的にプラットフォームを指定できます。
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-stretch-slim` \
-  ターゲット: Linux の .NET Core 2.1 ランタイムのみ
+- `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
+  ターゲット: Linux の .NET Core 2.2 ランタイムのみ
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1709` \
-  ターゲット: Windows Nano Server の .NET Core 2.1 ランタイムのみ
+- `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
+  ターゲット: Windows Nano Server の .NET Core 2.2 ランタイムのみ
 
 しかし、同じイメージ名を指定した場合、タグが同じでも、次の例に示すように、マルチアーキテクチャ イメージ (`aspnetcore` イメージなど) では、展開する Docker ホスト OS に応じて、Linux または Windows バージョンが使用されます。
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime` \
-  マルチアーキテクチャ: Docker ホスト OS に応じて、Linux または Windows Nano Server の .NET Core 2.1 ランタイムのみ
+- `microsoft/dotnet:2.2-aspnetcore-runtime` \
+  マルチアーキテクチャ: Docker ホスト OS に応じて、Linux または Windows Nano Server の .NET Core 2.2 ランタイムのみ
 
 この場合、Windows ホストからイメージをプルした場合、Windows バリアントがプルされ、同じイメージ名が Linux ホストからプルされた場合、Linux バリアントがプルされます。
 
@@ -174,11 +174,11 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 初期の Dockerfile は、次のようになります。
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS build
+ 5  FROM microsoft/dotnet:2.2-sdk AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -266,11 +266,11 @@ RUN dotnet restore
 結果のファイルは次のようになります。
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS publish
+ 5  FROM microsoft/dotnet:2.2-sdk AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

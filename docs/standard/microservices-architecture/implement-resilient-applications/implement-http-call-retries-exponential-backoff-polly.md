@@ -3,13 +3,13 @@ title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を�
 description: HTTP エラーを Polly と HttpClientFactory で処理する方法について説明します
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362757"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479647"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
@@ -21,9 +21,9 @@ Polly とは、回復機能と一時的な障害処理の機能を提供する .
 
 次の手順では、前のセクションで説明した、HttpClientFactory に統合された Polly で HTTP 再試行を使用する方法を示します。
 
-**ASP.NET Core 2.1 パッケージを参照する**
+**ASP.NET Core 2.2 パッケージを参照する**
 
-プロジェクトで NuGet からの ASP.NET Core 2.1 を使用する必要がある場合、 通常、`AspNetCore` メタパッケージと拡張パッケージ `Microsoft.Extensions.Http.Polly` が必要になります。
+`HttpClientFactory` は .NET Core 2.1 以降で使用できますが、最新の ASP.NET Core 2.2 パッケージを NuGet から入手し、プロジェクトで使用することをお勧めします。 通常、`AspNetCore` メタパッケージと拡張パッケージ `Microsoft.Extensions.Http.Polly` が必要になります。
 
 **Startup で、Polly の再試行ポリシーでクライアントを構成する**
 

@@ -3,13 +3,13 @@ title: 正常性の監視
 description: 正常性の監視を実施する 1 つの方法を探ります。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 666b55608ca4e5d18448e1a0b4a1735f3e856474
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: 4ad13fa4596cc852317a367852b76a9f769caf78
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362484"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259359"
 ---
 # <a name="health-monitoring"></a>正常性の監視
 
@@ -21,133 +21,183 @@ ms.locfileid: "54362484"
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>ASP.NET Core サービスでの正常性チェックを実装する
 
-ASP.NET Core マイクロサービスまたは Web アプリケーションを開発する場合、ASP.NET チームの *Health Checks* という名前の実験的な帯域外ライブラリ (ASP.NETCore に正式には含まれておらず、現在は非推奨です) を使用することができます。 これは、こちらの [dotnet-architecture GitHub リポジトリ](https://github.com/dotnet-architecture/HealthChecks)で入手できます。 ただし、公式バージョンの *Health Checks* は [ASP.NET Core 2.2 でリリースされる予定](https://github.com/aspnet/Announcements/issues/307)です (2018 年末までに正式にリリースされる見込みです)。
+ASP.NET Core のマイクロサービスまたは Web アプリケーションを開発するとき、ASP .NET Core 2.2 でリリースされた組み込みの正常性チェック機能を使用できます。 多くの ASP.NET Core 機能と同様に、正常性チェックには一連のサービスとミドルウェアが伴います。
 
-このライブラリは使いやすく、アプリケーションに必要な特定の外部リソース (SQL Server データベースやリモート API など) が正しく動作していることを検証できる機能を提供します。 このライブラリを使用すれば、リソースが正常であるかどうかを判断することもできます。これについては後で説明します。
+正常性チェックのサービスとミドルウェアは使いやすく、アプリケーションに必要な外部リソースがあれば (SQL Server データベースやリモート API など)、それが正しく動作していることを検証できる機能を提供します。 この機能を使用すれば、リソースが正常であるかどうかを判断することもできます。これについては後で説明します。
 
-このライブラリを使用するには、まず、マイクロサービスでライブラリを使用する必要があります。 次に、正常性レポートのクエリを実行するフロント エンド アプリケーションが必要になります。 このフロント エンド アプリケーションはカスタム レポート アプリケーションである場合があります。また、正常性状態に応じて対応できるオーケストレーター自体である場合もあります。
+この機能を効果的に使用するには、まず、マイクロサービスでサービスを構成する必要があります。 次に、正常性レポートのクエリを実行するフロント エンド アプリケーションが必要になります。 このフロント エンド アプリケーションはカスタム レポート アプリケーションである場合があります。また、正常性状態に応じて対応できるオーケストレーター自体である場合もあります。
 
-### <a name="use-the-healthchecks-library-in-your-back-end-aspnet-microservices"></a>バック エンド ASP.NET マイクロサービス内で HealthChecks ライブラリを使用する
+### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>バック エンド ASP.NET マイクロサービス内で HealthChecks 機能を使用する
 
-EShopOnContainers サンプル アプリケーションでの HealthChecks ライブラリの使用方法を確認することができます。 開始するには、各マイクロサービスの正常性状態の構成要素を定義する必要があります。 サンプル アプリケーションでは、マイクロサービス API が HTTP 経由でアクセス可能である場合と、それに関連する SQL Server データベースも使用可能である場合、マイクロサービスは正常な状態です。
+このセクションでは、サンプルの ASP.NET Core 2.2 Web API アプリケーションで HealthChecks 機能を使用する方法について説明します。 eShopOnContainers のような大規模のマイクロサービスでこの機能を実装する方法については、後のセクションで説明します。 開始するには、各マイクロサービスの正常性状態の構成要素を定義する必要があります。 サンプル アプリケーションでは、マイクロサービス API に HTTP 経由でアクセスできて、それに関連する SQL Server データベースも使用可能であれば、マイクロサービスは正常な状態です。
 
-将来的には、HealthChecks ライブラリを NuGet パッケージとしてインストールできるようになります。 ただし、このドキュメントの作成時点では、ソリューションの一部として、コードをダウンロードしてコンパイルする必要があります。 [https://github.com/dotnet-architecture/HealthChecks](<https://github.com/dotnet-architecture/HealthChecks>) にあるコードを複製し、次のフォルダーをソリューションにコピーします。
+.NET Core 2.2 では、組み込み API を使用することで、次のようにサービスを構成し、マイクロサービスとその依存 SQL Server データベースのための正常性チェックを追加できます。
 
-- src/common
-- src/Microsoft.AspNetCore.HealthChecks
-- src/Microsoft.Extensions.HealthChecks
-- src/Microsoft.Extensions.HealthChecks.SqlServer
+```csharp
+// Startup.cs from .NET Core 2.2 Web Api sample
+//
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    // Registers required services for health checks
+    services.AddHealthChecks()
+    // Add a health check for a SQL database
+    .AddCheck("MyDatabase", new SqlConnectionHealthCheck(Configuration["ConnectionStrings:DefaultConnection"]));
+}
+```
 
-Azure の場合 (Microsoft.Extensions.HealthChecks.AzureStorage) のように追加チェックを使用することもできますが、このバージョンの eShopOnContainers には Azure に対する依存関係がないため、必要ありません。 EShopOnContainers は ASP.NET Core に基づいているため、ASP.NET の正常性チェックは必要ありません。
+前のコードでは、`services.AddHealthChecks()` メソッドによって、ステータス コード **200** と "正常" を返す基本的な HTTP チェックが構成されます。  さらに、`AddCheck()` 拡張メソッドによって、関連 SQL Database の正常性をチェックするカスタム `SqlConnectionHealthCheck` が構成されます。
 
-図 8-7 には、マイクロサービスで構成要素として使用する準備ができている、Visual Studio の HealthChecks ライブラリが示されています。
+`AddCheck()` メソッドによって、指定の名前と型 `IHealthCheck` の実装を利用して新しい正常性チェックが追加されます。 AddCheck メソッドを利用して複数の正常性チェックを追加できます。そのため、そのチェックがすべて正常となるまで、"正常" ステータスはマイクロサービスから出されません。
 
-![3 つのプロジェクトが表示された HealthChecks フォルダーのソリューション エクスプローラー ビュー。](./media/image6.png)
+`SqlConnectionHealthCheck` は `IHealthCheck` を実装するカスタム クラスです。これはコンストラクター パラメーターとして接続文字列を受け取り、簡単なクエリを実行し、SQL データベースに正常に接続できたかどうかを確認します。 クエリが正常に実行された場合、`HealthCheckResult.Healthy()` が返され、失敗した場合、`FailureStatus` と実際の例外が返されます。
 
-**図 8-7** Visual Studio ソリューションの ASP.NET Core HealthChecks ライブラリ ソース コード
+```csharp
+// Sample SQL Connection Health Check
+public class SqlConnectionHealthCheck : IHealthCheck
+{
+    private static readonly string DefaultTestQuery = "Select 1";
 
-前述のとおり、各マイクロサービス プロジェクトでまず行うことは、3 つの HealthChecks ライブラリへの参照を追加することです。 その後、そのマイクロサービスで実行する正常性チェックのアクションを追加します。 これらのアクションは基本的に他のマイクロサービス (HttpUrlCheck) またはデータベース (現時点では SQL Server データベースの SqlCheck\*) に依存します。 各 ASP.NET マイクロサービスまたは ASP.NET Web アプリケーションのスタートアップ クラス内でアクションを追加します。
+    public string ConnectionString { get; }
 
-各サービスまたは Web アプリケーションは、すべての HTTP またはデータベースの依存関係を 1 つの AddHealthCheck メソッドとして追加することで構成する必要があります。 たとえば、eShopOnContainers の MVC Web アプリケーションは多くのサービスに依存するため、正常性チェックにはいくつかの AddCheck メソッドが追加されています。
+    public string TestQuery { get; }
 
-たとえば、次の (単純化された) コードでは、カタログ マイクロサービスが SQL Server データベースに対する依存関係をどのように追加するかを確認できます。
+    public SqlConnectionHealthCheck(string connectionString)
+        : this(connectionString, testQuery: DefaultTestQuery)
+    {
+    }
+
+    public SqlConnectionHealthCheck(string connectionString, string testQuery)
+    {
+        ConnectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+        TestQuery = testQuery;
+    }
+
+    public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default(CancellationToken))
+    {
+        using (var connection = new SqlConnection(ConnectionString))
+        {
+            try
+            {
+                await connection.OpenAsync(cancellationToken);
+
+                if (TestQuery != null)
+                {
+                    var command = connection.CreateCommand();
+                    command.CommandText = TestQuery;
+
+                    await command.ExecuteNonQueryAsync(cancellationToken);
+                }
+            }
+            catch (DbException ex)
+            {
+                return new HealthCheckResult(status: context.Registration.FailureStatus, exception: ex);
+            }
+        }
+
+        return HealthCheckResult.Healthy();
+    }
+}
+```
+
+前のコードでは、データベースの正常性確認に使用されたクエリが `Select 1` であることにご留意ください。 マイクロサービスの可用性を監視するために、Kubernetes、Service Fabric などのオーケストレーターではマイクロサービスのテスト要求を送信して、定期的に正常性チェックを実行します。 そのような操作が速く行われ、リソースの利用率が上がることがないように、データベース クエリを効率的にすることが重要です。
+
+最後に、URL パス "/hc" に応答するミドルウェアを作成します。
+
+```csharp
+// Startup.cs from .NET Core 2.2 Web Api sample
+//
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    //…
+    app.UseHealthChecks("/hc");
+    //…
+} 
+```
+
+エンドポイント `<yourmicroservice>/hc` が呼び出されると、スタートアップ クラスの `AddHealthChecks()` メソッドで構成されているすべての正常性チェックがすべて実行され、結果が表示されます。
+
+### <a name="healthchecks-implementation-in-eshoponcontainers"></a>eShopOnContainers の HealthChecks 実装
+
+eShopOnContainers のマイクロサービスは、そのタスクを実行するために複数のサービスに依存しています。 たとえば、eShopOnContainers の `Catalog.API` マイクロサービスは、Azure Blob Storage、SQL Server、RabbitMQ など、さまざまなサービスに依存しています。 そのため、`AddCheck()` メソッドを使用していくつかの正常性チェックが追加されています。 あらゆる従属サービスに対して、それぞれの正常性状態を定義するカスタム `IHealthCheck` 実装を追加する必要があります。
+
+オープンソース プロジェクト [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) により、.NET Core 2.2 の上に構築されるそれぞれのエンタープライズ サービスにカスタム正常性チェック実装が提供され、この問題が解決されます。 各正常性チェックは、プロジェクトに簡単に追加できる個別の NuGet パッケージとして利用できます。 eShopOnContainers では、そのすべてのマイクロサービスで NuGet パッケージが広範囲に使用されます。
+
+たとえば、`Catalog.API` マイクロ サービスでは、次の NuGet パッケージが追加されています。
+
+![AspNetCore.Diagnostics.HealthChecks NuGet パッケージが参照される Catalog.API プロジェクトのソリューション エクスプローラー ビュー](./media/image6.png)
+
+**図 8-7** AspNetCore.Diagnostics.HealthChecks を使用して Catalog.API に実装されたカスタム正常性チェック
+
+次のコードでは、従属サービスごとに正常性チェック実装が追加され、それからミドルウェアが構成されます。
 
 ```csharp
 // Startup.cs from Catalog.api microservice
 //
-public class Startup
+public static IServiceCollection AddCustomHealthCheck(this IServiceCollection services, IConfiguration configuration)
 {
-    public void ConfigureServices(IServiceCollection services)
+    var accountName = configuration.GetValue<string>("AzureStorageAccountName");
+    var accountKey = configuration.GetValue<string>("AzureStorageAccountKey");
+
+    var hcBuilder = services.AddHealthChecks();
+
+    hcBuilder
+        .AddSqlServer(
+            configuration["ConnectionString"],
+            name: "CatalogDB-check",
+            tags: new string[] { "catalogdb" });
+
+    if (!string.IsNullOrEmpty(accountName) && !string.IsNullOrEmpty(accountKey))
     {
-        // Add framework services
-        services.AddHealthChecks(checks =>
-        {
-            checks.AddSqlCheck("CatalogDb", Configuration["ConnectionString"]);
-        });
-        // Other services
+        hcBuilder
+            .AddAzureBlobStorage(
+                $"DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey};EndpointSuffix=core.windows.net",
+                name: "catalog-storage-check",
+                tags: new string[] { "catalogstorage" });
     }
+    if (configuration.GetValue<bool>("AzureServiceBusEnabled"))
+    {
+        hcBuilder
+            .AddAzureServiceBusTopic(
+                configuration["EventBusConnection"],
+                topicName: "eshop_event_bus",
+                name: "catalog-servicebus-check",
+                tags: new string[] { "servicebus" });
+    }
+    else
+    {
+        hcBuilder
+            .AddRabbitMQ(
+                $"amqp://{configuration["EventBusConnection"]}",
+                name: "catalog-rabbitmqbus-check",
+                tags: new string[] { "rabbitmqbus" });
+    }
+
+    return services;
 }
 ```
 
-ただし、eShopOnContainers の MVC Web アプリケーションには、残りのマイクロサービスに対する複数の依存関係があります。 そのため、次の (単純化された) 例に示すように、マイクロサービスごとに 1 つの AddUrlCheck メソッドが呼び出されます。
+最後に、"/hc" エンドポイントをリッスンする HealthCheck ミドルウェアを追加します。
 
 ```csharp
-// Startup.cs from the MVC web app
-public class Startup
+// HealthCheck middleware
+app.UseHealthChecks("/hc", new HealthCheckOptions()
 {
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddMvc();
-        services.Configure<AppSettings>(Configuration);
-        services.AddHealthChecks(checks =>
-        {
-            checks.AddUrlCheck(Configuration["CatalogUrl"]);
-            checks.AddUrlCheck(Configuration["OrderingUrl"]);
-            checks.AddUrlCheck(Configuration["BasketUrl"]);
-            checks.AddUrlCheck(Configuration["IdentityUrl"]);
-        });
-    }
-}
-```
-
-したがって、そのすべてのチェックでも正常であると判断されるまで、マイクロサービスでは "正常" 状態と示されません。
-
-マイクロサービスにサービスまたは SQL Server に対する依存関係がない場合は、Healthy("Ok") チェックを追加するだけ済みます。 次のコードは eShopOnContainers `basket.api` マイクロサービスのものです (バスケット マイクロサービスでは Redis Cache を使用しますが、ライブラリにはまだ Redis 正常性チェック プロバイダーは含まれていません)。
-
-```csharp
-services.AddHealthChecks(checks =>
-{
-    checks.AddValueTaskCheck("HTTP Endpoint", () => new
-        ValueTask<IHealthCheckResult>(HealthCheckResult.Healthy("Ok")));
+    Predicate = _ => true,
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-```
-
-サービスまたは Web アプリケーションで正常性チェック エンドポイントを公開するには、`UseHealthChecks([*url_for_health_checks*])` 拡張メソッドを有効にする必要があります。 このメソッドは、次の簡略化されたコードに示すように、ASP.NET Core サービスまたは Web アプリケーションの `Program` クラスのメイン メソッドの `WebHostBuilder` レベルで <xref:Microsoft.AspNetCore.WebHost.CreateDefaultBuilder> の直後に配置されます。
-
-```csharp
-namespace Microsoft.eShopOnContainers.WebMVC
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var host = WebHost.CreateDefaultBuilder(args)
-                .UseHealthChecks("/hc")
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .Build();
-
-            host.Run();
-        }
-    }
 }
-```
-
-プロセスのしくみは次のとおりです。まず、各マイクロサービスがエンドポイント /hc を公開します。 そのエンドポイントは、HealthChecks ライブラリの ASP.NET Core ミドルウェアによって作成されます。 そのエンドポイントが呼び出されたときに、スタートアップ クラスの AddHealthChecks メソッドで構成されているすべての正常性チェックが実行されます。
-
-UseHealthChecks メソッドにはポートまたはパスが必要です。 そのポートまたはパスはエンドポイントであり、サービスの正常性状態を確認するために使用します。 たとえば、カタログ マイクロサービスではパス /hc を使用します。
-
-### <a name="cache-health-check-responses"></a>正常性チェック応答をキャッシュする
-
-サービスでサービス拒否攻撃 (DoS) が発生しないようにする場合や、リソースを頻繁に確認しすぎてサービスのパフォーマンスが影響を受けることのないようにするだけの場合は、戻り値をキャッシュし、各正常性チェックのキャッシュ期間を構成することができます。
-
-既定では、キャッシュ期間は内部的に 5 分に設定されますが、次のコードのように、各正常性チェックでそのキャッシュ期間を変更することができます。
-
-```csharp
-checks.AddUrlCheck(Configuration["CatalogUrl"],1); // 1 min as cache duration
 ```
 
 ### <a name="query-your-microservices-to-report-about-their-health-status"></a>マイクロサービスでクエリを実行してその正常性状態についてレポートする
 
-この記事の説明に従って正常性チェックを構成し、マイクロサービスを Docker で実行した後、正常かどうかをブラウザーから直接確認することができます。
-
-図 8-8 に示すように、Docker ホスト内でコンテナー ポートを公開し、外部の Docker ホスト IP または `localhost` を介してコンテナーにアクセスできるようにする必要があります。
+この記事の説明に従って正常性チェックを構成し、マイクロサービスを Docker で実行した後、正常かどうかをブラウザーから直接確認することができます。 図 8-8 に示すように、Docker ホスト内でコンテナー ポートを公開し、外部の Docker ホスト IP または `localhost` を介してコンテナーにアクセスできるようにする必要があります。
 
 ![正常性チェックから返された JSON 応答のブラウザー ビュー](./media/image7.png)
 
 **図 8-8** ブラウザーからの単一サービスの正常性状態の確認
 
-このテストでは、catalog.api マイクロサービス (ポート 5101 で実行されている) が正常であり、JSON で HTTP ステータス 200 とステータス情報が返されていることがわかります。 これは、内部的にサービスが SQL Server データベースの依存関係の正常性も確認し、その正常性チェック自体が正常とレポートされたことも意味します。
+このテストでは、`Catalog.API` マイクロサービス (ポート 5101 で実行されている) が正常であり、JSON で HTTP ステータス 200 とステータス情報が返されていることがわかります。 サービスによってその SQL Server データベースの依存関係と RabbitMQ の正常性も確認されました。つまり、その正常性チェック自体が正常とレポートされました。
 
 ## <a name="use-watchdogs"></a>ウォッチドッグを使用する
 
@@ -155,13 +205,53 @@ checks.AddUrlCheck(Configuration["CatalogUrl"],1); // 1 min as cache duration
 
 eShopOnContainers サンプルには、図 8-9 に示すように、サンプルの正常性チェック レポートを表示する Web ページが含まれています。 これは、eShopOnContainers でマイクロサービスと Web アプリケーションの状態を表示するだけなので、使用可能な最も単純なウォッチドッグです。 通常、ウォッチドッグは異常状態の検出時にもアクションを実行します。
 
-![eShopOnContainers の 5 つのマイクロサービスの正常性状態が表示された WebStatus アプリのブラウザー ビュー。](./media/image8.png)
+幸い、[AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) からは [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) NuGet パッケージも提供されます。このパッケージを利用し、構成された URI から正常性チェックの結果を表示できます。
+
+![eShopOnContainers のすべてのマイクロサービスの正常性状態が表示された WebStatus アプリのブラウザー ビュー](./media/image8.png)
 
 **図 8-9** eShopOnContainers のサンプルの正常性チェック レポート
 
-つまり、ASP.NET Core HealthChecks ライブラリの ASP.NET ミドルウェアでは、マイクロサービスごとに 1 つの正常性チェック エンドポイントを提供します。 これにより、定義されているすべての正常性チェックが実行され、これらすべてのチェックに応じて、全体的な正常性状態が返されます。
+まとめると、このウォッチドッグ サービスは各マイクロサービスの "/hc" エンドポイントをクエリします。 これにより、定義されているすべての正常性チェックが実行され、これらすべてのチェックに応じて、全体的な正常性状態が返されます。 HealthChecksUI は、ウォッチドッグ サービスの Startup.cs に追加する必要があるいくつかの構成エントリと 2 つのコード行と共に簡単に使用できます。
 
-HealthChecks ライブラリは、今後の外部リソースの新しい正常性チェックにより拡張可能です。 たとえば、今後、ライブラリに Redis Cache や他のデータベースの正常性チェックが含まれることが予想されます。 ライブラリでは複数のサービスまたはアプリケーションの依存関係での正常性レポートが可能であるため、これらの正常性チェックに基づいてアクションを実行できます。
+正常性チェック UI のサンプル構成ファイル:
+
+```json
+// Configuration
+{
+  "HealthChecks-UI": {
+    "HealthChecks": [
+      {
+        "Name": "Ordering HTTP Check",
+        "Uri": "http://localhost:5102/hc"
+      },
+      {
+        "Name": "Ordering HTTP Background Check",
+        "Uri": "http://localhost:5111/hc"
+      },
+      //...
+    ]}
+}
+```
+
+HealthChecksUI を追加する Startup.cs ファイル:
+
+```csharp
+// Startup.cs from WebStatus(Watch Dog) service
+//
+public void ConfigureServices(IServiceCollection services)
+{
+    //…
+    // Registers required services for health checks
+    services.AddHealthChecksUI();
+}
+//…
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    //…
+    app.UseHealthChecksUI(config=> config.UIPath = “/hc-ui”);
+    //…
+}
+```
 
 ## <a name="health-checks-when-using-orchestrators"></a>オーケストレーターを使用する場合の正常性チェック
 
@@ -179,23 +269,23 @@ Azure Service Fabric には、単純な正常性チェックよりも高度な�
 
 監視の最後の部分は、イベント ストリームの視覚化、サービス パフォーマンスのレポート、および問題の検出時のアラートです。 監視のこの部分ではさまざまなソリューションを使用できます。
 
-[ASP.NET Core HealthChecks](https://github.com/dotnet-architecture/HealthChecks) の説明の際に示したカスタム ページのように、サービスの状態を示す単純なカスタム アプリケーションを使用できます。 また、Azure Application Insights などのより高度なツールを使用して、イベントのストリームに基づき、アラートを生成することができます。
+[AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) の説明の際に示したカスタム ページのように、サービスの状態を示す単純なカスタム アプリケーションを使用できます。 また、Azure Application Insights などのより高度なツールを使用して、イベントのストリームに基づき、アラートを生成することができます。
 
 最後に、すべてのイベント ストリームを格納していた場合、Microsoft Power BI、または Kibana や Splunk などの他のソリューションを使用して、データを視覚化することができます。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **ASP.NET Core HealthChecks** (早期リリース)\
-  [*https://github.com/dotnet-architecture/HealthChecks/*](https://github.com/dotnet-architecture/HealthChecks/)
+-   **ASP.NET Core の HealthChecks と HealthChecks UI**
+    [*https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks*](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
 
-- **Service Fabric 正常性監視の概要**\
-  [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)
+-   **Service Fabric 正常性監視の概要**
+    [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Application Insights**\
-  [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
+-   **Azure Application Insights**
+    [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
-- **Microsoft Operations Management Suite**\
-  [*https://www.microsoft.com/cloud-platform/operations-management-suite*](https://www.microsoft.com/cloud-platform/operations-management-suite)
+-   **Microsoft Operations Management Suite**
+    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
 >[前へ](implement-circuit-breaker-pattern.md)

@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492834"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285026"
 ---
 # <a name="async-in-depth"></a>非同期の詳細
 
 I/O および CPU バインドの非同期コードは、.NET のタスクベース非同期モデルを使用して簡単に記述できます。 C# と Visual Basic では、このモデルは `Task` および `Task<T>` 型と、`async` および `await` キーワードによって公開されます (言語固有のリソースについては、「[関連項目](#see-also)」セクションを参照してください)。この記事では、.NET 非同期を使用する方法について説明し、背後で使用される非同期フレームワークを把握するための情報を示します。
 
-## <a name="task-and-tasklttgt"></a>Task と Task&lt;T&gt;
+## <a name="task-and-taskt"></a>Task と Task\<T>
 
 Task は、[Promise Model of Concurrency](https://en.wikipedia.org/wiki/Futures_and_promises) (並行性の Promise 型モデル) として知られるモデルを実装するために使用される構成体です。  つまり、今後のある時点で作業が完了することを "約束" し、クリーン API を使用した約束の調整を可能にします。
 
@@ -114,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 さらに、UI スレッドへの作業の処理依頼 (UI の更新など) は、`async` メソッドを使用すればとても簡単で、余分な作業 (スレッドセーフ デリゲートの呼び出しなど) は必要ありません。
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>CPU バインド操作の Task と Task&lt;T&gt; の詳細
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>CPU バインド操作の Task と Task\<T> の詳細
 
 CPU バインドの `async` コードは、I/O バインドの `async` コードとは少し異なります。  作業は CPU で実行されるため、スレッドを計算専用にすることを避ける方法はありません。  `async` と `await` を使用すると、バックグラウンドのスレッドをクリーンな方法で使用でき、非同期メソッドの呼び出し元の応答性を維持できます。  これにより共有データに対する保護は提供されないことに注意してください。  共有データを使用している場合は、適切な同期戦略を適用する必要があります。
 

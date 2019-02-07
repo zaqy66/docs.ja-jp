@@ -3,13 +3,13 @@ title: .NET コンテナーで対象とする OS
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | .NET コンテナーで対象とする OS'
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147201"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479868"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET コンテナーで対象とする OS
 
@@ -38,21 +38,21 @@ Dockerfile ファイルにイメージ名を追加すると、次の例のよう
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.1-runtime</td>
-<td>.NET Core 2.1 マルチアーキテクチャ: Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</td>
+<td>microsoft/dotnet:2.2-runtime</td>
+<td>.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
-<td><p>ASP.NET Core 2.1 マルチアーキテクチャ: Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</p>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td><p>ASP.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</p>
 <p>aspnetcore イメージでは、ASP.NET Core 用に 少しの最適化が行われています。</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
-<td>Linux Alpine ディストリビューションでの .NET Core 2.1 ランタイムのみ</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>Linux Alpine ディストリビューションでの .NET Core 2.2 ランタイムのみ</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
-<td>Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.1 ランタイムのみ</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.2 ランタイムのみ</td>
 </tr>
 </tbody>
 </table>

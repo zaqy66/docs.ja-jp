@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240386"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261621"
 ---
 # <a name="structs-c-programming-guide"></a>構造体 (C# プログラミング ガイド)
 
@@ -28,8 +28,8 @@ ms.locfileid: "53240386"
 - クラスとは異なり、構造体は `new` 演算子を使用せずにインスタンス化できます。  
 - 構造体は、パラメーターのあるコンストラクターを宣言できます。 
 - 構造体は、他の構造体やクラスから継承できず、基本クラスになることはできません。 すべての構造体が <xref:System.ValueType> を直接継承し、System.ValueType は <xref:System.Object> を継承します。  
-- 構造体は、インターフェイスを実装できます。  
-- 構造体は、null 許容型として使うことができ、null 値を割り当てることができます。  
+- 構造体は、インターフェイスを実装できます。 
+- 構造体は `null` にすることができません。変数が null 許容型として宣言されない限り、構造体変数に `null` を割り当てることはできません。
   
 ## <a name="related-sections"></a>関連項目  
 

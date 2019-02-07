@@ -1,33 +1,33 @@
 ---
-title: SourceLink と .NET ライブラリ
-description: SourceLink を使用して .NET ライブラリのデバッグ機能を改善するためのベスト プラクティス推奨事項。
+title: ソース リンクと .NET ライブラリ
+description: ソース リンクを使用して .NET ライブラリのデバッグ機能を改善するためのベスト プラクティス推奨事項。
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 10596f589af7abee6ff7833ef25c606294337196
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333539"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204757"
 ---
-# <a name="sourcelink"></a>SourceLink
+# <a name="source-link"></a>ソース リンク
 
-SourceLink は NuGet からの .NET アセンブリのソース コードを開発者がデバッグすることを可能にするテクノロジです。 SourceLink は NuGet パッケージの作成時に実行され、ソース コントロール メタデータをアセンブリとパッケージの内部に埋め込みます。 パッケージをダウンロードし、Visual Studio で SourceLink を有効にした開発者は、そのソース コードにステップ インできます。 SourceLink からは、効率的なデバッグを可能にするソース コントロール メタデータが提供されます。
+ソース リンクは NuGet からの .NET アセンブリのソース コードを開発者がデバッグすることを可能にするテクノロジです。 ソース リンクは NuGet パッケージの作成時に実行され、ソース コントロール メタデータをアセンブリとパッケージの内部に埋め込みます。 パッケージをダウンロードし、Visual Studio でソース リンクを有効にした開発者は、そのソース コードにステップ インできます。 ソース リンクからは、効率的なデバッグを可能にするソース コントロール メタデータが提供されます。
 
-## <a name="sourcelink-demo"></a>SourceLink デモ
+## <a name="source-link-demo"></a>ソース リンクのデモ
 
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
-## <a name="using-sourcelink"></a>SourceLink の使用
+## <a name="using-source-link"></a>ソース リンクを使用する
 
-SourceLink の使用方法は、[dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub リポジトリにあります。
+ソース リンクの使用方法は、[dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub リポジトリにあります。
 
-[NuGet パッケージ エクスプローラー](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)を使用すれば、SourceLink メタデータがパッケージに正常に埋め込まれたことを確認できます。 `Repository` メタデータがコメント ID と共に存在すること、各ターゲットの .dll と共に .pdb ファイルが見つかることを確認します。
+[NuGet パッケージ エクスプローラー](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)を使用すれば、ソース リンク メタデータがパッケージに正常に埋め込まれたことを確認できます。 `Repository` メタデータがコメント ID と共に存在すること、各ターゲットの .dll と共に .pdb ファイルが見つかることを確認します。
 
-![NuGet パッケージ エクスプローラーの SourceLink](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet パッケージ エクスプローラーの SourceLink")
+![NuGet パッケージ エクスプローラーのソース リンク](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet パッケージ エクスプローラーのソース リンク")
 
-**✔️ 検討** SourceLink を使用して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
+**✔️ 検討** ソース リンクを使用して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
 
 > [!TIP]
 > デバッガー属性を型に追加することで開発者のデバッグ機能をさらに強化できます。
@@ -37,7 +37,7 @@ SourceLink の使用方法は、[dotnet/sourceLink](https://github.com/dotnet/so
 
 **✔️ 検討** シンボル ファイルを発行する (`*.pdb`)。
 
-> シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
+> デバッグのエクスペリエンスを最善にするには、ライブラリでシンボル ファイルを発行してソース リンクを使用する必要があります。 シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](dependencies.md)

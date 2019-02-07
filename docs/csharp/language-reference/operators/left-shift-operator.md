@@ -1,5 +1,5 @@
 ---
-title: '&lt;&lt; 演算子 - C# リファレンス'
+title: << 演算子 - C# リファレンス
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: 79a48d88e2c83b5ad78804367ee3c07f78622c08
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 0271c97bc624a8946b90508e9ce39d217a128c05
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333526"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261751"
 ---
-# <a name="ltlt-operator-c-reference"></a>&lt;&lt; 演算子 (C# リファレンス)
+# <a name="-operator-c-reference"></a>\<\< 演算子 (C# リファレンス)
 
 左シフト演算子 (`<<`) は、最初のオペランドを 2 番目のオペランドで指定されたビット数だけ左にシフトします。 2 番目のオペランドの型は、[int](../keywords/int.md) または事前に定義された `int` への暗黙的な数値変換を持つ型にする必要があります。
 

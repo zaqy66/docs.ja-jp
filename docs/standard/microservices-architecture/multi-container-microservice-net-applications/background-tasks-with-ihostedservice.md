@@ -3,13 +3,13 @@ title: IHostedService と BackgroundService クラスを使ってマイクロサ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスの .NET Core でバックグラウンド タスクを実装する IHostedService と BackgroundService を使用する新しいオプションについて理解します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/02/2018
-ms.openlocfilehash: 3fe1f4bdf80943394688941c17d3041ea90256da
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: 721a3129a00867279846bc44155b307f5e97ae39
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126083"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479784"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 
@@ -27,11 +27,11 @@ ms.locfileid: "53126083"
 
 ASP.NET Core 2.0 の `WebHost` (`IWebHost` を実装する基底クラス) は、MVC Web アプリや Web API サービスを実装している場合など、HTTP サーバー機能をプロセスに提供するために使用するインフラストラクチャ成果物です。 ASP.NET Core での新しいインフラストラクチャのすべての長所を提供することで、依存関係の挿入を使用、要求パイプラインなどへのミドルウェアの挿入、およびこれらの `IHostedServices` をバックグラウンド タスクに正確に使用することを可能にします。
 
-ただし、`Host` (`IHost` を実装する基底クラス) は、.NET Core 2.1 の新機能です。 基本的に、`Host` を使用すると、`WebHost` を使用した場合と同様のインフラストラクチャ (依存関係の挿入、ホステッド サービスなど) ができますが、このケースでは、ホストとしてシンプルでより軽量なプロセスが必要なだけで、MVC、Web API または HTTP サーバー機能は関係ありません。
+`Host` (`IHost` を実装する基底クラス) は .NET Core 2.1 で実装されました。 基本的に、`Host` を使用すると、`WebHost` を使用した場合と同様のインフラストラクチャ (依存関係の挿入、ホステッド サービスなど) ができますが、このケースでは、ホストとしてシンプルでより軽量なプロセスが必要なだけで、MVC、Web API または HTTP サーバー機能は関係ありません。
 
 そのため、IHost を使用して特殊化されたホスト プロセスを作成してホステッド サービス以外 (`IHostedServices` をホスティングするためだけに作成されたマイクロサービスなど) は処理しないことを選択するか、または代わりに既存の ASP.NET Core `WebHost` (既存の ASP.NET Core Web API または MVC アプリ) を拡張することを選択できます。 
 
-ビジネスと拡張性のニーズに応じて、いずれの方法にも長所と短所があります。 つまり、基本的には、バックグラウンド タスクが HTTP (IWebHost) と関係ない場合、(.NET Core 2.1 で) IHost を使用する必要があります。
+ビジネスと拡張性のニーズに応じて、いずれの方法にも長所と短所があります。 つまり、基本的には、バックグラウンド タスクが HTTP (IWebHost) と関係ない場合、IHost を使用する必要があります。
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>WebHost または Host でホステッド サービスを登録する
 
@@ -47,7 +47,7 @@ SignalR はホステッド サービスを使用している成果物の一例�
 
 基本的に、IHostedService に基づいて、これらのアクションのいずれかをバックグラウンド タスクにオフロードできます。
 
-1 つまたは複数の `IHostedServices` を `WebHost` または `Host` に追加するには、ASP.NET Core `WebHost` で標準的な DI (依存関係の挿入) を経由して (または .NET Core 2.1 の `Host` で) それらを登録します。 基本的に、次のコードのように、一般的な ASP.NET WebHost から、`Startup` クラスの使い慣れた `ConfigureServices()` メソッド内でホステッド サービスを登録する必要があります。 
+1 つまたは複数の `IHostedServices` を `WebHost` または `Host` に追加するには、ASP.NET Core `WebHost` で標準的な DI (依存関係の挿入) を経由して (または .NET Core 2.1 以降の `Host` で) それらを登録します。 基本的に、次のコードのように、一般的な ASP.NET WebHost から、`Startup` クラスの使い慣れた `ConfigureServices()` メソッド内でホステッド サービスを登録する必要があります。 
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -101,11 +101,11 @@ namespace Microsoft.Extensions.Hosting
 
 続行して、ホステッド サービスのカスタム クラスをゼロから作成し、`IHostedService` を実装します。これは .NET Core 2.0 を使用する場合に行う必要があります。 
 
-ただし、ほとんどのバックグラウンド タスクでは、キャンセル トークンの管理およびその他の一般的な操作で同様のニーズがあるため、.NET Core 2.1 で派生元として使用できる非常に便利な BackgroundService という名前の抽象基底クラスを提供する予定です。
+ただし、ほとんどのバックグラウンド タスクでは、キャンセル トークンの管理およびその他の一般的な操作で同様のニーズがあるため、派生元として使用できる非常に便利な `BackgroundService` という名前の抽象基底クラスがあります (.NET Core 2.1 以降で利用できます)。
 
 そのクラスは、バックグラウンド タスクを設定するために必要な主要な作業を提供します。
 
-次のコードは、.NET Core 2.1 に実装されている BackgroundService 抽象基底クラスです。
+次のコードは、.NET Core に実装されている BackgroundService 抽象基底クラスです。
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0. 
@@ -229,7 +229,7 @@ WebHost.CreateDefaultBuilder(args)
 
 次の図は、IHostedServices を実装する場合のクラスとインターフェイスの概要を視覚的に示しています。
  
-![クラス ダイアグラム: IWebHost と IHost は、BackgroundService から継承され、IHostedService を実装する多くのサービスをホストできます。](./media/image27.png)
+![クラス ダイアグラム:IWebHost と IHost は、BackgroundService から継承され、IHostedService を実装する多くのサービスをホストできます。](./media/image27.png)
 
 **図 6-27**。 IHostedService に関連する複数のクラスとインターフェイスを示すクラス図
 
@@ -249,7 +249,7 @@ ASP.NET Core `WebHost` または .NET Core `Host` を展開する方法が最終
 -   **ASP.NET Core 2.0 で IHostedService を実装する** <br/>
     [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
--   **ASP.NET Core 2.1 のホスティング サンプル** <br/>
+-   **ASP.NET Core 2.1 を使用した GenericHost サンプル** <br/>
     [*https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
 
 >[!div class="step-by-step"]

@@ -1,5 +1,5 @@
 ---
-title: '&lt; 演算子 - C# リファレンス'
+title: < 演算子 - C# リファレンス
 ms.custom: seodec18
 ms.date: 12/18/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - less than operator (<) [C#]
 - < operator [C#]
 ms.assetid: 38cb91e6-79a6-48ec-9c1e-7b71fd8d2b41
-ms.openlocfilehash: bb0f590bb547c4e632bd14c773f095435c8986f0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: ab21e32b7609bc0c8753b42ccf8b6091bf3ad57b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655947"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286638"
 ---
-# <a name="lt-operator-c-reference"></a>&lt; 演算子 (C# リファレンス)
+# <a name="-operator-c-reference"></a>\< 演算子 (C# リファレンス)
 
 "次の値より小さい" 関係演算子 `<` は、最初のオペランドが 2 番目のオペランドより小さい場合に `true` を返し、それ以外の場合は `false` を返します。 すべての数値型と列挙型が `<` 演算子をサポートします。 同じ[列挙](../keywords/enum.md)型のオペランドで、基になる整数型の対応する値が比較されます。
 

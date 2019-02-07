@@ -3,12 +3,12 @@ title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156690"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204770"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す
 
@@ -88,7 +88,7 @@ C# 8 プロジェクトであっても、**null 許容参照型**機能を選択
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>null 許容型と null 非許容型を含むアンケートを作成する
 
-最初に記述するコードによって、アンケートが作成されます。 アンケートの質問とアンケートの実行をモデル化するクラスを記述します。 アンケートには、回答の形式によって区別される 3 種類の質問があります (はい/いいえで回答するもの、番号で回答するもの、およびテキストで回答するもの)。 `public` `SurveyQuestion`クラスを作成します。 `using` ステートメントの直後に `#nullable enable` プラグマを含めます。
+最初に記述するコードによって、アンケートが作成されます。 アンケートの質問とアンケートの実行をモデル化するクラスを記述します。 アンケートには、回答の形式によって区別される 3 種類の質問があります:はい/いいえで回答するもの、番号で回答するもの、およびテキストで回答するもの。 `public` `SurveyQuestion`クラスを作成します。 `using` ステートメントの直後に `#nullable enable` プラグマを含めます。
 
 ```csharp
 #nullable enable
@@ -190,7 +190,7 @@ namespace NullableIntroduction
 1. アンケートへの参加を依頼します。 回答者が同意しない場合は、応答の欠落 (つまり null) が返されます。
 1. 各質問を表示し、回答を記録します。 回答も欠落する (つまり null になる) 可能性があります。
 
-`SurveyRespondent` クラスに次のコードを追加します。
+`SurveyResponse` クラスに次のコードを追加します。
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -212,7 +212,7 @@ namespace NullableIntroduction
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-`surveyResponses` は null 非許容参照であるため、それを逆参照する前に型チェックは必要ありません。 `Answer` メソッドでは null 以外の文字列が返されるため、既定値の 2 つ目の引数を取得する `GetValueOrDefault` のオーバーロードが選択されます。
+`surveyResponses` は null 非許容参照型であるため、それを逆参照する前にチェックは必要ありません。 `Answer` メソッドでは null 以外の文字列が返されるため、既定値の 2 つ目の引数を取得する `GetValueOrDefault` のオーバーロードが選択されます。
 
 次に、次の 3 つの式形式メンバーを `SurveyRun` クラスに追加します。
 
@@ -228,7 +228,7 @@ namespace NullableIntroduction
 
 ## <a name="get-the-code"></a>コードを取得する
 
-[csharp/IntroTonullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) フォルダーの [samples](https://github.com/dotnet/samples) リポジトリから、完成したチュートリアルのコードを取得できます。
+[csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) フォルダーの [samples](https://github.com/dotnet/samples) リポジトリから、完成したチュートリアルのコードを取得できます。
 
 null 許容参照型と null 非許容参照型の間で型宣言を変更することで試してください。 それによって生成される警告が変わることを確認して、`null` を間違って逆参照することがないようにしてください。
 

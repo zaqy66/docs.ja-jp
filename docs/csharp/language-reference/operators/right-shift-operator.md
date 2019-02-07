@@ -1,5 +1,5 @@
 ---
-title: '&gt;&gt; 演算子 - C# リファレンス'
+title: '>> 演算子 - C# リファレンス'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '>> operator [C#]'
 - right shift operator (>>) [C#]
 ms.assetid: a07f8679-d318-4ef8-b38b-65903efb8056
-ms.openlocfilehash: f7cacd740966f0716e125887568a39abf0d9e454
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 703d4ee50bb9f49c66df029de9c5a280449d11fa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725429"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255316"
 ---
-# <a name="gtgt-operator-c-reference"></a>&gt;&gt; 演算子 (C# リファレンス)
+# <a name="-operator-c-reference"></a>>> 演算子 (C# リファレンス)
 
 右シフト演算子 (`>>`) は、最初のオペランドを 2 番目のオペランドで指定されたビット数だけ右にシフトします。
 

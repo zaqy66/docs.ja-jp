@@ -5,14 +5,14 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066313"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204302"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Windows 10 と Windows Server 2016 に .NET Framework をインストールする
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 と Windows Server 2016 以降に .NET Framework をインストールする
 
 .NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。 この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。 最新版は [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) です。
 
@@ -27,6 +27,12 @@ ms.locfileid: "55066313"
 * [Windows 10 October 2018 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10)
+
+* Windows Server 2019
+
+* Windows Server、バージョン 1809
+
+* Windows Server、バージョン 1803
 
 > [!div class="button"]
 > [.NET Framework 4.7.2 のダウンロード](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)

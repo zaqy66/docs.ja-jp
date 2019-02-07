@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a327cdeb69c5143b1720ff67ea493b7a088f399
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582178"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204874"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework のバージョンおよび依存関係
 .NET Framework の各バージョンには、共通言語ランタイム (CLR)、基底クラス ライブラリ、およびその他のマネージド ライブラリが含まれています。 このトピックでは、.NET Framework の各バージョンの主要な機能について説明し、基になっている CLR のバージョンおよび関連する開発環境に関する情報と、Windows オペレーティング システムでインストールされる .NET Framework のバージョンを示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "54582178"
   
 |.NET Framework のバージョン|CLR バージョン|このバージョンを含む製品<br /> Visual Studio<br/>version|✓ このバージョンを含む製品<br />+ インストール可能<br />Windows|✓ このバージョンを含む製品<br />+ インストール可能<br />Windows Server|インストールされた .NET バージョンを確認するには|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
-|4.7.2<br/><br/>[新機能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[アクセシビリティの新機能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 October 2018 Update (バージョン 1809) <br/><br/> ✓ 10 April 2018 Update (バージョン 1803) <br/><br/> + 10 Fall Creators Update (バージョン 1709) <br/> <br/> + 10 Creators Update (バージョン 1703) <br/> + 10 Anniversary Update (バージョン 1607) <br/> + 8.1 <br/> +7 | ✓ Windows Server、バージョン 1803 <br/> + Windows Server、バージョン 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |`Release` DWORD を使用:<br/><br/> - 461814 (Windows 10 October 2018 Update) <br/> - 461808 (Windows 10 April 2018 Update および Windows Server、バージョン 1803) <br/> - 461814 (その他すべての OS バージョン) <br/><br/> ([手順](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)に関するページを参照)|
+|4.7.2<br/><br/>[新機能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[アクセシビリティの新機能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 October 2018 Update (バージョン 1809) <br/><br/> ✓ 10 April 2018 Update (バージョン 1803) <br/><br/> + 10 Fall Creators Update (バージョン 1709) <br/> <br/> + 10 Creators Update (バージョン 1703) <br/> + 10 Anniversary Update (バージョン 1607) <br/> + 8.1 <br/> +7 | ✓ Windows Server 2019<br/> ✓ Windows Server、バージョン 1809 <br/> ✓ Windows Server、バージョン 1803 <br/> + Windows Server、バージョン 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |`Release` DWORD を使用:<br/><br/> - 461814 (Windows 10 October 2018 Update) <br/> - 461808 (Windows 10 April 2018 Update および Windows Server、バージョン 1803) <br/> - 461814 (その他すべての OS バージョン) <br/><br/> ([手順](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)に関するページを参照)|
 |4.7.1<br/><br/>[新機能](../whats-new/index.md#whats-new-in-the-net-framework-471)<br/><br/>[アクセシビリティの新機能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-471)|4| | ✓ 10 Fall Creators Update (バージョン 1709) <br/> <br/> + 10 Creators Update (バージョン 1703) <br/> + 10 Anniversary Update (バージョン 1607) <br/> + 8.1 <br/> +7| + Windows Server、バージョン 1803 <br/> ✓ Windows Server、バージョン 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |`Release` DWORD を使用:<br/><br/> - 461308 (Windows 10 Creators Update と Windows Server、バージョン 1709) <br/> - 461310 (その他すべての OS バージョン) <br/><br/> ([手順](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)に関するページを参照)| 
 |4.7<br/><br/>[新機能](../whats-new/index.md#whats-new-in-the-net-framework-47)|4| | ✓ 10 Creators Update (バージョン 1703) <br/> <br/> + 10 Anniversary Update (バージョン 1607) <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |`Release` DWORD を使用:<br/><br/> - 460798 (Windows 10 Creators Update) <br/> - 460805 (その他すべての OS バージョン) <br/><br/> ([手順](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)に関するページを参照) |  
 |4.6.2<br/><br/>[新機能](../whats-new/index.md#whats-new-in-the-net-framework-462)|4||✓ 10 Anniversary Update (バージョン 1607) <br /><br /> + 10 November Update (バージョン 1511) <br/> + 10 <br/> + 8.1<br />+ 7|✓ 2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|`Release` DWORD を使用:<br /><br /> - 394802 (Windows 10 Anniversary Update および Windows Server 2016) <br />- 394806 (その他すべての OS バージョン)<br /><br /> ([手順](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)に関するページを参照)|  
