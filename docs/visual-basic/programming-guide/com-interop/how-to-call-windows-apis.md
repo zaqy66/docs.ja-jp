@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows Api (Visual Basic) を呼び出す'
+title: '方法: Windows API (Visual Basic) を呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - API calls [Visual Basic]
@@ -14,9 +14,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 02/05/2019
 ms.locfileid: "55738644"
 ---
-# <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows Api (Visual Basic) を呼び出す
+# <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API (Visual Basic) を呼び出す
 この例を定義し、呼び出し、 `MessageBox` user32.dll 内の関数に文字列を渡します。  
-  
+
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
