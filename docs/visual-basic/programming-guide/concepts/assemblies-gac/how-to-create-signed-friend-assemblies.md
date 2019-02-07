@@ -2,12 +2,12 @@
 title: '方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 699c3de3c246be0bafdcc66ca7fd82384dc66d92
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667295"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758873"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
@@ -16,7 +16,7 @@ ms.locfileid: "54667295"
   
 1.  コマンド プロンプトを開きます。  
   
-2.  厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、[Sn.exe (厳密名ツール)] を参照してください。[Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
+2.  厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
     1.  この例で使用する厳密な名前キーを生成し、FriendAssemblies.snk ファイルに格納します。  
   
@@ -90,6 +90,6 @@ ms.locfileid: "54667295"
 - [フレンド アセンブリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [Sn.exe (厳密名ツール)][Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [厳密な名前付きアセンブリの作成と使用](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)
