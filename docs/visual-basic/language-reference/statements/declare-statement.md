@@ -124,7 +124,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、名前変更していない場合、外部の手順をまず検索します。 失敗した場合、追加している外部プロシージャの末尾に"W"名前を指定し、もう一度検索します。  
   
--   **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows Api を呼び出す](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
+-   **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
   
 > [!IMPORTANT]
 >  共通言語ランタイム (CLR) の外部で実行している外部プロシージャ、ある*アンマネージ コード*します。 このようなプロシージャ、Win32 API 関数または COM メソッドの場合は、たとえばを呼び出すときに、セキュリティ リスクにアプリケーションを公開する可能性があります。 詳細については、次を参照してください。[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)します。  
