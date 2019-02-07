@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 24d5b36e37802fee1452433b49fb6f4c4fbced14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2251279fb5b07d64925c245f537fe040ec78679e
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595904"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826295"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>メソッド ベースのクエリ構文例:結合演算子
-このトピックの例では、使用する方法を示します、<xref:System.Linq.Enumerable.Join%2A>と<xref:System.Linq.Enumerable.GroupJoin%2A>を照会する方法、 [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)メソッド ベースのクエリ構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、使用する方法を示します、<xref:System.Linq.Enumerable.Join%2A>と<xref:System.Linq.Enumerable.GroupJoin%2A>を照会する方法、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)メソッド ベースのクエリ構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
   

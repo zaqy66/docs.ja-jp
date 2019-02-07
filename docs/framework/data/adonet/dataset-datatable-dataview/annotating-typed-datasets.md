@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629609"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825733"
 ---
 # <a name="annotating-typed-datasets"></a>型指定された DataSet の注釈
 注釈を使用すると、基になるスキーマを変更せずに型指定された <xref:System.Data.DataSet> の要素の名前を変更できます。 型指定された、基になるスキーマの要素の名前を変更することになる**データセット**にはない、データ ソースに存在だけでなく、データ ソース内に存在しているオブジェクトへの参照が失われるオブジェクトを参照してください。  
@@ -74,7 +74,7 @@ ms.locfileid: "54629609"
 |**親**アクセサー|TableNameRow|typedParent|  
 |**データセット**イベント|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- 使用する型指定された**データセット**注釈では、次を含める必要があります**xmlns** XML スキーマ定義言語 (XSD) スキーマで参照します。 (データベース テーブルから xsd を作成するを参照してください。<xref:System.Data.DataSet.WriteXmlSchema%2A>または[Visual Studio でのデータセットの操作](https://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
+ 使用する型指定された**データセット**注釈では、次を含める必要があります**xmlns** XML スキーマ定義言語 (XSD) スキーマで参照します。 データベース テーブルから xsd を作成するを参照してください。<xref:System.Data.DataSet.WriteXmlSchema%2A>または[Visual Studio でのデータセットの操作](/visualstudio/data-tools/dataset-tools-in-visual-studio)します。  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  

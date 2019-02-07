@@ -2,12 +2,12 @@
 title: ADO.NET でのデータ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 15990a479142dda294145282d567cc06c7587a7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 302ccd7b2a05dabc5f13e6f821404a8527951741
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747922"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827917"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET でのデータ型のマッピング
 .NET Framework は共通型システムを基にしています。このシステムは実行時の型の宣言、使用、および管理方法を定義するものです。 値型と参照型の両方から構成されており、これらはすべて <xref:System.Object> 基本型から派生します。 データ ソースを操作するときは、データ型が明示的に指定されていない場合はデータ プロバイダーから推論されます。 たとえば、<xref:System.Data.DataSet> オブジェクトは、特定のデータ ソースには依存しません。 `DataSet` 内のデータはデータ ソースから取得され、変更は `DataAdapter` によってデータ ソースに反映されます。 つまり、`DataAdapter` が <xref:System.Data.DataTable> 内の `DataSet` に、データ ソースからの値を格納すると、`DataTable` 内の列で結果として設定されるデータ型は、データ ソースへの接続を行う目的で使用した [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダー固有の型ではなく、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のデータ型になります。  
@@ -40,5 +40,5 @@ ms.locfileid: "54747922"
 - [パラメーターおよびパラメーター データ型の構成](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [共通型システム](../../../../docs/standard/base-types/common-type-system.md)
-- [型の変換](https://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)
+- [型の変換](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t8s7t9bf(v=vs.90))
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

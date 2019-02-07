@@ -2,12 +2,12 @@
 title: 非同期プログラミング
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 8069ff646a124c6922358dda57de3e598ef62262
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 774a6d3476c8e3b310ffe67bb56fc5a4d5c45bb0
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692887"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826877"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -176,7 +176,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>基本プロバイダー モデルと新しい非同期機能を使用する  
  異なるデータベースに接続してクエリを実行できるツールを作成することが必要になる場合があります。 基本プロバイダー モデルと新しい非同期機能を使用できます。  
   
- 分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法については、次を参照してください。 [Web サーバーで MSDTC を有効にする方法](https://msdn.microsoft.com/library/dd327979.aspx)します。  
+ 分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法については、次を参照してください。 [Web サーバーで MSDTC を有効にする方法](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))します。  
   
 ```csharp
 using System;  

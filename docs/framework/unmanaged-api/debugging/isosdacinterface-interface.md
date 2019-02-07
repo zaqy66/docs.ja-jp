@@ -1,6 +1,6 @@
 ---
 title: ISOSDacInterface インターフェイス
-ms.date: 01/16/2019
+ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface Interface
 api.location:
@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5e037cf6fb88fff4886733ff4152dca0a827e0a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491029"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827930"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface インターフェイス
 
@@ -32,7 +32,9 @@ ms.locfileid: "54491029"
 
 | メソッド                                                                                                               | 説明                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | データを取得、指定された[MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)します。 |
+| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | 指定した MethodDesc ポインターのデータを取得します。 |
+| [GetMethodDescPtrFromIP](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescptrfromip-method.md) | 指定されたネイティブ命令のアドレスを含むメソッドに対応する MethodDesc ポインターを取得します。 |
+| [GetModuleData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmoduledata-method.md)| 指定したアドレスに読み込まれたモジュールに対応するデータをフェッチします。 |
 
 ## <a name="remarks"></a>Remarks
 

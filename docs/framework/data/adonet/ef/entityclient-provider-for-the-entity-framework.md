@@ -2,12 +2,12 @@
 title: Entity Framework 用の EntityClient プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 33ad1e89260296f09426e335450d9d8ba3461d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541197"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826448"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework 用の EntityClient プロバイダー
 EntityClient プロバイダーは、概念モデルで記述されているデータにアクセスするために Entity Framework アプリケーションで使用するデータ プロバイダーです。 概念モデルについては、次を参照してください。[モデリング ファイルとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)します。 EntityClient は、他の .NET Framework データ プロバイダーを使用してデータ ソースにアクセスします。 たとえば、EntityClient は、SQL Server データベースにアクセスするときは .NET Framework Data Provider for SQL Server (SqlClient) を使用します。 SqlClient プロバイダーについては、次を参照してください。 [Entity Framework 用 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)します。 EntityClient プロバイダーは <xref:System.Data.EntityClient> 名前空間で実装されます。  
@@ -40,7 +40,7 @@ EntityClient プロバイダーは、概念モデルで記述されているデ�
 ## <a name="managing-transactions"></a>トランザクションの管理  
  Entity Framework では、自動トランザクションと明示的トランザクションという 2 つの使用方法があります。 自動トランザクションでは <xref:System.Transactions> 名前空間を使用し、明示的トランザクションでは <xref:System.Data.EntityClient.EntityTransaction> クラスを使用します。  
   
- は、概念モデルで公開されるデータを更新するには参照してください[方法。Entity Framework でのトランザクションを管理する](https://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef)します。  
+ 概念モデル経由で公開されているデータを更新するを参照してください。[方法。Entity Framework でのトランザクションを管理する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100))します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: EntityConnection の接続文字列を作成します。](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -64,6 +64,6 @@ EntityClient プロバイダーは、概念モデルで記述されているデ�
  [方法: リレーションシップをナビゲート、Navigate 演算子](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>関連項目
-- [接続とトランザクションの管理](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [言語リファレンス](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

@@ -2,12 +2,12 @@
 title: LINQ to DataSet クエリのデバッグ
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680508"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825512"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet クエリのデバッグ
 
@@ -16,7 +16,7 @@ Visual Studio のデバッグをサポートしている[!INCLUDE[linq_dataset](
 ## <a name="viewing-results"></a>結果の表示  
  結果を表示することができます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]データヒント、ウォッチ ウィンドウで、[クイック ウォッチ] ダイアログ ボックスを使用してステートメントです。 ソース ウィンドウで特定のクエリにポインターを置くと、データヒントが表示されます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] の変数をコピーし、それを [ウォッチ] ウィンドウまたは [クイック ウォッチ] ダイアログ ボックスに貼り付けることができます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] では、クエリが評価されるのは、実際にそのクエリが実行されたときです。作成または宣言した時点では評価されません。 これは呼び出されます*遅延実行*します。 したがって、それが評価されるまでは、クエリ変数に値は割り当てられません。 詳細については、次を参照してください。[で LINQ to DataSet クエリ](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)します。  
   
- デバッガーは、クエリの結果を表示するために、そのクエリを評価する必要があります。 この暗黙的な評価は、表示するときに発生します。、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]デバッガーでのクエリの結果がいくつかの効果を検討してください。 クエリの評価には時間がかかります。 結果ノードを展開するときにも時間を要します。 クエリによっては繰り返し評価が実行され、パフォーマンスが著しく低下する場合があります。 さらに、データの値またはプログラムの状態が変わるという副作用が伴う場合もあります。 すべてのクエリに副作用があるわけではありません。 副作用を伴うことなく安全にクエリを評価できるかどうかを判断するには、クエリが実装されているコードを十分に理解する必要があります。 詳細については、次を参照してください。[副作用と式](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e)します。  
+ デバッガーは、クエリの結果を表示するために、そのクエリを評価する必要があります。 この暗黙的な評価は、表示するときに発生します。、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]デバッガーでのクエリの結果がいくつかの効果を検討してください。 クエリの評価には時間がかかります。 結果ノードを展開するときにも時間を要します。 クエリによっては繰り返し評価が実行され、パフォーマンスが著しく低下する場合があります。 さらに、データの値またはプログラムの状態が変わるという副作用が伴う場合もあります。 すべてのクエリに副作用があるわけではありません。 副作用を伴うことなく安全にクエリを評価できるかどうかを判断するには、クエリが実装されているコードを十分に理解する必要があります。 詳細については、次を参照してください。[副作用と式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120))します。  
   
 ## <a name="edit-and-continue"></a>エディット コンティニュ  
  エディット コンティニュに変更をサポートしません[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 追加、削除、または変更する場合、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントではデバッグ セッション中に、ダイアログ ボックスが表示、変更がエディット コンティニュでサポートされていないを指示します。 このとき、変更を元に戻すか、デバッグ セッションを中止して編集済みのコードで新たなセッションを開始するかを選択できます。  

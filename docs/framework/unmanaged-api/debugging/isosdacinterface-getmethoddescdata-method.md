@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e56f837c4d3362ec6e71030e4fb475df42b9fba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639955"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825954"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData メソッド
 
-データを取得、指定された[MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)します。
+指定した MethodDesc ポインターのデータを取得します。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,9 +34,9 @@ ms.locfileid: "54639955"
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
-    void                       *data,
+    DacpMethodDescData *data,
     ULONG                      cRevertedRejitVersions,
-    void                      *rgRevertedRejitData,
+    DacpReJitData      *rgRevertedRejitData,
     void                      *pcNeededRevertedRejitData
 );
 ```
@@ -47,17 +47,17 @@ HRESULT GetMethodDescData(
 
 `ip` [in]メソッドの IP アドレス。
 
-`data` [out]関連付けられている、MethodDesc 内部 Api から返されるデータ。 構造体には、少なくとも 168 バイトが必要があります。
+`data` [out]関連付けられている、MethodDesc 内部 Api から返されるデータ。
 
 `cRevertedRejitVersions` [out]元に戻された rejit バージョンの数。
 
-`rgRevertedRejitData` [out]内部 Api から返されるように、元に戻された rejit バージョンに関連付けられたデータ。 構造体には、少なくとも 24 バイト必要があります。
+`rgRevertedRejitData` [out]内部 Api から返されるように、元に戻された rejit バージョンに関連付けられたデータ。
 
 `pcNeededRevertedRejitData` [out]元に戻された ReJit バージョンに関連付けられたデータを格納するために必要なバイト数。
 
 ## <a name="remarks"></a>Remarks
 
-指定されたメソッドは、`ISOSDacInterface`インターフェイスし、仮想メソッド テーブルの 20 のスロットに対応しています。 また、`CLRDATA_ADDRESS`は 64 ビット符号なし整数。
+指定されたメソッドは、`ISOSDacInterface`インターフェイスし、仮想メソッド テーブルの 20 のスロットに対応しています。 それを使用できる[ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) 64 ビット符号なし整数として定義する必要があります。
 
 ## <a name="requirements"></a>必要条件
 

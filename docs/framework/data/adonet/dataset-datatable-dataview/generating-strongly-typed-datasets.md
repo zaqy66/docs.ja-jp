@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 84c0319c49534cc9a09ffd15d9a07b8ec18882b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a22a4ec4ed508a06e385d954a8ed5b9e9ff6a9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728740"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825590"
 ---
 # <a name="generating-strongly-typed-datasets"></a>厳密に型指定された DataSet の生成
 XML スキーマ定義言語 (XSD) 標準に準拠する XML スキーマがあれば、<xref:System.Data.DataSet> に付属の XSD.exe ツールを使用して、厳密に型指定された [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)] を生成できます。  
   
- (データベース テーブルから xsd を作成するを参照してください。<xref:System.Data.DataSet.WriteXmlSchema%2A>または[Visual Studio でのデータセットの操作](https://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
+ (データベース テーブルから xsd を作成するを参照してください。<xref:System.Data.DataSet.WriteXmlSchema%2A>または[Visual Studio でのデータセットの操作](/visualstudio/data-tools/dataset-tools-in-visual-studio))。  
   
  次のコードを生成するための構文を示しています、**データセット**このツールを使用します。  
   

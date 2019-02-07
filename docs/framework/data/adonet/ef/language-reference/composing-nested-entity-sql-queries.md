@@ -2,12 +2,12 @@
 title: 入れ子になった Entity SQL クエリの作成
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 87a9877b7c865fbe393d91365d03bab8f56377c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589479"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827319"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>入れ子になった Entity SQL クエリの作成
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 ビルド ブロック[!INCLUDE[esql](../../../../../../includes/esql-md.md)]式を指定します。 従来の SQL とは異なり[!INCLUDE[esql](../../../../../../includes/esql-md.md)]は表形式の結果セットに限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)]リテラル、パラメーター、または入れ子になった式が複雑な式の作成をサポートしています。 式の値をパラメーター化されたまたはその他の式で構成できます。  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 次の例は、内の式を正しく入れ子にする方法を示します[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[方法:2 つのクエリの結合を並べ替える](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)します。  
+ 次の例は、内の式を正しく入れ子にする方法を示します[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[方法:2 つのクエリの結合を並べ替える](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))します。  
   
 ## <a name="nested-queries-in-projection"></a>投影内の入れ子になったクエリ  
  project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SLQ Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。  

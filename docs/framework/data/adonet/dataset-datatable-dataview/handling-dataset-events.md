@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 88ff0be43099758c076216e963d139b945936ba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d3ce8262800fbea8e01ba4296715349bc0e140a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652944"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828320"
 ---
 # <a name="handling-dataset-events"></a>DataSet のイベント処理
 <xref:System.Data.DataSet> オブジェクトには、 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>、 <xref:System.Data.DataSet.MergeFailed>という 3 つのイベントがあります。  
@@ -51,12 +51,12 @@ private static void DataSetMergeFailed(
  `DataSet` は、 <xref:System.ComponentModel.MarshalByValueComponent> メソッドおよび <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> イベントの両方を公開する <xref:System.ComponentModel.MarshalByValueComponent.Disposed> クラスから派生しています。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>コンポーネントのイベントが破棄イベントをリッスンするように、イベント ハンドラーを追加します。 使用することができます、<xref:System.ComponentModel.MarshalByValueComponent.Disposed>のイベントを`DataSet`を実行する場合は、ときにコード、<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>メソッドが呼び出されます。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 使用されるリソースを解放、<xref:System.ComponentModel.MarshalByValueComponent>します。  
   
 > [!NOTE]
->  `DataSet`と`DataTable`オブジェクトから継承<xref:System.ComponentModel.MarshalByValueComponent>をサポートし、<xref:System.Runtime.Serialization.ISerializable>リモート処理用のインターフェイス。 これらは、リモート処理ができる唯一の ADO.NET オブジェクトです。 詳細については、「 [Remote Objects](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)」を参照してください。  
+>  `DataSet`と`DataTable`オブジェクトから継承<xref:System.ComponentModel.MarshalByValueComponent>をサポートし、<xref:System.Runtime.Serialization.ISerializable>リモート処理用のインターフェイス。 これらは、リモート処理ができる唯一の ADO.NET オブジェクトです。 詳細については、次を参照してください。 [.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))します。  
   
  使用する場合に使用可能なその他のイベントについては、`DataSet`を参照してください[DataTable イベントの処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)と[DataAdapter イベントの処理](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [データの検証](https://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)
+- [データの検証](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
 - [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

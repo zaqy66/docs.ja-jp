@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: 88a1b8a8698c6de51b4fcfcbfdbc75b5b53c11ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7591e68490bf1ac35b56d5f483d1838a0a7d0c2
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657988"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826318"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>クエリ式の構文例:順序
-このトピックの例では、使用する方法を示します、`OrderBy`と`OrderByDescending`を照会する方法、 [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)クエリ式構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、使用する方法を示します、`OrderBy`と`OrderByDescending`を照会する方法、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
   

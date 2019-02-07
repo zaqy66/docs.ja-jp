@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707480"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828346"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
 接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。  
@@ -70,7 +70,7 @@ ms.locfileid: "54707480"
  .NET Framework 2.0 以降では、ローカル コンピューター上の構成ファイルで作業するときに、廃止された <xref:System.Configuration.ConfigurationManager> に代わって <xref:System.Configuration.ConfigurationSettings> を使用します。 ASP.NET 構成ファイルでの作業では、<xref:System.Web.Configuration.WebConfigurationManager> を使用します。 Web サーバー上の構成ファイルを扱うことを目的に設計され、**system.web** など、構成ファイルのセクションにプログラムからアクセスできます。  
   
 > [!NOTE]
->  実行時に構成ファイルにアクセスするには、呼び出し元に権限を付与する必要があります。必要な権限は、アプリケーションの種類、構成ファイル、格納場所などによって異なります。 詳細については、「[構成クラスの使用](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)」、および ASP.NET アプリケーションには、「<xref:System.Web.Configuration.WebConfigurationManager>」および Windows アプリケーションには、「<xref:System.Configuration.ConfigurationManager>」を参照してください。  
+>  実行時に構成ファイルにアクセスするには、呼び出し元に権限を付与する必要があります。必要な権限は、アプリケーションの種類、構成ファイル、格納場所などによって異なります。 詳細については、「[構成クラスの使用](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))」、および ASP.NET アプリケーションには、「<xref:System.Web.Configuration.WebConfigurationManager>」および Windows アプリケーションには、「<xref:System.Configuration.ConfigurationManager>」を参照してください。  
   
  <xref:System.Configuration.ConnectionStringSettingsCollection> を使用すると、アプリケーション構成ファイルから接続文字列を取得できます。 このコレクションには、それぞれが **connectionStrings** セクションの単一のエントリを表す一連の <xref:System.Configuration.ConnectionStringSettings> オブジェクトが格納されます。 個々のプロパティは接続文字列の属性にマップされており、名前またはプロバイダー名を指定することによって接続文字列を取得できます。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54707480"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>保護構成を使った構成ファイル セクションの暗号化  
- ASP.NET 2.0 では、*保護構成*と呼ばれる、構成ファイルの機密情報を暗号化するための新しい機能が導入されました。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 保護構成機能の詳細については、「[保護された構成を使用した構成情報の暗号化](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)」を参照してください。  
+ ASP.NET 2.0 では、*保護構成*と呼ばれる、構成ファイルの機密情報を暗号化するための新しい機能が導入されました。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 保護構成機能の詳細については、「[保護された構成を使用した構成情報の暗号化](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))」を参照してください。  
   
  次の構成ファイル フラグメントは、暗号化後の **connectionStrings** セクションを示しています。 **configProtectionProvider** には、接続文字列の暗号化と復号化に使用される、保護構成プロバイダーが指定されています。 **EncryptedData** セクションには暗号文が格納されています。  
   
@@ -136,16 +136,16 @@ ms.locfileid: "54707480"
   
 |プロバイダー|説明|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|データの暗号化と復号化には、RSA 暗号化アルゴリズムが使用されます。 RSA アルゴリズムは、公開キー暗号化だけでなく、デジタル署名にも使用されます。 "公開キー" として知られているほか、2 つの異なるキーが使用されることから非対称暗号化と呼ばれる場合もあります。 [ASP.NET IIS 登録ツール (Aspnet_regiis.exe)](https://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) を使用すると、Web.config ファイルのセクションを暗号化したり、暗号化キーを管理したりすることができます。 構成ファイルは、その処理時に ASP.NET によって復号化されます。 ASP.NET アプリケーションの ID には、セクションの暗号化と復号化に使用される暗号化キーへの読み取りアクセスが必要です。|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|データの暗号化と復号化には、RSA 暗号化アルゴリズムが使用されます。 RSA アルゴリズムは、公開キー暗号化だけでなく、デジタル署名にも使用されます。 "公開キー" として知られているほか、2 つの異なるキーが使用されることから非対称暗号化と呼ばれる場合もあります。 [ASP.NET IIS 登録ツール (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) を使用すると、Web.config ファイルのセクションを暗号化したり、暗号化キーを管理したりすることができます。 構成ファイルは、その処理時に ASP.NET によって復号化されます。 ASP.NET アプリケーションの ID には、セクションの暗号化と復号化に使用される暗号化キーへの読み取りアクセスが必要です。|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|構成セクションの暗号化に Windows Data Protection API (DPAPI) が使用されます。 この API には、Windows の組み込み暗号化サービスが使用され、コンピューター単位またはユーザー アカウント単位の保護を構成できます。 コンピューター単位の保護は、同じサーバー上の複数のアプリケーションで情報を共有する必要がある場合に使用します。 共有ホスティング環境など、特定のユーザー ID で実行されるサービスには、ユーザー アカウント単位の保護を使用できます。 各アプリケーションは、ファイルやデータベースなど、各種リソースへのアクセスが制限された別々の ID で実行されます。|  
   
- どちらのプロバイダーも、強力なデータ暗号化機能を備えています。 ただし、Web ファームなど、複数のサーバーで、同じ構成ファイルを暗号化して使用する場合、データの暗号化に使用される暗号化キーをエクスポートしたり、それを別のサーバーにインポートしたりできるのは、`RsaProtectedConfigurationProvider` だけです。 詳細については、「[保護された構成 RSA キー コンテナのインポートとエクスポート](https://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc)」を参照してください。  
+ どちらのプロバイダーも、強力なデータ暗号化機能を備えています。 ただし、Web ファームなど、複数のサーバーで、同じ構成ファイルを暗号化して使用する場合、データの暗号化に使用される暗号化キーをエクスポートしたり、それを別のサーバーにインポートしたりできるのは、`RsaProtectedConfigurationProvider` だけです。 詳細については、「[保護された構成 RSA キー コンテナのインポートとエクスポート](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))」を参照してください。  
   
 ### <a name="using-the-configuration-classes"></a>構成クラスの使用  
  <xref:System.Configuration> 名前空間には、構成設定をプログラムから行うためのクラスが存在します。 <xref:System.Configuration.ConfigurationManager> クラスは、コンピューター、アプリケーション、ユーザーの各構成ファイルへのアクセスを提供します。 ASP.NET アプリケーションを作成している場合は、同じ機能を持った <xref:System.Web.Configuration.WebConfigurationManager> クラスを使用します。他にも **\<system.web>** の設定など、ASP.NET アプリケーション固有の設定にもアクセスできます。  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> 名前空間には、データの暗号化と復号化に関連した補足的なオプションを提供するクラスが存在します。 これらのクラスは、保護構成では利用できない暗号化サービスが必要な場合に使用します。 これらのクラスは必ずしも純粋なマネージド実装とは限らず、アンマネージド Microsoft CryptoAPI 用のラッパーもあります。 詳細については、「[暗号サービス](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)」をご覧ください。  
+>  <xref:System.Security.Cryptography> 名前空間には、データの暗号化と復号化に関連した補足的なオプションを提供するクラスが存在します。 これらのクラスは、保護構成では利用できない暗号化サービスが必要な場合に使用します。 これらのクラスは必ずしも純粋なマネージド実装とは限らず、アンマネージド Microsoft CryptoAPI 用のラッパーもあります。 詳細については、「[暗号サービス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))」をご覧ください。  
   
 ### <a name="appconfig-example"></a>App.config の例  
  ここでは、Windows アプリケーションの **app.config** ファイルにある **connectionStrings** セクションを条件に応じて暗号化したり復号化したりする方法を紹介します。 この例に示したプロシージャは、MyApplication.exe など、アプリケーションの名前を引数として受け取ります。 その後、**app.config** ファイルを暗号化して、その実行可能ファイルと同じフォルダーに MyApplication.exe.config という名前でコピーします。  
@@ -167,12 +167,12 @@ ms.locfileid: "54707480"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NET アプリケーションのセキュリティ保護の詳細については、次を参照してください[NIB:。ASP.NET セキュリティ](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)と[を一目で ASP.NET 2.0 のセキュリティ プラクティス](https://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET デベロッパー センターでします。  
+ ASP.NET アプリケーションを保護する方法の詳細については、次を参照してください。[セキュリティで保護する ASP.NET web サイト](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))します。  
   
 ## <a name="see-also"></a>関連項目
 - [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [構成クラスの使用](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [構成クラスの使用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [アプリの構成](../../../../docs/framework/configure-apps/index.md)
-- [ASP.NET Web サイト管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [ASP.NET Web サイト管理](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
