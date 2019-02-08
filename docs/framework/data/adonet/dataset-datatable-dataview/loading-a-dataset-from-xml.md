@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 7fb00046eb9ab92ed2514cd7615c41ea40124de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594916"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827605"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML からの DataSet の読み込み
 ADO.NET では、XML ストリームまたは XML ドキュメントから <xref:System.Data.DataSet> の内容を作成できます。 また、.NET Framework では、XML から読み込まれる情報と <xref:System.Data.DataSet> のスキーマまたはリレーショナル構造の作成方法を柔軟に変更できます。  
   
- 入力する、 <xref:System.Data.DataSet> 、XML からデータを使用して、 **ReadXml**のメソッド、<xref:System.Data.DataSet>オブジェクト。 **ReadXml**メソッドは、ファイル、ストリームから読み取りますまたは**XmlReader**、XML と省略可能なソースを引数として受け取ります**XmlReadMode**引数。 (の詳細については、 **XmlReader**を参照してください[NIB:XmlTextReader による XML データの読み取り](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540))。**ReadXml**メソッドは、XML ストリームまたはドキュメントと負荷の内容を読み取り、<xref:System.Data.DataSet>データ。 リレーショナル スキーマは作成も、<xref:System.Data.DataSet>に応じて、 **XmlReadMode**指定し、リレーショナル スキーマが既に存在するかどうか。  
+ 入力する、 <xref:System.Data.DataSet> 、XML からデータを使用して、 **ReadXml**のメソッド、<xref:System.Data.DataSet>オブジェクト。 **ReadXml**メソッドは、ファイル、ストリームから読み取りますまたは**XmlReader**、XML と省略可能なソースを引数として受け取ります**XmlReadMode**引数。 詳細については、 **XmlReader**を参照してください[XmlTextReader による XML データの読み取り](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))します。 **ReadXml**メソッドは、XML ストリームまたはドキュメントと負荷の内容を読み取り、<xref:System.Data.DataSet>データ。 リレーショナル スキーマは作成も、<xref:System.Data.DataSet>に応じて、 **XmlReadMode**指定し、リレーショナル スキーマが既に存在するかどうか。  
   
  次の表のオプション、 **XmlReadMode**引数。  
   
