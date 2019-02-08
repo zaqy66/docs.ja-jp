@@ -3,13 +3,13 @@ title: ASP.NET Core および Azure での最新の Web アプリケーション
 description: ASP.NET Core と Azure を使用したモノリシックな Web アプリケーションの構築に関するエンドツーエンドのガイダンスを提供するガイドです。
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148107"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827865"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core および Azure での最新の Web アプリケーションの設計
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Copyright © 2019 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製または伝送することを禁じます。
 
@@ -43,7 +43,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 作成者:
 
-> **Steve Smith (@ardalis)**、ソフトウェア アーキテクチャ アドバイザー、[Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** - ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
 
 編集者:
 
@@ -63,11 +63,11 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 - 同じサーバー上のアプリケーション別の .NET バージョンのサイド バイ サイドのバージョン管理。
 
-従来の .NET アプリケーションはこれらの要件をサポートできますが、ASP.NET Core と .NET Core は、上記のシナリオに対する改善されたサポートを提供するように最適化されています。
+従来の .NET アプリケーションはこれらの要件の多くをサポートできますが、ASP.NET Core と .NET Core は、上記のシナリオに対する改善されたサポートを提供するように最適化されています。
 
 ますます多くの組織が、Microsoft Azure などのサービスを使用してクラウドで Web アプリケーションをホストすることを選択しています。 アプリケーションまたは組織にとって次のことが重要な場合は、クラウドでのアプリケーションのホストを検討してください。
 
-- データ センターのコスト (ハードウェア、ソフトウェア、スペース、ユーティリティなど) の投資の削減。
+- データ センターのコストに対する投資の削減 (ハードウェア、ソフトウェア、スペース、ユーティリティ、サーバー管理など)。
 
 - 柔軟な料金 (アイドル状態の容量ではなく、使用量に基づく支払い)。
 
@@ -81,7 +81,7 @@ Azure でホストされる ASP.NET Core での Web アプリケーションを�
 
 ## <a name="purpose"></a>目的
 
-このガイドでは、ASP.NET Core と Azure を使用したモノリシックな Web アプリケーションの構築に関するエンド ツー エンドのガイダンスを提供します。
+このガイドでは、ASP.NET Core と Azure を使った "*モノリシック*" Web アプリケーションの構築に関するエンド ツー エンドのガイダンスを提供します。 このコンテキストにおける "モノリシック" とは、相互作用するサービスとアプリケーションのコレクションとしてではなく、単一のユニットとしてこれらのアプリケーションをデプロイするという意味です。
 
 このガイドは、エンタープライズ アプリケーションをホストするために Docker、マイクロサービス、およびコンテナーのデプロイに注目した、["_.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ_"](../microservices-architecture/index.md) を補完するものです。
 

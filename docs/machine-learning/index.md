@@ -3,12 +3,12 @@ title: ML.NET コンテンツ ガイド
 description: ML.NET を使用してカスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明します。
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550462"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826272"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET コンテンツ ガイド
 
@@ -31,7 +31,7 @@ ML.NET について学習するには、[ML.NET とは何か](what-is-mldotnet.m
 
 [多クラス分類モデルを使った GitHub の問題の分類](tutorials/github-issue-classification.md)に関するページでは、GitHub の問題に対する区分のラベルを判断するアプリを構築する方法を示します。
 
-[回帰モデルを使ったタクシー運賃の予測](tutorials/taxi-fare.md)に関するページでは、履歴データの多数の要因を使って回答を決定する、予測的なアプリの構築方法を示します。
+[回帰モデルを使った料金の予測](tutorials/taxi-fare.md)に関するページでは、履歴データの多数の要因を使って回答を決定する、予測的なアプリの構築方法を示します。
 
 [特徴によるアヤメの花の分類](tutorials/iris-clustering.md)に関するページでは、クラスタ リング モデルを使ってアヤメのデータセットを分析する方法を示します。 
 

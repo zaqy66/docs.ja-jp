@@ -1189,7 +1189,7 @@
 ## [チュートリアル](machine-learning/tutorials/index.md)
 ### [感情分析 (二項分類)](machine-learning/tutorials/sentiment-analysis.md)
 ### [問題の分類 (多クラス分類)](machine-learning/tutorials/github-issue-classification.md)
-### [タクシー代予測 (回帰)](machine-learning/tutorials/taxi-fare.md)
+### [料金の予測 (回帰)](machine-learning/tutorials/taxi-fare.md)
 ### [あやめの花 (クラスタリング)](machine-learning/tutorials/iris-clustering.md)
 ## [使い方ガイド](machine-learning/how-to-guides/index.md)
 ### データの準備
@@ -1200,7 +1200,7 @@
 #### [テキスト ファイルからデータを読み込む](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [ノーマライザーを使ってデータを処理する](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### トレーニング、評価、およびモデルの説明
-#### [テキスト ファイルではないデータを使ってモデルをトレーニングする](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [リアルタイム データ ソースを使ってモデルをトレーニングする](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [クロス検証を使ってモデルをトレーニングする](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [パイプラインの中間データ値を検査する](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [回帰モデルをトレーニングする](machine-learning/how-to-guides/train-regression-model-ml-net.md)

@@ -3,14 +3,20 @@ title: .NET Core の新機能
 description: .NET Core の各バージョンの新機能について説明します。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 12/04/2018
+ms.date: 02/04/2019
 ms.custom: seodec18
+ms.openlocfilehash: 6d494f4c2c106271fa5171ddfa57237c4b4dd9ab
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827397"
 ---
 # <a name="whats-new-in-net-core"></a>.NET Core の新機能
 
 このページでは、.NET Core 2.0 以降の各 .NET Core リリースの新機能の概要を示します。 以下のリンクで、各リリースで追加された主な機能の詳細情報を確認できます。
 
-- [.NET Core 3.0 (Preview 1)](dotnet-core-3-0.md)
+- [.NET Core 3.0 (Preview 2)](dotnet-core-3-0.md)
 
 - [.NET Core 2.2](dotnet-core-2-2.md)
 
