@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258991"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825408"
 ---
 # <a name="specifying-an-assemblys-location"></a>アセンブリの場所の指定
 アセンブリの場所を指定する 2 つの方法はあります。  
@@ -20,7 +20,7 @@ ms.locfileid: "55258991"
   
 -   使用して、 [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)要素。  
   
- 使用することも、 [.NET Framework 構成ツール (Mscorcfg.msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764)アセンブリの場所を指定したり、共通言語ランタイム アセンブリを探すために場所を指定します。  
+ 使用することも、 [.NET Framework 構成ツール (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100))アセンブリの場所を指定したり、共通言語ランタイム アセンブリを探すために場所を指定します。  
   
 ## <a name="using-the-codebase-element"></a>使用して、 \<codeBase > 要素  
  使用することができます、  **\<codeBase >** のみマシン構成またはパブリッシャー ポリシー ファイルでも、アセンブリのバージョンをリダイレクトする要素。 ランタイムを使用するアセンブリ バージョンの決定、バージョンを決定するファイルからコードの基本設定が適用されます。 コード ベースが示されていない場合、ランタイムは、通常の方法でアセンブリをプローブします。 詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)します。  
@@ -69,4 +69,4 @@ ms.locfileid: "55258991"
 - [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [.NET Framework アプリの構成](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [構成ファイルを使用してアプリを構成します。](index.md)
