@@ -2,12 +2,12 @@
 title: 参照
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583065"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904710"
 ---
 # <a name="reference"></a>参照
 このセクションには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用する開発者向けのリファレンス情報が用意されています。  
@@ -40,8 +40,9 @@ ms.locfileid: "48583065"
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 関連トピックのポータルを提供します。  
   
- [統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 関連トピックのポータルを提供します。  
+ [統合言語クエリ (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [統合言語クエリ (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ 用のポータルを提供します。[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]トピック。  
   
  [LinqDataSource テクノロジの概要](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  <xref:System.Web.UI.WebControls.LinqDataSource> コントロールが [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] データソース コントロールのアーキテクチャを通じて[!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] を Web 開発者に公開する方法について説明します。

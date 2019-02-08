@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612828"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904141"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 このほかに、安全な [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションを作成するための推奨事項にも従うようにしてください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
@@ -38,7 +38,7 @@ ms.locfileid: "54612828"
   
 -   保護構成を使用して構成ファイル セクションを暗号化する。  
   
-     ASP.NET には、保護構成と呼ばれる、構成ファイルの機密情報を暗号化するための機能が用意されています。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 新しい保護構成機能の詳細については、次を参照してください。[暗号化構成を使用して保護された構成情報](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)します。  
+     ASP.NET には、保護構成と呼ばれる、構成ファイルの機密情報を暗号化するための機能が用意されています。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 新しい保護構成機能の詳細については、次を参照してください。[暗号化構成を使用して保護された構成情報](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))します。  
   
 -   セキュリティで保護された構成ファイルに接続文字列を格納する。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "54612828"
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] では、クエリ述語やパラメーター名で使用される値に悪質な入力を渡すことによって SQL インジェクション攻撃が行われる可能性があります。 SQL インジェクションが行われないようにするため、ユーザー入力を [!INCLUDE[esql](../../../../../includes/esql-md.md)] コマンド テキストと組み合わせないようにしてください。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリでは、リテラルを渡すことのできる場所であればどこででもパラメーターを渡すことができます。 外部エージェントから受け取ったリテラルを直接クエリに挿入することは避け、パラメーター化クエリを使用するようにしてください。 クエリ ビルダー メソッドを使用して安全に作成することも検討する必要があります[Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0)します。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリでは、リテラルを渡すことのできる場所であればどこででもパラメーターを渡すことができます。 外部エージェントから受け取ったリテラルを直接クエリに挿入することは避け、パラメーター化クエリを使用するようにしてください。 使用を検討する必要がありますも[クエリ ビルダー メソッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))Entity SQL を安全に作成します。  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] インジェクション攻撃:  
   
@@ -132,7 +132,7 @@ ms.locfileid: "54612828"
  エンティティ型を生成したり操作したりする際には次の点に注意する必要があります。  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>ObjectContext を複数のアプリケーション ドメインで共有しない  
- <xref:System.Data.Objects.ObjectContext> を複数のアプリケーション ドメインで共有すると接続文字列の情報が漏洩する可能性があります。 代わりに、シリアル化したオブジェクトやオブジェクト グラフをもう一方のアプリケーション ドメインに転送して、そのアプリケーション ドメインでそれらのオブジェクトを <xref:System.Data.Objects.ObjectContext> にアタッチするようにしてください。 詳細については、次を参照してください。[オブジェクトのシリアル化](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)します。  
+ <xref:System.Data.Objects.ObjectContext> を複数のアプリケーション ドメインで共有すると接続文字列の情報が漏洩する可能性があります。 代わりに、シリアル化したオブジェクトやオブジェクト グラフをもう一方のアプリケーション ドメインに転送して、そのアプリケーション ドメインでそれらのオブジェクトを <xref:System.Data.Objects.ObjectContext> にアタッチするようにしてください。 詳細については、次を参照してください。[オブジェクトのシリアル化](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))します。  
   
 #### <a name="prevent-type-safety-violations"></a>型の安全性違反を防止する  
  型の安全性違反が発生すると、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] でオブジェクトのデータの整合性が保証されなくなります。 型の安全性違反は、信頼できないアプリケーションを完全信頼のコード アクセス セキュリティで実行できるようにすると発生する可能性があります。  

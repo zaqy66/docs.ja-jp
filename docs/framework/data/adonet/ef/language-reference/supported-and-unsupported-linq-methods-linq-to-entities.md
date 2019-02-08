@@ -2,12 +2,12 @@
 title: サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: a1a5f9f1789d8c0446a2816c2c07f61b6a373869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710379"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904287"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)
 このセクションでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでサポート対象またはサポート非対象になっている統合言語クエリ (LINQ) 標準クエリ演算子について説明します。 LINQ 標準クエリ演算子の多くには、整数の引数を取るオーバーロード バージョンがあります。 整数の引数は、操作されるシーケンス内の 0 から始まるインデックスに対応する<xref:System.Collections.Generic.IEqualityComparer%601>、または<xref:System.Collections.Generic.IComparer%601>します。 特に指定がなければ、LINQ 標準クエリ演算子のオーバーロード バージョンはサポートされず、このバージョンを使用しようとすると例外がスローされます。  
@@ -145,7 +145,7 @@ ms.locfileid: "54710379"
 |<xref:System.Linq.Queryable.Sum%2A>|サポートなし|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>型メソッド  
- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] では、CLR 型変換とテストを処理する LINQ 標準クエリ演算子がサポートされています。 LINQ to Entities では、概念モデルの型にマップする CLR 型のみがサポートされています。 概念モデルの型の一覧は、次を参照してください。[概念モデルの型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)します。 次の表に、サポート対象の型メソッドとサポート非対象の型メソッドを示します。  
+ CLR 型の変換とテストを処理する LINQ 標準クエリ演算子は、Entity Framework でサポートされます。 LINQ to Entities では、概念モデルの型にマップする CLR 型のみがサポートされています。 概念モデルの型の一覧は、次を参照してください。[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)します。 次の表に、サポート対象の型メソッドとサポート非対象の型メソッドを示します。  
   
 |メソッド|Support|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
 |------------|-------------|-------------------------------------|--------------------------|  
