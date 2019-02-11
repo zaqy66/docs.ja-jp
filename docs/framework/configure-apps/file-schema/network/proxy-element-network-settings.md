@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55256864"
 ---
-# <a name="proxy-element-network-settings"></a>\<プロキシ > 要素 (ネットワーク設定)
+# <a name="proxy-element-network-settings"></a>\<proxy> 要素 (ネットワーク設定)
 プロキシ サーバーを定義します。  
   
  \<configuration>  
