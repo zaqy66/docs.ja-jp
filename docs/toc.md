@@ -191,9 +191,11 @@
 ### [dotnet-svcutil.xmlserializer](core/additional-tools/dotnet-svcutil.xmlserializer-guide.md)
 ### [XML シリアライザー ジェネレーター](core/additional-tools/xml-serializer-generator.md)
 ## [.NET Framework からの移植](core/porting/index.md)
-### [.NET Core のプロジェクトの整理](core/porting/project-structure.md)
+### [.NET Core で使用できない .NET Framework テクノロジ](core/porting/net-framework-tech-unavailable.md)
 ### [サードパーティの依存関係の分析](core/porting/third-party-deps.md)
 ### [ライブラリの移植](core/porting/libraries.md)
+### [.NET Core のプロジェクトの整理](core/porting/project-structure.md)
+### [.NET Core への移植で役立つツール](core/porting/tools.md)
 ### [Windows 互換機能パックの使用](core/porting/windows-compat-pack.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [ソースから .NET Core をビルドする](core/build/index.md)
