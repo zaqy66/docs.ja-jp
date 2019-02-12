@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55279163"
 ---
-# <a name="option-keyword-statement"></a>オプション\<キーワード > ステートメント
+# <a name="option-keyword-statement"></a>Option\<keyword> ステートメント
 ソース ファイル全体に適用されるコンパイラ オプションを指定するステートメントについて説明します。  
   
 ## <a name="remarks"></a>Remarks  
