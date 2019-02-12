@@ -1,5 +1,5 @@
 ---
-title: <clear> の <appSettings> 要素
+title: <appSettings>の<clear>要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55278579"
 ---
-# <a name="clear-element-for-appsettings"></a>\<クリア > 要素の\<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<appSettings>の\<clear>要素
 
 カスタム アプリケーションの設定をクリアします。
 
