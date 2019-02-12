@@ -2,12 +2,12 @@
 title: SQL Server のクエリ通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636691"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092294"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server のクエリ通知
 クエリ通知は Service Broker インフラストラクチャに基づいて構築されており、データが変更されたときにクエリ通知を使用してアプリケーションに通知できます。 この機能は、Web アプリケーションなど、データベースから情報のキャッシュを提供し、ソース データが変更された場合に通知を必要とするアプリケーションに特に役立ちます。  
@@ -26,17 +26,17 @@ ms.locfileid: "54636691"
   
  セクションを参照してデータが変更されたときに、信頼できる即時の通知が必要なアプリケーションを開発している場合、**効率的なクエリ通知戦略の計画**と**クエリに代わる方法通知**で、[通知の計画](https://go.microsoft.com/fwlink/?LinkId=211984)SQL Server オンライン ブックのトピックです。 クエリ通知と SQL Server Service Broker の詳細については、次の SQL Server オンライン ブックのトピックへのリンクを参照してください。  
   
- **SQL Server オンライン ブック**  
+ **SQL Server のドキュメント**  
   
--   [クエリ通知の使用](https://msdn.microsoft.com/library/ms175110.aspx)  
+-   [クエリ通知の使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [通知のクエリを作成します。](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [通知のクエリを作成します。](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
+-   [開発 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Service Broker 開発者向けの情報](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker 開発者向けの情報](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [開発 (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クエリ通知の有効化](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -53,13 +53,15 @@ ms.locfileid: "54636691"
   
 ## <a name="reference"></a>参照  
  <xref:System.Data.Sql.SqlNotificationRequest>  
- <xref:System.Data.Sql.SqlNotificationRequest> クラスおよびそのすべてのメンバーについて説明します。  
+ 
+  <xref:System.Data.Sql.SqlNotificationRequest> クラスおよびそのすべてのメンバーについて説明します。  
   
  <xref:System.Data.SqlClient.SqlDependency>  
  <xref:System.Data.SqlClient.SqlDependency> クラスおよびそのすべてのメンバーについて説明します。  
   
  <xref:System.Web.Caching.SqlCacheDependency>  
- <xref:System.Web.Caching.SqlCacheDependency> クラスおよびそのすべてのメンバーについて説明します。  
+ 
+  <xref:System.Web.Caching.SqlCacheDependency> クラスおよびそのすべてのメンバーについて説明します。  
   
 ## <a name="see-also"></a>関連項目
 - [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

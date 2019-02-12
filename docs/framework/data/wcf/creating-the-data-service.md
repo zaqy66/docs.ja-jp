@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d7ab227a19eeb9bf054700f8d932b75cf3c1ddc9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 361582866dabf51665e1dc94fdc49e8710d8ad3e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772742"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091826"
 ---
 # <a name="create-the-data-service"></a>データ サービスを作成する
 
-このトピックでは、公開する WCF Data Services を使用するサンプル データ サービスを作成する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィード、Northwind サンプル データベースに基づいています。 このタスクに必要な基本手順は次のとおりです。
+このトピックでは、公開する WCF Data Services を使用するサンプル データ サービスを作成する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィード、Northwind サンプル データベースに基づいています。 この作業に必要な基本手順は次のとおりです。
 
 1. ASP.NET Web アプリケーションを作成します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "43772742"
 
 5. 次の手順のいずれかの手順を実行して、データ モデルをデータベースに接続し、**次**:
 
-    -   既に構成されているデータベース接続を持っていない場合はクリックして**新しい接続**し、新しい接続を作成します。 詳細については、次を参照してください。[方法: SQL Server データベースへの接続を作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))です。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    -   既に構成されているデータベース接続を持っていない場合はクリックして**新しい接続**し、新しい接続を作成します。 詳細については、「[方法 :SQL Server データベースへの接続を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))します。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または -
 
@@ -103,4 +103,4 @@ Northwind サンプル データベースに基づいている OData フィー�
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

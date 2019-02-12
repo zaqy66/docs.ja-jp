@@ -1,13 +1,13 @@
 ---
 title: F#コードの書式設定に関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254824"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093620"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-開始トークンを配置する、新しい行で、新しい行に終了トークンは、レコードのメンバー、またはインターフェイスの実装を宣言する場合はお勧めです。
+開始トークンを配置する、新しい行で、新しい行に終了トークンは、レコードのメンバー、またはインターフェイスの実装を宣言する場合に推奨されます。
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -389,7 +389,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-開始を配置することと、タブ付きトークンを新しい行に、内容、1 つのスコープ、新しい行に終了トークンが使用する場合は、なるべく。
+開始を配置して、タブ付きトークンを新しい行に、内容、1 つのスコープ、新しい行に終了トークンがいる場合に適しています。
 
 * インデントの異なるスコープを使用したコード内でレコードを移動します。
 * 関数にパイプすること
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 リストと配列の要素の場合と同じ規則が適用されます。
+
+## <a name="formatting-copy-and-update-record-expressions"></a>レコードのコピーと更新の式を書式設定
+
+レコードのコピーと更新式はまだ、レコードのようなガイドラインが適用されます。
+
+短い式は、1 行に収めることができます。
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+長い式では、新しい行を使用する必要があります。
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+として、レコードのガイダンスとすることも、中かっこの別々 の行を割り当てるし、式の右側に 1 つのスコープにインデントを設定します。 でかっこがない場合、オプションの値をラッピングなどのいくつかの特殊なケースでする必要があります 1 行に中かっこを保持することを確認してください。
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>書式設定のリストと配列
 
@@ -759,7 +795,7 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>書式設定リテラル
 
-[F#リテラル](../language-reference/literals.md)を使用して、`Literal`属性を独自の行に属性を配置し、camelCase 名前付けを使用する必要がある必要があります。
+[F#リテラル](../language-reference/literals.md)を使用して、`Literal`属性が独自の行に属性を配置し、camelCase 名前付けを使用する必要があります。
 
 ```fsharp
 [<Literal>]

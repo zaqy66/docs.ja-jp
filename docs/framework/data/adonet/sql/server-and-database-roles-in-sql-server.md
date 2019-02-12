@@ -2,12 +2,12 @@
 title: SQL Server のサーバー ロールとデータベース ロール
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643079"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091813"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server のサーバー ロールとデータベース ロール
 SQL Server では、すべてのバージョンで、個々のユーザーではなくロール (つまり、ユーザーのグループ) に対して権限を割り当てることのできるロール ベースのセキュリティが使用されています。 固定サーバー ロールおよび固定データベース ロールには、固定された一連の権限が割り当てられています。  
@@ -27,8 +27,8 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[サーバー レベル ロール](/sql/relational-databases/security/authentication-access/server-level-roles)と[固定サーバー ロールの権限](https://msdn.microsoft.com/library/ms175892.aspx)で SQL Server オンライン ブック|固定サーバー ロールと SQL Server に関連付けられている権限について説明します。|  
-|[データベース レベル ロール](/sql/relational-databases/security/authentication-access/database-level-roles)と[固定データベース ロールのアクセス許可](https://msdn.microsoft.com/library/ms189612.aspx)で SQL Server オンライン ブック|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
+|[サーバー レベルのロール](/sql/relational-databases/security/authentication-access/server-level-roles)|固定サーバー ロールと SQL Server に関連付けられている権限について説明します。|  
+|[データベース レベル ロール](/sql/relational-databases/security/authentication-access/database-level-roles)|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
   
 ## <a name="database-roles-and-users"></a>データベース ロールおよびユーザー  
  データベース ユーザー アカウントはデータベース オブジェクトを扱う関係上、ログインにマップされている必要があります。 データベース ユーザーをデータベース ロールに追加すると、そのロールに関連付けられたすべての権限セットが継承されます。 すべての権限を付与できます。  
@@ -39,12 +39,14 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
  `public` ロールは、システム データベースを含め、すべてのデータベースに存在します。 このロールは削除できません。また、ユーザーを追加したり削除したりすることもできません。 他のすべてのユーザーおよびロールは既定で `public` ロールに所属するため、`public` ロールに付与された権限を継承します。 `public` には、すべてのユーザーに割り当てる必要のある権限だけを付与してください。  
   
 ### <a name="the-dbo-user-account"></a>dbo ユーザー アカウント  
- `dbo` (データベース所有者) は、データベースのすべてのアクティビティを実行する暗黙権限を持ったユーザー アカウントです。 `sysadmin` 固定サーバー ロールのメンバーは、自動的に `dbo` にマップされます。  
+ `dbo` (データベース所有者) は、データベースのすべてのアクティビティを実行する暗黙権限を持ったユーザー アカウントです。 
+  `sysadmin` 固定サーバー ロールのメンバーは、自動的に `dbo` にマップされます。  
   
 > [!NOTE]
 >  `dbo` 説明したように、スキーマの名前をも[所有権と SQL Server のユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)します。  
   
- `dbo` ユーザー アカウントは、よく `db_owner` 固定データベース ロールと混同されます。 `db_owner` のスコープがサーバー全体であるのに対し、`sysadmin` のスコープはデータベースです。 `db_owner` ロールのメンバーであるからといって、`dbo` のユーザー権限があるとは限りません。  
+ 
+  `dbo` ユーザー アカウントは、よく `db_owner` 固定データベース ロールと混同されます。 `db_owner` のスコープがサーバー全体であるのに対し、`sysadmin` のスコープはデータベースです。 `db_owner` ロールのメンバーであるからといって、`dbo` のユーザー権限があるとは限りません。  
   
 ### <a name="the-guest-user-account"></a>guest ユーザー アカウント  
  認証されて SQL Server のインスタンスへのログインが許可されたユーザーが、その後、データベースにアクセスするためには各データベースに別個のユーザー アカウントが存在している必要があります。 データベースごとにユーザー アカウントが要求されるため、SQL Server のインスタンスに接続したとしても、ユーザーは、サーバー上のすべてのデータベースにアクセスできるわけではありません。 この要件を回避するには、データベースに `guest` ユーザー アカウントを設定します。guest ユーザーは、データベースにユーザー アカウントがなくてもデータベースにログインしてアクセスできます。  
@@ -58,8 +60,8 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[Id およびアクセス制御](https://msdn.microsoft.com/library/bb510418.aspx)で SQL Server オンライン ブック|プリンシパル、ロール、資格情報、セキュリティ保護可能なリソース、および権限について説明したトピックへのリンクが含まれています。|  
-|[プリンシパル](/sql/relational-databases/security/authentication-access/principals-database-engine)で SQL Server オンライン ブック|プリンシパルの説明のほか、サーバー ロールとデータベース ロールについて説明したトピックへのリンクが含まれています。|  
+|[データベース エンジンの権限の概要](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|プリンシパル、ロール、資格情報、セキュリティ保護可能なリソース、および権限について説明したトピックへのリンクが含まれています。|  
+|[プリンシパル](/sql/relational-databases/security/authentication-access/principals-database-engine)|プリンシパルの説明のほか、サーバー ロールとデータベース ロールについて説明したトピックへのリンクが含まれています。|  
   
 ## <a name="see-also"></a>関連項目
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

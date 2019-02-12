@@ -2,12 +2,12 @@
 title: SQL Server での複数データベースにまたがるアクセスの有効化
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 785f1a1bb66af0fade84444c0484acb17368ccf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b98d06e3f8ff8e34530be8e9ffbf13a788f3147
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596879"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093854"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server での複数データベースにまたがるアクセスの有効化
 複数データベースの組み合わせ所有権は、あるデータベースのプロシージャが、別のデータベースのオブジェクトに依存している場合に作用します。 複数データベースの組み合わせ所有権は、単一データベースの組み合わせ所有権とほぼ同じように機能しますが、所有権の連鎖性を保つために、すべてのオブジェクトの所有者が同じログイン アカウントにマップされていることが必要です。 ソース データベース内のソース オブジェクトおよびターゲット データベース内のターゲット オブジェクトが同じログイン アカウントによって所有されている場合、ターゲット オブジェクトに対する権限は SQL Server によってチェックされません。  
@@ -48,7 +48,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[EXECUTE AS の使用によるデータベースの権限借用の拡張](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx)と[Cross DB Ownership Chaining オプション](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)SQL Server オンライン ブックします。|クロス データベースの SQL Server のインスタンスの組み合わせ所有権を構成する方法について説明します。|  
+|[EXECUTE AS の使用によるデータベースの権限借用の拡張](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))と[Cross DB Ownership Chaining オプション](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)します。|記事では、複数データベースの SQL Server のインスタンスの組み合わせ所有権を構成する方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

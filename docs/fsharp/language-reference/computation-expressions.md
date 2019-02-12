@@ -2,12 +2,12 @@
 title: コンピュテーション式
 description: 計算を作成するための便利な構文を作成する方法についてF#、制御できることがシーケンス処理されたと結合を使用してフローの作成とバインドします。
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610698"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093516"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
@@ -218,6 +218,7 @@ F#コア ライブラリが 3 つの組み込みのコンピュテーション�
 |`Yield`|`'T -> M<'T>`|に対して呼び出されて`yield`コンピュテーション式内の式。|
 |`YieldFrom`|`M<'T> -> M<'T>`|に対して呼び出されて`yield!`コンピュテーション式内の式。|
 |`Zero`|`unit -> M<'T>`|空のという`else`の分岐`if...then`コンピュテーション式内の式。|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|コンピュテーション式に渡されることを示します、`Run`引用符としてメンバー。 見積に計算のすべてのインスタンスを変換します。|
 
 ビルダー クラスのメソッドの多くを使用し、返す、`M<'T>`コンス トラクターは、たとえば、結合している計算の種類の特性を設定するとは別に定義されている型は通常、`Async<'T>`ための非同期ワークフローと`Seq<'T>`ワークフローのシーケンス。 これらのメソッドのシグネチャは、1 つの構築から返されるワークフロー オブジェクトは、次に渡すことができるようにそれらを結合し、相互に入れ子に有効にします。 計算式を解析するとき、コンパイラは、上記の表に、メソッドとそのコンピュテーション式のコードを使用して、一連の入れ子になった関数呼び出しに式を変換します。
 

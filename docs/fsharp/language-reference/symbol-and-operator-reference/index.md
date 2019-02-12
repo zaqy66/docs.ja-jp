@@ -1,13 +1,13 @@
 ---
 title: シンボルと演算子のリファレンス
 description: シンボルと F# のプログラミング言語で使用される演算子について説明します。
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613805"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092944"
 ---
 # <a name="symbol-and-operator-reference"></a>シンボルと演算子のリファレンス
 
@@ -133,7 +133,7 @@ ms.locfileid: "53613805"
 |`or`, <code>&#124;&#124;</code>|Left|
 |`&`, `&&`|Left|
 |`:>`, `:?>`|権限|
-|`!=`*op*、 `<` *op*、 `>` *op*、 `=`、 <code>&#124;</code> *op*、 `&` *op*, `&`<br /><br />(`<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&` を含む)|Left|
+|`<`*op*、 `>` *op*、 `=`、 <code>&#124;</code> *op*、 `&` *op*、 `&`<br /><br />(`<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&` を含む)|Left|
 |`^`*op*<br /><br />(`^^^` を含む)|権限|
 |`::`|権限|
 |`:?`|非結合|

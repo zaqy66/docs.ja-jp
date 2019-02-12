@@ -1,13 +1,13 @@
 ---
 title: 型拡張
 description: 学習方法F#型の拡張機能により、定義済みのオブジェクト型に新しいメンバーを追加します。
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066156"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092476"
 ---
 # <a name="type-extensions"></a>型の拡張機能
 
@@ -100,6 +100,8 @@ type IEnumerable<'T> with
 省略可能な拡張機能は、リフレクションして調べる場合は、拡張型には表示されません。 省略可能な拡張機能は、モジュールである必要がありますあり、スコープ内でのみ、拡張機能を含むモジュールが開いているか、それ以外の場合は、スコープ内で場合です。
 
 任意拡張のメンバーはコンパイルされると、静的メンバーになります。このメンバーに対する最初のパラメーターとして、オブジェクト インスタンスが暗黙で渡されます。 ただし、インスタンス メンバーまたはそれらの宣言方法に従って、静的メンバーである場合に機能します。
+
+省略可能な拡張メンバーもに表示されないC#または VB のコンシューマーです。 他でのみ利用F#コード。
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>組み込みと省略可能な型の拡張機能の一般的な制限
 

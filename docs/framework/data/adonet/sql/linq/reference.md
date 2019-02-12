@@ -2,12 +2,12 @@
 title: 参照
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904710"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093360"
 ---
 # <a name="reference"></a>参照
 このセクションには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用する開発者向けのリファレンス情報が用意されています。  
@@ -22,13 +22,15 @@ ms.locfileid: "55904710"
  について説明します、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]へのマッピングから属性ベースのアプローチを[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]オブジェクト モデルを SQL Server データベース。  
   
  [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] でデータベースからメタ情報が取得され、コード ファイルが生成される過程について説明します。  
+ 
+  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] でデータベースからメタ情報が取得され、コード ファイルが生成される過程について説明します。  
   
  [外部マップ](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
  について説明します、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]外部マッピング方式を[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]オブジェクト モデルを SQL Server データベース。 マッピング ファイルの XSD スキーマ定義を示して説明します。  
   
  [よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に関してよく寄せられる質問への回答を示します。  
+ 
+  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に関してよく寄せられる質問への回答を示します。  
   
  [SQL Server Compact および LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
  説明方法[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]内の SQL Server とは異なります[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]アプリケーション。  
@@ -38,11 +40,13 @@ ms.locfileid: "55904710"
   
 ## <a name="related-sections"></a>関連項目  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 関連トピックのポータルを提供します。  
+ 
+  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 関連トピックのポータルを提供します。  
   
  [統合言語クエリ (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  [統合言語クエリ (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  用のポータルを提供します。[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]トピック。  
   
- [LinqDataSource テクノロジの概要](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
- <xref:System.Web.UI.WebControls.LinqDataSource> コントロールが [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] データソース コントロールのアーキテクチャを通じて[!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] を Web 開発者に公開する方法について説明します。
+ [LinqDataSource Web サーバー コントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
+ 
+  <xref:System.Web.UI.WebControls.LinqDataSource> コントロールが [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] データソース コントロールのアーキテクチャを通じて[!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] を Web 開発者に公開する方法について説明します。
