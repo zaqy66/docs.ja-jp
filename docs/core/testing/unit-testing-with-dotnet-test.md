@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168989"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738735"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.csproj
     /PrimeService.Tests
 ```
 
-*PrimeService.Tests* ディレクトリを現在のディレクトリにし、[`dotnet new xunit`](../tools/dotnet-new.md) を使用して新しいプロジェクトを作成します。 このコマンドによって、テスト ライブラリとして xUnit を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、*PrimeServiceTests.csproj* ファイルのテスト ランナーが構成されます。次のようなコードです。
+*PrimeService.Tests* ディレクトリを現在のディレクトリにし、[`dotnet new xunit`](../tools/dotnet-new.md) を使用して新しいプロジェクトを作成します。 このコマンドによって、テスト ライブラリとして [xUnit](https://xunit.github.io/) を使用するテスト プロジェクトが作成されます。 生成されたテンプレートで、*PrimeServiceTests.csproj* ファイルのテスト ランナーが構成されます。次のようなコードです。
 
 ```xml
 <ItemGroup>
@@ -172,4 +172,5 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>その他の技術情報
 
+- [xUnit.net の公式サイト](https://xunit.github.io)
 - [ASP.NET Core のコントローラー ロジックをテストする](/aspnet/core/mvc/controllers/testing)

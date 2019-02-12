@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675089"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828411"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) の新機能
 
@@ -20,11 +20,12 @@ ms.locfileid: "55675089"
 
 .NET Core 3.0 では C# 8.0 のサポートが追加されています。
 
-[.NET Core 3 Preview 2 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、Mac、Linux 上で使い始めましょう。 リリースの詳細については、[.NET Core 3 Preview 2 のリリース ノート](https://aka.ms/netcore3releasenotes)を参照してください。
+[.NET Core 3.0 Preview 2 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、Mac、Linux 上で使い始めましょう。 リリースの詳細については、[.NET Core 3.0 Preview 2 のリリース ノート](https://aka.ms/netcore3releasenotes)を参照してください。
 
-Preview 1 でリリースされた内容の詳細については、[.NET Core 3.0 Preview 1 の発表](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)に関する記事を参照してください。
+各バージョンでリリースされた内容の詳細については、次の発表を参照してください。
 
-Preview 2 でリリースされた内容の詳細については、[.NET Core 3.0 Preview 1 の発表]()に関する記事を参照してください。
+- [.NET Core 3.0 Preview 1 の発表](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 の発表](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
@@ -308,7 +309,7 @@ Windows フォーム ダイアログが WPF コントロールをホストして
 
 [MSIX](https://docs.microsoft.com/windows/msix/) は Windows アプリの新しいパッケージ形式です。 これは、Windows 10 に .NET Core 3.0 のデスクトップ アプリケーションを展開するために使用できます。
 
-[Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 Preview 2 で使用でき、[自己完結型](../deploying/#self-contained-deployments-scd)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
+[Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 Preview 2 で使用でき、[自己完結型](../deploying/index.md#self-contained-deployments-scd)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
 
 >メモ:.NET Core プロジェクト ファイルの `<RuntimeIdentifiers>` プロパティで、サポートされているランタイムを指定する必要があります。
 ```xml

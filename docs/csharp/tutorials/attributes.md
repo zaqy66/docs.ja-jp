@@ -4,12 +4,12 @@ description: C# での属性の機能について説明します。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029828"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826825"
 ---
 # <a name="using-attributes-in-c"></a>C# での属性の使用 #
 
@@ -137,7 +137,7 @@ C# の既定では、属性クラスを作成した場合、その属性は可�
 * `[Obsolete]`。 これは上の例で使用した属性で、`System` 名前空間に格納されています。 この属性は、コード ベースの変更に関する宣言的なドキュメントを提供するのに便利です。 メッセージは文字列の形式で指定でき、別のブール型パラメーターを使用すると、コンパイラの警告をコンパイラのエラーにエスカレートすることができます。
 
 * `[Conditional]`。 この属性は `System.Diagnostics` 名前空間に格納されています。 この属性はメソッド (または属性クラス) に適用できます。 コンス トラクターに文字列を渡す必要があります。
-その文字列が `#define` ディレクティブと一致する場合、そのメソッドの呼び出し (メソッド自体ではありません) が C# コンパイラによって除外されます。 通常、この属性はデバッグ (診断) 目的で使用されます。
+その文字列が `#define` ディレクティブと一致しない場合、そのメソッドの呼び出し (メソッド自体ではありません) が C# コンパイラによって除外されます。 通常、この属性はデバッグ (診断) 目的で使用されます。
 
 * `[CallerMemberName]`。 この属性はパラメーターに使用でき、`System.Runtime.CompilerServices` 名前空間に格納されています。 この属性は、別のメソッドを呼び出しているメソッドの名前を挿入するために使用します。 これは通常、さまざまな UI フレームワークで INotifyPropertyChanged を実装する際に "マジック文字列" を排除するための方法として使用されます。 以下に例を示します。
 

@@ -4,16 +4,16 @@ description: グローバル ツールを作成する方法について説明し
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144588"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826422"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core グローバル ツールを作成する
 
-この記事では、.NET Core グローバル ツールを作成してパッケージ化する方法について説明します。 .NET Core CLI を使用すると、他のユーザーが簡単にインストールして実行できるコンソール アプリケーションをグローバル ツールとして作成できます。 .NET Core グローバル ツールは、.NET Core CLI からインストールされる NuGet パッケージです。 グローバル ツールの詳細については、「[.NET Core Global Tools overview][global-tool-info]」(.NET Core グローバル ツールの概要) を参照してください。
+この記事では、.NET Core グローバル ツールを作成してパッケージ化する方法について説明します。 .NET Core CLI を使用すると、他のユーザーが簡単にインストールして実行できるコンソール アプリケーションをグローバル ツールとして作成できます。 .NET Core グローバル ツールは、.NET Core CLI からインストールされる NuGet パッケージです。 グローバル ツールの詳細については、「[.NET Core グローバル ツールの概要](global-tools.md)」を参照してください。
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ dotnet pack
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-`--add-source` パラメーターで、NuGet パッケージの追加のソース フィードとして `./nupkg` フォルダー (ここでは `<PackageOutputPath>` フォルダー) を一時的に使用するように .NET CoreCLI に指示します。 グローバル ツールのインストールの詳細については、「[.NET Core Global Tools overview][global-tool-info]」(.NET Core グローバル ツールの概要) を参照してください。
+`--add-source` パラメーターで、NuGet パッケージの追加のソース フィードとして `./nupkg` フォルダー (ここでは `<PackageOutputPath>` フォルダー) を一時的に使用するように .NET CoreCLI に指示します。 グローバル ツールのインストールの詳細については、「[.NET Core グローバル ツールの概要](global-tools.md)」を参照してください。
 
 インストールが成功すると、ツールの呼び出しに使用したコマンドとインストールされたバージョンを示す、次の例のようなメッセージが表示されます。
 
@@ -191,5 +191,3 @@ Tool 'botsay' (version '1.0.0') was successfully installed.
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md
