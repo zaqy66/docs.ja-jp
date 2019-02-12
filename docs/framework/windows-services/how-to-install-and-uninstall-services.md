@@ -1,69 +1,73 @@
 ---
-title: '方法: サービスをインストールおよびアンインストールする'
-ms.date: 03/30/2017
+title: '方法: Windows サービスをインストールおよびアンインストールする'
+ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
 - services, uninstalling
 - services, installing
 - installing Windows Services
-- uninstalling applications, Windows Services
-- installation, Windows Services
-- uninstalling Windows Services
+- uninstalling applications, apps, Windows services
+- installation, Windows services
+- uninstalling Windows services
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: eab291528080b75a07c8f8c3994428eafde94568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612816"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826266"
 ---
-# <a name="how-to-install-and-uninstall-services"></a><span data-ttu-id="cbf6b-102">方法: サービスをインストールおよびアンインストールする</span><span class="sxs-lookup"><span data-stu-id="cbf6b-102">How to: Install and Uninstall Services</span></span>
-<span data-ttu-id="cbf6b-103">.NET Framework を使用して Windows サービスを開発している場合は、InstallUtil.exe というコマンド ライン ユーティリティを使用してサービス アプリケーションをすばやくインストールできます。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-103">If you’re developing a Windows Service by using the .NET Framework, you can quickly install your service application by using a command-line utility called InstallUtil.exe.</span></span> <span data-ttu-id="cbf6b-104">開発者は、ユーザーがインストールおよびアンインストールできる Windows サービスをリリースする場合、InstallShield を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-104">If you’re a developer who wants to release a Windows Service that users can install and uninstall  you should use InstallShield.</span></span> <span data-ttu-id="cbf6b-105">「[Windows インストーラー配置](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-105">See [Windows Installer Deployment](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).</span></span>  
+# <a name="how-to-install-and-uninstall-windows-services"></a><span data-ttu-id="24a91-102">方法: Windows サービスをインストールおよびアンインストールする</span><span class="sxs-lookup"><span data-stu-id="24a91-102">How to: Install and uninstall Windows services</span></span>
+<span data-ttu-id="24a91-103">.NET Framework を使用して Windows サービスを開発している場合は、[*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) コマンド ライン ユーティリティを使用してサービス アプリをすばやくインストールできます。</span><span class="sxs-lookup"><span data-stu-id="24a91-103">If you’re developing a Windows service with the .NET Framework, you can quickly install your service app by using the [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) command-line utility.</span></span> <span data-ttu-id="24a91-104">ユーザーがインストールおよびアンインストールできる Windows サービスをリリースする開発者は、InstallShield を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="24a91-104">Developers who want to release a Windows service that users can install and uninstall should use InstallShield.</span></span> <span data-ttu-id="24a91-105">詳細については、「[インストーラー パッケージを作成する (Windows デスクトップ)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="24a91-105">For more information, see [Create an installer package (Windows client)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).</span></span>
   
 > [!WARNING]
->  <span data-ttu-id="cbf6b-106">サービスをコンピューターからアンインストールする場合は、この記事の手順には従わないでください。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-106">If you want to uninstall a service from your computer, don’t follow the steps in this article.</span></span> <span data-ttu-id="cbf6b-107">代わりに、サービスをインストールしたプログラムまたはソフトウェア パッケージを確認し、[コントロール パネル] の **[プログラムの追加と削除]** を選択してそのプログラムをアンインストールします。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-107">Instead, find out which program or software package installed the service, and then choose **Add/Remove Programs** in Control Panel to uninstall that program.</span></span> <span data-ttu-id="cbf6b-108">多くのサービスが Windows の不可欠な構成要素であることに注意してください。それらを削除すると、システムが不安定になることがあります。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-108">Note that many services are integral parts of Windows; if you remove them, you might cause system instability.</span></span>  
+>  <span data-ttu-id="24a91-106">サービスをコンピューターからアンインストールする場合は、この記事の手順には従わないでください。</span><span class="sxs-lookup"><span data-stu-id="24a91-106">If you want to uninstall a service from your computer, don’t follow the steps in this article.</span></span> <span data-ttu-id="24a91-107">代わりに、サービスをインストールしたプログラムまたはソフトウェア パッケージを確認し、[設定] で **[アプリ]** を選択してそのプログラムをアンインストールします。</span><span class="sxs-lookup"><span data-stu-id="24a91-107">Instead, find out which program or software package installed the service, and then choose **Apps** in Settings to uninstall that program.</span></span> <span data-ttu-id="24a91-108">多くのサービスが Windows の不可欠な構成要素であることに注意してください。それらを削除すると、システムが不安定になることがあります。</span><span class="sxs-lookup"><span data-stu-id="24a91-108">Note that many services are integral parts of Windows; if you remove them, you might cause system instability.</span></span>  
   
- <span data-ttu-id="cbf6b-109">この記事の手順を使用するためには、まず、Windows サービスにサービス インストーラーを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-109">In order to use the steps in this article, you first need to add a service installer to your Windows Service.</span></span> <span data-ttu-id="cbf6b-110">「[チュートリアル:コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-110">See [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).</span></span>  
+ <span data-ttu-id="24a91-109">この記事の手順を使用するには、まず、Windows サービスにサービス インストーラーを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="24a91-109">To use the steps in this article, you first need to add a service installer to your Windows service.</span></span> <span data-ttu-id="24a91-110">詳細については、「[チュートリアル:Windows サービス アプリケーションを作成する](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="24a91-110">For more information, see [Walkthrough: Creating a Windows service app](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).</span></span>  
   
- <span data-ttu-id="cbf6b-111">Windows サービス プロジェクトは、F5 キーを押して Visual Studio 開発環境から直接実行することができません。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-111">Windows Service projects cannot be run directly from the Visual Studio development environment by pressing F5.</span></span> <span data-ttu-id="cbf6b-112">これは、プロジェクトを実行する前に、プロジェクトのサービスをインストールする必要があるためです。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-112">This is because the service in the project must be installed before you can run the project.</span></span>  
+ <span data-ttu-id="24a91-111">Windows サービス プロジェクトを、F5 キーを押して Visual Studio 開発環境から直接実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="24a91-111">You can't run Windows service projects directly from the Visual Studio development environment by pressing F5.</span></span> <span data-ttu-id="24a91-112">プロジェクトを実行するには、プロジェクトにサービスを事前にインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="24a91-112">Before you can run the project, you must install the service in the project.</span></span>  
   
 > [!TIP]
->  <span data-ttu-id="cbf6b-113">**サーバー エクスプローラー**を起動して、サービスがインストールまたはアンインストールされているかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-113">You can launch **Server Explorer** and verify that your service has been installed or uninstalled.</span></span> <span data-ttu-id="cbf6b-114">詳細については、「方法:サーバー エクスプローラー/データベース エクスプローラーにアクセスして初期化する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-114">For more information, see How to: Access and Initialize Server Explorer-Database Explorer.</span></span>  
+>  <span data-ttu-id="24a91-113">**サーバー エクスプローラー**を使用して、サービスがインストールまたはアンインストールされているかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="24a91-113">You can use **Server Explorer** to verify that you've installed or uninstalled your service.</span></span> <span data-ttu-id="24a91-114">詳細については、[Visual Studio でのサーバー エクスプローラーの使用方法](https://support.microsoft.com/help/316649/how-to-use-the-server-explorer-in-visual-studio-net-and-visual-studio)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="24a91-114">For more information, see [How to use Server Explorer in Visual Studio](https://support.microsoft.com/help/316649/how-to-use-the-server-explorer-in-visual-studio-net-and-visual-studio).</span></span>
   
-### <a name="to-install-your-service-manually"></a><span data-ttu-id="cbf6b-115">サービスを手動でインストールするには</span><span class="sxs-lookup"><span data-stu-id="cbf6b-115">To install your service manually</span></span>  
+### <a name="install-your-service-manually"></a><span data-ttu-id="24a91-115">サービスを手動でインストールする</span><span class="sxs-lookup"><span data-stu-id="24a91-115">Install your service manually</span></span>  
   
-1.  <span data-ttu-id="cbf6b-116">Windows の **[スタート]** メニューまたは **[スタート]** 画面で、**[Visual Studio]**、**[Visual Studio Tools]**、**[開発者コマンド プロンプト]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-116">On the Windows **Start** menu or **Start** screen, choose **Visual Studio** , **Visual Studio Tools**, **Developer Command Prompt**.</span></span>  
+1.  <span data-ttu-id="24a91-116">**[スタート]** メニューから **[Visual Studio \<*バージョン*>]** ディレクトリを選択し、**[開発者コマンド プロンプト for VS \<*バージョン*>]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="24a91-116">From the **Start** menu, select the **Visual Studio \<*version*>** directory, then select **Developer Command Prompt for VS \<*version*>**.</span></span>
   
-     <span data-ttu-id="cbf6b-117">Visual Studio 用開発者コマンド プロンプトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-117">A Developer Command Prompt for Visual Studio appears.</span></span>  
+     <span data-ttu-id="24a91-117">Visual Studio 用開発者コマンド プロンプトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="24a91-117">The Developer Command Prompt for Visual Studio appears.</span></span> 
   
-2.  <span data-ttu-id="cbf6b-118">プロジェクトのコンパイル済み実行可能ファイルが格納されているディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-118">Access the directory where your project's compiled executable file is located.</span></span>  
+2.  <span data-ttu-id="24a91-118">プロジェクトのコンパイル済み実行可能ファイルが格納されているディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="24a91-118">Access the directory where your project's compiled executable file is located.</span></span>  
   
-3.  <span data-ttu-id="cbf6b-119">プロジェクトの実行可能ファイルをパラメーターとして指定し、コマンド プロンプトから InstallUtil.exe を実行します。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-119">Run InstallUtil.exe from the command prompt with your project's executable as a parameter:</span></span>  
+3.  <span data-ttu-id="24a91-119">プロジェクトの実行可能ファイルをパラメーターとして指定し、コマンド プロンプトから *InstallUtil.exe* を実行します。</span><span class="sxs-lookup"><span data-stu-id="24a91-119">Run *InstallUtil.exe* from the command prompt with your project's executable as a parameter:</span></span>  
   
-    ```  
+    ```console
     installutil <yourproject>.exe  
     ```  
+
+     <span data-ttu-id="24a91-120">Visual Studio 用開発者コマンド プロンプトを使用している場合、*InstallUtil.exe* はシステム パス上にあるはずです。</span><span class="sxs-lookup"><span data-stu-id="24a91-120">If you’re using the Developer Command Prompt for Visual Studio, *InstallUtil.exe* should be on the system path.</span></span> <span data-ttu-id="24a91-121">ない場合は、パスに追加するか、完全修飾パスを使用して起動します。</span><span class="sxs-lookup"><span data-stu-id="24a91-121">Otherwise, you can add it to the path, or use the fully qualified path to invoke it.</span></span> <span data-ttu-id="24a91-122">このツールは、.NET Framework と共に *%WINDIR%\Microsoft.NET\Framework[64]\\<フレームワーク バージョン>* フォルダーにインストールされます。</span><span class="sxs-lookup"><span data-stu-id="24a91-122">This tool is installed with the .NET Framework in *%WINDIR%\Microsoft.NET\Framework[64]\\<framework_version>*.</span></span>
+     
+     <span data-ttu-id="24a91-123">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="24a91-123">For example:</span></span>
+     - <span data-ttu-id="24a91-124">32 ビット バージョンの .NET Framework 4 または 4.5 以降では、Windows のインストール ディレクトリが *C:\Windows* の場合、既定のパスは *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe* です。</span><span class="sxs-lookup"><span data-stu-id="24a91-124">For the 32-bit version of the .NET Framework 4 or 4.5 and later, if your Windows installation directory is *C:\Windows*, the default path is *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.</span></span>
+     - <span data-ttu-id="24a91-125">64 ビット バージョンの .NET Framework 4 または 4.5 以降では、既定のパスは *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe* です。</span><span class="sxs-lookup"><span data-stu-id="24a91-125">For the 64-bit version of the .NET Framework 4 or 4.5 and later, the default path is *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.</span></span>
   
-     <span data-ttu-id="cbf6b-120">Visual Studio 用開発者コマンド プロンプトを使用している場合、InstallUtil.exe はシステム パス上にあるはずです。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-120">If you’re using the Developer Command Prompt for Visual Studio, InstallUtil.exe should be on the system path.</span></span> <span data-ttu-id="cbf6b-121">該当しない場合は、パスに追加するか、完全修飾パスを使用して起動します。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-121">If not, you can add it to the path, or use the fully qualified path to invoke it.</span></span> <span data-ttu-id="cbf6b-122">このツールは .NET Framework と共にインストールされ、パスは `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>` です。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-122">This tool is installed with the .NET Framework, and its path is `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`.</span></span> <span data-ttu-id="cbf6b-123">たとえば、32 ビット版の .NET Framework 4 または 4.5\* では、Windows のインストール ディレクトリが C:\Windows である場合、パスは `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe` になります。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-123">For example, for the 32-bit version of the .NET Framework 4 or 4.5.\*, if your Windows installation directory is C:\Windows, the path is `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`.</span></span> <span data-ttu-id="cbf6b-124">64 ビット版の .NET Framework 4 または 4.5.\* では、既定のパスは `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe` になります。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-124">For the 64-bit version of the .NET Framework 4 or 4.5.\*, the default path is `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`.</span></span>  
+### <a name="uninstall-your-service-manually"></a><span data-ttu-id="24a91-126">サービスを手動でアンインストールする</span><span class="sxs-lookup"><span data-stu-id="24a91-126">Uninstall your service manually</span></span>  
   
-### <a name="to-uninstall-your-service-manually"></a><span data-ttu-id="cbf6b-125">サービスを手動でアンインストールするには</span><span class="sxs-lookup"><span data-stu-id="cbf6b-125">To uninstall your service manually</span></span>  
+1. <span data-ttu-id="24a91-127">**[スタート]** メニューから **[Visual Studio \<*バージョン*>]** ディレクトリを選択し、**[開発者コマンド プロンプト for VS \<*バージョン*>]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="24a91-127">From the **Start** menu, select the **Visual Studio \<*version*>** directory, then select **Developer Command Prompt for VS \<*version*>**.</span></span>
   
-1.  <span data-ttu-id="cbf6b-126">Windows の **[スタート]** メニューまたは **[スタート]** 画面で、**[Visual Studio]**、**[Visual Studio Tools]**、**[開発者コマンド プロンプト]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-126">On the Windows **Start** menu or **Start** screen, choose **Visual Studio**, **Visual Studio Tools**, **Developer Command Prompt**.</span></span>  
+     <span data-ttu-id="24a91-128">Visual Studio 用開発者コマンド プロンプトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="24a91-128">The Developer Command Prompt for Visual Studio appears.</span></span>  
   
-     <span data-ttu-id="cbf6b-127">Visual Studio 用開発者コマンド プロンプトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-127">A Developer Command Prompt for Visual Studio appears.</span></span>  
+2.  <span data-ttu-id="24a91-129">プロジェクトの出力先ファイルをパラメーターとして指定し、コマンド プロンプトから *InstallUtil.exe* を実行します。</span><span class="sxs-lookup"><span data-stu-id="24a91-129">Run *InstallUtil.exe* from the command prompt with your project's output as a parameter:</span></span>  
   
-2.  <span data-ttu-id="cbf6b-128">プロジェクトの出力先ファイルをパラメーターとして指定し、コマンド プロンプトから InstallUtil.exe を実行します。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-128">Run InstallUtil.exe from the command prompt with your project's output as a parameter:</span></span>  
-  
-    ```  
+    ```console  
     installutil /u <yourproject>.exe  
     ```  
   
-3.  <span data-ttu-id="cbf6b-129">場合によっては、サービスの実行可能ファイルを削除した後も、レジストリ内にサービスが存在したままになることがあります。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-129">Sometimes, after the executable for a service is deleted, the service might still be present in the registry.</span></span> <span data-ttu-id="cbf6b-130">このような場合は、コマンド [sc delete](/windows-server/administration/windows-commands/sc-delete) を使って、レジストリからサービスのエントリを削除します。</span><span class="sxs-lookup"><span data-stu-id="cbf6b-130">In that case, use the command [sc delete](/windows-server/administration/windows-commands/sc-delete) to remove the entry for the service from the registry.</span></span>  
+3. <span data-ttu-id="24a91-130">実行可能ファイルを削除した後も、レジストリ内にサービスが存在したままになることがあります。</span><span class="sxs-lookup"><span data-stu-id="24a91-130">After the executable for a service is deleted, the service might still be present in the registry.</span></span> <span data-ttu-id="24a91-131">このような場合は、コマンド [sc delete](/windows-server/administration/windows-commands/sc-delete) を使って、レジストリからサービスのエントリを削除します。</span><span class="sxs-lookup"><span data-stu-id="24a91-131">If that's the case, use the command [sc delete](/windows-server/administration/windows-commands/sc-delete) to remove the entry for the service from the registry.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cbf6b-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbf6b-131">See also</span></span>
-- [<span data-ttu-id="cbf6b-132">Windows サービス アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="cbf6b-132">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [<span data-ttu-id="cbf6b-133">方法: Windows サービスを作成する</span><span class="sxs-lookup"><span data-stu-id="cbf6b-133">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [<span data-ttu-id="cbf6b-134">方法: サービス アプリケーションにインストーラーを追加する</span><span class="sxs-lookup"><span data-stu-id="cbf6b-134">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [<span data-ttu-id="cbf6b-135">Installutil.exe (インストーラー ツール)</span><span class="sxs-lookup"><span data-stu-id="cbf6b-135">Installutil.exe (Installer Tool)</span></span>](../../../docs/framework/tools/installutil-exe-installer-tool.md)
+## <a name="see-also"></a><span data-ttu-id="24a91-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="24a91-132">See also</span></span>
+- [<span data-ttu-id="24a91-133">Windows サービス アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="24a91-133">Introduction to Windows service applications</span></span>](../windows-services/introduction-to-windows-service-applications.md)
+- [<span data-ttu-id="24a91-134">方法: Windows サービスを作成する</span><span class="sxs-lookup"><span data-stu-id="24a91-134">How to: Create Windows services</span></span>](../windows-services/how-to-create-windows-services.md)
+- [<span data-ttu-id="24a91-135">方法: サービス アプリケーションにインストーラーを追加する</span><span class="sxs-lookup"><span data-stu-id="24a91-135">How to: Add installers to your service application</span></span>](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [<span data-ttu-id="24a91-136">Installutil.exe (インストーラー ツール)</span><span class="sxs-lookup"><span data-stu-id="24a91-136">Installutil.exe (Installer tool)</span></span>](../tools/installutil-exe-installer-tool.md)
