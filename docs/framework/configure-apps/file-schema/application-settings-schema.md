@@ -26,18 +26,18 @@ ms.locfileid: "55083471"
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings>** | すべてを含む**\<設定 >** アプリケーションに固有のタグ。                         |
 | **\<userSettings>**        | すべてが含まれます**\<設定 >** タグは、現在のユーザーを特定します。                        |
-| **\<設定 >**             | 設定を定義します。 いずれかの子 **\<applicationSettings >** または **\<userSettings >** します。 |
+| **\<setting>**             | 設定を定義します。 いずれかの子 **\<applicationSettings >** または **\<userSettings>** します。 |
 | **\<value>**               | 設定の値を定義します。 子**\<設定 >** します。                                   |
 
-## <a name="applicationsettings-element"></a>\<applicationSettings > 要素
+## <a name="applicationsettings-element"></a>\<applicationSettings> 要素
 
 この要素には、すべてが含まれています**\<設定 >** クライアント コンピューターにアプリケーションのインスタンスに固有のタグ。 属性は定義されません。
 
-## <a name="usersettings-element"></a>\<userSettings > 要素
+## <a name="usersettings-element"></a>\<userSettings> 要素
 
-この要素には、すべてが含まれています**\<設定 >** アプリケーションが現在使用してユーザーに固有のタグ。 属性は定義されません。
+この要素には、すべてが含まれています**\<設定>** アプリケーションが現在使用してユーザーに固有のタグ。 属性は定義されません。
 
-## <a name="setting-element"></a>\<設定 > 要素
+## <a name="setting-element"></a>\<setting> 要素
 
 この要素は、設定を定義します。 次の属性があります。
 
@@ -46,7 +46,7 @@ ms.locfileid: "55083471"
 | **name**         | 必須。 設定の一意の ID。 Visual Studio で作成した設定は、名前で保存は`ProjectName.Properties.Settings`します。 |
 | **serializedAs** | 必須。 テキスト値をシリアル化するために使用する形式。 次の値を指定できます。<br><br>- `string`。 使用して文字列として値をシリアル化、<xref:System.ComponentModel.TypeConverter>します。<br>- `xml`。 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`。 値は、バイナリ シリアル化を使用して、テキスト エンコードされたバイナリとしてシリアル化されます。<br />- `custom`。 設定プロバイダーは、この設定の固有の情報しシリアル化し、逆シリアル化します。 |
 
-## <a name="value-element"></a>\<値 > 要素
+## <a name="value-element"></a>\<value> 要素
 
 この要素には、設定の値が含まれています。
 
