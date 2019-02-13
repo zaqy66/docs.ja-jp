@@ -1,15 +1,15 @@
 ---
 title: Docker コンテナー、イメージ、レジストリ
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: レジストリにアプリケーションを展開する Docker の方法で全体的な再生される重要な役割について説明します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: af235280c985d20f9e6a2ee6096edbe6c3aad63a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 7a2e20e09561a5cc91aa29059fb8d19a14205bb5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142750"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221200"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker コンテナー、イメージ、レジストリ
 
@@ -35,4 +35,4 @@ Docker を使用する場合、およびその依存関係コンテナー イメ
 
 >[!div class="step-by-step"]
 >[前へ](docker-terminology.md)
->[次へ](Docker-application-lifecycle/index.md)
+>[次へ](road-to-modern-applications-based-on-containers.md)

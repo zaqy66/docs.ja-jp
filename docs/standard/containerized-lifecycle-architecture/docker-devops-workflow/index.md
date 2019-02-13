@@ -1,15 +1,15 @@
 ---
-title: Microsoft ツールを使用した Docker アプリケーション devops ワークフロー
-description: Microsoft プラットフォームでのコンテナー化された Docker アプリケーションのライフサイクルと Microsoft ツールでの Toolsdevops ワークフロー
+title: Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
+description: Microsoft のツールを使用して Microsoft プラットフォームとツールの DevOps ワークフローにコンテナー化された Docker アプリケーション ライフ サイクル
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: a2d88dda9f3560675fcb6826960c6e76fa7daf92
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128441"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219076"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 
@@ -34,5 +34,5 @@ Visual Studio Team Foundation Server、オンプレミス、と共に、クラ�
 -   組織は、Azure Container Registry に格納されたプライベート イメージから Docker コンテナーを、Azure Resource Manager テンプレートと既に使い慣れているツールを使用して、(Data、PaaS などの) Azure コンポーネントの任意の依存関係と共に簡単にプロビジョニングできます。
 
 >[!div class="step-by-step"]
->[前へ](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[前へ](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
 >[次へ](docker-application-outer-loop-devops-workflow.md)

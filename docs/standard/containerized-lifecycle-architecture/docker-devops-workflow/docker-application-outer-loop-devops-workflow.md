@@ -1,15 +1,15 @@
 ---
 title: Docker アプリケーションの外側のループ DevOps ワークフローの手順を実行します。
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: DevOps ワークフローの「外側のループ」手順を説明します
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143650"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220940"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順を実行します。
 
@@ -21,11 +21,11 @@ ms.locfileid: "53143650"
 
 次に、それぞれの手順を詳しく見ていきましょう。
 
-## <a name="step-1-inner-loop-development-workflow"></a>手順 1:内部ループ開発ワークフロー
+## <a name="step-1-inner-loop-development-workflow"></a>手順 1: 内部ループ開発ワークフロー
 
 この手順は、第 4 章で詳しく説明を要約すると、ここでは、外側のループ開始位置となる、開発者が CI パイプラインのアクションの開始 (Git) のようなソース コントロール管理システムにコードをプッシュする時点。
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>手順 2:ソース コード管理の統合と Azure DevOps サービスと Git による管理
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>手順 2: ソース コード管理の統合と Azure DevOps サービスと Git による管理
 
 この手順では、チームのさまざまな開発者から、すべてのコードの統合されたバージョンを収集するバージョン管理システムに用意する必要があります。
 
@@ -35,7 +35,7 @@ ms.locfileid: "53143650"
 
 Azure DevOps サービスと Team Foundation Server は、Git と Team Foundation バージョン管理をサポートします。 それらの間を選択し、エンド ツー エンドの Microsoft エクスペリエンスを使用できます。 ただし、管理することもできます (GitHub、Git リポジトリをオンプレミス、または Subversion) ような外部リポジトリでは、コードとそれに接続し、DevOps の CI パイプラインの開始点としてコードを取得できます。
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>手順 3:ビルド、CI、統合、および Azure DevOps を使用してテスト サービスと Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>手順 3: ビルド、CI、統合、および Azure DevOps を使用してテスト サービスと Docker
 
 CI が最新のソフトウェアのテストおよび配信のための標準として登場しました。 Docker ソリューションでは、開発および運用チーム間での問題を明確に分離を維持します。 Docker イメージの不変性により、どのような開発、CI、テストおよび運用環境で実行が間に反復可能なデプロイ。 Docker エンジン開発者向けのノート パソコンに展開し、テスト インフラストラクチャは、環境間で、コンテナーを移植性。
 
@@ -157,7 +157,7 @@ Azure Container Registry、Amazon Web Services Container Registry、Google Conta
 
 **詳細については** 詳細については、Azure DevOps サービスの Docker 拡張機能に移動します。<https://aka.ms/vstsdockerextension>します。 Azure Container Registry の詳細については、するには<https://aka.ms/azurecontainerregistry>します。
 
-## <a name="step-4-cd-deploy"></a>手順 4:CD、展開
+## <a name="step-4-cd-deploy"></a>手順 4: CD、展開
 
 Docker イメージの不変性により、反復可能な展開に何が開発、CI、テストし、運用環境で実行します。 所持している複数の環境に展開したり、Docker レジストリ (プライベートまたはパブリック) で公開されているアプリケーションの Docker イメージを作成したら、(運用、QA、ステージングなど) Azure DevOps サービスを使用して、CD パイプラインからパイプラインのタスクまたは Azure DevOps サービス リリース管理されます。
 
@@ -223,11 +223,11 @@ Azure Container Service: <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>手順 5:実行し、管理
+## <a name="step-5-run-and-manage"></a>手順 5: 実行し、管理
 
 エンタープライズ運用レベルは、し、それ自体のと操作の種類のための主要なサブジェクトと、ユーザーがこの領域の大きなスコープとそのレベル (IT 運用) にとって、全体を次に充てることが実行されていると、アプリケーションを管理するためこれを説明する章です。
 
-## <a name="step-6-monitor-and-diagnose"></a>手順 6:監視し、診断
+## <a name="step-6-monitor-and-diagnose"></a>手順 6: 監視し、診断
 
 このトピックでもについては [次へ] の章で実稼働システム; IT 操作を実行するタスクの一部としてただしが、アプリケーションが頻繁に改善するために、開発チームにこの手順で得られた知見をフィードする必要がありますを強調表示に重要です。 そのポイントの表示からもの一部では、DevOps タスクと操作は通常、実行が IT です。
 
@@ -235,4 +235,4 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 
 >[!div class="step-by-step"]
 >[前へ](index.md)
->[次へ](../run-manage-monitor-docker-environments/index.md)
+>[次へ](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

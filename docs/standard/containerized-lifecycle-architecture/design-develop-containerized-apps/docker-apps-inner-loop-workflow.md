@@ -1,15 +1,15 @@
 ---
 title: Docker アプリの内部ループ開発ワークフロー
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: Docker アプリケーションの開発の「内部ループ」ワークフローをについて説明します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f7acb60e6136c0250d18bdce23ac21fb6aa80b34
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148864"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219089"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -41,7 +41,7 @@ ms.locfileid: "53148864"
 
 図 4-15:Docker CLI を使用してコンテナー化された Docker アプリケーションのライフ サイクルの高度なワークフロー
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>手順 1:Visual Studio Code でコーディングを開始し、アプリやサービスの初期ベースラインを作成します。
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>手順 1: Visual Studio Code でコーディングを開始し、アプリやサービスの初期ベースラインを作成します。
 
 アプリケーションを開発する方法は、Docker を使用しないことを行う方法とよく似ています。 違いは、開発中に、展開しているアプリケーションまたは (Windows や Linux VM) など、ローカル環境で配置された Docker コンテナー内で実行されているサービスをテストします。
 
@@ -67,7 +67,7 @@ Visual Studio Code は、インストールする必要があります拡張機�
 
 図 4-16:Visual Studio Code での Docker 拡張機能のインストール
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>手順 2:既存のイメージ (プレーンな OS または .NET Core、Node.js、Ruby などの開発環境) に関連する DockerFile を作成します。
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>手順 2: 既存のイメージ (プレーンな OS または .NET Core、Node.js、Ruby などの開発環境) に関連する DockerFile を作成します。
 
 カスタム イメージを構築およびデプロイするコンテナーごとに DockerFile が必要になります、そのため、1 つのカスタム サービスのアプリが構成されている場合は、DockerFile が 1 つを必要があります。 アプリが (マイクロ サービス アーキテクチャ) のように複数のサービスで構成される場合、サービスごとの 1 つの Dockerfile が必要があります。
 
@@ -132,7 +132,7 @@ Windows コンテナーより一般的になると、1 つのリポジトリは�
 
 これで説明したように、最初から、独自の Docker 基本イメージを作成することができます[記事](https://docs.docker.com/engine/userguide/eng-image/baseimages/)Docker から。 これはシナリオですが、Docker を使い始めたばかりの場合に適していない可能性がありますが、基本イメージの特定のビットを設定する場合は、行うことができます。
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>手順 3:これで、サービスを埋め込み、カスタム Docker イメージを作成します。
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>手順 3: これで、サービスを埋め込み、カスタム Docker イメージを作成します。
 
 サービスごとにカスタム アプリを構成するには、関連するイメージを作成する必要があります。 1 つのサービスまたは web アプリのアプリが構成されている場合は、1 つのイメージを必要があります。
 
@@ -159,7 +159,7 @@ Windows コンテナーより一般的になると、1 つのリポジトリは�
 
 図 4-20:Docker イメージを使用して既存のイメージを表示します。
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>手順 4:(省略可能)複数のサービスで構成された Docker アプリを構築するときに docker compose.yml で、サービスを定義します。
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>手順 4: (省略可能)複数のサービスで構成された Docker アプリを構築するときに docker compose.yml で、サービスを定義します。
 
 Docker compose.yml ファイルを使用して、次のセクションの手順で説明されている展開コマンドを使用して、構成されたアプリケーションとしてデプロイに関連するサービスのセットを定義できます。
 
@@ -192,7 +192,7 @@ services:
 
 Redis サービスの使用、[最新のパブリック redis イメージ](https://hub.docker.com/_/redis/)Docker Hub レジストリからプルします。 [redis](https://redis.io/)はサーバー側アプリケーションでの非常に人気のあるキャッシュ システムです。
 
-### <a name="step-5-build-and-run-your-docker-app"></a>手順 5:ビルドして Docker アプリの実行
+### <a name="step-5-build-and-run-your-docker-app"></a>手順 5: ビルドして Docker アプリの実行
 
 アプリに 1 つのコンテナーのみがある場合だけ、Docker ホスト (VM または物理サーバー) にデプロイして実行する必要があります。 ただし、複数のサービス、アプリが構成されている場合をする必要があります*組み立てること*もします。 さまざまなオプションを見てみましょう。
 
@@ -225,7 +225,7 @@ Docker を実行した後、compose をデプロイする必要が、アプリ�
 
 [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/)と[Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment)さまざまな展開コマンドと、スクリプトを使用します。
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>手順 6:(ローカル CD VM) では、ローカルで Docker アプリケーションをテストします。
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>手順 6: (ローカル CD VM) では、ローカルで Docker アプリケーションをテストします。
 
 この手順は、アプリの実行内容によって異なります。
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540664"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219842"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージ コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
@@ -17,7 +17,7 @@ ms.locfileid: "54540664"
  .NET Framework は、生産性の高いアプリ開発環境です。 強力で安全な言語と豊富なライブラリにより、アプリの開発生産性が高くなります。 ただし、高い生産性には責任が伴います。 .NET Framework のあらゆる機能を使用するするのであれば、必要に応じてコードのパフォーマンスを調整できるようにしておく必要があります。 
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>新しいコンパイラのパフォーマンスがアプリに適用される理由  
- .NET コンパイラ プラットフォーム ("Roslyn") チームは、コードのモデリングと分析、ツールの開発、そして Visual Studio でのより充実したコード対応エクスペリエンスの実現のための新たな API を提供するため、C# および Visual Basic コンパイラをマネージド コードで再作成しました。 コンパイラの全体的な書き直しと、新しいコンパイラでの Visual Studio 機能の構築を通して、大規模 .NET Framework アプリや、大量データを処理するアプリに適用できる有用なパフォーマンス情報が明らかになりました。 C# コンパイラについてのこのような情報や例を活用するために、コンパイラについて理解しておく必要はありません。 
+ .NET コンパイラ プラットフォーム ("Roslyn") チームは、コードのモデリングと分析、ツールの開発、そして Visual Studio でのより充実したコード対応エクスペリエンスの実現のための新たな API を提供するため、C# および Visual Basic コンパイラをマネージ コードで再作成しました。 コンパイラの全体的な書き直しと、新しいコンパイラでの Visual Studio 機能の構築を通して、大規模 .NET Framework アプリや、大量データを処理するアプリに適用できる有用なパフォーマンス情報が明らかになりました。 C# コンパイラについてのこのような情報や例を活用するために、コンパイラについて理解しておく必要はありません。 
   
  Visual Studio ではコンパイラ API を使用して、ユーザーに人気のある IntelliSense 機能 (識別子とキーワードの色づけ、構文の入力候補一覧、エラーを示す波線、パラメーターのヒント、コードの問題、コードアクションなど) を作成します。 Visual Studio では、開発者がコードを入力するときや変更するときにこのヘルプが表示されます。コンパイラがコード開発者による編集内容をモデル化している間も、Visual Studio は応答性を維持する必要があります。 
   
@@ -37,7 +37,7 @@ ms.locfileid: "54540664"
  アプリでの主要な顧客エクスペリエンスやシナリオについてパフォーマンスの目標を設定し、パフォーマンスを測定するテストを作成してください。 テスト失敗の調査には科学的な手法を使用します。ガイドとなるプロファイルを使用して、どのような問題が発生しているかを仮定し、実験やコード変更によってその仮定を検証します。 定期的にテストを実施して、時間の経過と共にベースライン パフォーマンス測定を確立します。これにより、パフォーマンス後退を引き起こしている変更を切り分けることができます。 パフォーマンス測定を厳密に実施することで、不要なコード更新に時間をかけることを回避できます。 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事実 3:優れたツールにすべての違い  
- 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft は、[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)、[PerfView](https://www.microsoft.com/download/details.aspx?id=28567) など、さまざまなパフォーマンス ツールを提供しています。 
+ 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft はなどのさまざまなパフォーマンス ツールを出荷[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)と[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)します。 
   
  PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。 パフォーマンスに関連する [Windows イベント トレーシング](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。 PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。 
   
@@ -130,7 +130,8 @@ public class BoxingExample
  パフォーマンスに関する 1 番目の事実 (不完全な最適化は行わない) に留意し、このような方法でコード全体を作成し直さないでください。 このようなボックス化にかかるコストに注意してください。また、コードの変更は、アプリのプロファイリングとホットスポットの検出の後に行ってください。 
   
 ### <a name="strings"></a>文字列  
- 文字列操作は、割り当てが発生する最も大きな原因の 1 つであり、PerfView で上位 5 件の割り当てに表示されることがよくあります。 プログラムはシリアル化、JSON、および REST API に文字列を使用します。 列挙型を使用できない場合は、システムとの相互運用のためにプログラム定数として文字列を使用できます。 文字列がパフォーマンスに大きく影響していることがプロファイリングによって明らかになる場合は、<xref:System.String> メソッド (<xref:System.String.Format%2A>、<xref:System.String.Concat%2A>、<xref:System.String.Split%2A>、<xref:System.String.Join%2A>、<xref:System.String.Substring%2A> など) の呼び出しを探します。 <xref:System.Text.StringBuilder> を使用すると、複数の要素から 1 つの文字列を作成するコストを回避できます。ただし <xref:System.Text.StringBuilder> オブジェクトの割り当てでさえも、管理する必要があるボトルネックとなることがあります。 
+ 文字列操作は、割り当てが発生する最も大きな原因の 1 つであり、PerfView で上位 5 件の割り当てに表示されることがよくあります。 プログラムはシリアル化、JSON、および REST API に文字列を使用します。 列挙型を使用できない場合は、システムとの相互運用のためにプログラム定数として文字列を使用できます。 文字列がパフォーマンスに大きく影響していることがプロファイリングによって明らかになる場合は、<xref:System.String> メソッド (<xref:System.String.Format%2A>、<xref:System.String.Concat%2A>、<xref:System.String.Split%2A>、<xref:System.String.Join%2A>、<xref:System.String.Substring%2A> など) の呼び出しを探します。 
+  <xref:System.Text.StringBuilder> を使用すると、複数の要素から 1 つの文字列を作成するコストを回避できます。ただし <xref:System.Text.StringBuilder> オブジェクトの割り当てでさえも、管理する必要があるボトルネックとなることがあります。 
   
  **例 3: 文字列操作**  
   
@@ -195,7 +196,8 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。 また、「//」にもチェックされます。 修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。 文字列が「//」で始まるかどうか、空白でないし、文字の文字をチェックする最初の文字を検索します。 新しいコードを使用して`IndexOfFirstNonWhiteSpaceChar`の代わりに<xref:System.String.TrimStart%2A>を空白以外の文字が発生します (指定した開始インデックス) の後に最初のインデックスを返します。 この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。 コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。 
+ 
+  `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。 また、「//」にもチェックされます。 修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。 文字列が「//」で始まるかどうか、空白でないし、文字の文字をチェックする最初の文字を検索します。 新しいコードを使用して`IndexOfFirstNonWhiteSpaceChar`の代わりに<xref:System.String.TrimStart%2A>を空白以外の文字が発生します (指定した開始インデックス) の後に最初のインデックスを返します。 この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。 コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。 
   
  **例 4:StringBuilder**  
   
@@ -229,7 +231,8 @@ public class Example
   
  **例 4 の修正**  
   
- `StringBuilder` オブジェクトの割り当てを修正するには、このオブジェクトをキャッシュします。 破棄される可能性がある 1 つのインスタンスをキャッシュするだけでも、パフォーマンスが大幅に改善されることがあります。 これは関数の新しい実装であり、新しい最初の行と最後の行を除くすべてのコードを省略しています。  
+ 
+  `StringBuilder` オブジェクトの割り当てを修正するには、このオブジェクトをキャッシュします。 破棄される可能性がある 1 つのインスタンスをキャッシュするだけでも、パフォーマンスが大幅に改善されることがあります。 これは関数の新しい実装であり、新しい最初の行と最後の行を除くすべてのコードを省略しています。  
   
 ```csharp  
 // Constructs a name like "MyType<T1, T2, T3>"  
@@ -434,7 +437,8 @@ class Compilation { /*...*/
 }  
 ```  
   
- このコードは `cachedResult` の型を `Task<SyntaxTree>` に変更し、`async` からの元のコードを保持する `GetSyntaxTreeAsync()` ヘルパー関数を採用しています。 `GetSyntaxTreeAsync()` は [null 合体演算子](../../csharp/language-reference/operators/null-coalescing-operator.md)を使用して、`cachedResult` が null でない場合にそれを返します。 `cachedResult` が null の場合、`GetSyntaxTreeAsync()` は `GetSyntaxTreeUncachedAsync()` を呼び出し、結果をキャッシュします。 `GetSyntaxTreeAsync()` は、通常のコードのようには、`GetSyntaxTreeUncachedAsync()` 呼び出しを待たないことに注意してください。 待機しないということは、`GetSyntaxTreeUncachedAsync()` がその <xref:System.Threading.Tasks.Task> オブジェクトを返す場合、`GetSyntaxTreeAsync()` が即時に<xref:System.Threading.Tasks.Task> を返すことになります。 この時点で、キャッシュされた結果は <xref:System.Threading.Tasks.Task> であるため、キャシュされた結果を返すための割り当ては行われません。 
+ このコードは `cachedResult` の型を `Task<SyntaxTree>` に変更し、`async` からの元のコードを保持する `GetSyntaxTreeAsync()` ヘルパー関数を採用しています。 `GetSyntaxTreeAsync()` は [null 合体演算子](../../csharp/language-reference/operators/null-coalescing-operator.md)を使用して、`cachedResult` が null でない場合にそれを返します。 
+  `cachedResult` が null の場合、`GetSyntaxTreeAsync()` は `GetSyntaxTreeUncachedAsync()` を呼び出し、結果をキャッシュします。 `GetSyntaxTreeAsync()` は、通常のコードのようには、`GetSyntaxTreeUncachedAsync()` 呼び出しを待たないことに注意してください。 待機しないということは、`GetSyntaxTreeUncachedAsync()` がその <xref:System.Threading.Tasks.Task> オブジェクトを返す場合、`GetSyntaxTreeAsync()` が即時に<xref:System.Threading.Tasks.Task> を返すことになります。 この時点で、キャッシュされた結果は <xref:System.Threading.Tasks.Task> であるため、キャシュされた結果を返すための割り当ては行われません。 
   
 ### <a name="additional-considerations"></a>その他の考慮事項  
  大きなアプリまたは大量データを処理するアプリで発生する可能性がある問題に関するその他の点を次に説明します。 
@@ -466,9 +470,8 @@ class Compilation { /*...*/
 - [このトピックのプレゼンテーションのビデオ](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [パフォーマンス](../../../docs/framework/performance/index.md)
-- [.NET のパフォーマンスに関するヒント](https://msdn.microsoft.com/library/ms973839.aspx)
+- [.NET のパフォーマンスに関するヒント](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Windows Phone パフォーマンス分析ツール](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [Visual Studio Profiler でアプリケーションのボトルネックを見つける](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Channel 9 PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)

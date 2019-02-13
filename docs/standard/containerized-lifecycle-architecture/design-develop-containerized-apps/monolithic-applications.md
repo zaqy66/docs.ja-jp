@@ -1,15 +1,15 @@
 ---
 title: モノリシック アプリケーション
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: モノリシック アプリケーションをコンテナー化の主要な概念を理解します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743270"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221356"
 ---
 # <a name="monolithic-applications"></a>モノリシック アプリケーション
 
@@ -21,7 +21,7 @@ ms.locfileid: "52743270"
 
 ![](./media/image1.png)
 
-図 4-1: モノリシック アプリケーションのアーキテクチャの例
+図 4-1:モノリシック アプリケーションのアーキテクチャの例
 
 このアプローチの欠点は、またはアプリケーションを拡張、スケーリングする必要な場合は取得されます。 アプリケーション全体がスケーリングすれば、実際には問題ではありません。 ただし、ほとんどの場合、アプリケーションのいくつかの部分はチョーク ポイントをスケーリングするには、必要とするその他のコンポーネントを使用する小さい。
 
@@ -35,13 +35,13 @@ ms.locfileid: "52743270"
 
 ![](./media/image2.png)
 
-図 4-2: 複数のアプリ/コンテナーを実行しているホスト
+図 4-2:複数のアプリ/コンテナーを実行しているホスト
 
 インスタンスごとに専用の Vm を使用して、Azure のモノリシック アプリケーションをデプロイできます。 使用して[Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)Vm を簡単にスケールすることができます。 [Azure App Service](https://azure.microsoft.com/services/app-service/) では、VM の管理を必要とせずに、モノリシック アプリケーションを実行し、インスタンスを簡単にスケーリングすることができます。 2016 年以降、Azure App Services は、特定、展開を簡素化も、Docker コンテナーの単一インスタンスを実行できます。 また、Docker を使用して、Docker ホストとして 1 つの VM をデプロイして実行する複数のインスタンス。 図 4-3 に示すようには、Azure バランサーを使用して、スケーリングを管理できます。
 
 ![](./media/image3.png)
 
-図 4-3: 複数のホスト Docker アプリケーションのアプリ/コンテナーが 1 つをスケール アウト
+図 4-3:Docker アプリケーションのアプリ/コンテナーが 1 つをスケール アウトの複数のホスト
 
 従来の展開手法を使用してさまざまなホストに展開を管理することができます。 ようなコマンドを使用して Docker ホストを管理することができます`docker run`継続的デリバリー (CD) パイプラインは、この電子書籍の後半で説明などのオートメーションによって手動でします。
 
@@ -65,7 +65,7 @@ ms.locfileid: "52743270"
 
 ![](./media/image4.png)
 
-図 4-4: Azure App Service に Visual Studio のアプリ/コンテナーからコンテナーを発行します。
+図 4-4:Visual Studio のアプリ/コンテナーから Azure App Service にコンテナーを発行する.
 
 図 4-4 も発行フローが Azure Container Registry (レジストリを Azure 内の展開に近く、および Azure Active Directory グループとアカウントによって保護された) は、コンテナー レジストリをまたはその他の任意の Docker レジストリを介してイメージをプッシュすることを示していますDocker Hub やオンプレミス レジストリなど。
 

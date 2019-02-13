@@ -1,15 +1,15 @@
 ---
 title: DockerFile で Windows PowerShell コマンドを使用して Windows コンテナー (Docker 標準ベース) を設定するには
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: Windows コンテナーで Docker を使用する場合は、PowerShell を使用する方法について説明します
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: 5e85beea0efbee6a2b6594e3a49d705505a36e1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: df9e98e3f963b6492e1008455251b61a8cb6e771
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149394"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219972"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>DockerFile で Windows PowerShell コマンドを使用して Windows コンテナー (Docker 標準ベース) を設定するには
 
@@ -34,4 +34,4 @@ RUN powershell add-windowsfeature web-asp-net45
 
 >[!div class="step-by-step"]
 >[前へ](visual-studio-tools-for-docker.md)
->[次へ](../docker-devops-workflow/index.md)
+>[次へ](build-aspnet-core-applications-linux-containers-aks-kubernetes.md)

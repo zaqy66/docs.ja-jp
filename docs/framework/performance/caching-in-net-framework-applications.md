@@ -7,12 +7,12 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
-ms.openlocfilehash: 9fc63f860bad96d7dd304de31dd6e9b6626c90b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 329e09744199b8063f98d3a38026f55bf02c228f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721077"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219504"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework アプリケーションでのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。  
@@ -48,13 +48,13 @@ ms.locfileid: "54721077"
  <xref:System.Runtime.Caching> 名前空間のキャッシュ クラスには、ASP.NET のデータをキャッシュするための機能があります。  
   
 > [!NOTE]
->  アプリケーションが [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 以前をターゲットとしている場合は、<xref:System.Web.Caching> 名前空間で定義されているキャッシュ クラスを使用する必要があります。 詳細については、「[ASP.NET のキャッシュの概要](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d)」を参照してください。  
+>  アプリケーションが [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 以前をターゲットとしている場合は、<xref:System.Web.Caching> 名前空間で定義されているキャッシュ クラスを使用する必要があります。 詳細については、「[ASP.NET のキャッシュの概要](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))」を参照してください。  
   
 > [!NOTE]
->  新しいアプリケーションを開発する場合は、<xref:System.Runtime.Caching.MemoryCache> クラスを使用することをお勧めします。 <xref:System.Runtime.Caching> 名前空間に用意されている API は、<xref:System.Web.Caching.Cache> 名前空間に用意されている API と似ています。 そのため、旧バージョンの ASP.NET でキャッシュを使用していた場合は、なじみやすい API です。 ASP.NET アプリケーションでキャッシュを使用する方法の例は、次を参照してください。[チュートリアル。ASP.NET でのアプリケーション データのキャッシュ](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)します。  
+>  新しいアプリケーションを開発する場合は、<xref:System.Runtime.Caching.MemoryCache> クラスを使用することをお勧めします。 <xref:System.Runtime.Caching> 名前空間に用意されている API は、<xref:System.Web.Caching.Cache> 名前空間に用意されている API と似ています。 そのため、旧バージョンの ASP.NET でキャッシュを使用していた場合は、なじみやすい API です。 ASP.NET アプリケーションでキャッシュを使用する方法の例は、次を参照してください。[チュートリアル。ASP.NET でのアプリケーション データのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))します。  
   
 ### <a name="output-caching"></a>出力キャッシュ  
- アプリケーション データを手動でキャッシュするには、ASP.NET で <xref:System.Runtime.Caching.MemoryCache> クラスを使用します。 ASP.NET は出力キャッシュもサポートしており、ページ、コントロール、および HTTP 応答の生成された出力をメモリに格納します。 出力キャッシュを構成するには、ASP.NET Web ページで宣言を使用するか、Web.config ファイルの設定を使用します。 詳細については、「[outputCache Element for caching (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee)」(caching の outputCache 要素 (ASP.NET 設定スキーマ)) を参照してください。  
+ アプリケーション データを手動でキャッシュするには、ASP.NET で <xref:System.Runtime.Caching.MemoryCache> クラスを使用します。 ASP.NET は出力キャッシュもサポートしており、ページ、コントロール、および HTTP 応答の生成された出力をメモリに格納します。 出力キャッシュを構成するには、ASP.NET Web ページで宣言を使用するか、Web.config ファイルの設定を使用します。 詳細については、「[outputCache Element for caching (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100))」(caching の outputCache 要素 (ASP.NET 設定スキーマ)) を参照してください。  
   
  ASP.NET では、カスタム出力キャッシュ プロバイダーを作成して、出力キャッシュを拡張できます。 カスタム プロバイダーを使用すると、キャッシュされたコンテンツを、ディスク、クラウド記憶域、分散キャッシュ エンジンなど、他の記憶域デバイスに格納できます。 カスタム出力キャッシュ プロバイダーを作成するには、<xref:System.Web.Caching.OutputCacheProvider> クラスから派生したクラスを作成し、そのカスタム出力キャッシュ プロバイダーを使用するようにアプリケーションを構成します。  
   
@@ -80,4 +80,4 @@ ms.locfileid: "54721077"
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
 - [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
-- [チュートリアル: ASP.NET でのアプリケーション データのキャッシュ](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
+- [チュートリアル: ASP.NET でのアプリケーション データのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

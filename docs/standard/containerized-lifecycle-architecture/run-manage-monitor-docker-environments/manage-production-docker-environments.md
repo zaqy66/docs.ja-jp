@@ -1,15 +1,15 @@
 ---
 title: 運用環境の Docker 環境を管理します。
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: コンテナー ベースの実稼働環境を管理する重要な点を把握するを取得します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147296"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219491"
 ---
 # <a name="manage-production-docker-environments"></a>運用環境の Docker 環境を管理します。
 

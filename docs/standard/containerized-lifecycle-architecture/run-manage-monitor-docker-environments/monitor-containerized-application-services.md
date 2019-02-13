@@ -1,15 +1,15 @@
 ---
 title: コンテナー化されたアプリケーションのサービスを監視します。
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: 監視コンテナー アーキテクチャの重要な側面について説明します
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153925"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221187"
 ---
 # <a name="monitor-containerized-application-services"></a>コンテナー化されたアプリケーションのサービスを監視します。
 

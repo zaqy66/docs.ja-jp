@@ -1,19 +1,19 @@
 ---
 title: Docker アプリの開発環境
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: Docker 開発のライフ サイクルをサポートする最も重要な開発ツールのオプションの確認を取得します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152417"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219998"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker アプリの開発環境
 
-## <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択。IDE またはエディター
+## <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択:IDE またはエディター
 
 いたとしてもする場合、完全で強力な IDE または軽量でアジャイルなエディターでは、マイクロソフトは、Docker アプリケーションの開発なったときに対応しています。
 
@@ -47,5 +47,5 @@ Docker アプリケーションと最新の言語でマイクロソフトのツ�
 基本的には、Linux または Windows で Docker でサポートされている最新の言語を使用することができます。
 
 >[!div class="step-by-step"]
->[前へ](orchestrate-high-scalability-availability.md)
+>[前へ](deploy-azure-kubernetes-service.md)
 >[次へ](docker-apps-inner-loop-workflow.md)
