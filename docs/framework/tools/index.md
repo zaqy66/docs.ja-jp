@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041487"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220109"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 .NET Framework ツールを使用すると、.NET Framework に対応したアプリケーションやコンポーネントを簡単に作成、配置、および管理できます。  
@@ -129,7 +129,7 @@ ms.locfileid: "44041487"
  Windows フォームで使用されるユーザー インターフェイス (UI) リソース (.resx ファイルまたは .resources ファイル) のローカライズを支援します。 文字列を翻訳した後、ローカライズされた文字列に合わせて、コントロールのサイズを変更したり、コントロールを移動したり、非表示にしたりできます。  
   
 ## <a name="related-sections"></a>関連項目  
- [ツール](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [WPF ツール](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  isXPS 適合性ツール (isXPS.exe) およびパフォーマンス プロファイリング ツールなどのツールを含みます。  
   
  [Windows Communication Foundation ツール](../../../docs/framework/wcf/tools.md)  

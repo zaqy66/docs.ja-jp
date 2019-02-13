@@ -2,24 +2,30 @@
 title: .NET Apps でのリソース
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221044"
 ---
 # <a name="resources-in-net-apps"></a>.NET Apps でのリソース
 ほとんどの製品レベルのアプリでは、リソースを使用する必要があります。 リソースは実行不可能なデータであり、アプリと共に論理的に配置されます。 このリソースは、アプリ内ではエラー メッセージまたはユーザー インターフェイスの一部として表示できます。 リソースには、文字列、イメージ、永続化されたオブジェクトなど、多数の形式のデータを含めることができます。 (永続化されたオブジェクトをリソース ファイルに書き込むには、そのオブジェクトをシリアル化できることが必要です)。データをリソース ファイルに格納しておけば、アプリ全体を再コンパイルすることなくデータを変更できます。 また、データの格納場所が 1 つになり、複数の場所に格納されているハードコーディングされたデータを利用する必要がなくなります。  
   
  .NET Framework および .NET Core では、リソースの作成とローカライズが包括的にサポートされます。 さらに、.NET では、ローカライズされたリソースのパッケージ化および配置のためのシンプルなモデルがサポートされています。  
   
- ASP.NET のリソースについては、「[ASP.NET Web ページのリソースの概要](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)」を参照してください。  
+ ASP.NET のリソースについては、「[ASP.NET Web ページのリソースの概要](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))」を参照してください。  
   
  ## <a name="creating-and-localizing-resources"></a>リソースの作成とローカライズ  
  ローカライズされていないアプリでは、リソース ファイルをアプリ データ、特にソース コード内の複数の場所にハードコーディングされる可能性がある文字列のリポジトリとして使用できます。 ほとんどの場合、リソースはテキスト (.txt) ファイルまたは XML (.resx) ファイルとして作成し、[Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して .resources バイナリ ファイルにコンパイルします。 これらのファイルは、言語コンパイラでアプリの実行可能ファイルに埋め込むことができます。 リソースの作成の詳細については、[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)に関する記事を参照してください。  
