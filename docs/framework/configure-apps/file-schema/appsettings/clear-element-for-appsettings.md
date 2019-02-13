@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55278579"
 ---
-# <a name="clear-element-for-appsettings"></a>\<appSettings>の\<clear>要素
+# <a name="clear-element-for-appsettings"></a>\<クリア > 要素の\<appSettings >
 
 カスタム アプリケーションの設定をクリアします。
 
