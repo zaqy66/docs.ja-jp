@@ -3,13 +3,13 @@ title: Azure の開発プロセス
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | Azure の開発プロセス
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152609"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827475"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -22,7 +22,7 @@ ms.locfileid: "53152609"
 
 ## <a name="development-environment-for-aspnet-core-apps"></a>ASP.NET Core アプリの開発環境
 
-### <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択: IDE またはエディター
+### <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択:IDE またはエディター
 
 完全で強力な IDE または軽量でアジャイルなエディターのどちらを選んでも、Microsoft は ASP.NET Core アプリケーションの開発に対応できます。
 
@@ -88,11 +88,11 @@ Azure にデプロイする場合の ASP.NET Core アプリケーションの開
 
 チームでコードを共有できるようになった場合は、常にローカル ソース リポジトリからチームの共有ソース リポジトリに変更をプッシュする必要があります。 カスタム ブランチで作業をしていた場合、この手順では通常、(たとえば、[pull request](https://docs.microsoft.com/azure/devops/git/pull-requests)を使用して) コードを共有ブランチにマージします。
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>手順 3. ビルド サーバー: 継続的インテグレーション。 ビルド、テスト、パッケージ
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>手順 3. ビルド サーバー:継続的インテグレーション。 ビルド、テスト、パッケージ
 
 共有アプリケーション コード リポジトリに新しいコミットが行われるたびに、ビルド サーバーで新しいビルドがトリガーされます。 CI プロセスの一部として、このビルドで完全にアプリケーションをコンパイルし、自動テストを実行して、すべて予期したとおりに動作していることを確認する必要があります。 CI プロセスの最終結果は、デプロイの準備ができている、パッケージ化されたバージョンの Web アプリである必要があります。
 
-#### <a name="step-4-build-server-continuous-delivery"></a>手順 4. ビルド サーバー: 継続的デリバリー
+#### <a name="step-4-build-server-continuous-delivery"></a>手順 4. ビルド サーバー:継続的デリバリー
 
 ビルドが成功すると、CD プロセスは生成されたビルド成果物を選択します。 これには、Web デプロイ パッケージが含まれます。 ビルド サーバーは Azure App Service にこのパッケージをデプロイして、既存のサービスを新しく作成されたものに置き換えます。 通常、この手順の対象はステージング環境ですが、一部のアプリケーションは CD プロセスを通じて運用環境に直接デプロイします。
 
