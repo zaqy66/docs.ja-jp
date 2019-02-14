@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55258722"
 ---
-# <a name="remove-element-for-appsettings"></a>\<削除 > 要素の\<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<appSettings>の\<remove>要素
 
 カスタム アプリケーションの設定を削除します。
 

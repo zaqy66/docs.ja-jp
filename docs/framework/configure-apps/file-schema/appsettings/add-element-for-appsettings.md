@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55277473"
 ---
-# <a name="add-element-for-appsettings"></a>\<追加 > 要素の\<appSettings >
+# <a name="add-element-for-appsettings"></a>\<appSettings>の\<add>要素
 
 カスタム アプリケーション設定を追加します。
 
