@@ -1,15 +1,15 @@
 ---
 title: 構成されるマイクロ サービス ベースのアプリケーションを運用環境で実行します。
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+description: 運用環境でコンテナー ベースのアプリケーションを実行する主要なコンポーネントについて理解します。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: bd8b84f788ce013dfe25199dac34e3c59aa35284
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126303"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220966"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>構成されるマイクロ サービス ベースのアプリケーションを運用環境で実行します。
 
