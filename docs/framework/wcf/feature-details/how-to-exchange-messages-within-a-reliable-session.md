@@ -2,18 +2,18 @@
 title: '方法: 信頼できるセッション内でメッセージを交換'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720055"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260687"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>方法: 信頼できるセッション内でメッセージを交換
 
 このトピックでは、信頼できるセッションを有効にするために必要な手順について説明します。ここでは、信頼できるセッションを (既定ではなく) オプションでサポートするシステム指定のバインディングを使用します。 命令型コードを使用して、信頼できるセッションを有効にするか、構成ファイルで宣言します。 この手順は、信頼できるセッションを有効にして、メッセージが送信された順序で到着したかを規定するために、クライアントとサービス構成ファイルを使用します。
 
-この手順の重要な部分は、エンドポイント構成要素を含む、`bindingConfiguration`という名前のバインド構成を参照する属性`Binding1`します。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を設定して、信頼できるセッションを有効にするには、この名前の参照、`enabled`の属性、 [ **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)要素`true`します。 信頼できるセッションで順序付き配信の保証を指定するには、`ordered` 属性を `true` に設定します。
+この手順の重要な部分は、エンドポイント構成要素を含む、`bindingConfiguration`という名前のバインド構成を参照する属性`Binding1`します。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を設定して、信頼できるセッションを有効にするには、この名前の参照、`enabled`の属性、 [ **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100))要素`true`します。 信頼できるセッションで順序付き配信の保証を指定するには、`ordered` 属性を `true` に設定します。
 
 この例のソースのコピーを次を参照してください。 [WS 信頼できるセッション](../../../../docs/framework/wcf/samples/ws-reliable-session.md)します。
 

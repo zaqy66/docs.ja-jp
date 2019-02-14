@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 20c462f811be86d52ec6f06700326f0e949a76d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637912"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261168"
 ---
 # <a name="how-to-create-a-custom-token"></a>方法: カスタム トークンを作成します。
 ここでは、<xref:System.IdentityModel.Tokens.SecurityToken> を使用してカスタムのセキュリティ トークンを作成する方法と、作成したトークンを、カスタム セキュリティ トークン プロバイダーおよび認証システムと統合する方法について説明します。 完全なコード例については、[カスタム トークン](../../../../docs/framework/wcf/samples/custom-token.md)サンプル。  
@@ -29,8 +29,6 @@ ms.locfileid: "54637912"
  カスタム資格情報とセキュリティ トークン マネージャーの詳細については、次を参照してください。[チュートリアル。カスタムのクライアントとサービスの資格情報を作成する](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)します。  
   
  セキュリティ トークンを表すさまざまなクラスについては、「<xref:System.IdentityModel.Tokens> 名前空間」を参照してください。  
-  
- 資格情報、セキュリティ トークン マネージャー、およびプロバイダーおよび認証システム クラスの詳細については、次を参照してください。[セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)します。  
   
 ## <a name="procedures"></a>手順  
  クライアント アプリケーションには、セキュリティ インフラストラクチャにクレジット カード情報を指定する方法を設ける必要があります。 この情報は、カスタムのクライアント資格情報クラスによりアプリケーションに提供されます。 最初に、カスタム クライアント資格情報のクレジット カード情報を表すクラスを作成します。  
@@ -48,13 +46,18 @@ ms.locfileid: "54637912"
   
 #### <a name="to-create-a-custom-security-token-class"></a>カスタム セキュリティ トークン クラスを作成するには  
   
-1.  <xref:System.IdentityModel.Tokens.SecurityToken> クラスから派生する新しいクラスを定義します。 `CreditCardToken` という名前のクラスを作成する例を次に示します。  
+1.  
+  <xref:System.IdentityModel.Tokens.SecurityToken> クラスから派生する新しいクラスを定義します。 
+  `CreditCardToken` という名前のクラスを作成する例を次に示します。  
   
-2.  <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> プロパティをオーバーライドします。 このプロパティを使用して、SOAP メッセージ内の他の要素からセキュリティ トークンの XML 表現をポイントするためのセキュリティ トークンのローカル識別子を取得します。 次の例では、トークン識別子をコンストラクター パラメーターとしてこのプロパティに渡すことも、セキュリティ トークン インスタンスを作成するたびに新しいランダムな識別子を生成することもできます。  
+2.  
+  <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> プロパティをオーバーライドします。 このプロパティを使用して、SOAP メッセージ内の他の要素からセキュリティ トークンの XML 表現をポイントするためのセキュリティ トークンのローカル識別子を取得します。 次の例では、トークン識別子をコンストラクター パラメーターとしてこのプロパティに渡すことも、セキュリティ トークン インスタンスを作成するたびに新しいランダムな識別子を生成することもできます。  
   
-3.  <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> プロパティを実装します。 このプロパティは、セキュリティ トークン インスタンスが表すセキュリティ キーのコレクションを返します。 このようなキーは、署名または暗号化 SOAP メッセージの部分に、WCF によって使用できます。 次の例では、クレジット カード セキュリティ トークンにはセキュリティ キーを含めることができません。そのため、実装は、常に空のコレクションを返します。  
+3.  
+  <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> プロパティを実装します。 このプロパティは、セキュリティ トークン インスタンスが表すセキュリティ キーのコレクションを返します。 このようなキーは、署名または暗号化 SOAP メッセージの部分に、WCF によって使用できます。 次の例では、クレジット カード セキュリティ トークンにはセキュリティ キーを含めることができません。そのため、実装は、常に空のコレクションを返します。  
   
-4.  <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> プロパティと <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> プロパティをオーバーライドします。 これらのプロパティは、セキュリティ トークン インスタンスの有効性を判断する、WCF によって使用されます。 次の例では、クレジット カード セキュリティ トークンに有効期限のみが含まれているため、`ValidFrom` プロパティは、インスタンスの作成日時を表す <xref:System.DateTime> を返します。  
+4.  
+  <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> プロパティと <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> プロパティをオーバーライドします。 これらのプロパティは、セキュリティ トークン インスタンスの有効性を判断する、WCF によって使用されます。 次の例では、クレジット カード セキュリティ トークンに有効期限のみが含まれているため、`ValidFrom` プロパティは、インスタンスの作成日時を表す <xref:System.DateTime> を返します。  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
@@ -63,17 +66,22 @@ ms.locfileid: "54637912"
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>カスタム セキュリティ トークン パラメーター クラスを作成するには  
   
-1.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> クラスから派生する新しいクラスを定義します。  
+1.  
+  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> クラスから派生する新しいクラスを定義します。  
   
 2.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> メソッドを実装します。 クラスで内部フィールドが定義されている場合は、それらをすべてコピーします。 次の例では、追加のフィールドを定義しません。  
   
-3.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> の読み取り専用プロパティを実装します。 このクラスで表されているセキュリティ トークンの種類を使用して、サービスに対するクライアントの認証が可能な場合、このプロパティは `true` を返します。 次の例では、クレジット カード セキュリティ トークンを使用して、サービスに対するクライアントの認証を行うことができます。  
+3.  
+  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> の読み取り専用プロパティを実装します。 このクラスで表されているセキュリティ トークンの種類を使用して、サービスに対するクライアントの認証が可能な場合、このプロパティは `true` を返します。 次の例では、クレジット カード セキュリティ トークンを使用して、サービスに対するクライアントの認証を行うことができます。  
   
-4.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> の読み取り専用プロパティを実装します。 このクラスで表されているセキュリティ トークンの種類を使用して、クライアントに対するサービスの認証が可能な場合、このプロパティは `true` を返します。 次の例では、クレジット カード セキュリティ トークンを使用して、クライアントに対するサービスの認証を行うことができません。  
+4.  
+  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> の読み取り専用プロパティを実装します。 このクラスで表されているセキュリティ トークンの種類を使用して、クライアントに対するサービスの認証が可能な場合、このプロパティは `true` を返します。 次の例では、クレジット カード セキュリティ トークンを使用して、クライアントに対するサービスの認証を行うことができません。  
   
-5.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> の読み取り専用プロパティを実装します。 このクラスで表されているセキュリティ トークンの種類を Windows アカウントにマップできる場合、このプロパティは `true` を返します。 その場合、認証結果が <xref:System.Security.Principal.WindowsIdentity> クラス インスタンスによって表されます。 次の例では、Windows アカウントにトークンをマップすることができません。  
+5.  
+  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> の読み取り専用プロパティを実装します。 このクラスで表されているセキュリティ トークンの種類を Windows アカウントにマップできる場合、このプロパティは `true` を返します。 その場合、認証結果が <xref:System.Security.Principal.WindowsIdentity> クラス インスタンスによって表されます。 次の例では、Windows アカウントにトークンをマップすることができません。  
   
-6.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> メソッドを実装します。 このセキュリティ トークン パラメーター クラスによって表されるセキュリティ トークン インスタンスへの参照を必要とする場合、このメソッドが WCF のセキュリティ フレームワークによって呼び出されます。 このメソッドには、実際のセキュリティ トークン インスタンスと、要求されている参照の型を指定する <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> の両方が引数として渡されます。 次の例では、内部参照だけがクレジット カード セキュリティ トークンでサポートされます。 <xref:System.IdentityModel.Tokens.SecurityToken> クラスは、内部参照を作成する機能を備えているため、実装には追加のコードが必要ありません。  
+6.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> メソッドを実装します。 このセキュリティ トークン パラメーター クラスによって表されるセキュリティ トークン インスタンスへの参照を必要とする場合、このメソッドが WCF のセキュリティ フレームワークによって呼び出されます。 このメソッドには、実際のセキュリティ トークン インスタンスと、要求されている参照の型を指定する <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> の両方が引数として渡されます。 次の例では、内部参照だけがクレジット カード セキュリティ トークンでサポートされます。 
+  <xref:System.IdentityModel.Tokens.SecurityToken> クラスは、内部参照を作成する機能を備えているため、実装には追加のコードが必要ありません。  
   
 7.  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> メソッドを実装します。 このメソッドは、セキュリティ トークン パラメーター クラス インスタンスのインスタンスに変換する WCF、<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>クラス。 変換結果は、適切なセキュリティ トークン インスタンスを作成するためにセキュリティ トークン プロバイダーによって使用されます。  
   
@@ -87,9 +95,11 @@ ms.locfileid: "54637912"
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>カスタム セキュリティ トークン シリアライザーを作成するには  
   
-1.  <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> クラスから派生する新しいクラスを定義します。  
+1.  
+  <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> クラスから派生する新しいクラスを定義します。  
   
-2.  <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> に基づいて XML ストリームを読み取る <xref:System.Xml.XmlReader> メソッドをオーバーライドします。 シリアライザー実装が現在の要素に基づいてセキュリティ トークンを逆シリアル化できる場合、このメソッドは `true` を返します。 次の例では、このメソッドが、XML リーダーの現在の XML 要素が正しい要素名と名前空間を持っているかどうかをチェックします。 持っていない場合は、このメソッドの基本クラスの実装を呼び出して、XML 要素を処理します。  
+2.  
+  <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> に基づいて XML ストリームを読み取る <xref:System.Xml.XmlReader> メソッドをオーバーライドします。 シリアライザー実装が現在の要素に基づいてセキュリティ トークンを逆シリアル化できる場合、このメソッドは `true` を返します。 次の例では、このメソッドが、XML リーダーの現在の XML 要素が正しい要素名と名前空間を持っているかどうかをチェックします。 持っていない場合は、このメソッドの基本クラスの実装を呼び出して、XML 要素を処理します。  
   
 3.  <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> メソッドをオーバーライドします。 このメソッドは、セキュリティ トークンの XML コンテンツを読み取り、その適切なメモリ内表現を構築します。 渡された XML リーダーの基盤となる XML 要素を認識できない場合は、基本クラスの実装を呼び出して、システム指定のトークンの種類を処理します。  
   
@@ -104,14 +114,16 @@ ms.locfileid: "54637912"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>カスタム セキュリティ トークンをセキュリティ トークン プロバイダーと統合するには  
   
-1.  セキュリティ トークン プロバイダーは、必要に応じて、トークンのインスタンスを作成、変更、および返却します。 カスタム セキュリティ トークンのカスタム プロバイダーを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> クラスを継承するクラスを作成します。 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> メソッドをオーバーライドして、`CreditCardToken` のインスタンスを返す例を次に示します。 カスタム セキュリティ トークン プロバイダーの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン プロバイダーを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)です。  
+1.  セキュリティ トークン プロバイダーは、必要に応じて、トークンのインスタンスを作成、変更、および返却します。 カスタム セキュリティ トークンのカスタム プロバイダーを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> クラスを継承するクラスを作成します。 
+  <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> メソッドをオーバーライドして、`CreditCardToken` のインスタンスを返す例を次に示します。 カスタム セキュリティ トークン プロバイダーの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン プロバイダーを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)です。  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>カスタム セキュリティ トークンをセキュリティ トークン認証システムと統合するには  
   
-1.  セキュリティ トークン認証システムは、セキュリティ トークンがメッセージから抽出されたときにトークンの内容を検証します。 カスタム セキュリティ トークンのカスタム認証システムを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> クラスを継承するクラスを作成します。 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> メソッドをオーバーライドする例を次に示します。 カスタム セキュリティ トークン認証システムの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン オーセンティケーターの作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)です。  
+1.  セキュリティ トークン認証システムは、セキュリティ トークンがメッセージから抽出されたときにトークンの内容を検証します。 カスタム セキュリティ トークンのカスタム認証システムを作成するには、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> クラスを継承するクラスを作成します。 
+  <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> メソッドをオーバーライドする例を次に示します。 カスタム セキュリティ トークン認証システムの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン オーセンティケーターの作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)です。  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -143,7 +155,8 @@ ms.locfileid: "54637912"
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>カスタム セキュリティ トークンをバインディングと統合するには  
   
-1.  <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスで公開されるトークン パラメーター コレクションの 1 つで、カスタム セキュリティ トークン パラメーター クラスを指定する必要があります。 次の例では、`SignedEncrypted` によって返されるコレクションを使用します。 このコードでは、クライアントからサービスに送信されるすべてのメッセージにクレジット カードのカスタム トークンを追加し、メッセージの内容に自動的に署名して暗号化します。  
+1.  
+  <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスで公開されるトークン パラメーター コレクションの 1 つで、カスタム セキュリティ トークン パラメーター クラスを指定する必要があります。 次の例では、`SignedEncrypted` によって返されるコレクションを使用します。 このコードでは、クライアントからサービスに送信されるすべてのメッセージにクレジット カードのカスタム トークンを追加し、メッセージの内容に自動的に署名して暗号化します。  
   
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
@@ -163,6 +176,5 @@ ms.locfileid: "54637912"
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - [チュートリアル: カスタムのクライアントとサービスの資格情報を作成します。](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [方法: カスタム セキュリティ トークン オーセンティケーターを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [方法: カスタム セキュリティ トークン プロバイダーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [セキュリティ アーキテクチャ](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+- [カスタム セキュリティ トークン オーセンティケーターを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [カスタム セキュリティ トークン プロバイダーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

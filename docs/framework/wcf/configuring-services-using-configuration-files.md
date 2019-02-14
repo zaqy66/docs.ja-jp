@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717403"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261361"
 ---
 # <a name="configuring-services-using-configuration-files"></a>構成ファイルを使用してサービスを構成する方法
 構成ファイルで Windows Communication Foundation (WCF) サービスを構成することで、設計時ではなく配置の時点で、エンドポイントとサービス動作のデータの提供に柔軟性をもたらします。 ここでは使用可能な主要な技術について説明します。  
@@ -91,7 +91,7 @@ ms.locfileid: "54717403"
   
 -   `contract`。 コントラクトを定義するインターフェイスを指定します。 これは `name` 要素の `service` 属性で指定された共通言語ランタイム (CLR) 型で実装されたインターフェイスです。  
   
--   [\<エンドポイント > 要素のリファレンス](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<バインド > 要素  
  `bindings` 要素には、任意のサービスで定義される任意のエンドポイントによって使用できるすべてのバインディングに関する仕様が入ります。  
@@ -101,7 +101,7 @@ ms.locfileid: "54717403"
 ### <a name="the-binding-element"></a>\<バインド > 要素  
  `binding`に含まれる要素、`bindings`要素は、システム指定のバインディングのいずれかを指定できます (を参照してください[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) またはカスタム バインディング (を参照してください[カスタム バインド](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 要素には、バインディングを `name` 要素の `bindingConfiguration` 属性で指定されたエンドポイントと関連付ける `endpoint` 属性があります。 名前を指定しない場合、バインディングは、バインディングの既定の種類に対応します。  
   
- サービスとクライアントの構成の詳細については、次を参照してください。 [Windows Communication Foundation アプリケーションを構成する](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)します。  
+サービスとクライアントの構成の詳細については、次を参照してください。[を構成する WCF サービス](configuring-services.md)します。
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   
@@ -264,6 +264,6 @@ ms.locfileid: "54717403"
   
 ## <a name="see-also"></a>関連項目
 - [簡略化された構成](../../../docs/framework/wcf/simplified-configuration.md)
-- [Windows Communication Foundation アプリケーションの構成](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [WCF サービスの構成](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
 - [\<binding>](../../../docs/framework/misc/binding.md)

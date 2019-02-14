@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 245d9dc6147f4140e823b79c3816b9bc567ad712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a5e18c0cf65ee8f336b74a2d8e44fcf5af0cfef
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732688"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261779"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 構造体
 公開/秘密キーのペアの公開キーをバイナリ形式で表します。  
@@ -61,4 +61,3 @@ typedef struct {
 ## <a name="see-also"></a>関連項目
 - [StrongNameGetPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
 - [StrongNameSignatureGeneration 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
-- [厳密な名前付け構造体](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)

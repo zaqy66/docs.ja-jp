@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7ae35ebeae030cc925f6c787c550941ed268e427
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609803"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261792"
 ---
 # <a name="basic-wcf-programming"></a>基本的な WCF プログラミング
 ここでは、Windows Communication Foundation (WCF) アプリケーションを作成するための基礎を示します。  
@@ -61,7 +61,7 @@ ms.locfileid: "45609803"
   
  [Windows Communication Foundation ツール](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation (WCF) のサンプル](./samples/index.md)  
   
  [はじめに](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

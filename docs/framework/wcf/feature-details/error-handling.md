@@ -2,12 +2,12 @@
 title: エラー処理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695557"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261153"
 ---
 # <a name="error-handling"></a>エラー処理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation でのエラー処理  
@@ -22,7 +22,7 @@ ms.locfileid: "54695557"
   
  アプリケーション ブロックは、よく使用されるベスト プラクティスを組み込み、アプリケーション全体の例外処理に共通の方法を提供することを目的としています。 その一方で、独自に開発されたカスタム エラー ハンドラーやエラー コントラクトが非常に便利な場合もあります。 たとえば、カスタム エラー ハンドラーは、FaultExceptions にすべての例外を自動的に昇格させると、アプリケーションにログ機能を追加する絶好の機会を提供します。  
   
- 詳細についてを参照してください[Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx)します。  
+ 詳細についてを参照してください[Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10))します。  
   
 ### <a name="dealing-with-expected-exceptions"></a>予期される例外の処理  
  各操作または関連する機能拡張ポイントにおいて予期される例外をキャッチから、回復できる、FaultException で適切なカスタム エラーを返すかどうかを決定する一連の適切な措置は、\<T >  
