@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585420"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305845"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置
 アプリケーションによっては、フォームのサイズを変更したり、コンテンツのサイズが変化したりしたときに、それに応じて自動的にレイアウトを調整するフォームが必要です。 動的なレイアウトが必要であり、かつコードで <xref:System.Windows.Forms.Control.Layout> イベントを明示的に処理しない場合は、レイアウト パネルの使用をご検討ください。  
@@ -22,7 +22,7 @@ ms.locfileid: "54585420"
   
  <xref:System.Windows.Forms.TableLayoutPanel>グリッド、HTML と同様の機能を提供するのには、その内容を整列\<テーブル > 要素。 <xref:System.Windows.Forms.TableLayoutPanel>コントロールでは、個々 のコントロールの位置を正確に指定することがなく、グリッド レイアウトにコントロールを配置できます。 セルは行と列に配置され、それぞれに異なるサイズを設定できます。 セルは、行と列の間で結合できます。 セルには、すべてのフォームは含めることができ、コンテナーとして他の多くの点で動作を含めることができます。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>コントロールがフォームのサイズを変更、レイアウトがスムーズに変更できるように、実行時に、比例サイズ変更機能も提供します。 これにより、<xref:System.Windows.Forms.TableLayoutPanel>コントロールがデータ エントリ フォームとローカライズされたアプリケーションなどの目的に適しています。 詳細については、「[チュートリアル:データ エントリのサイズ変更可能な Windows フォームを作成する](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)と[チュートリアル。ローカライズ可能な Windows フォームを作成する](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)します。  
+ <xref:System.Windows.Forms.TableLayoutPanel>コントロールがフォームのサイズを変更、レイアウトがスムーズに変更できるように、実行時に、比例サイズ変更機能も提供します。 これにより、<xref:System.Windows.Forms.TableLayoutPanel>コントロールがデータ エントリ フォームとローカライズされたアプリケーションなどの目的に適しています。 詳細については、「[チュートリアル:データ エントリのサイズ変更可能な Windows フォームを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))と[チュートリアル。ローカライズ可能な Windows フォームを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))します。  
   
  一般に、行わないで、<xref:System.Windows.Forms.TableLayoutPanel>コントロール全体のレイアウト コンテナーとして。 使用<xref:System.Windows.Forms.TableLayoutPanel>コントロールをレイアウトの部分に比例してサイズ変更の機能を提供します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54585420"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  "TableLayoutPanelExample"と呼ばれる Windows アプリケーション プロジェクトを作成します。 詳細については、「[方法 :Windows アプリケーション プロジェクトを作成](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)です。  
+1.  "TableLayoutPanelExample"と呼ばれる Windows アプリケーション プロジェクトを作成します。 詳細については、「[方法 :Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)です。  
   
 2.  フォームを選択、 **Windows** **フォーム デザイナー**します。  
   
@@ -184,10 +184,10 @@ ms.locfileid: "54585420"
 - [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows ユーザー エクスペリエンス、Official Guidelines for ユーザー インターフェイス開発者および設計者です。Redmond、WA:Microsoft Press、1999 年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [チュートリアル: データ エントリのサイズ変更可能な Windows フォームを作成します。](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [チュートリアル: ローカライズ可能な Windows フォームを作成します。](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [チュートリアル: データ エントリのサイズ変更可能な Windows フォームを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [チュートリアル: ローカライズ可能な Windows フォームを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [TableLayoutPanel コントロールの推奨される手順](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize プロパティの概要](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [方法: Windows フォーム上のコントロールをドッキングします。](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [方法: Windows フォームにコントロールを固定](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
+- [Windows フォーム上のコントロールをドッキングします。](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
+- [Windows フォームにコントロールを固定](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
 - [チュートリアル: Windows フォーム コントロール Padding、Margin、および AutoSize プロパティをレイアウト](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

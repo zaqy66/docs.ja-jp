@@ -2,12 +2,12 @@
 title: 簡略化された構成
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498360"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305635"
 ---
 # <a name="simplified-configuration"></a>簡略化された構成
 Windows Communication Foundation (WCF) サービスを構成すると、複雑な作業ができる場合があります。 さまざまなオプションがあり、どの設定が必要であるかをいつでも簡単に判断できるとは限りません。 構成ファイルは、WCF サービスの柔軟性を向上させ、多くの問題を見つけるためにハードのソースもができます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] では、このような問題に対応し、サービス構成の規模と複雑さを軽減する手段を提供しています。  
@@ -118,5 +118,5 @@ Windows Communication Foundation (WCF) サービスを構成すると、複雑�
 - [サービスのバインディングの構成](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [システムが提供するバインディングの構成](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [サービスの構成](../../../docs/framework/wcf/configuring-services.md)
-- [Windows Communication Foundation アプリケーションの構成](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [WCF サービスの構成](configuring-services.md)
 - [コード内での WCF サービスの構成](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

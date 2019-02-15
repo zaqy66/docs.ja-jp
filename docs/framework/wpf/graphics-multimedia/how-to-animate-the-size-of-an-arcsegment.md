@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], ArcSegment size
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-ms.openlocfilehash: 845db7fdeacaae77e25dd73ea0099b779975c186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1ca86970b71f1d1449d3ef3fdfb2e96b5ce6175
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514521"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303336"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>方法: ArcSegment のサイズをアニメーション化する
 この例は、アニメーション化する方法を示しています、<xref:System.Windows.Media.ArcSegment.Size%2A>のプロパティ、<xref:System.Windows.Media.ArcSegment>します。  
@@ -32,6 +32,5 @@ ms.locfileid: "54514521"
 - <xref:System.Windows.Media.ArcSegment>
 - [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
-- [アニメーションとタイミング](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [ジオメトリの操作方法に関するトピック](geometries-how-to-topics.md)
+- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)
