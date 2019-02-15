@@ -2,12 +2,18 @@
 title: 厳密な名前付け (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305646"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>厳密な名前付け (アンマネージ API リファレンス)
 厳密な名前付け API を使用すると、アセンブリに対する厳密な名前の署名をクライアントで管理できます。  
@@ -15,8 +21,6 @@ ms.author: ronpet
  厳密な名前を使用してアセンブリに署名すると、アセンブリ マニフェストを格納しているファイルに公開キー暗号化が追加されます。 厳密な名前による署名では、名前の一意性の検証を支援し、名前の悪用を防止し、参照が解決されたときに呼び出し元に一意の ID を提供できます。 しかし、厳密な名前に信頼性のレベルは関連付けられていません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Strong Naming Global Static 関数](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- 厳密な名前付け API で使用されるアンマネージド グローバル静的関数について説明します。  
   
 > [!NOTE]
 >  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 以降、これらの関数すべてが非推奨となりました。 推奨されている代わりの関数については、[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) インターフェイスを参照してください。  
@@ -98,9 +102,6 @@ ms.author: ronpet
   
  [StrongNameTokenFromPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  公開キーを表すトークンが取得されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降、非推奨となっています。  
-  
- [厳密な名前付け構造体](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- アセンブリに対する厳密な名前の署名を管理するために、厳密な名前付け API によって使用されるアンマネージド構造体について説明します。  
   
  [PublicKeyBlob 構造体](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  公開/秘密キーの組の公開キーがバイナリ形式で表されます。  
