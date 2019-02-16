@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491364"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332248"
 ---
 # <a name="getting-started-tutorial"></a>チュートリアル入門
 このセクションのトピックはクイック露出を Windows Communication Foundation (WCF) プログラミングの経験を提供するためのものです。 これらは、このトピックに記載されているリストの順番どおりに完了するように設計されています。 このチュートリアルに従って作業では、WCF サービスとクライアント アプリケーションの作成に必要な手順の概要を理解するできます。 サービスは 1 つ以上のエンドポイントを公開し、それぞれのエンドポイントは 1 つ以上のサービス操作を公開します。 *エンドポイント*サービスのサービスの場所、アドレス、クライアントが、サービスと機能を定義するコントラクトと通信する必要がある方法を説明する情報を格納するバインディングを指定します。サービスのクライアントに提供します。
@@ -22,7 +22,7 @@ ms.locfileid: "54491364"
 
 このセクションのトピックでは、開発環境として Visual Studio を使用するいると仮定します。 他の開発環境を使用している場合は、Visual Studio 固有の手順を無視します。
 
-ハード_ディスクにダウンロードできるようにしてトピックを参照して、実行するサンプル アプリケーションの[Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)します。 このトピックでは、具体的を参照、 [Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md)します。
+ハード_ディスクにダウンロードできるようにしてトピックを参照して、実行するサンプル アプリケーションの[Windows Communication Foundation (WCF) サンプル](./samples/index.md)します。 このトピックでは、具体的を参照、 [Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md)します。
 
 サービスとクライアントの作成の詳細の詳細については、次を参照してください。[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。
 
@@ -58,7 +58,7 @@ ms.locfileid: "54491364"
 
 ## <a name="related-sections"></a>関連項目
 
-- [Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Windows Communication Foundation (WCF) のサンプル](./samples/index.md)
 - [基本的なプログラミング ライフサイクル](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
 ## <a name="see-also"></a>関連項目

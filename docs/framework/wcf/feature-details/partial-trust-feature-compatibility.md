@@ -2,12 +2,12 @@
 title: 部分信頼機能の互換性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564725"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333506"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信頼機能の互換性
 Windows Communication Foundation (WCF) では、部分信頼環境で実行されている場合、機能の限定されたサブセットがサポートされます。 部分信頼でサポートされる機能は、「 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 」のトピックで説明される特定のシナリオを念頭にデザインされています。  
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
  メッセージ ログでは、部分信頼環境で WCF の実行時に機能しません。 部分信頼環境下で有効になっても、サービスのアクティブ化には失敗しませんが、メッセージはログに記録されません。  
   
 ### <a name="tracing"></a>トレース  
- 部分信頼環境で実行される場合、利用できるトレース機能には制限があります。 構成ファイルの <`listeners`> 要素に追加できる型は <xref:System.Diagnostics.TextWriterTraceListener> と新しい <xref:System.Diagnostics.EventSchemaTraceListener> に限られます。 標準の <xref:System.Diagnostics.XmlWriterTraceListener> を使用すると、ログが不完全または不正確になります。  
+ 部分信頼環境で実行される場合、利用できるトレース機能には制限があります。 <`listeners`> 構成ファイル内の要素、追加できる唯一の種類は<xref:System.Diagnostics.TextWriterTraceListener>と新しい<xref:System.Diagnostics.EventSchemaTraceListener>します。 標準の <xref:System.Diagnostics.XmlWriterTraceListener> を使用すると、ログが不完全または不正確になります。  
   
  次のトレース ソースがサポートされています。  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
   
 -   <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]
+-   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  <xref:System.Diagnostics.TraceOptions> 列挙体の次のメンバーは指定できません。  
   

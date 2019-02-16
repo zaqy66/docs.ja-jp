@@ -1,17 +1,17 @@
 ---
-title: '方法 : 基本的な Windows Communication Foundation クライアントを構成する'
+title: '方法: 基本的な Windows Communication Foundation のクライアントを構成します。'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: 3f267edf87711de8a5969e3e0b577648008c5a75
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 18acec48b2af78877f99335da38ccb0ae8942824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562191"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332321"
 ---
-# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>方法 : 基本的な Windows Communication Foundation クライアントを構成する
+# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>方法: 基本的な Windows Communication Foundation のクライアントを構成します。
 
 これは、5 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 6 つのタスクです。 6 つのすべてのタスクの概要については、「[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)」を参照してください。
 
@@ -19,7 +19,7 @@ ms.locfileid: "46562191"
 
 ## <a name="configure-a-windows-communication-foundation-client"></a>Windows Communication Foundation クライアントを構成します。
 
-GettingStartedClient プロジェクトから生成された構成ファイル (App.config) を開きます。 生成された構成ファイルを次の例に示します。 [\<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)セクションの下にある [\<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素を見つけてください。
+GettingStartedClient プロジェクトから生成された構成ファイル (App.config) を開きます。 生成された構成ファイルを次の例に示します。 [\<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)セクションの下にある [\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md)要素を見つけてください。
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -51,19 +51,20 @@ GettingStartedClient プロジェクトから生成された構成ファイル (
 
 この例では、次のアドレスにあるサービスにアクセスするクライアントが使用するエンドポイント:`http://localhost:8000/ServiceModelSamples/Service/CalculatorService`します。
 
-endpoint 要素は、`ServiceReference1.ICalculator` サービス コントラクトが、WCF クライアントと WCF サービス間の通信に使用されるように指定します。 WCF チャネルはシステム標準の <xref:System.ServiceModel.WSHttpBinding> で構成されます。 このコントラクトを使用して生成された**サービス参照の追加**Visual Studio でします。 基本的には、GettingStartedLib プロジェクトで定義されているコントラクトのコピーです。 <xref:System.ServiceModel.WSHttpBinding> バインディングは、トランスポートとして HTTP を指定し、相互運用可能なセキュリティ、およびその他の構成詳細を指定します。
+endpoint 要素は、`ServiceReference1.ICalculator` サービス コントラクトが、WCF クライアントと WCF サービス間の通信に使用されるように指定します。 WCF チャネルはシステム標準の <xref:System.ServiceModel.WSHttpBinding> で構成されます。 このコントラクトを使用して生成された**サービス参照の追加**Visual Studio でします。 基本的には、GettingStartedLib プロジェクトで定義されているコントラクトのコピーです。 
+  <xref:System.ServiceModel.WSHttpBinding> バインディングは、トランスポートとして HTTP を指定し、相互運用可能なセキュリティ、およびその他の構成詳細を指定します。
 
-この構成で生成されたクライアントを使用する方法の詳細については、次を参照してください。[方法: クライアントを使用して](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)します。
+この構成で生成されたクライアントを使用する方法の詳細については、次を参照してください。[方法。クライアントを使用して](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)します。
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [方法: WCF クライアントを使用](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+> [方法: WCF クライアントを使用します。](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
 
 ## <a name="see-also"></a>関連項目
 
 - [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [はじめに](../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [自己ホスト](../../../docs/framework/wcf/samples/self-host.md)

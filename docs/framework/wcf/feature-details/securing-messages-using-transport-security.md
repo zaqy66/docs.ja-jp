@@ -2,12 +2,12 @@
 title: トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747948"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332347"
 ---
 # <a name="securing-messages-using-transport-security"></a>トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ここでは、キューに送信されるメッセージをセキュリティで保護するために使用できるメッセージ キュー (MSMQ) トランスポート セキュリティについて説明します。  
@@ -23,7 +23,8 @@ ms.locfileid: "54747948"
   
  トランスポート セキュリティの背後にある重要な概念は、メッセージがターゲット キューに到達するためには、クライアントがセキュリティ要件を満たす必要があるという点です。 これは、メッセージ セキュリティとは異なります。メッセージ セキュリティでは、メッセージを受信するアプリケーションに対してメッセージが保護されます。  
   
- <xref:System.ServiceModel.NetMsmqBinding> と <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を使用するトランスポート セキュリティは、転送キューとターゲット キュー間を移動している MSMQ メッセージがセキュリティで保護される方法に影響します。この場合、"セキュリティで保護される" とは次のことを意味します。  
+ 
+  <xref:System.ServiceModel.NetMsmqBinding> と <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を使用するトランスポート セキュリティは、転送キューとターゲット キュー間を移動している MSMQ メッセージがセキュリティで保護される方法に影響します。この場合、"セキュリティで保護される" とは次のことを意味します。  
   
 -   メッセージが改ざんされないように、メッセージに署名する。  
   
@@ -45,7 +46,8 @@ ms.locfileid: "54747948"
  これらの基本事項に基づいて、以降のセクションでは <xref:System.ServiceModel.NetMsmqBinding> および <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> に結び付けられたトランスポート セキュリティのプロパティについて詳しく説明します。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 認証モード  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> は、Windows ドメインのセキュリティと外部の証明書ベースのセキュリティのどちらを使用してメッセージを保護するかを決定します。 どちらの認証モードでは、WCF のキューに置かれたトランスポート チャネルを使用して、`CertificateValidationMode`サービス構成で指定します。 証明書検証モードは、証明書の有効性を確認するために使用される機構を指定します。  
+ 
+  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> は、Windows ドメインのセキュリティと外部の証明書ベースのセキュリティのどちらを使用してメッセージを保護するかを決定します。 どちらの認証モードでは、WCF のキューに置かれたトランスポート チャネルを使用して、`CertificateValidationMode`サービス構成で指定します。 証明書検証モードは、証明書の有効性を確認するために使用される機構を指定します。  
   
  トランスポート セキュリティが有効になっている場合、既定の設定は <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> です。  
   
@@ -79,7 +81,8 @@ ms.locfileid: "54747948"
 >  メッセージを暗号化するには、Active Directory にアクセスでき (`UseActiveDirectory` の <xref:System.ServiceModel.NetMsmqBinding> プロパティが `true` に設定されている)、かつ <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> と <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> の両方で Active Directory を使用できる必要があります。  
   
 #### <a name="none-protection-level"></a>保護のないレベル  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> を <xref:System.Net.Security.ProtectionLevel.None> に設定することにより指定されます。 この値は、他の認証モードに対しては無効です。  
+ 
+  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> を <xref:System.Net.Security.ProtectionLevel.None> に設定することにより指定されます。 この値は、他の認証モードに対しては無効です。  
   
 > [!NOTE]
 >  MSMQ メッセージが署名されている場合は、キューの状態 (つまり、認証キューであるかどうか) に関係なく、添付されている (内部または外部) 証明書を使用してメッセージが署名されているかどうかがチェックされます。  
@@ -89,7 +92,8 @@ ms.locfileid: "54747948"
   
  サポートされているアルゴリズムは `RC4Stream` と `AES` で、既定値は `RC4Stream` です。  
   
- `AES` アルゴリズムは、送信元が MSMQ 4.0 以降をインストールしている場合にのみ使用できます。 また、ターゲット キューも MSMQ 4.0 でホストされている必要があります。  
+ 
+  `AES` アルゴリズムは、送信元が MSMQ 4.0 以降をインストールしている場合にのみ使用できます。 また、ターゲット キューも MSMQ 4.0 でホストされている必要があります。  
   
 ### <a name="msmq-hash-algorithm"></a>MSMQ ハッシュ アルゴリズム  
  ハッシュ アルゴリズムは、MSMQ メッセージのデジタル署名を作成するために使用されるアルゴリズムを指定します。 受信側キュー マネージャーも、これと同じアルゴリズムを使用して MSMQ メッセージを認証します。 このプロパティは、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> が <xref:System.Net.Security.ProtectionLevel.Sign> または <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> に設定されている場合にのみ使用されます。  
@@ -97,6 +101,6 @@ ms.locfileid: "54747948"
  サポートされるアルゴリズムは、`MD5`、`SHA1`、`SHA256`、および `SHA512` です。 既定値は `SHA1` です。  
   
 ## <a name="see-also"></a>関連項目
-- [メッセージ キュー](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [キューの概要](queues-overview.md)
 - [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

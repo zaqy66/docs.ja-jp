@@ -2,12 +2,12 @@
 title: .NET リモート処理から WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415976"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333067"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET リモート処理から WCF への移行
 この記事では、.NET リモート処理を使用するアプリケーションを、Windows Communication Foundation (WCF) を使用するように移行する方法について説明します。 これらの製品間で類似する概念を比較した後、WCF で一般的なリモート処理のシナリオを実現する方法を説明します。  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  [DataContract] 属性は、この型をクライアントとサーバーの間でシリアル化および逆シリアル化ができる型として識別します。 [DataMember] 属性は、シリアル化する個々のプロパティまたはフィールドを識別します。  
   
- WCF が階層をまたいでオブジェクトを送信する場合は、値のみをシリアル化し、もう一方の階層でオブジェクトの新しいインスタンスを作成します。 オブジェクトの値とのやり取りはローカルでのみ発生し、.NET リモート処理の参照渡しのオブジェクトのような方法でもう一方の階層と通信することはありません。 詳細については、次のトピックを参照してください。  
-  
--   [シリアル化と逆シリアル化](./feature-details/serialization-and-deserialization.md)  
-  
--   [Windows Communication Foundation でのシリアル化](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ WCF が階層をまたいでオブジェクトを送信する場合は、値のみをシリアル化し、もう一方の階層でオブジェクトの新しいインスタンスを作成します。 オブジェクトの値とのやり取りはローカルでのみ発生し、.NET リモート処理の参照渡しのオブジェクトのような方法でもう一方の階層と通信することはありません。 詳細については、次を参照してください。[シリアル化および逆シリアル化](./feature-details/serialization-and-deserialization.md)します。  
   
 ### <a name="exception-handling-capabilities"></a>例外処理の機能  
   
