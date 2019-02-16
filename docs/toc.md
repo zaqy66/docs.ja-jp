@@ -258,6 +258,7 @@
 ##### [クラスの概要](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
 ### [C# 6 を詳しく学習する](csharp/tutorials/exploration/csharp-6.yml)
 ### [Null 許容参照型を操作する](csharp/tutorials/nullable-reference-types.md)
+### [非同期ストリームの生成と使用](csharp/tutorials/generate-consume-asynchronous-stream.md)
 ### [コンソール アプリケーション](csharp/tutorials/console-teleprompter.md)
 ### [REST クライアント](csharp/tutorials/console-webapiclient.md)
 ### [C# と .NET での継承](csharp/tutorials/inheritance.md)
