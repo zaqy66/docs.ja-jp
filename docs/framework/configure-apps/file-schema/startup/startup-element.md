@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2019
 ms.locfileid: "55674569"
 ---
-# <a name="startup-element"></a>\<startup > 要素
+# <a name="startup-element"></a>\<startup> 要素
 
 共通言語ランタイムのスタートアップの情報を指定します。
 
