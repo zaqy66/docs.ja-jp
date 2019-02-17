@@ -122,4 +122,4 @@ publicKeyToken=...,
 |[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)|アプリケーション ドメインの概念的な概要を説明します。|  
   
 ## <a name="reference"></a>参照  
- [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+ [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
