@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8de1d1b1f2bfe385a815eb6147b79a1dc2be0206
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717559"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304896"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI オートメーションおよび画面の拡大縮小
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "54717559"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     この関数は、プロセス全体を [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]対応にします。つまり、プロセスに属するすべてのウィンドウは拡大縮小されません。 [蛍光ペン サンプル](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)、たとえば、強調表示の四角形を構成する 4 つのウィンドウはから取得した物理座標にある[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]、論理座標ではありません。 この例が [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]非対応だったなら、強調表示はデスクトップ上の論理座標で描画されるため、96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 以外の環境では誤った位置に配置されることになります。  
+     この関数は、プロセス全体を dpi 対応では、プロセスに属するすべての windows がスケーリングされたいないことを意味します。 [蛍光ペン サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)、たとえば、強調表示の四角形を構成する 4 つのウィンドウは、UI オートメーション、論理座標ではないから取得した物理座標にあります。 サンプルが dpi 対応でない場合、強調表示はデスクトップであるため、96 dpi ではない環境では正しく配置論理座標で描画します。  
   
 2.  カーソルの座標を取得するには、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `GetPhysicalCursorPos`を呼び出します。 次の例に、この関数を宣言して使用する方法を示します。  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54717559"
  アプリケーションが [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]非対応のアプリケーションと直接プロセス間通信を行う場合は、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `PhysicalToLogicalPoint` および `LogicalToPhysicalPoint`を使用して、論理座標と物理座標を互いに変換できます。  
   
 ## <a name="see-also"></a>関連項目
-- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

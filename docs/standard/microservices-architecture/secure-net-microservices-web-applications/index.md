@@ -1,41 +1,41 @@
 ---
-title: Securing .NET Microservices and Web Applications
-description: Security in .NET Microservices and Web Applications - Get to know the authentication options in ASP.NET Core web applications.
+title: NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
+description: .NET マイクロサービスおよび Web アプリケーションのセキュリティ - ASP.NET Core Web アプリケーションの認証オプションをご確認ください。
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 9a60f326035a6d04aa39a14c98fc1c711ffe494a
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: e53e6a50c1fdfaff6839a0a1e328047562a47824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362302"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333501"
 ---
-# <a name="make-secure-net-microservices-and-web-applications"></a>Make secure .NET Microservices and Web Applications
+# <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
-There are so many aspects about security in microservices and web applications that the topic could easy take several books like this one so, in this section, we'll focus on authentication, authorization, and application secrets.
+マイクロサービスと Web サービスのセキュリティに関するトピックはそれだけで何冊も本が書けるほど多岐にわたるため、このセクションでは、認証、認可、アプリケーション シークレットのみを取り上げます。
 
-## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implement authentication in .NET microservices and web applications
+## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>.NET マイクロサービスおよび Web アプリケーションに認証を実装する
 
-It's often necessary for resources and APIs published by a service to be limited to certain trusted users or clients. The first step to making these sorts of API-level trust decisions is authentication. Authentication is the process of reliably verify a user’s identity.
+サービスによって発行されるリソースや API を特定の信頼されたユーザーやクライアントに制限しなければならないことはよくあります。 このような API レベルの信頼の決定を行うための最初の手順は、認証です。 認証は、ユーザーの ID を確実に検証するプロセスです。
 
-In microservice scenarios, authentication is typically handled centrally. If you're using an API Gateway, the gateway is a good place to authenticate, as shown in Figure 9-1. If you use this approach, make sure that the individual microservices cannot be reached directly (without the API Gateway) unless additional security is in place to authenticate messages whether they come from the gateway or not.
+マイクロサービスのシナリオでは、通常、認証は一元的に処理されます。 API ゲートウェイを使用している場合、図 9-1 に示すように、このゲートウェイから認証することができます。 このアプローチを使用する場合は、メッセージがゲートウェイから来たかどうかに関わらず、メッセージの認証に追加のセキュリティ保護がない限り、(API ゲートウェイなしで) 個々のマイクロサービスに直接到達できないようにする必要があります。
 
-![When the API Gateway centralizes authentication, it adds user information when forwarding requests to the microservices.](./media/image1.png)
+![API ゲートウェイで認証が一元化されている場合に要求がマイクロサービスに転送されると、ユーザー情報が追加されます。](./media/image1.png)
 
-**Figure 9-1**. Centralized authentication with an API Gateway
+**図 9-1** API ゲートウェイによる認証の一元管理
 
-If services can be accessed directly, an authentication service like Azure Active Directory or a dedicated authentication microservice acting as a security token service (STS) can be used to authenticate users. Trust decisions are shared between services with security tokens or cookies. (These tokens can be shared between applications, if needed, in ASP.NET Core with [data protection services](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications).) This pattern is illustrated in Figure 9-2.
+サービスに直接アクセスできる場合は、Azure Active Directory などの認証サービスやセキュリティ トークン サービス (STS) として機能する専用の認証マイクロサービスは、ユーザーを認証するために使用できます。 信頼の決定は、サービスとセキュリティ トークンまたは cookie 間で共有されます  (必要に応じて、これらのトークンは ASP.NET Core で[データ保護サービス](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)を使用して、アプリケーション間で共有できます)。このパターンを示したものが図 9-2 です。
 
-![When microservices are accessed directly, trust, that includes authentication and authorization, is handled by a security token issued by a dedicated microservice, shared between microservices.](./media/image2.png)
+![マイクロ サービスに直接アクセスすると、認証と認可を含む信頼が、マイクロサービス間で共有される専用のマイクロサービスによって発行されたセキュリティ トークンによって処理されます。](./media/image2.png)
 
-**Figure 9-2**. Authentication by identity microservice; trust is shared using an authorization token
+**図 9-2** ID マイクロサービスによる認証、信頼は認証トークンを使用して共有
 
-### <a name="authenticate-with-aspnet-core-identity"></a>Authenticate with ASP.NET Core Identity
+### <a name="authenticate-with-aspnet-core-identity"></a>ASP.NET Core Identity を使用して認証する
 
-The primary mechanism in ASP.NET Core for identifying an application’s users is the [ASP.NET Core Identity](/aspnet/core/security/authentication/identity) membership system. ASP.NET Core Identity stores user information (including sign-in information, roles, and claims) in a data store configured by the developer. Typically, the ASP.NET Core Identity data store is an Entity Framework store provided in the `Microsoft.AspNetCore.Identity.EntityFrameworkCore` package. However, custom stores or other third-party packages can be used to store identity information in Azure Table Storage, CosmosDB, or other locations.
+アプリケーションのユーザーを識別するための ASP.NET Core の主要なメカニズムは、[ASP.NET Core Identity](/aspnet/core/security/authentication/identity) メンバーシップ システムです。 ASP.NET Core Identity は、ユーザー情報 (サインイン情報、ロール、およびクレームを含む) を開発者によって構成されたデータ ストアに格納します。 通常、ASP.NET Core Identity データ ストアは、`Microsoft.AspNetCore.Identity.EntityFrameworkCore` パッケージで提供される Entity Framework ストアです。 ただし、カスタム ストアまたはその他のサード パーティのパッケージを使用して、ID 情報を Azure Table Storage、CosmosDB、またはその他の場所に格納することができます。
 
-The following code is taken from the ASP.NET Core Web Application project template with individual user account authentication selected. It shows how to configure ASP.NET Core Identity using EntityFramework.Core in the Startup.ConfigureServices method.
+次のコードは、個々のユーザー アカウントの認証が選択された ASP.NET Core Web アプリケーション プロジェクト テンプレートから取得されます。 これは Startup.ConfigureServices メソッドで EntityFramework.Core を使用して ASP.NET Core Identity を構成する方法を示します。
 
 ```csharp
 services.AddDbContext<ApplicationDbContext>(options =>
@@ -45,38 +45,38 @@ services.AddDbContext<ApplicationDbContext>(options =>
         .AddDefaultTokenProviders();
 ```
 
-Once ASP.NET Core Identity is configured, you enable it by calling app.UseIdentity in the service’s `Startup.Configure` method.
+ASP.NET Core Identity が構成されたら、サービスの `Startup.Configure` メソッドで app.UseIdentity を呼び出して有効にします。
 
-Using ASP.NET Core Identity enables several scenarios:
+ASP.NET Core Identity を使用すると、次の複数のシナリオが実現できます。
 
-- Create new user information using the UserManager type (userManager.CreateAsync).
+- UserManager 型 (userManager.CreateAsync) を使用して、新しいユーザー情報を作成する。
 
-- Authenticate users using the SignInManager type. You can use `signInManager.SignInAsync` to sign in directly, or `signInManager.PasswordSignInAsync` to confirm the user’s password is correct and then sign them in.
+- SignInManager 型を使用してユーザーを認証する。 `signInManager.SignInAsync` を使用して直接サインインするか、`signInManager.PasswordSignInAsync` を使用してユーザーのパスワードが正しいことを確認し、そのユーザーでサインインすることができます。
 
-- Identify a user based on information stored in a cookie (which is read by ASP.NET Core Identity middleware) so that subsequent requests from a browser will include a signed-in user’s identity and claims.
+- ブラウザーからの後続の要求にサインイン ユーザーの ID とクレームが含まれるように、cookie に格納されている情報 (ASP.NET Core Identity ミドルウェアで読み取られます) に基づいてユーザーを識別します。
 
-ASP.NET Core Identity also supports [two-factor authentication](/aspnet/core/security/authentication/2fa).
+ASP.NET Core Identity は [2 要素認証](/aspnet/core/security/authentication/2fa)もサポートしています。
 
-For authentication scenarios that make use of a local user data store and that persist identity between requests using cookies (as is typical for MVC web applications), ASP.NET Core Identity is a recommended solution.
+ローカル ユーザーのデータ ストアを利用する認証シナリオや、cookie を使用して要求間で ID を保持する認証シナリオ (MVC web アプリケーションでは一般的) では、ASP.NET Core Identity が推奨されるソリューションです。
 
-### <a name="authenticate-with-external-providers"></a>Authenticate with external providers
+### <a name="authenticate-with-external-providers"></a>外部プロバイダーを使用して認証する
 
-ASP.NET Core also supports using [external authentication providers](/aspnet/core/security/authentication/social/) to let users sign in via [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) flows. This means that users can sign in using existing authentication processes from providers like Microsoft, Google, Facebook, or Twitter and associate those identities with an ASP.NET Core identity in your application.
+ASP.NET Core は、ユーザーが [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) フローを経由してサインインできるように、[外部認証プロバイダー](/aspnet/core/security/authentication/social/)の使用もサポートしています。 つまり、ユーザーは Microsoft、Google、Facebook、Twitter などのプロバイダーの既存の認証プロセスを使用してサインインし、アプリケーションでこれらの ID を ASP.NET Core Identity に関連付けることができます。
 
-To use external authentication, you include the appropriate authentication middleware in your application’s HTTP request processing pipeline. This middleware is responsible for handling requests to return URI routes from the authentication provider, capturing identity information, and making it available via the SignInManager.GetExternalLoginInfo method.
+外部認証を使用するには、アプリケーションの HTTP 要求処理パイプラインに適切な認証ミドルウェアを含めます。 このミドルウェアは、認証プロバイダーから URI ルートを返すために要求を処理し、ID 情報をキャプチャし、SignInManager.GetExternalLoginInfo メソッドを介して使用できるようにします。
 
-Popular external authentication providers and their associated NuGet packages are shown in the following table:
+よく利用されている外部認証プロバイダーと、関連付けられている NuGet パッケージを以下の表に示します。
 
-| **Provider**  | **Package**                                          |
+| **プロバイダー**  | **パッケージ**                                          |
 | ------------- | ---------------------------------------------------- |
 | **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
 | **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-In all cases, the middleware is registered with a call to a registration method similar to `app.Use{ExternalProvider}Authentication` in `Startup.Configure`. These registration methods take an options object that contains an application ID and secret information (a password, for instance), as needed by the provider. External authentication providers require the application to be registered (as explained in [ASP.NET Core documentation](/aspnet/core/security/authentication/social/)) so that they can inform the user what application is requesting access to their identity.
+すべての場合で、`Startup.Configure` の `app.Use{ExternalProvider}Authentication` と同様の、登録メソッドの呼び出しによってミドルウェアが登録されます。 これらの登録メソッドは、プロバイダーが必要とするアプリケーション ID と機密情報 (パスワードなど) を含むオプション オブジェクトを取得します。 外部認証プロバイダーは、([ASP.NET Core のドキュメントで説明されているように](/aspnet/core/security/authentication/social/)) ユーザーに ID へのアクセスを求めているアプリケーションを通知するため、アプリケーションの登録を求めます。
 
-Once the middleware is registered in `Startup.Configure`, you can prompt users to sign in from any controller action. To do this, you create an `AuthenticationProperties` object that includes the authentication provider’s name and a redirect URL. You then return a Challenge response that passes the `AuthenticationProperties` object. The following code shows an example of this.
+ミドルウェアが `Startup.Configure` で登録されると、ユーザーに任意のコントローラー アクションからサインインを求めることができます。 これを行うには、認証プロバイダー名とリダイレクト URL を含む `AuthenticationProperties` オブジェクトを作成します。 そして、`AuthenticationProperties` オブジェクトを渡すチャレンジ応答を返します。 この例を次のコードに示します。
 
 ```csharp
 var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
@@ -84,7 +84,7 @@ var properties = _signInManager.ConfigureExternalAuthenticationProperties(provid
 return Challenge(properties, provider);
 ```
 
-The redirectUrl parameter includes the URL that the external provider should redirect to once the user has authenticated. The URL should represent an action that will sign the user in based on external identity information, as in the following simplified example:
+redirectUrl パラメーターには、ユーザーが認証された後に外部プロバイダーがリダイレクトされる URL が含まれています。 URL は、次の簡素化した例のように、外部の ID 情報に基づいてユーザーをサインインさせるアクションを表す必要があります。
 
 ```csharp
 // Sign in the user with this external login provider if the user
@@ -119,25 +119,25 @@ else
 }
 ```
 
-If you choose the **Individual User Account** authentication option when you create the ASP.NET Code web application project in Visual Studio, all the code necessary to sign in with an external provider is already in the project, as shown in Figure 9-3.
+Visual Studio で ASP.NET コードの Web アプリケーション プロジェクトを作成するときに、**[個人のユーザー アカウント]** 認証オプションを選択すると、図 9-3 に示すように、外部プロバイダーでサインインするために必要なすべてのコードがすでにプロジェクト内にあります。
 
-![Dialog for the New ASP.NET Core Web Application, highlighting the button to change authentication.](./media/image3.png)
+![認証を変更するボタンが強調表示された、新しい ASP.NET Core Web アプリケーションのダイアログ。](./media/image3.png)
 
-**Figure 9-3**. Selecting an option for using external authentication when creating a web application project
+**図 9-3** Web アプリケーション プロジェクトを作成するときに、外部の認証を使用するためのオプションを選択する
 
-In addition to the external authentication providers listed previously, third-party packages are available that provide middleware for using many more external authentication providers. For a list, see the [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) repo on GitHub.
+より多くの外部認証プロバイダーを使用するため、上記で一覧表示した外部の認証プロバイダーの他に、ミドルウェアを提供するサード パーティのパッケージが使用できます。 リストについては、GitHub で [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) のリポジトリを参照してください。
 
-You can also create your own external authentication middleware to solve some special need.
+いくつかの特別なニーズを解決するために、独自の外部認証ミドルウェアを作成することもできます。
 
-### <a name="authenticate-with-bearer-tokens"></a>Authenticate with bearer tokens
+### <a name="authenticate-with-bearer-tokens"></a>ベアラー トークンで認証する
 
-Authenticating with ASP.NET Core Identity (or Identity plus external authentication providers) works well for many web application scenarios in which storing user information in a cookie is appropriate. In other scenarios, though, cookies are not a natural means of persisting and transmitting data.
+ASP.NET Core Identity (または Identity と外部認証プロバイダー) を使用した認証は、ユーザー情報を cookie に格納する多くの Web アプリケーションのシナリオに適してします。 しかし、それ以外のシナリオでは、cookie はデータを保持および送信する通常の方法ではありません。
 
-For example, in an ASP.NET Core Web API that exposes RESTful endpoints that might be accessed by Single Page Applications (SPAs), by native clients, or even by other Web APIs, you typically want to use bearer token authentication instead. These types of applications do not work with cookies, but can easily retrieve a bearer token and include it in the authorization header of subsequent requests. To enable token authentication, ASP.NET Core supports several options for using [OAuth 2.0](https://oauth.net/2/) and [OpenID Connect](https://openid.net/connect/).
+たとえば、Single Page Application (SPA)、ネイティブ クライアント、または他の Web API によってアクセスできる RESTful エンドポイントを公開する ASP.NET Core Web API では、代わりにベアラー トークン認証を使用するのが一般的です。 この種のアプリケーションでは cookie を使用しませんが、簡単にベアラー トークンを取得してそれを後続の要求の承認ヘッダーに含めることができます。 トークン認証を有効にするため、ASP.NET Core は [OAuth 2.0](https://oauth.net/2/) および [OpenID Connect](https://openid.net/connect/) を使用するための複数のオプションをサポートしています。
 
-### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>Authenticate with an OpenID Connect or OAuth 2.0 Identity provider
+### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>OpenID Connect または OAuth 2.0 ID プロバイダーで認証する
 
-If user information is stored in Azure Active Directory or another identity solution that supports OpenID Connect or OAuth 2.0, you can use the **Microsoft.AspNetCore.Authentication.OpenIdConnect** package to authenticate using the OpenID Connect workflow. For example, to authenticate to the Identity.Api microservice in eShopOnContainers, an ASP.NET Core web application can use middleware from that package as shown in the following simplified example in `Startup.cs`:
+ユーザー情報が Azure Active Directory または OpenID Connect または OAuth 2.0 をサポートする別の ID ソリューションに格納されている場合は、**Microsoft.AspNetCore.Authentication.OpenIdConnect** パッケージを使用して、OpenID Connect ワークフローの使用を認証することができます。 たとえば、eShopOnContainers の Identity.Api マイクロサービスを認証するには、次の `Startup.cs` の簡易的な例に示すように、ASP.NET Core Web アプリケーションが、そのパッケージのミドルウェアを使用できます。
 
 ```csharp
 // Startup.cs
@@ -185,35 +185,35 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Note that when you use this workflow, the ASP.NET Core Identity middleware is not needed, because all user information storage and authentication is handled by the Identity service.
+このワークフローを使用すると、すべてのユーザー情報ストレージと認証が ID サービスによって処理されるため、ASP.NET Core Identity ミドルウェアは必要ありません。
 
-### <a name="issue-security-tokens-from-an-aspnet-core-service"></a>Issue security tokens from an ASP.NET Core service
+### <a name="issue-security-tokens-from-an-aspnet-core-service"></a>ASP.NET Core サービスからセキュリティ トークンを発行する
 
-If you prefer to issue security tokens for local ASP.NET Core Identity users rather than using an external identity provider, you can take advantage of some good third-party libraries.
+外部 ID プロバイダーを使用するよりも、ローカルの ASP.NET Core Identity ユーザーにセキュリティ トークンを発行する場合は、優れたサード パーティ ライブラリを利用することができます。
 
-[IdentityServer4](https://github.com/IdentityServer/IdentityServer4) and [OpenIddict](https://github.com/openiddict/openiddict-core) are OpenID Connect providers that integrate easily with ASP.NET Core Identity to let you issue security tokens from an ASP.NET Core service. The [IdentityServer4 documentation](https://identityserver4.readthedocs.io/en/release/) has in-depth instructions for using the library. However, the basic steps to using IdentityServer4 to issue tokens are as follows.
+[IdentityServer4](https://github.com/IdentityServer/IdentityServer4) と [OpenIddict](https://github.com/openiddict/openiddict-core) は、ASP.NET Core Identity と簡単に統合して ASP.NET Core サービスからセキュリティ トークンを発行できるようにする OpenID Connect プロバイダーです。 [IdentityServer4 ドキュメント](https://identityserver4.readthedocs.io/en/latest/)には、ライブラリの詳しい使用方法が記載されています。 ただし、IdentityServer4 を使用してトークンを発行する基本的な手順は次のとおりです。
 
-1. You call app.UseIdentityServer in the Startup.Configure method to add IdentityServer4 to the application’s HTTP request processing pipeline. This lets the library serve requests to OpenID Connect and OAuth2 endpoints like /connect/token.
+1. Startup.Configure メソッドで app.UseIdentityServer を呼び出して、IdentityServer4 をアプリケーションの HTTP 要求処理パイプラインに追加します。 これにより、ライブラリが /connect/token などの OpenID Connect エンドポイントと OAuth2 エンドポイントに要求を提供することができます。
 
-2. You configure IdentityServer4 in Startup.ConfigureServices by making a call to services.AddIdentityServer.
+2. services.AddIdentityServer を呼び出して、Startup.ConfigureServices で IdentityServer4 を構成します。
 
-3. You configure identity server by setting the following data:
+3. ID サーバーを構成するには、次のデータを設定します。
 
-   - The [credentials](https://identityserver4.readthedocs.io/en/release/topics/crypto.html) to use for signing.
+   - 署名に使用する[資格情報](https://identityserver4.readthedocs.io/en/latest/topics/crypto.html)。
 
-   - The [Identity and API resources](https://identityserver4.readthedocs.io/en/release/topics/resources.html) that users might request access to:
+   - ユーザーがアクセスを要求する可能性がある [ID と API リソース](https://identityserver4.readthedocs.io/en/latest/topics/resources.html)。
 
-      - API resources represent protected data or functionality that a user can access with an access token. An example of an API resource would be a web API (or set of APIs) that requires authorization.
+      - API リソースは、保護されたデータまたはユーザーがアクセス トークンを使用してアクセスできる機能を表します。 認証を必要とする Web API (または API のセット) は、API リソースの一例です。
 
-      - Identity resources represent information (claims) that are given to a client to identify a user. The claims might include the user name, email address, and so on.
+      - ID リソースは、ユーザーを識別するためにクライアントに与えられる情報 (クレーム) を表します。 クレームには、ユーザー名、メール アドレスなどが含まれます。
 
-   - The [clients](https://identityserver4.readthedocs.io/en/release/topics/clients.html) that will be connecting in order to request tokens.
+   - トークンを要求するために接続する[クライアント](https://identityserver4.readthedocs.io/en/latest/topics/clients.html)。
 
-   - The storage mechanism for user information, such as [ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html) or an alternative.
+   - [ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) または代替手段など、ユーザー情報のためのストレージ メカニズム。
 
-When you specify clients and resources for IdentityServer4 to use, you can pass an <xref:System.Collections.Generic.IEnumerable%601> collection of the appropriate type to methods that take in-memory client or resource stores. Or for more complex scenarios, you can provide client or resource provider types via Dependency Injection.
+使用する IdentityServer4 のクライアントとリソースを指定するときに、適切な型の <xref:System.Collections.Generic.IEnumerable%601> コレクションをメモリ内のクライアントまたはリソースのストアを受け取るメソッドに渡すことができます。 またはより複雑なシナリオでは、依存関係の挿入を通じて、クライアントまたはリソース プロバイダーの型を提供できます。
 
-A sample configuration for IdentityServer4 to use in-memory resources and clients provided by a custom IClientStore type might look like the following example:
+カスタム IClientStore 型によって渡されるメモリ内のリソースおよびクライアントを使用する IdentityServer4 のサンプル構成は、次の例のようになります。
 
 ```csharp
 // Add IdentityServer services
@@ -224,11 +224,11 @@ services.AddIdentityServer()
     .AddAspNetIdentity<ApplicationUser>();
 ```
 
-### <a name="consume-security-tokens"></a>Consume security tokens
+### <a name="consume-security-tokens"></a>セキュリティ トークンを使用する
 
-Authenticating against an OpenID Connect endpoint or issuing your own security tokens covers some scenarios. But what about a service that simply needs to limit access to those users who have valid security tokens that were provided by a different service?
+OpenID Connect エンドポイントに対して認証する、または独自のセキュリティ トークンを発行することで、いくつかのシナリオをカバーすることはできます。 しかし、異なるサービスで提供された有効なセキュリティ トークンを持つユーザーにアクセスを制限する必要があるサービスの場合はどうでしょうか。
 
-For that scenario, authentication middleware that handles JWT tokens is available in the **Microsoft.AspNetCore.Authentication.JwtBearer** package. JWT stands for "[JSON Web Token](https://tools.ietf.org/html/rfc7519)" and is a common security token format (defined by RFC 7519) for communicating security claims. A simplified example of how to use middleware to consume such tokens might look like this code fragment, taken from the Ordering.Api microservice of eShopOnContainers.
+そのシナリオでは、JWT トークンを処理する認証ミドルウェアが **Microsoft.AspNetCore.Authentication.JwtBearer** パッケージで使用できます。 JWT は "[JSON Web トークン](https://tools.ietf.org/html/rfc7519)" を表し、セキュリティ クレームの通信のための一般的なセキュリティ トークン形式 (RFC 7519 で定義) です。 ミドルウェアを使用してそのようなトークンを使用する方法を簡単に示すと、eShopOnContainers の Ordering.Api マイクロサービスから取得されたこのコードのようになります。
 
 ```csharp
 // Startup.cs
@@ -264,44 +264,44 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-The parameters in this usage are:
+この使用法でのパラメーターは次のとおりです。
 
-- `Audience` represents the receiver of the incoming token or the resource that the token grants access to. If the value specified in this parameter does not match the parameter in the token, the token will be rejected.
+- `Audience` は、受信トークンの受信者またはそのトークンでアクセスできるリソースを表します。 このパラメーターで指定された値がトークン内のパラメーターと一致しない場合、そのトークンは拒否されます。
 
-- `Authority` is the address of the token-issuing authentication server. The JWT bearer authentication middleware uses this URI to get the public key that can be used to validate the token's signature. The middleware also confirms that the `iss` parameter in the token matches this URI.
+- `Authority` は、トークン発行認証サーバーのアドレスです。 JWT ベアラー認証ミドルウェアでは、この URI を使用して、トークンの署名の検証に使用できる公開キーを取得します。 ミドルウェアは、トークン内の `iss` パラメーターがこの URI と一致していることも確認します。
 
-Another parameter, `RequireHttpsMetadata`, is useful for testing purposes; you set this parameter to false so you can test in environments where you don't have certificates. In real-world deployments, JWT bearer tokens should always be passed only over HTTPS.
+もう 1 つのパラメーター `RequireHttpsMetadata` はテスト目的に便利です。証明書がない環境でテストができるように、このパラメーターを false に設定します。 実際の展開では、JWT ベアラー トークンは常に HTTPS 経由でのみ渡す必要があります。
 
-With this middleware in place, JWT tokens are automatically extracted from authorization headers. They are then deserialized, validated (using the values in the `Audience` and `Authority` parameters), and stored as user information to be referenced later by MVC actions or authorization filters.
+このミドルウェアを配置すると、JWT トークンが承認ヘッダーから自動的に抽出されます。 これらのトークンは、逆シリアル化され、(`Audience` パラメーターと `Authority` パラメーターの値を使用して) 検証され、MVC アクションまたは認証フィルターが後で参照するユーザー情報として格納されます。
 
-The JWT bearer authentication middleware can also support more advanced scenarios, such as using a local certificate to validate a token if the authority is not available. For this scenario, you can specify a `TokenValidationParameters` object in the `JwtBearerOptions` object.
+JWT ベアラー認証ミドルウェアは、証明機関が利用できない場合に、ローカルの証明書を使用してトークンを検証するなどの高度なシナリオもサポートできます。 このシナリオでは、`JwtBearerOptions` オブジェクトの `TokenValidationParameters` を指定することができます。
 
-## <a name="additional-resources"></a>Additional resources
+## <a name="additional-resources"></a>その他の技術情報
 
-- **Sharing cookies between applications** \
+- **アプリケーション間での Cookie の共有** \
   [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
-- **Introduction to Identity** \
+- **Identity の概要** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Two-factor authentication with SMS** \
+- **Rick Anderson の SMS での 2 要素認証** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](/aspnet/core/security/authentication/2fa)
 
-- **Enabling authentication using Facebook, Google and other external providers** \
+- **Facebook、Google、および他の外部プロバイダーを使用する認証の有効化** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. An Introduction to OAuth 2** \
+- **Michell Anicas の OAuth 2 の概要** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (GitHub repo for ASP.NET OAuth providers. \
+- **AspNet.Security.OAuth.Providers** (ASP.NET OAuth プロバイダーの GitHub リポジトリ) \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
-- **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app** \
+- **Danny Strockis の ASP.NET Core Web アプリへの Azure AD の統合** \
   [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
-- **IdentityServer4. Official documentation** \
-  [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
+- **IdentityServer4 の公式ドキュメント** \
+  *<https://identityserver4.readthedocs.io/en/latest/>*
 
 >[!div class="step-by-step"]
->[Previous](../implement-resilient-applications/monitor-app-health.md)
->[Next](authorization-net-microservices-web-applications.md)
+>[前へ](../implement-resilient-applications/monitor-app-health.md)
+>[次へ](authorization-net-microservices-web-applications.md)
