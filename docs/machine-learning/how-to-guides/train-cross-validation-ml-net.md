@@ -1,22 +1,22 @@
 ---
 title: クロス検証を使用して機械学習モデルをトレーニングする - ML.NET
 description: ML.NET によるクロス検証を使用して機械学習モデルをトレーニングして、モデルの予測精度を高める方法について説明します。
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9ed139aacb41e8f8529f30747486ab1b13183df0
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739333"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092281"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="d24a7-103">クロス検証を使用して機械学習モデルをトレーニングする - ML.NET</span><span class="sxs-lookup"><span data-stu-id="d24a7-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="d92f0-103">クロス検証を使用して機械学習モデルをトレーニングする - ML.NET</span><span class="sxs-lookup"><span data-stu-id="d92f0-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
-<span data-ttu-id="d24a7-104">[クロス検証](https://en.wikipedia.org/wiki/Cross-validation_(statistics))は、ML アプリケーションに便利な手法です。</span><span class="sxs-lookup"><span data-stu-id="d24a7-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="d24a7-105">ある実行から別の実行までのモデル品質の分散を推定する場合に役立ちます。また、評価のために別のテスト セットを抽出する必要もなくなります。</span><span class="sxs-lookup"><span data-stu-id="d24a7-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+<span data-ttu-id="d92f0-104">[クロス検証](https://en.wikipedia.org/wiki/Cross-validation_(statistics))は、ML アプリケーションに便利な手法です。</span><span class="sxs-lookup"><span data-stu-id="d92f0-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="d92f0-105">ある実行から別の実行までのモデル品質の分散を推定する場合に役立ちます。また、評価のために別のテスト セットを抽出する必要もなくなります。</span><span class="sxs-lookup"><span data-stu-id="d92f0-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
 
-<span data-ttu-id="d24a7-106">ML.NET によって特徴付けが正しく自動適用されます (すべての前処理が 1 つの学習パイプライン内に存在する限り)。次に、関連する例が分離されないように '階層化の列' という概念が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d24a7-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="d92f0-106">ML.NET によって特徴付けが正しく自動適用されます (すべての前処理が 1 つの学習パイプライン内に存在する限り)。次に、関連する例が分離されないように '階層化の列' という概念が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d92f0-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
 
-<span data-ttu-id="d24a7-107">ランダム化された 90/10 のトレーニングとテストの分割率と 5 分割のクロス検証を使用した Iris データセットのトレーニング例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d24a7-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="d92f0-107">ランダム化された 90/10 のトレーニングとテストの分割率と 5 分割のクロス検証を使用した Iris データセットのトレーニング例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d92f0-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -25,7 +25,7 @@ var mlContext = new MLContext();
 
 // Step one: read the data as an IDataView.
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // The four features of the Iris dataset will be grouped together as one Features column.
