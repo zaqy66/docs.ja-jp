@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 7031fe21e53b38f686d229b350b8dfef7dd93bdc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204822"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092645"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>チュートリアル: 動的オブジェクトの作成と使用 (C# および Visual Basic)
 
@@ -33,7 +33,8 @@ ms.locfileid: "55204822"
 -   `IronPython` ライブラリを使用するプロジェクトを作成する。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
-このチュートリアルを実行するには、[IronPython](http://ironpython.net/) for .NET が必要です。 最新バージョンを取得するには、[ダウンロード ページ](http://ironpython.net/download/)に移動します。
+
+このチュートリアルを実行するには、[IronPython](https://ironpython.net/) for .NET が必要です。 最新バージョンを取得するには、[ダウンロード ページ](https://ironpython.net/download/)に移動します。
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

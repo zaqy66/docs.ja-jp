@@ -3,12 +3,12 @@ title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205283"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261272"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
@@ -19,9 +19,6 @@ ms.locfileid: "50205283"
 ## <a name="a-basic-list-example"></a>基本のリストの例
 
 **list-tutorial** という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console` を実行します。
-
-> [!NOTE]
-> [10 分でわかる .NET の概要](https://www.microsoft.com/net)を完了したところであれば、先ほど作成した myApp アプリケーションを引き続き使用できます。
 
 好みのエディターで **Program.cs** を開き、既存のコードを次のコードで置き換えます。
 
