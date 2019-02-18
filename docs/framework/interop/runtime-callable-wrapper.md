@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632791"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219525"
 ---
 # <a name="runtime-callable-wrapper"></a>ランタイム呼び出し可能ラッパー
 共通言語ランタイムは、ランタイム呼び出し可能ラッパー (RCW) と呼ばれるプロキシを介して COM オブジェクトを公開します。 .NET クライアントでは RCW が普通のオブジェクトとして示されますが、その主な機能は、.NET クライアントと COM オブジェクトの間で呼び出しをマーシャリングすることです。  
@@ -58,7 +58,6 @@ COM インターフェイスおよびランタイム呼び出し可能ラッパ�
   
 ## <a name="see-also"></a>関連項目
 - [COM ラッパー](com-wrappers.md)
-- [選択したインターフェイスのマーシャリング](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
 - [COM 呼び出し可能ラッパー](com-callable-wrapper.md)
-- [タイプ ライブラリからアセンブリへの変換の要約](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)

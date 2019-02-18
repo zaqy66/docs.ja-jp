@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 286399a7049f47640ccef07e834ee47a0761b963
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631309"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219024"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (タイプ ライブラリ インポーター)
 タイプ ライブラリ インポーターは、COM タイプ ライブラリにある型定義を共通言語ランタイム アセンブリで等価な定義に変換します。 Tlbimp.exe の出力は、元のタイプ ライブラリで定義された型のランタイム メタデータを格納するバイナリ ファイル (アセンブリ) です。 このファイルは [ildasm.exe](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
@@ -52,7 +52,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Tlbimp.exe がメンバーをクラスに追加できないようにします。 これにより、<xref:System.TypeLoadException> が発生する可能性がなくなります。|  
 |**/nologo**|Microsoft 著作権情報を表示しません。|  
 |**/out:** *filename*|メタデータ定義の書き込み先の出力ファイル、アセンブリ、および名前空間の名前を指定します。 アセンブリの名前空間を明示的に制御するインターフェイス定義言語 (IDL: Interface Definition Language) カスタム属性がタイプ ライブラリで指定されている場合、**/out** オプションはアセンブリの名前空間を制御できません。 このオプションを指定しない場合、Tlbimp.exe は、入力ファイルで定義された実際のタイプ ライブラリと同じ名前のファイルにメタデータを書き込み、そのファイルに .dll 拡張子を割り当てます。 出力ファイルの名前が入力ファイルと同じ場合は、タイプ ライブラリが上書きされるのを防ぐためにエラーが発生します。|  
-|**/primary**|指定したタイプ ライブラリのプライマリ相互運用機能アセンブリを生成します。 アセンブリに追加される情報は、アセンブリを生成したタイプ ライブラリの発行者を示します。 プライマリ相互運用機能アセンブリを指定すると、Tlbimp.exe を使用して、ある発行者のアセンブリとタイプ ライブラリから作成された他のアセンブリを区別します。 Tlbimp.exe を使用してインポートするタイプ ライブラリの発行者である場合は、**/primary** オプションを使用してください。 プライマリ相互運用機能アセンブリには、[厳密な名前](../app-domains/strong-named-assemblies.md)で署名する必要があります。 詳細については、「[プライマリ相互運用機能アセンブリ](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100))」を参照してください。|  
+|**/primary**|指定したタイプ ライブラリのプライマリ相互運用機能アセンブリを生成します。 アセンブリに追加される情報は、アセンブリを生成したタイプ ライブラリの発行者を示します。 プライマリ相互運用機能アセンブリを指定すると、Tlbimp.exe を使用して、ある発行者のアセンブリとタイプ ライブラリから作成された他のアセンブリを区別します。 Tlbimp.exe を使用してインポートするタイプ ライブラリの発行者である場合は、**/primary** オプションを使用してください。 プライマリ相互運用機能アセンブリには、[厳密な名前](../app-domains/strong-named-assemblies.md)で署名する必要があります。 詳細については、「[プライマリ相互運用機能アセンブリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))」を参照してください。|  
 |**/product:** `productinformation`|出力アセンブリに製品情報を追加します。 この情報は、アセンブリの **[ファイルのプロパティ]** ダイアログ ボックスで確認できます。|  
 |**/productversion:** `productversioninformation`|出力アセンブリにバージョン情報を追加します。 形式の制限はありません。 この情報は、アセンブリの **[ファイルのプロパティ]** ダイアログ ボックスで確認できます。|  
 |**/publickey:** *filename*|生成されたアセンブリに署名するために使用する公開キーを格納するファイルを指定します。 **/publickey:** オプションの代わりに **/keyfile:** オプションまたは **/keycontainer:** オプションを指定した場合、Tlbimp.exe は、**/keyfile:** または **/keycontainer:** で指定された公開キーと秘密キーのペアから公開キーを生成します。 **/publickey:** オプションを指定すると、テスト キーと遅延署名を使用できます。 ファイルは Sn.exe で生成された形式になります。 詳細については、「[厳密名ツール (Sn.exe)](sn-exe-strong-name-tool.md)」にある Sn.exe の **-p** オプションの説明を参照してください。|  
@@ -73,7 +73,7 @@ tlbimp tlbFile [options]
 > [!NOTE]
 >  Tlbimp.exe のコマンド ライン オプションでは、大文字と小文字が区別されません。また、これらのオプションは任意の順序で指定できます。 オプションを一意に識別するために十分である場合は、オプションの一部を指定するだけでもかまいません。 したがって、**/n** と指定した場合は **/nologo**、**/ou:** *outfile.dll* と指定した場合は **/out:** *outfile.dll* であると見なされます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Tlbimp.exe は、タイプ ライブラリ全体の変換を一括して実行します。 このツールを使用しても、単一のタイプ ライブラリで定義されている型のサブセットに関する型情報は生成できません。  
   
  アセンブリへの[厳密な名前](../app-domains/strong-named-assemblies.md)の割り当てを許可しておくと、さまざまな場合に役立ちます。この割り当てが必須であることもあります。 このため、Tlbimp.exe には、厳密な名前を持つアセンブリを生成するために必要な情報を提供するオプションが用意されています。 **/keyfile:** オプションと **/keycontainer:** オプションは、両方ともアセンブリに厳密な名前で署名します。 したがって、これらのオプションを両方同時に指定しないでください。  
@@ -129,9 +129,9 @@ void SomeMethod(out bool x);
 - [ツール](index.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](tlbexp-exe-type-library-exporter.md)
 - [タイプ ライブラリのアセンブリとしてのインポート](../interop/importing-a-type-library-as-an-assembly.md)
-- [タイプ ライブラリからアセンブリへの変換の要約](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe (IL 逆アセンブラー)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (厳密名ツール)](sn-exe-strong-name-tool.md)
 - [厳密な名前付きアセンブリ](../app-domains/strong-named-assemblies.md)
-- [タイプ ライブラリを相互運用機能アセンブリにインポートするための属性](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [タイプ ライブラリを相互運用機能アセンブリにインポートするための属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

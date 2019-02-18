@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40bbf0cfab8044d582490ed0890501d6b123d18e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0218f74f5aa66921104fd36c085aaed04c9b435
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631244"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219524"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM グラフからのソース コードの生成およびコンパイル
 <xref:System.CodeDom.Compiler> 名前空間は、CodeDOM オブジェクト グラフからソース コードを生成し、サポートされているコンパイラでコンパイルを管理するためのインターフェイスを提供します。 コード プロバイダーは、CodeDOM グラフに基づいて、特定のプログラミング言語でソース コードを生成できます。 <xref:System.CodeDom.Compiler.CodeDomProvider> から派生したクラスは、通常、プロバイダーが対応している言語のコードを生成し、コンパイルするためのメソッドを提供します。  
@@ -97,4 +97,4 @@ ms.locfileid: "54631244"
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [動的なソース コードの生成とコンパイル](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
-- [CodeDOM クイック リファレンス](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+- [CodeDOM クイック リファレンス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))

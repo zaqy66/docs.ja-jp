@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689001"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221291"
 ---
 # <a name="default-marshaling-behavior"></a>既定のマーシャリングの動作
 相互運用マーシャリングは、メソッドのパラメーターに関連付けられたデータが、マネージド メモリとアンマネージド メモリの間で渡されるときに、どのように動作するかを指示する規則に従って機能します。 これらの組み込みの規則は、データ型の変換などのマーシャリング動作、呼び出し先が渡されたデータを変更してその変更を呼び出し元にこ返すことが可能かどうか、およびどのような状況のときにマーシャラーがパフォーマンスの最適化を実現するかを制御します。  
@@ -24,7 +24,7 @@ ms.locfileid: "54689001"
  このセクションでは、相互運用マーシャリング サービスの既定の動作特性を示します。 ここでは、配列、ブール型、char 型、デリゲート、クラス、オブジェクト、文字列、および構造体のマーシャリングに関する詳細情報を示します。  
   
 > [!NOTE]
->  ジェネリック型のマーシャリングはサポートされていません。 詳しくは、「[ジェネリック型を使用する相互運用](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))」を参照してください。  
+>  ジェネリック型のマーシャリングはサポートされていません。 詳しくは、「[ジェネリック型を使用する相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))」を参照してください。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>相互運用マーシャラーによるメモリ管理  
  相互運用マーシャラーは、アンマネージ コードによって割り当てられたメモリを常に解放しようとします。 この動作は、COM メモリの管理規則に準拠していますが、ネイティブ C++ を制御する規則とは異なります。  
@@ -41,10 +41,10 @@ BSTR MethodOne (BSTR b) {
   
  ただし、メソッドをプラットフォーム呼び出しのプロトタイプとして定義する場合は、各 **BSTR** 型を <xref:System.String> 型に置き換えて、`MethodOne` を呼び出します。共通言語ランタイムは、`b` の解放を 2 回試行します。 **String** 型ではなく <xref:System.IntPtr> 型を使用することにより、マーシャリングの動作を変更できます。  
   
- ランタイムは、常に **CoTaskMemFree** メソッドを使用してメモリを解放します。 使用しているメモリが **CoTaskMemAlloc** メソッドで割り当てられていない場合、**IntPtr** を使用し、適切なメソッドを使用して手動でメモリを解放する必要があります。 同様に、カーネル メモリへのポインターを返す **GetCommandLine** 関数を Kernel32.dll から使用するときなど、メモリを解放してはいけない状況のときには、自動的なメモリの解放を防止できます。 手動でメモリを解放する方法について詳しくは、「[Buffers サンプル](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))」を参照してください。  
+ ランタイムは、常に **CoTaskMemFree** メソッドを使用してメモリを解放します。 使用しているメモリが **CoTaskMemAlloc** メソッドで割り当てられていない場合、**IntPtr** を使用し、適切なメソッドを使用して手動でメモリを解放する必要があります。 同様に、カーネル メモリへのポインターを返す **GetCommandLine** 関数を Kernel32.dll から使用するときなど、メモリを解放してはいけない状況のときには、自動的なメモリの解放を防止できます。 手動でメモリを解放する方法について詳しくは、「[Buffers サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))」を参照してください。  
   
 ## <a name="default-marshaling-for-classes"></a>クラスに対する既定のマーシャリング  
- クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 場合によっては、クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれます。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法について詳しくは、「[クラス インターフェイスの概要](com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。  
+ クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法について詳しくは、「[クラス インターフェイスの概要](com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。  
   
 ### <a name="passing-classes-to-com"></a>クラスを COM に渡す  
  マネージド クラスが COM に渡されると、相互運用マーシャラーは自動的にクラスを COM プロキシでラップし、プロキシによって生成されたクラス インターフェイスを COM メソッド呼び出しに渡します。 その後、プロキシは、クラス インターフェイス上のすべての呼び出しを、マネージド オブジェクトにデリゲートして戻します。 プロキシはまた、クラスによって明示的に実装されていない他のインターフェイスも公開します。 プロキシは、クラスの代わりに、**IUnknown** や **IDispatch** などのインターフェイスを自動的に実装します。  
@@ -77,14 +77,16 @@ BSTR MethodOne (BSTR b) {
   
 -   COM 相互運用の場合、デリゲートは、既定で **_Delegate** 型の COM インターフェイスとしてマーシャリングされます。 **_Delegate** インターフェイスは Mscorlib.tlb のタイプ ライブラリで定義され、デリゲートが参照するメソッドの呼び出しを可能にする <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> メソッドが含まれています。  
   
- 次の表は、マネージド デリゲート データ型のマーシャリング オプションを示しています。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、デリゲートをマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
+ 次の表は、マネージド デリゲート データ型のマーシャリング オプションを示しています。 
+  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、デリゲートをマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
   
 |列挙型|アンマネージ形式の説明|  
 |----------------------|-------------------------------------|  
 |**UnmanagedType.FunctionPtr**|アンマネージ関数ポインター。|  
 |**UnmanagedType.Interface**|Mscorlib.tlb で定義されている、**_Delegate** 型のインターフェイス。|  
   
- `DelegateTestInterface` のメソッドが COM タイプ ライブラリにエクスポートされる、次のコード例を検討してください。 **ref** (または **ByRef**) キーワードでマークされたデリゲートだけが、In/Out パラメーターとして渡されることに注意してください。  
+ 
+  `DelegateTestInterface` のメソッドが COM タイプ ライブラリにエクスポートされる、次のコード例を検討してください。 **ref** (または **ByRef**) キーワードでマークされたデリゲートだけが、In/Out パラメーターとして渡されることに注意してください。  
   
 ```csharp  
 using System;  
@@ -119,7 +121,8 @@ interface DelegateTest : IDispatch {
 > [!NOTE]
 >  アンマネージド コードで保持されている、マネージド デリゲートへの関数ポインターに対する参照は、共通言語ランタイムがマネージド オブジェクトでガベージ コレクションを実行することを防止しません。  
   
- たとえば、`SetChangeHandler` メソッドに渡される `cb` オブジェクトへの参照は `Test` メソッドの有効期間を超えて `cb` を有効のまま保持しないので、次のコードは正しくありません。 `cb` オブジェクトでガベージ コレクションを実行した後、`SetChangeHandler` に渡された関数ポインターは無効になります。  
+ たとえば、`SetChangeHandler` メソッドに渡される `cb` オブジェクトへの参照は `Test` メソッドの有効期間を超えて `cb` を有効のまま保持しないので、次のコードは正しくありません。 
+  `cb` オブジェクトでガベージ コレクションを実行した後、`SetChangeHandler` に渡された関数ポインターは無効になります。  
   
 ```csharp  
 public class ExternalAPI {  
@@ -304,7 +307,8 @@ class Win32API {
 }  
 ```  
   
- `SystemTime` は値型ではなくクラスなので、`SystemTime` 引数は参照引数として型指定されていないことに注意してください。 値型とは異なり、クラスは常に参照によって渡されます。  
+ 
+  `SystemTime` は値型ではなくクラスなので、`SystemTime` 引数は参照引数として型指定されていないことに注意してください。 値型とは異なり、クラスは常に参照によって渡されます。  
   
  次のコード例は、`SetXY` と呼ばれるメソッドを持つ、異なる `Point` クラスを示しています。 型にはシーケンシャル レイアウトがあるため、それをアンマネージ コードに渡して、構造体としてマーシャリングすることができます。 ただし、`SetXY` メンバーは、オブジェクトが参照によって渡される場合でも、アンマネージ コードから呼び出すことができません。  
   
@@ -348,14 +352,16 @@ interface _Graphics {
 }  
 ```  
   
- 値と参照をプラットフォーム呼び出しにマーシャリングする際に使用されるものと同じ規則が、COM インターフェイスを介してマーシャリングする際にも使用されます。 たとえば、`Point` 値型のインスタンスが .NET Framework から COM に渡されるとき、`Point` は値によって渡されます。 `Point` 値型が参照によって渡される場合、`Point` へのポインターはスタックで渡されます。 相互運用マーシャラーは、どちらの方向でも、より高いレベルの間接参照 (**Point** \*\*) はサポートしていません。  
+ 値と参照をプラットフォーム呼び出しにマーシャリングする際に使用されるものと同じ規則が、COM インターフェイスを介してマーシャリングする際にも使用されます。 たとえば、`Point` 値型のインスタンスが .NET Framework から COM に渡されるとき、`Point` は値によって渡されます。 
+  `Point` 値型が参照によって渡される場合、`Point` へのポインターはスタックで渡されます。 相互運用マーシャラーは、どちらの方向でも、より高いレベルの間接参照 (**Point** \*\*) はサポートしていません。  
   
 > [!NOTE]
 >  <xref:System.Runtime.InteropServices.LayoutKind> 列挙値が **Explicit** に設定された構造体は、エクスポートされたタイプ ライブラリが明示的なレイアウトを表現できないので、COM 相互運用で使用することはできません。  
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>システムの値型  
- <xref:System> 名前空間には、ランタイムのプリミティブ型のボックス化された形式を表す、いくつかの値型があります。 たとえば、値型 <xref:System.Int32?displayProperty=nameWithType> 構造体は、**ELEMENT_TYPE_I4** のボックス化された形式を表します。 これらの型は、書式設定された他の型のように構造体としてマーシャリングするのではなく、それらがボックス化するプリミティブ型と同じ方法でマーシャリングします。 そのため、**System.Int32** は、**long** 型の 1 つのメンバーを含む構造体としてではなく、**ELEMENT_TYPE_I4** としてマーシャリングされます。 次の表には、プリミティブ型のボックス化された表現である、**System** 名前空間にある値型の一覧が含まれています。  
+ 
+  <xref:System> 名前空間には、ランタイムのプリミティブ型のボックス化された形式を表す、いくつかの値型があります。 たとえば、値型 <xref:System.Int32?displayProperty=nameWithType> 構造体は、**ELEMENT_TYPE_I4** のボックス化された形式を表します。 これらの型は、書式設定された他の型のように構造体としてマーシャリングするのではなく、それらがボックス化するプリミティブ型と同じ方法でマーシャリングします。 そのため、**System.Int32** は、**long** 型の 1 つのメンバーを含む構造体としてではなく、**ELEMENT_TYPE_I4** としてマーシャリングされます。 次の表には、プリミティブ型のボックス化された表現である、**System** 名前空間にある値型の一覧が含まれています。  
   
 |システムの値型|要素型|  
 |-----------------------|------------------|  

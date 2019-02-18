@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204562"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091839"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework のシステム要件
 
@@ -98,7 +98,7 @@ ms.locfileid: "55204562"
 
 - [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] には [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] が含まれているため、個別にインストールする必要はありません。 同様に、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] には [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] が含まれます。
 
-- .NET Framework は、Windows Server 2008 R2 SP1 以降の Server Core ロールを限定付きでサポートしています。 サポートされない API の一覧については、「[Server Core .NET Functionality](https://msdn.microsoft.com/library/ee391632.aspx)」 (Server Core .NET 機能) を参照してください。
+- .NET Framework は、Windows Server 2008 R2 SP1 以降の Server Core ロールを限定付きでサポートしています。 サポートされない API の一覧については、「[Server Core .NET Functionality](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))」 (Server Core .NET 機能) を参照してください。
 
 - .NET Framework は、Itanium ベース システムの Windows Server 2008 R2 ではサポートされていません。
 

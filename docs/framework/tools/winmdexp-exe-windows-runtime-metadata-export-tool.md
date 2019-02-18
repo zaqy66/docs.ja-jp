@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41bf58e4b7e9e284606e244cf3cfdf298f7a7ae8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667259"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220641"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータを含むファイルに変換します。 .NET Framework アセンブリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ ファイルは同じ物理形式を使用しますが、メタデータ テーブルの内容に違いがあります。つまり、.NET Framework アセンブリは、自動的に [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントにするプロセスは、*エクスポート*と呼ばれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] では、生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
@@ -45,7 +45,7 @@ winmdexp [options] winmdmodule
 |`/warnaserror+`|すべての警告をエラーとして扱うよう指定しています。|  
 |**@** `responsefile`|オプション (および、必要に応じて `winmdmodule`) を含む応答 (.rsp) ファイルを指定します。 `responsefile` の各行に 1 つの引数またはオプションが含まれている必要があります。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Winmdexp.exe は、任意の .NET Framework アセンブリを .winmd ファイルに変換するようには設計されていません。 `/target:winmdobj` オプションでコンパイルされるモジュールが必要で、追加の制限が適用されます。 この中で最も重要な制限は、アセンブリの API サーフェイスで公開されるすべての型は必ず [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型であるということです。 詳細については、Windows デベロッパー センターの記事「[C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)」の「Windows ランタイム コンポーネントの宣言型」セクションを参照してください。  
   
  C# または Visual Basic で [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリまたは [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを作成する場合は、[!INCLUDE[wrt](../../../includes/wrt-md.md)] でのプログラミングをより自然にするためのサポートが .NET Framework で提供されています。 これは、記事「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」で解説されています。 プロセスでは、一般的に使用される [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型が .NET Framework 型にマップされます。 Winmdexp.exe は、このプロセスを反転し、対応する [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型を使用する API サーフェイスを生成します。 たとえば、<xref:System.Collections.Generic.IList%601> インターフェイスから構築された型は、[!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) インターフェイスから構築された型にマップされます。  
@@ -54,4 +54,4 @@ winmdexp [options] winmdmodule
 - [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe のエラー メッセージ](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
-- [ビルド ツール、配置ツール、および構成ツール (.NET Framework)](https://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+- [ビルド ツール、配置ツール、および構成ツール (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

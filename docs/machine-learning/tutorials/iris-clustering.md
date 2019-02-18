@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249074"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093607"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>チュートリアル: ML.NET でクラスタリング ラーナーを使用してアヤメの花をクラスター化する
 
@@ -44,7 +44,7 @@ ms.locfileid: "54249074"
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-1. Visual Studio 2017 を開きます。 [**ファイル**] > [**新規作成**] > [**プロジェクト**] をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、[**コンソール アプリ (.NET Core)**] プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「IrisFlowerClustering」と入力し、**[OK]** ボタンを選びます。
+1. Visual Studio 2017 を開きます。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「IrisFlowerClustering」と入力し、**[OK]** ボタンを選びます。
 
 1. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットとモデルのファイルを保存します。
 
@@ -129,7 +129,7 @@ ms.locfileid: "54249074"
 
 列名とインデックスは、`IrisData` クラスで定義されたスキーマに一致していること注意してください。 <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> 値は `float` 型を指定します。
 
-インスタンス化された <xref:Microsoft.ML.Data.TextLoader> インスタンスを使用して、<xref:Microsoft.ML.Data.IDataView> インスタンスを作成します。これはトレーニング データ セットのデータ ソースを表します。
+インスタンス化された <xref:Microsoft.ML.Data.TextLoader> インスタンスを使用して、<xref:Microsoft.Data.DataView.IDataView> インスタンスを作成します。これはトレーニング データ セットのデータ ソースを表します。
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

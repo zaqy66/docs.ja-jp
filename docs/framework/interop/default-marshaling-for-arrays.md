@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12a7b4cb29dcf2c799f17bb7f3a02c300c5f0d36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555402"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219686"
 ---
 # <a name="default-marshaling-for-arrays"></a>配列に対する既定のマーシャリング
 全体がマネージド コードで構成されるアプリケーションでは、共通言語ランタイムは、配列型を In/Out パラメーターとして渡します。 これに対し、相互運用マーシャラーは、既定で In パラメーターとして配列を渡します。  
@@ -91,7 +91,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- 多次元配列 (0 以外の値にバインドされたセーフ配列) は、Tlbimp.exe によって生成されたメソッド シグネチャが、**ELEMENT_TYPE_SZARRAY** ではなく **ELEMENT_TYPE_ARRAY** の要素型を示すように変更された場合に、マネージド コードにマーシャリングできます。 または、Tlbimp.exe で **/sysarray** スイッチを使用してすべての配列を <xref:System.Array?displayProperty=nameWithType> オブジェクトとしてインポートできます。 渡される配列が多次元配列だとわかっている場合は、Tlbimp.exe で生成された Microsoft Intermediate Language (MSIL) コードを編集してから再コンパイルすることができます。 MSIL コードの変更方法の詳細については、「[Customizing Runtime Callable Wrappers](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))」(ランタイム呼び出し可能ラッパーのカスタマイズ) を参照してください。  
+ 多次元配列 (0 以外の値にバインドされたセーフ配列) は、Tlbimp.exe によって生成されたメソッド シグネチャが、**ELEMENT_TYPE_SZARRAY** ではなく **ELEMENT_TYPE_ARRAY** の要素型を示すように変更された場合に、マネージド コードにマーシャリングできます。 または、Tlbimp.exe で **/sysarray** スイッチを使用してすべての配列を <xref:System.Array?displayProperty=nameWithType> オブジェクトとしてインポートできます。 渡される配列が多次元配列だとわかっている場合は、Tlbimp.exe で生成された Microsoft Intermediate Language (MSIL) コードを編集してから再コンパイルすることができます。 MSIL コードの変更方法の詳細については、「[Customizing Runtime Callable Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))」(ランタイム呼び出し可能ラッパーのカスタマイズ) を参照してください。  
   
 ### <a name="c-style-arrays"></a>C スタイル配列  
  C スタイル配列がタイプ ライブラリから .NET アセンブリにインポートされると、その配列は **ELEMENT_TYPE_SZARRAY** に変換されます。  
@@ -155,7 +155,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- Tlbimp.exe によって生成された Microsoft Intermediate Language (MSIL) コードを編集して、マーシャラーに配列サイズを提供してから再コンパイルすることができます。 MSIL コードの変更方法の詳細については、「[Customizing Runtime Callable Wrappers](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))」(ランタイム呼び出し可能ラッパーのカスタマイズ) を参照してください。 配列内の要素の数を示すには、次の方法のいずれかの方法で、<xref:System.Runtime.InteropServices.MarshalAsAttribute> 型をマネージド メソッド定義の配列パラメーターに適用します。  
+ Tlbimp.exe によって生成された Microsoft Intermediate Language (MSIL) コードを編集して、マーシャラーに配列サイズを提供してから再コンパイルすることができます。 MSIL コードの変更方法の詳細については、「[Customizing Runtime Callable Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))」(ランタイム呼び出し可能ラッパーのカスタマイズ) を参照してください。 配列内の要素の数を示すには、次の方法のいずれかの方法で、<xref:System.Runtime.InteropServices.MarshalAsAttribute> 型をマネージド メソッド定義の配列パラメーターに適用します。  
   
 -   配列内の要素数を含む別のパラメーターを特定します。 パラメーターは位置によって識別され、最初のパラメーターは番号 0 から始まります。     
   
@@ -375,5 +375,5 @@ public struct MyStruct {
 ## <a name="see-also"></a>関連項目
 - [既定のマーシャリング動作](default-marshaling-behavior.md)
 - [Blittable 型と非 Blittable 型](blittable-and-non-blittable-types.md)
-- [方向属性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [方向属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [コピーと固定](copying-and-pinning.md)

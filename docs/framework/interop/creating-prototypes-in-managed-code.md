@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564293"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219569"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
 このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
@@ -32,7 +32,8 @@ ms.locfileid: "54564293"
  マネージド コードからアンマネージド DLL 関数にアクセスする前に、関数の名前とエクスポートする DLL の名前を知っている必要があります。 この情報を使用すると、マネージド DLL に実装されているアンマネージド 関数の定義の作成を開始できます。 さらに、プラットフォーム呼び出しが関数を作成し、関数間でデータをマーシャリングする方法を調整できます。  
   
 > [!NOTE]
->  文字列を割り当てる Win32 API 関数を使用して、`LocalFree` などのメソッドを使用して文字列を解放できます。 プラットフォーム呼び出しは、このようなパラメーターを異なる方法で処理します。 プラットフォーム呼び出しでは、パラメーターを `String` 型の代わりに `IntPtr` 型にします。 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> クラスにより提供されるメソッドを使用して、型を手動で文字列に変換し、手動で解放します。  
+>  文字列を割り当てる Win32 API 関数を使用して、`LocalFree` などのメソッドを使用して文字列を解放できます。 プラットフォーム呼び出しは、このようなパラメーターを異なる方法で処理します。 プラットフォーム呼び出しでは、パラメーターを `String` 型の代わりに `IntPtr` 型にします。 
+  <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> クラスにより提供されるメソッドを使用して、型を手動で文字列に変換し、手動で解放します。  
   
 ## <a name="declaration-basics"></a>宣言の基本  
  アンマネージド 関数に対するマネージド定義は、次の例で確認できるように、言語に依存します。 完全なコード例については、「[プラットフォーム呼び出しの例](platform-invoke-examples.md)」を参照してください。  
@@ -47,7 +48,8 @@ Public Class Win32
 End Class  
 ```  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>、または <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> の各フィールドを [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 宣言に適用するには、`Declare` ステートメントの代わりに <xref:System.Runtime.InteropServices.DllImportAttribute> 属性を使用する必要があります。  
+ 
+  <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>、または <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> の各フィールドを [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 宣言に適用するには、`Declare` ステートメントの代わりに <xref:System.Runtime.InteropServices.DllImportAttribute> 属性を使用する必要があります。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -226,7 +228,7 @@ interface IDemandStubsItf
 - [エントリ ポイントの指定](specifying-an-entry-point.md)
 - [文字セットの指定](specifying-a-character-set.md)
 - [プラットフォーム呼び出しの例](platform-invoke-examples.md)
-- [プラットフォーム呼び出しのセキュリティに関する考慮事項](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [プラットフォーム呼び出しのセキュリティに関する考慮事項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [DLL 内の関数の識別](identifying-functions-in-dlls.md)
 - [DLL 関数を保持するクラスの作成](creating-a-class-to-hold-dll-functions.md)
 - [DLL 関数の呼び出し](calling-a-dll-function.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539754"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221226"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソースの取得
 ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「 [.resources ファイルからのリソースの取得](#from_file) 」セクションを参照してください。  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでリソースを取得するには、Windows デベロッパー センターの「 [Windows ストア アプリでのリソースの作成と取得](https://go.microsoft.com/fwlink/p/?LinkID=241674) 」を参照してください。  
@@ -158,7 +158,7 @@ GetObject.exe
  リソースを作成し、それを適切なディレクトリに配置したら、 <xref:System.Resources.ResourceManager> メソッドを呼び出して、リソースを使用する <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> オブジェクトを作成します。 最初のパラメーターでは、アプリの既定の .resources ファイルのルート名を指定します (前のセクションの例では、"strings" でした)。 2 番目のパラメーターでは、リソースの場所を指定します (前の例では "Resources")。 3 番目のパラメーターでは、使用する <xref:System.Resources.ResourceSet> 実装を指定します。 3 番目のパラメーターが `null`である場合、既定のランタイム <xref:System.Resources.ResourceSet> が使用されます。  
   
 > [!NOTE]
->  ASP.NET アプリを展開する場合には、スタンドアロン .resources ファイルを使用しないでください。 このファイルを使用すると、ロックの問題が生じ、XCOPY 展開が破損する恐れがあります。 ASP.NET リソースの展開先はサテライト アセンブリにすることをお勧めします。 詳細については、「 [ASP.NET Web Page Resources Overview](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)」を参照してください。  
+>  ASP.NET アプリを展開する場合には、スタンドアロン .resources ファイルを使用しないでください。 このファイルを使用すると、ロックの問題が生じ、XCOPY 展開が破損する恐れがあります。 ASP.NET リソースの展開先はサテライト アセンブリにすることをお勧めします。 詳細については、「 [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))」を参照してください。  
   
  <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化したら、前述したように <xref:System.Resources.ResourceManager.GetString%2A>メソッド、 <xref:System.Resources.ResourceManager.GetObject%2A>メソッド、 <xref:System.Resources.ResourceManager.GetStream%2A> メソッドを使用してリソースを取得します。 ただし、.resources ファイルからリソースを直接取得することは、アセンブリから埋め込みリソースを取得することとは異なります。 .resources ファイルからリソースを取得する場合、 <xref:System.Resources.ResourceManager.GetString%28System.String%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%29> メソッドは、現在のカルチャに関係なく、常に既定のカルチャのリソースを取得します。 アプリケーションの現在のカルチャまたは特定のカルチャのリソースを取得するには、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、または <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> メソッドを呼び出して、どのカルチャのリソースを取得するのか指定する必要があります。 現在のカルチャのリソースを取得するには、 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティの値を `culture` 引数として指定します。 リソース マネージャーは、 `culture`のリソースを取得できない場合、標準的なリソース フォールバック規則を使用して適切なリソースを取得します。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9826f8af06693fdff0d5bea75cfa3f2586faa4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5151d89feccbe68daa5a8de4aa3b75a42511899
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582124"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220271"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>方法: COM から .NET 型を参照する
 クライアント アンド サーバー コードの観点からすると、COM と .NET Framework の違いはほとんどわかりません。 Microsoft Visual Basic クライアントでは、オブジェクト ブラウザーを使って .NET オブジェクトを表示できます。オブジェクト ブラウザーには、オブジェクトのメソッドと構文、プロパティ、およびフィールドが、他の COM オブジェクトの場合と同様に公開されます。  
@@ -46,5 +46,5 @@ ms.locfileid: "54582124"
 ## <a name="see-also"></a>関連項目
 - [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
 - [COM へのアセンブリの登録](registering-assemblies-with-com.md)
-- [.NET オブジェクトの呼び出し](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
-- [COM アクセスに対するアプリケーションの配置](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+- [.NET オブジェクトの呼び出し](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM アクセスに対するアプリケーションの配置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

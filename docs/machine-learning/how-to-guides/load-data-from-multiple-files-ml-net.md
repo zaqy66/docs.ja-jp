@@ -1,14 +1,14 @@
 ---
 title: 機械学習の処理のために複数ファイルのデータを読み込む - ML.NET
 description: ML.NET で機械学習モデルの構築、トレーニング、スコア付けに使用するデータを、複数のファイルから読み込む方法について説明します
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe6758e46d923dc07908e1334056ea8394c1085e
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479985"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092047"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>機械学習の処理のために複数ファイルのデータを読み込む - ML.NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "55479985"
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // A boolean column depicting the 'target label'.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bef8ce86a3dba5449e50c890b09acdee1375317c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3393adf5beed02a5a4bda2e07bd26e29e47fae2f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719548"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219309"
 ---
 # <a name="msgbox-sample"></a>MsgBox のサンプル
 このサンプルでは、文字列型を In パラメーターとして値渡しする方法と、<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>、および <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> の各フィールドを使用する場合について説明します。  
@@ -32,7 +32,9 @@ ms.locfileid: "54719548"
   
  このサンプルでは、`LibWrap` クラスの中には、`MsgBoxSample` クラスによって呼び出される各アンマネージド 関数に関するマネージド プロトタイプが含まれます。 マネージド プロトタイプ メソッドの `MsgBox`、`MsgBox2`、および `MsgBox3` は、同じアンマネージド 関数に対して異なる宣言を持ちます。  
   
- `MsgBox2` に対する宣言により、メッセージ ボックス内に不正な出力が生成されます。その原因は、ANSI として指定した文字型が、Unicode 関数の名前であるエントリ ポイント `MessageBoxW` と一致しないからです。 `MsgBox3` に対する宣言により、**EntryPoint**、**CharSet**、および **ExactSpelling** の各フィールド間に不一致が発生します。 `MsgBox3` を呼び出すと例外がスローされます。 文字列の名前付けと名前のマーシャリングの詳細については、「[文字セットの指定](specifying-a-character-set.md)」を参照してください。  
+ 
+  `MsgBox2` に対する宣言により、メッセージ ボックス内に不正な出力が生成されます。その原因は、ANSI として指定した文字型が、Unicode 関数の名前であるエントリ ポイント `MessageBoxW` と一致しないからです。 `MsgBox3` に対する宣言により、**EntryPoint**、**CharSet**、および **ExactSpelling** の各フィールド間に不一致が発生します。 
+  `MsgBox3` を呼び出すと例外がスローされます。 文字列の名前付けと名前のマーシャリングの詳細については、「[文字セットの指定](specifying-a-character-set.md)」を参照してください。  
   
 ## <a name="declaring-prototypes"></a>プロトタイプの宣言  
  [!code-cpp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#5)]
@@ -46,7 +48,6 @@ ms.locfileid: "54719548"
   
 ## <a name="see-also"></a>関連項目
 - [マーシャリング (文字列の)](marshaling-strings.md)
-- [プラットフォーム呼び出しのデータ型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
 - [文字列に対する既定のマーシャリング](default-marshaling-for-strings.md)
 - [マネージド コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)
 - [文字セットの指定](specifying-a-character-set.md)
