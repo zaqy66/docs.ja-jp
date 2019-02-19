@@ -24,8 +24,7 @@ ms.locfileid: "56093841"
   
 -   メディア リンク エントリ - 関連するメディア リソース ストリームへの参照を含むエンティティ。  
   
- 
-  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、ストリーミング データ プロバイダーを実装してバイナリ リソース ストリームを定義します。 ストリーミング プロバイダーの実装として特定のエンティティに関連付けられたメディア リソース ストリームをデータ サービスを提供する、<xref:System.IO.Stream>オブジェクト。 この実装によって、データ サービスでは、指定された MIME の種類のバイナリ データ ストリームとしてメディア リソースを HTTP 経由で受け入れて、返すことができます。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、ストリーミング データ プロバイダーを実装してバイナリ リソース ストリームを定義します。 ストリーミング プロバイダーの実装として特定のエンティティに関連付けられたメディア リソース ストリームをデータ サービスを提供する、<xref:System.IO.Stream>オブジェクト。 この実装によって、データ サービスでは、指定された MIME の種類のバイナリ データ ストリームとしてメディア リソースを HTTP 経由で受け入れて、返すことができます。  
   
  バイナリ データのストリーミングをサポートするデータ サービスを構成するには、次の手順に従う必要があります。  
   
@@ -81,8 +80,7 @@ ms.locfileid: "56093841"
  データ サービスを作成する方法については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>ホスト環境での大きなバイナリ ストリームの有効化  
- 
-  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーションのデータ サービスを作成する場合、Windows Communication Foundation (WCF) を使用して HTTP プロトコルが実装されます。 既定では、WCF では HTTP メッセージのサイズは 65K バイトのみに制限されます。 また、データ サービスに対する大きなバイナリ データのストリーミングを可能にするには、大きなバイナリ ファイルを有効にして、転送にストリームを使用するように Web アプリケーションを構成する必要もあります。 そのためには、アプリケーションの Web.config ファイルの `<configuration />` 要素に次の内容を追加します。  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーションのデータ サービスを作成する場合、Windows Communication Foundation (WCF) を使用して HTTP プロトコルが実装されます。 既定では、WCF では HTTP メッセージのサイズは 65K バイトのみに制限されます。 また、データ サービスに対する大きなバイナリ データのストリーミングを可能にするには、大きなバイナリ ファイルを有効にして、転送にストリームを使用するように Web アプリケーションを構成する必要もあります。 そのためには、アプリケーションの Web.config ファイルの `<configuration />` 要素に次の内容を追加します。  
   
   
   
@@ -96,8 +94,7 @@ ms.locfileid: "56093841"
   
   
 ## <a name="using-data-streams-in-a-client-application"></a>クライアント アプリケーションでのデータ ストリームの使用  
- 
-  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用すると、クライアントのバイナリ ストリームとして公開されたリソースを取得および更新できます。 詳細については、次を参照してください。[バイナリ データを扱う](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)します。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用すると、クライアントのバイナリ ストリームとして公開されたリソースを取得および更新できます。 詳細については、次を参照してください。[バイナリ データを扱う](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)します。  
   
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>ストリーミング プロバイダーの使用に関する考慮事項  
  ストリーミング プロバイダーを実装する場合およびデータ サービスからメディア リソースにアクセスする場合には、次の点を考慮してください。  
