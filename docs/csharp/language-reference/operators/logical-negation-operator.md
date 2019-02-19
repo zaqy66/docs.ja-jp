@@ -1,7 +1,7 @@
 ---
 title: '! 演算子 - C# リファレンス'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,24 +9,26 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333227"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303713"
 ---
-# <a name="-operator-c-reference"></a>! operator (C# リファレンス)
+# <a name="-operator-c-reference"></a>! 演算子 (C# リファレンス)
 
-論理否定演算子 (`!`) は、オペランドを否定する単項演算子です。 この演算子は `bool` として定義され、オペランドが `false` の場合にのみ、`true` を返します。
+論理否定演算子 `!` は、[bool](../keywords/bool.md) オペランドの論理否定を計算する単項演算子です。 つまり、オペランドが `false` の場合は `true` を生成し、オペランドが `true` の場合は `false` を生成します:
 
-## <a name="remarks"></a>コメント
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-ユーザー定義型は `!` 演算子をオーバーロードできます (「[演算子](../keywords/operator.md)」を参照)。
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-## <a name="example"></a>例
+ユーザー定義型は `!` 演算子を[オーバーロード](../keywords/operator.md)できます。
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[論理否定演算子](~/_csharplang/spec/expressions.md#logical-negation-operator)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
