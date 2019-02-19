@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540569"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220979"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -80,7 +80,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 
  DLR は、動的言語のサポートを強化するために一連のサービスを CLR に追加します。 これらのサービスには、次のようなものが含まれます。
 
--   式ツリー。 DLR では、式ツリーを使用して言語のセマンティクスを表します。 この目的から、DLR では LINQ の式ツリーが拡張され、制御フロー、代入、およびその他の言語モデリング ノードが追加されています。 詳細については、「[式ツリー](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)」を参照してください。
+-   式ツリー。 DLR では、式ツリーを使用して言語のセマンティクスを表します。 この目的から、DLR では LINQ の式ツリーが拡張され、制御フロー、代入、およびその他の言語モデリング ノードが追加されています。 詳細については、「[式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)」または「[式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)」を参照してください。
 
 -   呼び出しサイトのキャッシュ。 *動的呼び出しサイト*とは、動的オブジェクトに `a + b` や `a.b()` などの操作を実行するコード内の場所です。 DLR は、`a` と `b` の特性 (通常はこれらのオブジェクトの型) や操作に関する情報をキャッシュします。 同様の操作が以前に実行されていた場合、DLR は、必要なすべての情報をキャッシュから取得して、高速なディスパッチを実現します。
 
@@ -96,5 +96,6 @@ DLR では、呼び出しサイトのバインダーを使用して、.NET Frame
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [共通言語ランタイム](../../../docs/standard/clr.md)
-- [式ツリー](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [チュートリアル: 動的オブジェクトの作成と使用](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

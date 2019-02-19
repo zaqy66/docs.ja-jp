@@ -1,15 +1,15 @@
 ---
 title: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 description: バイナリ分類のシナリオで ML.NET を使用する方法を学習して、センチメント予測をどのように使用して適切なアクションを実行するかを理解します。
-ms.date: 01/15/2019
+ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628008"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092762"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 
@@ -21,18 +21,19 @@ ms.locfileid: "54628008"
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
 > * 問題を把握する
-> * 適切な機械学習タスクを選択する
+> * 適切な機械学習アルゴリズムを選択する
 > * データを準備する
-> * 学習パイプラインを作成する
-> * 分類器を読み込む
+> * データを変換する
 > * モデルをトレーニングする
-> * 別のデータ セットを使用してモデルを評価する
-> * モデルを使用してテスト データの結果の 1 つのインスタンスを予測する
-> * 読み込んだモデルを使用してテスト データの結果を予測する
+> * モデルを評価する
+> * トレーニング済みモデルを使用して予測する
+> * 読み込み済みのモデルを使用して配置および予測する
 
 ## <a name="sentiment-analysis-sample-overview"></a>センチメント分析のサンプルの概要
 
 このサンプルは ML.NET を使用するコンソール アプリケーションであり、センチメントを分類して肯定的か否定的かを予測するモデルをトレーニングします。 また、高品質な分析のために、2 番目のデータ セットを使用してモデルを評価します。 センチメントのデータ セットは、WikiDetox プロジェクトからのものです。
+
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -54,8 +55,8 @@ ms.locfileid: "54628008"
 3. **ビルドしてトレーニングする** 
    * **モデルをトレーニングする**
    * **モデルを評価する**
-4. **実行**
-   * **モデルの使用**
+4. **モデルの配置**
+   * **モデルを使用して予測する**
 
 ### <a name="understand-the-problem"></a>問題を把握する
 
@@ -67,7 +68,7 @@ ms.locfileid: "54628008"
 
 次に、センチメントを**決定**する必要があります。これは機械学習タスクを選択するときに役立ちます。
 
-## <a name="select-the-appropriate-machine-learning-task"></a>適切な機械学習タスクを選択する
+## <a name="select-the-appropriate-machine-learning-algorithm"></a>適切な機械学習アルゴリズムを選択する
 
 この問題に関してわかっていることは次のとおりです。
 
@@ -77,18 +78,18 @@ ms.locfileid: "54628008"
 * Wikipedia に無意味な記述を追加するのはやめてください。
 * 彼は最高です。記事ではそのことを記述するべきです。
 
-このシナリオには、分類機械学習タスクが適しています。
+このシナリオには、分類機械学習アルゴリズムが適しています。
 
 ### <a name="about-the-classification-task"></a>分類タスクについて
 
-分類とは、データを使用して項目またはデータ行のカテゴリ、型、クラスを**判断**する機械学習タスクです。 分類はたとえば、次のような目的に使用できます。
+分類は、データを使用して項目またはデータ行のカテゴリ、型、クラスを**判断**する機械学習アルゴリズムです。 分類はたとえば、次のような目的に使用できます。
 
 * センチメントが肯定的か否定的かを判断する。
 * 電子メールをスパム、迷惑メール、正常なメールに分類する。
 * 患者の検体が癌性かどうかを判断する。
 * 顧客を販売キャンペーンへの反応性で分類する。
 
-多くの場合、分類タスクは次のいずれかの種類です。
+多くの場合、分類アルゴリズムは次のいずれかの種類です。
 
 * バイナリ: A か B のいずれかである。
 * 多クラス: 1 つのモデルを使用して予測できるカテゴリが多数ある。
@@ -107,7 +108,7 @@ ms.locfileid: "54628008"
 
 ### <a name="prepare-your-data"></a>データを準備する
 
-1. [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) データ セットと [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) データ セットをダウンロードして、作成済みの *Data* フォルダーに保存します。 1 番目のデータ セットでは機械学習モデルをトレーニングし、2 番目のデータ セットはモデルの精度を評価するために使用します。
+1. [Wikipedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) データ セットと [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) データ セットをダウンロードして、作成済みの *Data* フォルダーに保存します。 1 番目のデータ セットでは機械学習モデルをトレーニングし、2 番目のデータ セットはモデルの精度を評価するために使用します。
 
 2. ソリューション エクスプローラーで、各 \*.tsv ファイルを右クリックし、**[プロパティ]** を選択します。 **[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
@@ -152,14 +153,14 @@ ML.NET を使用してモデルをビルドするときは、まず `MLContext` 
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-次に、データ読み込みを設定するために、再利用できるように `_textLoader` グローバル変数を初期化します。  `TextReader` を使用することに注意してください。 `TextReader`を使用して `TextLoader` を作成するとき、必要なコンテキストと、カスタマイズを可能にする <xref:Microsoft.ML.Data.TextLoader.Arguments> クラスを渡します。
+次に、データ読み込みを設定するために、再利用できるように `_textLoader` グローバル変数を初期化します。  `MLContext.Data.CreateTextLoader` を使用して `TextLoader` を作成するとき、必要なコンテキストと、カスタマイズを可能にする <xref:Microsoft.ML.Data.TextLoader.Arguments> クラスを渡します。
 
  すべての列名とそれらの型を含む <xref:Microsoft.ML.Data.TextLoader.Column> オブジェクトの配列をローダーに渡して、データ スキーマを指定します。 データ スキーマは、`SentimentData` クラスを作成したときに既に定義しています。 このスキーマでは、最初の列 (Label) は <xref:System.Boolean> (予測) で、2 番目の列 (SentimentText) はセンチメントの予測に使用される text/string 型の特徴です。
-`TextReader` クラスは、完全に初期化された <xref:Microsoft.ML.Data.TextLoader> を返します。  
+`TextLoader` クラスは、完全に初期化された <xref:Microsoft.ML.Data.TextLoader> を返します。  
 
 必要なデータセットで再利用するために `_textLoader` グローバル変数を初期化するには、`mlContext` 初期化の後に次のコードを追加します。
 
-[!code-csharp[initTextReader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextReader")]
+[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextLoader")]
 
 `Main` メソッドに次のコード行を追加します。
 
@@ -186,7 +187,7 @@ Train メソッドに 2 つのパラメーターが渡されていることに�
 
 ## <a name="load-the-data"></a>データを読み込む
 
-`_textLoader` グローバル変数と `dataPath` パラメーターを使用してデータを読み込みます。 <xref:Microsoft.ML.Data.IDataView> が返されます。 `Transforms` の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
+`_textLoader` グローバル変数と `dataPath` パラメーターを使用してデータを読み込みます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。 `Transforms` の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
 
 ML.NET ではデータは SQL ビューに似ています。 つまり、遅延評価、体系的、異種です。 オブジェクトはパイプラインの最初の部分であり、データを読み込みます。 このチュートリアルでは、コメントと対応する有害または無害のセンチメントを含むデータセットが読み込まれます。 これを使用して、モデルを作成してトレーニングします。
 
@@ -216,7 +217,7 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 
-読み込まれて変換されたデータ セットに基づいて、モデル <xref:Microsoft.ML.Data.TransformerChain%601> をトレーニングします。 推定器が定義されたら、既に読み込まれたトレーニング データを提供しながら、<xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> を使用してモデルをトレーニングします。 これにより、予測で使用されるモデルが返されます。 `pipeline.Fit()` でパイプラインをトレーニングし、`DataView` に基づいて `Transformer` を返します。 これが行われるまで、実験は実行されません。
+読み込まれて変換されたデータ セットに基づいて、モデル <xref:Microsoft.ML.Data.TransformerChain%601> をトレーニングします。 推定器が定義されたら、既に読み込まれたトレーニング データを提供しながら、<xref:Microsoft.ML.Data.EstimatorChain%601.Fit*> を使用してモデルをトレーニングします。 これにより、予測で使用されるモデルが返されます。 `pipeline.Fit()` でパイプラインをトレーニングし、`DataView` に基づいて `Transformer` を返します。 これが行われるまで、実験は実行されません。
 
 `Train` メソッドに次のコードを追加します。
 
@@ -290,14 +291,13 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 次に、モデルを再利用して他のアプリケーションで使用できるようにモデルを保存するメソッドを作成します。 `ITransformer` には <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> メソッドがあり、`_modelPath` グローバル フィールドと <xref:System.IO.Stream> を受け入れます。 これを zip ファイルとして保存するには、`FileStream` を作成した直後に `SaveTo` メソッドを呼び出します。 `SaveModelAsFile` メソッドに次のコード行を追加します。
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
-
-`_modelPath` を使用してコンソール メッセージを記述することで、ファイルが書き込まれた場所も表示できるようになります。これには次のコードを使用します。
+読み込み済みのモデルを使用して配置および予測する `_modelPath` を使用してコンソール メッセージを記述することで、ファイルが書き込まれた場所も表示できるようになります。これには次のコードを使用します。
 
 ```csharp
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>モデルと 1 つのコメントを使用してテスト データの結果を予測する
+## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>保存したモデルを使用してテスト データの結果を予測する
 
 `Evaluate` メソッドの直後に、次のコードを使用して `Predict` メソッドを作成します。
 
@@ -321,7 +321,7 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 `model` は多数のデータ行を操作する `transformer` ですが、よくある運用シナリオとして個々の例に対する予測のニーズがあります。 <xref:Microsoft.ML.PredictionEngine%602> は、`CreatePredictionEngine` メソッドから返されるラッパーです。 次の行を追加して、`PredictionEngine` を `Predict` メソッドの 1 行目として作成しましょう。
 
-[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionEngine")]
   
 コメントを追加して、`Predict` メソッドでトレーニングされたモデルの予測をテストします。これには `SentimentData` のインスタンスを作成します。
 
@@ -331,13 +331,13 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
-### <a name="model-operationalization-prediction"></a>モデルの運用化: 予測
+### <a name="using-the-model-prediction"></a>モデルの使用: 予測
 
 結果を共有し、それに応じたアクションを実行するために、`SentimentText` および対応するセンチメント予測を表示します。 これは運用化と呼ばれ、返されたデータを運用ポリシーとして使用します。 次の <xref:System.Console.WriteLine?displayProperty=nameWithType> コードを使用して、結果の表示を作成します。
 
 [!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction output")]
 
-## <a name="predict-the-test-data-outcomes-with-the-saved-model"></a>保存したモデルを使用してテスト データの結果を予測する
+## <a name="deploy-and-predict-with-a-loaded-model"></a>読み込み済みのモデルを使用して配置および予測する
 
 `SaveModelAsFile` メソッドの直前に、次のコードを使用して `PredictWithModelLoadedFromFile` メソッドを作成します。
 
@@ -367,11 +367,11 @@ public static void PredictWithModelLoadedFromFile(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-モデルは既にあるので、それを利用して、<xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)> メソッドでコメント データのセンチメントが有害か無害かを予測できます。 予測を取得するには、新しいデータに対して `Predict` を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。 予測のために `PredictWithModelLoadedFromFile` メソッドに次のコードを追加します。
+モデルは既にあるので、それを利用して、<xref:Microsoft.ML.Core.Data.ITransformer.Transform%2A> メソッドでコメント データのセンチメントが有害か無害かを予測できます。 予測を取得するには、新しいデータに対して `Predict` を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。 予測のために `PredictWithModelLoadedFromFile` メソッドに次のコードを追加します。
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
-### <a name="model-operationalization-prediction"></a>モデルの運用化: 予測
+### <a name="using-the-loaded-model-for-prediction"></a>予測のために読み込み済みのモデルを使用する
 
 結果を共有し、それに応じたアクションを実行するために、`SentimentText` および対応するセンチメント予測を表示します。 これは運用化と呼ばれ、返されたデータを運用ポリシーとして使用します。 次の <xref:System.Console.WriteLine?displayProperty=nameWithType> コードを使用して、結果のヘッダーを作成します。
 
@@ -410,12 +410,12 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 =============== End of training ===============
 
 
-The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
+The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.1\Data\Model.zip
 
 =============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
-Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
+Sentiment: I love this article. | Prediction: Not Toxic | Probability: 0.09454837
 
 ```
 
@@ -426,13 +426,13 @@ Sentiment: He is the best, and the article should say that. | Prediction: Not To
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
 > * 問題を把握する
-> * 適切な機械学習タスクを選択する
+> * 適切な機械学習アルゴリズムを選択する
 > * データを準備する
-> * 学習パイプラインを作成する
-> * 分類器を読み込む
+> * データを変換する
 > * モデルをトレーニングする
-> * 別のデータ セットを使用してモデルを評価する
-> * モデルを使用してテスト データの結果を予測する
+> * モデルを評価する
+> * トレーニング済みモデルを使用して予測する
+> * 読み込み済みのモデルを使用して配置および予測する
 
 さらに詳しく学習するには、次のチュートリアルに進んでください。
 > [!div class="nextstepaction"]

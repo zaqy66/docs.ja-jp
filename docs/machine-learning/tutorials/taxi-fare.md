@@ -3,15 +3,15 @@ title: 回帰ラーナーと ML.NET を使用して料金を予測する
 description: 回帰ラーナーと ML.NET を使用して料金を予測します。
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828398"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092541"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>チュートリアル: 回帰ラーナーと ML.NET を使用して料金を予測する
 
@@ -122,9 +122,9 @@ ML.NET を使用してモデルをビルドするときは、まず ML Context �
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-次に、データ読み込みを設定するために、再利用できるように `_textLoader` グローバル変数を初期化します。  `TextReader` を使用していることに注意してください。 `TextReader` を使用して `TextLoader` を作成するとき、必要なコンテキストと、カスタマイズを可能にする <xref:Microsoft.ML.Data.TextLoader.Arguments> クラスを渡します。 すべての列名とそれらの型を含む <xref:Microsoft.ML.Data.TextLoader.Column> オブジェクトの配列を `TextReader` に渡して、データ スキーマを指定します。 データ スキーマは、`TaxiTrip` クラスを作成したときに既に定義しています。
+次に、データ読み込みを設定するために、再利用できるように `_textLoader` グローバル変数を初期化します。 `TextLoader` を作成するとき、必要なコンテキストと、カスタマイズを可能にする <xref:Microsoft.ML.Data.TextLoader.Arguments> クラスを渡します。 すべての列名とそれらの型を含む <xref:Microsoft.ML.Data.TextLoader.Column> オブジェクトの配列を `TextLoader` に渡して、データ スキーマを指定します。 データ スキーマは、`TaxiTrip` クラスを作成したときに既に定義しています。
 
-`TextReader` クラスは、完全に初期化された <xref:Microsoft.ML.Data.TextLoader> を返します。  
+`TextLoader` クラスは、完全に初期化された <xref:Microsoft.ML.Data.TextLoader> を返します。  
 
 必要なデータセットで再利用するために `_textLoader` グローバル変数を初期化するには、`mlContext` 初期化の後に次のコードを追加します。
 
@@ -155,7 +155,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>データを読み込んで変換する
 
-`_textLoader` グローバル変数と `dataPath` パラメーターを使用してデータを読み込みます。 <xref:Microsoft.ML.Data.IDataView> が返されます。 Transforms の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
+`_textLoader` グローバル変数と `dataPath` パラメーターを使用してデータを読み込みます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。 Transforms の入力および出力として、`IDataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
 
 ML.NET ではデータは SQL ビューに似ています。 つまり、遅延評価、体系的、異種です。 オブジェクトはパイプラインの最初の部分であり、データを読み込みます。 このチュートリアルでは、料金の予測に役立つタクシーの運賃情報を含むデータセットを読み込みます。 これを使用して、モデルを作成してトレーニングします。
 

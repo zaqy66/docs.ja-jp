@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123762"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092957"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 ここでは、.NET Framework アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明します。 また、動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理などの技術領域に関する情報も提供します。  
@@ -79,5 +79,5 @@ ms.locfileid: "49123762"
  [ツール](../../docs/framework/tools/index.md)  
  .NET Framework テクノロジを使ってアプリを開発、構成、配置するのに役立つツールについて説明します。  
   
- [.NET Framework のサンプル](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- .NET Framework のテクノロジを紹介するサンプル アプリを参照できる MSDN コード サンプル ギャラリーへのリンクです。
+ [.NET サンプルおよびチュートリアル](../samples-and-tutorials/index.md)  
+ .NET を学習する際に役立つサンプルとチュートリアルへのリンクです。

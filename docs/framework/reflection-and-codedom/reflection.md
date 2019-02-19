@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453084"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221239"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework のリフレクション
-<xref:System.Reflection> 名前空間のクラスを <xref:System.Type?displayProperty=nameWithType> と共に使用すると、読み込まれた[アセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)についての情報、およびそのアセンブリ内に定義されている[クラス](../../../docs/standard/base-types/common-type-system.md#classes)、[インターフェイス](../../../docs/standard/base-types/common-type-system.md#interfaces)、[値型](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de)などの型を取得できます。 また、リフレクションを使用すると、実行時に型インスタンスを作成したり、作成した型インスタンスを呼び出したり、アクセスしたりできます。 リフレクションのさまざまな面に関するトピックについては、この概要の最後の「[関連トピック](#related_topics)」を参照してください。  
+<xref:System.Reflection> 名前空間のクラスを <xref:System.Type?displayProperty=nameWithType> と共に使用すると、読み込まれた[アセンブリ](../app-domains/assemblies-in-the-common-language-runtime.md)についての情報、およびそのアセンブリ内に定義されている[クラス](../../standard/base-types/common-type-system.md#classes)、[インターフェイス](../../standard/base-types/common-type-system.md#interfaces)、[値型](../../csharp/language-reference/keywords/value-types.md)などの型を取得できます。 また、リフレクションを使用すると、実行時に型インスタンスを作成したり、作成した型インスタンスを呼び出したり、アクセスしたりできます。 リフレクションのさまざまな面に関するトピックについては、この概要の最後の「[関連トピック](#related_topics)」を参照してください。
   
  [共通言語ランタイム](../../../docs/standard/clr.md) ローダーは、[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)を管理します。アプリケーション ドメインは、同じアプリケーション スコープのオブジェクトの周りに定義された境界を構成します。 アプリケーション ドメインの管理には、該当アプリケーション ドメインへの各アセンブリの読み込み、および各アセンブリ内の型階層のメモリ レイアウトの制御などが含まれます。  
   
@@ -77,10 +77,10 @@ ms.locfileid: "49453084"
 |[リフレクションとジェネリック型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|ジェネリック型およびジェネリック メソッドの型パラメーターと型引数がリフレクションでどのように処理されるかについて説明します。|  
 |[リフレクションに関するセキュリティ上の考慮事項](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|型情報を探索し、型にアクセスするためにどの程度までリフレクションを使用できるかを決定する規則を説明します。|  
 |[型の動的な読み込みおよび使用](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|遅延バインディングをサポートするリフレクション カスタム バインド インターフェイスについて説明します。|  
-|[方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|リフレクションのみの読み込みのコンテキストについて説明します。 アセンブリを読み込む方法、そのコンテキストをテストする方法、およびリフレクションのみのコンテキストでアセンブリに適用されている属性を調べる方法を紹介します。|  
+|[方法:  リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。|リフレクションのみの読み込みのコンテキストについて説明します。 アセンブリを読み込む方法、そのコンテキストをテストする方法、およびリフレクションのみのコンテキストでアセンブリに適用されている属性を調べる方法を紹介します。|  
 |[カスタム属性へのアクセス](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|リフレクションを使用して、属性の有無および属性値を照会する方法を説明します。|  
 |[完全修飾型名の指定](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Backus-Naur form (BNF) に基づく完全修飾型名の書式と、特殊文字、アセンブリ名、ポインター、参照、および配列を指定する際に必要な構文を説明します。|  
-|[方法 : リフレクションを使用してデリゲートをフックする](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|メソッドのデリゲートを作成し、デリゲートをイベントにフックする方法について説明します。 また、<xref:System.Reflection.Emit.DynamicMethod> を使用して実行時にイベント処理メソッドを作成する方法について説明します。|  
+|[方法: リフレクションを使用してデリゲートをフックする](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|メソッドのデリゲートを作成し、デリゲートをイベントにフックする方法について説明します。 また、<xref:System.Reflection.Emit.DynamicMethod> を使用して実行時にイベント処理メソッドを作成する方法について説明します。|  
 |[動的メソッドおよびアセンブリの出力](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|動的アセンブリや動的メソッドを生成する方法について説明します。|  
   
 ## <a name="reference"></a>参照  

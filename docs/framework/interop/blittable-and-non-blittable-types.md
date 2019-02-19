@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596892"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093035"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 型と非 Blittable 型
 ほとんどのデータ型の表現はマネージド メモリとアンマネージド メモリの両方で共通しているため、相互運用マーシャラーによる特別な処理は必要ありません。 これらの型は、マネージド コードとアンマネージド コード間での受け渡しの際に変換が必要でないため、*blittable 型*と呼ばれます。  
@@ -49,7 +49,7 @@ ms.locfileid: "54596892"
   
 -   整数の配列など、blittable 型の 1 次元配列。 ただし、blittable 型の可変配列を含む型自体は blittable ではありません。  
   
--   blittable 型だけを含む、書式設定された値型 (および、それらが書式設定された型としてマーシャリングされる場合はクラス)。 書式設定された値型の詳細については、「[Default Marshaling for Value Types](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))」(値型に対する既定のマーシャリング) を参照してください。  
+-   blittable 型だけを含む、書式設定された値型 (および、それらが書式設定された型としてマーシャリングされる場合はクラス)。 書式設定された値型の詳細については、「[Default marshaling for value types](default-marshaling-behavior.md#default-marshaling-for-value-types)」(値型に対する既定のマーシャリング) を参照してください。  
   
  オブジェクト参照は blittable ではありません。 これには、単独では blittable なオブジェクトへの参照の配列も含まれます。 たとえば、blittable な構造体は定義できますが、それらの構造体への参照の配列を含む blittable 型は定義できません。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54596892"
   
  一部のマネージド データ型は、アンマネージド環境では異なる表現が必要です。 これらの非 blittable データ型は、マーシャリングできる形式に変換する必要があります。 たとえば、マネージド文字列は、文字列オブジェクトに変換しないとマーシャリングできないので、非 blittable 型です。  
   
- <xref:System> 名前空間に属する非 blittable 型を次の表に示します。 [デリゲート](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100))は静的メソッドまたはクラス インスタンスを参照するデータ構造体であり、これも非 blittable 型です。  
+ <xref:System> 名前空間に属する非 blittable 型を次の表に示します。 [デリゲート](default-marshaling-behavior.md#default-marshaling-for-delegates)は静的メソッドまたはクラス インスタンスを参照するデータ構造体であり、これも非 blittable 型です。  
   
 |非 blittable 型|説明|  
 |-------------------------|-----------------|  

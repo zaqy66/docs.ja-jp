@@ -1,15 +1,15 @@
 ---
 title: ML.NET でのモデル トレーニングに関する基本的な概念
 description: この記事では、ML.NET での "*モデル トレーニング*" シナリオに関する基本概念について説明します。 よりシンプルなシナリオである "*既存モデルでの予測*" と関係のない概念も含まれます。
-ms.date: 11/06/2018
+ms.date: 02/13/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: cff833b45583bc752bb42616820a95ca6c5c6b12
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "55252441"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303661"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>ML.NET でのモデル トレーニングに関する基本的な概念
 
@@ -25,14 +25,14 @@ ms.locfileid: "55252441"
 - `ITransformer` インターフェイスとして表された "[*トランスフォーマー*](#transformer)"。
   - トランスフォーマーは、データを受け取り、データに対して何らかの作業を行い、変換された新しいデータを返すコンポーネントです。
   - たとえば、機械学習モデルは特徴を受け取って予測を返すトランスフォーマーと考えることができます。
-  - 別の例としては、テキスト トークナイザーは 1 つのテキスト列を受け取り、テキストから抽出され個々の単語を含むベクトル列を出力します。
+  - 別の例としては、テキスト トークナイザーは 1 つのテキスト列を受け取り、テキストから抽出された個々の単語を含むベクトル列を出力します。
 - `IDataReader<T>` インターフェイスとして表された "[*データ リーダー*](#data-reader)"。
   - データ リーダーは、データを作成する ML.NET コンポーネントです。 `T` のインスタンスを受け取り、そのデータを返します。 
-  - たとえば、*TextLoader* は `IDataReader<FileSource>` です。 ファイル ソースを受け取って、データを生成します。 
+  - たとえば、*TextLoader* は `IDataReader<IMultiStreamSource>` です。 これはソースを受け取って、データを生成します。 
 - `IEstimator<T>` インターフェイスとして表された "[*エスティメーター*](#estimator)"。
   - これは、データから学習するオブジェクトです。 学習の結果は "*トランスフォーマー*" です。
   - 機械学習の "*アルゴリズム*" は、データについて学習して機械学習の "*モデル*" を生成するエスティメーターと考えることができます。
-- `PredictionFunction<TSrc, TDst>` クラスとして表された "[*予測関数*](#prediction-function)"。
+- `PredictionEngine<TSrc, TDst>` クラスとして表された "[*予測関数*](#prediction-function)"。
   - 予測関数は、予測時などに 1 つの行に対してトランスフォーマーを適用するマシンと見なすことができます。
 
 ## <a name="data"></a>データ
@@ -50,11 +50,11 @@ ML.NET では、データは SQL ビューに似ています。つまり、遅�
 
 トランスフォーマーは、データを受け取り、データに対して何らかの作業を行い、変換された新しいデータを返すコンポーネントです。
 
-ML.NET のほとんどのトランスフォーマーは、多くの場合、一度に 1 つの "*入力列*" を処理して、"*出力列*" を生成します。 たとえば、`new HashTransformer("foo", "bar")` は、"foo" 列から値を取得し、そのハッシュ値を計算して、"bar" 列に格納します。 
+ML.NET のほとんどのトランスフォーマーは、多くの場合、一度に 1 つの "*入力列*" を処理して、"*出力列*" を生成します。 たとえば、`new HashTransformer("bar", "foo")` は、"foo" 列から値を取得し、そのハッシュ値を計算して、"bar" 列に格納します。 
 
 また、入力列と出力列は同じ名前であることが一般的です。 この場合、古い列は新しい列で置き換えられます。 たとえば、`new HashTransformer("foo")` は、"foo" 列から値を取得し、そのハッシュ値を計算して、"foo" 列に戻します。 
 
-もちろん、`Transform` が呼び出されると、すべてのトランスフォーマーは新しいデータ ビューを生成します。 データ ビューは不変であることを思い出してください。
+`Transform` が呼び出されると、任意のトランスフォーマーによって新しいデータ ビューが生成されます。 データ ビューは不変であることを思い出してください。
 
 もう 1 つの重要な考慮事項は、データは遅延評価されるため、"*トランスフォーマーも遅延である*" ということです。 基本的に、次の呼び出しの後で
 
@@ -62,29 +62,29 @@ ML.NET のほとんどのトランスフォーマーは、多くの場合、一�
 var newData = transformer.Transform(oldData)
 ```
 
-実際の計算は行われません。 `newData` からカーソルを取得し、値の使用を開始した後でのみ、`newData` は `transformer` の変換ロジックを呼び出します (そしてその場合でも、対象の `transformer` が要求された列を生成するために必要な場合だけです)。
+実際の計算は行われません。 `newData` からカーソルを取得し、値の使用を開始した後でのみ、`newData` によって `transformer` の変換ロジックが呼び出されます (ただし、これは、要求された列を生成するために対象の `transformer` が必要な場合にのみ行われます)。
 
 ### <a name="transformer-chains"></a>トランスフォーマーのチェーン
 
-トランスフォーマーの便利な性質は、"*トランスフォーマーのシーケンシャルな適用を別のトランスフォーマーで表すことができる*" というものです。
+トランスフォーマーの便利な性質は、"*トランスフォーマーのシーケンシャルな適用を別のトランスフォーマーでビルドできる*" というものです。
 
 ```csharp
 var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
 ```
 
-この性質は ML.NET でよく使用されます。通常、トレーニング済みの ML.NET モデルはトランスフォーマーのチェーンであり、これはすべての意図と目的に対する 1 つの "*トランスフォーマー*" です。 
+この性質は ML.NET でよく使用されます。通常、トレーニング済みの ML.NET モデルはトランスフォーマーのチェーンであり、これはすべての意図と目的に対する 1 つの "*トランスフォーマー*" です。
 
 ## <a name="data-reader"></a>データ リーダー
 
-データ リーダーは、データを "作成する" ための ML.NET コンポーネントです。`T` のインスタンスを受け取り、そのデータを返します。
+データ リーダーは、データを "作成する" ための ML.NET コンポーネントです。このコンポーネントでは、`T` のインスタンスが取得され、そのデータが返されます。
 
 注意すべき興味深い性質は、既存のデータ リーダーにトランスフォーマーをアタッチすることにより、データ リーダーを作成できることです。 このようにして、トランスフォーマーの動作が組み込まれたリーダーを作成できます。
 
-```c#
+```csharp
 var newReader = reader.Append(transformer1).Append(transformer2)
 ```
 
-トランスフォーマーと似ているもう 1 つの点は、データは遅延評価されるため、"*リーダーも遅延である*" ことです。`dataReader.Read()` を呼び出した時点では、実際の "読み取り" はまったく (または最小限でしか) 行われません。結果のデータでカーソルが要求されたときにのみ、リーダーは処理を開始します。
+トランスフォーマーと似ているもう 1 つの点は、データは遅延評価されるため、"*リーダーも遅延である*" ことです。`reader.Read()` を呼び出した時点では、実際の "読み取り" はまったく (または最小限でしか) 行われません。結果のデータでカーソルが要求されたときにのみ、リーダーは処理を開始します。
 
 ## <a name="estimator"></a>エスティメーター
 
@@ -95,12 +95,12 @@ ML.NET では、この特性を使用して、異なるエスティメーター�
 ```csharp
 MLContext mlContext = new MLContext(seed: 0);
 
-var pipeline = new CopyColumnsEstimator(mlContext, "FareAmount", "Label")
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "VendorId"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "RateCode"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "PaymentType"))
-.Append(new ColumnConcatenatingEstimator(mlContext, "Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
-.Append(mlContext.Regression.Trainers.FastTree("Label", "Features"));
+var pipeline = mlContext.Transforms.CopyColumns("Label","FareAmount")
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("RateCode"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("PaymentType"))
+    .Append(mlContext.Transforms.Concatenate("Features","VendorId","RateCode","PassengerCount","TripTime","TripDistance","PaymentType"))
+    .Append(mlContext.Regression.Trainers.FastTree("Label","Features"));
 
 var model = pipeline.Fit(dataView);
 ```
@@ -109,7 +109,7 @@ var model = pipeline.Fit(dataView);
 
 ## <a name="prediction-function"></a>予測関数
 
-予測関数は、1 つの行に対してトランスフォーマーを適用するマシンと見なすことができます。
+予測関数は、1 つの行に対してトランスフォーマーを適用するコンポーネントと見なすことができます。
 
 モデルを取得した後は (`Fit()` によってトレーニングされたか、またはどこかから読み込まれた "*トランスフォーマー*")、それを使用して、`model.Transform(data)` の通常の呼び出しで予測を行うことができます。 ただし、実際のシナリオでこのモデルを使用するときは、通常、予測に多くの例を使用しません。 代わりに、一度に 1 つの例を使用し、すぐに適切なタイミングで予測を行う必要があります。
 
@@ -123,17 +123,17 @@ var model = pipeline.Fit(dataView);
 
 前記のアルゴリズムは、次のように[スキーマの理解](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md)と 2 つのユーザー定義オブジェクト `InputExample` と `OutputPrediction` を使用して実装できます。
 
-```c#
-var inputData = env.CreateDataView(new InputExample[] { example });
+```csharp
+var inputData = mlContext.Data.ReadFromEnumerable(new InputExample[] { example });
 var outputData = model.Transform(inputData);
-var output = outputData.AsDynamic.AsEnumerable<OutputPrediction>(env, reuseRowObject: false).Single();
+var output = mlContext.CreateEnumerable<OutputPrediction>(outputData,reuseRowObject:false).First();
 ```
 
-ただし、これは面倒で、パフォーマンス コストがかかります。 代わりに、予測関数オブジェクトでは、拡張メソッド `MakePredictionFunction` により同じ処理が、ただしもっと速く便利に行われます。
+ただし、これは面倒で、パフォーマンス コストがかかります。 代わりに、予測関数オブジェクトでは、拡張メソッド `CreatePredictionEngine` により同じ処理が、ただしもっと速く便利に行われます。
 
-```c#
-var predictionFunc = model.MakePredictionFunction<InputExample, OutputPrediction>(env);
-var output = predictionFunc.Predict(example);
+```csharp
+var predictionEngine = model.CreatePredictionEngine<InputExample,OutputPrediction>(mlContext);
+var prediction = predictionEngine.Predict(example);
 ```
 
 予測関数は "*再入可能/スレッド セーフではありません*"。 複数のスレッドで同時に予測を実行する場合は、スレッドごとに予測関数が存在する必要があります。

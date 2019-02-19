@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572969"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219764"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)
 
@@ -128,7 +128,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
   
 |UI 要素|説明|  
 |----------------|-----------------|  
-|**アクセス許可セットの種類**|‏このアプリケーションをクライアントで実行するために必要な、最小のアクセス許可セットです。 これらのアクセス許可セットおよび必要なアクセス許可については、「[NIB: 名前付きアクセス許可セット](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)」を参照してください。|  
+|**アクセス許可セットの種類**|‏このアプリケーションをクライアントで実行するために必要な、最小のアクセス許可セットです。 これらのアクセス許可セットおよび必要なアクセス許可については、「[名前付きアクセス許可セット](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」を参照してください。|  
 |**詳細**|アクセス許可セットを表すために作成された、アプリケーション マニフェスト用の XML です。 アプリケーション マニフェストの XML 形式に精通している場合を除き、この XML を手動で編集しないでください。 詳細については、「[ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)」を参照してください。|  
   
 ### <a name="deployment-manifest-tab"></a>[配置マニフェスト] タブ  

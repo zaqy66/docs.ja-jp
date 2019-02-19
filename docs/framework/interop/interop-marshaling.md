@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453256"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221252"
 ---
 # <a name="interop-marshaling"></a>相互運用マーシャリング
 <a name="top"></a> 相互運用マーシャリングは、メソッド引数と戻り値によって、呼び出し中にマネージド メモリとアンマネージド メモリの間でデータを渡す方法を制御します。 相互運用マーシャリングは、共通言語ランタイムのマーシャリング サービスによって実行される、ランタイム アクティビティです。  
@@ -73,7 +73,8 @@ ms.locfileid: "49453256"
  マネージド サーバーをエクスポートする予定の場合は、サーバーのアパートメントが COM クライアントによって決定されることに注意してください。 MTA 内で初期化された COM クライアントから呼び出されるマネージド サーバーは、スレッド セーフを確保する必要があります。  
   
 ### <a name="managed-clients-and-com-servers"></a>マネージド クライアントと COM サーバー  
- マネージド クライアントのアパートメントの既定の設定は MTA です。ただし、.NET クライアントのアプリケーションの種類によっては、既定の設定が変更されることがあります。 たとえば、[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] クライアントのアパートメントの設定は STA です。 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> プロパティ、または <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> プロパティを使用して、マネージド クライアントのアパートメントの設定を変更できます。  
+ マネージド クライアントのアパートメントの既定の設定は MTA です。ただし、.NET クライアントのアプリケーションの種類によっては、既定の設定が変更されることがあります。 たとえば、[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] クライアントのアパートメントの設定は STA です。 
+  <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> プロパティ、または <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> プロパティを使用して、マネージド クライアントのアパートメントの設定を変更できます。  
   
  コンポーネントの作成者は、COM サーバーのスレッド アフィニティを設定します。 次の表は、.NET クライアントと COM サーバーのアパートメント設定の組み合わせを示しています。 また、結果として生じる、組み合わせのためのマーシャリング要件も示しています。  
   
@@ -102,7 +103,7 @@ ms.locfileid: "49453256"
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>リモートの呼び出しのマーシャリング  
- アパートメント間のマーシャリングの場合と同様に、COM マーシャリングは、オブジェクトが別個のプロセス内に存在するときには常に、マネージド コードとアンマネージド コード間の各呼び出しに関与します。 例:  
+ アパートメント間のマーシャリングの場合と同様に、COM マーシャリングは、オブジェクトが別個のプロセス内に存在するときには常に、マネージド コードとアンマネージド コード間の各呼び出しに関与します。 次に例を示します。  
   
 -   リモート ホスト上のマネージド サーバーを呼び出す COM クライアントは、分散 COM (DCOM) を使用します。  
   
@@ -148,12 +149,12 @@ SOAP または TcpChannel クラスを使用するファイアウォールを越
 |[既定のマーシャリング動作](default-marshaling-behavior.md)|相互運用マーシャリング サービスがデータのマーシャリングに使用する規則について説明します。|  
 |[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)|メソッドのパラメーターを宣言してアンマネージ ライブラリによってエクスポートされた関数に引数を渡す方法について説明します。|  
 |[COM 相互運用機能によるデータのマーシャリング](marshaling-data-with-com-interop.md)|COM ラッパーをカスタマイズしてマーシャリング動作を変更する方法について説明します。|  
-|[方法: マネージ コード DCOM を WCF に移行する](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM から WCF に移行する方法について説明します。|  
+|[方法: マネージド コード DCOM を WCF に移行する](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM から WCF に移行する方法について説明します。|  
 |[方法: HRESULT に例外を割り当てる](how-to-map-hresults-and-exceptions.md)|HRESULT にカスタム例外をマップする方法について説明し、各 HRESULT から .NET Framework での同等の例外クラスへの完全なマッピングを示します。|  
-|[ジェネリック型を使用する相互運用](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|COM 相互運用性のジェネリック型を使用するとき、どのアクションがサポートされるかについて説明します。|  
+|[ジェネリック型を使用する相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM 相互運用性のジェネリック型を使用するとき、どのアクションがサポートされるかについて説明します。|  
 |[アンマネージ コードとの相互運用](index.md)|共通言語ランタイムが提供する相互運用サービスについて説明します。|  
 |[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|.NET Framework アプリケーションに COM コンポーネントを組み込む方法についての詳細情報へのリンクを示します。|  
-|[相互運用のためのデザインの考慮事項](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|統合 COM コンポーネントを記述するためのヒントを示します。|  
+|[相互運用のためのデザインの考慮事項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|統合 COM コンポーネントを記述するためのヒントを示します。|  
   
  [ページのトップへ](#top)  
   

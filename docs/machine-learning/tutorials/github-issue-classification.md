@@ -1,15 +1,15 @@
 ---
 title: ML.NET を GitHub の問題の多クラス分類シナリオで使用する
 description: GitHub の問題を分類し、それを特定の領域に割り当てるための多クラス分類シナリオで、ML.NET を使用する方法について説明します。
-ms.date: 02/01/2019
+ms.date: 02/14/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 79c0ae1ba38b410c0709659a4e5ee1ac2308b983
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739424"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333522"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>チュートリアル: ML.NET を、GitHub の問題を分類する多クラス分類シナリオで使用する
 
@@ -20,11 +20,11 @@ ms.locfileid: "55739424"
 > * 問題を把握する
 > * 適切な機械学習アルゴリズムを選択する
 > * データを準備する
-> * 特徴を抽出してデータを変換する
+> * データを変換する
 > * モデルをトレーニングする
-> * 別のデータ セットを使用してモデルを評価する
-> * トレーニング済みモデルを使用してテスト データの結果の 1 つのインスタンスを予測する
-> * 読み込んだモデルを使用してテスト データの結果の 1 つのインスタンスを予測する
+> * モデルを評価する
+> * トレーニング済みモデルを使用して予測する
+> * 読み込み済みのモデルを使用して配置および予測する
 
 > [!NOTE]
 > このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
@@ -55,8 +55,8 @@ ms.locfileid: "55739424"
 3. **ビルドしてトレーニングする** 
    * **モデルをトレーニングする**
    * **モデルを評価する**
-4. **実行**
-   * **モデルの使用**
+4. **モデルの配置**
+   * **モデルを使用して予測する**
 
 ### <a name="understand-the-problem"></a>問題を把握する
 
@@ -146,7 +146,7 @@ GitHub の問題は、次の例のようないくつかの領域 (**区分**) �
 * `_testDataPath` には、モデルの評価に使用するデータ セットのパスが含まれます。
 * `_modelPath` には、トレーニング済みのモデルを保存するパスが含まれます。
 * `_mlContext` は処理コンテキストを提供する <xref:Microsoft.ML.MLContext> です。
-* `_trainingDataView` は、トレーニング データセットを処理するために使用される <xref:Microsoft.ML.Data.IDataView> です。
+* `_trainingDataView` は、トレーニング データセットを処理するために使用される <xref:Microsoft.Data.DataView.IDataView> です。
 * `_predEngine` は、1 つの予測に使用される <xref:Microsoft.ML.PredictionEngine%602> です。
 * `_reader` は、データセットの読み込みと変換に使用される <xref:Microsoft.ML.Data.TextLoader> です。
 
@@ -187,7 +187,7 @@ ML.NET を使用してモデルをビルドするときは、まず <xref:Micros
 
 ## <a name="load-the-data"></a>データを読み込む
 
-次いで、`_trainingDataView` <xref:Microsoft.ML.Data.IDataView> グローバル変数を初期化して、`_trainDataPath` パラメーターを使用してデータを読み込みます。
+次いで、`_trainingDataView` <xref:Microsoft.Data.DataView.IDataView> グローバル変数を初期化して、`_trainDataPath` パラメーターを使用してデータを読み込みます。
 
  [`Transforms`](../basic-concepts-model-training-in-mldotnet.md#transformer) の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
 
@@ -195,7 +195,7 @@ ML.NET ではデータは `SQL view` に似ています。 つまり、遅延評
 
 以前に作成した `GitHubIssue` データ モデルの種類がデータセット スキーマと一致するため、初期化、マッピング、およびデータセットの読み込みを 1 行のコードに組み合わせることができます。
 
-行の最初の部分 (`CreateTextReader<GitHubIssue>(hasHeader: true)`) では、`GitHubIssue` データ モデル型からデータセット スキーマを推論し、データセットのヘッダーを使用し、<xref:Microsoft.ML.Data.TextLoader> を作成します。
+行の最初の部分 (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) では、`GitHubIssue` データ モデル型からデータセット スキーマを推論し、データセットのヘッダーを使用し、<xref:Microsoft.ML.Data.TextLoader> を作成します。
 
 データ スキーマは、`GitHubIssue` クラスを作成したときに既に定義しています。 スキーマでは次のとおりです。
 
@@ -245,6 +245,9 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 
 [!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
+>[!WARNING]
+> ML.NET バージョン 0.10 では、変換パラメーターの順序が変更されました。 これについては、ビルドするまでエラーが出力されません。 変換パラメーターの名前を上記のコード スニペットに示すように使用してください。
+
 データの準備の最後の手順では、`Concatenate` 変換クラスを使用して、すべての特徴列を **Features** 列に結合します。 既定では、学習アルゴリズムは **Features** 列の特徴のみを処理します。 次のコードを使用してパイプラインに、この変換を追加します。
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
@@ -288,13 +291,7 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 ### <a name="choose-a-learning-algorithm"></a>学習アルゴリズムを選択する
 
-学習アルゴリズムを追加するには、<xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> オブジェクトを使用します。  `SdcaMultiClassTrainer` が `pipeline` に追加されます。これは、特徴付けされた `Title` と `Description` (`Features`) と `Label` 入力パラメーターを受け入れて、履歴データから学習します。
-
-`BuildAndTrainModel` メソッドに次のコードを追加します。
-
-[!code-csharp[SdcaMultiClassTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SdcaMultiClassTrainer)]
-
-これで学習アルゴリズムが作成できたので、これを `pipeline` に追加します。 元の読み取り可能な状態に戻すために、値にラベルもマップする必要があります。 これらの両アクションは、次のコードを使用して実行します。
+学習アルゴリズムを追加するには、<xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> オブジェクトを返す `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent` ラッパー メソッドを呼び出します。  `SdcaMultiClassTrainer` が `pipeline` に追加されます。これは、特徴付けされた `Title` と `Description` (`Features`) と `Label` 入力パラメーターを受け入れて、履歴データから学習します。 元の読み取り可能な状態に戻すために、値にラベルもマップする必要があります。 これらの両アクションは、次のコードを使用して実行します。
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
@@ -310,6 +307,8 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 [!code-csharp[CreatePredictionEngine1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
+### <a name="predict-with-the-trained-model"></a>トレーニング済みモデルを使用して予測する
+
 GitHub の問題を追加して、`Predict` メソッドでトレーニングされたモデルの予測をテストします。これには `GitHubIssue` のインスタンスを作成します。
 
 [!code-csharp[CreateTestIssue1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
@@ -318,7 +317,7 @@ GitHub の問題を追加して、`Predict` メソッドでトレーニングさ
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
-### <a name="using-the-model-prediction"></a>モデルの使用: 予測
+### <a name="using-the-model-prediction-results"></a>モデルの使用: 予測結果
 
 結果を共有し、それに応じたアクションを実行するために、`GitHubIssue` および対応する `Area` ラベル予測を表示します。  次の <xref:System.Console.WriteLine?displayProperty=nameWithType> コードを使用して、結果の表示を作成します。
 
@@ -356,7 +355,7 @@ public static void Evaluate()
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
-`MulticlassClassificationContext.Evaluate` は、指定されたデータセットを使用してモデルの品質メトリックを計算する <xref:Microsoft.ML.MulticlassClassificationContext.Evaluate%2A> メソッドのラッパーです。 これによって返される <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> オブジェクトには、多クラス分類評価器によって計算されるメトリック全体が含まれます。
+`MulticlassClassificationContext.Evaluate` は、指定されたデータセットを使用してモデルの品質メトリックを計算する <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A> メソッドのラッパーです。 これによって返される <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> オブジェクトには、多クラス分類評価器によって計算されるメトリック全体が含まれます。
 メトリックを表示してモデルの品質を判定するには、最初にメトリックを取得する必要があります。
 特徴を入力し、予測を戻す、機械学習の `_trainedModel` グローバル変数 (変換器) の `Transform` メソッドの使用法に注目してください。 `Evaluate` メソッドに次のコード行を追加します。
 
@@ -409,7 +408,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>保存したモデルを使用してテスト データの結果を予測する
+## <a name="deploy-and-predict-with-a-loaded-model"></a>読み込み済みのモデルを使用して配置および予測する
 
 `Evaluate` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。
 
@@ -478,11 +477,11 @@ The model is saved to C:\Users\johalex\dotnet-samples\samples\machine-learning\t
 > * 問題を把握する
 > * 適切な機械学習アルゴリズムを選択する
 > * データを準備する
-> * 特徴を抽出してデータを変換する
+> * データを変換する
 > * モデルをトレーニングする
-> * 別のデータ セットを使用してモデルを評価する
-> * トレーニング済みモデルを使用してテスト データの結果の 1 つのインスタンスを予測する
-> * 読み込んだモデルを使用してテスト データの結果の 1 つのインスタンスを予測する
+> * モデルを評価する
+> * トレーニング済みモデルを使用して予測する
+> * 読み込み済みのモデルを使用して配置および予測する
 
 さらに詳しく学習するには、次のチュートリアルに進んでください。
 > [!div class="nextstepaction"]

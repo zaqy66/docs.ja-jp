@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530697"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093542"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
@@ -51,7 +51,8 @@ ms.locfileid: "54530697"
       />  
     ```  
   
-4.  依存アセンブリを指定します。 `myComApp` が `myManagedComp` に依存する例を次に示します。  
+4.  依存アセンブリを指定します。 
+  `myComApp` が `myManagedComp` に依存する例を次に示します。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -108,16 +109,17 @@ ms.locfileid: "54530697"
     |属性|説明|必須|  
     |---------------|-----------------|--------------|  
     |`clsid`|アクティブにするクラスを指定する識別子。|はい|  
-    |`description`|ユーザーにコンポーネントを説明する文字列。 既定では文字列は空です。|×|  
+    |`description`|ユーザーにコンポーネントを説明する文字列。 既定では文字列は空です。|いいえ|  
     |`name`|マネージド クラスを表す文字列。|はい|  
-    |`progid`|遅延バインディングによるアクティベーションで使用される識別子。|×|  
-    |`threadingModel`|COM スレッド モデル。 "Both" が既定値です。|×|  
-    |`runtimeVersion`|使用する共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 この属性を指定せず、CLR がまだ読み込まれていない場合は、インストールされている最新の CLR (CLR Version 4 よりも前のバージョン) でコンポーネントが読み込まれます。 v1.0.3705、v1.1.4322、または v2.0.50727 を指定すると、インストールされている最新の CLR バージョン (CLR Version 4 よりも前のバージョン。通常は v2.0.50727) に自動的にロールフォワードされます。 別のバージョンの CLR が既に読み込まれていて、指定されたバージョンをインプロセスで並行して (side-by-side で) 読み込むことができる場合は、指定されたバージョンが読み込まれます。それ以外の場合は、読み込まれた CLR が使用されます。 これにより、読み込みエラーが発生する可能性があります。|×|  
-    |`tlbid`|クラスに関する型情報を格納するタイプ ライブラリの識別子。|×|  
+    |`progid`|遅延バインディングによるアクティベーションで使用される識別子。|いいえ|  
+    |`threadingModel`|COM スレッド モデル。 "Both" が既定値です。|いいえ|  
+    |`runtimeVersion`|使用する共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 この属性を指定せず、CLR がまだ読み込まれていない場合は、インストールされている最新の CLR (CLR Version 4 よりも前のバージョン) でコンポーネントが読み込まれます。 v1.0.3705、v1.1.4322、または v2.0.50727 を指定すると、インストールされている最新の CLR バージョン (CLR Version 4 よりも前のバージョン。通常は v2.0.50727) に自動的にロールフォワードされます。 別のバージョンの CLR が既に読み込まれていて、指定されたバージョンをインプロセスで並行して (side-by-side で) 読み込むことができる場合は、指定されたバージョンが読み込まれます。それ以外の場合は、読み込まれた CLR が使用されます。 これにより、読み込みエラーが発生する可能性があります。|いいえ|  
+    |`tlbid`|クラスに関する型情報を格納するタイプ ライブラリの識別子。|いいえ|  
   
      属性タグはすべて大文字と小文字が区別されます。 OLE/COM オブジェクト ビューアー (Oleview.exe) で、エクスポートされたアセンブリのタイプ ライブラリを表示することによって、CLSID、ProgID、スレッド モデル、およびランタイムのバージョンを取得できます。  
   
-     `testClass1` および `testClass2` という 2 つのクラスを識別するコンポーネント マニフェストを次に示します。  
+     
+  `testClass1` および `testClass2` という 2 つのクラスを識別するコンポーネント マニフェストを次に示します。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -174,6 +176,6 @@ ms.locfileid: "54530697"
   
 ## <a name="see-also"></a>関連項目
 - [登録を必要としない COM 相互運用機能](registration-free-com-interop.md)
-- [登録を必要としない COM 相互運用機能の要件](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
-- [登録を必要としないアクティベーション用の COM コンポーネントの構成](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
-- [.NET ベースのコンポーネントの登録を必要としないアクティベーション: チュートリアル](https://msdn.microsoft.com/library/ms973915.aspx)
+- [登録を必要としない COM 相互運用機能の要件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [登録を必要としないアクティベーション用の COM コンポーネントの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [.NET ベースのコンポーネントの登録を必要としないアクティベーション: チュートリアル](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
