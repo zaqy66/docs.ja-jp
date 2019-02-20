@@ -2,19 +2,19 @@
 title: 企業の購買プロセス
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837189"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442244"
 ---
 # <a name="corporate-purchase-process"></a>企業の購買プロセス
 このサンプルは、Request for Proposals (RFP: 提案依頼書) に基づくごく基本的な購買プロセスを作成する方法を示しています。この購買プロセスでは最良の提案が自動的に選択されます。 このサンプルでは、<xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、および <xref:System.Activities.Statements.ForEach%601> と、プロセスを表すワークフローを作成するカスタム アクティビティが組み合わされています。
 
  このサンプルには、異なる参加者として (元の要求者や特定のベンダーとして) プロセスとやり取りできる [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] クライアント アプリケーションが含まれています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 -   Visual Studio 2012.
 
@@ -108,7 +108,7 @@ ms.locfileid: "48837189"
 |RequestForProposal|Request for Proposals (RFP) は、ベンダーに特定の商品またはサービスについての提案の送信を求める依頼書です。|  
 |VendorProposal|ベンダーによって具象 RFP に送信された提案。|  
 |VendorRepository|Vendor のリポジトリ。 この実装には、Vendor のインスタンスのメモリ内コレクションと、それらのインスタンスを公開するためのメソッドが含まれています。|  
-|RfpRepository|Request for Proposals のリポジトリ。 この実装は、Linq to XML を使用して、スキーマ化された永続化によって生成された Request for Proposal の XML ファイルをクエリします。 このクラスは実装[System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx)します。|  
+|RfpRepository|Request for Proposals のリポジトリ。 この実装は、Linq to XML を使用して、スキーマ化された永続化によって生成された Request for Proposal の XML ファイルをクエリします。 |  
 |IOHelper|このクラスは、I/O 関連のすべての問題を処理します (フォルダー、パスなど)。|  
   
 ### <a name="web-client"></a>Web Client  
@@ -127,7 +127,7 @@ ms.locfileid: "48837189"
 |フォーム|説明|  
 |-|-|  
 |NewRfp|新しい Request for Proposals を作成して送信します。|  
-|ShowProposals|アクティブな Request for Proposals と完了した Request for Proposals をすべて表示します。 **注:**  をクリックする必要があります、**更新**作成または Request for Proposal を変更した後、その画面の変更を表示する UI のボタンをクリックします。|  
+|ShowProposals|アクティブな Request for Proposals と完了した Request for Proposals をすべて表示します。 **注:** をクリックする必要があります、**更新**作成または Request for Proposal を変更した後、その画面の変更を表示する UI のボタンをクリックします。|  
 |SubmitProposal|具象 Request for Proposals 内のベンダーからの提案を取得します。 このウィンドウを使用するのはベンダーだけです。|  
 |ViewRfp|Request for Proposals に関するすべての情報 (受信した提案、日付、金額、およびその他の情報) を表示します。 このウィンドウを使用するのは Request for Proposals の作成者だけです。|  
   
@@ -155,20 +155,20 @@ ms.locfileid: "48837189"
   
 ### <a name="web-client-options"></a>Web Client のオプション  
   
--   **作成する新しい RFP**: 新しい Request for Proposals (RFP) を作成し、Purchase Process ワークフローを開始します。  
+-   **作成する新しい RFP**:新しい Request for Proposals (RFP) を作成し、Purchase Process ワークフローを開始します。  
   
--   **更新**: Active and Finished RFPs のメイン ウィンドウの一覧を更新します。  
+-   **更新**:Active and Finished RFPs のメイン ウィンドウの一覧を更新します。  
   
--   **ビュー**: 既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
+-   **表示**:既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
   
--   View As: さまざまな id を使用して、目的の参加者を選択して RFP が、ユーザーにアクセスできる、**として表示**アクティブな Rfp のグリッドのコンボ ボックス。  
+-   として参照してください。ユーザーが目的の参加者を選択して別の id を使用して RFP にアクセスできる、**として表示**アクティブな Rfp のグリッドのコンボ ボックス。  
   
 ### <a name="winforms-client-options"></a>WinForms Client のオプション  
   
--   **Create RFP**: 新しい Request for Proposals (RFP) を作成し、Purchase Process ワークフローを開始します。  
+-   **Create RFP**:新しい Request for Proposals (RFP) を作成し、Purchase Process ワークフローを開始します。  
   
--   **更新**: Active and Finished RFPs のメイン ウィンドウの一覧を更新します。  
+-   **更新**:Active and Finished RFPs のメイン ウィンドウの一覧を更新します。  
   
--   **View RFP**: 既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
+-   **View RFP**:既存の RFP の内容を表示します。 ベンダーは自身の提案を送信できます (依頼されている場合。依頼されていない場合は RFP が完了していません)。  
   
--   **Connect As**: ユーザーが目的の参加者を選択して別の id を使用して RFP にアクセスできる、**として表示**アクティブな Rfp のグリッドのコンボ ボックス。
+-   **として接続**:ユーザーが目的の参加者を選択して別の id を使用して RFP にアクセスできる、**として表示**アクティブな Rfp のグリッドのコンボ ボックス。

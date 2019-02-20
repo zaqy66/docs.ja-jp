@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 2d7f5bfc1532775d092fbee1ef9cdc3c7ed5efc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56bc14f176f239a0272038494015cea4553e3e6f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496658"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442530"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows フォームのセキュリティに関するその他の考慮事項
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] セキュリティ設定によっては、ローカル コンピューターとは異なり、アプリケーションが部分信頼環境で実行されることがあります。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、ファイル システム、ネットワーク、アンマネージ API などの重要なローカル リソースへのアクセスを他のリソースの場合よりも制限します。 セキュリティ設定により、セキュリティ システムが検証できない Microsoft Win32 API やその他の API を呼び出す機能が影響を受けます。 また、ファイルやデータへのアクセス、印刷など、アプリケーションのその他の処理にも影響があります。 部分信頼環境でのファイルやデータへのアクセスの詳細については、「[Windows フォームにおけるファイルおよびデータへのより安全なアクセス](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)」を参照してください。 部分信頼環境での印刷の詳細については、「[Windows フォームでのより安全な印刷](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)」を参照してください。  
@@ -28,7 +28,7 @@ ms.locfileid: "54496658"
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|クリップボードは制限付きで使用できます。 クリップボードにデータを格納する機能 ([コピー] または [切り取り] のコマンド操作) は制限されません。 テキスト ボックスなど、[貼り付け] を受け入れる固有のコントロールは、クリップボードのデータを受け入れます。しかし、ユーザー コントロールはプログラムでクリップボードからデータを読み取ることができません。|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.NoClipboard>|クリップボードは使用できません。|  
   
- ローカル イントラネット ゾーンでは既定では、<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>アクセスと、インターネット ゾーンを受け取る<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>アクセスします。 つまり、アプリケーションはクリップボードにデータをコピーできますが、プログラムでクリップボードに貼り付けたりクリップボードから読み取ったりはできません。 これらの制限により、完全に信頼されていないプログラムは、他のアプリケーションによってクリップボードにコピーされた内容を読み取ることができません。 アプリケーションがクリップボードへの完全なアクセスを必要とするにもかかわらず、アクセス許可がない場合は、アプリケーションに対するアクセス許可を昇格する必要があります。 アクセス許可の昇格の詳細については、「[一般的なセキュリティ ポリシー管理](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)」を参照してください。  
+ ローカル イントラネット ゾーンでは既定では、<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>アクセスと、インターネット ゾーンを受け取る<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>アクセスします。 つまり、アプリケーションはクリップボードにデータをコピーできますが、プログラムでクリップボードに貼り付けたりクリップボードから読み取ったりはできません。 これらの制限により、完全に信頼されていないプログラムは、他のアプリケーションによってクリップボードにコピーされた内容を読み取ることができません。 アプリケーションがクリップボードへの完全なアクセスを必要とするにもかかわらず、アクセス許可がない場合は、アプリケーションに対するアクセス許可を昇格する必要があります。 アクセス許可の昇格の詳細については、「[一般的なセキュリティ ポリシー管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))」を参照してください。  
   
 ## <a name="window-manipulation"></a>ウィンドウ操作  
  <xref:System.Security.Permissions.UIPermission>クラスもウィンドウ操作と、他の UI 関連のアクションと関連付けられているを実行するアクセス許可を制御<xref:System.Security.Permissions.UIPermissionWindow>列挙値は、アクセスのレベルを示します。 使用されるアクセス許可レベルを次の表に示します。  
@@ -86,7 +86,7 @@ ms.locfileid: "54496658"
   
  アプリケーションを要求する必要があるかどうか、アプリケーションにはアンマネージ コードを呼び出すアクセス許可はありません、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>権限、または別の機能を実装する方法を検討する必要があります。 多くの場合、Windows フォームが Win32 API を管理対象の代替手段を提供します。関数。 代わりの手段がなく、アプリケーションがアンマネージ コードにアクセスする必要がある場合は、アプリケーションに対するアクセス許可を昇格する必要があります。  
   
- アンマネージ コードを呼び出すアクセス許可を与えられたアプリケーションは、ほとんどの処理を実行できます。 そのため、アンマネージ コードを呼び出すアクセス許可は、信頼されたソースからのアプリケーションに対してだけ与えるようにしてください。 また、アプリケーションによっては、アンマネージ コードの呼び出しを生成するアプリケーション機能の一部をオプションにするか、完全に信頼された環境でのみ有効にすることもできます。 危険なアクセス許可の詳細については、「[危険なアクセス許可とポリシー管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)」を参照してください。 アクセス許可の昇格の詳細については、次を参照してください[NIB:。全般的なセキュリティ ポリシー管理](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)します。  
+ アンマネージ コードを呼び出すアクセス許可を与えられたアプリケーションは、ほとんどの処理を実行できます。 そのため、アンマネージ コードを呼び出すアクセス許可は、信頼されたソースからのアプリケーションに対してだけ与えるようにしてください。 また、アプリケーションによっては、アンマネージ コードの呼び出しを生成するアプリケーション機能の一部をオプションにするか、完全に信頼された環境でのみ有効にすることもできます。 危険なアクセス許可の詳細については、「[危険なアクセス許可とポリシー管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)」を参照してください。 アクセス許可の昇格の詳細については、「[一般的なセキュリティ ポリシー管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [Windows フォームにおけるファイルおよびデータへのより安全なアクセス](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)

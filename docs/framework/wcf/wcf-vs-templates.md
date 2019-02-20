@@ -2,12 +2,12 @@
 title: WCF Visual Studio テンプレート
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624939"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443238"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio テンプレート
 Windows Communication Foundation (WCF) の Visual Studio テンプレートは、定義済みのプロジェクトと項目テンプレートを WCF サービスや周辺アプリケーションをすばやく作成する Visual Studio で使用することができます。  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
  既存のプロジェクトが Web プロジェクトの場合は、サービス ホスト ファイル (service1.svc) も作成されます。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF サービス プロジェクト/項目テンプレート  
- これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、次を参照してください。 [Windows Workflow Foundation チュートリアル](https://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)します。 ワークフロー プロジェクトの作成の詳細については、次を参照してください。[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)します。  
+ これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、次を参照してください。[方法。ワークフロー作成](../windows-workflow-foundation/how-to-create-a-workflow.md)です。 ワークフロー プロジェクトの作成の詳細については、次を参照してください。[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)します。  
   
  XOML 型のワークフローが使用される代わりにコード ベースのときに、visual Studio デザイナーの応答性が向上します。 XOML ワークフローは、既定で作成されるワークフロー型です。  
   

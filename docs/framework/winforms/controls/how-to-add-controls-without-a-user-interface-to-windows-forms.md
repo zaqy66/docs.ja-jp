@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 442a6175b1b378cf3489314e190c58312a327c01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26685ff0ff67ac3b7f1b9837cc71cfc0e683b292
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738590"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442114"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>方法: Windows フォームにユーザー インターフェイスを持たないコントロールを追加します。
 非ビジュアル コントロール (またはコンポーネント) は、アプリケーションに機能を提供します。 他のコントロールとは異なり、コンポーネントは、ユーザーにユーザー インターフェイスを提供しないし、ので、Windows フォーム デザイナー画面に表示する必要はありません。 コンポーネントはフォームに追加するときに、Windows フォーム デザイナーはすべてのコンポーネントが表示されるフォームの下部にあるサイズ変更可能なトレイを表示します。 コントロールがコンポーネント トレイに追加されたら、コンポーネントを選択し、フォーム上の他のコントロールと同様に、そのプロパティを設定することができます。  
@@ -29,13 +29,13 @@ ms.locfileid: "54738590"
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Windows フォームにコンポーネントを追加するには  
   
-1.  フォームを開きます。 詳細については、次を参照してください。[方法。デザイナーで Windows フォームを表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
+1.  フォームを開きます。 詳細については、「[方法: デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
   
 2.  **ツールボックス**コンポーネントをクリックし、フォームにドラッグします。  
   
      コンポーネントがコンポーネント トレイに表示されます。  
   
- さらに、コンポーネントは、実行時にフォームに追加できます。 これは、コンポーネントにはユーザー インターフェイスを持つコントロールとは異なり、ビジュアルの式があるないため、特に一般的なシナリオです。 次の例で、<xref:System.Windows.Forms.Timer>実行時にコンポーネントを追加します。 (Visual Studio には、別のタイマーの数値が含まれています。 この場合は、Windows フォームを使用して、<xref:System.Windows.Forms.Timer>コンポーネント。 Visual Studio の別のタイマーの詳細については、次を参照してください[サーバー ベースのタイマーの概要](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)。  
+ さらに、コンポーネントは、実行時にフォームに追加できます。 これは、コンポーネントにはユーザー インターフェイスを持つコントロールとは異なり、ビジュアルの式があるないため、特に一般的なシナリオです。 次の例で、<xref:System.Windows.Forms.Timer>実行時にコンポーネントを追加します。 (Visual Studio には、別のタイマーの数値が含まれています。 この場合は、Windows フォームを使用して、<xref:System.Windows.Forms.Timer>コンポーネント。 Visual Studio の別のタイマーの詳細については、次を参照してください[サーバー ベースのタイマーの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。)。  
   
 > [!CAUTION]
 >  コンポーネントには、効果的に機能するコンポーネントに設定する必要がありますコントロールに固有のプロパティが多くの場合があります。 場合、<xref:System.Windows.Forms.Timer>設定する次のコンポーネント、`Interval`プロパティ。 プロジェクトにあるプロパティを設定する、そのコンポーネントに必要なコンポーネントを追加するときにしてください。  
@@ -81,9 +81,9 @@ ms.locfileid: "54738590"
   
 ## <a name="see-also"></a>関連項目
 - [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
-- [方法: Windows フォームにコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [方法: Windows フォームに ActiveX コントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [方法: Windows フォーム間でコントロールをコピーします。](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)
+- [Windows フォームにコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Windows フォームに ActiveX コントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Windows フォーム間でコントロールをコピーします。](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)
 - [Windows フォームへのコントロールの追加](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 2979f8e50b7fc0d0fab419a89e708517fd271be8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199202"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441759"
 ---
 # <a name="workflow-security"></a>ワークフローのセキュリティ
 Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communication Foundation (WCF) など、いくつかのテクノロジと統合されます。 これらのテクノロジと相互作用するうえで、不適切に実行された場合にワークフローでセキュリティの問題が発生することがあります。
@@ -30,7 +30,8 @@ Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communic
 
 -   子アクティビティ、場所、ブックマーク、ホストの拡張機能、またはスコープを多数使用する場合、またはペイロードが非常に大きいブックマークを使用する場合、メモリが不足したり、永続化の実行中に必要以上のディスク容量が割り当てられる可能性があります。 オブジェクト レベルおよびデータベース レベルのセキュリティを使用すると、このような状態を緩和できます。
 
--   <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用する場合、インスタンス ストアをセキュリティで保護する必要があります。 詳細については、次を参照してください。 [SQL Server のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkId=164972)します。
+-   
+  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用する場合、インスタンス ストアをセキュリティで保護する必要があります。 詳細については、次を参照してください。 [SQL Server のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkId=164972)します。
 
 -   インスタンス ストアの機密情報は暗号化する必要があります。 詳細については、次を参照してください。 [SQL セキュリティ暗号化](https://go.microsoft.com/fwlink/?LinkId=164976)します。
 
@@ -40,12 +41,13 @@ Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communic
 
 -   ワークフローで使用される Windows Communication Foundation (WCF) エンドポイントをセキュリティで保護する必要があります。 詳細については、次を参照してください。 [WCF セキュリティの概要](https://go.microsoft.com/fwlink/?LinkID=164975)します。
 
--   <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、ホスト レベルの認証を実装できます。 参照してください[How To: サービスのカスタム承認マネージャーを作成する](https://go.microsoft.com/fwlink/?LinkId=192228)詳細についてはします。
+-   
+  <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、ホスト レベルの認証を実装できます。 参照してください[方法。サービスのカスタム承認マネージャーを作成する](https://go.microsoft.com/fwlink/?LinkId=192228)詳細についてはします。
 
 -   受信メッセージの ServiceSecurityContext は、OperationContext へのアクセスによって、ワーク フロー内からも使用できます。
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
- Microsoft WF Security Pack CTP 1 は、一連のアクティビティとその実装に基づく最初の community technology preview (CTP) リリース[Windows Workflow Foundation](https://msdn.microsoft.com/netframework/aa663328.aspx)で[.NET Framework 4](https://msdn.microsoft.com/netframework/default.aspx) (WF4) で、 [Windows Identity Foundation (WIF)](https://msdn.microsoft.com/security/aa570351.aspx)します。  Microsoft WF Security Pack CTP 1 には、アクティビティおよび、ワークフローを使用してさまざまなセキュリティ関連のシナリオを簡単に有効にする方法を示すそのデザイナーの両方が含まれています。これらには以下のものが含まれます。
+ Microsoft WF Security Pack CTP 1 は、一連のアクティビティとその実装に基づく最初の community technology preview (CTP) リリース[Windows Workflow Foundation](index.md)で[.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF4) で、 [Windows Identity Foundation (WIF)](../security/index.md)します。  Microsoft WF Security Pack CTP 1 には、アクティビティおよび、ワークフローを使用してさまざまなセキュリティ関連のシナリオを簡単に有効にする方法を示すそのデザイナーの両方が含まれています。これらには以下のものが含まれます。
 
 1.  ワークフローのクライアント ID の偽装
 
@@ -55,4 +57,4 @@ Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communic
 
 4.  WS-Trust ActAs を使用して、クライアント セキュリティ トークンをバックエンド サービス (クレーム ベースの委任) にフロー
 
-詳細と、WF Security Pack CTP をダウンロードするを参照してください: [WF Security Pack CTP](https://wf.codeplex.com/releases/view/48114)
+詳細と、WF Security Pack CTP をダウンロードするを参照してください。[WF Security Pack CTP](https://wf.codeplex.com/releases/view/48114)

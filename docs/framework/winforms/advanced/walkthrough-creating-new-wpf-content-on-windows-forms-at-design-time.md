@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500500"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441464"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームで新しい WPF コンテンツを作成します。
 
@@ -61,7 +61,7 @@ ms.locfileid: "54500500"
 
     - ファイル UserControl1.xaml が [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] で開きます。
 
-2. デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :選択し、デザイン サーフェイス上の要素の移動](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)します。
+2. デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :選択し、デザイン サーフェイス上の要素の移動](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))します。
 
 3. **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティ**200**します。
 
@@ -84,7 +84,8 @@ ms.locfileid: "54500500"
 
 2. **ツールボックス**、というラベルのタブを見つける**WPFUserControlLibrary WPF ユーザー コントロール**します。
 
-3. `UserControl1` のインスタンスをフォームにドラッグします。
+3. 
+  `UserControl1` のインスタンスをフォームにドラッグします。
 
     - WPF コントロールをホストするためのフォームの上に、<xref:System.Windows.Forms.Integration.ElementHost> コントロールが自動的に作成されます。
 
@@ -92,7 +93,8 @@ ms.locfileid: "54500500"
 
     - WPF アセンブリへの参照がプロジェクトに追加されます。
 
-    - `elementHost1` コントロールに、使用可能なホスティング オプションを示すスマート タグ パネルがあります。
+    - 
+  `elementHost1` コントロールに、使用可能なホスティング オプションを示すスマート タグ パネルがあります。
 
 4. **ElementHost タスク**スマート タグ パネルで、**親コンテナーにドッキング**します。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: a920a81cbcb3ef097cf5ff72233c74b612c2bc64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 964597f2e47cee8f61111a684375e73e8a13107d
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645562"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442348"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows フォームおよびアンマネージ アプリケーションの概要
 Windows フォーム アプリケーションとコントロールは、いくつかの注意事項がありますが、アンマネージ アプリケーションと相互運用できます。 次のセクションでは、Windows フォーム アプリケーションとコントロールがサポートするシナリオと構成、および、サポートしないシナリオと構成について説明します。  
@@ -58,11 +58,11 @@ Windows フォーム アプリケーションとコントロールは、いく�
 ## <a name="see-also"></a>関連項目
 - [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
-- [.NET Framework アプリケーションにおける COM 相互運用性](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [COM 相互運用性サンプル](https://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)
+- [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [COM 相互運用性サンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
 - [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [COM への .NET Framework コンポーネントの公開](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [COM 用のアセンブリのパッケージ化](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)
 - [COM へのアセンブリの登録](../../../../docs/framework/interop/registering-assemblies-with-com.md)
-- [方法: ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)
-- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)
+- [独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

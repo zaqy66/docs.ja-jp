@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533138"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442725"
 ---
 # <a name="using-sessions"></a>セッションの使用
 Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションとは異なる場合、セッション オブジェクトで使用できる[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション、サポートされる動作、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  
@@ -137,7 +137,7 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
  コントラクト内の <xref:System.ServiceModel.SessionMode> 列挙と、チャネルと特定のサービス オブジェクト間の関連付けを制御する <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティの間には相互作用があります。 詳細については、次を参照してください。[セッション、インスタンス化、および同時実行](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)します。  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext オブジェクトの共有  
- ユーザーが自ら関連付けを行うことにより、どの <xref:System.ServiceModel.InstanceContext> オブジェクトに、どのセッション ベースのチャネルまたは呼び出しを関連付けるかを制御することもできます。 コード例全体については、「 [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)」を参照してください。  
+ ユーザーが自ら関連付けを行うことにより、どの <xref:System.ServiceModel.InstanceContext> オブジェクトに、どのセッション ベースのチャネルまたは呼び出しを関連付けるかを制御することもできます。 
   
 ## <a name="sessions-and-streaming"></a>セッションとストリーミング  
  大量のデータを転送すると、WCF では、ストリーミング転送モードはバッファリングと完全にメモリ内のメッセージの処理の既定の動作を可能な代替手段にします。 セッション ベースのバインディングでストリーミングを呼び出すと、予期しない動作を引き起こすことがあります。 すべてのストリーミング呼び出しは単一のチャネル (データグラム チャネル) を通じて行われますが、このチャネルは使用されるバインディングがセッションを使用するように構成されている場合であっても、セッションをサポートしません。 セッション ベースのバインディングによって複数のクライアントが同一のサービス オブジェクトに対してストリーミング呼び出しを行う場合、このサービス オブジェクトのコンカレンシー モードが単一に設定され、インスタンス コンテキスト モードが `PerSession` に設定されていると、すべての呼び出しがこのデータグラム チャネルを通過する必要があるため、同時に処理される呼び出しは 1 つに限られることになります。 そのため、1 つ以上のクライアントがタイムアウトとなる可能性があります。サービス オブジェクトの `InstanceContextMode` を `PerCall` に設定するか、またはコンカレンシー モードを複数に設定することで、この問題を回避できます。  

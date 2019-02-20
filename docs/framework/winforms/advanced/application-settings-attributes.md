@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668952"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442556"
 ---
 # <a name="application-settings-attributes"></a>アプリケーション設定の属性
 アプリケーション設定アーキテクチャでは、アプリケーション設定ラッパー クラスまたはその個々 のプロパティに適用できる多くの属性を提供します。 これらの属性は、カスタム ラッパーの規定のニーズに合わせて機能を調整するには、実行時に、アプリケーション設定のインフラストラクチャ、多くの場合、具体的には、設定プロバイダーによって調べられます。  
@@ -41,4 +41,4 @@ ms.locfileid: "54668952"
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [アプリケーション設定アーキテクチャ](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
-- [方法: アプリケーション設定を作成します。](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+- [アプリケーション設定を作成します。](how-to-create-application-settings.md)

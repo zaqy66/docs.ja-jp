@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505693"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442296"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF トラブルシューティング クイックスタート
 このトピックでは、WCF クライアントと WCF サービスの開発時に生じるさまざまな既知の問題の一覧を示します。 発生している問題がこの一覧にない場合は、サービスに対してトレースを構成することをお勧めします。 これにより、トレース ファイル ビューアーで表示し、サービス内で発生することがある例外に関する詳細情報を取得できるトレース ファイルが生成されます。 トレースの構成の詳細についてを参照してください。[トレースの構成](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)します。 トレース ファイル ビューアーの詳細についてを参照してください。[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   場合によっては、アプリケーションに対してポートを開く必要があります。 詳細については、SDK サンプルから「 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 」を参照してください。  
   
--   考えられる他の問題については、サンプル トピックの「 [Running the Samples in a Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)」を参照してください。  
+-   その他の考えられる問題は、サンプル トピックの「を参照してください。 [Windows Communication Foundation サンプルの実行](./samples/running-the-samples.md)します。  
   
 -   クライアントが Windows 資格情報を使用し、例外が <xref:System.ServiceModel.Security.SecurityNegotiationException>の場合、次のように Kerberos を設定します。  
   

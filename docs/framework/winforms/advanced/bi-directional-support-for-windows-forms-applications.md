@@ -9,23 +9,24 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676849"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442972"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows フォーム アプリケーションの双方向サポート
 Visual Studio を使用して、アラビア語やヘブライ語などの双方向 (右から左の) 言語をサポートする Windows ベースのアプリケーションを作成することができます。 これには、標準的なフォーム、ダイアログ ボックス、MDI フォームや、これらのフォームで操作できるすべてのコントロール、まり、<xref:System.Windows.Forms.Control> 名前空間のすべてのオブジェクトが含まれます。  
   
 ## <a name="culture-support"></a>カルチャのサポート  
- カルチャと UI カルチャの設定は、アプリケーションが日付、時刻、通貨、およびその他の情報をどのように操作するかを決定します。 双方向言語のカルチャおよび UI カルチャのサポートは、その他の言語と同じです。   「[グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\))」または「[グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))」も参照してください。  
+ カルチャと UI カルチャの設定は、アプリケーションが日付、時刻、通貨、およびその他の情報をどのように操作するかを決定します。 双方向言語のカルチャおよび UI カルチャのサポートは、その他の言語と同じです。 詳細については、次を参照してください。[グローバルの Windows フォームおよび web フォームにおけるカルチャ固有のクラス](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms)します。  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft プロパティと RightToLeftLayout プロパティ  
- フォームの派生元となる基底 <xref:System.Windows.Forms.Control> クラスには、フォームとコントロールの読み取り順序を変更するよう設定できる <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティが含まれます。 フォームの <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを設定する場合、既定ではフォームのコントロールがこの設定を継承します。 ただし、ほとんどのコントロールで <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを個別に設定することもできます。 参照してください[方法。グローバリゼーション用の Windows フォームで右から左のテキストを表示](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\))します。  
+ フォームの派生元となる基底 <xref:System.Windows.Forms.Control> クラスには、フォームとコントロールの読み取り順序を変更するよう設定できる <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティが含まれます。 フォームの <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを設定する場合、既定ではフォームのコントロールがこの設定を継承します。 ただし、ほとんどのコントロールで <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを個別に設定することもできます。 参照してください[方法。グローバリゼーション用の Windows フォームで右から左のテキストを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))します。  
   
- <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティの影響は、コントロールごとに異なります。 一部のコントロールで、<xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.TreeView>、および <xref:System.Windows.Forms.ToolTip> の各コントロールの場合のように、プロパティでは読み取り順序のみを設定します。 その他のコントロールでは、<xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティが読み取り順序とレイアウトの両方を変更します。 これには、<xref:System.Windows.Forms.RadioButton>、<xref:System.Windows.Forms.ComboBox>、および <xref:System.Windows.Forms.CheckBox> の各コントロールが含まれます。 その他のコントロールには、右から左のレイアウトのミラーに適用される <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> プロパティが必要です。 次の表は、<xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティと <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> プロパティが個々 の Windows フォーム コントロールに影響する方法の詳細を示します。  
+ 
+  <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティの影響は、コントロールごとに異なります。 一部のコントロールで、<xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.TreeView>、および <xref:System.Windows.Forms.ToolTip> の各コントロールの場合のように、プロパティでは読み取り順序のみを設定します。 その他のコントロールでは、<xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティが読み取り順序とレイアウトの両方を変更します。 これには、<xref:System.Windows.Forms.RadioButton>、<xref:System.Windows.Forms.ComboBox>、および <xref:System.Windows.Forms.CheckBox> の各コントロールが含まれます。 その他のコントロールには、右から左のレイアウトのミラーに適用される <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> プロパティが必要です。 次の表は、<xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティと <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> プロパティが個々 の Windows フォーム コントロールに影響する方法の詳細を示します。  
   
 |コントロールとコンポーネント|RightToLeft プロパティの効果|RightToLeftLayout プロパティの効果|ミラー化が必要か|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
@@ -119,5 +120,5 @@ Visual Studio を使用して、アラビア語やヘブライ語などの双方
   
 ## <a name="see-also"></a>関連項目
 
-- [ASP.NET Web アプリケーションに対する双方向サポート](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [ASP.NET Web アプリケーションに対する双方向サポート](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))
 - [Windows フォーム アプリケーションのグローバル化](globalizing-windows-forms.md)

@@ -2,12 +2,12 @@
 title: サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510599"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442894"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) サービス トレース ビューアー ツールを使用して、WCF によって生成される診断トレースを分析できます。 サービス トレース ビューアーは、簡単にマージし、表示、および、診断、修復、および WCF サービスの問題を確認できるように、ログにトレース メッセージのフィルターを適用する方法を提供します。  
@@ -49,7 +49,9 @@ Windows Communication Foundation (WCF) サービス トレース ビューアー
 |詳細|-デバッグ レベルのユーザー コードの両方のトレースとサービスを提供します。 このレベルは次のような場合に設定します。<br />-不明なエラーが発生したときにコード内のどのメソッドが呼び出されました。<br />-不正なエンドポイントが構成されてあり、サービスは、予約ストアのエントリがロックされているために開始できませんでした。|  
 |ActivityTracing|処理アクティビティとコンポーネント間のフロー イベント。<br /><br /> このレベルを使用すると、管理者と開発者は同じアプリケーション ドメイン内のアプリケーションの相関関係を示すことができます。<br /><br /> -アクティビティ境界のトレース: 開始/停止します。<br />-転送のトレース。|  
   
- `add` を使用して、使用するトレース リスナーの名前と種類を指定できます。 この例の構成では、リスナーに `sdt` という名前を付け、使用する種類として標準の .NET Framework トレース リスナー (`System.Diagnostics.XmlWriterTraceListener`) を追加しています。 `initializeData` を使用して、そのリスナーのログ ファイルの名前を設定します。 さらに、単純なファイル名の代わりに完全修飾パスを使用できます。  
+ 
+  `add` を使用して、使用するトレース リスナーの名前と種類を指定できます。 この例の構成では、リスナーに `sdt` という名前を付け、使用する種類として標準の .NET Framework トレース リスナー (`System.Diagnostics.XmlWriterTraceListener`) を追加しています。 
+  `initializeData` を使用して、そのリスナーのログ ファイルの名前を設定します。 さらに、単純なファイル名の代わりに完全修飾パスを使用できます。  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>サービス トレース ビューアー ツールの使用  
   
@@ -186,7 +188,7 @@ Windows Communication Foundation (WCF) サービス トレース ビューアー
 ###### <a name="options"></a>オプション  
  2 つのオプションを選択することができます、**オプション**グラフ ビューでのメニュー。  
   
--   [アクティビティの境界トレースの表示] は、オフにすると、グラフでアクティビティ境界トレースが無視されます。  
+-   [Show Activity Boundary Traces] は、オフにすると、グラフでアクティビティ境界トレースが無視されます。  
   
 -   [Show Non-message Verbose Traces] は、オフにすると、メッセージ トレース以外の Verbose レベルのトレースが無視されます。 ほとんどの場合、詳細レベルのトレースは分析には重要ではありません。 このオプションは、詳細レベルのトレースを分析しないで、重要なトレースだけに絞る場合に役立ちます。  
   
@@ -452,4 +454,4 @@ Windows Communication Foundation (WCF) サービス トレース ビューアー
 ## <a name="see-also"></a>関連項目
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [トレースの構成](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [アクティビティ トレースと伝達のエンド ツー エンド トレースの関連付け](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+- [エンドツーエンドのトレース](./diagnostics/tracing/end-to-end-tracing.md)

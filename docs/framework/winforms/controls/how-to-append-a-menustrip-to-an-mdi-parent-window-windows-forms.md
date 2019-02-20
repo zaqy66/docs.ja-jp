@@ -1,5 +1,5 @@
 ---
-title: '方法 : MenuStrip を MDI 親ウィンドウに追加する (Windows フォーム)'
+title: '方法: MenuStrip を MDI 親ウィンドウ (Windows フォーム) に追加します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c39b80c06cae91c43c7a79390cef71ae781489e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500639"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442748"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>方法 : MenuStrip を MDI 親ウィンドウに追加する (Windows フォーム)
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>方法: MenuStrip を MDI 親ウィンドウ (Windows フォーム) に追加します。
 アプリケーションの中には、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウの種類が MDI 親ウィンドウと異なるものがあります。 たとえば、MDI 親がスプレッドシートで、MDI 子がグラフの場合があります。 そのような場合は、異なる種類の MDI 子ウィンドウがアクティブになったときに、MDI 子メニューの内容で MDI 親メニューの内容を更新する必要があります。  
   
  次の手順では、<xref:System.Windows.Forms.Form.IsMdiContainer%2A>、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>、<xref:System.Windows.Forms.MergeAction>、および <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> の各プロパティを使用して MDI 子メニューを MDI 親メニューに追加します MDI 子ウィンドウを閉じると、追加したメニューが MDI 親から削除されます。  
   
- 参照してください[マルチ ドキュメント インターフェイス (MDI) アプリケーション](https://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\))します。  
+ 参照してください[マルチ ドキュメント インターフェイス (MDI) アプリケーション](../advanced/multiple-document-interface-mdi-applications.md)します。  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>メニュー項目を MDI 親に追加するには  
   
@@ -68,7 +68,9 @@ ms.locfileid: "43500639"
     }  
     ```  
   
-12. `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> に次のコード例のようなコードを配置し、イベント ハンドラーを登録します。  
+12. 
+  `&Open`
+  <xref:System.Windows.Forms.ToolStripMenuItem> に次のコード例のようなコードを配置し、イベント ハンドラーを登録します。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  

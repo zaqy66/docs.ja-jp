@@ -4,12 +4,12 @@ description: Docker アプリケーションの開発の「内部ループ」ワ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219089"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442322"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -120,7 +120,7 @@ DockerFile では、(ポート 80) などの実行時に使用する TCP ポー�
 
 Docker は、アプリを実行する方法を認識できるように、DockerFile を使用している言語/フレームワークに応じてで追加できる構成の他の行があります。 たとえば、必要があるのでは、ENTRYPOINT 行\["dotnet"、"MyCustomMicroservice.dll"\]をビルドして、サービスの実行方法によっては、複数のバリアントを設定できますが、.NET Core アプリを実行します。 SDK と dotnet CLI をビルドして、.NET アプリの実行を使用している場合は、若干異なるがなります。 一番下の行は、ENTRYPOINT 行と行が追加されるアプリケーション用に選択した言語とプラットフォームによって異なります。
 
-**詳細については** .NET Core アプリケーション用の Docker イメージを構築する方法の詳細についてを参照してください<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>します。
+**詳細については** .NET Core アプリケーション用の Docker イメージを構築する方法の詳細についてを参照してください[ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)します。
 
 詳細については、独自のイメージを構築するには[ https://docs.docker.com/engine/\ チュートリアル/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)します。
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: ff01c21481e2265a82cb9788beb8abd7b213af63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d74e94aed00d480459aec3c63d961c82af42ef1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709222"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443005"
 ---
 # <a name="specifying-an-endpoint-address"></a>エンドポイント アドレスの指定
 Windows Communication Foundation (WCF) サービスとすべての通信は、そのエンドポイントを介して行われます。 各 <xref:System.ServiceModel.Description.ServiceEndpoint> は、<xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>、および <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> で構成されます。 コントラクトでは、使用できる操作を指定します。 バインディングでは、サービスとの通信方法を指定し、アドレスでは、サービスの場所を指定します。 各エンドポイントには、一意のアドレスを設定する必要があります。 エンドポイント アドレスは、<xref:System.ServiceModel.EndpointAddress> クラスによって表します。このクラスは、サービスのアドレスを表す URI (Uniform Resource Identifier)、サービスのセキュリティ ID を表す <xref:System.ServiceModel.EndpointAddress.Identity%2A>、およびオプションの <xref:System.ServiceModel.EndpointAddress.Headers%2A> のコレクションで構成されます。 オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 たとえば、ヘッダーを使用して、受信メッセージの処理方法や、エンドポイントからの応答メッセージの送信先を指定できるほか、複数のサービス インスタンスが使用できる場合に、特定ユーザーからの受信メッセージの処理に使用するインスタンスを指定できます。  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) サービスとすべての通信は、�
  IIS でホストする場合、ユーザーは <xref:System.ServiceModel.ServiceHost> インスタンスを管理できません。 IIS でホストしているサービスでは、サービスの .svc ファイルで指定されているアドレスが常にベース アドレスになります。 そのため、IIS でホストされるサービスのエンドポイントでは、相対エンドポイント アドレスを使用する必要があります。 完全修飾されたエンドポイント アドレスを指定すると、サービスの展開時にエラーとなる可能性があります。 詳細については、次を参照してください。[インターネット WCF サービスの展開](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)します。  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>構成によるエンドポイント アドレスの定義  
- 構成ファイルでエンドポイントを定義するには、使用、 [\<エンドポイント >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素。  
+ 構成ファイルでエンドポイントを定義するには、使用、 [\<エンドポイント >](../configure-apps/file-schema/wcf/endpoint-element.md)要素。  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   
@@ -55,12 +55,14 @@ Windows Communication Foundation (WCF) サービスとすべての通信は、�
  [!code-vb[OperationContextScope#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationcontextscope/vb/client.vb#4)]  
   
 ## <a name="endpoint-address-in-metadata"></a>メタデータ内のエンドポイント アドレス  
- Web サービス記述言語 (WSDL) では、エンドポイント アドレスは、対応するエンドポイントの `EndpointReference` 要素内で WS-Addressing の `wsdl:port` (EPR) 要素として表されます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 `wsdl:port` 内にある EPR では、次の例に示すように `soap:Address` を置き換えるので注意してください。  
+ Web サービス記述言語 (WSDL) では、エンドポイント アドレスは、対応するエンドポイントの `EndpointReference` 要素内で WS-Addressing の `wsdl:port` (EPR) 要素として表されます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 
+  `wsdl:port` 内にある EPR では、次の例に示すように `soap:Address` を置き換えるので注意してください。  
   
   
   
 ## <a name="defining-endpoint-addresses-in-code"></a>コードによるエンドポイント アドレスの定義  
- エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 エンドポイント アドレスに指定する URI は、完全修飾パスまたはサービスのベース アドレスを基準にしたパスです。 <xref:System.ServiceModel.EndpointAddress> クラスのインスタンスを作成し、そのインスタンスを、サービスをホストする <xref:System.ServiceModel.ServiceHost> インスタンスに追加する方法を次のコードに示します。  
+ エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 エンドポイント アドレスに指定する URI は、完全修飾パスまたはサービスのベース アドレスを基準にしたパスです。 
+  <xref:System.ServiceModel.EndpointAddress> クラスのインスタンスを作成し、そのインスタンスを、サービスをホストする <xref:System.ServiceModel.ServiceHost> インスタンスに追加する方法を次のコードに示します。  
   
  次の例は、コードで完全なエンドポイント アドレスを指定する方法を示しています。  
   
@@ -71,7 +73,8 @@ Windows Communication Foundation (WCF) サービスとすべての通信は、�
  [!code-csharp[S_UEHelloWorld#3](../../../samples/snippets/csharp/VS_Snippets_CFX/s_uehelloworld/cs/snippet.cs#3)]  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Description.ServiceDescription> の <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> メソッドの後で、サービス アプリケーションの <xref:System.ServiceModel.ServiceHostBase> の各プロパティを変更しないでください。 このメソッドの後で変更すると、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> および `AddServiceEndpoint` の <xref:System.ServiceModel.ServiceHostBase> プロパティや <xref:System.ServiceModel.ServiceHost> メソッドなどの一部のメンバーは例外をスローします。 変更を許可するメンバーもありますが、結果は未定義の状態になります。  
+>  
+  <xref:System.ServiceModel.Description.ServiceDescription> の <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> メソッドの後で、サービス アプリケーションの <xref:System.ServiceModel.ServiceHostBase> の各プロパティを変更しないでください。 このメソッドの後で変更すると、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> および `AddServiceEndpoint` の <xref:System.ServiceModel.ServiceHostBase> プロパティや <xref:System.ServiceModel.ServiceHost> メソッドなどの一部のメンバーは例外をスローします。 変更を許可するメンバーもありますが、結果は未定義の状態になります。  
 >   
 >  同様に、クライアントで、<xref:System.ServiceModel.Description.ServiceEndpoint> の <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> 呼び出しの後で、<xref:System.ServiceModel.ChannelFactory> 値を変更しないでください。 この呼び出しの後で変更すると、<xref:System.ServiceModel.ChannelFactory.Credentials%2A> プロパティは例外をスローします。 その他のクライアント記述値は、エラーを発生させずに変更できますが、結果は未定義の状態になります。  
 >   

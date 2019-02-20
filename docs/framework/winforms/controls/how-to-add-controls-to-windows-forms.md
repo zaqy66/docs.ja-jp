@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611359"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443173"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>方法: Windows フォームにコントロールを追加します。
 ほとんどのフォームは、ユーザー インターフェイス (UI) を定義するフォームのサーフェイスにコントロールを追加して設計されています。 A*コントロール*は情報を表示するか、ユーザー入力をそのまま使用するためのフォーム上のコンポーネントです。 コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)します。  
@@ -24,7 +24,7 @@ ms.locfileid: "54611359"
   
 ### <a name="to-draw-a-control-on-a-form"></a>フォームのコントロールを描画するには  
   
-1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
+1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
   
 2.  **ツールボックス**フォームに追加するコントロールをクリックします。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54611359"
   
 ### <a name="to-drag-a-control-to-a-form"></a>コントロールをフォームにドラッグするには  
   
-1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)します。  
+1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
   
 2.  **ツールボックス**フォームにドラッグしてコントロールをクリックします。  
   
@@ -92,6 +92,6 @@ ms.locfileid: "54611359"
 ## <a name="see-also"></a>関連項目
 - [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
 - [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [方法: Windows フォーム上のコントロールのサイズを変更します。](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
-- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows フォーム上のコントロールのサイズを変更します。](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
+- [によって表示されるテキストを設定、Windows フォーム コントロール](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

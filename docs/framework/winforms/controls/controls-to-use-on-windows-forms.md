@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 18c3cf638934551ba40306d98b3bf28dfdd03463
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: bd8dd1e7a01378ce3eb278993321fd5063715e7c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041149"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442868"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows フォームで使用するコントロール
 Windows フォームで使うことができるコントロールとコンポーネントのアルファベット順の一覧を次に示します。 このセクションで説明する Windows フォーム コントロールに加えて、ActiveX コントロールとカスタム コントロールを Windows フォームに追加できます。 必要なコントロールがここで見つからない場合は、独自に作成することもできます。 詳しくは、「[デザイン時の Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)」をご覧ください。 必要なコントロールの選択について詳しくは、「[Windows フォーム コントロールの機能別一覧](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)」をご覧ください。  
@@ -171,10 +171,12 @@ Windows フォームで使うことができるコントロールとコンポー
  ドッキングされたコントロールのサイズを変更できます ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 1.x)。  
   
  [StatusBar コントロール](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
- フォーカスを持つコントロールに関するステータス情報を表示します。 <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
+ フォーカスを持つコントロールに関するステータス情報を表示します。 
+  <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
   
  [StatusStrip コントロール](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
- Windows ステータス バー コントロールを表します。 <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
+ Windows ステータス バー コントロールを表します。 
+  <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
   
  [TabControl コントロール](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
  画像や他のコントロールを含むことができる複数のタブを表示します。  
@@ -204,7 +206,8 @@ Windows フォームで使うことができるコントロールとコンポー
  処理の進行状況をグラフィカルに示します。 <xref:System.Windows.Forms.ToolStripProgressBar>に含まれる代表的な<xref:System.Windows.Forms.StatusStrip>します。  
   
  [ToolStripStatusLabel コントロール](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
- <xref:System.Windows.Forms.StatusStrip> コントロールのパネルを表します。  
+ 
+  <xref:System.Windows.Forms.StatusStrip> コントロールのパネルを表します。  
   
  [ToolTip コンポーネント](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
  ユーザーが他のコントロールをポイントしたときに、テキストを表示します。  
@@ -228,8 +231,8 @@ Windows フォームで使うことができるコントロールとコンポー
  [デザイン時の Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  手順トピックへのリンク、作成するコントロールの種類に関する推奨事項、および独自のコントロールの作成に関する他の情報を提供します。  
   
- [各言語およびライブラリにおける、コントロールとプログラミング可能オブジェクトの比較](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [各言語およびライブラリにおける、コントロールとプログラミング可能オブジェクトの比較](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Visual Basic 6.0 のコントロールを [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] の対応するコントロールにマップするテーブルを提供します。 コントロールは [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のクラスになっていることに注意してください。  
   
- [方法 : Windows フォームに ActiveX コントロールを追加する](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [Windows フォームに ActiveX コントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
  Windows フォームで ActiveX コントロールを使う方法について説明します。

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b04465d9141cdf595c4055ba64eb49083c1c514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cc3b806043daea9247741b1816c9055378f45cf
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667899"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443037"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
 .NET ネイティブ アプリ、Windows ストアまたは開発者のコンピューター上の静的なコンパイルを提供します。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いは、.NET ネイティブ試行との互換性を維持するために、 [Windows ストア アプリ用 .NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)します。 ほとんどの場合、Windows ストア アプリ用 .NET で機能する機能は、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、次の領域で、標準的な Windows ストア アプリ用 .NET と .NET ネイティブのこれらの違いについて説明します。  
@@ -149,7 +149,7 @@ ms.locfileid: "54667899"
   
  **その他の API**  
   
--   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> 属性が型に適用されない場合、 <xref:System.PlatformNotSupportedException> プロパティは <xref:System.Runtime.InteropServices.GuidAttribute> 例外をスローします。 GUID は主に COM サポートで使用されます。  
+-   [TypeInfo.GUID](xref:System.Type.GUID)プロパティがスローされます、<xref:System.PlatformNotSupportedException>例外場合、<xref:System.Runtime.InteropServices.GuidAttribute>属性が型に適用されません。 GUID は主に COM サポートで使用されます。  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。  
   

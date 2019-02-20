@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558957"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441360"
 ---
 # <a name="how-to-create-application-settings"></a>方法: アプリケーション設定を作成します。
 マネージド コードを使用することにより、新しいアプリケーション設定を作成し、フォームまたはフォームのコントロールのプロパティにバインドして、これらの設定が実行時に自動的に読み込まれて保存されるようにすることができます。  
   
  次の手順では、<xref:System.Configuration.ApplicationSettingsBase> から派生するラッパー クラスを手動で作成します。 このクラスには、公開する各アプリケーション設定に対して、パブリックにアクセスできるプロパティを追加します。  
   
- また、Visual Studio デザイナーで最小限のコードを使用してこの手順を実行することもできます。  参照してください[方法。デザイナーを使用してアプリケーション設定を作成する](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))します。  
+ また、Visual Studio デザイナーで最小限のコードを使用してこの手順を実行することもできます。  参照してください[方法。デザイナーを使用してアプリケーション設定を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100))します。  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>新しいアプリケーション設定をプログラムで作成するには  
   
@@ -50,4 +50,4 @@ ms.locfileid: "54558957"
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [方法: アプリケーション設定を検証します。](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+- [アプリケーション設定を検証します。](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
