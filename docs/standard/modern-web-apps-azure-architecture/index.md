@@ -4,13 +4,8 @@ description: ASP.NET Core と Azure を使用したモノリシックな Web ア
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827865"
 ---
+
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core および Azure での最新の Web アプリケーションの設計
 
 ![カバーの画像](./media/cover.png)
@@ -107,7 +102,7 @@ Azure でホストされる ASP.NET Core での Web アプリケーションを�
 ## <a name="references"></a>参照
 
 - **サーバー アプリ用 .NET Core と .NET Framework の選択**  
-  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
 >[次へ](modern-web-applications-characteristics.md)

@@ -2,21 +2,15 @@
 title: Windows サービス アプリケーションの開発
 ms.date: 03/30/2017
 helpviewer_keywords:
-- ServiceInstaller class, Windows Service applications
-- Service class, Windows Service applications
-- Windows Service applications
-- Windows NT services
-- ServiceProcessInstaller class, Windows Service applications
-- services
-- .NET applications, Windows applications
+  - 'ServiceInstaller class, Windows Service applications'
+  - 'Service class, Windows Service applications'
+  - Windows Service applications
+  - Windows NT services
+  - 'ServiceProcessInstaller class, Windows Service applications'
+  - services
+  - '.NET applications, Windows applications'
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 79de8adbc0f994653f308882b335da2ffa5f7455
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035923"
 ---
 # <a name="develop-windows-service-apps"></a>Windows サービス アプリを開発する
 
@@ -39,7 +33,7 @@ Visual Basic および Visual C# でサービスを作成する例を提供し�
 
 サービスのプログラミングで使用される言語要素について説明します。
 
-[方法 : Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 
 Windows サービス プロジェクトのテンプレートを使用して Windows サービスを作成、構成するプロセスについて説明します。
 
@@ -51,4 +45,4 @@ Windows サービス プロジェクトのテンプレートを使用して Wind
 
 <xref:System.ServiceProcess.ServiceInstaller>: <xref:System.ServiceProcess.ServiceProcessInstaller> クラスと共に使用して、サービスをインストール/アンインストールする <xref:System.ServiceProcess.ServiceInstaller> クラスの機能について説明します。
 
-[テンプレートからプロジェクトを作成する](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2): この章で使用されるプロジェクトの種類と、それを選択する際に役立つガイドラインを説明します。
+[テンプレートからプロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)): この章で使用されるプロジェクトの種類と、それを選択する際に役立つガイドラインを説明します。
