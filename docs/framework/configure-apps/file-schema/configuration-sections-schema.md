@@ -24,16 +24,16 @@ ms.locfileid: "32743512"
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 [**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-[**\<オフ >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
-[**\<削除 >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
-[**\<セクション >**](~/docs/framework/configure-apps/file-schema/section-element.md)   
+[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
+[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
+[**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md)   
 [**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<オフ >** の **\<configSections >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 以前に定義されたセクションおよびセクション グループのすべてをクリアします。 |
+| [**\<configSections >** の **\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 以前に定義されたセクションおよびセクション グループのすべてをクリアします。 |
 | [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 以前に定義されたセクションおよびセクション グループのすべてをクリアします。 |
 | [**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
-| [**\<削除 >** の **\<configSections >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 定義済みのセクション、またはセクション グループを削除します。 |
-| [**\<セクション >** の **\<configSections >** と **\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | 構成セクションの宣言が含まれています。 |
+| [**\<remove>** の **\<configSections >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 定義済みのセクション、またはセクション グループを削除します。 |
+| [**\<section>** の **\<configSections >** と **\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | 構成セクションの宣言が含まれています。 |
 | [**\<sectionGroup >** の **\<configSections >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |
