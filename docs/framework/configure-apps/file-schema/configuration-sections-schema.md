@@ -33,7 +33,7 @@ ms.locfileid: "32743512"
 | --- | ----------- |
 | [**\<configSections >** の **\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 以前に定義されたセクションおよびセクション グループのすべてをクリアします。 |
 | [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 以前に定義されたセクションおよびセクション グループのすべてをクリアします。 |
-| [**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
-| [**\<remove>** の **\<configSections >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 定義済みのセクション、またはセクション グループを削除します。 |
-| [**\<section>** の **\<configSections >** と **\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | 構成セクションの宣言が含まれています。 |
-| [**\<sectionGroup >** の **\<configSections >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |
+| [**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
+| [**\<configSections>**の**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 定義済みのセクション、またはセクション グループを削除します。 |
+| [**\<configSections>** と **\<sectionGroup>**の**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) | 構成セクションの宣言が含まれています。 |
+| [**\<configSections>** の **\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |
