@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35cd40a3219c86e8f82f85360bf213d6ef3f9fc6
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735157"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583941"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>方法: Windows フォーム コントロールに属性を適用します。
 デザイン環境を正しく操作しを実行時に正しく実行するコンポーネントとコントロールを開発するには、クラスとメンバーに属性を正しく適用する必要があります。  
@@ -82,4 +82,4 @@ ms.locfileid: "54735157"
 - <xref:System.Windows.Forms.DataGridView>
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows フォーム コントロールの属性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
-- [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

@@ -1,13 +1,13 @@
 ---
 title: シーケンス
 description: 大規模な順序付けられたデータのコレクションを持っていてもすべての要素を使用すると必ずしも期待しないときに、F# シーケンスを使用する方法について説明します。
-ms.date: 05/16/2016
-ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611998"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583928"
 ---
 # <a name="sequences"></a>シーケンス
 
@@ -98,7 +98,7 @@ A*シーケンス式*シーケンスに評価される式を指定します。 �
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)状態を受け取り、シーケンスの後続の各要素を生成するためにそれを変換する計算関数からシーケンスを生成します。 状態は、値は、各要素の計算に使用し、各要素の計算を変更できます。 2 番目の引数`Seq.unfold`シーケンスを開始するために使用される初期値です。 `Seq.unfold` 返すことによって、シーケンスを終了することができます、状態のオプションの種類を使用して、`None`値。 次のコードは、シーケンスの 2 つの例を示しています。`seq1`と`fib`、によって生成される、`unfold`操作。 最初、 `seq1`、最大 100 の番号を持つ単純なシーケンスだけです。 次に、`fib`を使用して`unfold`フィボナッチ シーケンスを計算します。 フィボナッチ シーケンス内の各要素は、前の 2 つのフィボナッチ数の合計であるために、状態値は、前の 2 つの数値のシーケンスで構成される組になります。 初期値は`(1,1)`シーケンス内の最初の 2 つの数値。
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)状態を受け取り、シーケンスの後続の各要素を生成するためにそれを変換する計算関数からシーケンスを生成します。 状態は、値は、各要素の計算に使用し、各要素の計算を変更できます。 2 番目の引数`Seq.unfold`シーケンスを開始するために使用される初期値です。 `Seq.unfold` 返すことによって、シーケンスを終了することができます、状態のオプションの種類を使用して、`None`値。 次のコードは、シーケンスの 2 つの例を示しています。`seq1`と`fib`、によって生成される、`unfold`操作。 まず、`seq1`は最大 20 の番号を持つ単純なシーケンスだけです。 次に、`fib`を使用して`unfold`フィボナッチ シーケンスを計算します。 フィボナッチ シーケンス内の各要素は、前の 2 つのフィボナッチ数の合計であるために、状態値は、前の 2 つの数値のシーケンスで構成される組になります。 初期値は`(1,1)`シーケンス内の最初の 2 つの数値。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -191,7 +191,8 @@ Moving average:
 
 使用して 2 つのシーケンスを比較する、 [Seq.compareWith](https://msdn.microsoft.com/library/5a740135-0b3a-4545-816f-8f91cc31290f)関数。 関数は、さらに、一連の要素を比較し、最初の等しくないペアを見つけたときに停止します。 追加の要素は、比較には影響しません。
 
-`Seq.compareWith` の使用方法を次のコードに示します。
+
+  `Seq.compareWith` の使用方法を次のコードに示します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet19.fs)]
 
@@ -223,7 +224,8 @@ Moving average:
 
 呼び出すことによって、重複する要素を排除するシーケンスを作成する[Seq.distinct](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401)します。 使用することもできます[Seq.distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75)、各要素に対して呼び出されるキー生成関数を受け取ります。 結果のシーケンスに固有のキーのある、元のシーケンスの要素が含まれています以前の要素に重複するキーの生成後の要素は破棄されます。
 
-`Seq.distinct` の使用方法を次のコード例に示します。 `Seq.distinct` バイナリの数値を表すシーケンスを生成して、表示のみの個別の要素には 0 と 1 で示されます。
+
+  `Seq.distinct` の使用方法を次のコード例に示します。 `Seq.distinct` バイナリの数値を表すシーケンスを生成して、表示のみの個別の要素には 0 と 1 で示されます。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 

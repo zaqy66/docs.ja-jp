@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: b7a657af2d6caf2217aedf56422f135f0b2d667e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e65f0fd329f624aa186748d298257b15617c17
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619418"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584266"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールで列を固定します。
 ユーザーが Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールに表示されるデータを確認するときに、1 つの列または列のセットを頻繁に参照しなければならないことがあります。 たとえば、多数の列を含む顧客情報のテーブルを表示するとき、顧客名を常に表示して、その他の列は表示領域外にスクロールするようにできると便利です。  
@@ -26,7 +26,7 @@ ms.locfileid: "54619418"
   
  列の <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> プロパティは、列が常にグリッド内で表示されるかどうかを決定します。  
   
- Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法。列を固定、Windows フォーム DataGridView コントロールのデザイナーを使用して](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\))します。  
+ Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法。列を固定、Windows フォーム DataGridView コントロールのデザイナーを使用して](freeze-columns-in-the-datagrid-using-the-designer.md)します。  
   
 ### <a name="to-freeze-a-column-programmatically"></a>プログラムで列を固定するには  
   
@@ -40,7 +40,8 @@ ms.locfileid: "54619418"
   
 -   `AddToCartButton` という名前の列を含む `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+-   
+  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>

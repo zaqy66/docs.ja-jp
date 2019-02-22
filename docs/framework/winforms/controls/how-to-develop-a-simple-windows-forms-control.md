@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527628"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583837"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>方法: 単純な Windows フォーム コントロールを開発します。
 ここでは、カスタム Windows フォーム コントロールの主な作成手順を紹介します。 このチュートリアルで開発された単純なコントロールでの配置は、その<xref:System.Windows.Forms.Control.Text%2A>プロパティを変更します。 イベントを発生させたり処理したりすることはありません。  
@@ -34,7 +34,7 @@ ms.locfileid: "54527628"
     public class FirstControl:Control {}  
     ```  
   
-2.  プロパティを定義します  (コントロールから多くのプロパティを継承するためのプロパティを定義する必要はありません、<xref:System.Windows.Forms.Control>追加のプロパティを定義して一般に、クラスが、ほとんどのカスタム コントロールです)。次のコード フラグメントは、という名前のプロパティを定義します。`TextAlignment`を`FirstControl`の表示形式を使用して、<xref:System.Windows.Forms.Control.Text%2A>プロパティから継承<xref:System.Windows.Forms.Control>します。 プロパティの定義の詳細については、「[プロパティの概要](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)」を参照してください。  
+2.  プロパティを定義します  (コントロールから多くのプロパティを継承するためのプロパティを定義する必要はありません、<xref:System.Windows.Forms.Control>追加のプロパティを定義して一般に、クラスが、ほとんどのカスタム コントロールです)。次のコード フラグメントは、という名前のプロパティを定義します。`TextAlignment`を`FirstControl`の表示形式を使用して、<xref:System.Windows.Forms.Control.Text%2A>プロパティから継承<xref:System.Windows.Forms.Control>します。 プロパティの定義の詳細については、「[プロパティの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120))」を参照してください。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ ms.locfileid: "54527628"
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  コントロールの属性を指定します。 ビジュアル デザイナーでは、デザイン時に属性を使用することで、コントロール、コントロールのプロパティ、およびイベントを適切に表示します。 次のコード フラグメントでは、属性が `TextAlignment` プロパティに適用されます。 Visual Studio などのデザイナーで、 <xref:System.ComponentModel.CategoryAttribute.Category%2A> (コード フラグメントで示されている) 属性が論理カテゴリの下に表示するプロパティ。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性によって、わかりやすい文字列の下部に表示される、**プロパティ**ウィンドウと、`TextAlignment`プロパティが選択されています。 属性の詳細については、「[コンポーネントのデザイン時属性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)」を参照してください。  
+4.  コントロールの属性を指定します。 ビジュアル デザイナーでは、デザイン時に属性を使用することで、コントロール、コントロールのプロパティ、およびイベントを適切に表示します。 次のコード フラグメントでは、属性が `TextAlignment` プロパティに適用されます。 Visual Studio などのデザイナーで、 <xref:System.ComponentModel.CategoryAttribute.Category%2A> (コード フラグメントで示されている) 属性が論理カテゴリの下に表示するプロパティ。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性によって、わかりやすい文字列の下部に表示される、**プロパティ**ウィンドウと、`TextAlignment`プロパティが選択されています。 属性の詳細については、「[コンポーネントのデザイン時属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))」を参照してください。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  

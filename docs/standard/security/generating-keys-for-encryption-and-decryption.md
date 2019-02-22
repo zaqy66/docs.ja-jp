@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573401"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583668"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>暗号化と復号化のためのキーの生成
 キーの作成と管理は、暗号プロセスの重要な部分です。 対称アルゴリズムでは、キーと初期化ベクター (IV) を作成する必要があります。 キーは、データの暗号化解除を許可しないユーザーに対しては秘密にする必要があります。 IV は秘密にする必要はありませんが、セッションごとに変更する必要があります。 非対称アルゴリズムでは、公開キーと秘密キーを作成する必要があります。 公開キーはだれに公開してもかまいせんが、秘密キーを知らせる相手は、公開キーで暗号化されたデータを復号化する人だけにします。 このセクションでは、対称アルゴリズムと非対称アルゴリズムの両方について、キーを作成して管理する方法を説明します。  
@@ -34,11 +34,11 @@ ms.locfileid: "54573401"
  TripleDES アルゴリズムを実装する <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> クラスの新しいインスタンスの作成方法を次の例に示します。  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
 ```  
   
  上記のコードを実行すると新しいキーと IV が生成され、それぞれ **Key** プロパティと **IV** プロパティに設定されます。  
@@ -46,15 +46,15 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
  複数のキーを生成する必要が生じることもあります。 このような状況では、対称アルゴリズムを実装するクラスの新しいインスタンスを作成し、次に **GenerateKey** および **GenerateIV** メソッドを呼び出すことによって新しいキーと IV を作成します。 次のコード例は、対称暗号化クラスの新しいインスタンスが実行された後に、新しいキーと Iv を作成する方法を示しています。  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
-TDES.GenerateIV()  
-TDES.GenerateKey()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+tdes.GenerateIV()  
+tdes.GenerateKey()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
-TDES.GenerateIV();  
-TDES.GenerateKey();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
+tdes.GenerateIV();  
+tdes.GenerateKey();  
 ```  
   
  上記のコードを実行すると、 **TripleDESCryptoServiceProvider** の新しいインスタンスの作成時にキーと IV が生成されます。 **GenerateKey** メソッドと **GenerateIV** メソッドを呼び出すと、別のキーと IV が作成されます。  
@@ -76,16 +76,16 @@ TDES.GenerateKey();
   
 ```vb  
 'Generate a public/private key pair.  
-Dim RSA as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
+Dim rsa as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
 'Save the public key information to an RSAParameters structure.  
-Dim RSAKeyInfo As RSAParameters = RSA.ExportParameters(false)  
+Dim rsaKeyInfo As RSAParameters = rsa.ExportParameters(false)  
 ```  
   
 ```csharp  
 //Generate a public/private key pair.  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
 //Save the public key information to an RSAParameters structure.  
-RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
+RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
 ## <a name="see-also"></a>関連項目

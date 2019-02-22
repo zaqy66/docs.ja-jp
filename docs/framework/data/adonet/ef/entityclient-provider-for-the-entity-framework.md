@@ -2,12 +2,12 @@
 title: Entity Framework 用の EntityClient プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826448"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583980"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework 用の EntityClient プロバイダー
 EntityClient プロバイダーは、概念モデルで記述されているデータにアクセスするために Entity Framework アプリケーションで使用するデータ プロバイダーです。 概念モデルについては、次を参照してください。[モデリング ファイルとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)します。 EntityClient は、他の .NET Framework データ プロバイダーを使用してデータ ソースにアクセスします。 たとえば、EntityClient は、SQL Server データベースにアクセスするときは .NET Framework Data Provider for SQL Server (SqlClient) を使用します。 SqlClient プロバイダーについては、次を参照してください。 [Entity Framework 用 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)します。 EntityClient プロバイダーは <xref:System.Data.EntityClient> 名前空間で実装されます。  
@@ -20,17 +20,18 @@ EntityClient プロバイダーは、概念モデルで記述されているデ�
  <xref:System.Data.EntityClient> には、<xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスも含まれています。 このクラスを使用すると、開発者はこのクラスのプロパティおよびメソッドを使用することによって、正しい構文の接続文字列をプログラムで作成し、既存の接続文字列の解析や再作成を行うことができます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。  
   
 ## <a name="creating-queries"></a>クエリの作成  
- [!INCLUDE[esql](../../../../../includes/esql-md.md)]言語は、ストレージの影響を受けない sql のエンティティの概念スキーマを直接操作し、継承やリレーションシップなどの Entity Data Model 概念をサポートします。 <xref:System.Data.EntityClient.EntityCommand>を実行するクラスが使用される、 [!INCLUDE[esql](../../../../../includes/esql-md.md)] entity model に対してコマンド。 <xref:System.Data.EntityClient.EntityCommand> オブジェクトを構築する場合は、ストアド プロシージャ名またはクエリ テキストを指定できます。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は、ストレージ固有のデータ プロバイダーと連携し、汎用的な [!INCLUDE[esql](../../../../../includes/esql-md.md)] をストレージ固有のクエリに変換します。 書き込みの詳細については[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリを参照してください[Entity SQL 言語](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)します。  
+ [!INCLUDE[esql](../../../../../includes/esql-md.md)]言語は、ストレージの影響を受けない sql のエンティティの概念スキーマを直接操作し、継承やリレーションシップなどの Entity Data Model 概念をサポートします。 <xref:System.Data.EntityClient.EntityCommand>を実行するクラスが使用される、 [!INCLUDE[esql](../../../../../includes/esql-md.md)] entity model に対してコマンド。 
+  <xref:System.Data.EntityClient.EntityCommand> オブジェクトを構築する場合は、ストアド プロシージャ名またはクエリ テキストを指定できます。 
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は、ストレージ固有のデータ プロバイダーと連携し、汎用的な [!INCLUDE[esql](../../../../../includes/esql-md.md)] をストレージ固有のクエリに変換します。 書き込みの詳細については[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリを参照してください[Entity SQL 言語](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)します。  
   
  次の例では、作成、<xref:System.Data.EntityClient.EntityCommand>オブジェクトられ、[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリ テキストにその<xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>プロパティ。 これは、[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリは、概念モデルから表示価格で並べ替えた製品を要求します。 次のコードでは、ストレージ モデルが認識されません。  
   
- `EntityCommand cmd = conn.CreateCommand();`  
-  
- `cmd.CommandText = @"` `SELECT VALUE p`  
-  
- `FROM AdventureWorksEntities.Product AS p`  
-  
- `ORDER BY p.ListPrice ";`  
+ ```csharp
+EntityCommand cmd = conn.CreateCommand();
+cmd.CommandText = @"SELECT VALUE p
+  FROM AdventureWorksEntities.Product AS p
+  ORDER BY p.ListPrice";
+```
   
 ## <a name="executing-queries"></a>クエリの実行  
  クエリを実行すると、そのクエリが解析され、正規コマンド ツリーに変換されます。 すべての後続の処理は、コマンド ツリーで行われます。 コマンド ツリーは <xref:System.Data.EntityClient> など、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] と基になる <xref:System.Data.SqlClient> データ プロバイダー間の通信手段です。  

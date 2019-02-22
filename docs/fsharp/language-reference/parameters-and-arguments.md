@@ -2,12 +2,12 @@
 title: パラメーターと引数
 description: パラメーターを定義して、関数、メソッド、およびプロパティに引数を渡すのための F# 言語サポートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612479"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583499"
 ---
 # <a name="parameters-and-arguments"></a>パラメーターと引数
 
@@ -140,7 +140,17 @@ type C =
         printfn "%s" message
 ```
 
-引数として指定された値`DefaultParameterValue`型と一致する必要がありますのパラメーター、つまり、次は許可されていません。
+パラメーターの既定値として、新しいオブジェクトを指定することもできます。 たとえば、`Foo`メンバーが省略可能なことが`CanceallationToken`代わりに入力として。
+
+```fsharp
+open System.Threading
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
+        printfn "%A" ct
+```
+
+引数として指定された値`DefaultParameterValue`パラメーターの型に一致する必要があります。 たとえば、次は許可されていません。
 
 ```fsharp
 type C =

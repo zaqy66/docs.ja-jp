@@ -8,17 +8,18 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: e57f926208e67ce894b58bdfaf5d0c3e3815b2ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fbdf661983d39ad4793946f10deb3e224f2f711
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514882"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583629"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールでは読み取り専用に列を作成します。
-すべてのデータが編集できるわけではありません。 <xref:System.Windows.Forms.DataGridView> コントロールでは、列の <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> プロパティの値はユーザーがその列のセルを編集できるかどうかを決定します。 完全に読み取り専用コントロールを作成する方法については、次を参照してください。[方法。行の追加を回避し、削除を Windows フォーム DataGridView コントロール](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)します。  
+すべてのデータが編集できるわけではありません。 
+  <xref:System.Windows.Forms.DataGridView> コントロールでは、列の <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> プロパティの値はユーザーがその列のセルを編集できるかどうかを決定します。 完全に読み取り専用コントロールを作成する方法については、次を参照してください。[方法。行の追加を回避し、削除を Windows フォーム DataGridView コントロール](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)します。  
   
- Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法。列を読み取り専用の Windows フォーム DataGridView コントロールのデザイナーを使用して](https://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\))します。  
+ Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法。列を読み取り専用の Windows フォーム DataGridView コントロールのデザイナーを使用して](make-columns-read-only-in-the-datagrid-using-the-designer.md)します。  
   
 ### <a name="to-make-a-column-read-only-programmatically"></a>プログラムで列を読み取り専用にするには  
   
@@ -32,7 +33,8 @@ ms.locfileid: "54514882"
   
 -   `CompanyName` という名前の列を持つ `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+-   
+  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>

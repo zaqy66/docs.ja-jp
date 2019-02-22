@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 673c852b89518e2cb4df6ea98a337acd60bc42cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726fa8ee05498ae365409c8330c6e1d9283ae9f5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659671"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583273"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォームの DataGridView コントロール内の列を非表示にします。
 Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールで使用できる列の一部のみを表示したいときがあります。 たとえば、管理の資格情報を持つユーザーには従業員の給与の列を表示し、その他のユーザーには非表示にしたいときがあります。 また、多数の列を含み、その一部のみを表示したいデータ ソースにコントロールをバインドすることもあります。 この場合、通常は列を非表示にするよりは、必要がない列を削除します。  
   
  <xref:System.Windows.Forms.DataGridView> コントロールでは、列の <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> プロパティの値により、その列が表示されているかどうかが決定されます。  
   
- Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法。非表示にする列で、Windows フォーム DataGridView コントロールのデザイナーを使用して](https://msdn.microsoft.com/library/kaswfbes\(v=vs.110\))します。  
+ Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法。非表示にする列で、Windows フォーム DataGridView コントロールのデザイナーを使用して](hide-columns-in-the-datagrid-using-the-designer.md)します。  
   
 ### <a name="to-hide-a-column-programmatically"></a>プログラムで列を非表示にするには  
   
@@ -35,7 +35,8 @@ Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロー
   
 -   `CustomerID` という名前の列を含む `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+-   
+  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>

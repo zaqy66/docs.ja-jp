@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632349"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583421"
 ---
 # <a name="packaging-fonts-with-applications"></a>アプリケーションでのフォントのパッケージング
 このトピックでは、フォントをパッケージングする方法の概要を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  
@@ -31,7 +31,7 @@ ms.locfileid: "54632349"
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]フォントには、型フラグ fsType、フォントのフォント埋め込みライセンス権利を示すが含まれます。 しかし、この型フラグはドキュメントに格納された埋め込みフォントのみを参照し、アプリケーションに埋め込まれたフォントは参照しません。 フォントの埋め込みを作成して、フォントの権限を取得することができます、<xref:System.Windows.Media.GlyphTypeface>オブジェクトとを参照するその<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>プロパティ。 「Os/2 と Windows メトリック」セクションを参照してください、 [OpenType の仕様](https://www.microsoft.com/typography/otspec/os2.htm)fsType フラグの詳細についてはします。  
   
- [Microsoft タイポグラフィ](https://www.microsoft.com/typography/links/)Web サイトには、特定のフォント ベンダーを検索またはカスタムの作業のフォント ベンダーを検索するのに役立つ連絡先の情報が含まれています。  
+ [Microsoft タイポグラフィ](https://docs.microsoft.com/typography/)Web サイトには、特定のフォント ベンダーを検索またはカスタムの作業のフォント ベンダーを検索するのに役立つ連絡先の情報が含まれています。  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>コンテンツ項目としてのフォントの追加  
@@ -175,7 +175,7 @@ ms.locfileid: "54632349"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft タイポグラフィ:リンク、ニュース、および連絡先](https://www.microsoft.com/typography/links/)
+- [Microsoft タイポグラフィ:リンク、ニュース、および連絡先](https://docs.microsoft.com/typography/)
 - [OpenType の仕様](https://www.microsoft.com/typography/otspec/)
 - [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
 - [OpenType フォント パックのサンプル](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

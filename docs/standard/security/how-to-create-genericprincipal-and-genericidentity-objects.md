@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0567fd12bee19e860373affdf0fdc286d6d5405a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8dd255aafe16cf0cb893ff4157b3590b3fc8d03
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608064"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583681"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成します。
 使用することができます、<xref:System.Security.Principal.GenericIdentity>クラスと組み合わせて、 <xref:System.Security.Principal.GenericPrincipal> Windows ドメインの独立した存在する承認スキームを作成するクラス。  
@@ -28,33 +28,33 @@ ms.locfileid: "54608064"
 1.  ID クラスの新しいインスタンスを作成し、インスタンスに付ける名前で初期化します。 新しい **GenericIdentity** オブジェクトを作成し、名前 `MyUser` で初期化するコードを次に示します。  
   
     ```vb  
-    Dim MyIdentity As New GenericIdentity("MyUser")  
+    Dim myIdentity As New GenericIdentity("MyUser")  
     ```  
   
     ```csharp  
-    GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
+    GenericIdentity myIdentity = new GenericIdentity("MyUser");  
     ```  
   
 2.  **GenericPrincipal** クラスの新しいインスタンスを作成し、前に作成した **GenericIdentity** オブジェクトと、プリンシパルに関連付けるロールを表す文字列の配列で、このインスタンスを初期化します。 管理者のロールとユーザーのロールを表す文字列の配列を指定するコード例を次に示します。 **GenericPrincipal** は、前の **GenericIdentity** と文字列配列で初期化されます。  
   
     ```vb  
-    Dim MyStringArray As String() = {"Manager", "Teller"}  
-    DIm MyPrincipal As New GenericPrincipal(MyIdentity, MyStringArray)  
+    Dim myStringArray As String() = {"Manager", "Teller"}  
+    DIm myPrincipal As New GenericPrincipal(myIdentity, myStringArray)  
     ```  
   
     ```csharp  
-    String[] MyStringArray = {"Manager", "Teller"};  
-    GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
+    String[] myStringArray = {"Manager", "Teller"};  
+    GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);  
     ```  
   
 3.  次のコードを使用して、プリンシパルを現在のスレッドに結合します。 これは、プリンシパルが何回かを検証する必要がある、アプリケーションでは、実行中の他のコードで検証する必要がある必要がありますまたはで検証する必要がある必要があります、<xref:System.Security.Permissions.PrincipalPermission>オブジェクト。 このような場合でも、プリンシパル オブジェクトをスレッドに結合せずにロール ベースの検証を行うことができます。 詳細については、「[プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)」を参照してください。  
   
     ```vb  
-    Thread.CurrentPrincipal = MyPrincipal  
+    Thread.CurrentPrincipal = myPrincipal  
     ```  
   
     ```csharp  
-    Thread.CurrentPrincipal = MyPrincipal;  
+    Thread.CurrentPrincipal = myPrincipal;  
     ```  
   
 ## <a name="example"></a>例  
@@ -69,26 +69,26 @@ Public Class Class1
   
     Public Shared Sub Main()  
         ' Create generic identity.  
-        Dim MyIdentity As New GenericIdentity("MyIdentity")  
+        Dim myIdentity As New GenericIdentity("MyIdentity")  
   
         ' Create generic principal.  
-        Dim MyStringArray As String() =  {"Manager", "Teller"}  
-        Dim MyPrincipal As New GenericPrincipal(MyIdentity, MyStringArray)  
+        Dim myStringArray As String() =  {"Manager", "Teller"}  
+        Dim myPrincipal As New GenericPrincipal(myIdentity, myStringArray)  
   
         ' Attach the principal to the current thread.  
         ' This is not required unless repeated validation must occur,  
         ' other code in your application must validate, or the   
         ' PrincipalPermisson object is used.   
-        Thread.CurrentPrincipal = MyPrincipal  
+        Thread.CurrentPrincipal = myPrincipal  
   
         ' Print values to the console.  
-        Dim Name As String = MyPrincipal.Identity.Name  
-        Dim Auth As Boolean = MyPrincipal.Identity.IsAuthenticated  
-        Dim IsInRole As Boolean = MyPrincipal.IsInRole("Manager")  
+        Dim name As String = myPrincipal.Identity.Name  
+        Dim auth As Boolean = myPrincipal.Identity.IsAuthenticated  
+        Dim isInRole As Boolean = myPrincipal.IsInRole("Manager")  
   
-        Console.WriteLine("The Name is: {0}", Name)  
-        Console.WriteLine("The IsAuthenticated is: {0}", Auth)  
-        Console.WriteLine("Is this a Manager? {0}", IsInRole)  
+        Console.WriteLine("The name is: {0}", name)  
+        Console.WriteLine("The isAuthenticated is: {0}", auth)  
+        Console.WriteLine("Is this a Manager? {0}", isInRole)  
   
     End Sub  
   
@@ -105,27 +105,27 @@ public class Class1
     public static int Main(string[] args)  
     {  
     // Create generic identity.  
-    GenericIdentity MyIdentity = new GenericIdentity("MyIdentity");  
+    GenericIdentity myIdentity = new GenericIdentity("MyIdentity");  
   
     // Create generic principal.  
-    String[] MyStringArray = {"Manager", "Teller"};  
-    GenericPrincipal MyPrincipal =   
-        new GenericPrincipal(MyIdentity, MyStringArray);  
+    String[] myStringArray = {"Manager", "Teller"};  
+    GenericPrincipal myPrincipal =   
+        new GenericPrincipal(myIdentity, myStringArray);  
   
     // Attach the principal to the current thread.  
     // This is not required unless repeated validation must occur,  
     // other code in your application must validate, or the   
     // PrincipalPermisson object is used.   
-    Thread.CurrentPrincipal = MyPrincipal;  
+    Thread.CurrentPrincipal = myPrincipal;  
   
     // Print values to the console.  
-    String Name =  MyPrincipal.Identity.Name;  
-    bool Auth =  MyPrincipal.Identity.IsAuthenticated;   
-    bool IsInRole =  MyPrincipal.IsInRole("Manager");  
+    String name =  myPrincipal.Identity.Name;  
+    bool auth =  myPrincipal.Identity.IsAuthenticated;   
+    bool isInRole =  myPrincipal.IsInRole("Manager");  
   
-    Console.WriteLine("The Name is: {0}", Name);  
-    Console.WriteLine("The IsAuthenticated is: {0}", Auth);  
-    Console.WriteLine("Is this a Manager? {0}", IsInRole);  
+    Console.WriteLine("The name is: {0}", name);  
+    Console.WriteLine("The isAuthenticated is: {0}", auth);  
+    Console.WriteLine("Is this a Manager? {0}", isInRole);  
   
     return 0;  
     }  

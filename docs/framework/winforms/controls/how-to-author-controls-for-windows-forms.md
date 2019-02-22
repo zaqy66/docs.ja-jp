@@ -6,18 +6,18 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579525"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584383"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>方法: Windows フォームのコントロールの作成
 コントロールは、ユーザーとプログラムの間のグラフィカルなリンクを表します。 コントロールは、データの提供または処理、ユーザー入力の受け付け、イベントへの応答、ユーザーとアプリケーションを接続する他の任意の数の関数の実行を行うことができます。 コントロールは、基本的にグラフィカル インターフェイスを持つコンポーネントであるため、ユーザーとの対話だけでなく、コンポーネントが実行するあらゆる機能を果たします。 コントロールは特定の目的に使用するために作成します。コントロールの作成は、まったく別のプログラミング タスクです。 このことを念頭に、次の手順では、コントロールの作成手順の概要を示します。 個々の手順のリンクで追加情報を提供します。  
   
 > [!NOTE]
->  Web フォームで使用するカスタム コントロールを作成する場合は、「[カスタム ASP.NET サーバー コントロールの開発](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)」を参照してください。  
+>  Web フォームで使用するカスタム コントロールを作成する場合は、「[カスタム ASP.NET サーバー コントロールの開発](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))」を参照してください。  
 >   
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54579525"
   
 9. 繰り返して、デザインを調整します。  
   
-10. コントロールをパッケージ化してデプロイします。 詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](https://msdn.microsoft.com/library/wtzawcsz)」を参照してください。  
+10. コントロールをパッケージ化してデプロイします。 詳細については、次を参照してください。[最初に、Visual Studio でのデプロイについて](/visualstudio/deployment/deploying-applications-services-and-components)します。  
   
 ## <a name="see-also"></a>関連項目
 - [チュートリアル: Visual Basic による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)

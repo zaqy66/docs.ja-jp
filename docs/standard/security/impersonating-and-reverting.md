@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6ce153d52f9142801a7cdc7bb2e6a1770ab0b69
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516825"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583694"
 ---
 # <a name="impersonating-and-reverting"></a>偽装と復帰
 場合によっては、Windows アカウント トークンを取得して、Windows アカウントを偽装する必要があります。 たとえば、ASP.NET ベースのアプリケーションが、時間によって複数のユーザーの代わりに操作しなければならない場合があります。 その場合、アプリケーションはインターネット インフォメーション サービス (IIS) から管理者を表すトークンを受け入れて、そのユーザーを偽装し、操作を実行してから前の ID に戻ります。 続いて、IIS から管理者より権限が少ないユーザーを表すトークンを受け入れ、操作を実行してから、また元に戻ります。  
@@ -29,31 +29,31 @@ ms.locfileid: "54516825"
 2.  **WindowsIdentity** クラスの新しいインスタンスを作成し、トークンを渡します。 次のコードに、この呼び出しを示します。ここで、`hToken` は Windows トークンを表します。  
   
     ```csharp  
-    WindowsIdentity ImpersonatedIdentity = new WindowsIdentity(hToken);  
+    WindowsIdentity impersonatedIdentity = new WindowsIdentity(hToken);  
     ```  
   
     ```vb  
-    Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
+    Dim impersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
 3.  このコードに示されているように、<xref:System.Security.Principal.WindowsImpersonationContext> クラスの新しいインスタンスを作成し、そのインスタンスを、初期化されたクラスの <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> メソッドで初期化することで、偽装を開始します。  
   
     ```csharp  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate();  
     ```  
   
     ```vb  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate()  
     ```  
   
 4.  偽装する必要がなくなったら、以下のコードに示されているように <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> メソッドを呼び出して、偽装を元に戻します。  
   
     ```csharp  
-    MyImpersonation.Undo();  
+    myImpersonation.Undo();  
     ```  
   
     ```vb  
-    MyImpersonation.Undo()  
+    myImpersonation.Undo()  
     ```  
   
  コードが既にアタッチされている信頼されている場合、<xref:System.Security.Principal.WindowsPrincipal>インスタンス メソッドを呼び出すことができますが、スレッドにオブジェクト**Impersonate**、アカウント トークンを受け取らない。 この方法が役立つのは、スレッドで **WindowsPrincipal** オブジェクトが表しているユーザーが、現在プロセスが実行されているユーザーではない場合のみです。 このような状態は、たとえば、Windows 認証を有効にして、偽装を無効にした ASP.NET を使用している場合に発生することがあります。 その場合、プロセスはインターネット インフォメーション サービス (IIS) で構成されたアカウントで実行されますが、現在のプリンシパルは、ページにアクセスしている Windows ユーザーを表しています。  
