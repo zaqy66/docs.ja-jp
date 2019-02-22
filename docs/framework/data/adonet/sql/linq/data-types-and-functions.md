@@ -23,15 +23,12 @@ ms.locfileid: "56091436"
 |[数値演算子および比較演算子](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
 |[シーケンス演算子](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
 |[System.Convert メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
-|[System.DateTime メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|
-  <xref:System.DateTime?displayProperty=nameWithType> 構造体のメンバーに対する LINQ to SQL でのサポートについて説明します。|  
+|[System.DateTime メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|<xref:System.DateTime?displayProperty=nameWithType> 構造体のメンバーに対する LINQ to SQL でのサポートについて説明します。|  
 |[System.DateTimeOffset メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|<xref:System.DateTimeOffset?displayProperty=nameWithType> 構造体のメンバーに対する LINQ to SQL でのサポートについて説明します。|  
 |[System.Math メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
-|[System.Object メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|
-  [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
+|[System.Object メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
 |[System.String メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
-|[System.TimeSpan メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|
-  <xref:System.TimeSpan?displayProperty=nameWithType> 構造体のメンバーに対する LINQ to SQL でのサポートについて説明します。|  
+|[System.TimeSpan メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<xref:System.TimeSpan?displayProperty=nameWithType> 構造体のメンバーに対する LINQ to SQL でのサポートについて説明します。|  
 |[サポートされていない機能](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] でサポートされていない機能について説明します。|  
   
 ## <a name="see-also"></a>関連項目
