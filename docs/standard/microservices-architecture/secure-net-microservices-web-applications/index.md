@@ -19,7 +19,7 @@ ms.date: 10/19/2018
 
 **図 9-1** API ゲートウェイによる認証の一元管理
 
-サービスに直接アクセスできる場合は、Azure Active Directory などの認証サービスやセキュリティ トークン サービス (STS) として機能する専用の認証マイクロサービスは、ユーザーを認証するために使用できます。 信頼の決定は、サービスとセキュリティ トークンまたは cookie 間で共有されます  (必要に応じて、これらのトークンは ASP.NET Core で[データ保護サービス](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)を使用して、アプリケーション間で共有できます)。このパターンを示したものが図 9-2 です。
+サービスに直接アクセスできる場合は、Azure Active Directory などの認証サービスやセキュリティ トークン サービス (STS) として機能する専用の認証マイクロサービスは、ユーザーを認証するために使用できます。 信頼の決定は、サービスとセキュリティ トークンまたは cookie 間で共有されます  (必要に応じて、これらのトークンは、[Cookie の共有](/aspnet/core/security/cookie-sharing)を実装して、ASP.NET Core アプリケーション間で共有できます)。このパターンを示したものが図 9-2 です。
 
 ![マイクロ サービスに直接アクセスすると、認証と認可を含む信頼が、マイクロサービス間で共有される専用のマイクロサービスによって発行されたセキュリティ トークンによって処理されます。](./media/image2.png)
 
@@ -271,7 +271,7 @@ JWT ベアラー認証ミドルウェアは、証明機関が利用できない�
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **アプリケーション間での Cookie の共有** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **Identity の概要** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
