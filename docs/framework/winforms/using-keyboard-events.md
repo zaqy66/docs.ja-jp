@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 05bd896dded0bc67510ccc45d6fd91bdc1c069f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93bdcbc8b23813d3c8c80ca720c54928fca11aec
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614600"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665252"
 ---
 # <a name="using-keyboard-events"></a>キーボード イベントの使用
-多くの Windows フォーム プログラムは、キーボード イベントを処理することによってキーボード入力を処理します。 ここでは、どのような場合に各キーボード イベントを使用するか、また各イベントがどのようなデータを提供するかについての詳細を含め、キーボード イベントの概要について説明します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))、[イベントの概要 (Windows フォーム)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))します。  
+多くの Windows フォーム プログラムは、キーボード イベントを処理することによってキーボード入力を処理します。 ここでは、どのような場合に各キーボード イベントを使用するか、また各イベントがどのようなデータを提供するかについての詳細を含め、キーボード イベントの概要について説明します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
   
 ## <a name="keyboard-events"></a>キーボード イベント  
  Windows フォームは、ユーザーがキーボードのキーを押したときに発生する 2 つのイベントと、キーボードのキーを離したときに発生する 1 つのイベントを提供します。これらのイベントは次のとおりです。  
@@ -34,9 +34,11 @@ ms.locfileid: "54614600"
   
 |キーボード イベント|説明|結果|  
 |--------------------|-----------------|-------------|  
-|<xref:System.Windows.Forms.Control.KeyDown>|このイベントは、ユーザーが物理キーを押すと発生します。|<xref:System.Windows.Forms.Control.KeyDown> のハンドラーは、次の項目を受け取ります。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> パラメーター。このパラメーターは、物理キーボード ボタンを示す <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> プロパティを提供します。</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> プロパティ (Shift、Ctrl、または Alt キー)。</li><li><xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> プロパティ (キー コードと修飾子を組み合わせます)。 また、<xref:System.Windows.Forms.KeyEventArgs> パラメーターは、次のプロパティを提供します。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.Handled%2A> プロパティ。基となるコントロールがキーを受け取らないように設定できます。</li><li><xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> プロパティ。これを使用すると、特定のキーストロークで <xref:System.Windows.Forms.Control.KeyPress> イベントと <xref:System.Windows.Forms.Control.KeyUp> イベントが発生しないようにすることができます。</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyDown>|このイベントは、ユーザーが物理キーを押すと発生します。|<xref:System.Windows.Forms.Control.KeyDown> のハンドラーは、次の項目を受け取ります。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> パラメーター。このパラメーターは、物理キーボード ボタンを示す <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> プロパティを提供します。</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> プロパティ (Shift、Ctrl、または Alt キー)。</li><li><xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> プロパティ (キー コードと修飾子を組み合わせます)。 また、<xref:System.Windows.Forms.KeyEventArgs> パラメーターは、次のプロパティを提供します。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.Handled%2A> プロパティ。基となるコントロールがキーを受け取らないように設定できます。</li><li>
+  <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> プロパティ。これを使用すると、特定のキーストロークで <xref:System.Windows.Forms.Control.KeyPress> イベントと <xref:System.Windows.Forms.Control.KeyUp> イベントが発生しないようにすることができます。</li></ul></li></ul>|  
 |<xref:System.Windows.Forms.Control.KeyPress>|このイベントは、1 つまたは複数のキーを押すことにより文字が出力された場合に発生します。 たとえば、Shift キーを押しながら小文字の "a" キーを押すと、大文字の "A" が出力されます。|<xref:System.Windows.Forms.Control.KeyPress> は、<xref:System.Windows.Forms.Control.KeyDown> の後に発生します。<br /><br /> <ul><li><xref:System.Windows.Forms.Control.KeyPress> のハンドラーは、次の項目を受け取ります。</li><li><xref:System.Windows.Forms.KeyPressEventArgs> パラメーター。このパラメーターには、押したキーの文字コードが入ります。 この文字コードは、文字キーと修飾子キーの組み合わせごとに一意です。<br /><br />     たとえば、"A" キーは次の文字コードを生成します。<br /><br /> <ul><li>文字コード 65 (Shift キーまたは Caps Lock キーと一緒に押した場合)</li><li>97 (単独で押した場合)</li><li>1 (Ctrl キーと一緒に押した場合)</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyUp>|このイベントは、ユーザーが物理キーを離すと発生します。|<xref:System.Windows.Forms.Control.KeyUp> のハンドラーは、次の項目を受け取ります。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> パラメーターの値。次のプロパティを提供します。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> プロパティ (物理キーボード ボタンを示します)。</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> プロパティ (Shift、Ctrl、または Alt キー)。</li><li><xref:System.Globalization.SortKey.KeyData%2A> プロパティ (キー コードと修飾子を組み合わせます)。</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyUp>|このイベントは、ユーザーが物理キーを離すと発生します。|<xref:System.Windows.Forms.Control.KeyUp> のハンドラーは、次の項目を受け取ります。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> パラメーターの値。次のプロパティを提供します。<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> プロパティ (物理キーボード ボタンを示します)。</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> プロパティ (Shift、Ctrl、または Alt キー)。</li><li>
+  <xref:System.Globalization.SortKey.KeyData%2A> プロパティ (キー コードと修飾子を組み合わせます)。</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>関連項目
 - [Windows フォーム アプリケーションにおけるキーボード入力](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)

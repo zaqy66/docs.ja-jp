@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733338"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664225"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ
 カスタム コントロールを作成するときに多くの場合、表示されますが、デザイン時の動作をデバッグするために必要です。 これは、カスタム コントロールのカスタム デザイナーを作成する場合に特に当てはまります。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)です。  
@@ -60,9 +60,9 @@ ms.locfileid: "54733338"
   
 1.  追加、 **Windows コントロール ライブラリ**プロジェクトがソリューションにします。  
   
-2.  新しい追加**UserControl** DebugControlLibrary プロジェクトに項目。 詳細については、次を参照してください。 [NIB: 方法。新しいプロジェクト項目の追加](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)します。 新しいソース ファイルに「タブ」の基本の名前を付けます。  
+2.  新しい追加**UserControl** DebugControlLibrary プロジェクトに項目。 詳細については、「[方法: 新しいプロジェクト項目の追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))します。 新しいソース ファイルに「タブ」の基本の名前を付けます。  
   
-3.  使用して、**ソリューション エクスプ ローラー**の基本名を持つコード ファイルを削除することによって、プロジェクトの既定のコントロールを削除"`UserControl1`"。 詳細については、次を参照してください。 [NIB: 方法。削除、削除、および項目を除外](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)します。  
+3.  使用して、**ソリューション エクスプ ローラー**の基本名を持つコード ファイルを削除することによって、プロジェクトの既定のコントロールを削除"`UserControl1`"。 詳細については、「[方法: 削除、削除、および項目を除外](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))します。  
   
 4.  ソリューションをビルドします。  
   
@@ -174,5 +174,5 @@ ms.locfileid: "54733338"
   
 ## <a name="see-also"></a>関連項目
 - [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
-- [方法: デザイン時サービスにアクセス](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
-- [方法: Windows フォームでデザイン時サポートのアクセス](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+- [方法: デザイン時サービスにアクセス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
+- [方法: Windows フォームでデザイン時サポートのアクセス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

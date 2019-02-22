@@ -3,12 +3,12 @@ title: F# を使用した Azure Blob Storage の概要
 description: Azure Blob storage を使用してクラウドでは、非構造化データを格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037283"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664992"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F# を使用した Azure Blob Storage の概要 #
 
@@ -216,23 +216,24 @@ Azure storage 内のすべての blob は、コンテナー内に存在する必
 
 既定では、ストレージ アカウント内の blob データはストレージ アカウント所有者のみがアクセスできます。 Blob storage に対する要求の認証には、既定では、アカウント アクセス キーが必要です。 ただし、特定の blob データを他のユーザーが利用できるようにする場合があります。
 
-Blob ストレージへのアクセスを制御する方法の詳細については、次を参照してください。[アクセス コントロール上の blob ストレージ セクションの .NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data)します。
-
-
 ### <a name="encrypting-blob-data"></a>Blob データの暗号化
 
 Azure Storage では、クライアントとサーバーの両方の blob データの暗号化をサポートします。
-
-Blob データの暗号化について詳しくは、次を参照してください。 [blob ストレージ セクションの暗号化には、.NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data)します。
 
 ## <a name="next-steps"></a>次の手順
 
 これで、Blob storage の基本を学習するは詳細については、これらのリンクに従います。
 
 ### <a name="tools"></a>ツール
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)の F# 型プロバイダー Blob、Table、および Azure Storage のキューの資産を探索し、それらに対する CRUD 操作を簡単に適用するために使用できます。
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# の API を Microsoft Azure Table Storage サービスを使用します。
-- [Microsoft Azure ストレージ エクスプ ローラー (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)から Microsoft Windows、OS X、Linux で Azure Storage のデータを視覚的に作業することができますが、無料のスタンドアロン アプリです。
+
+- [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+F#型プロバイダーが Blob、Table、および Azure Storage のキューの資産を探索し、それらに対する CRUD 操作を簡単に適用するために使用できます。
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+F# Microsoft Azure Table Storage サービスを使用するための API
+
+- [Microsoft Azure ストレージ エクスプ ローラー (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Microsoft Windows、OS X、Linux で Azure Storage のデータを視覚的に作業することができます、無料のスタンドアロン アプリです。
 
 ### <a name="blob-storage-reference"></a>Blob ストレージのリファレンス
 
@@ -246,3 +247,4 @@ Blob データの暗号化について詳しくは、次を参照してくださ
 - [Linux 上の AzCopy コマンド ライン ユーティリティを使用したデータを転送します。](/azure/storage/common/storage-use-azcopy-linux)
 - [Azure Storage 接続文字列を構成します。](/azure/storage/common/storage-configure-connection-string)
 - [Azure Storage チーム ブログ](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [クイック スタート:.NET を使用してオブジェクト ストレージに blob を作成するには](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

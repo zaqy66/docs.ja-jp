@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573975"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664745"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows フォームがサポートするデータ ソース
 これまでは、データ バインディングは、データベースに格納されたデータを活用するためにアプリケーション内で使用されています。 Windows フォーム データ バインドでは、特定の最小要件を満たしている限り、配列やコレクションなど、他の構造のデータだけでなく、データベースからデータにアクセスすることができます。  
@@ -37,7 +37,7 @@ ms.locfileid: "54573975"
  Windows フォームを使用して、オブジェクトのインスタンスでのパブリック プロパティにデータ バインド コントロールのプロパティのサポート、<xref:System.Windows.Forms.Binding>型。 Windows フォーム バインディング リスト ベースのコントロールのようサポートも、<xref:System.Windows.Forms.ListControl>インスタンス オブジェクト、<xref:System.Windows.Forms.BindingSource>使用されます。  
   
  配列またはコレクション  
- データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、次を参照してください。[方法。(Visual Basic) のオブジェクトの配列を作成する](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)します。  
+ データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、次を参照してください。[方法。(Visual Basic) のオブジェクトの配列を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100))します。  
   
  一般に、使用する必要があります<xref:System.ComponentModel.BindingList%601>データ バインド オブジェクトのリストを作成する場合。 <xref:System.ComponentModel.BindingList%601> ジェネリック バージョンは、<xref:System.ComponentModel.IBindingList>インターフェイス。 <xref:System.ComponentModel.IBindingList>インターフェイスは、拡張、<xref:System.Collections.IList>プロパティ、メソッド、および双方向データ バインドに必要なイベントを追加することでインターフェイス。  
   

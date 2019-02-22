@@ -2,12 +2,12 @@
 title: ADO.NET テクノロジのオプションとガイドライン
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828476"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664797"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET テクノロジのオプションとガイドライン
 ADO.NET データ プラットフォームは、概念エンティティ データ モデルに対してプログラムを作成できるようにして、開発者に必要とされるコード作成と保守作業の量を減らすための、複数のリリースにわたる戦略です。 このプラットフォームには、ADO.NET Entity Framework と関連技術が含まれています。  
@@ -19,7 +19,7 @@ ADO.NET データ プラットフォームは、概念エンティティ デー�
  エンティティ データ モデル (EDM) は、アプリケーション データをエンティティとリレーションシップの集合として定義するデザイン仕様です。 このモデルのデータは、アプリケーションの境界を越えたオブジェクト リレーショナル マッピングとデータ プログラミング機能をサポートします。  
   
 ### <a name="object-services"></a>オブジェクト サービス  
- Object Services を使用すると、プログラマが一連の共通言語ランタイム (CLR) クラスを介して概念モデルを操作できるようになります。 これらのクラスは、概念モデルから自動的に生成することも、概念モデルの構造を反映するように別途開発することもできます。 Object Services は、状態の管理、変更の追跡、ID の解決、リレーションシップの読み込みとナビゲート、オブジェクト変更のデータベースへの反映、Entity SQL のクエリ作成サポートなどのサービスを含む、Entity Framework に対するインフラストラクチャ サポートも提供します。 詳細は、[Object Services の概要 (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)) をご覧ください。  
+ Object Services を使用すると、プログラマが一連の共通言語ランタイム (CLR) クラスを介して概念モデルを操作できるようになります。 これらのクラスは、概念モデルから自動的に生成することも、概念モデルの構造を反映するように別途開発することもできます。 Object Services は、状態の管理、変更の追跡、ID の解決、リレーションシップの読み込みとナビゲート、オブジェクト変更のデータベースへの反映、Entity SQL のクエリ作成サポートなどのサービスを含む、エンティティ フレームワークに対するインフラストラクチャ サポートも提供します。 詳細は、[Object Services の概要 (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)) をご覧ください。  
   
 ### <a name="linq-to-entities"></a>LINQ to Entities  
  LINQ to Entities は、LINQ の式と標準クエリ演算子を使用することにより、Entity Framework オブジェクト コンテキストに対して厳密に型指定されたクエリを作成できるようにする統合言語クエリ (LINQ) の実装です。 LINQ to Entities を使用すると、開発者は Microsoft SQL Server とサードパーティ データベース間の非常に柔軟なオブジェクト リレーショナル マッピングを使用して、概念モデルを操作できます。 詳細については、次を参照してください。 [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。  
@@ -28,7 +28,7 @@ ADO.NET データ プラットフォームは、概念エンティティ デー�
  Entity SQL は、エンティティ データ モデルを操作するように設計されたテキスト ベースのクエリ言語です。 Entity SQL は、継承、複合型、明示的リレーションシップなどの高レベルのモデル概念を使用したクエリ用のコンストラクトを含む SQL 言語の一種です。 Entity SQL は、Object Services で直接使用することもできます。 詳細については、次を参照してください。 [Entity SQL 言語](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)します。  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient は、エンティティ データ モデルを操作するために使用する新しい .NET Framework データ プロバイダーです。 EntityClient は、<xref:System.Data.EntityClient.EntityConnection> を返す <xref:System.Data.EntityClient.EntityCommand> および <xref:System.Data.EntityClient.EntityDataReader> オブジェクトを公開するための .NET Framework データ プロバイダーのパターンに従います。 EntityClient は Entity SQL 言語と共に使用でき、ストレージ固有のデータ プロバイダーに対する柔軟なマッピングを提供します。 詳細については、「 [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527)」を参照してください。  
+ EntityClient は、エンティティ データ モデルを操作するために使用する新しい .NET Framework データ プロバイダーです。 EntityClient は、<xref:System.Data.EntityClient.EntityConnection> を返す <xref:System.Data.EntityClient.EntityCommand> および <xref:System.Data.EntityClient.EntityDataReader> オブジェクトを公開するための .NET Framework データ プロバイダーのパターンに従います。 EntityClient は Entity SQL 言語と共に使用でき、ストレージ固有のデータ プロバイダーに対する柔軟なマッピングを提供します。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](./ef/entityclient-provider-for-the-entity-framework.md)します。  
   
 ### <a name="entity-data-model-tools"></a>Entity Data Model ツール  
  Entity Framework には、EDM アプリケーションの構築を容易にするためのコマンド ライン ツール、ウィザード、およびデザイナーが用意されています。 EntityDataSource コントロールでは、EDM に基づくデータ バインドのシナリオがサポートされています。 EntityDataSource コントロールのプログラミング サーフェイスは、Visual Studio の他のデータ ソース コントロールに似ています。 詳細については、次を参照してください。 [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))します。  

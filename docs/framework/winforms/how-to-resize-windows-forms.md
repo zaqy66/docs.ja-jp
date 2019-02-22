@@ -9,15 +9,16 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: f9a1aae4e9a787b798d6c27f9daa597955b208a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57a75cf07e3487c5a115e57c068b412c33538bce
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614586"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664537"
 ---
 # <a name="how-to-resize-windows-forms"></a>方法: Windows フォームのサイズを変更します。
-Windows フォームのサイズは、いくつかの方法で指定できます。 <xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。 Visual Studio を使用している場合は、Windows フォーム デザイナーを使用してサイズを変更できます。 参照してください[方法。デザイナーを使用して Windows フォームのサイズを変更](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\))します。  
+Windows フォームのサイズは、いくつかの方法で指定できます。 
+  <xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。 Visual Studio を使用している場合は、Windows フォーム デザイナーを使用してサイズを変更できます。 参照してください[方法。デザイナーを使用して Windows フォームのサイズを変更](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))します。  
   
 ### <a name="to-resize-a-form-programmatically"></a>プログラムによってフォームのサイズを変更するには  
   

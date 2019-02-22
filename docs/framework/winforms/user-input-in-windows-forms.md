@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b422de09b41d72a680146192fd773767fe64e257
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593792"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664563"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows フォームでのユーザー入力
 Windows フォームには、関連する Windows メッセージの処理中に発生するイベントに基づくユーザーの入力モデルが含まれています。 特定のタスクを実行する方法を示すコード例を含む、マウスとキーボードのユーザー入力については、このセクションのトピックで説明します。  
@@ -27,14 +27,14 @@ Windows フォームには、関連する Windows メッセージの処理中に
  [Windows フォーム アプリケーションにおけるマウス入力](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  マウスのカーソルとマウスのキャプチャなど、マウス イベントやその他のマウスに関連する機能の情報を提供します。  
   
- [方法: マウス イベントとキーボード イベントをコードでシミュレートする](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ [方法: マウスとキーボード イベントをコードでシミュレートします。](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  プログラムでマウスおよびキーボード入力をシミュレートするいくつかの方法を示します。  
   
- [方法: Windows フォーム コントロールでユーザー入力イベントを処理する](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [方法: Windows フォーム コントロールでユーザー入力イベントを処理します。](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
  ほとんどのユーザーの入力イベントを処理し、各イベントに関する情報をレポートするコード例を表示します。  
   
  [Windows フォームでのユーザー入力の検証](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
  Windows フォーム アプリケーションでユーザー入力を検証する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- 参照してください[Windows フォームでのイベント ハンドラーの作成](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\))です。
+ 参照してください[Windows フォームでのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)です。

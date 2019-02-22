@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 042861b2d79d0b638600a5463673fb922f3b4881
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543527"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664394"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>チュートリアル: バック グラウンド操作を使用するフォームの実装
 場合は、完了に長い時間がかかる操作があると応答を停止する、ユーザー インターフェイス (UI) を設定したくない、または「ハング」しを使用できます、<xref:System.ComponentModel.BackgroundWorker>クラスを別のスレッドで操作を実行します。  
@@ -57,7 +57,7 @@ ms.locfileid: "54543527"
   
 5.  最初の名前を変更<xref:System.Windows.Forms.Button>コントロール`startAsyncButton`設定と、<xref:System.Windows.Forms.Control.Text%2A>プロパティを`Start Async`します。 2 つ目の名前を変更<xref:System.Windows.Forms.Button>コントロール`cancelAsyncButton`、設定、<xref:System.Windows.Forms.Control.Text%2A>プロパティを`Cancel Async`します。 設定の<xref:System.Windows.Forms.Control.Enabled%2A>プロパティを`false`します。  
   
-6.  この 2 つのイベント ハンドラーを作成、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント。 詳細については、次を参照してください。[方法。デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)します。  
+6.  この 2 つのイベント ハンドラーを作成、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント。 詳細については、「[方法: デザイナーを使用してイベント ハンドラーを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))します。  
   
 7.  ドラッグ、<xref:System.Windows.Forms.Label>コントロールから、**ツールボックス**をフォームに名前を変更し、`resultLabel`します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54543527"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>非同期イベント ハンドラーを実装するには  
   
-1.  **プロパティ** ウィンドウで、<xref:System.ComponentModel.BackgroundWorker>が選択されているコンポーネントをクリックして、**イベント**ボタン。 ダブルクリックして、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。 イベント ハンドラーを使用する方法の詳細については、次を参照してください。[方法。デザイナーを使用してイベント ハンドラーを作成する](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)します。  
+1.  **プロパティ** ウィンドウで、<xref:System.ComponentModel.BackgroundWorker>が選択されているコンポーネントをクリックして、**イベント**ボタン。 ダブルクリックして、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。 イベント ハンドラーを使用する方法の詳細については、次を参照してください。[方法。デザイナーを使用してイベント ハンドラーを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))します。  
   
 2.  フォームで `ComputeFibonacci` という新しいメソッドを作成します。 このメソッドがバックグラウンドで実行され、実際の処理を行います。 このコードは、フィボナッチ アルゴリズムの再帰的実装を示しています。これは、非常に非効率であり、数が大きくなるにつれて、完了までの所要時間が急激に増大します。 ここでは、アプリケーションで長時間の遅延が発生する可能性のある操作を示すために、このコードを使用しています。  
   
@@ -109,7 +109,8 @@ ms.locfileid: "54543527"
   
 #### <a name="to-implement-progress-reporting"></a>進行状況の報告を実装するには  
   
-1.  **[プロパティ]** ウィンドウで `backgroundWorker1` を選択します。 <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> と <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> プロパティを `true` に設定します。  
+1.  **[プロパティ]** ウィンドウで `backgroundWorker1` を選択します。 
+  <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> と <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> プロパティを `true` に設定します。  
   
 2.  `FibonacciCalculator` フォームで 2 つの変数を宣言します。 これらの変数を使用して進行状況を追跡します。  
   
@@ -117,7 +118,8 @@ ms.locfileid: "54543527"
      [!code-csharp[System.ComponentModel.BackgroundWorker#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#14)]
      [!code-vb[System.ComponentModel.BackgroundWorker#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#14)]  
   
-3.  <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> イベントのイベント ハンドラーを追加します。 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベント ハンドラー、update、<xref:System.Windows.Forms.ProgressBar>で、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>のプロパティ、<xref:System.ComponentModel.ProgressChangedEventArgs>パラメーター。  
+3.  
+  <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> イベントのイベント ハンドラーを追加します。 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベント ハンドラー、update、<xref:System.Windows.Forms.ProgressBar>で、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>のプロパティ、<xref:System.ComponentModel.ProgressChangedEventArgs>パラメーター。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#7](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#7)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#7)]
@@ -169,6 +171,6 @@ ms.locfileid: "54543527"
 - [マネージド スレッド処理](../../../../docs/standard/threading/index.md)
 - [マネージド スレッド処理の実施](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [イベントベースの非同期パターンの概要](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [方法: バック グラウンド操作を使用してフォームを実装します。](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [方法: バックグラウンド操作を使用するフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [チュートリアル: バック グラウンドで操作を実行します。](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker コンポーネント](backgroundworker-component.md)

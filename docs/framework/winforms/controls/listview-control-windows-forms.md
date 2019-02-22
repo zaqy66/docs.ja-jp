@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591943"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664888"
 ---
 # <a name="listview-control-windows-forms"></a>ListView コントロール (Windows フォーム)
 Windows フォーム `ListView` コントロールにはアイコン表示で項目の一覧が表示されます。 リスト ビューを使用すると、Windows エクスプローラーの右側のペインのようなユーザー インターフェイスを作成することができます。  
@@ -81,9 +81,6 @@ Windows フォーム `ListView` コントロールにはアイコン表示で項
   
  [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  複数のペインで Windows フォームのレイアウトを設定するための方法を説明します。  
-  
- [Windows XP の機能と Windows フォーム コントロール](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- <xref:System.Windows.Forms.ListView> コントロールに適用される、Windows XP に固有の機能を活用する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 - [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

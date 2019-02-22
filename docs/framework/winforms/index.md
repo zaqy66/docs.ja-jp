@@ -2,19 +2,13 @@
 title: Windows フォーム
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms
-- user interface
-- user interface [Windows Forms], forms
+  - Windows Forms
+  - user interface
+  - 'user interface [Windows Forms], forms'
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542250"
 ---
 # <a name="windows-forms"></a>Windows フォーム
-フォームはアプリケーションの基本単位であるため、機能とデザインにある程度の配慮を与えることが重要です。 フォームは、最終的には開発者がユーザー インターフェイスを作成するコントロールとデータを操作するコードを拡張する白紙状態です。 そのために、Visual Studio は、統合開発環境 (IDE)、コードを作成しやすくだけでなく豊富なコントロールを使用して作成された設定、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]です。 これらのコントロールの機能をコードに補完することにより、必要なソリューションを簡単に素早く開発できます。  
+フォームはアプリケーションの基本単位であるため、機能とデザインにある程度の配慮を与えることが重要です。 フォームは、最終的には開発者がユーザー インターフェイスを作成するコントロールとデータを操作するコードを拡張する白紙状態です。 そのために、Visual Studio を使用する、豊富なコントロール セットで書き込まれたと同様に、統合開発環境 (IDE)、コードの記述を支援するために、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]します。 これらのコントロールの機能をコードに補完することにより、必要なソリューションを簡単に素早く開発できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Windows フォームについて](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
@@ -45,8 +39,9 @@ ms.locfileid: "33542250"
  [Windows フォーム アプリケーション](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  Windows アプリケーション プロジェクト テンプレートを使用して作成されたアプリケーションのデバッグのプロセス、およびデバッグ構成とリリース構成を変更する方法について説明します。  
   
- [アプリケーション、サービス、およびコンポーネントの配置](https://msdn.microsoft.com/library/wtzawcsz)  
+ [最初に、Visual Studio でのデプロイについてください。](/visualstudio/deployment/deploying-applications-services-and-components)  
  完成したアプリケーションやコンポーネントを他のコンピューターにインストールできるように配布するためのプロセスについて説明します。  
   
  [コンソール アプリケーションの構築](../../../docs/standard/building-console-apps.md)  
- <xref:System.Console> クラスを使用したコンソール アプリケーションの作成の基本について説明します。
+ 
+  <xref:System.Console> クラスを使用したコンソール アプリケーションの作成の基本について説明します。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a19e6d2ed39c21301b3409cdeb55a569f0d2eff4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e90ebc941d07c24f7b14ecf72e5a764bf48d77
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703381"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664979"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のリリース以前、ユーザーのコンピューターで実行されているすべてのコードは、リソースにアクセスするために、そのコンピューターのユーザーが持っていたのと同じ権限またはアクセス許可を持っていました。 たとえば、ユーザーにファイル システムへのアクセスが許可されている場合は、コードにファイル システムへのアクセスが許可され、ユーザーにデータベースへのアクセスが許可されている場合は、コードにデータベースへのアクセスが許可されていました。 これらの権限やアクセス許可は、ユーザーがローカル コンピューターに明示的にインストールした実行可能ファイルのコードに対しては受け入れることができますが、インターネットやローカル イントラネットからの悪意のある可能性があるコードに対しては受け入れることができません。 このコードは、アクセス許可がないユーザーのコンピューター リソースにアクセスすべきではありません。  
@@ -23,14 +23,14 @@ ms.locfileid: "54703381"
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] テクノロジは、Windows フォーム アプリケーションの配置に使用しますが、部分信頼で実行するアプリケーションを、完全信頼や、昇格されたアクセス許可を持つ部分信頼で簡単に開発できるようにします。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、アクセス許可の昇格や、信頼されたアプリケーション配置などの機能を提供し、アプリケーションが完全信頼やアクセス許可の昇格をローカル ユーザーから実行可能な方法で要求できます。  
   
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework のセキュリティについて  
- コード アクセス セキュリティにより、コードの発生元や、そのコードの身元を示すその他の基準に基づいて、コードをさまざまなレベルで信頼できます。 共通言語ランタイムがセキュリティ ポリシーを決定するために使用する証拠の詳細については、「[証拠](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)」を参照してください。 悪意のあるコードからコンピューター システムを保護できるだけでなく、セキュリティの意図的または偶然の侵害から信頼されているコードを保護できます。 また、コード アクセス セキュリティは、アプリケーションが実行できるアクションに対して詳細に制御できます。これは、アプリケーションが持っている必要があるアクセス許可のみを指定できるためです。 コード アクセス セキュリティは、コードが単一のコード アクセス セキュリティのアクセス許可のチェックをしない場合でも、共通言語ランタイムを対象とするすべてのマネージド コードに影響を与えます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のセキュリティの詳細については、「[セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)」および「[コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)」を参照してください。  
+ コード アクセス セキュリティにより、コードの発生元や、そのコードの身元を示すその他の基準に基づいて、コードをさまざまなレベルで信頼できます。 共通言語ランタイムがセキュリティ ポリシーを決定するために使用する証拠の詳細については、「[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))」を参照してください。 悪意のあるコードからコンピューター システムを保護できるだけでなく、セキュリティの意図的または偶然の侵害から信頼されているコードを保護できます。 また、コード アクセス セキュリティは、アプリケーションが実行できるアクションに対して詳細に制御できます。これは、アプリケーションが持っている必要があるアクセス許可のみを指定できるためです。 コード アクセス セキュリティは、コードが単一のコード アクセス セキュリティのアクセス許可のチェックをしない場合でも、共通言語ランタイムを対象とするすべてのマネージド コードに影響を与えます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のセキュリティの詳細については、「[セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)」および「[コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)」を参照してください。  
   
  ユーザーが Windows フォームの実行可能ファイルを Web サーバーまたはファイル共有から直接実行する場合、アプリケーションに付与される信頼の度合いは、コードが存在する場所や開始方法によって異なります。 アプリケーションを実行すると、自動的に評価され、共通言語ランタイムから、名前付き権限セットを受け取ります。 既定では、ローカル コンピューターからのコードに完全信頼のアクセス許可セットが付与され、ローカル ネットワークからのコードには、ローカル イントラネットのアクセス許可セットが付与され、インターネットからのコードには、インターネットのアクセス許可セットが付与されます。  
   
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 1.0 Service Pack 1 と Service Pack 2 では、インターネット ゾーンのコード グループが何もしないアクセス許可セットを受け取ります。 その他のすべてのリリースの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、インターネット ゾーンのコード グループは、インターネットのアクセス許可セットを受け取ります。  
 >   
->  これらの各アクセス許可セットで付与される既定のアクセス許可の一覧については、「[既定のセキュリティ ポリシー](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)」を参照してください。 アプリケーションが受け取るアクセス許可に応じて、正常に実行されるか、またはセキュリティ例外が生成されます。  
+>  これらの各アクセス許可セットで付与される既定のアクセス許可の一覧については、「[既定のセキュリティ ポリシー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))」を参照してください。 アプリケーションが受け取るアクセス許可に応じて、正常に実行されるか、またはセキュリティ例外が生成されます。  
 >   
 >  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] を使用して、多数の Windows フォーム アプリケーションが配置されます。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置の生成に使用されるツールには、これまでの説明とは異なるセキュリティの既定値があります。 詳細については、次の説明を参照してください。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54703381"
   
  アプリケーションが部分信頼で許可するより多くのアクセス許可を必要とするが、完全信頼モードで実行したくない場合は、部分信頼で実行しながら、必要な追加のアクセス許可のみをアサートすることができます。 たとえば、部分信頼で実行するが、ユーザーのファイル システム上のディレクトリに、アプリケーションの読み取り専用のアクセス許可を付与する必要がある場合、そのディレクトリのみに対して <xref:System.Security.Permissions.FileIOPermission> を要求することができます。 適切に使用すると、このアプローチによってアプリケーションの機能が増加し、ユーザーのセキュリティ上のリスクを最小限に抑えることができます。  
   
- 部分信頼で実行されるアプリケーションを開発するときに、アプリケーションが実行する必要があるアクセス許可と、アプリケーションがオプションで使用できるアクセス許可を管理してください。 すべてのアクセス許可がわかっている場合、アプリケーション レベルでアクセス許可について宣言型の要求をする必要があります。 アクセス許可を要求すると、アプリケーションが必要とするアクセス許可、および特に必要ないアクセス許可について、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のランタイムに通知します。 アクセス許可の要求の詳細については、「[アクセス許可の要求](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)」を参照してください。  
+ 部分信頼で実行されるアプリケーションを開発するときに、アプリケーションが実行する必要があるアクセス許可と、アプリケーションがオプションで使用できるアクセス許可を管理してください。 すべてのアクセス許可がわかっている場合、アプリケーション レベルでアクセス許可について宣言型の要求をする必要があります。 アクセス許可を要求すると、アプリケーションが必要とするアクセス許可、および特に必要ないアクセス許可について、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のランタイムに通知します。 アクセス許可の要求の詳細については、「[アクセス許可の要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))」を参照してください。  
   
  オプションのアクセス許可を要求するときに、アプリケーションに付与されていないアクセス許可が必要なアクションを実行する場合に生成されるセキュリティ例外を処理する必要があります。 <xref:System.Security.SecurityException> を適切に処理することで、アプリケーションを続行できます。 アプリケーションは例外を使用して、ユーザーに対して機能を無効にする必要があるかどうかを判断できます。 たとえば、必要なファイル アクセス許可が付与されていない場合、アプリケーションは **[保存]** メニュー オプションを無効にすることができます。  
   
@@ -75,12 +75,12 @@ ms.locfileid: "54703381"
   
  どのテクノロジを選択するかは、配置環境に応じて異なります。 詳細については、「[ClickOnce 配置ストラテジの選択](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)」を参照してください。  
   
- 既定では、 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 、Visual Studio を使用してデプロイされたアプリケーションまたは[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツール (Mage.exe および MageUI.exe) が完全信頼を持つクライアント コンピューターで実行するように構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 Visual Studio でこれを行う、または[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツールの MageUI.exe の配置を構成するときにします。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))します。  
+ 既定では、 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 、Visual Studio を使用してデプロイされたアプリケーションまたは[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツール (Mage.exe および MageUI.exe) が完全信頼を持つクライアント コンピューターで実行するように構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 Visual Studio でこれを行う、または[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツールの MageUI.exe の配置を構成するときにします。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] とアクセス許可の昇格のセキュリティ面の詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。 信頼されたアプリケーションの配置の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。  
   
 ### <a name="testing-the-application"></a>アプリケーションのテスト  
- Visual Studio を使用して、Windows フォーム アプリケーションをデプロイする場合は、部分信頼または制限されたアクセス許可のセット、開発環境からでのデバッグを有効にできます。  参照してください[方法。制限されたアクセス許可の ClickOnce アプリケーションをデバッグ](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))または[方法。アクセス許可が制限された ClickOnce アプリケーションをデバッグする](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))」を参照してください。  
+ Visual Studio を使用して、Windows フォーム アプリケーションをデプロイする場合は、部分信頼または制限されたアクセス許可のセット、開発環境からでのデバッグを有効にできます。  参照してください[方法。アクセス許可が制限された ClickOnce アプリケーションをデバッグする](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [Windows フォームのセキュリティ](../../../docs/framework/winforms/windows-forms-security.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354375d4758e4ab34d34571257f6414e6a8584f0
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581983"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664199"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンドラインから Windows フォーム アプリケーションを作成します。
-次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。単純な Windows フォームを作成する](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))します。  
+次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。WPF でのフォーム コントロールのホストを Windows](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。  
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -35,14 +35,16 @@ ms.locfileid: "54581983"
      [!code-csharp[System.Windows.Forms.BasicForm#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3.  `Form1` の既定のコンストラクターを作成します。  
+3.  
+  `Form1` の既定のコンストラクターを作成します。  
   
      後続の手順で、コンストラクターにさらにコードを追加します。  
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4.  `Main` メソッドをクラスに追加します。  
+4.  
+  `Main` メソッドをクラスに追加します。  
   
     1.  適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメント。 (属性は必要ありません Visual basic で Windows フォーム アプリケーション開発された Visual Basic の使用をシングル スレッド アパートメント モデルを既定であるためです。)  
   
@@ -94,7 +96,8 @@ ms.locfileid: "54581983"
      [!code-csharp[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6.  <xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。  
+6.  
+  <xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。  
   
      次のコード例は、イベントをメソッドに関連付ける方法を示します。  
   
