@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d49e9dec1cdbd2942fb9d1b94be32e44ca4311a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690411"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748061"
 ---
 # <a name="trees-in-wpf"></a>WPF のツリー
 多くのテクノロジ要素とコンポーネントは、開発者は直接レンダリングや、アプリケーションの動作に影響を与える、ツリー内のオブジェクト ノード、操作をツリー構造で編成されています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] またプログラム要素間のリレーションシップを定義するのにいくつかのツリー構造のメタファを使用します。 WPF 開発者の大部分できますコードでアプリケーションを作成または XAML で概念的には、オブジェクト ツリーの比喩を考えながら、アプリケーションの部分的な定義が、特定の API を呼び出すかをいくつかの一般的なのではなく、その特定のマークアップを使用する方法XML DOM で使用するなどのオブジェクトのツリー操作 API WPF のツリーの比喩ビューを提供する 2 つのヘルパー クラスが公開<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>します。 用語のビジュアル ツリーと論理ツリーも使用されます、WPF ドキュメントのため、同じようなツリーは特定のキーの WPF 機能の動作を理解するのに役立ちます。 このトピックでは、ビジュアル ツリーと論理ツリーが表す内容を定義し、このようなツリーが、全体的なオブジェクトのツリーの概念に関連する方法について説明しますが導入されています<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>秒。  
@@ -29,7 +29,7 @@ ms.locfileid: "54690411"
   
 <a name="logical_tree"></a>   
 ## <a name="the-logical-tree"></a>論理ツリー  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、それらの要素のバックアップを作成するオブジェクトのプロパティを設定して UI 要素にコンテンツを追加します。 項目を追加するなど、<xref:System.Windows.Controls.ListBox>コントロールを操作することによってその<xref:System.Windows.Controls.ItemsControl.Items%2A>プロパティ。 これによりにアイテムを配置する、<xref:System.Windows.Controls.ItemCollection>つまり、<xref:System.Windows.Controls.ItemsControl.Items%2A>プロパティの値。 同様に、追加するオブジェクトを<xref:System.Windows.Controls.DockPanel>、操作するその<xref:System.Windows.Controls.Panel.Children%2A>プロパティの値。 ここでは、オブジェクトを追加する、<xref:System.Windows.Controls.UIElementCollection>します。 コード例では、次を参照してください。 [、要素を動的に追加](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、それらの要素のバックアップを作成するオブジェクトのプロパティを設定して UI 要素にコンテンツを追加します。 項目を追加するなど、<xref:System.Windows.Controls.ListBox>コントロールを操作することによってその<xref:System.Windows.Controls.ItemsControl.Items%2A>プロパティ。 これによりにアイテムを配置する、<xref:System.Windows.Controls.ItemCollection>つまり、<xref:System.Windows.Controls.ItemsControl.Items%2A>プロパティの値。 同様に、追加するオブジェクトを<xref:System.Windows.Controls.DockPanel>、操作するその<xref:System.Windows.Controls.Panel.Children%2A>プロパティの値。 ここでは、オブジェクトを追加する、<xref:System.Windows.Controls.UIElementCollection>します。 コード例では、次を参照してください。[方法。要素を動的に追加](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms752374(v=vs.100))します。  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]でリスト項目を配置するとき、 <xref:System.Windows.Controls.ListBox> 、コントロール、または他の UI 要素で、 <xref:System.Windows.Controls.DockPanel>、使用することも、<xref:System.Windows.Controls.ItemsControl.Items%2A>と<xref:System.Windows.Controls.Panel.Children%2A>プロパティ、明示的または暗黙的に、次の例のようにします。  
   

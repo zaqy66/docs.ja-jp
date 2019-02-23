@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: 1405bb43e971f02bafa892de84a6b8acde2e319b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c3882e29caa0c327242ed3e815b7c17ef0e2075
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691425"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746679"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>マネージド HTML DOM (Document Object Model) の使用
 マネージ HTML ドキュメント オブジェクト モデル (DOM) に基づくラッパーを提供する、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]の Internet Explorer によって公開されている HTML クラス。 ホストされている HTML ページを操作するこれらのクラスを使用して、<xref:System.Windows.Forms.WebBrowser>コントロール、または最初から新しいページを構築します。  
@@ -39,6 +39,3 @@ ms.locfileid: "54691425"
   
 ## <a name="related-sections"></a>関連項目  
  [WebBrowser コントロール](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
-  
-## <a name="see-also"></a>関連項目
-- [DHTML オブジェクト モデルについて](https://msdn.microsoft.com/library/default.asp?url=/workshop/author/om/doc_object.asp)

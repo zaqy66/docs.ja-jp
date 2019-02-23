@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 5eccafd3a7fb75f0458fa50b1c557f4b3ddb7c27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: def502855168b8e10f57e1426191f4e0c26e9f67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720484"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745730"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox に関する「方法」トピック
 このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.RichTextBox>コントロール。  
@@ -22,7 +22,6 @@ ms.locfileid: "54720484"
  [プログラムによる RichTextBox での選択の変更](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [RichTextBox コンテンツの保存、読み込み、および印刷](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [カスタム コンテキスト メニューを RichTextBox に配置する](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [方法: RichTextBox のコンテンツの既定のホストを置き換えます](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.TextBox>

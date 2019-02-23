@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683925"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746605"
 ---
 # <a name="varieties-of-custom-controls"></a>さまざまなカスタム コントロール
 .NET Framework を使用して、新しいコントロールを開発し、実装できます。 継承によって、使い慣れたユーザー コントロールや既存のコントロールの機能を拡張できます。 また、独自の描画を実行するカスタム コントロールを作成することもできます。  
@@ -24,7 +24,7 @@ ms.locfileid: "54683925"
  作成するコントロールの種類を決めるときに、判断に迷うことがあります。 このトピックでは、継承できる各種コントロールの違いを示し、プロジェクトに合わせて特定の種類のコントロールを選択する方法について説明します。  
   
 > [!NOTE]
->  Web フォームで使用するコントロールを作成する方法については、「[カスタム ASP.NET サーバー コントロールの開発](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)」を参照してください。  
+>  Web フォームで使用するコントロールを作成する方法については、「[カスタム ASP.NET サーバー コントロールの開発](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))」を参照してください。  
   
 ## <a name="base-control-class"></a>基本コントロール クラス  
  <xref:System.Windows.Forms.Control>クラスは、Windows フォーム コントロールの基本クラス。 このクラスは、Windows フォーム アプリケーションでのビジュアル表示に必要なインフラストラクチャを提供します。  
@@ -104,11 +104,11 @@ ms.locfileid: "54683925"
 ## <a name="custom-design-experience"></a>カスタム デザイン エクスペリエンス  
  カスタムのデザイン時エクスペリエンスを実装する必要がある場合は、独自のデザイナーを作成できます。 複合コントロールからカスタム デザイナー クラスを派生、<xref:System.Windows.Forms.Design.ParentControlDesigner>または<xref:System.Windows.Forms.Design.DocumentDesigner>クラス。 拡張とカスタムのコントロールからカスタム デザイナー クラスを派生、<xref:System.Windows.Forms.Design.ControlDesigner>クラス。  
   
- 使用して、<xref:System.ComponentModel.DesignerAttribute>にコントロールをデザイナーに関連付けます。 詳細については、次を参照してください。[デザイン時サポートの拡張](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)と[方法。デザイン時機能を活用した Windows フォーム コントロールを作成](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)です。  
+ 使用して、<xref:System.ComponentModel.DesignerAttribute>にコントロールをデザイナーに関連付けます。 詳細については、次を参照してください。[デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))と[方法。デザイン時機能を活用した Windows フォーム コントロールを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))です。  
   
 ## <a name="see-also"></a>関連項目
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [方法: 単純な Windows フォーム コントロールを開発します。](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
 - [複合 Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
-- [デザイン時サポートの拡張](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
-- [方法: デザイン時機能を活用した Windows フォーム コントロールを作成します。](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+- [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [方法: デザイン時機能を活用した Windows フォーム コントロールを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

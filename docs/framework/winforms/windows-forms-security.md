@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865645"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746786"
 ---
 # <a name="windows-forms-security"></a>Windows フォームのセキュリティ
 Windows フォームには、コード ベース (セキュリティ レベルは、コードを実行しているユーザーに関係なく、コードの設定) であるセキュリティ モデルが機能します。 これは既に、コンピューター システム上の場所に可能性のあるすべてのセキュリティ スキーマです。 これらは、(など、ゾーン ベースのセキュリティ Internet Explorer で使用可能なブラウザーやオペレーティング システム (Windows NT の資格情報に基づくセキュリティ) などを含めることができます。  
@@ -33,10 +33,10 @@ Windows フォームには、コード ベース (セキュリティ レベル�
  ウィンドウ操作の実行、部分的に信頼された環境でのクリップボードの使用とアンマネージ コードへの呼び出しについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [NIB: 既定のセキュリティ ポリシー](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [既定のセキュリティ ポリシー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  完全な信頼、ローカルのイントラネットとインターネットのアクセス許可セットで付与される既定のアクセス許可を一覧表示します。  
   
- [NIB: 一般的なセキュリティ ポリシーの管理](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [全般的なセキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  .NET Framework のセキュリティ ポリシーの管理とアクセス許可の昇格についてを説明します。  
   
  [危険なアクセス許可とポリシー管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -45,7 +45,7 @@ Windows フォームには、コード ベース (セキュリティ レベル�
  [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)  
  安全に .NET Framework に対してコードを記述するためのベスト プラクティスを説明するトピックへのリンク。  
   
- [NIB: アクセス許可を要求します。](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [アクセス許可を要求します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  どのようなアクセス許可をコードの実行に必要なランタイムに知らせるために属性の使用について説明します。  
   
  [セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)  
@@ -54,8 +54,8 @@ Windows フォームには、コード ベース (セキュリティ レベル�
  [コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)  
  実行時のセキュリティ ポリシー、.NET Framework の操作の基礎について説明します。  
   
- [NIB: がセキュリティ ポリシーを変更するタイミングを決定します。](https://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
+ [セキュリティ ポリシーを変更するタイミングを決定します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  アプリケーションは、既定のセキュリティ ポリシーから分岐する必要がある場合を判断する方法について説明します。  
   
- [NIB: セキュリティ ポリシーを展開します。](https://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [セキュリティ ポリシーを展開します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  セキュリティ ポリシーの変更をデプロイするための推奨される方法について説明します。

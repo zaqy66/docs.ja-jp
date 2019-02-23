@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543225"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748035"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 Windows フォーム デザイナーでは、これを実現するさまざまなレイアウト ツールを提供します。 最も重要なの 1 つは、<xref:System.Windows.Forms.Design.Behavior.SnapLine>機能します。  
@@ -154,7 +154,7 @@ ms.locfileid: "54543225"
   
 1.  <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールをフォームにドラッグします。  
   
-2.  サイズ変更、<xref:System.Windows.Forms.Button>角をドラッグしてサイズ変更ハンドルの 1 つをグラブを行ったによって制御します。 詳細については、次を参照してください。[方法。Windows フォーム上のコントロールのサイズを変更](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)します。  
+2.  サイズ変更、<xref:System.Windows.Forms.Button>角をドラッグしてサイズ変更ハンドルの 1 つをグラブを行ったによって制御します。 詳細については、「[方法: Windows フォーム上のコントロールのサイズを変更](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)します。  
   
 3.  までのいずれかのサイズ変更ハンドルをドラッグして、<xref:System.Windows.Forms.Button>コントロールの枠線が別のコントロールに揃えられます。 スナップ線が表示されるに注意してください。 また、サイズ変更ハンドルをスナップ線によって示される位置にスナップすることに注意してください。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "54543225"
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>デザイン環境のスナップ線を無効にするには  
   
-1.  **ツール**メニューを開き、**オプション** ダイアログ ボックス。 Windows フォーム デザイナー ダイアログ ボックスを開きます。 詳細については、「 [全般、Windows フォーム デザイナー、オプション ダイアログ ボックス](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)です。  
+1.  **ツール**メニューを開き、**オプション** ダイアログ ボックス。 Windows フォーム デザイナー ダイアログ ボックスを開きます。 詳細については、「 [全般、Windows フォーム デザイナー、オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))です。  
   
 2.  選択、**全般**ノード。 **レイアウト モード**から選択を変更するセクションで、**スナップ**に**SnapToGrid**します。  
   

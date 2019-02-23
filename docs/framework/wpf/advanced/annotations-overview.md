@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543475"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746443"
 ---
 # <a name="annotations-overview"></a>注釈の概要
 用紙にメモやコメントを書くことは普通の行為であり、人はそれを当たり前のことと思っています。 そのようなメモやコメントが "注釈" です。注釈をドキュメントに追加することで情報に目印を付け、興味のある内容を強調表示し、後で参照します。 印刷したドキュメントにメモを書くことは簡単で一般的な行為ですが、電子ドキュメントに個人的なコメントを追加する機能は利用できるとしても一般的に非常に限定されています。  
@@ -75,4 +75,4 @@ ms.locfileid: "54543475"
 - [ContextMenu の概要](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
 - [コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)
 - [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [方法: コマンド メニュー アイテムを追加します。](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [方法: コマンド メニュー アイテムを追加します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

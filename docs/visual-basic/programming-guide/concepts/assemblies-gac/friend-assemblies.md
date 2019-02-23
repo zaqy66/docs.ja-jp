@@ -2,12 +2,12 @@
 title: フレンド アセンブリ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-ms.openlocfilehash: efb22ce25bdd39fd7a511503eb3ff6792639d29e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b91f894f9b10c85eb322b4421fd0473335df7a3
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579798"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748155"
 ---
 # <a name="friend-assemblies-visual-basic"></a>フレンド アセンブリ (Visual Basic)
 *フレンド アセンブリ*別のアセンブリにアクセスできるアセンブリ[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)型およびメンバー。 フレンド アセンブリとして指定した場合、public として宣言されていないその型とメンバーに、他のアセンブリからアクセスできるようになります。 この方法は、特に次の状況で利便性を発揮します。  
@@ -69,5 +69,5 @@ End Class
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.Net アセンブリ](../../../../standard/assembly/index.md)
 - [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)

@@ -11,15 +11,16 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
-ms.openlocfilehash: a54223c45c7e896676a9b27274bb8feb4acd27e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0971fd02e27ea718af7fafe2404cd77d5946e25
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568522"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748688"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>TableLayoutPanel コントロールの概要
-<xref:System.Windows.Forms.TableLayoutPanel> コントロールは、その内容をグリッド内に配置します。 レイアウトがデザイン時および実行時の両方で実行されるため、アプリケーション環境の変化に応じて動的に変更できます。 これにより、パネル内のコントロールを適切にサイズ変更することができるため、親コントロールのサイズ変更や、ローカライズによるテキスト長の変更などの変更に対応できます。  
+
+  <xref:System.Windows.Forms.TableLayoutPanel> コントロールは、その内容をグリッド内に配置します。 レイアウトがデザイン時および実行時の両方で実行されるため、アプリケーション環境の変化に応じて動的に変更できます。 これにより、パネル内のコントロールを適切にサイズ変更することができるため、親コントロールのサイズ変更や、ローカライズによるテキスト長の変更などの変更に対応できます。  
   
  Windows フォーム コントロールは、<xref:System.Windows.Forms.TableLayoutPanel> の他のインスタンスを含めて、<xref:System.Windows.Forms.TableLayoutPanel> コントロールの子にすることができます。 これにより、実行時の変化に適応する高度なレイアウトを構築することができます。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "54568522"
   
 3.  [方法: TableLayoutPanel コントロールの列と行を編集します。](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.FlowLayoutPanel>

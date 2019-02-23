@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: DataGrid コントロールで SQL Server データベースのデータを表示する'
+title: 'チュートリアル: DataGrid コントロールでの SQL Server データベースのデータを表示'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197137"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748415"
 ---
-# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>チュートリアル: DataGrid コントロールで SQL Server データベースからデータを表示します。
+# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>チュートリアル: DataGrid コントロールでの SQL Server データベースのデータを表示
 
 このチュートリアルで、SQL Server データベースからデータを取得およびそのデータを表示、<xref:System.Windows.Controls.DataGrid>コントロール。 ADO.NET Entity Framework を使用するには、データを表し、エンティティ クラスから指定されたデータを取得するクエリを記述するのに LINQ を使用するエンティティ クラスを作成します。
 
@@ -73,9 +73,9 @@ ms.locfileid: "47197137"
 
      ![DataGrid のあるウィンドウ](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
-4.  <xref:System.Windows.Window> を選択します。
+4.  <xref:System.Windows.Window>を選択します。
 
-5.  イベント ハンドラーを作成する [プロパティ] ウィンドウまたは XAML のエディターを使用して、<xref:System.Windows.Window>という`Window_Loaded`の<xref:System.Windows.FrameworkElement.Loaded>イベント。 詳細については、次を参照してください。[方法: 単純なイベント ハンドラーを作成する](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)します。
+5.  イベント ハンドラーを作成する [プロパティ] ウィンドウまたは XAML のエディターを使用して、<xref:System.Windows.Window>という`Window_Loaded`の<xref:System.Windows.FrameworkElement.Loaded>イベント。 詳細については、「[方法 :単純なイベント ハンドラーを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))です。
 
      次は、MainWindow.xaml の XAML を示します。
 
@@ -100,4 +100,4 @@ ms.locfileid: "47197137"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Controls.DataGrid>
-- [操作を WPF アプリケーションで Entity Framework で開始するにはどうすればでしょうか。](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [How Do i:WPF アプリケーションで Entity Framework で開始できますか。](https://go.microsoft.com/fwlink/?LinkId=159868)

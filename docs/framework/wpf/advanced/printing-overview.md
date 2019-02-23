@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: ef88c9c2a7569be518794ee9083d1bf5c266d975
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7e35fd1753f7136d7be1e2190b4bed5116e46aba
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442062"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746154"
 ---
 # <a name="printing-overview"></a>印刷の概要
 Windows Presentation Foundation (WPF) を使用しているアプリケーション開発者に Microsoft .NET Framework では、印刷と印刷システムの管理の豊富な新しいセットがある[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]します。 また、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] によって、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを作成する開発者と、アンマネージ コードを使用する開発者も、これらの印刷システム拡張機能の一部を使用できます。 この新しい機能の中核となるのが、新しい [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ファイル形式と [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 印刷パスです。  
@@ -31,13 +31,13 @@ Windows Presentation Foundation (WPF) を使用しているアプリケーショ
 ## <a name="about-xps"></a>XPS について  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] は、電子ドキュメント形式、スプール ファイル形式、およびページ記述言語です。 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]、その他の業界標を使用してクロス プラットフォームのドキュメントを作成する OpenDocument 形式の 1 つです。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] は、デジタル ドキュメントの作成、共有、印刷、表示、アーカイブを行うプロセスを簡略化します。 に関する追加情報について[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]を参照してください[XPS ドキュメント](/windows/desktop/printdocs/documents)します。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] を使用した [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ベースのコンテンツの印刷手法のいくつかは、[プログラムによる XPS ファイルの印刷](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)に関するページで説明されています。 このトピックに含まれるコンテンツの確認中にこれらのサンプルを参照すると、役に立つ場合があります。 (アンマネージ コードの開発者がドキュメントを参照してください、 [MXDC_ESCAPE 関数](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx)します。 Windows フォーム開発者が使用する必要があります、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]で、<xref:System.Drawing.Printing>完全サポートしていない名前空間[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]印刷パスは、ただしサポート ハイブリッド GDI-XPS 印刷パス。 以下の**印刷パスのアーキテクチャ**をご覧ください。)  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] を使用した [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ベースのコンテンツの印刷手法のいくつかは、[プログラムによる XPS ファイルの印刷](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)に関するページで説明されています。 このトピックに含まれるコンテンツの確認中にこれらのサンプルを参照すると、役に立つ場合があります。 (アンマネージ コードの開発者がドキュメントを参照してください、 [MXDC_ESCAPE 関数](/windows/desktop/printdocs/mxdc-escape)します。 Windows フォーム開発者が使用する必要があります、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]で、<xref:System.Drawing.Printing>完全サポートしていない名前空間[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]印刷パスは、ただしサポート ハイブリッド GDI-XPS 印刷パス。 以下の**印刷パスのアーキテクチャ**をご覧ください。)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 印刷パス  
  [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]印刷パスは、新しい[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]Windows アプリケーションでの印刷の処理方法を再定義する機能です。 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] は、ドキュメントのプレゼンテーション言語 (RTF など)、印刷スプーラの形式 (WMF など)、ページ記述言語 (PCL や Postscript など) に置き換えることができるため、新しい印刷パスは、アプリケーションの公開から印刷ドライバーまたはデバイスでの最終処理まで、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 形式を維持します。  
   
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 印刷パスは、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] のプリンター ドライバー モデル (XPSDrv) 上に構築されています。XPSDrv により、開発者は [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] の印刷、色のサポートの向上、および印刷のパフォーマンスの大幅な向上など、いくつかの利点を得られます。 (XPSDrv の詳細については、「[Windows Driver Kit (WDK)](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx)」をご覧ください。)  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 印刷パスは、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] のプリンター ドライバー モデル (XPSDrv) 上に構築されています。XPSDrv により、開発者は [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] の印刷、色のサポートの向上、および印刷のパフォーマンスの大幅な向上など、いくつかの利点を得られます。 (XPSDrv の詳細については、次を参照してください、 [Windows Driver Kit ドキュメント](/windows-hardware/drivers/)。)。  
   
  印刷スプーラの操作[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]ドキュメントは、基本的には、Windows の以前のバージョンと同じです。 ただし、既存の [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 印刷パスに加えて [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 印刷パスをサポートするように強化されました。 新しい印刷パスは、ネイティブに [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] スプール ファイルを使用します。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] の以前のバージョン向けに記述されたユーザー モードのプリンター ドライバーは引き続き機能しますが、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 印刷パスを使用するためには、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] プリンター ドライバー (XPSDrv) が必要になります。  
   
@@ -57,7 +57,7 @@ Windows Presentation Foundation (WPF) を使用しているアプリケーショ
   
 -   印刷スキーマ。 パブリックのスキーマは定期的に更新され、デバイスの機能を迅速に拡張することができます。 (下記の「**PrintTicket と PrintCapabilities**」をご覧ください。)  
   
--   拡張可能なフィルター パイプライン。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] プリンター ドライバー (XPSDrv) フィルター パイプラインは、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ドキュメントの直接的および拡張性の高い印刷を可能にするように作られています。 ("XPSDrv"を検索で、 [Windows Driver Kit](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx))。  
+-   拡張可能なフィルター パイプライン。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] プリンター ドライバー (XPSDrv) フィルター パイプラインは、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ドキュメントの直接的および拡張性の高い印刷を可能にするように作られています。 詳細については、次を参照してください。 [XPSDrv プリンター ドライバー](/windows-hardware/drivers/print/xpsdrv-printer-drivers)します。 
   
 ### <a name="print-path-architecture"></a>印刷パスのアーキテクチャ  
  両方[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]と .NET Framework アプリケーションのサポート[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Windows フォーム アプリケーションを使用して、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]に[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]を作成するには変換[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]書式設定されたコンテンツ、の[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]プリンター ドライバー (XPSDrv)。 これらのアプリケーションでは、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 印刷パスを使用する必要はなく、[!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] ベースの印刷を引き続き使用できます。 ただし、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] の機能と拡張機能のほとんどは、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 印刷パスを対象としたアプリケーション以外では使用できません。  
@@ -107,11 +107,11 @@ Windows Presentation Foundation (WPF) を使用しているアプリケーショ
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 印刷パス  
- 中に[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションでネイティブ サポート、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]印刷パスは、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]と Windows フォーム アプリケーションは、いくつかの利点を実行できるも[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]機能します。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] プリンター ドライバー (XPSDrv) は、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ベースの出力を [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 形式に変換できます。 使用して高度なシナリオは、コンテンツのカスタムの変換はサポートされて、 [Microsoft XPS ドキュメント コンバーター (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)します。 同様に、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションに出力することもできます、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]印刷パスのいずれかを呼び出すことによって、<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>または<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>印刷キューのクラスをターゲットとして XpsDrv 以外のプリンターを指定するとします。  
+ 中に[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションでネイティブ サポート、[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]印刷パスは、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]と Windows フォーム アプリケーションは、いくつかの利点を実行できるも[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]機能します。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] プリンター ドライバー (XPSDrv) は、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ベースの出力を [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 形式に変換できます。 使用して高度なシナリオは、コンテンツのカスタムの変換はサポートされて、 [Microsoft XPS ドキュメント コンバーター (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)します。 同様に、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションに出力することもできます、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]印刷パスのいずれかを呼び出すことによって、<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>または<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>印刷キューのクラスをターゲットとして XpsDrv 以外のプリンターを指定するとします。  
 
 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] の機能またはサポートを必要としないアプリケーションでは、現在の [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 印刷パスは変更されません。  
   
--   参考資料、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]印刷パスとさまざまな[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]、変換オプションを参照してください[Microsoft XPS ドキュメント コンバーター (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)で"XPSDrv"と、 [Windows Driver Kit](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).  
+-   参考資料、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]印刷パスとさまざまな[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]、変換オプションを参照してください[Microsoft XPS ドキュメント コンバーター (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)と[XPSDrv プリンター ドライバー](/windows-hardware/drivers/print/xpsdrv-printer-drivers)します。  
   
 <a name="XPS_Driver_Model_intro"></a>   
 ## <a name="xpsdrv-driver-model"></a>XPSDrv ドライバー モデル  
@@ -147,4 +147,4 @@ Windows Presentation Foundation (WPF) を使用しているアプリケーショ
 - [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [XPS ドキュメント](/windows/desktop/printdocs/documents)
 - [ドキュメントのシリアル化および保存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
-- [Microsoft XPS ドキュメント コンバーター (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)
+- [Microsoft XPS ドキュメント コンバーター (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

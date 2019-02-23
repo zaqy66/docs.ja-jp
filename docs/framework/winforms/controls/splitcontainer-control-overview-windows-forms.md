@@ -6,18 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d96f754c9e28455b6494c17d4d295837c008f535
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497287"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747224"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer コントロールの概要 (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロールは複合と考えることができ、移動可能なバーで区切られた 2 つのパネルです。 マウス ポインターがバーの上に移動すると、ポインターの形が変わり、バーが移動可能であることを示します。  
   
 > [!IMPORTANT]
->  **ツールボックス**、<xref:System.Windows.Forms.SplitContainer>置換を制御、 <xref:System.Windows.Forms.Splitter> Visual Studio の以前のバージョンであるコントロール。 <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter>クラスも含める、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]既存のアプリケーションとの互換性のために使用するぜひが、<xref:System.Windows.Forms.SplitContainer>新しいプロジェクトのコントロール。  
+>  **ツールボックス**、<xref:System.Windows.Forms.SplitContainer>置換を制御、 <xref:System.Windows.Forms.Splitter> Visual Studio の以前のバージョンであるコントロール。 
+  <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter>クラスも含める、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]既存のアプリケーションとの互換性のために使用するぜひが、<xref:System.Windows.Forms.SplitContainer>新しいプロジェクトのコントロール。  
   
  <xref:System.Windows.Forms.SplitContainer>コントロール、複雑なユーザー インターフェイスを作成することができます。 多くの場合、1 つのパネルで選択範囲を決定、その他のパネルに表示されるオブジェクト。 この配置は、情報の表示と参照に対して非常に効果的です。 2 つのパネルで地域では、情報を集計して、バー、または「分割」により、パネルのサイズを変更するユーザーに簡単です。  
   
@@ -52,4 +53,4 @@ Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロ�
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
-- [SplitContainer コントロールのサンプル](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+- [SplitContainer コントロールのサンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

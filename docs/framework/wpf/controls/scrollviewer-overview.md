@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: bcd51903879675f2607996c47aab9645217e9e21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bee47ed5294af66bcaa45254105c00d825042ad
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519620"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746060"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer の概要
 ユーザー インターフェイス内のコンテンツは、多くの場合、コンピューター画面の表示領域よりも大きいです。 <xref:System.Windows.Controls.ScrollViewer>コントロール内のコンテンツのスクロールを有効にする便利な手段を提供する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは、<xref:System.Windows.Controls.ScrollViewer>要素と、いくつかの使用例を提供します。  
@@ -64,7 +64,7 @@ ms.locfileid: "54519620"
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [スクロール ビューアーを作成します。](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)
+- [方法: スクロール ビューアーを作成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [ScrollBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
 - [コントロール](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

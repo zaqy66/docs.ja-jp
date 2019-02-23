@@ -2,12 +2,6 @@
 title: プログラミングの概念 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147243"
 ---
 # <a name="programming-concepts-visual-basic"></a>プログラミングの概念 (Visual Basic)
 このセクションでは、Visual Basic 言語でのプログラミングの概念について説明します。  
@@ -16,7 +10,7 @@ ms.locfileid: "53147243"
   
 |Title|説明|  
 |-----------|-----------------|  
-|[アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|アセンブリを作成および使用する方法について説明します。|  
+|[.Net アセンブリ](../../../standard/assembly/index.md)|アセンブリを作成および使用する方法について説明します。|  
 |[Async および Await を使用した非同期プログラミング (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|[Async](../../../visual-basic/language-reference/modifiers/async.md) キーワードと [Await](../../../visual-basic/language-reference/operators/await-operator.md) キーワードを使用して非同期ソリューションを記述する方法を説明します。 チュートリアルが含まれています。|  
 |[属性の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|属性を使用して、型、フィールド、メソッド、プロパティなどのプログラミング要素に関する追加情報を指定する方法について説明します。|  
 |[呼び出し元情報 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|メソッドの呼び出し元に関する情報を取得する方法について説明します。 この情報には、ソース コードのファイル パスと行番号および呼び出し元のメンバー名が含まれます。|  

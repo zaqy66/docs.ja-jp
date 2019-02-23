@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685530"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745921"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps メソッド
 指定した ParamDef トークンによって参照されるパラメーターのメタデータ値を取得します。  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out]ワイド文字で返されるサイズ`szName`します。  
   
  `pdwAttr`  
- [out]パラメーターに関連付けられているすべての属性フラグへのポインター。  
+ [out]パラメーターに関連付けられているすべての属性フラグへのポインター。 これは、ビットマスクの`CorParamAttr`値。  
   
  `pdwCPlusTypeFlag`  
  [out]パラメーターを指定するフラグへのポインター、<xref:System.ValueType>します。  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out]サイズ`ppValue`ワイド文字、または場合は 0 で`ppValue`文字列を保持しません。  
   
+## <a name="remarks"></a>Remarks
+
+シーケンスの値で`pulSequence`パラメーターの 1 から始まります。 戻り値は、シーケンス番号は 0 です。
+
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   

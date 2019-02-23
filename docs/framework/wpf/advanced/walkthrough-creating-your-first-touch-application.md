@@ -10,12 +10,12 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 34a534653455449233c2908f4226cdb3a9bb9867
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6a59d3e80e8eb3810b04e1535b72bc4b133b7df
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724240"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747678"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>チュートリアル: 初めてのタッチ アプリケーションの作成
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] タッチに応答するアプリケーションを有効にします。 たとえば、いずれかを使用するアプリケーションとやり取りするまたはこのチュートリアルは、ユーザーに移動できるようにするアプリケーションを作成します。 タッチ スクリーンなどのタッチを検知するデバイスに複数の指がサイズ変更、またはタッチを使用して 1 つのオブジェクトを回転します。  
@@ -33,7 +33,7 @@ ms.locfileid: "54724240"
   
 #### <a name="to-create-the-application"></a>アプリケーションを作成するには  
   
-1.  Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`BasicManipulation`します。 詳細については、「[方法 :新しい WPF アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)します。  
+1.  Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`BasicManipulation`します。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
   
 2.  MainWindow.xaml の内容を次の XAML に置き換えます。  
   

@@ -1,15 +1,15 @@
 ---
-title: 'チュートリアル: Visual Studio (Visual Basic) でのマネージ アセンブリから型の埋め込み'
+title: 'チュートリアル: Visual Studio (Visual Basic) でマネージ アセンブリから型を埋め込む'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245476"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747545"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) でのマネージ アセンブリから型の埋め込み
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) でマネージ アセンブリから型を埋め込む
 厳密な名前を持つマネージド アセンブリから型情報を埋め込むと、アプリケーション内で型を疎結合して、バージョンに依存しないプログラムを実現できます。 つまり、各バージョン用の再コンパイルを必要とすることなく、マネージド ライブラリの複数のバージョンから型を使用するプログラムを記述できます。  
   
  型の埋め込みは、COM 相互運用と共によく使用されます (Microsoft Office からのオートメーション オブジェクトを使用するアプリケーションなど)。 型情報を埋め込むと、同じビルドのプログラムを、別のコンピューター上にある別バージョンの Microsoft Office と連携させることができます。 ただし、型の埋め込みはフル マネージド ソリューションと共に使用することもできます。  
@@ -222,8 +222,8 @@ End Function
   
 6.  ファイル エクスプローラーで、出力パスのフォルダー (たとえば、C:\TypeEquivalenceSample) を開きます。 TypeEquivalenceClient.exe をダブルクリックして、プログラムを実行します。 プログラムでは、再コンパイルを行わなくても、新バージョンの TypeEquivalenceRuntime アセンブリが反映されます。  
   
-## <a name="see-also"></a>関連項目  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)  
- [アセンブリを使用したプログラミング](../../../../framework/app-domains/programming-with-assemblies.md)  
- [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>関連項目
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)
+- [アセンブリを使用したプログラミング](../../../../framework/app-domains/programming-with-assemblies.md)
+- [.Net アセンブリ](../../../../standard/assembly/index.md)

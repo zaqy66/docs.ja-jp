@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 9db511579e273a19c18800f2e0861ef4e9c00ab0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5378744ea43b72bafb77c9d58c1a8d848c3a8fc9
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700573"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745516"
 ---
 # <a name="tooltip-overview"></a>ToolTip の概要
 ツールヒントは、ユーザーが経由の要素の上にマウス ポインターを置いたときに表示される小さいポップアップ ウィンドウ、<xref:System.Windows.Controls.Button>します。 このトピックでは、ツールヒントを紹介し、ツールヒントの内容を作成およびカスタマイズする方法について説明します。  
@@ -67,7 +67,7 @@ ms.locfileid: "54700573"
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>ToolTipService の時間間隔プロパティの使用  
  <xref:System.Windows.Controls.ToolTipService>時間が表示されます、次のプロパティにツールヒントを設定するクラスが用意されています: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>、 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>、および<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>します。  
   
- 使用、<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>と<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>プロパティ遅延を指定する通常の簡単な前に、<xref:System.Windows.Controls.ToolTip>が表示されますとどのくらいの期間を指定することも、<xref:System.Windows.Controls.ToolTip>引き続き表示されます。 詳細については、「[方法 :ツールヒントの表示が遅延](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7)します。  
+ 使用、<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>と<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>プロパティ遅延を指定する通常の簡単な前に、<xref:System.Windows.Controls.ToolTip>が表示されますとどのくらいの期間を指定することも、<xref:System.Windows.Controls.ToolTip>引き続き表示されます。 詳細については、「[方法 :ツールヒントの表示が遅延](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747264(v=vs.90))します。  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>プロパティは、それらのマウス ポインターをすばやく移動するときを初期遅延なしのさまざまなコントロールのツールヒントが表示されるかどうかを決定します。 詳細については、<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>プロパティを参照してください[Use the BetweenShowDelay Property](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)します。  
   

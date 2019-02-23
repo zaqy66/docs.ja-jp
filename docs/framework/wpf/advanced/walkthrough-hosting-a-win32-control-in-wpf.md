@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 8e6da9e9e48238c33a3522034c53ecdcb5ec99cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 047ccd4ea4ba83c8d7427559f3ee76cc3547a430
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691555"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747532"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF の Win32 コントロールのホスト
 Windows Presentation Foundation (WPF) は、アプリケーションを作成するための豊富な環境を提供します。 ただし、Win32 コードのかなりの投資を存在する場合があります、少なくともいくつ再利用するより効果的なが、WPF アプリケーションでのコードではなく完全に書き換えます。 WPF には、WPF ページ上の Win32 ウィンドウをホストするための簡単なメカニズムが用意されています。  
@@ -140,16 +140,16 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
  ユーザー選択もできます項目、リスト ボックスをクリックして、従来の Win32 アプリケーションのと同様。 表示されるデータは、項目を追加するかを選択すると、追加すると、によって、ユーザーがリスト ボックスの状態を変更するたびが更新されます。  
   
- 項目を追加するリスト ボックスの送信、 [ `LB_ADDSTRING`メッセージ](https://msdn.microsoft.com/library/windows/desktop/bb775181(v=vs.85).aspx)します。 項目を削除する送信[ `LB_GETCURSEL` ](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx)現在の選択範囲のインデックスを取得し、 [ `LB_DELETESTRING` ](https://msdn.microsoft.com/library/windows/desktop/bb775183(v=vs.85).aspx)アイテムを削除します。 また、サンプルが送信され[ `LB_GETCOUNT` ](https://msdn.microsoft.com/library/windows/desktop/bb775195(v=vs.85).aspx)、返される値を使用して、項目の数を示す表示を更新するとします。 これら両方のインスタンスの[ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx)前のセクションで説明されている PInvoke 宣言のいずれかを使用します。  
+ 項目を追加するリスト ボックスの送信、 [ `LB_ADDSTRING`メッセージ](/windows/desktop/Controls/lb-addstring)します。 項目を削除する送信[ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel)現在の選択範囲のインデックスを取得し、 [ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring)アイテムを削除します。 また、サンプルが送信され[ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount)、返される値を使用して、項目の数を示す表示を更新するとします。 これら両方のインスタンスの[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)前のセクションで説明されている PInvoke 宣言のいずれかを使用します。  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- ユーザーは、項目を選択するか、その選択を変更、コントロールはホスト ウィンドウを送信することで通知を[`WM_COMMAND`メッセージ](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx)を発生させる、<xref:System.Windows.Interop.HwndHost.MessageHook>ページのイベント。 ハンドラーは、ホスト ウィンドウのメイン ウィンドウ プロシージャと同じ情報を受け取ります。 また、ブール値への参照を渡します`handled`します。 設定する`handled`に`true`をメッセージを処理して、それ以上の処理が必要なことを示します。  
+ ユーザーは、項目を選択するか、その選択を変更、コントロールはホスト ウィンドウを送信することで通知を[`WM_COMMAND`メッセージ](/windows/desktop/menurc/wm-command)を発生させる、<xref:System.Windows.Interop.HwndHost.MessageHook>ページのイベント。 ハンドラーは、ホスト ウィンドウのメイン ウィンドウ プロシージャと同じ情報を受け取ります。 また、ブール値への参照を渡します`handled`します。 設定する`handled`に`true`をメッセージを処理して、それ以上の処理が必要なことを示します。  
   
- [`WM_COMMAND`](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx) イベントを処理するかどうかを判断する通知 ID を調べる必要がありますので、さまざまな理由から、送信されます。 上位ワードに ID が含まれている、`wParam`パラメーター。 このサンプルでは、ビットごとの演算子を使用して ID を抽出 ユーザーが行われたまたは、自分の選択を変更する場合、ID になります[ `LBN_SELCHANGE`](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)します。  
+ [`WM_COMMAND`](/windows/desktop/menurc/wm-command) イベントを処理するかどうかを判断する通知 ID を調べる必要がありますので、さまざまな理由から、送信されます。 上位ワードに ID が含まれている、`wParam`パラメーター。 このサンプルでは、ビットごとの演算子を使用して ID を抽出 ユーザーが行われたまたは、自分の選択を変更する場合、ID になります[ `LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange)します。  
   
- ときに[ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)が受信されると、サンプル インデックスを取得、選択した項目のコントロールを送信することによって、 [ `LB_GETCURSEL`メッセージ](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx)します。 作成する最初のテキストを取得する、<xref:System.Text.StringBuilder>します。 コントロールを送信、 [ `LB_GETTEXT`メッセージ](https://msdn.microsoft.com/library/windows/desktop/bb761313(v=vs.85).aspx)します。 空の渡す<xref:System.Text.StringBuilder>オブジェクトとして、`wParam`パラメーター。 ときに[ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx)から制御が戻る、<xref:System.Text.StringBuilder>選択された項目のテキストが含まれます。 このように使用[ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx)もう 1 つの PInvoke 宣言が必要です。  
+ ときに[ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)が受信されると、サンプル インデックスを取得、選択した項目のコントロールを送信することによって、 [ `LB_GETCURSEL`メッセージ](/windows/desktop/Controls/lb-getcursel)します。 作成する最初のテキストを取得する、<xref:System.Text.StringBuilder>します。 コントロールを送信、 [ `LB_GETTEXT`メッセージ](/windows/desktop/Controls/lb-gettext)します。 空の渡す<xref:System.Text.StringBuilder>オブジェクトとして、`wParam`パラメーター。 ときに[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)から制御が戻る、<xref:System.Text.StringBuilder>選択された項目のテキストが含まれます。 このように使用[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)もう 1 つの PInvoke 宣言が必要です。  
   
  最後に、設定`handled`に`true`をメッセージが処理されたことを示します。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2aa1d09b922809f42fe14bd674c2a87b9e5a3f8
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600675"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747796"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>チュートリアル: 有効にするドラッグ アンド ドロップ ユーザー コントロールで
 
@@ -38,7 +38,7 @@ ms.locfileid: "54600675"
 ## <a name="create-the-application-project"></a>アプリケーション プロジェクトを作成します。
  このセクションでは、2 つのパネルでのメイン ページを含むアプリケーション インフラストラクチャを作成します、<xref:System.Windows.Controls.TextBox>します。
 
-1.  Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`DragDropExample`します。 詳細については、「[方法 :新しい WPF アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)します。
+1.  Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`DragDropExample`します。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。
 
 2.  MainWindow.xaml を開きます。
 
@@ -222,7 +222,8 @@ ms.locfileid: "54600675"
 
      これは、<xref:System.Windows.UIElement.OnDragOver%2A>オーバーライドは、次のタスクを実行します。
 
-    -   <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.None> に設定します。
+    -   
+  <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.None> に設定します。
 
     -   実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>円ユーザー コントロールがドラッグしたデータを処理できるかどうかを判断するメソッド。
 

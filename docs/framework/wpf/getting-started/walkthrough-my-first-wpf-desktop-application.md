@@ -11,14 +11,14 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150746"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748376"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル:初めての WPF デスクトップ アプリケーション
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 
 この記事では、ほとんどの WPF アプリケーションに共通する要素を含む単純な Windows Presentation Foundation (WPF) アプリケーションを開発する方法を示します。Extensible Application Markup Language (XAML) マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データ バインド、およびスタイル。
 
@@ -66,7 +66,7 @@ ms.locfileid: "53150746"
       Visual Studio は、プロジェクトを作成し、という名前の既定アプリケーション ウィンドウのデザイナーが開きます**MainWindow.xaml**します。
 
    > [!NOTE]
-   > このチュートリアルでは、<xref:System.Windows.Controls.DataGrid>以降、.NET Framework 4 で利用可能であるコントロール。 プロジェクトが、.NET Framework 4 を対象とすることを確認以降に。 詳細については、次を参照してください。[方法.NET Framework のバージョンを対象](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)します。
+   > このチュートリアルでは、<xref:System.Windows.Controls.DataGrid>以降、.NET Framework 4 で利用可能であるコントロール。 プロジェクトが、.NET Framework 4 を対象とすることを確認以降に。 詳細については、「[方法 :.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
 
 2. 開いている*Application.xaml* (Visual Basic) または*App.xaml* (c#)。
 
@@ -327,7 +327,7 @@ ms.locfileid: "53150746"
 
 1. 開いている *`ExpenseItHome.xaml`* します。
 
-2. 追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、次を参照してください。[方法。単純なイベント ハンドラーを作成](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)です。
+2. 追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、「[方法 :単純なイベント ハンドラーを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))です。
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ ms.locfileid: "53150746"
 3. アプリケーションをビルドして実行します。
 
     > [!NOTE]
-    > エラーが発生する場合、<xref:System.Windows.Controls.DataGrid>が見つかりませんでしたかが存在しない、プロジェクトが .NET Framework 4 以降を対象とするかどうかを確認します。 詳細については、次を参照してください。[方法.NET Framework のバージョンを対象](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)します。
+    > エラーが発生する場合、<xref:System.Windows.Controls.DataGrid>が見つかりませんでしたかが存在しない、プロジェクトが .NET Framework 4 以降を対象とするかどうかを確認します。 詳細については、「[方法 :.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
 
 4. 選択、**ビュー**ボタンをクリックします。
 

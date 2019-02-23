@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714894"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746245"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成
 アプリケーションを与えることができます<xref:System.Windows.Forms.ToolStrip>から派生した独自のクラスを記述することで、プロフェッショナルな外観と動作を制御、<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型。  
@@ -30,7 +30,7 @@ ms.locfileid: "54714894"
   
  完了したら、Microsoft Office® XP のコントロールのプロフェッショナルな外観のカスタム クライアントを再利用可能なコントロールがあります。  
   
- このトピックの「単一のリストとしてコードをコピーするに、を参照してください。[方法。プロフェッショナル スタイルの ToolStrip コントロールを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)します。  
+ このトピックのコードを単一のリストとしてコピーするには、「[方法:プロフェッショナル スタイルの ToolStrip コントロールを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "54714894"
   
 2.  **ソリューション エクスプ ローラー**、選択した言語に応じて"UserControl1.cs"または「[usercontrol1.vb]」をという名前のソース ファイルを削除することによって、プロジェクトの既定のコントロールを削除します。  
   
-     詳細については、次を参照してください。 [NIB: 方法。削除、削除、および項目を除外](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)します。  
+     詳細については、「[方法 :削除、削除、および項目を除外](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))します。  
   
 3.  新しい追加<xref:System.Windows.Forms.UserControl>項目を**StackViewLibrary**プロジェクト。 新しいソース ファイルの基本の名前を付けます`StackView`します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "54714894"
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
     |ImageTransparentColor|`238, 238, 238`|  
-    |Margin|`0, 0, 0, 0`|  
+    |余白|`0, 0, 0, 0`|  
     |[間隔]|`3, 3, 3, 3`|  
     |テキスト|**メール**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
@@ -106,7 +106,8 @@ ms.locfileid: "54714894"
   
 3.  Load イベントをダブルクリックして、`StackView_Load`イベント ハンドラー。  
   
-4.  `StackView_Load` イベント ハンドラーで、次のコードをコピーして貼り付けます。  
+4.  
+  `StackView_Load` イベント ハンドラーで、次のコードをコピーして貼り付けます。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
@@ -121,7 +122,7 @@ ms.locfileid: "54714894"
   
 8.  名前の変更、`mailStackButton_Click`イベント ハンドラーを`stackButton_Click`します。  
   
-     詳細については、「[方法 :識別子 (Visual Basic) の名前を変更](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)します。  
+     詳細については、次を参照してください。[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)します。  
   
 9. 次のコードを挿入、`stackButton_Click`イベント ハンドラー。  
   
@@ -135,7 +136,7 @@ ms.locfileid: "54714894"
 12. 手順 10 および 11 for、`contactsStackButton`と`tasksStackButton`コントロール。  
   
 ## <a name="defining-icons"></a>アイコンの定義  
- 各`StackView`ボタンに関連付けられているアイコンがあります。 便宜上、各アイコンは、Base64 でエンコードされた文字列としての前に逆シリアル化する、<xref:System.Drawing.Bitmap>これから作成されます。 運用環境でリソースとしてビットマップ データを格納して、Windows フォーム デザイナーで、アイコンが表示されます。 詳細については、「[方法 :Windows フォームに背景画像の追加](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)します。  
+ 各`StackView`ボタンに関連付けられているアイコンがあります。 便宜上、各アイコンは、Base64 でエンコードされた文字列としての前に逆シリアル化する、<xref:System.Drawing.Bitmap>これから作成されます。 運用環境でリソースとしてビットマップ データを格納して、Windows フォーム デザイナーで、アイコンが表示されます。 詳細については、「[方法 :Windows フォームに背景画像の追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100))します。  
   
 #### <a name="to-define-icons"></a>アイコンを定義する  
   

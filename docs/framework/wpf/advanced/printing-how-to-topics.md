@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441204"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747357"
 ---
 # <a name="printing-how-to-topics"></a>印刷に関する「方法」トピック
 このセクションのトピックでは、印刷を使用する方法を示します、印刷システム管理機能が付属して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]と新しい[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]印刷パス。  
@@ -30,9 +30,6 @@ ms.locfileid: "56441204"
   
  [印刷キューのサブセットを列挙する](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  特定の特性を持つプリンターの一覧を生成するための手順です。  
-  
- [NOTINBUILD:方法: 印刷スキーマを拡張し、印刷システムの新しいクラスを作成します。](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- マネージ コードのプログラマの拡張の詳細については、専門的な印刷デバイスまたは新規のまたは一般的でない機能を持つプリンターに印刷スキーマを拡張できます。  
   
  [リフレクションを使用せずに印刷システム オブジェクトのプロパティを取得する](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  実行時に検出する方法については、システム オブジェクトのプロパティとその型を印刷します。  

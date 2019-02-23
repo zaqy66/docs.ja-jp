@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611411"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748337"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
-名前、バイナリ シグネチャ、相対仮想アドレスをなどのメタデータ情報を取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。  
+名前、バイナリ シグネチャ、および相対仮想アドレスを含む、指定したメンバーの定義のメタデータに格納されている情報の取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。 これは単純なヘルパー メソッド: 場合*mb*は、MethodDef **GetMethodProps**が呼び出されます場合*mb*は、の FieldDef **GetFieldProps** 。呼び出されます。 他の方法の詳細を参照してください。 
   
 ## <a name="syntax"></a>構文  
   
@@ -79,7 +79,7 @@ HRESULT GetMemberProps (
  [out]メンバーに関連付けられているすべてメソッド実装フラグ。  
   
  `pdwCPlusTypeFlag`  
- [out]マークするフラグを<xref:System.ValueType>します。  
+ [out]マークするフラグを<xref:System.ValueType>します。 1 つは、`ELEMENT_TYPE_*`値。
   
  `ppValue`  
  [out]このメンバーが返される定数文字列値。  
