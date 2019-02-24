@@ -2,14 +2,14 @@
 title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
-ms.date: 12/7/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904702"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745561"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
@@ -26,7 +26,7 @@ ms.locfileid: "55904702"
 
 次のトピックの内容を理解している必要もあります。
 
-[.NET Standard](~/docs/standard/net-standard.md)   
+[.NET Standard](../../standard/net-standard.md)\
 このトピックでは、すべての .NET 実装で使用可能にすることを目的とした、.NET API の正式な仕様について説明します。
 
 [パッケージ、メタパッケージ、フレームワーク](~/docs/core/packages.md)   
