@@ -31,7 +31,8 @@
 ### [移植性アナライザー](standard/analyzers/portability-analyzer.md)
 ### [フレームワーク アナライザー](standard/analyzers/framework-analyzer.md)
 ## [例外の処理とスロー](standard/exceptions/)
-## [.NET アセンブリ ファイルの形式](standard/assembly-format.md)
+## [.NET のアセンブリ](standard/assembly/index.md)
+### [.NET アセンブリ ファイルの形式](standard/assembly/file-format.md) 
 ## [ガベージ コレクション](standard/garbage-collection/)
 ## [ジェネリック型](standard/generics.md)
 ## [デリゲートとラムダ](standard/delegates-lambdas.md)
@@ -177,7 +178,7 @@
 ### [dotnet vstest](core/tools/dotnet-vstest.md)
 ### [dotnet-install スクリプト](core/tools/dotnet-install-script.md)
 ### プロジェクトの変更コマンド
-#### 参照
+#### 関連項目
 ##### [dotnet add reference](core/tools/dotnet-add-reference.md)
 ##### [dotnet list reference](core/tools/dotnet-list-reference.md)
 ##### [dotnet remove reference](core/tools/dotnet-remove-reference.md)
@@ -270,6 +271,7 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## C# の新機能
+### [C# 8.0 - Preview 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1](csharp/whats-new/csharp-7-1.md)
@@ -520,7 +522,7 @@
 #### [My で利用可能なオブジェクトのカスタマイズ](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [プログラミングの概念](visual-basic/programming-guide/concepts/index.md)
-### [アセンブリとグローバル アセンブリ キャッシュ](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+### [.NET のアセンブリ](standard/assembly/index.md)
 ### [Async および Await を使用した非同期プログラミング](visual-basic/programming-guide/concepts/async/index.md)
 ### [属性](visual-basic/programming-guide/concepts/attributes/index.md)
 ### [式ツリー](visual-basic/programming-guide/concepts/expression-trees/index.md)
