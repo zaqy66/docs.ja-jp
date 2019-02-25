@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745884"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665148"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>チュートリアル: 実行時にステータス バー情報の更新
 > [!IMPORTANT]
@@ -30,16 +30,16 @@ ms.locfileid: "54745884"
   
 1.  新しい Windows フォームを作成します。  
   
-2.  フォームに <xref:System.Windows.Forms.StatusBar> コントロールを追加します。 詳細については、次を参照してください。[方法。Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
+2.  フォームに <xref:System.Windows.Forms.StatusBar> コントロールを追加します。 詳細については、「[方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
   
-3.  ステータス バー パネルを追加、<xref:System.Windows.Forms.StatusBar>コントロール。 詳細については、次を参照してください。[方法。StatusBar コントロールにパネルを追加](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)します。  
+3.  ステータス バー パネルを追加、<xref:System.Windows.Forms.StatusBar>コントロール。 詳細については、「[方法: StatusBar コントロールにパネルを追加](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)します。  
   
 4.  <xref:System.Windows.Forms.StatusBar>をフォームに追加されたコントロールの設定、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティを`true`します。  
   
 5.  Windows フォームの追加<xref:System.Windows.Forms.Timer>コンポーネントをフォームにします。  
   
     > [!NOTE]
-    >  Windows フォーム<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>コンポーネントが Windows フォーム環境向けに設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)」を参照してください。  
+    >  Windows フォーム<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>コンポーネントが Windows フォーム環境向けに設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))」を参照してください。  
   
 6.  <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `true`に設定します。  
   

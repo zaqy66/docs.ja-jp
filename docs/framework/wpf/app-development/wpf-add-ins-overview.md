@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662739"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746563"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 <a name="Introduction"></a> .NET Framework には、開発者がアドイン機能拡張をサポートするアプリケーションの作成に使用できるアドイン モデルが含まれています。 このアドイン モデルを使用することで、アプリケーション機能に統合され、アプリケーション機能を拡張するアドインを作成できます。 シナリオによっては、アプリケーションは、アドインによって提供されるユーザー インターフェイスの表示にも必要です。このトピックでは、WPF がこれらのシナリオ、その利点、および制限事項の背後にあるアーキテクチャを有効にする .NET Framework アドイン モデルを強化する方法を示します。  
@@ -95,12 +95,13 @@ ms.locfileid: "54662739"
   
 -   派生した、<xref:System.MarshalByRefObject>クラス。  
   
--   <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装します。  
+-   
+  <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装します。  
   
 -   <xref:System.SerializableAttribute>属性が適用されています。  
   
 > [!NOTE]
->  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、次を参照してください。[オブジェクトのためのリモート処理可能](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)します。  
+>  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、次を参照してください。[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))します。  
   
  WPF の UI 型は、リモート処理可能ではありません。 この問題を解決するためには、WPF は、ホスト アプリケーションから表示する WPF の UI アドインを使用して作成を有効にする .NET Framework アドイン モデルを拡張します。 このサポートが 2 つの種類での WPF で提供される:<xref:System.AddIn.Contract.INativeHandleContract>インターフェイスと 2 つの静的メソッドによって実装される、<xref:System.AddIn.Pipeline.FrameworkElementAdapters>クラス:<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>と<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。 大まかに、これらの型とメソッドは次のように使用されます。  
   
@@ -286,6 +287,6 @@ ms.locfileid: "54662739"
 - <xref:System.LoaderOptimizationAttribute>
 - [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [アプリケーション ドメイン](../../../../docs/framework/app-domains/application-domains.md)
-- [.NET framework リモート処理の概要](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [オブジェクトをリモート処理可能](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [.NET framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [オブジェクトをリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [方法トピック](../../../../docs/framework/wpf/app-development/how-to-topics.md)
