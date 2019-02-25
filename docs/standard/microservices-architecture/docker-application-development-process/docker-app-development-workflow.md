@@ -4,12 +4,12 @@ description: Docker ベースのアプリケーションを開発するための
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480102"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584305"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -489,7 +489,7 @@ Visual Studio 2017 を使用したマルチコンテナー アプリケーショ
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>オーケストレーターを使用したテストと展開に関する注意事項
 
-docker-compose up および docker run コマンド (または Visual Studio でのコンテナーの実行およびデバッグ) を使用して、開発環境でコンテナーを十分にテストできます。 しかし、[Kubernetes](https://kubernetes.io/) や [Service Fabric](https://azure.microsoft.com/services/service-fabric/) などのオーケストレーターをターゲットにする必要がある、運用での展開にはこの方法を使用しないでください。 Kubernetes を使用している場合は、[ポッド](https://kubernetes.io/docs/concepts/workloads/pods/pod/)を使ってコンテナーと[サービス](https://kubernetes.io/docs/concepts/services-networking/service/)を整理し、ネットワーク接続する必要があります。 [展開](https://kubernetes.io/docs/tutorials/k8s201/#deployments)を使用して、ポッドの作成と変更を整理することもできます。
+docker-compose up および docker run コマンド (または Visual Studio でのコンテナーの実行およびデバッグ) を使用して、開発環境でコンテナーを十分にテストできます。 しかし、[Kubernetes](https://kubernetes.io/) や [Service Fabric](https://azure.microsoft.com/services/service-fabric/) などのオーケストレーターをターゲットにする必要がある、運用での展開にはこの方法を使用しないでください。 Kubernetes を使用している場合は、[ポッド](https://kubernetes.io/docs/concepts/workloads/pods/pod/)を使ってコンテナーと[サービス](https://kubernetes.io/docs/concepts/services-networking/service/)を整理し、ネットワーク接続する必要があります。 [展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)を使用して、ポッドの作成と変更を整理することもできます。
 
 ![6 - アプリまたはマイクロサービスをテストする](./media/image17.png)
 

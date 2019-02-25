@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2fe85dc81d657cd897b8c326211c125f75a8e05
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e6db80e4cb1f54ed58dabf84f4a88f1b3db616ea
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904723"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443115"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework で互換性のために残されている型
 <a name="introduction"></a> この記事の表に、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] で互換性のために残されている型をアセンブリ別に示します。 各アセンブリで互換性のために残されている型と推奨される代替型の一覧を表示するには、以下のリンクを使用してください。 これらの型は廃止されているため、そのメンバーもすべて廃止されます。 .NET Framework クラス ライブラリで互換性のために残されているその他のメンバーの一覧については、[互換性のために残されているメンバー](../../../docs/framework/whats-new/obsolete-members.md)に関する記事をご覧ください。
@@ -630,7 +630,8 @@ ms.locfileid: "55904723"
 
 <a name="VBCompat"></a>
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>アセンブリ:Microsoft.VisualBasic.Compatibility.dll
-  Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 リソース センター](https://msdn.microsoft.com/library/windows/desktop/ms788229)」を参照してください。
+
+Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 リソース センター](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)」を参照してください。
   
 |型|メッセージ|
 |----------|-------------|

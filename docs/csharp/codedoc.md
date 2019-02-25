@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271357"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583707"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -194,9 +194,9 @@ XML コメントを別のファイルに移動したので、`<include>` タグ�
 
 このようになります。コードは読みやすい状態に戻り、しかも文書化の情報は失われていません。
 
-`filename` は、文書化の情報を含む XML ファイルの名前を表す属性です。
+`file` は、文書化の情報を含む XML ファイルの名前を表す属性です。
 
-`path` は、指定した `filename` に含まれる `tag name` への [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) クエリを表す属性です。
+`path` は、指定した `file` に含まれる `tag name` への [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) クエリを表す属性です。
 
 `name` は、コメントの前に配置するタグの名前指定子を表す属性です。
 
