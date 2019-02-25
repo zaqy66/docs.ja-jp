@@ -1,13 +1,7 @@
 ---
-title: プログラミングの概念 (C#)
+title: 'プログラミングの概念 (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143195"
 ---
 # <a name="programming-concepts-c"></a>プログラミングの概念 (C#)
 このセクションでは、C# 言語でのプログラミングの概念について説明します。  
@@ -16,7 +10,7 @@ ms.locfileid: "53143195"
   
 |Title|説明|  
 |-----------|-----------------|  
-|[アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|アセンブリを作成および使用する方法について説明します。|  
+|[.NET のアセンブリ](../../../standard/assembly/index.md)|アセンブリを作成および使用する方法について説明します。|  
 |[Async および Await を使用した非同期プログラミング (C#)](../../../csharp/programming-guide/concepts/async/index.md)|C# の [async](../../../csharp/language-reference/keywords/async.md) および [await](../../../csharp/language-reference/keywords/await.md) キーワードを使用して非同期ソリューションを記述する方法を説明します。 チュートリアルが含まれています。|  
 |[属性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)|属性を使用して、型、フィールド、メソッド、プロパティなどのプログラミング要素に関する追加情報を指定する方法について説明します。|  
 |[呼び出し元情報 (C#)](../../../csharp/programming-guide/concepts/caller-information.md)|メソッドの呼び出し元に関する情報を取得する方法について説明します。 この情報には、ソース コードのファイル パスと行番号および呼び出し元のメンバー名が含まれます。|  

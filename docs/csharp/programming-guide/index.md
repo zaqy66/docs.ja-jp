@@ -65,7 +65,7 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 ## <a name="platform-sections"></a>プラットフォーム セクション  
  [アプリケーション ドメイン](../../framework/app-domains/application-domains.md)  
   
- [アセンブリとグローバル アセンブリ キャッシュ](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [.NET のアセンブリ](../../standard/assembly/index.md)  
   
  [属性](../../csharp/programming-guide/concepts/attributes/index.md)  
   
